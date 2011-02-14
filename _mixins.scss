@@ -1,0 +1,89 @@
+@mixin border-radius ($radii) {
+  -moz-border-radius: $radii;
+  -webkit-border-radius: $radii;
+  border-radius: $radii;
+}
+
+/* this hack is courtesy of gbbowers on github
+   https://gist.github.com/601810 */
+@mixin box-shadow ($shadow-1, $shadow-2: false, $shadow-3: false, $shadow-4: false, $shadow-5: false, $shadow-6: false, $shadow-7: false, $shadow-8: false, $shadow-9: false) {
+  $full: $shadow-1;
+
+  @if $shadow-2 {
+    $full: $full + ", " + $shadow-2;
+  }
+  @if $shadow-3 {
+    $full: $full + ", " + $shadow-3;
+  }
+  @if $shadow-4 {
+    $full: $full + ", " + $shadow-4;
+  }
+  @if $shadow-5 {
+    $full: $full + ", " + $shadow-5;
+  }
+  @if $shadow-6 {
+    $full: $full + ", " + $shadow-6;
+  }
+  @if $shadow-7 {
+    $full: $full + ", " + $shadow-7;
+  }
+  @if $shadow-8 {
+    $full: $full + ", " + $shadow-8;
+  }
+  @if $shadow-9 {
+    $full: $full + ", " + $shadow-9;
+  }
+
+  -moz-box-shadow: $full;
+  -webkit-box-shadow: $full;
+  -o-box-shadow: $full;
+  box-shadow: $full;
+}
+
+@mixin linear-gradient ($from, $to) {
+  background: $from;
+  background: -moz-linear-gradient(top, $from, $to);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+}
+
+@mixin simple-color ($base-hue, $base-saturation, $base-lightness) {
+  $start-gradient: hsl($base-hue, $base-saturation, $base-lightness);
+  $stop-gradient: saturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 11%), 9%);
+  $border: saturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 14%), 9%);
+  $inset-shadow: desaturate(lighten(hsl($base-hue, $base-saturation, $base-lightness), 14%), 8%);
+  $text-shadow: saturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 18%), 15%);
+  $color: hsl(0, 0, 100%);
+
+  @if $base-lightness > 70% {
+    $color: hsl(0, 0, 20%);
+    $text-shadow: saturate(lighten(hsl($base-hue, $base-saturation, $base-lightness), 4%), 10%);
+  }
+
+  @include linear-gradient ($start-gradient, $stop-gradient);
+  border: 1px solid $border;
+  @include border-radius (3px);
+  @include box-shadow (inset 0 1px 0 0 $inset-shadow);
+  color: $color;
+  font-weight: bold;
+  padding: 8px;
+  text-shadow: 0 1px 0 $text-shadow;
+  width: 150px;
+
+  &:hover {
+    $start-gradient: desaturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 5%), 4%);
+    $stop-gradient: saturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 14%), 8%);
+    $inset-shadow: desaturate(lighten(hsl($base-hue, $base-saturation, $base-lightness), 5%), 7%);
+
+    @include linear-gradient ($start-gradient, $stop-gradient);
+    @include box-shadow (inset 0 1px 0 0 $inset-shadow);
+    cursor: pointer;
+  }
+
+  &:active {
+    $border: saturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 14%), 9%);
+    $inset-shadow: saturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 17%), 7%);
+
+    @include box-shadow (inset 0 0 8px 4px $inset-shadow, inset 0 0 8px 4px $inset-shadow, 0 1px 1px 0 #eee);
+    border: 1px solid $border;
+  }
+}
