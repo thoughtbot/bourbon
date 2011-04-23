@@ -42,8 +42,12 @@
 
 @mixin linear-gradient ($from, $to) {
   background: $from;
-  background: -moz-linear-gradient(top, $from, $to);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+  background: -moz-linear-gradient(top, $from, $to);    // FF3.6
+  background: -ms-linear-gradient(top, $from, $to);     // IE10
+  background: -o-linear-gradient(top, $from, $to);      // Opera 11.10+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to)); // Saf4+, Chrome
+  background: -webkit-linear-gradient(top, $from, $to); // Chrome 10+, Saf5.1+
+  background: linear-gradient(top, $from, $to);
 }
 
 @mixin simple-color ($base-hue, $base-saturation, $base-lightness) {
