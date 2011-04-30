@@ -4,38 +4,25 @@
   border-radius: $radii;
 }
 
-// this hack is courtesy of gbbowers on github Ñ https://gist.github.com/601810
-// Updated to work with Sass v3.1.0+
-@mixin box-shadow ($shadow-1, $shadow-2: false, $shadow-3: false, $shadow-4: false, $shadow-5: false, $shadow-6: false, $shadow-7: false, $shadow-8: false, $shadow-9: false) {
-  $full: $shadow-1;
-
-  @if $shadow-2 {
-    $full: $full, $shadow-2;
-  }
-  @if $shadow-3 {
-    $full: $full, $shadow-3;
-  }
-  @if $shadow-4 {
-    $full: $full, $shadow-4;
-  }
-  @if $shadow-5 {
-    $full: $full, $shadow-5;
-  }
-  @if $shadow-6 {
-    $full: $full, $shadow-6;
-  }
-  @if $shadow-7 {
-    $full: $full, $shadow-7;
-  }
-  @if $shadow-8 {
-    $full: $full, $shadow-8;
-  }
-  @if $shadow-9 {
-    $full: $full, $shadow-9;
-  }
-
-  -moz-box-shadow: $full;
+// Box-Shadow Mixin Requires Sass v3.1.1+
+@mixin box-shadow ($shadow-1,
+  $shadow-2: false, $shadow-3: false,
+  $shadow-4: false, $shadow-5: false,
+  $shadow-6: false, $shadow-7: false,
+  $shadow-8: false, $shadow-9: false)
+  {
+    $full: $shadow-1;
+    @each $shadow in
+      $shadow-2, $shadow-3,
+      $shadow-4, $shadow-5,
+      $shadow-6, $shadow-7,
+      $shadow-8, $shadow-9{
+        @if $shadow {
+          $full: $full, $shadow;
+        }
+      }
   -webkit-box-shadow: $full;
+  -moz-box-shadow: $full;
   -o-box-shadow: $full;
   box-shadow: $full;
 }
