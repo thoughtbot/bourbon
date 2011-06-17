@@ -51,3 +51,9 @@
      -moz-box-flex: $value;
           box-flex: $value;
 }
+
+@mixin box-flex-group($integer: 1) {
+  -webkit-box-flex-group: $integer;
+     -moz-box-flex-group: $integer;
+          box-flex-group: $integer;
+}
