@@ -100,7 +100,7 @@
           animation-fill-mode: $mode;
 }
 
-// Shorthand for a basic animation. Supports multiple parenthesis-deliminated values for each variable.
+// Shorthand for a basic animation. Supports multiple parentheses-deliminated values for each variable.
 // Example: @include animation-basic((slideup, fadein), (1.0s, 2.0s), ease-in);
 @mixin animation-basic ($name, $time: 0, $motion: ease) {
     $length-of-name: length($name);
