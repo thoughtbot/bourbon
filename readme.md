@@ -1,9 +1,10 @@
 #Vanilla Sass Mixins
 The purpose of Vanilla Sass Mixins is to provide a comprehensive framework of sass mixins that are designed to be as vanilla as possible. Meaning they should not deter from the original CSS syntax. The mixins contain vendor specific prefixes for all CSS3 properties for support amongst most browsers. The prefixes also ensure graceful degradation as browsers continue to support official css3 syntax.
+______________
 
 ##Requirements
 Sass 3.1+
-______________
+
 ##Install
 **Clone the Repo**
 
@@ -12,7 +13,7 @@ ______________
 **Import the mixins at the beginning of your stylesheet**
 
 	@import 'sass-mixins/mixins';
-______________
+
 ##Usage
 **Linear-Gradient**
 
