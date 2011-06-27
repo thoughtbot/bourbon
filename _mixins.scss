@@ -6,6 +6,8 @@
 @import "inline-block";
 @import "linear-gradient";
 @import "radial-gradient";
-@import "simple-color";
 @import "transform";
 @import "transition";
+
+// Addons & other mixins
+@import "addons/simple-color";
