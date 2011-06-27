@@ -1,4 +1,4 @@
-/* Requires Sass 3.1+ */
+// Requires Sass 3.1+
 @mixin radial-gradient($pos, $shape-size,
                        $G1,        $G2,
                        $G3: false, $G4: false,
@@ -20,10 +20,6 @@
   background-image:         radial-gradient($pos, $shape-size, $full);
 }
 
-/* Usage: Gradient position and shape-size are required. Color stops are optional.*/
-/*
-div.radial {
-  @include radial-gradient(50% 50%, circle cover, #1e5799, #efefef);
-  @include radial-gradient(50% 50%, circle cover, #eee 10%, #1e5799 30%, #efefef);
-}
-*/
+//  Usage: Gradient position and shape-size are required. Color stops are optional.
+//  @include radial-gradient(50% 50%, circle cover, #1e5799, #efefef);
+//  @include radial-gradient(50% 50%, circle cover, #eee 10%, #1e5799 30%, #efefef);
