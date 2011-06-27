@@ -1,4 +1,4 @@
-/* Requires Sass 3.1+ */
+// Requires Sass 3.1+
 @mixin linear-gradient($pos, $G1, $G2: false,
                        $G3: false, $G4: false,
                        $G5: false, $G6: false,
@@ -29,11 +29,9 @@
   background-image:         linear-gradient($pos, $full);
 }
 
-/* Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.*/
-/*
-div.linear {
-  @include linear-gradient(#1e5799, #2989d8);
-  @include linear-gradient(top, #1e5799 0%, #2989d8 50%);
-  @include linear-gradient(50deg, rgba(10, 10, 10, 0.5) 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-}
-*/
+// Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.
+
+// @include linear-gradient(#1e5799, #2989d8);
+// @include linear-gradient(top, #1e5799 0%, #2989d8 50%);
+// @include linear-gradient(50deg, rgba(10, 10, 10, 0.5) 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+
