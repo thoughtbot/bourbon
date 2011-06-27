@@ -2,53 +2,54 @@
 // Example: @include transition (all, 2.0s, ease-in-out);
 //          @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
 //          @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));
+
 @mixin transition ($property: all, $duration: 0.15s, $timing-function: ease-out, $delay: 0) {
+
   // Detect # of args passed into each variable
-  $length-of-property: length($property);
-  $length-of-duration: length($duration);
+  $length-of-property:        length($property);
+  $length-of-duration:        length($duration);
   $length-of-timing-function: length($timing-function);
-  $length-of-delay: length($delay);
+  $length-of-delay:           length($delay);
 
   @if $length-of-property > 1 {
-    @include transition-property(zip($property));
-  } @else {
+    @include transition-property(zip($property)); }
+  @else {
     @include transition-property(    $property);
   }
 
   @if $length-of-duration > 1 {
-    @include transition-duration(zip($duration));
-  } @else {
+    @include transition-duration(zip($duration)); }
+  @else {
     @include transition-duration(    $duration);
   }
 
   @if $length-of-timing-function > 1 {
-    @include transition-timing-function(zip($timing-function));
-  } @else {
+    @include transition-timing-function(zip($timing-function)); }
+  @else {
     @include transition-timing-function(    $timing-function);
   }
 
   @if $length-of-delay > 1 {
-    @include transition-delay(zip($delay));
-  } @else {
+    @include transition-delay(zip($delay)); }
+  @else {
     @include transition-delay(    $delay);
   }
 }
 
 
-@mixin transition-property ($property-1: all,
-  $property-2: false, $property-3: false,
-  $property-4: false, $property-5: false,
-  $property-6: false, $property-7: false,
-  $property-8: false, $property-9: false)
+@mixin transition-property ($prop-1: all,
+  $prop-2: false, $prop-3: false,
+  $prop-4: false, $prop-5: false,
+  $prop-6: false, $prop-7: false,
+  $prop-8: false, $prop-9: false)
   {
-    $full: $property-1;
-    @each $property in
-      $property-2, $property-3,
-      $property-4, $property-5,
-      $property-6, $property-7,
-      $property-8, $property-9{
-        @if $property {
-          $full: $full, $property;
+    $full:  $prop-1;
+    $props: $prop-2, $prop-3, $prop-4, $prop-5,
+            $prop-6, $prop-7, $prop-8, $prop-9;
+
+    @each $prop in $props {
+        @if $prop {
+          $full: $full, $prop;
         }
       }
   -webkit-transition-property: $full;
@@ -62,12 +63,11 @@
   $time-6: false, $time-7: false,
   $time-8: false, $time-9: false)
   {
-    $full: $time-1;
-    @each $time in
-      $time-2, $time-3,
-      $time-4, $time-5,
-      $time-6, $time-7,
-      $time-8, $time-9{
+    $full:  $time-1;
+    $times: $time-2, $time-3, $time-4, $time-5,
+            $time-6, $time-7, $time-8, $time-9;
+
+    @each $time in $times {
         @if $time {
           $full: $full, $time;
         }
@@ -83,12 +83,11 @@
   $motion-6: false, $motion-7: false,
   $motion-8: false, $motion-9: false)
   {
-    $full: $motion-1;
-    @each $motion in
-      $motion-2, $motion-3,
-      $motion-4, $motion-5,
-      $motion-6, $motion-7,
-      $motion-8, $motion-9{
+    $full:    $motion-1;
+    $motions: $motion-2, $motion-3, $motion-4, $motion-5,
+              $motion-6, $motion-7, $motion-8, $motion-9;
+
+    @each $motion in $motions {
         @if $motion {
           $full: $full, $motion;
         }
@@ -106,11 +105,10 @@
   $time-8: false, $time-9: false)
   {
     $full: $time-1;
-    @each $time in
-      $time-2, $time-3,
-      $time-4, $time-5,
-      $time-6, $time-7,
-      $time-8, $time-9{
+    $times: $time-2, $time-3, $time-4, $time-5,
+            $time-6, $time-7, $time-8, $time-9;
+
+    @each $time in $times {
         @if $time {
           $full: $full, $time;
         }
