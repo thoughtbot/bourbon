@@ -23,10 +23,10 @@
   background-color: nth($G1, 1);
   background-image: -webkit-gradient(linear, left top, left bottom, from($G1), to($G2)); /* Saf4+, Chrome */
   background-image: -webkit-linear-gradient($pos, $full);
-  background-image: -moz-linear-gradient($pos, $full);
-  background-image: -ms-linear-gradient($pos, $full);
-  background-image: -o-linear-gradient($pos, $full);
-  background-image: linear-gradient($pos, $full);
+  background-image:    -moz-linear-gradient($pos, $full);
+  background-image:     -ms-linear-gradient($pos, $full);
+  background-image:      -o-linear-gradient($pos, $full);
+  background-image:         linear-gradient($pos, $full);
 }
 
 /* Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.*/
