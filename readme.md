@@ -59,6 +59,31 @@ Shorthand mixin: Supports multiple parentheses-deliminated values for each varia
     @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));`
 
 
+**Add-on: Buttons**
+
+The button add-on provides well-designed buttons with a single line in your CSS.
+
+The mixin can be called with no parameters to render a blue button with the "simple" style.
+
+    button,
+    input[type="button"] {
+      @include button();
+    }
+
+The mixin supports a style parameter. Right now the available styles are "simple" (default) and "shiny".
+
+    button,
+    input[type="button"] {
+      @include button(shiny);
+    }
+
+The real power of the mixin is revealed when you pass in the optional color argument. Using a single color, the mixin calculates the gradient, borders, box shadow, text shadow and text color of the button. The mixin will change the text to be light when on a dark background, and dark when on a light background.
+
+    button,
+    input[type="button"] {
+      @include button(shiny, #ff000);
+    }
+
 ##Help Out
 Currently the project is a work in progress. Feel free to help out.
 
