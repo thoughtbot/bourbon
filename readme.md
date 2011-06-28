@@ -19,13 +19,13 @@ Sass 3.1+
 ##Usage
 Below are a few examples of mixin usage. Note that these are just a few, explore the repo to find out more.
 
-**Linear-Gradient**
+**Animation**
 
-Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.
+The three following properties support a comma separated list of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties. animation-name | animation-duration | animation-timing-function
 
-    @include linear-gradient(#1e5799, #2989d8);
-    @include linear-gradient(top, #1e5799 0%, #2989d8 100%);
-    @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);`
+    @include animation-name(slideup, fadein);
+    @include animation-duration(1.0s, 1.2s);
+    @include animation-timing-function(ease-in-out, ease-out);
 
 
 **Border Radius**
@@ -36,18 +36,77 @@ Border-radius will also take short-hand notation.
     @include border-radius(5px 5px 2px 2px);
 
 
-**Animation**
-
-The three following properties support a comma separated list of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties. animation-name | animation-duration | animation-timing-function
-
-    @include animation-name(slideup, fadein);
-    @include animation-duration(1.0s, 1.2s);
-    @include animation-timing-function(ease-in-out, ease-out);
-
-
 Shorthand for a basic animation. Supports multiple parentheses-deliminated values for each variable.
 
     @include animation-basic((slideup, fadein), (1.0s, 2.0s), ease-in);
+
+
+**Box Shadow**
+
+Box-Shadow supports single or multiple arguments:
+
+    @include box-shadow(1px 1px 2px 0 #ff0000);
+
+Multiple arguments must be comma-diliminated.
+
+    @include box-shadow(1px 1px 2px 0 #fff0000, -1px -2px 0 #ccc);
+
+
+**Border Radius**
+
+Border-radius will also take short-hand notation.
+
+    @include border-radius(10px);
+    @include border-radius(5px 5px 2px 2px);
+
+
+**Box Sizing**
+
+Box-sizing will change the box-model of the element it is applied to. This is really helpful for properly styling padding and margin to all text-based input types (e.g. input[type="text"]).
+
+    @include box-sizing(border-box);
+
+
+**Flex Box**
+
+The flex-box mixin is based on the 2009 w3c spec. The mixin with change to the flexible box-model. [More info.](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/)
+
+    div.parent {
+      @include display-box;
+      @include box-align(start);
+      @include box-orient(horizontal);
+      @include box-pack(start);
+    }
+
+    div.parent > div.child {
+      @include box-flex(2);
+    }
+
+**Inline-block**
+
+The inline-block mixin provides support for the inline-block property in IE6 and IE7.
+
+    @include inline-block;
+
+
+**Linear-Gradient**
+
+Gradient position is optional, default is top. Position can be a degree. Color-stops are optional as well. Mixin will support up to 10 gradients.
+
+    @include linear-gradient(#1e5799, #2989d8);
+    @include linear-gradient(top, #1e5799 0%, #2989d8 100%);
+    @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+
+**Radial-Gradient**
+
+Takes up to 10 gradients. Position and shape are required.
+
+    @include radial-gradient(50% 50%, circle cover, #1e5799, #efefef);
+    @include radial-gradient(50% 50%, circle cover, #eee 10%, #1e5799 30%, #efefef);
+
+**Transform**
+
+    @include transform(translateY(50px));
 
 
 **Transitions**
@@ -59,7 +118,9 @@ Shorthand mixin: Supports multiple parentheses-deliminated values for each varia
     @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));`
 
 
-**Add-on: Buttons**
+##Add-ons
+
+**Buttons**
 
 The button add-on provides well-designed buttons with a single line in your CSS.
 
@@ -83,6 +144,7 @@ The real power of the mixin is revealed when you pass in the optional color argu
     input[type="button"] {
       @include button(shiny, #ff000);
     }
+
 
 ##Help Out
 Currently the project is a work in progress. Feel free to help out.
