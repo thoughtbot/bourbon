@@ -128,7 +128,7 @@ Shorthand mixin: Supports multiple parentheses-deliminated values for each varia
 
 **Buttons**
 
-The button add-on provides well-designed buttons with a single line in your CSS.
+The button add-on provides well-designed buttons with a single line in your CSS. The demo folder contains examples of the buttons in use.
 
 The mixin can be called with no parameters to render a blue button with the "simple" style.
 
@@ -137,7 +137,7 @@ The mixin can be called with no parameters to render a blue button with the "sim
       @include button();
     }
 
-The mixin supports a style parameter. Right now the available styles are "simple" (default) and "shiny".
+The mixin supports a style parameter. Right now the available styles are "simple" (default), "shiny", and "pill".
 
     button,
     input[type="button"] {

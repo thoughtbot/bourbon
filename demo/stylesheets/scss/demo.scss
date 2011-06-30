@@ -1,0 +1,99 @@
+@import "../../../mixins";
+
+// Clear Floated Elements
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+// This is just for the example page
+body {
+  color: #333;
+}
+
+#buttons {
+  margin: 50px auto;
+  width: 995px;
+
+  h2 {
+    font: 300 22px "helvetica neue", sans-serif;
+    margin: 0 0 4px 0;
+  }
+
+  p {
+    color: #777;
+    font: normal 14px "helvetica neue", sans-serif;
+    margin: 0 0 24px 0;
+  }
+
+  .button-set {
+    @extend .clearfix;
+    margin: 0 0 40px 0;
+
+    p {
+      border-bottom: 1px solid #ddd;
+      font: bold 14px "helvetica neue", sans-serif;
+      padding: 0 0 4px 0;
+    }
+
+    section {
+      float: left;
+      margin-right: 25px;
+      text-align: center;
+      width: 315px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// Style the buttons
+.simple {
+  button.default {
+    @include button();
+  }
+
+  button.color-2 {
+    @include button(#f10);
+  }
+
+  button.color-3 {
+    @include button(#29c13b);
+  }
+}
+
+.shiny {
+  button.default {
+    @include button(shiny);
+  }
+
+  button.color-2 {
+    @include button(shiny, #f10);
+  }
+
+  button.color-3 {
+    @include button(shiny, #29c13b);
+  }
+}
+
+.pill {
+  button.default {
+    @include button(pill);
+  }
+
+  button.color-2 {
+    @include button(pill, #f10);
+  }
+
+  button.color-3 {
+    @include button(pill, #29c13b);
+  }
+}
