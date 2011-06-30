@@ -1,0 +1,80 @@
+/*
+Syntax error: Invalid CSS after "    $G10: $G9, $G9": expected "}", was ": $G8, $G8: $G7..."
+        on line 12 of ./_linear-gradient.scss
+        from line 7 of _mixins.scss
+
+7:   // Detect what type of value exists in $pos
+8:   $pos-type: type-of(nth($pos, 1));
+9: 
+10:   // If $pos is missing from mixin, reassign vars and add default position
+11:   @if $pos-type == color {
+12:     $G10: $G9, $G9: $G8, $G8: $G7; $G7: $G6; $G6: $G5;
+13:      $G5: $G4; $G4: $G3; $G3: $G2; $G2: $G1; $G1: $pos;
+14:     $pos: top; // Default position
+15:   }
+16: 
+17:   $full: $G1;
+
+Backtrace:
+./_linear-gradient.scss:12
+_mixins.scss:7
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:898:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:841:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:836:in `tok!'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:362:in `block'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:204:in `if_directive'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:130:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:130:in `special_directive'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:109:in `directive'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:380:in `block_child'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:372:in `block_contents'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:361:in `block'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:137:in `mixin_directive'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:130:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:130:in `special_directive'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:109:in `directive'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:379:in `block_child'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:369:in `block_contents'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:57:in `stylesheet'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/scss/parser.rb:26:in `parse'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/engine.rb:319:in `_to_tree'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/engine.rb:250:in `to_tree'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:144:in `visit_import'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/engine.rb:291:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/engine.rb:238:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/plugin/compiler.rb:319:in `update_stylesheet'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/plugin/compiler.rb:169:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/plugin/compiler.rb:167:in `each'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/plugin/compiler.rb:167:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/plugin/compiler.rb:214:in `watch'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/plugin.rb:111:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/plugin.rb:111:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/exec.rb:408:in `watch_or_update'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/exec.rb:294:in `process_result'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/exec.rb:41:in `parse'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.1/bin/sass:8
+/usr/bin/sass:19:in `load'
+/usr/bin/sass:19
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"    $G10: $G9, $G9\": expected \"}\", was \": $G8, $G8: $G7...\"\A         on line 12 of ./_linear-gradient.scss\A         from line 7 of _mixins.scss\A \A 7:   // Detect what type of value exists in $pos\A 8:   $pos-type: type-of(nth($pos, 1));\A 9: \A 10:   // If $pos is missing from mixin, reassign vars and add default position\A 11:   @if $pos-type == color {\A 12:     $G10: $G9, $G9: $G8, $G8: $G7; $G7: $G6; $G6: $G5;\A 13:      $G5: $G4; $G4: $G3; $G3: $G2; $G2: $G1; $G1: $pos;\A 14:     $pos: top; // Default position\A 15:   }\A 16: \A 17:   $full: $G1;"; }
