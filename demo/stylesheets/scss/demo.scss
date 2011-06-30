@@ -1,4 +1,4 @@
-@import "../../../mixins";
+@import "../app/assets/mixins";
 
 // Clear Floated Elements
 .clearfix:after {
@@ -76,7 +76,7 @@ body {
   }
 
   button.color-2 {
-    @include button(shiny, #f10);
+    @include button(shiny,#f10);
   }
 
   button.color-3 {
