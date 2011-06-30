@@ -7,14 +7,20 @@ Sass 3.1+
 
 
 ##Install
-**Clone the Repo**
+**Update your Gemfile**
 
-    git clone git@github.com:plapier/sass-mixins.git
+    gem 'sass-mixins'
+
+    bundle install
+
+**For Rails < 3.1 you must run the installation rake task. This will copy the
+Sass files into your project's public/stylesheets/sass directory.**
+
+    rake sass_mixins:install
 
 **Import the mixins at the beginning of your stylesheet**
 
     @import 'sass-mixins/mixins';
-
 
 ##Usage
 Below are a few examples of mixin usage. Note that these are just a few, explore the repo to find out more.
