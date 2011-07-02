@@ -5,14 +5,9 @@
                        $G5: false, $G6: false,
                        $G7: false, $G8: false,
                        $G9: false, $G10: false) {
-  $full: $G1;
-  $gradients: $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10;
 
-  @each $gradient in $gradients {
-    @if $gradient {
-      $full: $full, $gradient;
-    }
-  }
+  $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
+
   background-color: nth($G1, 1);
   background-image: -webkit-radial-gradient($pos, $shape-size, $full);
   background-image:    -moz-radial-gradient($pos, $shape-size, $full);

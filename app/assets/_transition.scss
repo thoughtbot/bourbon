@@ -43,15 +43,9 @@
   $prop-6: false, $prop-7: false,
   $prop-8: false, $prop-9: false)
   {
-    $full:  $prop-1;
-    $props: $prop-2, $prop-3, $prop-4, $prop-5,
-            $prop-6, $prop-7, $prop-8, $prop-9;
+    $full: compact($prop-1, $prop-2, $prop-3, $prop-4, $prop-5,
+                   $prop-6, $prop-7, $prop-8, $prop-9);
 
-    @each $prop in $props {
-        @if $prop {
-          $full: $full, $prop;
-        }
-      }
   -webkit-transition-property: $full;
      -moz-transition-property: $full;
       -ms-transition-property: $full;
@@ -65,15 +59,9 @@
   $time-6: false, $time-7: false,
   $time-8: false, $time-9: false)
   {
-    $full:  $time-1;
-    $times: $time-2, $time-3, $time-4, $time-5,
-            $time-6, $time-7, $time-8, $time-9;
+    $full: compact($time-1, $time-2, $time-3, $time-4, $time-5,
+                   $time-6, $time-7, $time-8, $time-9);
 
-    @each $time in $times {
-        @if $time {
-          $full: $full, $time;
-        }
-      }
   -webkit-transition-duration: $full;
      -moz-transition-duration: $full;
       -ms-transition-duration: $full;
@@ -87,15 +75,9 @@
   $motion-6: false, $motion-7: false,
   $motion-8: false, $motion-9: false)
   {
-    $full:    $motion-1;
-    $motions: $motion-2, $motion-3, $motion-4, $motion-5,
-              $motion-6, $motion-7, $motion-8, $motion-9;
+    $full: compact($motion-1, $motion-2, $motion-3, $motion-4, $motion-5,
+                   $motion-6, $motion-7, $motion-8, $motion-9);
 
-    @each $motion in $motions {
-        @if $motion {
-          $full: $full, $motion;
-        }
-      }
 // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
   -webkit-transition-timing-function: $full;
      -moz-transition-timing-function: $full;
@@ -110,15 +92,9 @@
   $time-6: false, $time-7: false,
   $time-8: false, $time-9: false)
   {
-    $full: $time-1;
-    $times: $time-2, $time-3, $time-4, $time-5,
-            $time-6, $time-7, $time-8, $time-9;
+    $full: compact($time-1, $time-2, $time-3, $time-4, $time-5,
+                   $time-6, $time-7, $time-8, $time-9);
 
-    @each $time in $times {
-        @if $time {
-          $full: $full, $time;
-        }
-      }
   -webkit-transition-delay: $full;
      -moz-transition-delay: $full;
       -ms-transition-delay: $full;

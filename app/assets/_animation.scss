@@ -7,15 +7,9 @@
   $name-6: false, $name-7: false,
   $name-8: false, $name-9: false)
   {
-    $full:  $name-1;
-    $names: $name-2, $name-3, $name-4, $name-5,
-            $name-6, $name-7, $name-8, $name-9;
+    $full:  compact($name-1, $name-2, $name-3, $name-4,
+                    $name-5, $name-6, $name-7, $name-8, $name-9);
 
-    @each $name in $names {
-        @if $name {
-          $full: $full, $name;
-        }
-      }
   -webkit-animation-name: $full;
      -moz-animation-name: $full;
           animation-name: $full;
@@ -28,15 +22,9 @@
   $time-6: false, $time-7: false,
   $time-8: false, $time-9: false)
   {
-    $full:  $time-1;
-    $times: $time-2, $time-3, $time-4, $time-5,
-            $time-6, $time-7, $time-8, $time-9;
+    $full:  compact($time-1, $time-2, $time-3, $time-4,
+                    $time-5, $time-6, $time-7, $time-8, $time-9);
 
-    @each $time in $times {
-        @if $time {
-          $full: $full, $time;
-        }
-      }
   -webkit-animation-duration: $full;
      -moz-animation-duration: $full;
           animation-duration: $full;
@@ -50,15 +38,9 @@
   $motion-6: false, $motion-7: false,
   $motion-8: false, $motion-9: false)
   {
-    $full:    $motion-1;
-    $motions: $motion-2, $motion-3, $motion-4, $motion-5,
-              $motion-6, $motion-7, $motion-8, $motion-9;
+    $full:  compact($motion-1, $motion-2, $motion-3, $motion-4,
+                    $motion-5, $motion-6, $motion-7, $motion-8, $motion-9);
 
-    @each $motion in $motions {
-        @if $motion {
-          $full: $full, $motion;
-        }
-      }
   -webkit-animation-timing-function: $full;
      -moz-animation-timing-function: $full;
           animation-timing-function: $full;
@@ -72,15 +54,9 @@
   $value-6: false, $value-7: false,
   $value-8: false, $value-9: false)
   {
-    $full:   $value-1;
-    $values: $value-2, $value-3, $value-4, $value-5,
-             $value-6, $value-7, $value-8, $value-9;
+    $full:  compact($value-1, $value-2, $value-3, $value-4,
+                    $value-5, $value-6, $value-7, $value-8, $value-9);
 
-    @each $value in $values {
-        @if $value {
-          $full: $full, $value;
-        }
-      }
   -webkit-animation-iteration-count: $full;
      -moz-animation-iteration-count: $full;
           animation-iteration-count: $full;
@@ -94,15 +70,9 @@
   $direction-6: false, $direction-7: false,
   $direction-8: false, $direction-9: false)
   {
-    $full:       $direction-1;
-    $directions: $direction-2, $direction-3, $direction-4, $direction-5,
-                 $direction-6, $direction-7, $direction-8, $direction-9;
+    $full:  compact($direction-1, $direction-2, $direction-3, $direction-4,
+                    $direction-5, $direction-6, $direction-7, $direction-8, $direction-9);
 
-    @each $direction in $directions {
-        @if $direction {
-          $full: $full, $direction;
-        }
-      }
   -webkit-animation-direction: $full;
      -moz-animation-direction: $full;
           animation-direction: $full;
@@ -116,15 +86,9 @@
   $state-6: false, $state-7: false,
   $state-8: false, $state-9: false)
   {
-    $full:   $state-1;
-    $states: $state-2, $state-3, $state-4, $state-5,
-             $state-6, $state-7, $state-8, $state-9;
+    $full:  compact($state-1, $state-2, $state-3, $state-4,
+                    $state-5, $state-6, $state-7, $state-8, $state-9);
 
-    @each $state in $states {
-        @if $state {
-          $full: $full, $state;
-        }
-      }
   -webkit-animation-play-state: $full;
      -moz-animation-play-state: $full;
           animation-play-state: $full;
@@ -137,15 +101,9 @@
   $time-6: false, $time-7: false,
   $time-8: false, $time-9: false)
   {
-    $full:  $time-1;
-    $times: $time-2, $time-3, $time-4, $time-5,
-            $time-6, $time-7, $time-8, $time-9;
+    $full:  compact($time-1, $time-2, $time-3, $time-4,
+                    $time-5, $time-6, $time-7, $time-8, $time-9);
 
-    @each $time in $times {
-        @if $time {
-          $full: $full, $time;
-        }
-      }
   -webkit-animation-delay: $full;
      -moz-animation-delay: $full;
           animation-delay: $full;
@@ -160,15 +118,9 @@
   $mode-6: false, $mode-7: false,
   $mode-8: false, $mode-9: false)
   {
-    $full:  $mode-1;
-    $modes: $mode-2, $mode-3, $mode-4, $mode-5,
-            $mode-6, $mode-7, $mode-8, $mode-9;
+    $full:  compact($mode-1, $mode-2, $mode-3, $mode-4,
+                    $mode-5, $mode-6, $mode-7, $mode-8, $mode-9);
 
-    @each $mode in $modes {
-        @if $mode {
-          $full: $full, $mode;
-        }
-      }
   -webkit-animation-fill-mode: $full;
      -moz-animation-fill-mode: $full;
           animation-fill-mode: $full;

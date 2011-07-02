@@ -1,15 +1,15 @@
-@import "../app/assets/mixins";
+@import "/app/assets/mixins";
 
 // Clear Floated Elements
 .clearfix:after {
-	clear: both;
-	content: ' ';
-	display: block;
-	font-size: 0;
-	line-height: 0;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
 // This is just for the example page
