@@ -1,7 +1,6 @@
 @mixin button ($style: simple, $base-color: #4294f0) {
-  $pos-type: type-of($style);
 
-  @if $pos-type == color {
+  @if type-of($style) == color {
     $base-color: $style;
     $style: simple;
   }
