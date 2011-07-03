@@ -1,5 +1,5 @@
-#Vanilla Sass Mixins
-The purpose of Vanilla Sass Mixins is to provide a comprehensive framework of sass mixins that are designed to be as vanilla as possible. Meaning they should not deter from the original CSS syntax. The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties.
+#Bourbon Vanilla Sass Mixins
+The purpose of Bourbon Vanilla Sass Mixins is to provide a comprehensive framework of sass mixins that are designed to be as vanilla as possible. Meaning they should not deter from the original CSS syntax. The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties.
 
 
 ##Requirements
@@ -9,18 +9,27 @@ Sass 3.1+
 ##Install
 **Update your Gemfile**
 
-    gem 'sass-mixins'
+    gem 'bourbon'
 
     bundle install
+
+**Remove the sprockets directives in /application.css.scss**
+
+    *= require_self
+    *= require_tree .
+
+**Import the mixins at the beginning of your stylesheet**
+
+    @import 'bourbon';
 
 **For Rails < 3.1 you must run the installation rake task. This will copy the
 Sass files into your project's public/stylesheets/sass directory.**
 
-    rake sass_mixins:install
+    rake bourbon:install
 
-**Import the mixins at the beginning of your stylesheet**
+**For Rails < 3.1, import the mixins at the beginning of your stylesheet**
 
-    @import 'sass-mixins/mixins';
+    @import 'bourbon/bourbon';
 
 ##Usage
 Below are a few examples of mixin usage. Note that these are just a few, explore the repo to find out more.
