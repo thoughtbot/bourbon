@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'sass-mixins'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.summary     = "Vanilla Sass Mixins using SCSS syntax."
   s.description = <<-DESC
 The purpose of Vanilla Sass Mixins is to provide a comprehensive framework of
