@@ -13,7 +13,8 @@ Sass 3.1+
 
     bundle install
 
-**Remove the sprockets directives in /application.css.scss**
+###Rails 3.1.x
+**Remove these sprockets directives in /application.css.scss**
 
     *= require_self
     *= require_tree .
@@ -22,14 +23,16 @@ Sass 3.1+
 
     @import 'bourbon';
 
+###Rails 3.0.9 and below
 **For Rails < 3.1 you must run the installation rake task. This will copy the
 Sass files into your project's public/stylesheets/sass directory.**
 
     rake bourbon:install
 
-**For Rails < 3.1, import the mixins at the beginning of your stylesheet**
+**Import the mixins at the beginning of your stylesheet**
 
     @import 'bourbon/bourbon';
+
 
 ##Usage
 Below are a few examples of mixin usage. Note that these are just a few, explore the repo to find out more.

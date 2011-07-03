@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Phil LaPier", "Chad Mazzola", "Mike Burns"]
   s.email       = ["support@thoughtbot.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/thoughtbot/bourbon"
   s.summary     = "Bourbon Sass Mixins using SCSS syntax."
   s.description = <<-DESC
 The purpose of Bourbon Vanilla Sass Mixins is to provide a comprehensive framework of
