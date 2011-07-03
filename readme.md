@@ -130,13 +130,13 @@ Position is a shorthand notation for setting the position of elements in your pa
 
 Instead of writing:
 
-  position: relative;
-  top: 0px;
-  left: 100px;
+    position: relative;
+    top: 0px;
+    left: 100px;
 
 You can write:
 
-  @include position(relative, 0px 0 0 100px);
+    @include position(relative, 0px 0 0 100px);
 
 The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.
 
