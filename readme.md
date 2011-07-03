@@ -106,7 +106,7 @@ Gradient position is optional, default is top. Position can be a degree. Color-s
 
 **Position**
 
-Position is a shorthand notation for setting the position of elements in your page.
+Shorthand notation for setting the position of elements in your page.
 
 Instead of writing:
 
@@ -154,7 +154,7 @@ The mixin can be called with no parameters to render a blue button with the "sim
 
     button,
     input[type="button"] {
-      @include button();
+      @include button;
     }
 
 The mixin supports a style parameter. Right now the available styles are "simple" (default), "shiny", and "pill".
