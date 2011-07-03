@@ -1,0 +1,30 @@
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
+require "bourbon/version"
+
+Gem::Specification.new do |s|
+  s.name        = "bourbon"
+  s.version     = Bourbon::VERSION
+  s.platform    = Gem::Platform::RUBY
+  s.authors     = ["Phil LaPier", "Chad Mazzola", "Mike Burns"]
+  s.email       = ["support@thoughtbot.com"]
+  s.homepage    = ""
+  s.summary     = "Bourbon Sass Mixins using SCSS syntax."
+  s.description = <<-DESC
+The purpose of Bourbon Vanilla Sass Mixins is to provide a comprehensive framework of
+sass mixins that are designed to be as vanilla as possible. Meaning they
+should not deter from the original CSS syntax. The mixins contain vendor
+specific prefixes for all CSS3 properties for support amongst modern
+browsers. The prefixes also ensure graceful degradation for older browsers
+that support only CSS3 prefixed properties.
+  DESC
+
+  s.rubyforge_project = "bourbon"
+
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.require_paths = ["lib"]
+
+  s.add_dependency('sass', '>= 3.1')
+end
