@@ -103,6 +103,26 @@ Gradient position is optional, default is top. Position can be a degree. Color-s
     @include linear-gradient(top, #1e5799 0%, #2989d8 100%);
     @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
 
+
+**Position**
+
+Position is a shorthand notation for setting the position of elements in your page.
+
+Instead of writing:
+
+    position: relative;
+    top: 0px;
+    left: 100px;
+
+You can write:
+
+    @include position(relative, 0px 0 0 100px);
+
+The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.
+
+Note: unitless values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.
+
+
 **Radial-Gradient**
 
 Takes up to 10 gradients. Position and shape are required.
@@ -122,25 +142,6 @@ Shorthand mixin: Supports multiple parentheses-deliminated values for each varia
     @include transition (all, 2.0s, ease-in-out);
     @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
     @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));`
-
-
-**Position**
-
-Position is a shorthand notation for setting the position of elements in your page.
-
-Instead of writing:
-
-    position: relative;
-    top: 0px;
-    left: 100px;
-
-You can write:
-
-    @include position(relative, 0px 0 0 100px);
-
-The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.
-
-Note: unitless values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.
 
 
 ##Add-ons
