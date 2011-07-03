@@ -58,6 +58,7 @@ body {
 // Style the buttons
 .simple {
   button.default {
+
     @include button();
   }
 

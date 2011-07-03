@@ -1,4 +1,3 @@
-/* Legacy support for inline-block in IE7 (maybe IE6) */
 .clearfix:after, #buttons .button-set:after {
   clear: both;
   content: ' ';

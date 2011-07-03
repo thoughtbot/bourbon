@@ -124,6 +124,25 @@ Shorthand mixin: Supports multiple parentheses-deliminated values for each varia
     @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));`
 
 
+**Position**
+
+Position is a shorthand notation for setting the position of elements in your page.
+
+Instead of writing:
+
+  position: relative;
+  top: 0px;
+  left: 100px;
+
+You can write:
+
+  @include position(relative, 0px 0 0 100px);
+
+The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.
+
+Note: unitless values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.
+
+
 ##Add-ons
 
 **Buttons**
