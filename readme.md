@@ -24,8 +24,8 @@ Sass 3.1+
     @import 'bourbon';
 
 ###Rails 3.0.9 and below
-**For Rails < 3.1 you must run the installation rake task. This will copy the
-Sass files into your project's public/stylesheets/sass directory.**
+**For Rails < 3.1 you must run the installation rake task.**
+This will copy the Sass files into your project's public/stylesheets/sass directory.
 
     rake bourbon:install
 
