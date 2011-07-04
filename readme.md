@@ -183,6 +183,22 @@ The real power of the mixin is revealed when you pass in the optional color argu
     }
 
 
+**Tint & Shade**
+
+Tint & shade are different from lighten() and darken() functions built into sass.
+
+Tint is a mix of a color with white. Tint takes a color and a percent argument.
+
+  div {
+    background: tint(red, 40%);
+  }
+
+Shade is a mix of a color with black. Shade takes a color and a percent argument.
+
+  div {
+    background: shade(blue, 60%);
+  }
+
 ##Help Out
 Currently the project is a work in progress. Feel free to help out.
 
