@@ -14,10 +14,9 @@ Sass 3.1+
     bundle install
 
 ###Rails 3.1.x
-**Remove these sprockets directives in /application.css.scss**
+**Comment-out the following sprocket directive in /application.css.scss** (Remove the =)
 
-    *= require_self
-    *= require_tree .
+    * require_tree .
 
 **Import the mixins at the beginning of your stylesheet**
 
