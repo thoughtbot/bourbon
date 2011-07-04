@@ -232,13 +232,16 @@ The real power of the mixin is revealed when you pass in the optional color argu
 
 #All Supported Functions, Mixins, and Addons
 *@ denotes a mixin and must be prefaced with @include*
+
     #Functions
+    --------------------------------
       compact(*args)
       golden-ratio(*args)
       shade(*args)
       tint(*args)
 
     #Mixins
+    --------------------------------
       animation
         @ animation(*args)
         @ animation-basic(*args)
@@ -278,6 +281,7 @@ The real power of the mixin is revealed when you pass in the optional color argu
         @ transition-timing-function(*args)
 
     #Addons
+    --------------------------------
     @ button(*args)
     @ position(*args)
 
