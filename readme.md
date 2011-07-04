@@ -7,35 +7,34 @@ Sass 3.1+
 
 
 #Install for Rails
-**Update your Gemfile**
+Update your Gemfile
 
     gem 'bourbon'
 
     bundle install
 
 ##Rails 3.1.x
-**Comment-out the following sprocket directive in /application.css.scss** (Remove the =)
+Comment-out the following sprocket directive in /application.css.scss (Remove the =)
 
     * require_tree .
 
-**Import the mixins at the beginning of your stylesheet**
+Import the mixins at the beginning of your stylesheet
 
     @import 'bourbon';
 
 ##Rails 3.0.9 and below
-**For Rails < 3.1 you must run the installation rake task.**
+For Rails < 3.1 you must run the installation rake task.
 This will copy the Sass files into your project's public/stylesheets/sass directory.
 
     rake bourbon:install
 
-**Import the mixins at the beginning of your stylesheet**
+Import the mixins at the beginning of your stylesheet
 
     @import 'bourbon/bourbon';
 
 
 #Install without Rails
-The following script will generate a sass directory and convert all .css.scss to .scss extensions. The sass directory is for 'sass --watch' use outside of rails.
-
+The following script will generate a sass directory and convert all .css.scss to .scss extensions. The sass directory is for 'sass --watch' use outside of rails.  
 Preliminary step: clone the repo and cd into the directory.
 
 **Step 1:** Make script executable by changing file permission
@@ -46,7 +45,7 @@ Preliminary step: clone the repo and cd into the directory.
 
     ./generate-sass.sh
 
-**Step 3:** Move the new sass directory to your project's stylesheets directory.
+**Step 3:** Move the new *sass* directory to your project's stylesheets directory.
 
 
 #Using Bourbon Vanilla Mixins
@@ -54,11 +53,14 @@ Below are a few examples of mixin usage. Note that these are just a few, explore
 
 **Animation**
 
-The three following properties support a comma separated list of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties. animation-name | animation-duration | animation-timing-function
+The animation mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
 
     @include animation-name(slideup, fadein);
     @include animation-duration(1.0s, 1.2s);
     @include animation-timing-function(ease-in-out, ease-out);
+
+    # Shorthand for a basic animation. Supports multiple parentheses-deliminated values for each variable.
+    @include animation-basic((slideup, fadein), (1.0s, 2.0s), ease-in);
 
 
 **Border Radius**
@@ -69,25 +71,19 @@ Border-radius will also take short-hand notation.
     @include border-radius(5px 5px 2px 2px);
 
 
-Shorthand for a basic animation. Supports multiple parentheses-deliminated values for each variable.
-
-    @include animation-basic((slideup, fadein), (1.0s, 2.0s), ease-in);
-
-
 **Box Shadow**
 
 Box-Shadow supports single or multiple arguments:
 
     @include box-shadow(1px 1px 2px 0 #ff0000);
 
-Multiple arguments must be comma-diliminated.
-
+    # Multiple arguments must be comma-diliminated.
     @include box-shadow(1px 1px 2px 0 #fff0000, -1px -2px 0 #ccc);
 
 
 **Border Radius**
 
-Border-radius will also take short-hand notation.
+Border-radius can take single or short-hand notation.
 
     @include border-radius(10px);
     @include border-radius(5px 5px 2px 2px);
@@ -114,6 +110,7 @@ The flex-box mixin is based on the 2009 w3c spec. The mixin with change to the f
     div.parent > div.child {
       @include box-flex(2);
     }
+
 
 **Inline-block**
 
@@ -157,6 +154,7 @@ Takes up to 10 gradients. Position and shape are required.
     @include radial-gradient(50% 50%, circle cover, #1e5799, #efefef);
     @include radial-gradient(50% 50%, circle cover, #eee 10%, #1e5799 30%, #efefef);
 
+
 **Transform**
 
     @include transform(translateY(50px));
@@ -183,8 +181,7 @@ The compact function will strip out any value from a list that is 'false'. Takes
 
 Returns the golden ratio of a given number. Must provide a Pixel or Em value for first argument. Also takes a required increment value that is not zero and an integer: ...-3, -2, -1, 1, 2, 3...
 
-Can be used with ceil(round up) or floor(round down).
-
+    # Can be used with ceil(round up) or floor(round down).
     div {
                     Increment Up Golden Ratio
       width:        golden-ratio(14px,  1);    // returns: 22.652px
@@ -200,8 +197,7 @@ Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.
 
 **Tint & Shade**
 
-Tint & shade are different from lighten() and darken() functions built into sass.
-
+Tint & shade are different from lighten() and darken() functions built into sass.  
 Tint is a mix of a color with white. Tint takes a color and a percent argument.
 
     div {
@@ -219,8 +215,7 @@ Shade is a mix of a color with black. Shade takes a color and a percent argument
 
 **Buttons**
 
-The button add-on provides well-designed buttons with a single line in your CSS. The demo folder contains examples of the buttons in use.
-
+The button add-on provides well-designed buttons with a single line in your CSS. The demo folder contains examples of the buttons in use.  
 The mixin can be called with no parameters to render a blue button with the "simple" style.
 
     button,
