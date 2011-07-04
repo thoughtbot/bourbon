@@ -173,15 +173,16 @@ The compact function will strip out any value from a list that is 'false'. Takes
 
 Returns the golden ratio of a given number. Must provide a Pixel or Em value for first argument. Also takes a required increment value that is not zero and an integer: ...-3, -2, -1, 1, 2, 3...
 
-    # Can be used with ceil(round up) or floor(round down).
     div {
-                    Increment Up Golden Ratio
+                    Increment Up GR with positive value
       width:        golden-ratio(14px,  1);    // returns: 22.652px
+
+                    Increment Down GR with negative value
+      width:        golden-ratio(14px, -1);    // returns: 8.653px
+
+                    Can be used with ceil(round up) or floor(round down)
       width: floor( golden-ratio(14px,  1) );  // returns: 22px
       width:  ceil( golden-ratio(14px,  1) );  // returns: 23px
-
-                    Increment Down Golden Ratio
-      width:        golden-ratio(14px, -1);    // returns: 8.653px
     }
 
 Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.com](goldenratiocalculator.com)
