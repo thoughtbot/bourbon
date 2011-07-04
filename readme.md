@@ -166,10 +166,10 @@ Shorthand mixin: Supports multiple parentheses-deliminated values for each varia
 
 The compact function will strip out any value from a list that is 'false'. Takes up to 10 arguments.
 
-    $full:  compact($name-1, $name-2, $name-3, $name-4, $name-5, $name-6, $name-7, $name-8, $name-9);
+    $full:  compact($name-1, $name-2, $name-3, $name-4, $name-5, $name-6, $name-7, $name-8, $name-9, $name-10);
 
 
-###Golen Ratio
+###Golden Ratio
 
 Returns the golden ratio of a given number. Must provide a Pixel or Em value for first argument. Also takes a required increment value that is not zero and an integer: ...-3, -2, -1, 1, 2, 3...
 
@@ -228,6 +228,58 @@ The real power of the mixin is revealed when you pass in the optional color argu
     input[type="button"] {
       @include button(shiny, #ff000);
     }
+
+
+#All Supported Functions, Mixins, and Addons
+*@ denotes a mixin and must be prefaced with @include*
+    #Functions
+      compact(*args)
+      golden-ratio(*args)
+      shade(*args)
+      tint(*args)
+
+    #Mixins
+      animation
+        @ animation(*args)
+        @ animation-basic(*args)
+        @ animation-delay(*args)
+        @ animation-direction(*args)
+        @ animation-duration(*args)
+        @ animation-fill-mode(*args)
+        @ animation-iteration-count(*args)
+        @ animation-name(*args)
+        @ animation-play-state(*args)
+        @ animation-timing-function(*args)
+
+      @ border-radius(*args)
+      @ box-sizing(*args)
+
+      flex-box
+        @ box-align(*args)
+        @ box-direction(*args)
+        @ box-flex(*args)
+        @ box-flex-group(*args)
+        @ box-lines(*args)
+        @ box-ordinal-group(*args)
+        @ box-orient(*args)
+        @ box-pack(*args)
+        @ display-box
+
+      @ inline-block
+      @ linear-gradient(*args)
+      @ radial-gradient(*args)
+      @ transform(*args)
+
+      transition
+        @ transition(*args)
+        @ transition-delay(*args)
+        @ transition-duration(*args)
+        @ transition-property(*args)
+        @ transition-timing-function(*args)
+
+    #Addons
+    @ button(*args)
+    @ position(*args)
 
 
 ##Help Out
