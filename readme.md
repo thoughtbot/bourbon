@@ -79,7 +79,7 @@ Border-radius will also take short-hand notation.
 
 **Box Sizing**
 
-Box-sizing will change the box-model of the element it is applied to. This is really helpful for properly styling padding and margin to all text-based input types (e.g. input[type="text"]).
+Box-sizing will change the box-model of the element it is applied to.
 
     @include box-sizing(border-box);
 
@@ -189,15 +189,16 @@ Tint & shade are different from lighten() and darken() functions built into sass
 
 Tint is a mix of a color with white. Tint takes a color and a percent argument.
 
-  div {
-    background: tint(red, 40%);
-  }
+    div {
+      background: tint(red, 40%);
+    }
 
 Shade is a mix of a color with black. Shade takes a color and a percent argument.
 
-  div {
-    background: shade(blue, 60%);
-  }
+    div {
+      background: shade(blue, 60%);
+    }
+
 
 ##Help Out
 Currently the project is a work in progress. Feel free to help out.
