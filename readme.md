@@ -6,7 +6,7 @@ The purpose of Bourbon Vanilla Sass Mixins is to provide a comprehensive framewo
 Sass 3.1+
 
 
-##Install
+##Install for Rails
 **Update your Gemfile**
 
     gem 'bourbon'
@@ -31,6 +31,22 @@ This will copy the Sass files into your project's public/stylesheets/sass direct
 **Import the mixins at the beginning of your stylesheet**
 
     @import 'bourbon/bourbon';
+
+
+##Install without Rails
+The following script will generate a sass directory and convert all .css.scss to .scss extensions. The sass directory is for 'sass --watch' use outside of rails.
+
+Preliminary step: clone the repo and cd into the directory.
+
+**Step 1:** Make script executable by changing file permission
+
+    chmod a+x generate-sass.sh
+
+**Step 2:** Generate files
+
+    ./generate-sass.sh
+
+**Step 3:** Move the new sass directory to your project's stylesheets directory.
 
 
 ##Usage
