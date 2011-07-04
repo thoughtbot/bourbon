@@ -2,18 +2,18 @@
 The purpose of Bourbon Vanilla Sass Mixins is to provide a comprehensive framework of sass mixins that are designed to be as vanilla as possible. Meaning they should not deter from the original CSS syntax. The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties.
 
 
-##Requirements
+#Requirements
 Sass 3.1+
 
 
-##Install for Rails
+#Install for Rails
 **Update your Gemfile**
 
     gem 'bourbon'
 
     bundle install
 
-###Rails 3.1.x
+##Rails 3.1.x
 **Comment-out the following sprocket directive in /application.css.scss** (Remove the =)
 
     * require_tree .
@@ -22,7 +22,7 @@ Sass 3.1+
 
     @import 'bourbon';
 
-###Rails 3.0.9 and below
+##Rails 3.0.9 and below
 **For Rails < 3.1 you must run the installation rake task.**
 This will copy the Sass files into your project's public/stylesheets/sass directory.
 
@@ -33,7 +33,7 @@ This will copy the Sass files into your project's public/stylesheets/sass direct
     @import 'bourbon/bourbon';
 
 
-##Install without Rails
+#Install without Rails
 The following script will generate a sass directory and convert all .css.scss to .scss extensions. The sass directory is for 'sass --watch' use outside of rails.
 
 Preliminary step: clone the repo and cd into the directory.
@@ -49,7 +49,7 @@ Preliminary step: clone the repo and cd into the directory.
 **Step 3:** Move the new sass directory to your project's stylesheets directory.
 
 
-##Usage
+#Using Bourbon Vanilla Mixins
 Below are a few examples of mixin usage. Note that these are just a few, explore the repo to find out more.
 
 **Animation**
@@ -171,6 +171,50 @@ Shorthand mixin: Supports multiple parentheses-deliminated values for each varia
     @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));`
 
 
+##Functions
+**Compact**
+
+The compact function will strip out any value from a list that is 'false'. Takes up to 10 arguments.
+
+    $full:  compact($name-1, $name-2, $name-3, $name-4, $name-5, $name-6, $name-7, $name-8, $name-9);
+
+
+**Golen Ratio**
+
+Returns the golden ratio of a given number. Must provide a Pixel or Em value for first argument. Also takes a required increment value that is not zero and an integer: ...-3, -2, -1, 1, 2, 3...
+
+Can be used with ceil(round up) or floor(round down).
+
+    div {
+                    Increment Up Golden Ratio
+      width:        golden-ratio(14px,  1);    // returns: 22.652px
+      width: floor( golden-ratio(14px,  1) );  // returns: 22px
+      width:  ceil( golden-ratio(14px,  1) );  // returns: 23px
+
+                    Increment Down Golden Ratio
+      width:        golden-ratio(14px, -1);    // returns: 8.653px
+    }
+
+Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.com](goldenratiocalculator.com)
+
+
+**Tint & Shade**
+
+Tint & shade are different from lighten() and darken() functions built into sass.
+
+Tint is a mix of a color with white. Tint takes a color and a percent argument.
+
+    div {
+      background: tint(red, 40%);
+    }
+
+Shade is a mix of a color with black. Shade takes a color and a percent argument.
+
+    div {
+      background: shade(blue, 60%);
+    }
+
+
 ##Add-ons
 
 **Buttons**
@@ -196,23 +240,6 @@ The real power of the mixin is revealed when you pass in the optional color argu
     button,
     input[type="button"] {
       @include button(shiny, #ff000);
-    }
-
-
-**Tint & Shade**
-
-Tint & shade are different from lighten() and darken() functions built into sass.
-
-Tint is a mix of a color with white. Tint takes a color and a percent argument.
-
-    div {
-      background: tint(red, 40%);
-    }
-
-Shade is a mix of a color with black. Shade takes a color and a percent argument.
-
-    div {
-      background: shade(blue, 60%);
     }
 
 
