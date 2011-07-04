@@ -185,7 +185,7 @@ Returns the golden ratio of a given number. Must provide a Pixel or Em value for
       width:  ceil( golden-ratio(14px,  1) );  // returns: 23px
     }
 
-Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.com](goldenratiocalculator.com)
+Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.com](http://goldenratiocalculator.com)
 
 
 ###Tint & Shade
