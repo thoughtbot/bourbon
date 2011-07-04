@@ -51,7 +51,7 @@ Preliminary step: clone the repo and cd into the directory.
 #Using Bourbon Vanilla Mixins
 Below are a few examples of mixin usage. Note that these are just a few, explore the repo to find out more.
 
-**Animation**
+###Animation
 
 The animation mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
 
@@ -63,7 +63,7 @@ The animation mixins support comma separated lists of values, which allows diffe
     @include animation-basic((slideup, fadein), (1.0s, 2.0s), ease-in);
 
 
-**Border Radius**
+###Border Radius
 
 Border-radius will also take short-hand notation.
 
@@ -71,7 +71,7 @@ Border-radius will also take short-hand notation.
     @include border-radius(5px 5px 2px 2px);
 
 
-**Box Shadow**
+###Box Shadow
 
 Box-Shadow supports single or multiple arguments:
 
@@ -81,22 +81,14 @@ Box-Shadow supports single or multiple arguments:
     @include box-shadow(1px 1px 2px 0 #fff0000, -1px -2px 0 #ccc);
 
 
-**Border Radius**
-
-Border-radius can take single or short-hand notation.
-
-    @include border-radius(10px);
-    @include border-radius(5px 5px 2px 2px);
-
-
-**Box Sizing**
+###Box Sizing
 
 Box-sizing will change the box-model of the element it is applied to.
 
     @include box-sizing(border-box);
 
 
-**Flex Box**
+###Flex Box
 
 The flex-box mixin is based on the 2009 w3c spec. The mixin with change to the flexible box-model. [More info.](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/)
 
@@ -112,14 +104,14 @@ The flex-box mixin is based on the 2009 w3c spec. The mixin with change to the f
     }
 
 
-**Inline-block**
+###Inline-block
 
 The inline-block mixin provides support for the inline-block property in IE6 and IE7.
 
     @include inline-block;
 
 
-**Linear-Gradient**
+###Linear-Gradient
 
 Gradient position is optional, default is top. Position can be a degree. Color-stops are optional as well. Mixin will support up to 10 gradients.
 
@@ -128,7 +120,7 @@ Gradient position is optional, default is top. Position can be a degree. Color-s
     @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
 
 
-**Position**
+###Position
 
 Shorthand notation for setting the position of elements in your page.
 
@@ -147,7 +139,7 @@ The first parameter is optional, with a default value of relative. The second pa
 Note: unitless values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.
 
 
-**Radial-Gradient**
+###Radial-Gradient
 
 Takes up to 10 gradients. Position and shape are required.
 
@@ -155,12 +147,12 @@ Takes up to 10 gradients. Position and shape are required.
     @include radial-gradient(50% 50%, circle cover, #eee 10%, #1e5799 30%, #efefef);
 
 
-**Transform**
+###Transform
 
     @include transform(translateY(50px));
 
 
-**Transitions**
+###Transitions
 
 Shorthand mixin: Supports multiple parentheses-deliminated values for each variable.
 
@@ -170,14 +162,14 @@ Shorthand mixin: Supports multiple parentheses-deliminated values for each varia
 
 
 ##Functions
-**Compact**
+###Compact
 
 The compact function will strip out any value from a list that is 'false'. Takes up to 10 arguments.
 
     $full:  compact($name-1, $name-2, $name-3, $name-4, $name-5, $name-6, $name-7, $name-8, $name-9);
 
 
-**Golen Ratio**
+###Golen Ratio
 
 Returns the golden ratio of a given number. Must provide a Pixel or Em value for first argument. Also takes a required increment value that is not zero and an integer: ...-3, -2, -1, 1, 2, 3...
 
@@ -195,7 +187,7 @@ Returns the golden ratio of a given number. Must provide a Pixel or Em value for
 Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.com](goldenratiocalculator.com)
 
 
-**Tint & Shade**
+###Tint & Shade
 
 Tint & shade are different from lighten() and darken() functions built into sass.  
 Tint is a mix of a color with white. Tint takes a color and a percent argument.
@@ -213,7 +205,7 @@ Shade is a mix of a color with black. Shade takes a color and a percent argument
 
 ##Add-ons
 
-**Buttons**
+###Buttons
 
 The button add-on provides well-designed buttons with a single line in your CSS. The demo folder contains examples of the buttons in use.  
 The mixin can be called with no parameters to render a blue button with the "simple" style.
