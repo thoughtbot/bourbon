@@ -190,7 +190,7 @@ Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.
 
 ###Grid-width
 
-Easily setup and follow a grid based design.
+Easily setup and follow a grid based design. Need help gridding? Check out [gridulator.com](http://gridulator.com/)
 
     # The $gw-column and $gw-gutter variables must be defined in your base stylesheet to properly use the grid-width function.
     $gw-column: 100px;          // Column Width
@@ -200,8 +200,6 @@ Easily setup and follow a grid based design.
       width: grid-width(4);     // returns 520px;
       margin-left: $gw-gutter;  // returns 40px;
     }
-
-Need help gridding? Check out [gridulator.com](http://gridulator.com/)
 
 
 ###Tint & Shade
