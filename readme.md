@@ -169,6 +169,22 @@ The compact function will strip out any value from a list that is 'false'. Takes
     $full:  compact($name-1, $name-2, $name-3, $name-4, $name-5, $name-6, $name-7, $name-8, $name-9, $name-10);
 
 
+###Grid-width
+
+Easily setup and follow a grid based design.
+
+    # The $gw-column and $gw-gutter variables must be defined in your base stylesheet to properly use the grid-width function.
+    $gw-column: 100px;          // Column Width
+    $gw-gutter: 40px;           // Gutter Width
+
+    div {
+      width: grid-width(4);     // returns 520px;
+      margin-left: $gw-gutter;  // returns 40px;
+    }
+
+Need help gridding? Check out (gridulator.com)[http://gridulator.com/]
+
+
 ###Golden Ratio
 
 Returns the golden ratio of a given number. Must provide a Pixel or Em value for first argument. Also takes a required increment value that is not zero and an integer: ...-3, -2, -1, 1, 2, 3...
