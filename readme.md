@@ -252,6 +252,7 @@ The real power of the mixin is revealed when you pass in the optional color argu
     --------------------------------
       compact(*args)
       golden-ratio(*args)
+      grid-width(*args)
       shade(*args)
       tint(*args)
 
