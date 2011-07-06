@@ -306,4 +306,16 @@ The real power of the mixin is revealed when you pass in the optional color argu
 Currently the project is a work in progress. Feel free to help out.
 
 
+Credits
+-------
 
+![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
+
+Flutie is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community)
+
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+
+License
+-------
+
+Bourbon is Copyright © 2011 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
