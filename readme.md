@@ -303,15 +303,15 @@ The real power of the mixin is revealed when you pass in the optional color argu
 
 
 ##Help Out
-Currently the project is a work in progress. Feel free to help out.
 
+Currently the project is a work in progress. Feel free to help out.
 
 Credits
 -------
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 
-Flutie is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community)
+Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community)
 
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
