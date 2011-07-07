@@ -241,7 +241,7 @@ The real power of the mixin is revealed when you pass in the optional color argu
 
     button,
     input[type="button"] {
-      @include button(shiny, #ff000);
+      @include button(shiny, #ff0000);
     }
 
 
