@@ -1,6 +1,6 @@
 #Bourbon Sass Mixins
 The purpose of Bourbon Sass Mixins is to provide a comprehensive framework of sass mixins that are designed to be as vanilla as possible. Meaning they should not deter from the original CSS syntax. The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties.
-
+Bourbon uses SCSS syntax.
 
 #Requirements
 Sass 3.1+
@@ -14,6 +14,7 @@ Update your Gemfile
     bundle install
 
 ##Rails 3.1.x
+Bourbon needs the sass files to be imported in a specific order to function properly—therefore you will need to disabled the require_tree sprocket directive.  
 Comment-out the following sprocket directive in /application.css.scss (Remove the =)
 
     * require_tree .
