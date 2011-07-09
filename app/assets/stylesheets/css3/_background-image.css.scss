@@ -1,0 +1,64 @@
+// Background image property for support with adding multiple background images with a gradients.
+
+@mixin background-image(
+  $image-1       , $image-2: false,
+  $image-3: false, $image-4: false,
+  $image-5: false, $image-6: false,
+  $image-7: false, $image-8: false,
+  $image-9: false, $image-10: false
+) {
+  $images: $image-1, $image-2,
+           $image-3, $image-4,
+           $image-5, $image-6,
+           $image-7, $image-8,
+           $image-9, $image-10;
+
+  $assets:    false;
+  $gradients: false;
+  $all-assets:    0;
+  $all-gradients: 0;
+
+  @each $image in $images {
+    // Detect images passed into mixin and join into a list.
+    @if type-of($image) == string {
+      $assets: join($assets, $image);
+    }
+    // Detect gradients passed into mixin and join into a list.
+    @else if type-of($image) == list {
+      $gradients: join($gradients, $image);
+    }
+  }
+
+  // Remove false value
+  $all-assets: nth($assets, 2);
+  @for $n from 3 through length($assets) {
+    @if $n {
+      $all-assets: $all-assets, nth($assets, $n);
+    }
+  }
+
+  @if length($gradients) >= 2 {
+    // Remove flase value
+    $all-gradients: nth($gradients, 2);
+    @for $n from 3 through length($gradients) {
+      @if $n {
+        $all-gradients: $all-gradients, nth($gradients, $n);
+      }
+    }
+  }
+  @if length($gradients) >= 2 {
+    background-image: $all-assets, -webkit-linear-gradient($all-gradients);
+    background-image: $all-assets,   -moz-linear-gradient($all-gradients);
+    background-image: $all-assets,    -ms-linear-gradient($all-gradients);
+    background-image: $all-assets,     -o-linear-gradient($all-gradients);
+    background-image: $all-assets,        linear-gradient($all-gradients);
+  }
+  @else {
+    background-image: $all-assets;
+  }
+}
+//Examples:
+   //@include background-image(url("/images/a.png"), gradient(#ffff00, #999));
+   //@include background-image(url("/images/a.png"), url("/images/b.png"), url("/images/c.png"), gradient(#ffff00 10%, #000 20%));
+
+   //@include background-image(url("/images/a.png"), url("/images/b.png"), url("/images/c.png"));
