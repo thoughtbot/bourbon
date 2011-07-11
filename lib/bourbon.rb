@@ -11,3 +11,5 @@ module Bourbon
     end
   end
 end
+
+require "bourbon/sass_extensions"

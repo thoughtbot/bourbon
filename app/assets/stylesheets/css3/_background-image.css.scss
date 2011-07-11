@@ -7,54 +7,96 @@
   $image-7: false, $image-8: false,
   $image-9: false, $image-10: false
 ) {
-  $images: $image-1, $image-2,
+  $images: compact($image-1, $image-2,
            $image-3, $image-4,
            $image-5, $image-6,
            $image-7, $image-8,
-           $image-9, $image-10;
+           $image-9, $image-10);
 
   $assets:    false;
   $gradients: false;
-  $all-assets:    0;
-  $all-gradients: 0;
+  $count: 0;
 
-  @each $image in $images {
-    // Detect images passed into mixin and join into a list.
-    @if type-of($image) == string {
-      $assets: join($assets, $image);
-    }
-    // Detect gradients passed into mixin and join into a list.
-    @else if type-of($image) == list {
-      $gradients: join($gradients, $image);
-    }
-  }
+  //Find all asset images in list
+  @for $i from 1 through length($images) {
+    $type: type-of(nth($images, $i));
 
-  // Remove false value
-  $all-assets: nth($assets, 2);
-  @for $n from 3 through length($assets) {
-    @if $n {
-      $all-assets: $all-assets, nth($assets, $n);
+    @if $type == list {
+      $count: $count + 1;
     }
-  }
 
-  @if length($gradients) >= 2 {
-    // Remove flase value
-    $all-gradients: nth($gradients, 2);
-    @for $n from 3 through length($gradients) {
-      @if $n {
-        $all-gradients: $all-gradients, nth($gradients, $n);
+    @else if $type == string {
+      @if $assets == false {
+        $assets: nth($images, $i);
+      }
+
+      @else {
+        $assets: join($assets, nth($images, $i), comma);
       }
     }
   }
-  @if length($gradients) >= 2 {
-    background-image: $all-assets, -webkit-linear-gradient($all-gradients);
-    background-image: $all-assets,   -moz-linear-gradient($all-gradients);
-    background-image: $all-assets,    -ms-linear-gradient($all-gradients);
-    background-image: $all-assets,     -o-linear-gradient($all-gradients);
-    background-image: $all-assets,        linear-gradient($all-gradients);
+
+  // Find all gradients in list
+  @for $i from 1 through length($images) {
+    $type: type-of(nth($images, $i));
+
+    @if $type == list {
+      @if $gradients == false {
+        $gradients: nth($images, $i);
+      }
+      @else {
+        $gradients: $gradients, nth($images, $i);
+      }
+    }
+  }
+
+  @function render-gradients($gradients, $vendor: false) {
+    @if $count == 1 {
+      $vendor-gradients: false;
+      @if $vendor {
+        $vendor-gradients: -#{$vendor}-linear-gradient($gradients);
+      }
+      @else if $vendor == false {
+        $vendor-gradients: linear-gradient($gradients);
+      }
+      @return $vendor-gradients;
+    }
+
+    @else if $count >= 2 {
+      $vendor-gradients: false;
+      @for $i from 1 through length($gradients) {
+        @if $vendor {
+          @if $vendor-gradients == false {
+            $vendor-gradients: -#{$vendor}-linear-gradient(nth($gradients, $i));
+          }
+          @else {
+            $vendor-gradients: $vendor-gradients, -#{$vendor}-linear-gradient(nth($gradients, $i));
+          }
+        }
+        @else if $vendor == false {
+          @if $vendor-gradients {
+            $vendor-gradients: linear-gradient(nth($gradients, $i));
+          }
+          @else {
+            $vendor-gradients: $vendor-gradients, linear-gradient(nth($gradients, $i));
+          }
+        }
+      }
+      @return $vendor-gradients;
+    }
+  }
+
+
+  @if $count >= 1 {
+    background-image: $assets, render-gradients($gradients, webkit);
+    background-image: $assets, render-gradients($gradients, moz);
+    background-image: $assets, render-gradients($gradients, ms);
+    background-image: $assets, render-gradients($gradients, o);
+    background-image: $assets, render-gradients($gradients);
+
   }
   @else {
-    background-image: $all-assets;
+    background-image: $assets;
   }
 }
 //Examples:
