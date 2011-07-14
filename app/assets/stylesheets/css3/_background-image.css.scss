@@ -87,20 +87,32 @@
   }
 
 
-  @if $count >= 1 {
-    background-image: $assets, render-gradients($gradients, webkit);
-    background-image: $assets, render-gradients($gradients, moz);
-    background-image: $assets, render-gradients($gradients, ms);
-    background-image: $assets, render-gradients($gradients, o);
-    background-image: $assets, render-gradients($gradients);
+  @if $assets {
+    @if $count >= 1 {
+      background-image: $assets, render-gradients($gradients, webkit);
+      background-image: $assets, render-gradients($gradients, moz);
+      background-image: $assets, render-gradients($gradients, ms);
+      background-image: $assets, render-gradients($gradients, o);
+      background-image: $assets, render-gradients($gradients);
 
+    }
+    @else {
+      background-image: $assets;
+    }
   }
   @else {
-    background-image: $assets;
+    @if $count >= 1 {
+      background-image: render-gradients($gradients, webkit);
+      background-image: render-gradients($gradients, moz);
+      background-image: render-gradients($gradients, ms);
+      background-image: render-gradients($gradients, o);
+      background-image: render-gradients($gradients);
+    }
   }
+
 }
+
 //Examples:
    //@include background-image(url("/images/a.png"), gradient(#ffff00, #999));
    //@include background-image(url("/images/a.png"), url("/images/b.png"), url("/images/c.png"), gradient(#ffff00 10%, #000 20%));
-
    //@include background-image(url("/images/a.png"), url("/images/b.png"), url("/images/c.png"));
