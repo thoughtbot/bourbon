@@ -46,7 +46,12 @@ Preliminary step: clone the repo and cd into the directory.
 
     ./generate-sass.sh
 
-**Step 3:** Move the new *borubon* directory to your project's stylesheets directory.
+**Step 3:** Move the new *bourbon* directory into your project's sass directory. *e.g. stylesheets/sass/*
+
+**Step 4:** Bourbon requires an additional sass extension to output properly. You must watch your sass files with the following flag appended: *-r ./bourbon/lib/bourbon.rb*
+
+    # Example (project root directory)
+    sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
 
 
 #Using Bourbon Vanilla Mixins

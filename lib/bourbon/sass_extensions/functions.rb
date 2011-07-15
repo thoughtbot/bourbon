@@ -1,9 +1,7 @@
 module Bourbon::SassExtensions::Functions
 end
 
-%w(compact).each do |func|
-  require "bourbon/sass_extensions/functions/#{func}"
-end
+require "bourbon/sass_extensions/functions/compact"
 
 module Sass::Script::Functions
   include Bourbon::SassExtensions::Functions::Compact
