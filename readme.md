@@ -48,7 +48,8 @@ Preliminary step: clone this repo and cd into the directory.
 
 **Step 3:** Move the new *bourbon* directory into your project's sass directory. *e.g. stylesheets/sass/*
 
-**Step 4:** Bourbon requires an additional sass extension to output properly. You must watch your sass files with the following flag appended: *-r ./bourbon/lib/bourbon.rb*
+**Step 4:** Bourbon requires an additional sass extension to output properly. You must watch your sass files with the following flag appended:  
+*-r ./bourbon/lib/bourbon.rb*
 
     # Example (project root directory)
     sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
@@ -75,8 +76,10 @@ The background-image mixin is helpful for chaining multiple comma deliminated ba
 
     # Multiple image assets
     @include background-image(url("/images/a.png"), url("images/b.png"));
+
     # Image asset with a linear-gradient
     @include background-image(url("/images/a.png"), gradient(white 0, yellow 50%, transparent 50%));
+
     # Multiple linear-gradients;
     @include background-image(gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
 
@@ -217,6 +220,7 @@ Outputs a linear-gradient. Use in conjuntion with the background-image mixin. Th
 
     # Image asset with a linear-gradient
     @include background-image(url("/images/a.png"), gradient(white 0, yellow 50%, transparent 50%));
+
     # Multiple linear-gradients;
     @include background-image(gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
 
