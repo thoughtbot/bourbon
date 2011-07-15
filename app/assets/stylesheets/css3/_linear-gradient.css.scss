@@ -8,7 +8,7 @@
   $pos-type: type-of(nth($pos, 1));
 
   // If $pos is missing from mixin, reassign vars and add default position
-  @if $pos-type == color {
+  @if $pos-type == color or transparent {
     $G10: $G9; $G9: $G8; $G8: $G7; $G7: $G6; $G6: $G5;
      $G5: $G4; $G4: $G3; $G3: $G2; $G2: $G1; $G1: $pos;
     $pos: top; // Default position
