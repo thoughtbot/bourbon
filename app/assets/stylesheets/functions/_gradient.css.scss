@@ -3,6 +3,7 @@
                        $G5: false, $G6: false,
                        $G7: false, $G8: false,
                        $G9: false, $G10: false) {
+
   // Detect what type of value exists in $pos
   $pos-type: type-of(nth($pos, 1));
 
@@ -14,6 +15,14 @@
   }
 
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
-  @return join($pos, $full, comma);
-  //@return $pos, $full;
+
+  //If position was included in the mixin/function
+  @if type-of(nth($full, 1)) != color or transparent {
+    @return $full;
+  }
+
+  //Else add the default position
+  @else {
+    @return join($pos, $full, comma);
+  }
 }
