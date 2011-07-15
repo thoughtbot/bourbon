@@ -78,10 +78,10 @@ The background-image mixin is helpful for chaining multiple comma deliminated ba
     @include background-image(url("/images/a.png"), url("images/b.png"));
 
     # Image asset with a linear-gradient
-    @include background-image(url("/images/a.png"), gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
 
     # Multiple linear-gradients;
-    @include background-image(gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
+    @include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
 
 
 ###Border Radius
@@ -214,15 +214,15 @@ Returns the golden ratio of a given number. Must provide a Pixel or Em value for
 Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.com](http://goldenratiocalculator.com)
 
 
-###Gradient
+###Linear-gradient
 
 Outputs a linear-gradient. Use in conjuntion with the background-image mixin. The function takes the same arguments as the linear-gradient mixin (See Mixins section of this README).
 
     # Image asset with a linear-gradient
-    @include background-image(url("/images/a.png"), gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
 
     # Multiple linear-gradients;
-    @include background-image(gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
+    @include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
 
 
 ###Grid-width
@@ -289,7 +289,7 @@ The real power of the mixin is revealed when you pass in the optional color argu
     --------------------------------
       compact(*args)
       golden-ratio(*args)
-      gradient(*args)
+      linear-gradient(*args)
       grid-width(*args)
       shade(*args)
       tint(*args)
