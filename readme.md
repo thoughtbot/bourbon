@@ -64,6 +64,18 @@ The animation mixins support comma separated lists of values, which allows diffe
     @include animation-basic((slideup, fadein), (1.0s, 2.0s), ease-in);
 
 
+###Background-image
+
+The background-image mixin is helpful for chaining multiple comma deliminated background images and/or linear-gradients into one background-image property.Background-image supports up to 10 background-images.
+
+    # Multiple image assets
+    @include background-image(url("/images/a.png"), url("images/b.png"));
+    # Image asset with a linear-gradient
+    @include background-image(url("/images/a.png"), gradient(white 0, yellow 50%, transparent 50%));
+    # Multiple linear-gradients;
+    @include background-image(gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
+
+
 ###Border Radius
 
 Border-radius will also take short-hand notation.
@@ -189,6 +201,16 @@ Returns the golden ratio of a given number. Must provide a Pixel or Em value for
 Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.com](http://goldenratiocalculator.com)
 
 
+###Gradient
+
+Outputs a linear-gradient. Use in conjuntion with the background-image mixin. The function takes the same arguments as the linear-gradient mixin (See Mixins section of this README).
+
+    # Image asset with a linear-gradient
+    @include background-image(url("/images/a.png"), gradient(white 0, yellow 50%, transparent 50%));
+    # Multiple linear-gradients;
+    @include background-image(gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
+
+
 ###Grid-width
 
 Easily setup and follow a grid based design. Need help gridding? Check out [gridulator.com](http://gridulator.com/)
@@ -253,6 +275,7 @@ The real power of the mixin is revealed when you pass in the optional color argu
     --------------------------------
       compact(*args)
       golden-ratio(*args)
+      gradient(*args)
       grid-width(*args)
       shade(*args)
       tint(*args)
@@ -271,6 +294,7 @@ The real power of the mixin is revealed when you pass in the optional color argu
         @ animation-play-state(*args)
         @ animation-timing-function(*args)
 
+      @ background-image(*args)
       @ border-radius(*args)
       @ box-sizing(*args)
 
