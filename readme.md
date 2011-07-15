@@ -35,7 +35,7 @@ Import the mixins at the beginning of your stylesheet
 
 
 #Install without Rails
-The following script will generate a sass directory and convert all .css.scss to .scss extensions. The sass directory is for 'sass --watch' use outside of rails.  
+The following script will generate a *bourbon* directory and convert all .css.scss to .scss extensions. The *bourbon* directory is for 'sass --watch' use outside of rails.  
 Preliminary step: clone the repo and cd into the directory.
 
 **Step 1:** Make script executable by changing file permission
@@ -46,7 +46,7 @@ Preliminary step: clone the repo and cd into the directory.
 
     ./generate-sass.sh
 
-**Step 3:** Move the new *sass* directory to your project's stylesheets directory.
+**Step 3:** Move the new *borubon* directory to your project's stylesheets directory.
 
 
 #Using Bourbon Vanilla Mixins
@@ -114,6 +114,11 @@ The flex-box mixin is based on the 2009 w3c spec. The mixin with change to the f
 
     div.parent > div.child {
       @include box-flex(2);
+    }
+
+    # Alternative custom shorthand mixin.
+    div.parent {
+      @include box($orient: horizontal, $pack: center, $align: stretch);
     }
 
 
@@ -299,6 +304,7 @@ The real power of the mixin is revealed when you pass in the optional color argu
       @ box-sizing(*args)
 
       flex-box
+        @ box(*args)
         @ box-align(*args)
         @ box-direction(*args)
         @ box-flex(*args)
