@@ -75,10 +75,12 @@
         }
         @else if $vendor == false {
           @if $vendor-gradients {
-            $vendor-gradients: linear-gradient(nth($gradients, $i));
+            $vendor-gradients: "linear-gradient(#{nth($gradients, $i)})";
+            $vendor-gradients: unquote($vendor-gradients);
           }
           @else {
-            $vendor-gradients: $vendor-gradients, linear-gradient(nth($gradients, $i));
+            $vendor-gradients: $vendor-gradients, "linear-gradient( #{nth($gradients, $i)} )";
+            $vendor-gradients: unquote($vendor-gradients);
           }
         }
       }
