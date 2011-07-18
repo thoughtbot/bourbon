@@ -2,20 +2,10 @@
 
 // Custom shorthand notation for flexbox
 @mixin box($orient: inline-axis, $pack: start, $align: stretch) {
-  display: -webkit-box;
-  -webkit-box-orient: $orient;
-  -webkit-box-pack: $pack;
-  -webkit-box-align: $align;
-
-  display: -moz-box;
-  -moz-box-orient: $orient;
-  -moz-box-pack: $pack;
-  -moz-box-align: $align;
-
-  display: box;
-  box-orient: $orient;
-  box-pack: $pack;
-  box-align: $align;
+  @include display-box;
+  @include box-orient($orient);
+  @include box-pack($pack);
+  @include box-align($align);
 }
 
 @mixin display-box {
