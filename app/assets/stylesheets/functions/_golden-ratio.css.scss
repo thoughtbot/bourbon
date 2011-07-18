@@ -17,15 +17,15 @@
 }
 
 //  div {
-//                  Increment Up GR with positive value
-//    width:        golden-ratio(14px,  1);    // returns: 22.652px
+//                      Increment Up GR with positive value
+//    font-size:        golden-ratio(14px,  1);    // returns: 22.652px
 //
-//                  Increment Down GR with negative value
-//    width:        golden-ratio(14px, -1);    // returns: 8.653px
+//                      Increment Down GR with negative value
+//    font-size:        golden-ratio(14px, -1);    // returns: 8.653px
 //
-//                  Can be used with ceil(round up) or floor(round down)
-//    width: floor( golden-ratio(14px,  1) );  // returns: 22px
-//    width:  ceil( golden-ratio(14px,  1) );  // returns: 23px
+//                     Can be used with ceil(round up) or floor(round down)
+//    font-size: floor( golden-ratio(14px,  1) );  // returns: 22px
+//    font-size:  ceil( golden-ratio(14px,  1) );  // returns: 23px
 //  }
 //
 // modularscale.com
