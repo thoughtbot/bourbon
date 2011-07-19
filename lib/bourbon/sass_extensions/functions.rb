@@ -1,7 +1,7 @@
 module Bourbon::SassExtensions::Functions
 end
 
-require "bourbon/sass_extensions/functions/compact"
+require File.join(File.dirname(__FILE__), "/functions/compact")
 
 module Sass::Script::Functions
   include Bourbon::SassExtensions::Functions::Compact

@@ -14,4 +14,4 @@ module Bourbon
   end
 end
 
-require "bourbon/sass_extensions"
+require File.join(File.dirname(__FILE__), "/bourbon/sass_extensions")
