@@ -22,7 +22,7 @@
   background-image:    -moz-linear-gradient($pos, $full);
   background-image:     -ms-linear-gradient($pos, $full);
   background-image:      -o-linear-gradient($pos, $full);
-  background-image:         linear-gradient($pos, $full);
+  background-image:        unquote("linear-gradient(#{$pos}, #{$full})");
 }
 
 // Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.
@@ -30,4 +30,3 @@
 // @include linear-gradient(#1e5799, #2989d8);
 // @include linear-gradient(top, #1e5799 0%, #2989d8 50%);
 // @include linear-gradient(50deg, rgba(10, 10, 10, 0.5) 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-
