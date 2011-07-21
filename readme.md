@@ -145,6 +145,11 @@ Gradient position is optional, default is top. Position can be a degree. Color-s
     @include linear-gradient(top, #1e5799 0%, #2989d8 100%);
     @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
 
+###Opacity
+
+The opacity mixin adds cross-browser support for IE using an alpha filter.
+    @include opacity(0.5);
+
 
 ###Position
 
@@ -326,6 +331,7 @@ The real power of the mixin is revealed when you pass in the optional color argu
 
       @ inline-block
       @ linear-gradient(*args)
+      @ opacity(*args)
       @ radial-gradient(*args)
       @ transform(*args)
 
