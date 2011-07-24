@@ -55,8 +55,22 @@ Preliminary step: clone this repo and cd into the directory.
     sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
 
 
-#Using Bourbon Vanilla Mixins
+#Browser support
+Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.  
+**Pull requests:** A general rule when considering a new mixin: Do the following browsers *only* support the CSS3 property using vendor specific prefixes? If the answer is yes, there is a high chance the mixin will be accepted via a pull request.
+
+* Firefox 3.6+
+* Safari 4.0+
+* Chrome 4.0+
+* Opera 10+
+* IE 9+
+
+Bourbon does not intend to support IE filters.
+
+
+#Using Bourbon Mixins
 Below are a few examples of mixin usage. Note that these are just a few, explore the repo to find out more.
+
 
 ###Animation
 
@@ -344,7 +358,8 @@ The real power of the mixin is revealed when you pass in the optional color argu
 
 ##Help Out
 
-Currently the project is a work in progress. Feel free to help out.
+Currently the project is a work in progress. Feel free to help out.  
+**Pull requests:** See *Browser Support* in this readme for more info
 
 Credits
 -------
