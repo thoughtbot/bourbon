@@ -271,6 +271,20 @@ Shade is a mix of a color with black. Shade takes a color and a percent argument
 
 ##Add-ons
 
+###Animation-Keyframes
+
+Animation-keyframes are provided for quick out-of-the-box animations. Two animation-keyframes are provided: fade-in, fade-out. These animations can be called using the *animation-name* mixin; alternatively the *animation-basic* mixin can be used. Supports Webkit browsers and Mozilla 5.0+.
+
+    div.fade-in {
+      @include animation-name(fade-in);
+    }
+
+    div.fade-out {
+      @include animation-basic(fade-out, 2.0s, ease-in);
+      opacity: 0;
+    }
+
+
 ###Buttons
 
 The button add-on provides well-designed buttons with a single line in your CSS. The demo folder contains examples of the buttons in use.  
@@ -352,6 +366,7 @@ The real power of the mixin is revealed when you pass in the optional color argu
 
     #Addons
     --------------------------------
+      animation-keyframes (fade-in, fade-out)
     @ button(*args)
     @ position(*args)
 
