@@ -336,6 +336,7 @@ Create beautiful buttons by defining a style and color argument; using a single 
 
       @ background-image(*args)
       @ border-radius(*args)
+      @ box-shadow(*args)
       @ box-sizing(*args)
 
       flex-box
