@@ -287,25 +287,23 @@ Animation-keyframes are provided for quick out-of-the-box animations. Two animat
 
 ###Buttons
 
-The button add-on provides well-designed buttons with a single line in your CSS. The demo folder contains examples of the buttons in use.  
-The mixin can be called with no parameters to render a blue button with the "simple" style.
+The button add-on provides well-designed buttons with a single line in your CSS.  
+The mixin supports a style parameter and an optional color argument. The available styles are **"simple"** (default), **"shiny"**, and **"pill"**.
 
-    button,
-    input[type="button"] {
+    # The mixin can be called with no arguments, which will render a blue button with the **"simple"** style.
+    button, input[type="button"] {
       @include button;
     }
 
-The mixin supports a style parameter. Right now the available styles are "simple" (default), "shiny", and "pill".
-
-    button,
-    input[type="button"] {
+    # Pass a style argument
+    button, input[type="button"] {
       @include button(shiny);
     }
 
-The real power of the mixin is revealed when you pass in the optional color argument. Using a single color, the mixin calculates the gradient, borders, box shadow, text shadow and text color of the button. The mixin will change the text to be light when on a dark background, and dark when on a light background.
+Create beautiful buttons by defining a style and color argument; using a single color, the mixin calculates the gradient, borders, box shadow, text shadow and text color of the button. The mixin will change the text to be light when on a dark background, and dark when on a light background.
 
-    button,
-    input[type="button"] {
+    # Style + color arguments
+    button, input[type="button"] {
       @include button(shiny, #ff0000);
     }
 
