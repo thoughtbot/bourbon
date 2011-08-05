@@ -290,7 +290,7 @@ Animation-keyframes are provided for quick out-of-the-box animations. Two animat
 The button add-on provides well-designed buttons with a single line in your CSS.  
 The mixin supports a style parameter and an optional color argument. The available styles are **"simple"** (default), **"shiny"**, and **"pill"**.
 
-    # The mixin can be called with no arguments, which will render a blue button with the **"simple"** style.
+    # The mixin can be called with no arguments, which will render a blue button with the "simple" style.
     button, input[type="button"] {
       @include button;
     }
