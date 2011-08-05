@@ -57,7 +57,8 @@
         $vendor-gradients: -#{$vendor}-linear-gradient($gradients);
       }
       @else if $vendor == false {
-        $vendor-gradients: linear-gradient($gradients);
+        $vendor-gradients: "linear-gradient(#{$gradients})";
+        $vendor-gradients: unquote($vendor-gradients);
       }
       @return $vendor-gradients;
     }
