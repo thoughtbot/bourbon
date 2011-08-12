@@ -19,10 +19,4 @@ rm -r $PWD/bourbon/lib/tasks
 rm -r $PWD/bourbon/lib/bourbon/engine.rb
 rm -r $PWD/bourbon/lib/bourbon/version.rb
 
-echo Renaming files...
-find $PWD/bourbon -name "*.css.scss" | while read i;
-  do mv "$i" "${i%.css.scss}.scss";
-done
-
 echo Done.
-
