@@ -24,7 +24,7 @@ Import the mixins at the beginning of your stylesheet
     @import 'bourbon';
 
 ##Rails 3.0.9 and below
-For Rails < 3.1 you must run the installation rake task.
+For Rails < 3.1 you must run the installation rake task. Please note, you should run this task everytime a new version of Bourbon is released.  
 This will copy the Sass files into your project's public/stylesheets/sass directory.
 
     rake bourbon:install
