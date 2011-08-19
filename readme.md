@@ -309,6 +309,16 @@ Create beautiful buttons by defining a style and color argument; using a single 
     }
 
 
+###Timing functions
+These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations. The provided timing functions are the same as the jQuery UI demo: [easing functions](http://jqueryui.com/demos/effect/easing.html).  
+
+    Variables supported: $ease-in-*, $ease-out-*, $ease-in-out-*
+    * = [quad, cubic, quart, quint, sine, expo, circ]
+
+    @include animation-timing-function($ease-in-circ);
+    @include animation-basic(fade-in, 1s, $ease-in-quad);
+
+
 #All Supported Functions, Mixins, and Addons
 *@ denotes a mixin and must be prefaced with @include*
 
@@ -370,6 +380,7 @@ Create beautiful buttons by defining a style and color argument; using a single 
       animation-keyframes (fade-in, fade-out)
     @ button(*args)
     @ position(*args)
+      timing-functions (fade-in-*, fade-out-*, fade-in-out-*)
 
 
 ##Help Out
