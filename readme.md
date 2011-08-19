@@ -380,7 +380,7 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
       animation-keyframes (fade-in, fade-out)
     @ button(*args)
     @ position(*args)
-      timing-functions (fade-in-*, fade-out-*, fade-in-out-*)
+      timing-functions ($fade-in-*, $fade-out-*, $fade-in-out-*)
 
 
 ##Help Out
