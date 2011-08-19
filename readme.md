@@ -187,9 +187,10 @@ Takes up to 10 gradients. Position and shape are required.
     @include radial-gradient(50% 50%, circle cover, #eee 10%, #1e5799 30%, #efefef);
 
 
-###Transform
+###Transform & Transform-origin
 
     @include transform(translateY(50px));
+    @include transform-origin(center top);
 
 
 ###Transitions
@@ -355,6 +356,7 @@ Create beautiful buttons by defining a style and color argument; using a single 
       @ linear-gradient(*args)
       @ radial-gradient(*args)
       @ transform(*args)
+      @ transform-origin(*args)
 
       transition
         @ transition(*args)
