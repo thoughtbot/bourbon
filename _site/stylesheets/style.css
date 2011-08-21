@@ -548,445 +548,140 @@ section#timing-functions section.demo div.box {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  border-radius: 20px; }
-section#timing-functions section.demo div.ease-in-quad {
+  border-radius: 20px;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -ms-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
+  -webkit-transition-duration: 3s;
+  -moz-transition-duration: 3s;
+  -ms-transition-duration: 3s;
+  -o-transition-duration: 3s;
+  transition-duration: 3s; }
+section#timing-functions section.demo div.ease-in-quad {
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -ms-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -o-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
 section#timing-functions section.demo div.ease-in-cubic {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -moz-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -ms-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -o-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 section#timing-functions section.demo div.ease-in-quart {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22);
   -moz-transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22);
   -ms-transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22);
   -o-transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22);
-  transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22); }
 section#timing-functions section.demo div.ease-in-quint {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
   -moz-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
   -ms-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
   -o-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); }
 section#timing-functions section.demo div.ease-in-sine {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
   -moz-transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
   -ms-transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
   -o-transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
-  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715); }
 section#timing-functions section.demo div.ease-in-expo {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
   -moz-transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
   -ms-transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
   -o-transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
-  transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035); }
 section#timing-functions section.demo div.ease-in-circ {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
   -moz-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
   -ms-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
   -o-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-  transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335); }
 section#timing-functions section.demo div.ease-out-quad {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 section#timing-functions section.demo div.ease-out-cubic {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   -moz-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   -ms-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   -o-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
 section#timing-functions section.demo div.ease-out-quart {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   -ms-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
 section#timing-functions section.demo div.ease-out-quint {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   -moz-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   -ms-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   -o-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1); }
 section#timing-functions section.demo div.ease-out-sine {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
   -moz-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
   -ms-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
   -o-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1); }
 section#timing-functions section.demo div.ease-out-expo {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   -ms-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
 section#timing-functions section.demo div.ease-out-circ {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   -moz-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   -ms-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   -o-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
 section#timing-functions section.demo div.ease-in-out-quad {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -moz-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -ms-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -o-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 section#timing-functions section.demo div.ease-in-out-cubic {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -ms-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); }
 section#timing-functions section.demo div.ease-in-out-quart {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -ms-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
-  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1); }
 section#timing-functions section.demo div.ease-in-out-quint {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   -moz-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   -ms-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   -o-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); }
 section#timing-functions section.demo div.ease-in-out-sine {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   -moz-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   -ms-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   -o-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95); }
 section#timing-functions section.demo div.ease-in-out-expo {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
   -moz-transition-timing-function: cubic-bezier(1, 0, 0, 1);
   -ms-transition-timing-function: cubic-bezier(1, 0, 0, 1);
   -o-transition-timing-function: cubic-bezier(1, 0, 0, 1);
-  transition-timing-function: cubic-bezier(1, 0, 0, 1);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(1, 0, 0, 1); }
 section#timing-functions section.demo div.ease-in-out-circ {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -moz-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -ms-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -o-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86); }
