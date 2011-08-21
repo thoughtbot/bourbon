@@ -572,11 +572,11 @@ section#timing-functions section.demo div.ease-in-cubic {
   -o-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 section#timing-functions section.demo div.ease-in-quart {
-  -webkit-transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22);
-  -moz-transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22);
-  -ms-transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22);
-  -o-transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22);
-  transition-timing-function: cubic-bezier(1.895, 0.03, 0.685, 0.22); }
+  -webkit-transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  -moz-transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  -ms-transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  -o-transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22); }
 section#timing-functions section.demo div.ease-in-quint {
   -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
   -moz-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
