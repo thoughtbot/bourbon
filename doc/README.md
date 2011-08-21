@@ -7,8 +7,8 @@ Watch the sass folder:
 
 
 
-To pull in the latest Bourbon changes, you must rebase from master.
-    git rebase origin/master
+To pull in the latest Bourbon changes, you must rebase against master.
+    git fetch && git rebase origin/master
 
 To update the bourbon files with the latest version:
     ./generate-bourbon.sh
