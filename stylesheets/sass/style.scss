@@ -1,23 +1,21 @@
 @import "bourbon/bourbon";
+@import "normalize";
+@import "mixins";
+@import "animation-keyframes";
 
 html, body {
-  @include box-sizing(border-box);
   height: 100%;
+  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
 }
 
 html {
-  background-color: hsl(0, 0%, 90%);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  width: 100%;
   padding: 20px 0;
 }
 
 body {
-  background-color: hsl(0, 0%, 100%);
-  @include border-radius(6px);
-  margin: 0 auto;
-  width: 600px;
-  padding: 10px 20px;
+  background: hsl(0, 0%, 90%);
 }
 
 h1 {
@@ -25,3 +23,121 @@ h1 {
   font-weight: 300;
   margin-top: 0;
 }
+
+h2 {
+  font-size: golden-ratio(13px, 1);
+  margin-top: 0;
+}
+
+h3, h4, h5, h6 {
+  font-size: golden-ratio(13px, 0);
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+div.main-content {
+  background: hsl(0, 0%, 100%);
+  @include border-radius(6px);
+  margin: 0 auto;
+  padding: 10px $gw-gutter;
+  width: grid-width(8) + (2 * $gw-gutter);
+  @extend .clearfix;
+
+  nav {
+    @extend .clearfix;
+    float: left;
+    margin-right: $gw-gutter;
+    width: grid-width(2);
+    min-height: 300px;
+    clear: left;
+
+    ul {
+      border-top: 4px solid hsl(0, 0%, 90%);
+      position: fixed;
+      width: inherit;
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+
+        &:first-child {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+div.main-inner {
+  clear: right;
+  float: left;
+  width: grid-width(6)
+}
+
+section {
+}
+
+section#timing-functions {
+  section.demo {
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+      }
+    }
+
+    p {
+      display: inline-block;
+      width: grid-width(1);
+      margin-right: $gw-gutter;
+      vertical-align: top;
+    }
+
+    div.box {
+      display: inline-block;
+    }
+
+    &:hover div.box {
+      @include transform(translateX(500px));
+    }
+
+    div.box {
+      background: red;
+      height: 20px;
+      width: 20px;
+      @include border-radius(20px);
+    }
+
+    div.ease-in-quad  { @include transition(all, 1s, $ease-in-quad ); }
+    div.ease-in-cubic { @include transition(all, 1s, $ease-in-cubic); }
+    div.ease-in-quart { @include transition(all, 1s, $ease-in-quart); }
+    div.ease-in-quint { @include transition(all, 1s, $ease-in-quint); }
+    div.ease-in-sine  { @include transition(all, 1s, $ease-in-sine ); }
+    div.ease-in-expo  { @include transition(all, 1s, $ease-in-expo ); }
+    div.ease-in-circ  { @include transition(all, 1s, $ease-in-circ ); }
+
+    div.ease-out-quad  { @include transition(all, 1s, $ease-out-quad ); }
+    div.ease-out-cubic { @include transition(all, 1s, $ease-out-cubic); }
+    div.ease-out-quart { @include transition(all, 1s, $ease-out-quart); }
+    div.ease-out-quint { @include transition(all, 1s, $ease-out-quint); }
+    div.ease-out-sine  { @include transition(all, 1s, $ease-out-sine ); }
+    div.ease-out-expo  { @include transition(all, 1s, $ease-out-expo ); }
+    div.ease-out-circ  { @include transition(all, 1s, $ease-out-circ ); }
+
+    div.ease-in-out-quad  { @include transition(all, 1s, $ease-in-out-quad ); }
+    div.ease-in-out-cubic { @include transition(all, 1s, $ease-in-out-cubic); }
+    div.ease-in-out-quart { @include transition(all, 1s, $ease-in-out-quart); }
+    div.ease-in-out-quint { @include transition(all, 1s, $ease-in-out-quint); }
+    div.ease-in-out-sine  { @include transition(all, 1s, $ease-in-out-sine ); }
+    div.ease-in-out-expo  { @include transition(all, 1s, $ease-in-out-expo ); }
+    div.ease-in-out-circ  { @include transition(all, 1s, $ease-in-out-circ ); }
+  }
+}
+

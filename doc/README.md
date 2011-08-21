@@ -12,3 +12,8 @@ To pull in the latest Bourbon changes, you must rebase from master.
 
 To update the bourbon files with the latest version:
     ./generate-bourbon.sh
+
+
+
+Jekyll Wiki:
+https://github.com/mojombo/jekyll/wiki
