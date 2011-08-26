@@ -11,7 +11,7 @@ exclude:     ./app, ./doc, ./bourbon, ./demo, ./lib, sass, ./bourbon.gemspec, ./
 
 future:      true
 lsi:         false
-pygments:    false
+pygments:    true
 markdown:    maruku
 permalink:   date
 

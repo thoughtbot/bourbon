@@ -8,18 +8,109 @@
   </head>
   <body>
     <div class="main-content">
-      <nav>
-        <ul>
-          <li><a href="#timing-functions">Animation Timing Functions</a></li>
-        </ul>
-      </nav>
+      <nav class="fixed-nav">
+  <ul>
+    <li><a href="#animations">Animations</a></li>
+    <li><a href="#buttons">Buttons</a></li>
+    <li><a href="#timing-functions">Animation Timing Functions</a></li>
+  </ul>
+</nav>
+
 
       <div class="main-inner">
         <h1>Bourbon &ndash; Sass Mixin Library</h1>
+        <section id="animations">
+  <h2>Animations</h2>
+  <p>The animation mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.</p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="nt">box</span><span class="nd">:hover</span> <span class="p">{</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">name</span><span class="p">(</span><span class="n">scale</span><span class="p">);</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">duration</span><span class="p">(</span><span class="m">1</span><span class="err">s</span><span class="p">);</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">timing</span><span class="o">-</span><span class="n">function</span><span class="p">(</span><span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="p">);</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">iteration</span><span class="o">-</span><span class="n">count</span><span class="p">(</span><span class="n">infinite</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">@mixin</span> <span class="nt">scale</span> <span class="p">{</span>
+      <span class="nt">0</span><span class="o">%</span>   <span class="p">{</span> <span class="o">@</span><span class="n">include</span> <span class="n">transform</span><span class="p">(</span><span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="o">.</span><span class="m">0</span><span class="p">));</span> <span class="p">}</span>
+      <span class="nt">50</span><span class="o">%</span>  <span class="p">{</span> <span class="o">@</span><span class="n">include</span> <span class="n">transform</span><span class="p">(</span><span class="n">scale</span><span class="p">(</span><span class="m">2</span><span class="o">.</span><span class="m">0</span><span class="p">));</span> <span class="p">}</span>
+      <span class="nt">100</span><span class="o">%</span> <span class="p">{</span> <span class="o">@</span><span class="n">include</span> <span class="n">transform</span><span class="p">(</span><span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="o">.</span><span class="m">0</span><span class="p">));</span> <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">@-webkit-keyframes</span> <span class="nt">scale</span> <span class="p">{</span> <span class="k">@include</span> <span class="nt">scale</span><span class="p">;</span> <span class="p">}</span>
+  
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+    <div id="run-demo" class="box"></div>
+  </section>
+</section>
+
+        <section id="buttons">
+  <h2>Buttons</h2>
+  <p>The button add-on provides well-designed buttons with a single line in your CSS.</p>
+  <p>The mixin supports a style parameter and an optional color argument.<br/> The available styles are <strong>"simple"</strong> (default), <strong>"shiny"</strong> and <strong>"pill"</strong>.</p>
+
+  <section class="demo">
+    <div class="wrapper">
+      <h3>Simple Button Style</h3>
+      <p>The mixin can be called with no arguments, which will render a blue button with the "simple" style.</p>
+      <div class="highlight"><pre><code class="css">        <span class="nt">button</span> <span class="p">{</span>
+          <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">;</span>
+        <span class="p">}</span>
+      
+</code></pre>
+</div>
+
+      <button class="example-1">Simple button</button>
+    </div>
+
+    <div class="wrapper">
+      <h3>Pill Button Style</h3>
+      <div class="highlight"><pre><code class="css">        <span class="nt">button</span> <span class="p">{</span>
+          <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">(</span><span class="n">pill</span><span class="p">);</span>
+        <span class="p">}</span>
+      
+</code></pre>
+</div>
+
+      <button class="example-2">Pill Button</button>
+    </div>
+
+    <div class="wrapper">
+      <h3>Shiny Button Style</h3>
+      <p>Create beautiful buttons by defining a style and color argument; using a single color, the mixin calculates the gradient, borders, box shadow, text shadow and text color of the button. The mixin will change the text to be light when on a dark background, and dark when on a light background.</p>
+
+      <div class="highlight"><pre><code class="css">        <span class="err">#</span> <span class="nt">Style</span> <span class="o">+</span> <span class="nt">color</span> <span class="nt">arguments</span>
+        <span class="nt">button</span> <span class="p">{</span>
+          <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">(</span><span class="n">shiny</span><span class="o">,</span> <span class="m">#ff0000</span><span class="p">);</span>
+        <span class="p">}</span>
+      
+</code></pre>
+</div>
+
+      <button class="example-3">Shiny Button</button>
+    </div>
+  </section>
+
+</section>
+
         <section id="timing-functions">
   <h2>Timing Functions</h2>
-  <p></p>
+  <p>These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations and transitions. The provided timing functions are the same as the jQuery UI demo: <a href="http://jqueryui.com/demos/effect/easing.html">easing functions</a>.</p>
 
+  <h3>Example Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">transition</span><span class="o">(</span><span class="nt">all</span><span class="o">,</span> <span class="nt">5s</span><span class="o">,</span> <span class="err">$</span><span class="nt">ease-in-circ</span><span class="o">)</span><span class="p">;</span>
+  
+</code></pre>
+</div>
+
+
+
+  <h3>Demo</h3>
+  <p>Many off the timing functions below may look the same in this demo, but in complex animations, they are intricatly different.</p>
   <section class="demo">
     <ul>
       <li><p>ease-in-quad</p><div class="box ease-in-quad"></div></li>

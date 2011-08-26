@@ -14,6 +14,16 @@ To update the bourbon files with the latest version:
     ./generate-bourbon.sh
 
 
+For Code Highlighting within Jekyll:
+    gem install pygmentize
+
+    {% highlight css %}
+      <code here>
+    {% endhighlight %}
+
 
 Jekyll Wiki:
 https://github.com/mojombo/jekyll/wiki
+
+Pygmentize:
+http://pygments.org/

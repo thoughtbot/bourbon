@@ -4,10 +4,10 @@
 @import "animation-keyframes";
 
 html, body {
-  height: 100%;
-  width: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
+  height: 100%;
+  width: 100%;
 }
 
 html {
@@ -15,7 +15,6 @@ html {
 }
 
 body {
-  background: hsl(0, 0%, 90%);
 }
 
 h1 {
@@ -38,108 +37,104 @@ p {
   margin-top: 0;
 }
 
+a, a:link, a:active, a:visited {
+  color: hsl(212, 89%, 55%);
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(212, 94%, 36%);
+}
+
+//************************************************************************//
+// Navigation
+//************************************************************************//
+nav.fixed-nav {
+  @extend .clearfix;
+  clear: left;
+  float: left;
+  margin-right: $gw-gutter;
+  min-height: 300px;
+  width: grid-width(2);
+
+  ul {
+    border-top: 4px solid hsl(0, 0%, 90%);
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    position: fixed;
+    width: inherit;
+
+    li {
+      list-style-type: none;
+      line-height: 180%;
+
+      &:first-child {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+
+//************************************************************************//
+// Global styles
+//************************************************************************//
 div.main-content {
+  @extend .clearfix;
   background: hsl(0, 0%, 100%);
   @include border-radius(6px);
   margin: 0 auto;
   padding: 10px $gw-gutter;
   width: grid-width(8) + (2 * $gw-gutter);
-  @extend .clearfix;
-
-  nav {
-    @extend .clearfix;
-    float: left;
-    margin-right: $gw-gutter;
-    width: grid-width(2);
-    min-height: 300px;
-    clear: left;
-
-    ul {
-      border-top: 4px solid hsl(0, 0%, 90%);
-      position: fixed;
-      width: inherit;
-      margin: 0;
-      padding: 0;
-
-      li {
-        list-style-type: none;
-
-        &:first-child {
-          margin-top: 15px;
-        }
-      }
-    }
-  }
 }
-
 
 div.main-inner {
   clear: right;
   float: left;
-  width: grid-width(6)
-}
+  margin-left: $gw-gutter;
+  width: grid-width(6);
 
-section {
-}
+  h1 {
+    border-bottom: 1px solid hsl(0, 0%, 93%);
+  }
 
-section#timing-functions {
-  section.demo {
-    ul {
-      margin: 0;
-      padding: 0;
+  > section {
+    border-bottom: 1px solid #ccc;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
 
-      li {
-        list-style-type: none;
-      }
-    }
-
-    p {
-      display: inline-block;
-      width: grid-width(1);
-      margin-right: $gw-gutter;
-      vertical-align: top;
-    }
-
-    div.box {
-      display: inline-block;
-    }
-
-    &:hover div.box {
-      @include transform(translateX(500px));
-    }
-
-    div.box {
-      background: red;
-      height: 20px;
-      width: 20px;
-      @include border-radius(20px);
-      @include transition-property(all);
-      @include transition-duration(3s);
-    }
-
-    div.ease-in-quad  { @include transition-timing-function($ease-in-quad ); }
-    div.ease-in-cubic { @include transition-timing-function($ease-in-cubic); }
-    div.ease-in-quart { @include transition-timing-function($ease-in-quart); }
-    div.ease-in-quint { @include transition-timing-function($ease-in-quint); }
-    div.ease-in-sine  { @include transition-timing-function($ease-in-sine ); }
-    div.ease-in-expo  { @include transition-timing-function($ease-in-expo ); }
-    div.ease-in-circ  { @include transition-timing-function($ease-in-circ ); }
-
-    div.ease-out-quad  { @include transition-timing-function($ease-out-quad ); }
-    div.ease-out-cubic { @include transition-timing-function($ease-out-cubic); }
-    div.ease-out-quart { @include transition-timing-function($ease-out-quart); }
-    div.ease-out-quint { @include transition-timing-function($ease-out-quint); }
-    div.ease-out-sine  { @include transition-timing-function($ease-out-sine ); }
-    div.ease-out-expo  { @include transition-timing-function($ease-out-expo ); }
-    div.ease-out-circ  { @include transition-timing-function($ease-out-circ ); }
-
-    div.ease-in-out-quad  { @include transition-timing-function($ease-in-out-quad ); }
-    div.ease-in-out-cubic { @include transition-timing-function($ease-in-out-cubic); }
-    div.ease-in-out-quart { @include transition-timing-function($ease-in-out-quart); }
-    div.ease-in-out-quint { @include transition-timing-function($ease-in-out-quint); }
-    div.ease-in-out-sine  { @include transition-timing-function($ease-in-out-sine ); }
-    div.ease-in-out-expo  { @include transition-timing-function($ease-in-out-expo ); }
-    div.ease-in-out-circ  { @include transition-timing-function($ease-in-out-circ ); }
+  h1 + section {
+    padding-top: 0;
   }
 }
 
+// Wrapper for any occasion
+div.wrapper {
+  margin-bottom: 20px;
+}
+
+// Code highlighting styling
+div.highlight {
+  background: hsl(0, 0%, 95%);
+  @include border-radius(5px);
+  padding-top: 5px;
+}
+
+// Demo Box Style
+div.box {
+  $base-color: hsl(335, 94%, 42%);
+  background: red;
+  @include border-radius(40px);
+  border: 1px solid darken($base-color, 10%);
+  @include box-shadow(inset 0 1px 0 hsla(0, 0%, 100%, 0.45));
+  height: 40px;
+  @include linear-gradient(lighten($base-color, 20%), $base-color);
+  width: 40px;
+}
+
+
+@import "animation";
+@import "buttons";
+@import "timing-functions";

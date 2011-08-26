@@ -1,6 +1,7 @@
 ---
 title: Bourbon Sass Mixins Library
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,14 +12,12 @@ title: Bourbon Sass Mixins Library
   </head>
   <body>
     <div class="main-content">
-      <nav>
-        <ul>
-          <li><a href="#timing-functions">Animation Timing Functions</a></li>
-        </ul>
-      </nav>
+      {% include navigation.html %}
 
       <div class="main-inner">
         <h1>Bourbon &ndash; Sass Mixin Library</h1>
+        {% include animation.html %}
+        {% include buttons.html %}
         {% include timing-functions.html %}
       </div>
     </div>

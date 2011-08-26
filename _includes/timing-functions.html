@@ -1,7 +1,15 @@
 <section id="timing-functions">
   <h2>Timing Functions</h2>
-  <p></p>
+  <p>These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations and transitions. The provided timing functions are the same as the jQuery UI demo: <a href="http://jqueryui.com/demos/effect/easing.html">easing functions</a>.</p>
 
+  <h3>Example Code</h3>
+  {% highlight css %}
+    @include transition(all, 5s, $ease-in-circ);
+  {% endhighlight %}
+
+
+  <h3>Demo</h3>
+  <p>Many off the timing functions below may look the same in this demo, but in complex animations, they are intricatly different.</p>
   <section class="demo">
     <ul>
       <li><p>ease-in-quad</p><div class="box ease-in-quad"></div></li>
