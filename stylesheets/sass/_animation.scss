@@ -1,0 +1,14 @@
+//************************************************************************//
+// Animations Demo Section
+//************************************************************************//
+
+section#animations {
+  div.box {
+    &:hover {
+      @include animation-name(scale);
+      @include animation-duration(1s);
+      @include animation-timing-function(ease-in);
+      @include animation-iteration-count(infinite);
+    }
+  }
+}
