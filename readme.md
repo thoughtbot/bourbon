@@ -270,6 +270,13 @@ Shade is a mix of a color with black. Shade takes a color and a percent argument
     }
 
 
+###Format-color
+
+The format-color function will convert a color to a given
+representation:
+
+    color: format-color(hsla(0, 0%, 15%, 0.8), rgb);
+
 ##Add-ons
 
 ###Animation-Keyframes
@@ -308,6 +315,25 @@ Create beautiful buttons by defining a style and color argument; using a single 
       @include button(shiny, #ff0000);
     }
 
+###Color-fallback
+
+The color-fallback add-on supports generating multiple properties per
+color for backwards-compatibility, allowing you to use, e.g., `rgba` or
+`hsla` colors without having to manually provide `rgb` or hex color
+fallbacks for older browsers.
+
+The add-on takes two arguments; the name of the property to generate
+and the color to use.  For example:
+
+    @include color-fallback(background-color, hsla(0, 0%, 15%, 1));
+
+Would result in:
+ 
+    background-color: #262626;
+    background-color: rgb(38, 38, 38);
+    background-color: rgba(38, 38, 38, 1.000000);
+    background-color: hsl(0, 0%, 15%);
+    background-color: hsla(0, 0%, 15%, 1.000000);
 
 ###Timing functions
 These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations. The provided timing functions are the same as the jQuery UI demo: [easing functions](http://jqueryui.com/demos/effect/easing.html).  
@@ -349,6 +375,8 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
       @ border-radius(*args)
       @ box-shadow(*args)
       @ box-sizing(*args)
+
+      @ color-fallback(*args)
 
       flex-box
         @ box(*args)
