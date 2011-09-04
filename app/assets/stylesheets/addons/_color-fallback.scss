@@ -1,0 +1,19 @@
+// Example:
+//
+//   @include color-fallback(color, hsla(0, 0%, 15%, 1));
+//
+// Result:
+// 
+//   color: #262626;
+//   color: rgb(38, 38, 38);
+//   color: rgba(38, 38, 38, 1.000000);
+//   color: hsl(0, 0%, 15%);
+//   color: hsla(0, 0%, 15%, 1.000000);
+//
+@mixin color-fallback($property, $color) {
+  #{$property}: format-color($color, hex);
+  #{$property}: format-color($color, rgb);
+  #{$property}: format-color($color, rgba);
+  #{$property}: format-color($olor, hsl);
+  #{$property}: format-color($color, hsla);
+}
