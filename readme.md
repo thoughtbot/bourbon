@@ -18,7 +18,7 @@ Rename application.css to application.css.scss
 
     mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
 
-Bourbon needs the sass files to be imported in a specific order to function properly—therefore you will need to disabled the require_tree sprocket directive.  
+Bourbon needs the sass files to be imported in a specific order to function properly—therefore you will need to disabled the require_tree sprocket directive.
 Delete the following sprocket directive in application.css.scss
 
     *= require_tree .
@@ -34,7 +34,7 @@ Import all additional stylesheets from your app/assets/stylsheets directory unde
     @import "users";
 
 ##Rails 3.0.9 and below
-For Rails < 3.1 you must run the installation rake task. Please note, you should run this task everytime a new version of Bourbon is released.  
+For Rails < 3.1 you must run the installation rake task. Please note, you should run this task everytime a new version of Bourbon is released.
 This will copy the Sass files into your project's public/stylesheets/sass directory.
 
     rake bourbon:install
@@ -45,7 +45,7 @@ Import the mixins at the beginning of your stylesheet
 
 
 #Install without Rails
-The following script will generate a *bourbon* directory and convert all .css.scss to .scss extensions. The *bourbon* directory is for 'sass --watch' use outside of rails.  
+The following script will generate a *bourbon* directory and convert all .css.scss to .scss extensions. The *bourbon* directory is for 'sass --watch' use outside of rails.
 Preliminary step: clone this repo and cd into the directory.
 
 **Step 1:** Make script executable by changing file permission
@@ -58,7 +58,7 @@ Preliminary step: clone this repo and cd into the directory.
 
 **Step 3:** Move the new *bourbon* directory into your project's sass directory. *e.g. stylesheets/sass/*
 
-**Step 4:** Bourbon requires an additional sass extension to output properly. You must watch your sass files with the following flag appended:  
+**Step 4:** Bourbon requires an additional sass extension to output properly. You must watch your sass files with the following flag appended:
 *-r ./bourbon/lib/bourbon.rb*
 
     # Example (project root directory)
@@ -66,7 +66,7 @@ Preliminary step: clone this repo and cd into the directory.
 
 
 #Browser support
-Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.  
+Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.
 **Pull requests:** A general rule when considering a new mixin: Do the following browsers *only* support the CSS3 property using vendor specific prefixes? If the answer is yes, there is a high chance the mixin will be accepted via a pull request.
 
 * Firefox 3.6+
@@ -266,7 +266,7 @@ Easily setup and follow a grid based design. Need help gridding? Check out [grid
 
 ###Tint & Shade
 
-Tint & shade are different from lighten() and darken() functions built into sass.  
+Tint & shade are different from lighten() and darken() functions built into sass.
 Tint is a mix of a color with white. Tint takes a color and a percent argument.
 
     div {
@@ -284,21 +284,20 @@ Shade is a mix of a color with black. Shade takes a color and a percent argument
 
 ###Animation-Keyframes
 
-Animation-keyframes are provided for quick out-of-the-box animations. Two animation-keyframes are provided: fade-in, fade-out. These animations can be called using the *animation-name* mixin; alternatively the *animation-basic* mixin can be used. Supports Webkit browsers and Mozilla 5.0+.
+Animation-keyframes can be called using the *animation-name* mixin; alternatively the *animation-basic* mixin can be used. Supports Webkit browsers and Mozilla 5.0+.
 
-    div.fade-in {
-      @include animation-name(fade-in);
+    .spinner {
+      @include animation-name(spin);
     }
 
-    div.fade-out {
-      @include animation-basic(fade-out, 2.0s, ease-in);
-      opacity: 0;
+    .spinner {
+      @include animation-basic(spin, 2.0s, ease-in);
     }
 
 
 ###Buttons
 
-The button add-on provides well-designed buttons with a single line in your CSS.  
+The button add-on provides well-designed buttons with a single line in your CSS.
 The mixin supports a style parameter and an optional color argument. The available styles are **"simple"** (default), **"shiny"**, and **"pill"**.
 
     # The mixin can be called with no arguments, which will render a blue button with the "simple" style.
@@ -320,7 +319,7 @@ Create beautiful buttons by defining a style and color argument; using a single 
 
 
 ###Timing functions
-These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations. The provided timing functions are the same as the jQuery UI demo: [easing functions](http://jqueryui.com/demos/effect/easing.html).  
+These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations. The provided timing functions are the same as the jQuery UI demo: [easing functions](http://jqueryui.com/demos/effect/easing.html).
 
     Variables supported: $ease-in-*, $ease-out-*, $ease-in-out-*
     * = [quad, cubic, quart, quint, sine, expo, circ]
@@ -387,15 +386,14 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
 
     #Addons
     --------------------------------
-      animation-keyframes (fade-in, fade-out)
     @ button(*args)
     @ position(*args)
-      timing-functions ($fade-in-*, $fade-out-*, $fade-in-out-*)
+      timing-functions ($ease-in-*, $ease-out-*, $ease-in-out-*)
 
 
 ##Help Out
 
-Currently the project is a work in progress. Feel free to help out.  
+Currently the project is a work in progress. Feel free to help out.
 **Pull requests:** See *Browser Support* in this readme for more info
 
 Credits
