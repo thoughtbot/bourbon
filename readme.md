@@ -282,19 +282,6 @@ Shade is a mix of a color with black. Shade takes a color and a percent argument
 
 ##Add-ons
 
-###Animation-Keyframes
-
-Animation-keyframes can be called using the *animation-name* mixin; alternatively the *animation-basic* mixin can be used. Supports Webkit browsers and Mozilla 5.0+.
-
-    .spinner {
-      @include animation-name(spin);
-    }
-
-    .spinner {
-      @include animation-basic(spin, 2.0s, ease-in);
-    }
-
-
 ###Buttons
 
 The button add-on provides well-designed buttons with a single line in your CSS.
