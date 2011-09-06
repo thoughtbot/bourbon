@@ -14,14 +14,24 @@ Update your Gemfile
     bundle install
 
 ##Rails 3.1.x
+Rename application.css to application.css.scss
+
+    mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
+
 Bourbon needs the sass files to be imported in a specific order to function properly—therefore you will need to disabled the require_tree sprocket directive.  
-Comment-out the following sprocket directive in /application.css.scss (Remove the =)
+Delete the following sprocket directive in application.css.scss
 
-    * require_tree .
+    *= require_tree .
 
-Import the mixins at the beginning of your stylesheet
+Import bourbon at the beginning of application.css.scss
 
-    @import 'bourbon';
+    @import "bourbon";
+
+Import all additional stylesheets from your app/assets/stylsheets directory underneath the bourbon import
+
+    @import "bourbon";
+    @import "home";
+    @import "users";
 
 ##Rails 3.0.9 and below
 For Rails < 3.1 you must run the installation rake task. Please note, you should run this task everytime a new version of Bourbon is released.  
