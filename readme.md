@@ -64,6 +64,9 @@ Preliminary step: clone this repo and cd into the directory.
     # Example (project root directory)
     sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
 
+In this case as well, you will need to import the mixins at the beginning of your stylesheet
+
+    @import 'bourbon/bourbon';
 
 #Browser support
 Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.
