@@ -27,14 +27,14 @@ Import bourbon at the beginning of application.css.scss
 
     @import "bourbon";
 
-Import all additional stylesheets from your app/assets/stylsheets directory underneath the bourbon import
+Import all additional stylesheets from your app/assets/stylesheets directory underneath the bourbon import
 
     @import "bourbon";
     @import "home";
     @import "users";
 
 ##Rails 3.0.9 and below
-For Rails < 3.1 you must run the installation rake task. Please note, you should run this task everytime a new version of Bourbon is released.
+For Rails < 3.1 you must run the installation rake task. Please note, you should run this task every time a new version of Bourbon is released.
 This will copy the Sass files into your project's public/stylesheets/sass directory.
 
     rake bourbon:install
@@ -99,7 +99,7 @@ The animation mixins support comma separated lists of values, which allows diffe
 
 ###Background-image
 
-The background-image mixin is helpful for chaining multiple comma deliminated background images and/or linear-gradients into one background-image property.Background-image supports up to 10 background-images.
+The background-image mixin is helpful for chaining multiple comma delimited background images and/or linear-gradients into one background-image property.Background-image supports up to 10 background-images.
 
     # Multiple image assets
     @include background-image(url("/images/a.png"), url("images/b.png"));
@@ -189,7 +189,7 @@ You can write:
 
 The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.
 
-Note: unitless values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.
+Note: unit-less values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.
 
 
 ###Radial-Gradient
@@ -208,7 +208,7 @@ Takes up to 10 gradients. Position and shape are required.
 
 ###Transitions
 
-Shorthand mixin: Supports multiple parentheses-deliminated values for each variable.
+Shorthand mixin: Supports multiple parentheses-delimited values for each variable.
 
     @include transition (all, 2.0s, ease-in-out);
     @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
@@ -244,7 +244,7 @@ Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.
 
 ###Linear-gradient
 
-Outputs a linear-gradient. Use in conjuntion with the background-image mixin. The function takes the same arguments as the linear-gradient mixin (See Mixins section of this README).
+Outputs a linear-gradient. Use in conjunction with the background-image mixin. The function takes the same arguments as the linear-gradient mixin (See Mixins section of this README).
 
     # Image asset with a linear-gradient
     @include background-image(url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
@@ -255,7 +255,7 @@ Outputs a linear-gradient. Use in conjuntion with the background-image mixin. Th
 
 ###Grid-width
 
-Easily setup and follow a grid based design. Need help gridding? Check out [gridulator.com](http://gridulator.com/)
+Easily setup and follow a grid based design. Need help busting a move grid-style?!? Check out [gridulator.com](http://gridulator.com/)
 
     # The $gw-column and $gw-gutter variables must be defined in your base stylesheet to properly use the grid-width function.
     $gw-column: 100px;          // Column Width
