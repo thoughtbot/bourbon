@@ -1,0 +1,16 @@
+@mixin background-origin($origin: padding-box !default) {
+  $origin: unquote($origin);
+  $webkit-moz: $origin;
+  
+  // webkit and mozilla use the deprecated shorts for border, padding, and content
+  @if $origin == padding-box { $webkit-moz: padding; }
+  @if $origin == border-box  { $webkit-moz: border;  }
+  @if $origin == content-box { $webkit-moz: content; }
+  
+  -webkit-background-clip : $webkit-moz;
+   -khtml-background-clip : $origin;
+     -moz-background-clip : $webkit-moz;
+      -ms-background-clip : $origin;
+       -o-background-clip : $origin;
+  
+}
