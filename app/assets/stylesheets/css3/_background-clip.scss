@@ -1,4 +1,4 @@
-@mixin background-clip($clip: padding-box !default) {
+@mixin background-clip($clip: padding-box) {
   $clip: unquote($clip);
   $webkit-moz: $clip;
   

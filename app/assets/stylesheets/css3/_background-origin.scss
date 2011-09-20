@@ -1,4 +1,4 @@
-@mixin background-origin($origin: padding-box !default) {
+@mixin background-origin($origin: padding-box) {
   $origin: unquote($origin);
   $webkit-moz: $origin;
   
