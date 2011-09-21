@@ -125,7 +125,7 @@ box-shadow supports single or multiple arguments:
 
     @include box-shadow(1px 1px 2px 0 #ff0000);
 
-    # Multiple arguments must be comma-diliminated.
+    # Multiple arguments must be comma-delimited.
     @include box-shadow(1px 1px 2px 0 #fff0000, -1px -2px 0 #ccc);
 
 
