@@ -315,7 +315,8 @@ In other words, it allows for easy targeting of all inputs that mimick input[typ
     input[type="*"]
     * = [color, date, datetime, datetime-local, email, month, number, password, search, tel, text, time, url, week]
 
-Usage:
+
+Usage Note: You must use interpolation with the variable.
 
     #{$all-text-inputs}, textarea {
       border: 1px solid green;
