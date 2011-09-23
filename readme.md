@@ -78,7 +78,9 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
 * Opera 10+
 * IE 9+
 
-Bourbon does not intend to support IE filters.
+*Bourbon does not intend to support IE filters.*
+
+Resources for checking browser support: [MDN - Moz Dev Network](https://developer.mozilla.org/en-US/), [Mozilla CSS Extensions](https://developer.mozilla.org/en/CSS_Reference/Mozilla_Extensions), [Webkit CSS Properties](http://css-infos.net/properties/webkit.php), [Firefox CSS Properties](http://css-infos.net/properties/firefox.php), [MSDN - Microsoft Dev Network](http://msdn.microsoft.com/en-us/library/ms531207(v=VS.85).aspx)
 
 
 # Using Bourbon Mixins
