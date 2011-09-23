@@ -308,6 +308,25 @@ Create beautiful buttons by defining a style and color argument; using a single 
     }
 
 
+### HTML5 Input Types
+This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea.
+In other words, it allows for easy targeting of all inputs that mimick input[type="text"].
+
+    input[type="*"]
+    * = [color, date, datetime, datetime-local, email, month, number, password, search, tel, text, time, url, week]
+
+Usage:
+
+    #{$all-text-inputs}, textarea {
+      border: 1px solid green;
+    }
+
+    Output:
+    input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], textarea {
+      border: 1px solid green;
+    }
+
+
 ### Timing functions
 These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations. The provided timing functions are the same as the jQuery UI demo: [easing functions](http://jqueryui.com/demos/effect/easing.html).
 
@@ -377,6 +396,7 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
     #Addons
     --------------------------------
     @ button(*args)
+      #{$all-text-inputs}
     @ position(*args)
       timing-functions ($ease-in-*, $ease-out-*, $ease-in-out-*)
 
