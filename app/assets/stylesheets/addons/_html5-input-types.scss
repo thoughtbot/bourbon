@@ -20,18 +20,10 @@ $inputs-list: 'input[type="email"]',
               'input[type="time"]',
               'input[type="week"]';
 
-$list-count: 0;
-$unquoted-inputs-list: false;
+$unquoted-inputs-list: ();
 
 @each $input-type in $inputs-list {
-  @if $list-count == 0 {
-    $unquoted-inputs-list: unquote($input-type);
-    $list-count: $list-count + 1;
-  }
-
-  @else if $list-count > 0 {
-    $unquoted-inputs-list: join($unquoted-inputs-list, unquote($input-type), comma);
-  }
+  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma);
 }
 
 $all-text-inputs: $unquoted-inputs-list;
@@ -39,6 +31,6 @@ $all-text-inputs: $unquoted-inputs-list;
 // You must use interpolation on the variable:
 // #{$all-text-inputs}
 //************************************************************************//
-//    #{$all-text-inputs}, textarea {
-//      border: 1px solid green;
-//    }
+//   #{$all-text-inputs}, textarea {
+//     border: 1px solid red;
+//   }
