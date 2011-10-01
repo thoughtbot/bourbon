@@ -50,46 +50,6 @@
     }
   }
 
-  @function render-gradients($gradients, $vendor: false) {
-    @if $count == 1 {
-      $vendor-gradients: false;
-      @if $vendor {
-        $vendor-gradients: -#{$vendor}-linear-gradient($gradients);
-      }
-      @else if $vendor == false {
-        $vendor-gradients: "linear-gradient(#{$gradients})";
-        $vendor-gradients: unquote($vendor-gradients);
-      }
-      @return $vendor-gradients;
-    }
-
-    @else if $count >= 2 {
-      $vendor-gradients: false;
-      @for $i from 1 through length($gradients) {
-        @if $vendor {
-          @if $vendor-gradients == false {
-            $vendor-gradients: -#{$vendor}-linear-gradient(nth($gradients, $i));
-          }
-          @else {
-            $vendor-gradients: $vendor-gradients, -#{$vendor}-linear-gradient(nth($gradients, $i));
-          }
-        }
-        @else if $vendor == false {
-          @if $vendor-gradients {
-            $vendor-gradients: "linear-gradient(#{nth($gradients, $i)})";
-            $vendor-gradients: unquote($vendor-gradients);
-          }
-          @else {
-            $vendor-gradients: $vendor-gradients, "linear-gradient( #{nth($gradients, $i)} )";
-            $vendor-gradients: unquote($vendor-gradients);
-          }
-        }
-      }
-      @return $vendor-gradients;
-    }
-  }
-
-
   @if $assets {
     @if $count >= 1 {
       background-image: $assets, render-gradients($gradients, webkit);
@@ -115,6 +75,46 @@
 
 }
 
+@function render-gradients($gradients, $vendor: false) {
+  @if $count == 1 {
+    $vendor-gradients: false;
+    @if $vendor {
+      $vendor-gradients: -#{$vendor}-linear-gradient($gradients);
+    }
+    @else if $vendor == false {
+      $vendor-gradients: "linear-gradient(#{$gradients})";
+      $vendor-gradients: unquote($vendor-gradients);
+    }
+    @return $vendor-gradients;
+  }
+
+  @else if $count >= 2 {
+    $vendor-gradients: false;
+    @for $i from 1 through length($gradients) {
+      @if $vendor {
+        @if $vendor-gradients == false {
+          $vendor-gradients: -#{$vendor}-linear-gradient(nth($gradients, $i));
+        }
+        @else {
+          $vendor-gradients: $vendor-gradients, -#{$vendor}-linear-gradient(nth($gradients, $i));
+        }
+      }
+      @else if $vendor == false {
+        @if $vendor-gradients {
+          $vendor-gradients: "linear-gradient(#{nth($gradients, $i)})";
+          $vendor-gradients: unquote($vendor-gradients);
+        }
+        @else {
+          $vendor-gradients: $vendor-gradients, "linear-gradient( #{nth($gradients, $i)} )";
+          $vendor-gradients: unquote($vendor-gradients);
+        }
+      }
+    }
+    @return $vendor-gradients;
+  }
+}
+
 //Examples:
    //@include background-image(url("/images/a.png"), linear-gradient(#ffff00, #999));
    //@include background-image(url("/images/a.png"), url("/images/b.png"), url("/images/c.png"), linear-gradient(#ffff00 10%, #000 20%));
+
