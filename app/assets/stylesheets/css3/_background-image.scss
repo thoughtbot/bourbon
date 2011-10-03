@@ -13,8 +13,8 @@
            $image-7, $image-8,
            $image-9, $image-10);
 
-  $assets:    false;
-  $gradients: false;
+  $assets:    ();
+  $gradients: ();
   $count: 0;
 
   //Find all asset images in list
@@ -26,13 +26,7 @@
     }
 
     @else if $type == string {
-      @if $assets == false {
-        $assets: nth($images, $i);
-      }
-
-      @else {
-        $assets: join($assets, nth($images, $i), comma);
-      }
+      $assets: join($assets, nth($images, $i), comma);
     }
   }
 
@@ -41,14 +35,10 @@
     $type: type-of(nth($images, $i));
 
     @if $type == list {
-      @if $gradients == false {
-        $gradients: nth($images, $i);
-      }
-      @else {
-        $gradients: $gradients, nth($images, $i);
-      }
+      $gradients: append($gradients, nth($images, $i), comma);
     }
   }
+
 
   @if $assets {
     @if $count >= 1 {
@@ -57,7 +47,6 @@
       background-image: $assets, render-gradients($gradients, ms);
       background-image: $assets, render-gradients($gradients, o);
       background-image: $assets, render-gradients($gradients);
-
     }
     @else {
       background-image: $assets;
@@ -72,11 +61,10 @@
       background-image: render-gradients($gradients);
     }
   }
-
 }
 
 @function render-gradients($gradients, $vendor: false) {
-  @if $count == 1 {
+  @if length($gradients) == 1 {
     $vendor-gradients: false;
     @if $vendor {
       $vendor-gradients: -#{$vendor}-linear-gradient($gradients);
@@ -88,11 +76,11 @@
     @return $vendor-gradients;
   }
 
-  @else if $count >= 2 {
-    $vendor-gradients: false;
+  @else if length($gradients) >= 2 {
+    $vendor-gradients: ();
     @for $i from 1 through length($gradients) {
       @if $vendor {
-        @if $vendor-gradients == false {
+        @if $vendor-gradients == () {
           $vendor-gradients: -#{$vendor}-linear-gradient(nth($gradients, $i));
         }
         @else {
@@ -100,14 +88,7 @@
         }
       }
       @else if $vendor == false {
-        @if $vendor-gradients {
-          $vendor-gradients: "linear-gradient(#{nth($gradients, $i)})";
-          $vendor-gradients: unquote($vendor-gradients);
-        }
-        @else {
-          $vendor-gradients: $vendor-gradients, "linear-gradient( #{nth($gradients, $i)} )";
-          $vendor-gradients: unquote($vendor-gradients);
-        }
+        $vendor-gradients: $vendor-gradients, unquote("linear-gradient(#{nth($gradients, $i)})");
       }
     }
     @return $vendor-gradients;
@@ -117,4 +98,3 @@
 //Examples:
    //@include background-image(url("/images/a.png"), linear-gradient(#ffff00, #999));
    //@include background-image(url("/images/a.png"), url("/images/b.png"), url("/images/c.png"), linear-gradient(#ffff00 10%, #000 20%));
-
