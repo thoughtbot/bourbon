@@ -8,12 +8,12 @@
 
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
 
-  background-color: nth($G1, 1);
-  background-image: -webkit-radial-gradient($pos, $shape-size, $full);
-  background-image:    -moz-radial-gradient($pos, $shape-size, $full);
-  background-image:     -ms-radial-gradient($pos, $shape-size, $full);
-  background-image:      -o-radial-gradient($pos, $shape-size, $full);
-  background-image:         radial-gradient($pos, $shape-size, $full);
+  background-color:  nth($G1, 1);
+  background-image:  -webkit-radial-gradient($pos, $shape-size, $full);
+  background-image:     -moz-radial-gradient($pos, $shape-size, $full);
+  background-image:      -ms-radial-gradient($pos, $shape-size, $full);
+  background-image:       -o-radial-gradient($pos, $shape-size, $full);
+  background-image: unquote("radial-gradient($pos, $shape-size, $full)");
 }
 
 //  Usage: Gradient position and shape-size are required. Color stops are optional.
