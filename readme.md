@@ -33,7 +33,7 @@ Import all additional stylesheets from your app/assets/stylesheets directory und
     @import "home";
     @import "users";
 
-## Rails 3.0.9 and below
+## Rails 3.0.10 and below
 For Rails < 3.1 you must run the installation rake task. Please note, you should run this task every time a new version of Bourbon is released.
 This will copy the Sass files into your project's public/stylesheets/sass directory.
 
