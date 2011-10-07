@@ -1,0 +1,21 @@
+//Box-Shadow Example
+
+section#box-shadow {
+  section.demo {
+    div.wrapper {
+      div {
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+      }
+
+      div.example-1 {
+        @include box-shadow(0 0 3px 0 #ff000);
+      }
+
+      div.example-1 {
+        @include box-shadow(1px 1px 3px 0 #ff000, -1px -1px 3px 0 #ccc);
+      }
+    }
+  }
+}

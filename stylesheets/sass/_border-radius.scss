@@ -1,0 +1,19 @@
+//Border Radius Demo
+
+section#border-radius {
+  section.demo {
+    div {
+      height: 50px;
+      width: 200px;
+      background: green;
+    }
+
+    div.example-1 {
+      @include border-radius(10px);
+    }
+
+    div.example-2 {
+      @include border-radius(4px 6px 8px 10px);
+    }
+  }
+}

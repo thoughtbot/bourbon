@@ -26,7 +26,7 @@
   <h3>Demo Code</h3>
   <div class="highlight"><pre><code class="css">    <span class="nt">box</span><span class="nd">:hover</span> <span class="p">{</span>
       <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">name</span><span class="p">(</span><span class="n">scale</span><span class="p">);</span>
-      <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">duration</span><span class="p">(</span><span class="m">1s</span><span class="p">);</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">duration</span><span class="p">(</span><span class="m">1</span><span class="err">s</span><span class="p">);</span>
       <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">timing</span><span class="o">-</span><span class="n">function</span><span class="p">(</span><span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="p">);</span>
       <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">iteration</span><span class="o">-</span><span class="n">count</span><span class="p">(</span><span class="n">infinite</span><span class="p">);</span>
     <span class="p">}</span>
@@ -160,6 +160,62 @@
       <li><p>ease-in-out-circ</p><div class="box ease-in-circ"></div></li>
     <ul>
   </section>
+</section>
+
+        <section id="border-radius">
+  <h2>Border Radius</h2>
+  <p>border-radius will also take short-hard notation.</p>
+
+  <section class="demo">
+    <div class="wrapper">
+      <h3>10px Border On All Corners</h3>
+      <div class="highlight"><pre><code class="css">        <span class="k">@include</span> <span class="nt">border-radius</span><span class="o">(</span><span class="nt">10px</span><span class="o">)</span><span class="p">;</span>
+      
+</code></pre>
+</div>
+
+      <div class="example-1"></div>
+    </div>
+
+    <div class="wrapper">
+      <h3>Specify the Radius for Each Corner</h3>
+      <div class="highlight"><pre><code class="css">        <span class="k">@include</span> <span class="nt">border-radius</span><span class="o">(</span><span class="nt">4px</span> <span class="nt">6px</span> <span class="nt">8px</span> <span class="nt">10px</span><span class="o">)</span><span class="p">;</span>
+      
+</code></pre>
+</div>
+
+      <div class="example-2"></div>
+    </div>
+
+  </section>
+</section>
+
+        <section id="box-shadow">
+  <h2>Box Shadow</h2>
+  <p>Box-shadow supports single or multiple arguments.</p>
+
+  <section class="demo">
+    <div calss="wrapper">
+      <h3>Single Box Shadow</h3>
+      <div class="highlight"><pre><code class="css">        <span class="k">@include</span> <span class="nt">box-shadow</span><span class="o">(</span><span class="nt">0</span> <span class="nt">0</span> <span class="nt">3px</span> <span class="nt">0</span> <span class="nf">#ff0000</span><span class="o">)</span><span class="p">;</span>
+      
+</code></pre>
+</div>
+
+      <div calss="example-1"></div>
+    </div>
+
+    <div calss="wrapper">
+      <h3>Multiple comma-delimited Box Shadows</h3>
+      <div class="highlight"><pre><code class="css">        <span class="k">@include</span> <span class="nt">box-shadow</span><span class="o">(</span><span class="nt">1px</span> <span class="nt">1px</span> <span class="nt">2px</span> <span class="nt">0</span> <span class="nf">#ff0000</span><span class="o">,</span> <span class="nt">-1px</span> <span class="nt">-1px</span> <span class="nt">2px</span> <span class="nt">0</span> <span class="nf">#ccc</span><span class="o">)</span><span class="p">;</span>
+      
+</code></pre>
+</div>
+
+      <div calss="example-2"></div>
+    </div>
+  </section>
+
 </section>
 
       </div>

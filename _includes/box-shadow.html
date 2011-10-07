@@ -1,0 +1,23 @@
+<section id="box-shadow">
+  <h2>Box Shadow</h2>
+  <p>Box-shadow supports single or multiple arguments.</p>
+
+  <section class="demo">
+    <div calss="wrapper">
+      <h3>Single Box Shadow</h3>
+      {% highlight css %}
+        @include box-shadow(0 0 3px 0 #ff0000);
+      {% endhighlight %}
+      <div calss="example-1"></div>
+    </div>
+
+    <div calss="wrapper">
+      <h3>Multiple comma-delimited Box Shadows</h3>
+      {% highlight css %}
+        @include box-shadow(1px 1px 2px 0 #ff0000, -1px -1px 2px 0 #ccc);
+      {% endhighlight %}
+      <div calss="example-2"></div>
+    </div>
+  </section>
+
+</section>

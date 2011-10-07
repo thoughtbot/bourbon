@@ -1,0 +1,23 @@
+<section id="border-radius">
+  <h2>Border Radius</h2>
+  <p>border-radius will also take short-hard notation.</p>
+
+  <section class="demo">
+    <div class="wrapper">
+      <h3>10px Border On All Corners</h3>
+      {% highlight css %}
+        @include border-radius(10px);
+      {% endhighlight %}
+      <div class="example-1"></div>
+    </div>
+
+    <div class="wrapper">
+      <h3>Specify the Radius for Each Corner</h3>
+      {% highlight css %}
+        @include border-radius(4px 6px 8px 10px);
+      {% endhighlight %}
+      <div class="example-2"></div>
+    </div>
+
+  </section>
+</section>
