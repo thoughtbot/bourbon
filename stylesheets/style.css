@@ -778,6 +778,48 @@ section#timing-functions section.demo div.ease-in-out-circ {
   -o-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86); }
 
+section#border-radius section.demo div.example {
+  background-image: -webkit-linear-gradient(top, #f9438f, #d0065a);
+  background-image: -moz-linear-gradient(top, #f9438f, #d0065a);
+  background-image: -ms-linear-gradient(top, #f9438f, #d0065a);
+  background-image: -o-linear-gradient(top, #f9438f, #d0065a);
+  background-image: linear-gradient(top, #f9438f, #d0065a);
+  height: 50px;
+  width: 200px; }
+section#border-radius section.demo div.example.equal {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px; }
+section#border-radius section.demo div.example.different {
+  -webkit-border-radius: 5px 10px 20px 30px;
+  -moz-border-radius: 5px 10px 20px 30px;
+  -ms-border-radius: 5px 10px 20px 30px;
+  -o-border-radius: 5px 10px 20px 30px;
+  border-radius: 5px 10px 20px 30px; }
+
+section#box-shadow section.demo div.wrapper div.example {
+  background-image: -webkit-linear-gradient(top, #f9438f, #d0065a);
+  background-image: -moz-linear-gradient(top, #f9438f, #d0065a);
+  background-image: -ms-linear-gradient(top, #f9438f, #d0065a);
+  background-image: -o-linear-gradient(top, #f9438f, #d0065a);
+  background-image: linear-gradient(top, #f9438f, #d0065a);
+  height: 100px;
+  width: 100px; }
+section#box-shadow section.demo div.wrapper div.example.single {
+  -webkit-box-shadow: 0 0 10px 0 black;
+  -moz-box-shadow: 0 0 10px 0 black;
+  -ms-box-shadow: 0 0 10px 0 black;
+  -o-box-shadow: 0 0 10px 0 black;
+  box-shadow: 0 0 10px 0 black; }
+section#box-shadow section.demo div.wrapper div.example.double {
+  -webkit-box-shadow: 1px 1px 10px 0 green, -1px -1px 10px 0 blue;
+  -moz-box-shadow: 1px 1px 10px 0 green, -1px -1px 10px 0 blue;
+  -ms-box-shadow: 1px 1px 10px 0 green, -1px -1px 10px 0 blue;
+  -o-box-shadow: 1px 1px 10px 0 green, -1px -1px 10px 0 blue;
+  box-shadow: 1px 1px 10px 0 green, -1px -1px 10px 0 blue; }
+
 html, body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;

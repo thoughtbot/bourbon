@@ -2,18 +2,18 @@
 
 section#border-radius {
   section.demo {
-    div {
+    div.example {
+      @include background-image(linear-gradient(top, #f9438f, #d0065a));
       height: 50px;
       width: 200px;
-      background: green;
     }
 
-    div.example-1 {
+    div.example.equal {
       @include border-radius(10px);
     }
 
-    div.example-2 {
-      @include border-radius(4px 6px 8px 10px);
+    div.example.different {
+      @include border-radius(5px 10px 20px 30px);
     }
   }
 }

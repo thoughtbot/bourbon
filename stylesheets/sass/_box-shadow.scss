@@ -3,18 +3,18 @@
 section#box-shadow {
   section.demo {
     div.wrapper {
-      div {
+      div.example {
+        @include background-image(linear-gradient(top, #f9438f, #d0065a));
         height: 100px;
         width: 100px;
-        margin: 0 auto;
       }
 
-      div.example-1 {
-        @include box-shadow(0 0 3px 0 #ff000);
+      div.example.single {
+        @include box-shadow(0 0 10px 0 #000);
       }
 
-      div.example-1 {
-        @include box-shadow(1px 1px 3px 0 #ff000, -1px -1px 3px 0 #ccc);
+      div.example.double {
+        @include box-shadow(1px 1px 10px 0 green, -1px -1px 10px 0 blue);
       }
     }
   }

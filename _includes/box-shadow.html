@@ -3,20 +3,20 @@
   <p>Box-shadow supports single or multiple arguments.</p>
 
   <section class="demo">
-    <div calss="wrapper">
+    <div class="wrapper">
       <h3>Single Box Shadow</h3>
       {% highlight css %}
-        @include box-shadow(0 0 3px 0 #ff0000);
+        @include box-shadow(0 0 10px 0 black);
       {% endhighlight %}
-      <div calss="example-1"></div>
+      <div class="example single"></div>
     </div>
 
-    <div calss="wrapper">
+    <div class="wrapper">
       <h3>Multiple comma-delimited Box Shadows</h3>
       {% highlight css %}
-        @include box-shadow(1px 1px 2px 0 #ff0000, -1px -1px 2px 0 #ccc);
+        @include box-shadow(1px 1px 10px 0 green, -1px -1px 10px 0 blue);
       {% endhighlight %}
-      <div calss="example-2"></div>
+      <div class="example double"></div>
     </div>
   </section>
 
