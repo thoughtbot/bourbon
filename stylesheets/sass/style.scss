@@ -3,6 +3,11 @@
 @import "mixins";
 @import "animation-keyframes";
 
+@import "animation";
+@import "background-image";
+@import "buttons";
+@import "timing-functions";
+
 html, body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -133,8 +138,3 @@ div.box {
   @include linear-gradient(lighten($base-color, 20%), $base-color);
   width: 40px;
 }
-
-
-@import "animation";
-@import "buttons";
-@import "timing-functions";
