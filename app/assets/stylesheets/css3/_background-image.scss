@@ -1,4 +1,9 @@
-// Background image property for support with adding multiple background images with a gradients.
+//************************************************************************//
+// Background-image property for adding multiple background images with
+// gradients, or for stringing multiple gradients together.
+//************************************************************************//
+@import "../functions/linear-gradient";
+@import "../functions/radial-gradient";
 
 @mixin background-image(
   $image-1       , $image-2: false,
@@ -13,88 +18,54 @@
            $image-7, $image-8,
            $image-9, $image-10);
 
-  $assets:    ();
-  $gradients: ();
-  $count: 0;
-
-  //Find all asset images in list
-  @for $i from 1 through length($images) {
-    $type: type-of(nth($images, $i));
-
-    @if $type == list {
-      $count: $count + 1;
-    }
-
-    @else if $type == string {
-      $assets: join($assets, nth($images, $i), comma);
-    }
-  }
-
-  // Find all gradients in list
-  @for $i from 1 through length($images) {
-    $type: type-of(nth($images, $i));
-
-    @if $type == list {
-      $gradients: append($gradients, nth($images, $i), comma);
-    }
-  }
-
-
-  @if $assets {
-    @if $count >= 1 {
-      background-image: $assets, render-gradients($gradients, webkit);
-      background-image: $assets, render-gradients($gradients, moz);
-      background-image: $assets, render-gradients($gradients, ms);
-      background-image: $assets, render-gradients($gradients, o);
-      background-image: $assets, render-gradients($gradients);
-    }
-    @else {
-      background-image: $assets;
-    }
-  }
-  @else {
-    @if $count >= 1 {
-      background-image: render-gradients($gradients, webkit);
-      background-image: render-gradients($gradients, moz);
-      background-image: render-gradients($gradients, ms);
-      background-image: render-gradients($gradients, o);
-      background-image: render-gradients($gradients);
-    }
-  }
+  background-image: add-prefix($images, webkit);
+  background-image: add-prefix($images, moz);
+  background-image: add-prefix($images, ms);
+  background-image: add-prefix($images, o);
+  background-image: add-prefix($images);
 }
 
-@function render-gradients($gradients, $vendor: false) {
-  @if length($gradients) == 1 {
-    $vendor-gradients: false;
-    @if $vendor {
-      $vendor-gradients: -#{$vendor}-linear-gradient($gradients);
+
+@function add-prefix($images, $vendor: false) {
+  $images-prefixed: ();
+
+  @for $i from 1 through length($images) {
+    $type: type-of(nth($images, $i)); // Get type of variable - List or String
+
+    // If variable is a list - Gradient
+    @if $type == list {
+      $gradient-type: nth(nth($images, $i), 1); // Get type of gradient (linear || radial)
+      $gradient-args: nth(nth($images, $i), 2); // Get actual gradient (red, blue)
+
+      $gradient: render-gradients($gradient-args, $gradient-type, $vendor);
+      $images-prefixed: append($images-prefixed, $gradient, comma);
     }
-    @else if $vendor == false {
-      $vendor-gradients: "linear-gradient(#{$gradients})";
-      $vendor-gradients: unquote($vendor-gradients);
+
+    // If variable is a string - Image
+    @else if $type == string {
+      $images-prefixed: join($images-prefixed, nth($images, $i), comma);
     }
-    @return $vendor-gradients;
+  }
+  @return $images-prefixed;
+}
+
+
+@function render-gradients($gradients, $gradient-type, $vendor: false) {
+  $vendor-gradients: false;
+  @if $vendor {
+    $vendor-gradients: -#{$vendor}-#{$gradient-type}-gradient($gradients);
   }
 
-  @else if length($gradients) >= 2 {
-    $vendor-gradients: ();
-    @for $i from 1 through length($gradients) {
-      @if $vendor {
-        @if $vendor-gradients == () {
-          $vendor-gradients: -#{$vendor}-linear-gradient(nth($gradients, $i));
-        }
-        @else {
-          $vendor-gradients: $vendor-gradients, -#{$vendor}-linear-gradient(nth($gradients, $i));
-        }
-      }
-      @else if $vendor == false {
-        $vendor-gradients: $vendor-gradients, unquote("linear-gradient(#{nth($gradients, $i)})");
-      }
-    }
-    @return $vendor-gradients;
+  @else if $vendor == false {
+    $vendor-gradients: "#{$gradient-type}-gradient(#{$gradients})";
+    $vendor-gradients: unquote($vendor-gradients);
   }
+  @return $vendor-gradients;
 }
 
 //Examples:
-   //@include background-image(url("/images/a.png"), linear-gradient(#ffff00, #999));
-   //@include background-image(url("/images/a.png"), url("/images/b.png"), url("/images/c.png"), linear-gradient(#ffff00 10%, #000 20%));
+  //@include background-image(linear-gradient(top, orange, red));
+  //@include background-image(radial-gradient(50% 50%, cover circle, orange, red));
+  //@include background-image(url("/images/a.png"), linear-gradient(orange, red));
+  //@include background-image(url("image.png"), linear-gradient(orange, red), url("image.png"));
+  //@include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(orange, red);

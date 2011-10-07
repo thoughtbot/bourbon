@@ -14,8 +14,10 @@
     $pos: top; // Default position
   }
 
-  $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
+  $type: linear;
+  $gradient: compact($pos, $G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
+  $type-gradient: append($type, $gradient, comma);
 
-  @return join($pos, $full, comma);
-
+  @return $type-gradient;
 }
+
