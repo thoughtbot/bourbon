@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "bourbon"
   s.version     = Bourbon::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Phil LaPier", "Chad Mazzola", "Mike Burns"]
+  s.authors     = ["Phil LaPier", "Chad Mazzola", "Matt Jankowski", "Nick Quaranto", "Jeremy Raines", "Mike Burns", "Andrés Mejía", "Travis Haynes", "Chris Lloyd", "Gabe Berke-Williams", "J. Edward Dewyea"]
   s.email       = ["support@thoughtbot.com"]
   s.homepage    = "https://github.com/thoughtbot/bourbon"
   s.summary     = "Bourbon Sass Mixins using SCSS syntax."
