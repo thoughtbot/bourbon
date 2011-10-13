@@ -15,10 +15,10 @@
   }
 
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
-  $GLast: nth($full, length($full));
+  $last-gradient: nth($full, length($full));
 
   background-color:  nth($G1, 1);
-  background-image:  -webkit-gradient(linear, left top, left bottom, from(nth($G1, 1)), to(nth($GLast, 1))); /* Saf4, < iOS 5, Android Webkit */
+  background-image:  -webkit-gradient(linear, left top, left bottom, from(nth($G1, 1)), to(nth($last-gradient, 1))); /* Saf4, < iOS 5, Android Webkit */
   background-image:  -webkit-linear-gradient($pos, $full); /* Saf5.1+, Chrome */
   background-image:     -moz-linear-gradient($pos, $full);
   background-image:      -ms-linear-gradient($pos, $full);
