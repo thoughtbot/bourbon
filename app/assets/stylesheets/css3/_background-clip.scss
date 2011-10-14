@@ -1,0 +1,14 @@
+@mixin background-clip($clip: padding-box) {
+  $clip: unquote($clip);
+  $webkit-moz: $clip;
+  
+  // webkit and mozilla use the deprecated shorts for border and padding
+  @if $clip == padding-box { $webkit-moz: padding; }
+  @if $clip == border-box { $webkit-moz: border; }
+  
+  -webkit-background-clip : $webkit-moz;
+   -khtml-background-clip : $clip;
+     -moz-background-clip : $webkit-moz;
+      -ms-background-clip : $clip;
+       -o-background-clip : $clip;
+}

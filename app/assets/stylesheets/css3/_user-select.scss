@@ -1,0 +1,16 @@
+/* Controls the appearance (only) of selection.
+ * 
+ * none - The text of the element and sub-elements will appear as if they cannot
+ *        be selected. Any use of Selection however will contain these elements
+ *
+ * text - The text can be selected by the user
+ *
+ */
+
+@mixin user-select ($select) {
+  -webkit-user-select: $select;
+     -moz-user-select: $select;
+      -ms-user-select: $select;
+       -o-user-select: $select;
+          user-select: $select;
+}

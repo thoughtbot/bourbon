@@ -1,0 +1,20 @@
+@mixin background-size(
+  $size-1: 100% auto,
+  $size-2: false,
+  $size-3: false,
+  $size-4: false,
+  $size-5: false,
+  $size-6: false,
+  $size-7: false,
+  $size-8: false,
+  $size-9: false,
+  $size-10: false
+) {
+  $size-1: if(type-of($size-1) == string, unquote($size-1), $size-1);
+  $sizes: compact($size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7, $size-8, $size-9, $size-10);
+  
+  // this is currently only supported in webkit, mozilla, and opera
+  -webkit-background-size : $sizes;
+     -moz-background-size : $sizes;
+       -o-background-size : $sizes;
+}

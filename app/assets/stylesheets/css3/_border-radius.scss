@@ -5,3 +5,55 @@
        -o-border-radius: $radii;
           border-radius: $radii;
 }
+
+@mixin border-top-left-radius($radii) {
+  -webkit-border-top-left-radius: $radii;
+     -moz-border-top-left-radius: $radii;
+      -ms-border-top-left-radius: $radii;
+       -o-border-top-left-radius: $radii;
+          border-top-left-radius: $radii;
+}
+
+@mixin border-top-right-radius($radii) {
+  -webkit-border-top-right-radius: $radii;
+     -moz-border-top-right-radius: $radii;
+      -ms-border-top-right-radius: $radii;
+       -o-border-top-right-radius: $radii;
+          border-top-right-radius: $radii;
+}
+
+@mixin border-bottom-left-radius($radii) {
+  -webkit-border-bottom-left-radius: $radii;
+     -moz-border-bottom-left-radius: $radii;
+      -ms-border-bottom-left-radius: $radii;
+       -o-border-bottom-left-radius: $radii;
+          border-bottom-left-radius: $radii;
+}
+
+@mixin border-bottom-right-radius($radii) {
+  -webkit-border-bottom-right-radius: $radii;
+     -moz-border-bottom-right-radius: $radii;
+      -ms-border-bottom-right-radius: $radii;
+       -o-border-bottom-right-radius: $radii;
+          border-bottom-right-radius: $radii;
+}
+
+@mixin border-top-radius($radii) {
+  @include border-top-left-radius($radii);
+  @include border-top-right-radius($radii);
+}
+
+@mixin border-right-radius($radii) {
+  @include border-top-right-radius($radii);
+  @include border-bottom-right-radius($radii);
+}
+
+@mixin border-bottom-radius($radii) {
+  @include border-bottom-left-radius($radii);
+  @include border-bottom-right-radius($radii);
+}
+
+@mixin border-left-radius($radii) {
+  @include border-top-left-radius($radii);
+  @include border-bottom-left-radius($radii);
+}
