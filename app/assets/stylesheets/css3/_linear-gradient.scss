@@ -1,4 +1,3 @@
-// Requires Sass 3.1+
 @mixin linear-gradient($pos, $G1, $G2: false,
                        $G3: false, $G4: false,
                        $G5: false, $G6: false,
@@ -15,19 +14,61 @@
   }
 
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
-  $last-gradient: nth($full, length($full));
 
   background-color:  nth($G1, 1);
-  background-image:  -webkit-gradient(linear, left top, left bottom, from(nth($G1, 1)), to(nth($last-gradient, 1))); /* Saf4, < iOS 5, Android Webkit */
-  background-image:  -webkit-linear-gradient($pos, $full); /* Saf5.1+, Chrome */
+  background-image:     deprecated-webkit-gradient($full); // Safari <= 5.0
+  background-image:  -webkit-linear-gradient($pos, $full); // Safari 5.1+, Chrome
   background-image:     -moz-linear-gradient($pos, $full);
   background-image:      -ms-linear-gradient($pos, $full);
   background-image:       -o-linear-gradient($pos, $full);
   background-image: unquote("linear-gradient(#{$pos}, #{$full})");
 }
 
-// Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.
+// Render Deprecated Webkit Gradient
+//************************************************************************//
+@function deprecated-webkit-gradient($full) {
+  $gradient-list: ();
+  $gradient: false;
 
+  @if length($full) > 2 {
+    @each $gradient in $full {
+      @if length($gradient) == 2 {
+        $color-stop: color-stop(join(nth($gradient, 2), nth($gradient, 1), comma));
+        $gradient-list: join($gradient-list, $color-stop, comma);
+      }
+      @else {
+        $color-stop: color-stop($gradient);
+        $gradient-list: join($gradient-list, $color-stop, comma);
+        @warn "When defining more 3 or more color-stops, you must define stop values. (e.g. red 0%, orange 50%, pink 75%)"
+      }
+    }
+    $gradient: -webkit-gradient(linear, left top, left bottom, $gradient-list);
+  }
+
+  @else if length($full) == 2 {
+    @each $gradient in $full {
+      @if length($gradient) == 2 {
+        $color-stop: color-stop(join(nth($gradient, 2), nth($gradient, 1), comma));
+        $gradient-list: join($gradient-list, $color-stop, comma);
+      }
+      @else {
+        @if $gradient == nth($full, 1) {
+          $color-stop: from($gradient);
+          $gradient-list: join($gradient-list, $color-stop, comma);
+        }
+        @else if $gradient == nth($full, 2) {
+          $color-stop: to($gradient);
+          $gradient-list: join($gradient-list, $color-stop, comma);
+        }
+      }
+    }
+    $gradient: -webkit-gradient(linear, left top, left bottom, $gradient-list);
+  }
+  @return $gradient;
+}
+
+// Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.
 // @include linear-gradient(#1e5799, #2989d8);
 // @include linear-gradient(top, #1e5799 0%, #2989d8 50%);
 // @include linear-gradient(50deg, rgba(10, 10, 10, 0.5) 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+
