@@ -9,6 +9,7 @@
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
 
   background-color:  nth($G1, 1);
+  background-image:          deprecated-webkit-gradient(radial, $full); // Safari <= 5.0
   background-image:  -webkit-radial-gradient($pos, $shape-size, $full);
   background-image:     -moz-radial-gradient($pos, $shape-size, $full);
   background-image:      -ms-radial-gradient($pos, $shape-size, $full);
