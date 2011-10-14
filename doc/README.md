@@ -13,8 +13,8 @@ Watch the sass folder from root directory:
 To pull in the latest changes on gh-pages branch:
     git pull --rebase origin gh-pages
 
-To pull in the latest Bourbon changes, you must rebase against master:
-    git fetch && git rebase origin/master
+To pull in the latest Bourbon changes, you must fetch and merge master into gh-pages:
+    git fetch origin master && git merge master
 
 To push to gh-pages, you will always have to force push:
     git push -f
