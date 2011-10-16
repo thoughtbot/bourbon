@@ -1,0 +1,7 @@
+@mixin border-image ($image) {
+  -webkit-border-image: $image;
+     -moz-border-image: $image;
+      -ms-border-image: $image;
+       -o-border-image: $image;
+          border-image: $image;
+}

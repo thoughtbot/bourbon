@@ -113,6 +113,13 @@ The background-image mixin is helpful for chaining multiple comma delimited back
     @include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
 
 
+### Border-image
+
+border-image supports short-hand notation.
+
+    @include border-image(url(border.png) 27 round);
+
+
 ### Border Radius
 
 border-radius will also take short-hand notation.
@@ -367,6 +374,7 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
         @ animation-timing-function(*args)
 
       @ background-image(*args)
+      @ border-image(*args)
       @ border-radius(*args)
       @ box-shadow(*args)
       @ box-sizing(*args)
