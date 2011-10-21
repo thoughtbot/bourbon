@@ -1,0 +1,28 @@
+<section id="html5-input-types">
+  <h2>HTML5 Input Types</h2>
+  <p>This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimick input[type="text"].</p>>
+
+  <h3>Demo Code</h3>
+  {% highlight css %}
+    input[type="*"]
+    * = [color, date, datetime, datetime-local, email, month, number, password, search, tel, text, time, url, week]
+  {% endhighlight %}
+
+  <p>Usage Note: You must use interpolation with the variable.</p>
+
+  <h3>Demo Code</h3>
+  {% highlight css %}
+    #{$all-text-inputs}, textarea {
+      border: 1px solid green;
+    }
+
+    Output:
+    input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], textarea {
+      border: 1px solid green;
+    }
+  {% endhighlight %}
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>

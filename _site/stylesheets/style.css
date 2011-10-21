@@ -870,6 +870,9 @@ nav.fixed-nav {
       line-height: 180%; }
       nav.fixed-nav ul li:first-child {
         margin-top: 15px; }
+      nav.fixed-nav ul li a h3 {
+        color: black;
+        margin: 0; }
 
 div.main-content {
   background: white;
@@ -889,12 +892,19 @@ div.main-inner {
   width: 716px; }
   div.main-inner h1 {
     border-bottom: 1px solid #ededed; }
+  div.main-inner section + h1 {
+    margin-top: 100px; }
+  div.main-inner section#intro + h1 {
+    margin-top: 20px; }
   div.main-inner > section {
     border-bottom: 1px solid #ccc;
     padding-top: 40px;
     padding-bottom: 30px; }
   div.main-inner h1 + section {
     padding-top: 0; }
+  div.main-inner section#intro {
+    border-bottom: none;
+    padding-bottom: 0; }
 
 div.wrapper {
   margin-bottom: 20px; }

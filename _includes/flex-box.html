@@ -1,0 +1,27 @@
+<section id="flex-box">
+  <h2>Flex Box</h2>
+  <p>The flex-box mixin is bases on the 2009 w3c spec. The mixin with change to the flexible box-model. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">more info</a></p>
+
+  <h3>Demo Code</h3>
+  {% highlight css %}
+    div.parent {
+      @include display-box;
+      @include box-align(start);
+      @include box-orient(horizontal);
+      @include box-pack(start);
+    }
+
+    div.parent > div.child {
+      @include box-flex(2);
+    }
+
+    # Alternative custom shorthand mixin.
+    div.parent {
+      @include box($orient: horizontal, $pack: center, $align: stretch);
+    }
+  {% endhighlight %}
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>

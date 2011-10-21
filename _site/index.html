@@ -10,18 +10,42 @@
     <div class="main-content">
       <nav class="fixed-nav">
   <ul>
+    <li><a href="#mixins"><h3>Mixins</h3></a></li>
     <li><a href="#animations">Animations</a></li>
-    <li><a href="#timing-functions">Animation Timing Functions</a></li>
     <li><a href="#background-image">Background Image</a></li>
+    <li><a href="#border-image">Border Image</a></li>
     <li><a href="#border-radius">Border Radius</a></li>
     <li><a href="#box-shadow">Box Shadow</a></li>
+    <li><a href="#box-sizing">Box Sizing</a></li>
+    <li><a href="#flex-box">Flex Box</a></li>
+    <li><a href="#inline-block">Inline Block</a></li>
+    <li><a href="#linear-gradient">Linear Gradient</a></li>
+    <li><a href="#position">Position</a></li>
+    <li><a href="#radial-gradient">Radial Gradient</a></li>
+    <li><a href="#transform">Transform</a></li>
+    <li><a href="#transform-origin">Transform Origin</a></li>
+    <li><a href="#transitions">Transitions</a></li>
+    <li><a href="#functions"><h3>Fucntions</h3></a><li>
+    <li><a href="#compact">Compact</a></li>
+    <li><a href="#golden-ratio">Golden Ratio</a></li>
+    <li><a href="#grid-width">Grid Width</a></li>
+    <li><a href="#linear-gradient-function">Linear Gradient</a></li>
+    <li><a href="#tint-shade">Tint and Shade</a></li>
+    <li><a href="#add-ons"><h3>Add-ons</h3></a><li>
     <li><a href="#buttons">Buttons</a></li>
+    <li><a href="#html5-input-types">HTML5 Input Types</a></li>
+    <li><a href="#timing-functions">Timing Functions</a></li>
   </ul>
 </nav>
 
 
       <div class="main-inner">
         <h1>Bourbon &ndash; Sass Mixin Library</h1>
+        <section id="intro">
+  <p>The purpose of Bourbon Sass Mixins is to provide a comprehensive library of sass mixins that are designed to be as vanilla as possible, meaning they should not deter from the original CSS syntax. The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
+</section>
+
+        <h1 id="mixins">Mixins</h1>
         <section id="animations">
   <h2>Animations</h2>
   <p>The animation mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.</p>
@@ -69,99 +93,19 @@
 </section>
 
 
-        <section id="buttons">
-  <h2>Buttons</h2>
-  <p>The button add-on provides well-designed buttons with a single line in your CSS.</p>
-  <p>The mixin supports a style parameter and an optional color argument.<br/> The available styles are <strong>"simple"</strong> (default), <strong>"shiny"</strong> and <strong>"pill"</strong>.</p>
+        <section id="border-image">
+  <h2>Border-image</h2>
+  <p>Border-image supports short-hand notation.</p>
 
-  <section class="demo">
-    <div class="wrapper">
-      <h3>Simple Button Style</h3>
-      <p>The mixin can be called with no arguments, which will render a blue button with the "simple" style.</p>
-      <div class="highlight"><pre><code class="css">        <span class="nt">button</span> <span class="p">{</span>
-          <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">;</span>
-        <span class="p">}</span>
-      
-</code></pre>
-</div>
-
-      <button class="example-1">Simple button</button>
-    </div>
-
-    <div class="wrapper">
-      <h3>Pill Button Style</h3>
-      <div class="highlight"><pre><code class="css">        <span class="nt">button</span> <span class="p">{</span>
-          <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">(</span><span class="n">pill</span><span class="p">);</span>
-        <span class="p">}</span>
-      
-</code></pre>
-</div>
-
-      <button class="example-2">Pill Button</button>
-    </div>
-
-    <div class="wrapper">
-      <h3>Shiny Button Style</h3>
-      <p>Create beautiful buttons by defining a style and color argument; using a single color, the mixin calculates the gradient, borders, box shadow, text shadow and text color of the button. The mixin will change the text to be light when on a dark background, and dark when on a light background.</p>
-
-      <div class="highlight"><pre><code class="css">        <span class="err">#</span> <span class="nt">Style</span> <span class="o">+</span> <span class="nt">color</span> <span class="nt">arguments</span>
-        <span class="nt">button</span> <span class="p">{</span>
-          <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">(</span><span class="n">shiny</span><span class="o">,</span> <span class="m">#ff0000</span><span class="p">);</span>
-        <span class="p">}</span>
-      
-</code></pre>
-</div>
-
-      <button class="example-3">Shiny Button</button>
-    </div>
-  </section>
-
-</section>
-
-        <section id="timing-functions">
-  <h2>Timing Functions</h2>
-  <p>These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations and transitions. The provided timing functions are the same as the jQuery UI demo: <a href="http://jqueryui.com/demos/effect/easing.html">easing functions</a>.</p>
-
-  <h3>Example Code</h3>
-  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">transition</span><span class="o">(</span><span class="nt">all</span><span class="o">,</span> <span class="nt">5s</span><span class="o">,</span> <span class="err">$</span><span class="nt">ease-in-circ</span><span class="o">)</span><span class="p">;</span>
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">border-image</span><span class="o">(</span><span class="nt">url</span><span class="o">(</span><span class="nt">border</span><span class="nc">.png</span><span class="o">)</span> <span class="nt">27</span> <span class="nt">round</span><span class="o">)</span><span class="p">;</span>
   
 </code></pre>
 </div>
 
 
-
   <h3>Demo</h3>
-  <p>Many off the timing functions below may look the same in this demo, but in complex animations, they are intricatly different.</p>
   <section class="demo">
-    <ul>
-      <li><p>ease-in-quad</p><div class="box ease-in-quad"></div></li>
-      <li><p>ease-out-quad</p><div class="box ease-in-quad"></div></li>
-      <li><p>ease-in-out-quad</p><div class="box ease-in-quad"></div></li>
-
-      <li><p>ease-in-cubic</p><div class="box ease-in-cubic"></div></li>
-      <li><p>ease-out-cubic</p><div class="box ease-in-cubic"></div></li>
-      <li><p>ease-in-out-cubic</p><div class="box ease-in-cubic"></div></li>
-
-      <li><p>ease-in-quart</p><div class="box ease-in-quart"></div></li>
-      <li><p>ease-out-quart</p><div class="box ease-in-quart"></div></li>
-      <li><p>ease-in-out-quart</p><div class="box ease-in-quart"></div></li>
-
-      <li><p>ease-in-quint</p><div class="box ease-in-quint"></div></li>
-      <li><p>ease-out-quint</p><div class="box ease-in-quint"></div></li>
-      <li><p>ease-in-out-quint</p><div class="box ease-in-quint"></div></li>
-
-      <li><p>ease-in-sine</p><div class="box ease-in-sine"></div></li>
-      <li><p>ease-out-sine</p><div class="box ease-in-sine"></div></li>
-      <li><p>ease-in-out-sine</p><div class="box ease-in-sine"></div></li>
-
-      <li><p>ease-in-expo</p><div class="box ease-in-expo"></div></li>
-      <li><p>ease-out-expo</p><div class="box ease-in-expo"></div></li>
-      <li><p>ease-in-out-expo</p><div class="box ease-in-expo"></div></li>
-
-      <li><p>ease-in-circ</p><div class="box ease-in-circ"></div></li>
-      <li><p>ease-out-circ</p><div class="box ease-in-circ"></div></li>
-      <li><p>ease-in-out-circ</p><div class="box ease-in-circ"></div></li>
-    <ul>
   </section>
 </section>
 
@@ -219,6 +163,410 @@
     </div>
   </section>
 
+</section>
+
+        <section id="box-sizing">
+  <h2>Box Sizing</h2>
+  <p>Box-sizing will change the box-model of the element it is applied to.</p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">box-sizing</span><span class="o">(</span><span class="nt">border-box</span><span class="o">)</span><span class="p">;</span>
+  
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>
+
+        <section id="flex-box">
+  <h2>Flex Box</h2>
+  <p>The flex-box mixin is bases on the 2009 w3c spec. The mixin with change to the flexible box-model. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">more info</a></p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="nt">div</span><span class="nc">.parent</span> <span class="p">{</span>
+      <span class="o">@</span><span class="n">include</span> <span class="k">display</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">align</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">orient</span><span class="p">(</span><span class="n">horizontal</span><span class="p">);</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">pack</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nt">div</span><span class="nc">.parent</span> <span class="o">&gt;</span> <span class="nt">div</span><span class="nc">.child</span> <span class="p">{</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">flex</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="err">#</span> <span class="nt">Alternative</span> <span class="nt">custom</span> <span class="nt">shorthand</span> <span class="nt">mixin</span><span class="o">.</span>
+    <span class="nt">div</span><span class="nc">.parent</span> <span class="p">{</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="p">(</span><span class="err">$</span><span class="n">orient</span><span class="o">:</span> <span class="n">horizontal</span><span class="o">,</span> <span class="err">$</span><span class="n">pack</span><span class="o">:</span> <span class="k">center</span><span class="o">,</span> <span class="err">$</span><span class="n">align</span><span class="o">:</span> <span class="n">stretch</span><span class="p">);</span>
+    <span class="p">}</span>
+  
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>
+
+        <section id="inline-block">
+  <h2>Inline Block</h2>
+  <p>The inline-block mixin provides support for the inline-block property in IE6 and IE7.</p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">inline-block</span><span class="p">;</span>
+  
+</code></pre>
+</div>
+
+</section>
+
+        <section id="linear-gradient">
+  <h2>Linear Gradient</h2>
+  <p>Gradient Position is optional, default is top. Position can be a degree. Color-stops are optional as well. Mixin will support up to 10 gradients.</p>
+
+  <section class="demo">
+    <div class="wrapper">
+      <h3>Single Gradient</h3>
+      <div class="highlight"><pre><code class="css">        <span class="k">@include</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nf">#1e5799</span><span class="o">,</span> <span class="nf">#2989d8</span><span class="o">)</span><span class="p">;</span>
+      
+</code></pre>
+</div>
+
+      <div class="example single"></div>
+    </div>
+  </section>
+</section>
+
+        <section id="position">
+  <h2>Position</h2>
+  <p>Shorthand notation for setting the position of elements in your page.</p>
+
+  <h3>Position</h3>
+  <p>Shorthand notation for setting the position of the elements in your page.</P>
+  <p>Instead of writing:</p>
+  <div class="highlight"><pre><code class="css">    <span class="nt">position</span><span class="o">:</span> <span class="nt">relative</span><span class="o">;</span>
+    <span class="nt">top</span><span class="o">:</span> <span class="nt">0px</span><span class="o">;</span>
+    <span class="nt">left</span><span class="o">:</span> <span class="nt">100px</span><span class="o">;</span>
+  
+</code></pre>
+</div>
+
+  <p>Your can write:</p>
+  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">position</span><span class="o">(</span><span class="nt">relative</span><span class="o">,</span> <span class="nt">0px</span> <span class="nt">0</span> <span class="nt">0</span> <span class="nt">100px</span><span class="o">)</span><span class="p">;</span>
+  
+</code></pre>
+</div>
+
+  <p>The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.</p>
+  <p>Note: unit-less values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.</p>
+
+</section>
+
+        <section id="radial-gradient">
+  <h2>Radial Gradient</h2>
+  <p>Takes up to 10 gradients. Position and shape are required.
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">radial-gradient</span><span class="o">(</span><span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">circle</span> <span class="nt">cover</span><span class="o">,</span> <span class="nf">#1e5799</span><span class="o">,</span> <span class="nf">#efefef</span><span class="o">)</span><span class="p">;</span>
+    <span class="k">@include</span> <span class="nt">radial-gradient</span><span class="o">(</span><span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">circle</span> <span class="nt">cover</span><span class="o">,</span> <span class="nf">#eee</span> <span class="nt">10</span><span class="o">%,</span> <span class="nf">#1e5799</span> <span class="nt">30</span><span class="o">%,</span> <span class="nf">#efefef</span><span class="o">)</span><span class="p">;</span>
+  
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>
+
+        <section id="transform">
+  <h2>Transform</h2>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">transform</span><span class="o">(</span><span class="nt">translateY</span><span class="o">(</span><span class="nt">50px</span><span class="o">))</span><span class="p">;</span>
+  
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>
+
+        <section id="transform-origin">
+  <h2>Transform Origin</h2>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">transform-origin</span><span class="o">(</span><span class="nt">center</span> <span class="nt">top</span><span class="o">)</span><span class="p">;</span>
+  
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>
+
+        <section id="transitions">
+  <h2>Transitions</h2>
+  <p>Shorthand mixin: Supports multiple parentheses-delimited values for each variable.</p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">transition</span> <span class="o">(</span><span class="nt">all</span><span class="o">,</span> <span class="nt">2</span><span class="nc">.0s</span><span class="o">,</span> <span class="nt">ease-in-out</span><span class="o">)</span><span class="p">;</span>
+    <span class="k">@include</span> <span class="nt">transition</span> <span class="o">((</span><span class="nt">opacity</span><span class="o">,</span> <span class="nt">width</span><span class="o">),</span> <span class="o">(</span><span class="nt">1</span><span class="nc">.0s</span><span class="o">,</span> <span class="nt">2</span><span class="nc">.0s</span><span class="o">),</span> <span class="nt">ease-in</span><span class="o">,</span> <span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">2s</span><span class="o">))</span><span class="p">;</span>
+    <span class="k">@include</span> <span class="nt">transition</span> <span class="o">(</span><span class="err">$</span><span class="nt">property</span><span class="o">:(</span><span class="nt">opacity</span><span class="o">,</span> <span class="nt">width</span><span class="o">),</span> <span class="err">$</span><span class="nt">delay</span><span class="o">:</span> <span class="o">(</span><span class="nt">1</span><span class="nc">.5s</span><span class="o">,</span> <span class="nt">2</span><span class="nc">.5s</span><span class="o">))</span><span class="p">;</span><span class="err">`</span>
+  
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>
+
+        <h1 id="functions">Functions</h1>
+        <section id="compact">
+  <h2>Compact</h2>
+  <p>The compact function will strip out any value from a list that is 'false'. Takes up to 10 arguments.
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="err">$</span><span class="nt">full</span><span class="o">:</span>  <span class="nt">compact</span><span class="o">(</span><span class="err">$</span><span class="nt">name-1</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-2</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-3</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-4</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-5</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-6</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-7</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-8</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-9</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-10</span><span class="o">);</span>
+  
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>
+
+        <section id="golden-ratio">
+  <h2>Golden Ratio</h2>
+  <p>Returns the golden ratio of a given number. Must provide a Pixel or Em value for first argument. Also takes a required incriment value that is a non-zero integer: ...-3, -2, -1, 1, 2, 3...</p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="nt">div</span> <span class="p">{</span>
+                        <span class="n">Increment</span> <span class="n">Up</span> <span class="n">GR</span> <span class="n">with</span> <span class="n">positive</span> <span class="n">value</span>
+      <span class="k">font-size</span><span class="o">:</span>        <span class="n">golden</span><span class="o">-</span><span class="n">ratio</span><span class="p">(</span><span class="m">14px</span><span class="o">,</span>  <span class="m">1</span><span class="p">);</span>    <span class="o">//</span> <span class="n">returns</span><span class="o">:</span> <span class="m">22.652px</span>
+
+                        <span class="n">Increment</span> <span class="n">Down</span> <span class="n">GR</span> <span class="n">with</span> <span class="n">negative</span> <span class="n">value</span>
+      <span class="k">font-size</span><span class="o">:</span>        <span class="n">golden</span><span class="o">-</span><span class="n">ratio</span><span class="p">(</span><span class="m">14px</span><span class="o">,</span> <span class="m">-1</span><span class="p">);</span>    <span class="o">//</span> <span class="n">returns</span><span class="o">:</span> <span class="m">8.653px</span>
+
+                        <span class="n">Can</span> <span class="n">be</span> <span class="n">used</span> <span class="n">with</span> <span class="n">ceil</span><span class="p">(</span><span class="n">round</span> <span class="n">up</span><span class="p">)</span> <span class="n">or</span> <span class="n">floor</span><span class="p">(</span><span class="n">round</span> <span class="n">down</span><span class="p">)</span>
+      <span class="k">font-size</span><span class="o">:</span> <span class="n">floor</span><span class="p">(</span> <span class="n">golden</span><span class="o">-</span><span class="n">ratio</span><span class="p">(</span><span class="m">14px</span><span class="o">,</span>  <span class="m">1</span><span class="p">)</span> <span class="p">);</span>  <span class="o">//</span> <span class="n">returns</span><span class="o">:</span> <span class="m">22px</span>
+      <span class="k">font-size</span><span class="o">:</span>  <span class="n">ceil</span><span class="p">(</span> <span class="n">golden</span><span class="o">-</span><span class="n">ratio</span><span class="p">(</span><span class="m">14px</span><span class="o">,</span>  <span class="m">1</span><span class="p">)</span> <span class="p">);</span>  <span class="o">//</span> <span class="n">returns</span><span class="o">:</span> <span class="m">23px</span>
+    <span class="p">}</span>
+  
+</code></pre>
+</div>
+
+  <p>Resources: <a href="http://modularscale.com/">modularscale.com</a> & <a href="http://goldenratiocalculator.com/">goldenrationcalculator.com</a></p>
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>
+
+        <section id="grid-width">
+  <h2>Grid Width</h2>
+  <p>Easily setup and follow a grid based design. Need help busting a move grid-style?!? Check out <a href="http://gridulator.com/">gridulator.com</a></p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="err">#</span> <span class="nt">The</span> <span class="err">$</span><span class="nt">gw-column</span> <span class="nt">and</span> <span class="err">$</span><span class="nt">gw-gutter</span> <span class="nt">variables</span> <span class="nt">must</span> <span class="nt">be</span> <span class="nt">defined</span> <span class="nt">in</span> <span class="nt">your</span> <span class="nt">base</span> <span class="nt">stylesheet</span> <span class="nt">to</span> <span class="nt">properly</span> <span class="nt">use</span> <span class="nt">the</span> <span class="nt">grid-width</span> <span class="nt">function</span><span class="o">.</span>
+    <span class="err">$</span><span class="nt">gw-column</span><span class="o">:</span> <span class="nt">100px</span><span class="o">;</span>          <span class="o">//</span> <span class="nt">Column</span> <span class="nt">Width</span>
+    <span class="err">$</span><span class="nt">gw-gutter</span><span class="o">:</span> <span class="nt">40px</span><span class="o">;</span>           <span class="o">//</span> <span class="nt">Gutter</span> <span class="nt">Width</span>
+
+    <span class="nt">div</span> <span class="p">{</span>
+      <span class="k">width</span><span class="o">:</span> <span class="n">grid</span><span class="o">-</span><span class="k">width</span><span class="p">(</span><span class="m">4</span><span class="p">);</span>     <span class="o">//</span> <span class="n">returns</span> <span class="m">520px</span><span class="p">;</span>
+      <span class="k">margin-left</span><span class="o">:</span> <span class="err">$</span><span class="n">gw</span><span class="o">-</span><span class="n">gutter</span><span class="p">;</span>  <span class="o">//</span> <span class="n">returns</span> <span class="m">40px</span><span class="p">;</span>
+    <span class="p">}</span>
+  
+</code></pre>
+</div>
+
+</section>
+
+        <section id="linear-gradient-function">
+  <h2>Linear Gradient</h2>
+  <p>Outputs a linear-gradient. Use in conjunction with the background-image mixin. The function takes the same arguments as the <a href="#linear-gradient">linear-gradient mixin</a>.</p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="err">#</span> <span class="nt">Image</span> <span class="nt">asset</span> <span class="nt">with</span> <span class="nt">a</span> <span class="nt">linear-gradient</span>
+    <span class="k">@include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">url</span><span class="o">(</span><span class="s2">&quot;/images/a.png&quot;</span><span class="o">),</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">white</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">yellow</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="o">%))</span><span class="p">;</span>
+
+    <span class="err">#</span> <span class="nt">Multiple</span> <span class="nt">linear-gradients</span><span class="o">;</span>
+    <span class="k">@include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">hsla</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">0</span><span class="nc">.25</span><span class="o">)</span> <span class="nt">0</span><span class="o">%,</span> <span class="nt">hsla</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">0</span><span class="nc">.08</span><span class="o">)</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="o">%),</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nf">#4e7ba3</span><span class="o">,</span> <span class="nt">darken</span><span class="o">(</span><span class="nf">#4e7ba4</span><span class="o">,</span> <span class="nt">10</span><span class="o">%))</span> <span class="o">)</span><span class="p">;</span>
+  
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>
+
+        <section id="tint-shade">
+  <h2>Tint and Shade</h2>
+  <p>Tint and Shade are different from lighten() and darken() functions built into sass. Tint is a mix of color with white. Tint takes a color and percent argument.</p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="nt">div</span> <span class="p">{</span>
+      <span class="k">background</span><span class="o">:</span> <span class="n">tint</span><span class="p">(</span><span class="nb">red</span><span class="o">,</span> <span class="m">40%</span><span class="p">);</span>
+    <span class="p">}</span>
+  
+</code></pre>
+</div>
+
+
+  <p>Shade is a mix of color with black. Shade takes a color and a percentage argument.</p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="nt">div</span> <span class="p">{</span>
+      <span class="k">background</span><span class="o">:</span> <span class="n">shade</span><span class="p">(</span><span class="nb">blue</span><span class="o">,</span> <span class="m">60%</span><span class="p">);</span>
+    <span class="p">}</span>
+  
+</code></pre>
+</div>
+
+
+</section>
+
+        <h1 id="add-ons">Add-ons</h1>
+        <section id="buttons">
+  <h2>Buttons</h2>
+  <p>The button add-on provides well-designed buttons with a single line in your CSS.</p>
+  <p>The mixin supports a style parameter and an optional color argument.<br/> The available styles are <strong>"simple"</strong> (default), <strong>"shiny"</strong> and <strong>"pill"</strong>.</p>
+
+  <section class="demo">
+    <div class="wrapper">
+      <h3>Simple Button Style</h3>
+      <p>The mixin can be called with no arguments, which will render a blue button with the "simple" style.</p>
+      <div class="highlight"><pre><code class="css">        <span class="nt">button</span> <span class="p">{</span>
+          <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">;</span>
+        <span class="p">}</span>
+      
+</code></pre>
+</div>
+
+      <button class="example-1">Simple button</button>
+    </div>
+
+    <div class="wrapper">
+      <h3>Pill Button Style</h3>
+      <div class="highlight"><pre><code class="css">        <span class="nt">button</span> <span class="p">{</span>
+          <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">(</span><span class="n">pill</span><span class="p">);</span>
+        <span class="p">}</span>
+      
+</code></pre>
+</div>
+
+      <button class="example-2">Pill Button</button>
+    </div>
+
+    <div class="wrapper">
+      <h3>Shiny Button Style</h3>
+      <p>Create beautiful buttons by defining a style and color argument; using a single color, the mixin calculates the gradient, borders, box shadow, text shadow and text color of the button. The mixin will change the text to be light when on a dark background, and dark when on a light background.</p>
+
+      <div class="highlight"><pre><code class="css">        <span class="err">#</span> <span class="nt">Style</span> <span class="o">+</span> <span class="nt">color</span> <span class="nt">arguments</span>
+        <span class="nt">button</span> <span class="p">{</span>
+          <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">(</span><span class="n">shiny</span><span class="o">,</span> <span class="m">#ff0000</span><span class="p">);</span>
+        <span class="p">}</span>
+      
+</code></pre>
+</div>
+
+      <button class="example-3">Shiny Button</button>
+    </div>
+  </section>
+
+</section>
+
+        <section id="html5-input-types">
+  <h2>HTML5 Input Types</h2>
+  <p>This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimick input[type="text"].</p>>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="o">]</span>
+    <span class="o">*</span> <span class="o">=</span> <span class="o">[</span><span class="nt">color</span><span class="o">,</span> <span class="nt">date</span><span class="o">,</span> <span class="nt">datetime</span><span class="o">,</span> <span class="nt">datetime-local</span><span class="o">,</span> <span class="nt">email</span><span class="o">,</span> <span class="nt">month</span><span class="o">,</span> <span class="nt">number</span><span class="o">,</span> <span class="nt">password</span><span class="o">,</span> <span class="nt">search</span><span class="o">,</span> <span class="nt">tel</span><span class="o">,</span> <span class="nt">text</span><span class="o">,</span> <span class="nt">time</span><span class="o">,</span> <span class="nt">url</span><span class="o">,</span> <span class="nt">week</span><span class="o">]</span>
+  
+</code></pre>
+</div>
+
+
+  <p>Usage Note: You must use interpolation with the variable.</p>
+
+  <h3>Demo Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="n">all</span><span class="o">-</span><span class="k">text</span><span class="o">-</span><span class="n">inputs</span><span class="p">}</span><span class="o">,</span> <span class="nt">textarea</span> <span class="p">{</span>
+      <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">green</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">Output</span><span class="o">:</span>
+    <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;number&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;search&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;tel&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;url&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;color&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;date&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;datetime&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;datetime-local&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;week&quot;</span><span class="o">],</span> <span class="nt">textarea</span> <span class="p">{</span>
+      <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">green</span><span class="p">;</span>
+    <span class="p">}</span>
+  
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+  </section>
+</section>
+
+        <section id="timing-functions">
+  <h2>Timing Functions</h2>
+  <p>These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations and transitions. The provided timing functions are the same as the jQuery UI demo: <a href="http://jqueryui.com/demos/effect/easing.html">easing functions</a>.</p>
+
+  <h3>Example Code</h3>
+  <div class="highlight"><pre><code class="css">    <span class="k">@include</span> <span class="nt">transition</span><span class="o">(</span><span class="nt">all</span><span class="o">,</span> <span class="nt">5s</span><span class="o">,</span> <span class="err">$</span><span class="nt">ease-in-circ</span><span class="o">)</span><span class="p">;</span>
+  
+</code></pre>
+</div>
+
+
+
+  <h3>Demo</h3>
+  <p>Many off the timing functions below may look the same in this demo, but in complex animations, they are intricatly different.</p>
+  <section class="demo">
+    <ul>
+      <li><p>ease-in-quad</p><div class="box ease-in-quad"></div></li>
+      <li><p>ease-out-quad</p><div class="box ease-in-quad"></div></li>
+      <li><p>ease-in-out-quad</p><div class="box ease-in-quad"></div></li>
+
+      <li><p>ease-in-cubic</p><div class="box ease-in-cubic"></div></li>
+      <li><p>ease-out-cubic</p><div class="box ease-in-cubic"></div></li>
+      <li><p>ease-in-out-cubic</p><div class="box ease-in-cubic"></div></li>
+
+      <li><p>ease-in-quart</p><div class="box ease-in-quart"></div></li>
+      <li><p>ease-out-quart</p><div class="box ease-in-quart"></div></li>
+      <li><p>ease-in-out-quart</p><div class="box ease-in-quart"></div></li>
+
+      <li><p>ease-in-quint</p><div class="box ease-in-quint"></div></li>
+      <li><p>ease-out-quint</p><div class="box ease-in-quint"></div></li>
+      <li><p>ease-in-out-quint</p><div class="box ease-in-quint"></div></li>
+
+      <li><p>ease-in-sine</p><div class="box ease-in-sine"></div></li>
+      <li><p>ease-out-sine</p><div class="box ease-in-sine"></div></li>
+      <li><p>ease-in-out-sine</p><div class="box ease-in-sine"></div></li>
+
+      <li><p>ease-in-expo</p><div class="box ease-in-expo"></div></li>
+      <li><p>ease-out-expo</p><div class="box ease-in-expo"></div></li>
+      <li><p>ease-in-out-expo</p><div class="box ease-in-expo"></div></li>
+
+      <li><p>ease-in-circ</p><div class="box ease-in-circ"></div></li>
+      <li><p>ease-out-circ</p><div class="box ease-in-circ"></div></li>
+      <li><p>ease-in-out-circ</p><div class="box ease-in-circ"></div></li>
+    <ul>
+  </section>
 </section>
 
       </div>
