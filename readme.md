@@ -43,6 +43,9 @@ Import the mixins at the beginning of your stylesheet
 
     @import 'bourbon/bourbon';
 
+*Optional:* If you use a non-standard location for your sass files, you can specify the path to your sass files as an argument to the install task
+
+    rake bourbon:install[app/stylesheets]
 
 # Install without Rails
 The following script will generate a *bourbon* directory and convert all .css.scss to .scss extensions. The *bourbon* directory is for 'sass --watch' use outside of rails.
