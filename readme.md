@@ -125,10 +125,24 @@ border-image supports short-hand notation.
 
 ### Border Radius
 
-border-radius will also take short-hand notation.
+border-radius can take short-hand notation, or the full radius expression.
 
     @include border-radius(10px);
     @include border-radius(5px 5px 2px 2px);
+
+You can also specify individual corners.
+
+    @include border-top-left-radius(5px);
+    @include border-top-right-radius(5px);
+    @include border-bottom-right-radius(5px);
+    @include border-bottom-left-radius(5px);
+
+Individual sides are supported as well.
+
+    @include border-top-radius(5px);
+    @include border-bottom-radius(5px);
+    @include border-left-radius(5px);
+    @include border-right-radius(5px);
 
 
 ### Box Shadow
@@ -378,7 +392,18 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
 
       @ background-image(*args)
       @ border-image(*args)
-      @ border-radius(*args)
+
+      border-radius
+        @ border-radius(*args)
+        @ border-radius-top(*args)
+          @ border-radius-top-left(*args)
+          @ border-radius-top-right(*args)
+        @ border-radius-bottom(*args)
+          @ border-radius-bottom-left(*args)
+          @ border-radius-bottom-right(*args)
+        @ border-radius-left(*args)
+        @ border-radius-right(*args)
+
       @ box-shadow(*args)
       @ box-sizing(*args)
 
