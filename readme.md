@@ -344,7 +344,7 @@ Usage Note: You must use interpolation with the variable.
 These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations. The provided timing functions are the same as the jQuery UI demo: [easing functions](http://jqueryui.com/demos/effect/easing.html).
 
     Variables supported: $ease-in-*, $ease-out-*, $ease-in-out-*
-    * = [quad, cubic, quart, quint, sine, expo, circ]
+    * = [quad, cubic, quart, quint, sine, expo, circ, back]
 
     @include animation-timing-function($ease-in-circ);
     @include animation-basic(fade-in, 1s, $ease-in-quad);
