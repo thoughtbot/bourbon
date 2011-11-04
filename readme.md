@@ -161,6 +161,13 @@ Box-sizing will change the box-model of the element it is applied to.
 
     @include box-sizing(border-box);
 
+### Columns
+
+All current CSS3 column properties are supported. See the list at the bottom of the page for more info.
+
+    @include columns(12 8em);
+    @include column-rule(1px solid green);
+
 
 ### Flex Box
 
@@ -406,6 +413,18 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
 
       @ box-shadow(*args)
       @ box-sizing(*args)
+
+      columns
+        @columns(*args)
+        @column-count(*args)
+        @column-fill(*args)
+        @column-gap(*args)
+        @column-rule(*args)
+          @column-rule-color(*args)
+          @column-rule-style(*args)
+          @column-rule-width(*args)
+        @column-span(*args)
+        @column-width(*args)
 
       flex-box
         @ box(*args)
