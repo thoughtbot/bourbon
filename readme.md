@@ -60,7 +60,7 @@ The following script will generate a *bourbon* directory and convert all .css.sc
 
     ./generate-bourbon.sh
 
-**Step 4:** Move the generated *bourbon* directory into your project's sass directory, e.g. `stylesheets/sass/`
+**Step 4:** Move the generated `bourbon` directory into your project's sass directory, e.g. `stylesheets/sass/`
 
 **Step 5:** To output properly, Bourbon must be explicitly required (`-r`) by Sass at the command line:
 
