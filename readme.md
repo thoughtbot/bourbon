@@ -50,7 +50,7 @@ Import the mixins at the beginning of your stylesheet
 # Install without Rails
 The following script will generate a *bourbon* directory and convert all .css.scss to .scss extensions. The *bourbon* directory is for 'sass --watch' use outside of rails.
 
-**Step 1: Clone this repo and `cd` into the directory.
+**Step 1**: Clone this repo and `cd` into the directory.
 
 **Step 2:** Make the `generate-bourbon.sh` script executable:
 
