@@ -49,30 +49,31 @@ Import the mixins at the beginning of your stylesheet
 
 # Install without Rails
 The following script will generate a *bourbon* directory and convert all .css.scss to .scss extensions. The *bourbon* directory is for 'sass --watch' use outside of rails.
-Preliminary step: clone this repo and cd into the directory.
 
-**Step 1:** Make script executable by changing file permission
+**Step 1: Clone this repo and `cd` into the directory.
+
+**Step 2:** Make the `generate-bourbon.sh` script executable:
 
     chmod a+x generate-bourbon.sh
 
-**Step 2:** Generate files
+**Step 3:** Run it:
 
     ./generate-bourbon.sh
 
-**Step 3:** Move the new *bourbon* directory into your project's sass directory. *e.g. stylesheets/sass/*
+**Step 4:** Move the generated *bourbon* directory into your project's sass directory, e.g. `stylesheets/sass/`
 
-**Step 4:** Bourbon requires an additional sass extension to output properly. You must watch your sass files with the following flag appended:
-*-r ./bourbon/lib/bourbon.rb*
+**Step 5:** To output properly, Bourbon must be explicitly required (`-r`) by Sass at the command line:
 
     # Example (project root directory)
     sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
 
-In this case as well, you will need to import the mixins at the beginning of your stylesheet
+In this case as well, you will need to import the mixins at the beginning of your stylesheet:
 
     @import 'bourbon/bourbon';
 
 # Browser support
 Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.
+
 **Pull requests:** A general rule when considering a new mixin: Do the following browsers *only* support the CSS3 property using vendor specific prefixes? If the answer is yes, there is a high chance the mixin will be accepted via a pull request.
 
 * Firefox 3.6+
