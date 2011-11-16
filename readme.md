@@ -7,9 +7,11 @@ Bourbon uses SCSS syntax.
 Sass 3.1+
 
 # Install for Rails
-Update your Gemfile
+In your Gemfile:
 
     gem 'bourbon'
+
+And run:
 
     $ bundle install
 
@@ -48,26 +50,20 @@ Import the mixins at the beginning of your stylesheet
     rake bourbon:install[app/stylesheets]
 
 # Install without Rails
-The following script will generate a *bourbon* directory and convert all .css.scss to .scss extensions. The *bourbon* directory is for 'sass --watch' use outside of rails.
+Bourbon includes an easy way to generate a directory with all the necessary files.
 
-**Step 1**: Clone this repo and `cd` into the directory.
 
-**Step 2:** Make the `generate-bourbon.sh` script executable:
+    rake generate
 
-    chmod a+x generate-bourbon.sh
+This will create a `bourbon` directory that can be used by `sass --watch`. Move
+the generated directory into your project's sass directory, e.g. `stylesheets/sass/`.
 
-**Step 3:** Run it:
-
-    ./generate-bourbon.sh
-
-**Step 4:** Move the generated `bourbon` directory into your project's sass directory, e.g. `stylesheets/sass/`
-
-**Step 5:** To output properly, Bourbon must be explicitly required (`-r`) by Sass at the command line:
+To output properly, Bourbon must be explicitly required (`-r`) by Sass at the command line:
 
     # Example (project root directory)
     sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
 
-In this case as well, you will need to import the mixins at the beginning of your stylesheet:
+In this case, you will need to import the mixins at the beginning of your stylesheet:
 
     @import 'bourbon/bourbon';
 
