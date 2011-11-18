@@ -89,6 +89,22 @@ The animation mixins support comma separated lists of values, which allows diffe
     @include animation-basic((slideup, fadein), (1.0s, 2.0s), ease-in);
 
 
+### Appearance
+The `appearance` CSS property is used to display an element using a platform-native styling based on the operating system's theme.
+
+    @include appearance(none);
+
+
+### Background-size
+The background-size mixin supports multiple background-sizes for use with multiple background-images via comma delimitation.
+
+    # Single background-image
+    @include background-size(50% 100%);
+
+    # Multiple background-images
+    @include background-size(50% 100%, 75% 100%);
+
+
 ### Background-image
 
 The background-image mixin is helpful for chaining multiple comma delimited background images and/or linear-gradients into one background-image property. background-image supports up to 10 background-images.
@@ -148,8 +164,8 @@ Box-sizing will change the box-model of the element it is applied to.
 
     @include box-sizing(border-box);
 
-### Columns
 
+### Columns
 All current CSS3 column properties are supported. See the list at the bottom of the page for more info.
 
     @include columns(12 8em);
@@ -328,6 +344,13 @@ Create beautiful buttons by defining a style and color argument; using a single 
     }
 
 
+### Font-family
+Bourbon provides a few default font-families for convenience sake.
+Available font-family variables: `$georgia`, `$helvetica`, `$lucida-grand`, `$verdana`
+
+    font-family: $helvetica
+
+
 ### HTML5 Input Types
 This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea.
 In other words, it allows for easy targeting of all inputs that mimick input[type="text"].
@@ -384,7 +407,9 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
         @ animation-play-state(*args)
         @ animation-timing-function(*args)
 
+      @ appearance(*args)
       @ background-image(*args)
+      @ background-size(*args)
       @ border-image(*args)
 
       border-radius
@@ -440,10 +465,21 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
 
     #Addons
     --------------------------------
-    @ button(*args)
+      @ button(*args)
+      @ position(*args)
+
       #{$all-text-inputs}
-    @ position(*args)
-      timing-functions ($ease-in-*, $ease-out-*, $ease-in-out-*)
+
+      font-family
+        $georgia
+        $helvetica
+        $lucida-grande
+        $verdana
+
+      timing-functions
+        $ease-in-*
+        $ease-out-*
+        $ease-in-out-*
 
 
 ## Help Out
