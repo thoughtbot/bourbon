@@ -2,8 +2,8 @@
 // Background-image property for adding multiple background images with
 // gradients, or for stringing multiple gradients together.
 //************************************************************************//
-@import "../functions/linear-gradient";
-@import "../functions/radial-gradient";
+@import "functions/linear-gradient";
+@import "functions/radial-gradient";
 
 @mixin background-image(
   $image-1       , $image-2: false,
