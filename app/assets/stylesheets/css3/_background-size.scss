@@ -1,0 +1,15 @@
+@mixin background-size ($length-1,
+  $length-2: false, $length-3: false,
+  $length-4: false, $length-5: false,
+  $length-6: false, $length-7: false,
+  $length-8: false, $length-9: false)
+  {
+    $full: compact($length-1, $length-2, $length-3, $length-4,
+                   $length-5, $length-6, $length-7, $length-8, $length-9);
+
+  -webkit-background-size: $full;
+     -moz-background-size: $full;
+      -ms-background-size: $full;
+       -o-background-size: $full;
+          background-size: $full;
+}
