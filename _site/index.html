@@ -10,7 +10,7 @@
     <div class="main-content">
       <nav class="fixed-nav">
   <ul>
-    <li><a href="#mixins"><h3>Mixins</h3></a></li>
+    <li class="title"><a href="#mixins"><h3>Mixins</h3></a></li>
     <li><a href="#animations">Animations</a></li>
     <li><a href="#background-image">Background Image</a></li>
     <li><a href="#border-image">Border Image</a></li>
@@ -25,13 +25,13 @@
     <li><a href="#transform">Transform</a></li>
     <li><a href="#transform-origin">Transform Origin</a></li>
     <li><a href="#transitions">Transitions</a></li>
-    <li><a href="#functions"><h3>Fucntions</h3></a><li>
+    <li class="title"><a href="#functions"><h3>Functions</h3></a><li>
     <li><a href="#compact">Compact</a></li>
     <li><a href="#golden-ratio">Golden Ratio</a></li>
     <li><a href="#grid-width">Grid Width</a></li>
     <li><a href="#linear-gradient-function">Linear Gradient</a></li>
     <li><a href="#tint-shade">Tint and Shade</a></li>
-    <li><a href="#add-ons"><h3>Add-ons</h3></a><li>
+    <li class="title"><a href="#add-ons"><h3>Add-ons</h3></a><li>
     <li><a href="#buttons">Buttons</a></li>
     <li><a href="#html5-input-types">HTML5 Input Types</a></li>
     <li><a href="#timing-functions">Timing Functions</a></li>
@@ -40,10 +40,13 @@
 
 
       <div class="main-inner">
-        <h1>Bourbon &ndash; Sass Mixin Library</h1>
+        <h1>Bourbon &ndash; Sass Mixin Library <span class="view-on-github"><a href="https://github.com/thoughtbot/bourbon">View on Github</a></span></h1>
+
         <section id="intro">
   <p>The purpose of Bourbon Sass Mixins is to provide a comprehensive library of sass mixins that are designed to be as vanilla as possible, meaning they should not deter from the original CSS syntax. The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
+  <a href="http://github.com/thoughtbot/bourbon">View Bourbon on Github</a>
 </section>
+
 
         <h1 id="mixins">Mixins</h1>
         <section id="animations">
@@ -53,7 +56,7 @@
   <h3>Demo Code</h3>
   <div class="highlight"><pre><code class="css">    <span class="nt">box</span><span class="nd">:hover</span> <span class="p">{</span>
       <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">name</span><span class="p">(</span><span class="n">scale</span><span class="p">);</span>
-      <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">duration</span><span class="p">(</span><span class="m">1</span><span class="err">s</span><span class="p">);</span>
+      <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">duration</span><span class="p">(</span><span class="m">1s</span><span class="p">);</span>
       <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">timing</span><span class="o">-</span><span class="n">function</span><span class="p">(</span><span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="p">);</span>
       <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">iteration</span><span class="o">-</span><span class="n">count</span><span class="p">(</span><span class="n">infinite</span><span class="p">);</span>
     <span class="p">}</span>
@@ -330,6 +333,7 @@
   </section>
 </section>
 
+
         <h1 id="functions">Functions</h1>
         <section id="compact">
   <h2>Compact</h2>
@@ -419,7 +423,7 @@
 
   <h3>Demo Code</h3>
   <div class="highlight"><pre><code class="css">    <span class="nt">div</span> <span class="p">{</span>
-      <span class="k">background</span><span class="o">:</span> <span class="n">tint</span><span class="p">(</span><span class="nb">red</span><span class="o">,</span> <span class="m">40%</span><span class="p">);</span>
+      <span class="k">background</span><span class="o">:</span> <span class="n">tint</span><span class="p">(</span><span class="nb">red</span><span class="o">,</span> <span class="m">40</span><span class="o">%</span><span class="p">);</span>
     <span class="p">}</span>
   
 </code></pre>
@@ -430,7 +434,7 @@
 
   <h3>Demo Code</h3>
   <div class="highlight"><pre><code class="css">    <span class="nt">div</span> <span class="p">{</span>
-      <span class="k">background</span><span class="o">:</span> <span class="n">shade</span><span class="p">(</span><span class="nb">blue</span><span class="o">,</span> <span class="m">60%</span><span class="p">);</span>
+      <span class="k">background</span><span class="o">:</span> <span class="n">shade</span><span class="p">(</span><span class="nb">blue</span><span class="o">,</span> <span class="m">60</span><span class="o">%</span><span class="p">);</span>
     <span class="p">}</span>
   
 </code></pre>
@@ -438,6 +442,7 @@
 
 
 </section>
+
 
         <h1 id="add-ons">Add-ons</h1>
         <section id="buttons">

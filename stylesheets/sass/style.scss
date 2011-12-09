@@ -2,6 +2,8 @@
 @import "normalize";
 @import "mixins";
 @import "animation-keyframes";
+@import "pygments-theme-light";
+// @import "pygments-theme-dark";
 
 @import "animation";
 @import "background-image";
@@ -66,8 +68,10 @@ nav.fixed-nav {
 
   ul {
     border-top: 4px solid hsl(0, 0%, 90%);
-    margin: 0;
     margin-top: 40px;
+    margin: 0;
+    max-height: 800px;
+    overflow-y: scroll;
     padding: 0;
     position: fixed;
     width: inherit;
@@ -78,6 +82,10 @@ nav.fixed-nav {
 
       &:first-child {
         margin-top: 15px;
+      }
+
+      &.title:not(:first-child) {
+        margin-top: 10px;
       }
 
       a {
@@ -111,6 +119,12 @@ div.main-inner {
 
   h1 {
     border-bottom: 1px solid hsl(0, 0%, 93%);
+
+    span a {
+      font-size: $base-font-size;
+      float: right;
+      margin-top: 20px;
+    }
   }
 
   section + h1 {
@@ -144,7 +158,7 @@ div.wrapper {
 
 // Code highlighting styling
 div.highlight {
-  background: hsl(0, 0%, 95%);
+  // background: hsl(0, 0%, 95%);
   @include border-radius(5px);
   padding-top: 5px;
 }
