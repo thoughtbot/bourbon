@@ -17,24 +17,24 @@ html, body {
   font-size: 13px;
   height: 100%;
   width: 100%;
+  background-color: hsl(43, 23%, 94%);
 }
 
 html {
-  padding: 20px 0;
-}
-
-body {
+  padding: 0;
 }
 
 h1 {
-  font-size: golden-ratio(13px, 2);
+  font-size: golden-ratio(14px, 2);
   font-weight: 300;
   margin-top: 0;
 }
 
 h2 {
-  font-size: golden-ratio(13px, 1);
+  font-size: golden-ratio(14px, 1) + 4px;
   margin-top: 0;
+  font-weight: 300;
+  margin-bottom: 0.5em;
 }
 
 h3, h4, h5, h6 {
@@ -104,17 +104,19 @@ nav.fixed-nav {
 //************************************************************************//
 div.main-content {
   @extend .clearfix;
-  background: hsl(0, 0%, 100%);
   @include border-radius(6px);
   margin: 0 auto;
-  padding: 10px $gw-gutter;
+  padding: 0px $gw-gutter;
   width: grid-width(8) + (2 * $gw-gutter);
 }
 
 div.main-inner {
+  background: white;
+  @include box-sizing(border-box);
   clear: right;
   float: left;
   margin-left: $gw-gutter;
+  padding: 35px 30px;
   width: grid-width(6);
 
   h1 {
@@ -131,14 +133,23 @@ div.main-inner {
     margin-top: 100px;
   }
 
+  > h1:target,
+  section:target > h2 {
+    $target-color: hsla(14, 97%, 55%, 0.25);
+    background-color: $target-color;
+    @include box-shadow(0 0 0 4px $target-color);
+    // @include border-radius(1px);
+    // padding: 0px 14px;
+    @include transition(all, 0.36s);
+  }
+
   section#intro + h1 {
     margin-top: 20px;
   }
 
   > section {
-    border-bottom: 1px solid #ccc;
-    padding-top: 40px;
     padding-bottom: 30px;
+    padding-top: 40px;
   }
 
   h1 + section {
@@ -158,9 +169,9 @@ div.wrapper {
 
 // Code highlighting styling
 div.highlight {
-  // background: hsl(0, 0%, 95%);
-  @include border-radius(5px);
+  @include border-radius(3px);
   padding-top: 5px;
+  @include box-shadow(0 0 0 1px hsl(44, 87%, 83%));
 }
 
 // Demo Box Style
