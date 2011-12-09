@@ -1,33 +1,39 @@
 # Bourbon Sass Mixins
-The purpose of Bourbon Sass Mixins is to provide a comprehensive library of sass mixins that are designed to be as vanilla as possible, meaning they should not deter from the original CSS syntax.
-The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties.
-Bourbon uses SCSS syntax.
+The purpose of Bourbon Sass Mixins is to provide a comprehensive library of Sass
+mixins that are designed to be as vanilla as possible, meaning they should not
+deter you from using the original CSS syntax.
+The mixins contain vendor specific prefixes for all CSS3 properties for support
+amongst modern browsers. The prefixes also ensure graceful degradation for older
+browsers that support only CSS3 prefixed properties.  Bourbon uses SCSS syntax.
 
 # Requirements
 Sass 3.1+
 
 # Install for Rails
-Update your Gemfile
+In your Gemfile:
 
     gem 'bourbon'
+
+Then run:
 
     $ bundle install
 
 ## Rails 3.1.x
-Rename application.css to application.css.scss
+
+Rename application.css to application.css.scss:
 
     mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
 
-Bourbon needs the sass files to be imported in a specific order to function properly. Therefore, you will need to disabled the require_tree sprocket directive.
-Delete the following sprocket directive in application.css.scss
+Bourbon needs the sass files to be imported in a specific order to function properly. Therefore, you will need to disable the require\_tree sprocket directive.
+Delete the following sprocket directive in application.css.scss:
 
     *= require_tree .
 
-Import bourbon at the beginning of application.css.scss
+Import bourbon at the beginning of application.css.scss:
 
     @import "bourbon";
 
-Import all additional stylesheets from your app/assets/stylesheets directory underneath the bourbon import
+Import all additional stylesheets from your app/assets/stylesheets directory underneath the bourbon import:
 
     @import "bourbon";
     @import "home";
@@ -43,45 +49,29 @@ Import the mixins at the beginning of your stylesheet
 
     @import 'bourbon/bourbon';
 
+*Optional*: If you use a non-standard location for your sass files, you can specify the path to your sass files as an argument to the install task
+
+    rake bourbon:install[app/stylesheets]
 
 # Install without Rails
-The following script will generate a *bourbon* directory and convert all .css.scss to .scss extensions. The *bourbon* directory is for 'sass --watch' use outside of rails.
-Preliminary step: clone this repo and cd into the directory.
+Bourbon includes an easy way to generate a directory with all the necessary files.
 
-**Step 1:** Make script executable by changing file permission
+    rake generate
 
-    chmod a+x generate-bourbon.sh
+This will create a `bourbon` directory that can be used by `sass --watch`. Move
+the generated directory into your project's sass directory, e.g. `stylesheets/sass/`.
 
-**Step 2:** Generate files
-
-    ./generate-bourbon.sh
-
-**Step 3:** Move the new *bourbon* directory into your project's sass directory. *e.g. stylesheets/sass/*
-
-**Step 4:** Bourbon requires an additional sass extension to output properly. You must watch your sass files with the following flag appended:
-*-r ./bourbon/lib/bourbon.rb*
+To output properly, Bourbon must be explicitly required (`-r`) by Sass at the command line:
 
     # Example (project root directory)
     sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
 
-In this case as well, you will need to import the mixins at the beginning of your stylesheet
+In this case, you will need to import the mixins at the beginning of your stylesheet:
 
     @import 'bourbon/bourbon';
 
 # Browser support
 Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.
-**Pull requests:** A general rule when considering a new mixin: Do the following browsers *only* support the CSS3 property using vendor specific prefixes? If the answer is yes, there is a high chance the mixin will be accepted via a pull request.
-
-* Firefox 3.6+
-* Safari 4.0+
-* Chrome 4.0+
-* Opera 10+
-* IE 9+
-
-*Bourbon does not intend to support IE filters.*
-
-Resources for checking browser support: [MDN - Moz Dev Network](https://developer.mozilla.org/en-US/), [Mozilla CSS Extensions](https://developer.mozilla.org/en/CSS_Reference/Mozilla_Extensions), [Webkit CSS Properties](http://css-infos.net/properties/webkit.php), [Firefox CSS Properties](http://css-infos.net/properties/firefox.php), [MSDN - Microsoft Dev Network](http://msdn.microsoft.com/en-us/library/ms531207(v=VS.85).aspx)
-
 
 # Using Bourbon Mixins
 Below are a few examples of mixin usage. Note that these are just a few, explore the repo to find out more.
@@ -97,6 +87,22 @@ The animation mixins support comma separated lists of values, which allows diffe
 
     # Shorthand for a basic animation. Supports multiple parentheses-deliminated values for each variable.
     @include animation-basic((slideup, fadein), (1.0s, 2.0s), ease-in);
+
+
+### Appearance
+The `appearance` CSS property is used to display an element using a platform-native styling based on the operating system's theme.
+
+    @include appearance(none);
+
+
+### Background-size
+The background-size mixin supports multiple background-sizes for use with multiple background-images via comma delimitation.
+
+    # Single background-image
+    @include background-size(50% 100%);
+
+    # Multiple background-images
+    @include background-size(50% 100%, 75% 100%);
 
 
 ### Background-image
@@ -122,10 +128,24 @@ border-image supports short-hand notation.
 
 ### Border Radius
 
-border-radius will also take short-hand notation.
+border-radius can take short-hand notation, or the full radius expression.
 
     @include border-radius(10px);
     @include border-radius(5px 5px 2px 2px);
+
+You can also specify individual corners.
+
+    @include border-top-left-radius(5px);
+    @include border-top-right-radius(5px);
+    @include border-bottom-right-radius(5px);
+    @include border-bottom-left-radius(5px);
+
+Individual sides are supported as well.
+
+    @include border-top-radius(5px);
+    @include border-bottom-radius(5px);
+    @include border-left-radius(5px);
+    @include border-right-radius(5px);
 
 
 ### Box Shadow
@@ -135,7 +155,7 @@ box-shadow supports single or multiple arguments:
     @include box-shadow(1px 1px 2px 0 #ff0000);
 
     # Multiple arguments must be comma-delimited.
-    @include box-shadow(1px 1px 2px 0 #fff0000, -1px -2px 0 #ccc);
+    @include box-shadow(1px 1px 2px 0 #fff000, -1px -2px 0 #ccc);
 
 
 ### Box Sizing
@@ -143,6 +163,13 @@ box-shadow supports single or multiple arguments:
 Box-sizing will change the box-model of the element it is applied to.
 
     @include box-sizing(border-box);
+
+
+### Columns
+All current CSS3 column properties are supported. See the list at the bottom of the page for more info.
+
+    @include columns(12 8em);
+    @include column-rule(1px solid green);
 
 
 ### Flex Box
@@ -317,6 +344,13 @@ Create beautiful buttons by defining a style and color argument; using a single 
     }
 
 
+### Font-family
+Bourbon provides a few default font-families for convenience sake.
+Available font-family variables: `$georgia`, `$helvetica`, `$lucida-grand`, `$verdana`
+
+    font-family: $helvetica
+
+
 ### HTML5 Input Types
 This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea.
 In other words, it allows for easy targeting of all inputs that mimick input[type="text"].
@@ -341,7 +375,7 @@ Usage Note: You must use interpolation with the variable.
 These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations. The provided timing functions are the same as the jQuery UI demo: [easing functions](http://jqueryui.com/demos/effect/easing.html).
 
     Variables supported: $ease-in-*, $ease-out-*, $ease-in-out-*
-    * = [quad, cubic, quart, quint, sine, expo, circ]
+    * = [quad, cubic, quart, quint, sine, expo, circ, back]
 
     @include animation-timing-function($ease-in-circ);
     @include animation-basic(fade-in, 1s, $ease-in-quad);
@@ -373,11 +407,36 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
         @ animation-play-state(*args)
         @ animation-timing-function(*args)
 
+      @ appearance(*args)
       @ background-image(*args)
+      @ background-size(*args)
       @ border-image(*args)
-      @ border-radius(*args)
+
+      border-radius
+        @ border-radius(*args)
+        @ border-radius-top(*args)
+          @ border-radius-top-left(*args)
+          @ border-radius-top-right(*args)
+        @ border-radius-bottom(*args)
+          @ border-radius-bottom-left(*args)
+          @ border-radius-bottom-right(*args)
+        @ border-radius-left(*args)
+        @ border-radius-right(*args)
+
       @ box-shadow(*args)
       @ box-sizing(*args)
+
+      columns
+        @columns(*args)
+        @column-count(*args)
+        @column-fill(*args)
+        @column-gap(*args)
+        @column-rule(*args)
+          @column-rule-color(*args)
+          @column-rule-style(*args)
+          @column-rule-width(*args)
+        @column-span(*args)
+        @column-width(*args)
 
       flex-box
         @ box(*args)
@@ -406,16 +465,38 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
 
     #Addons
     --------------------------------
-    @ button(*args)
+      @ button(*args)
+      @ position(*args)
+
       #{$all-text-inputs}
-    @ position(*args)
-      timing-functions ($ease-in-*, $ease-out-*, $ease-in-out-*)
+
+      font-family
+        $georgia
+        $helvetica
+        $lucida-grande
+        $verdana
+
+      timing-functions
+        $ease-in-*
+        $ease-out-*
+        $ease-in-out-*
 
 
 ## Help Out
 
 Currently the project is a work in progress. Feel free to help out.
-**Pull requests:** See *Browser Support* in this readme for more info
+A general rule when considering filing a pull request for a new mixin: Do the following browsers *only* support the CSS3 property using vendor specific prefixes?
+If the answer is yes, there is a high chance the mixin will be accepted via a pull request.
+
+* Firefox 3.6+
+* Safari 4.0+
+* Chrome 4.0+
+* Opera 10+
+* IE 9+
+
+*Bourbon does not intend to support IE filters.*
+
+Resources for checking browser support: [MDN - Moz Dev Network](https://developer.mozilla.org/en-US/), [Mozilla CSS Extensions](https://developer.mozilla.org/en/CSS_Reference/Mozilla_Extensions), [Webkit CSS Properties](http://css-infos.net/properties/webkit.php), [Firefox CSS Properties](http://css-infos.net/properties/firefox.php), [MSDN - Microsoft Dev Network](http://msdn.microsoft.com/en-us/library/ms531207(v=VS.85).aspx)
 
 Credits
 -------

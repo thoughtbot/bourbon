@@ -1,16 +1,19 @@
 // Custom Functions
+@import "functions/deprecated-webkit-gradient";
 @import "functions/golden-ratio";
 @import "functions/grid-width";
 @import "functions/tint-shade";
-@import "functions/deprecated-webkit-gradient";
 
 // CSS3 Mixins
 @import "css3/animation";
+@import "css3/appearance";
 @import "css3/background-image";
+@import "css3/background-size";
 @import "css3/border-image";
 @import "css3/border-radius";
 @import "css3/box-shadow";
 @import "css3/box-sizing";
+@import "css3/columns";
 @import "css3/flex-box";
 @import "css3/inline-block";
 @import "css3/linear-gradient";
@@ -20,6 +23,7 @@
 
 // Addons & other mixins
 @import "addons/button";
+@import "addons/font-family";
 @import "addons/html5-input-types";
 @import "addons/position";
 @import "addons/timing-functions";

@@ -1,0 +1,67 @@
+@mixin columns($arg: auto) {
+// <column-count> || <column-width>
+  -webkit-columns: $arg;
+     -moz-columns: $arg;
+          columns: $arg;
+}
+
+@mixin column-count($int: auto) {
+// auto || integer
+  -webkit-column-count: $int;
+     -moz-column-count: $int;
+          column-count: $int;
+}
+
+@mixin column-gap($length: normal) {
+// normal || length
+  -webkit-column-gap: $length;
+     -moz-column-gap: $length;
+          column-gap: $length;
+}
+
+@mixin column-fill($arg: auto) {
+// auto || length
+  -webkit-columns-fill: $arg;
+     -moz-columns-fill: $arg;
+          columns-fill: $arg;
+}
+
+@mixin column-rule($arg) {
+// <border-width> || <border-style> || <color>
+  -webkit-column-rule: $arg;
+     -moz-column-rule: $arg;
+          column-rule: $arg;
+}
+
+@mixin column-rule-color($color) {
+  -webkit-column-rule-color: $color;
+     -moz-column-rule-color: $color;
+          column-rule-color: $color;
+}
+
+@mixin column-rule-style($style: none) {
+// none | hidden | dashed | dotted | double | groove | inset | inset | outset | ridge | solid
+  -webkit-column-rule-style: $style;
+     -moz-column-rule-style: $style;
+          column-rule-style: $style;
+}
+
+@mixin column-rule-width ($width: none) {
+  -webkit-column-rule-width: $width;
+     -moz-column-rule-width: $width;
+          column-rule-width: $width;
+}
+
+@mixin column-span($arg: none) {
+// none || all
+  -webkit-column-span: $arg;
+     -moz-column-span: $arg;
+          column-span: $arg;
+}
+
+@mixin column-width($length: auto) {
+// auto || length
+  -webkit-column-width: $length;
+     -moz-column-width: $length;
+          column-width: $length;
+}

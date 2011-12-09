@@ -4,15 +4,14 @@
       $value: ($value * 1.618);
     }
   }
+
   @if $increment < 0 {
     $increment: abs($increment);
     @for $i from 1 through $increment {
       $value: ($value / 1.618);
     }
   }
-  @if $increment == 0 {
-    @warn "Increment value cannot be zero; must be ...-3, -2, -1, 1, 2, 3...";
-  }
+
   @return $value;
 }
 
