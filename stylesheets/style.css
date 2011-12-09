@@ -1007,7 +1007,7 @@ div.main-inner {
   clear: right;
   float: left;
   margin-left: 16px;
-  padding: 35px 30px;
+  padding: 35px 0px;
   width: 716px; }
   div.main-inner h1 {
     border-bottom: 1px solid #ededed; }
@@ -1015,46 +1015,50 @@ div.main-inner {
       font-size: 13px;
       float: right;
       margin-top: 20px; }
+  div.main-inner > h1 {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0; }
   div.main-inner section + h1 {
     margin-top: 100px; }
-  div.main-inner > h1:target,
-  div.main-inner section:target > h2 {
-    background-color: rgba(252, 81, 29, 0.25);
-    -webkit-box-shadow: 0 0 0 4px rgba(252, 81, 29, 0.25);
-    -moz-box-shadow: 0 0 0 4px rgba(252, 81, 29, 0.25);
-    -ms-box-shadow: 0 0 0 4px rgba(252, 81, 29, 0.25);
-    -o-box-shadow: 0 0 0 4px rgba(252, 81, 29, 0.25);
-    box-shadow: 0 0 0 4px rgba(252, 81, 29, 0.25);
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -ms-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.36s;
-    -moz-transition-duration: 0.36s;
-    -ms-transition-duration: 0.36s;
-    -o-transition-duration: 0.36s;
-    transition-duration: 0.36s;
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    -ms-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    -webkit-transition-delay: 0;
-    -moz-transition-delay: 0;
-    -ms-transition-delay: 0;
-    -o-transition-delay: 0;
-    transition-delay: 0; }
-  div.main-inner section#intro + h1 {
-    margin-top: 20px; }
-  div.main-inner > section {
-    padding-bottom: 30px;
-    padding-top: 40px; }
-  div.main-inner h1 + section {
-    padding-top: 0; }
   div.main-inner section#intro {
     border-bottom: none;
     padding-bottom: 0; }
+    div.main-inner section#intro + h1 {
+      margin-top: 40px; }
+  div.main-inner > section {
+    padding: 30px 28px; }
+    div.main-inner > section:target {
+      background-color: #f6f8f9;
+      border-bottom: 1px solid #b9c6d0;
+      border-top: 1px solid #b9c6d0;
+      -webkit-box-shadow: inset 0 0 10px 1px #b9c6d0;
+      -moz-box-shadow: inset 0 0 10px 1px #b9c6d0;
+      -ms-box-shadow: inset 0 0 10px 1px #b9c6d0;
+      -o-box-shadow: inset 0 0 10px 1px #b9c6d0;
+      box-shadow: inset 0 0 10px 1px #b9c6d0;
+      -webkit-transition-property: all;
+      -moz-transition-property: all;
+      -ms-transition-property: all;
+      -o-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s;
+      -ms-transition-duration: 0.3s;
+      -o-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      -moz-transition-timing-function: ease-out;
+      -ms-transition-timing-function: ease-out;
+      -o-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+      -webkit-transition-delay: 0;
+      -moz-transition-delay: 0;
+      -ms-transition-delay: 0;
+      -o-transition-delay: 0;
+      transition-delay: 0; }
+      div.main-inner > section:target h2 {
+        font-weight: 500; }
 
 div.wrapper {
   margin-bottom: 20px; }
