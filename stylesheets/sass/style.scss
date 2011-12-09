@@ -136,8 +136,8 @@ div.main-inner {
   }
 
   > section {
-    border-bottom: 1px solid $base-border-color;
     border: 1px solid transparent;
+    border-bottom: 1px solid $base-border-color;
     padding: 30px 28px;
 
     & + h1 {

@@ -1015,8 +1015,8 @@ div.main-inner {
     margin-right: 20px;
     margin-bottom: 0; }
   div.main-inner > section {
-    border-bottom: 1px solid #ebe8e0;
     border: 1px solid transparent;
+    border-bottom: 1px solid #ebe8e0;
     padding: 30px 28px; }
     div.main-inner > section + h1 {
       margin-top: 100px; }
