@@ -118,6 +118,14 @@ The background-image mixin is helpful for chaining multiple comma delimited back
     # Multiple linear-gradients;
     @include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
 
+#### Note about shorthand notation
+All CSS background properties support comma delimited values.  
+For multiple background images you can specify the background properties like position, repeat, etc. for each image. For example:
+
+    @include background-image( url("/images/a.png"), url("images/b.png") );
+    background-position: center top, center;
+    background-repeat: no-repeat, repeat-x;
+
 
 ### Border-image
 
