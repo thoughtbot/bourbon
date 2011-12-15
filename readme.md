@@ -110,15 +110,19 @@ The background-size mixin supports multiple background-sizes for use with multip
 The background-image mixin is helpful for chaining multiple comma delimited background images and/or linear-gradients into one background-image property. background-image supports up to 10 background-images.
 
     # Multiple image assets
-    @include background-image(url("/images/a.png"), url("images/b.png"));
+    @include background-image( url("/images/a.png"), url("images/b.png") );
 
     # Image asset with a linear-gradient
-    @include background-image(url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image( url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%) );
 
     # Multiple linear-gradients;
-    @include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
+    @include background-image( linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
+
+    # NOT SUPPORTED - Multiple image assets with shorthand notation
+    @include background-image( url("/images/a.png") center no-repeat, url("images/b.png") left repeat );
 
 #### Note about shorthand notation
+
 All CSS background properties support comma delimited values.  
 For multiple background images you can specify the background properties like position, repeat, etc. for each image. For example:
 
