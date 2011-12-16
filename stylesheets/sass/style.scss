@@ -37,7 +37,13 @@ h2 {
   margin-bottom: 0.5em;
 }
 
-h3, h4, h5, h6 {
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+h4, h5, h6 {
   font-size: golden-ratio(13px, 0);
   margin-top: 0;
 }
@@ -62,12 +68,10 @@ nav.fixed-nav {
   @extend .clearfix;
   clear: left;
   float: left;
-  margin-right: $gw-gutter;
   min-height: 300px;
   width: grid-width(2);
 
   ul {
-    // border-top: 4px solid hsl(0, 0%, 90%);
     margin-top: 40px;
     margin: 0;
     height: 100%;
@@ -75,7 +79,15 @@ nav.fixed-nav {
     padding: 0;
     position: fixed;
     width: inherit;
-    background-color: darken($background-color, 10%);
+    background-color: darken($background-color, 3%);
+    border: 1px solid darken($base-border-color, 10%);
+    border-top: 0;
+    border-bottom: 0;
+    @include box-shadow(inset -1px 0 0px hsla(0, 0%, 100%, 0.75), inset 1px 0 0px hsla(0, 0%, 100%, 0.75));
+
+    input[type="search"] {
+      margin-left: 20px;
+    }
 
     li {
       list-style-type: none;
@@ -90,6 +102,14 @@ nav.fixed-nav {
       }
 
       a {
+        display: block;
+        @include transition;
+        padding: 0 20px;
+
+        &:hover {
+          background-color: $background-color;
+        }
+
         h3 {
           color: black;
           margin: 0;
@@ -107,18 +127,18 @@ div.main-content {
   @extend .clearfix;
   margin: 0 auto;
   padding: 0px $gw-gutter;
-  width: grid-width(8) + (2 * $gw-gutter);
+  width: grid-width(9);
 }
 
 div.main-inner {
   background: white;
   border: 1px solid $base-border-color;
+  border-left: 0;
   @include box-sizing(border-box);
   clear: right;
   float: left;
-  margin-left: $gw-gutter;
   padding: 35px 0px;
-  width: grid-width(6);
+  width: grid-width(7) + $gw-gutter;
 
   h1 {
     border-bottom: 1px solid hsl(0, 0%, 93%);
@@ -183,9 +203,45 @@ div.wrapper {
 
 // Code highlighting styling
 div.highlight {
+  background-color: transparent;
   @include border-radius(3px);
-  padding-top: 5px;
+  border: 0;
   @include box-shadow(0 0 0 1px hsl(44, 87%, 83%));
+  margin-bottom: 10px;
+  @include transition;
+  width: 100%;
+}
+
+pre {
+  background-color: $highlight-color;
+  margin: 0;
+  overflow: auto;
+  padding: 7px;
+  white-space: pre;
+  word-wrap: normal;
+}
+/* render a nice scrollbar in overflowed pre area's */
+pre {
+  &::-webkit-scrollbar {
+    height: 7px;
+    -webkit-appearance: none;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: desaturate(darken($highlight-color, 10%), 5%);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+  &::-webkit-scrollbar-corner {
+    // background: transparent;
+  }
+}
+
+p code {
+  background-color: $background-color;
+  color: hsl(0, 0%, 27%);
+  padding: 0 .2em;
+  border: 1px solid $base-border-color;
 }
 
 // Demo Box Style

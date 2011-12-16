@@ -10,6 +10,8 @@
     <div class="main-content">
       <nav class="fixed-nav">
   <ul>
+    <!-- <input type="search" placeholder="Search..."></input> -->
+    <li><a href="#install">Install</a></li>
     <li class="title"><a href="#mixins"><h3>Mixins</h3></a></li>
     <li><a href="#animations">Animations</a></li>
     <li><a href="#background-image">Background Image</a></li>
@@ -45,6 +47,110 @@
         <section id="intro">
   <p>The purpose of Bourbon Sass Mixins is to provide a comprehensive library of sass mixins that are designed to be as vanilla as possible, meaning they should not deter from the original CSS syntax. The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
   <a href="http://github.com/thoughtbot/bourbon">View Bourbon on Github</a>
+</section>
+
+<section id="install">
+  <h2>Install for Rails</h2>
+  <p>In your Gemfile:</p>
+
+<div class="highlight"><pre><code class="bash">gem <span class="s1">&#39;bourbon&#39;</span>
+</code></pre>
+</div>
+
+
+  <p>Then run:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bundle install
+</code></pre>
+</div>
+
+
+  <h3>Rails 3.1.x</h3>
+
+  <p>Rename <code>application.css</code> to <code>application.css.scss</code>:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
+</code></pre>
+</div>
+
+
+  <p>Bourbon needs the sass files to be imported in a specific order to function properly. Therefore, you will need to disable the <code>require\_tree</code> sprocket directive.</p>
+  <p>Delete the following sprocket directive in <code>application.css.scss</code>:</p>
+
+<div class="highlight"><pre><code class="scss"><span class="o">*=</span> <span class="nt">require_tree</span> <span class="nc">.</span>
+</code></pre>
+</div>
+
+
+  <p>Import bourbon at the beginning of application.css.scss:</p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@import</span> <span class="s2">&quot;bourbon&quot;</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+  <p>Import all additional stylesheets from your <code>app/assets/stylesheets</code> directory underneath the bourbon import: </p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@import</span> <span class="s2">&quot;bourbon&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;home&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;users&quot;</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+  <h3>Rails 3.0.10 and below </h3>
+  <p>For Rails &lt; 3.1 you must run the installation rake task. Please note, you should run this task every time a new version of Bourbon is released.
+    This will copy the Sass files into your project's <code>public/stylesheets/sass</code> directory.</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake bourbon:install
+</code></pre>
+</div>
+
+
+  <p>Import the mixins at the beginning of your stylesheet </p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@import</span> <span class="s1">&#39;</span><span class="s2">bourbon/bourbon&#39;</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+  <p></p>
+  <p><em>Optional:</em> If you use a non-standard location for your sass files, you can specify the path to your sass files as an argument to the install task </p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake bourbon:install<span class="o">[</span>app/stylesheets<span class="o">]</span>
+</code></pre>
+</div>
+
+
+  <h2>Install without Rails </h2>
+  <p>Bourbon includes an easy way to generate a directory with all the necessary files. </p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake generate
+</code></pre>
+</div>
+
+
+  <p>This will create a <code>bourbon</code> directory that can be used by <code>sass --watch</code>. Move the generated directory into your project's sass directory, e.g. <code>stylesheets/sass/</code>. </p>
+
+  <p>To output properly, Bourbon must be explicitly required <code>-r</code> by Sass at the command line:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># Example (project root directory)</span>
+sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
+</code></pre>
+</div>
+
+
+  <p>In this case, you will need to import the mixins at the beginning of your stylesheet:</p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@import</span> <span class="s1">&#39;</span><span class="s2">bourbon/bourbon&#39;</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+</section>
+<section id="browser-support">
+  <h2>Browser support</h2>
+  <p>Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.</p>
 </section>
 
 
