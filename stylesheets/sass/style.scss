@@ -37,10 +37,17 @@ h2 {
   margin-bottom: 0.5em;
 }
 
+p, div.highlight {
+  & + h2 {
+    margin-top: 2em;
+  }
+}
+
 h3 {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 0.5em;
+  margin-top: 2em;
 }
 
 h4, h5, h6 {
@@ -49,7 +56,8 @@ h4, h5, h6 {
 }
 
 p {
-  margin-top: 0;
+  // margin-top: 0;
+  line-height: 1.5em;
 }
 
 a, a:link, a:active, a:visited {
@@ -204,24 +212,26 @@ div.wrapper {
 // Code highlighting styling
 div.highlight {
   background-color: transparent;
-  @include border-radius(3px);
-  border: 0;
-  @include box-shadow(0 0 0 1px hsl(44, 87%, 83%));
-  margin-bottom: 10px;
-  @include transition;
   width: 100%;
 }
 
 pre {
   background-color: $highlight-color;
-  margin: 0;
+  @include border-radius(3px);
+  @include box-shadow(0 0 0 1px darken($highlight-color, 8%));
+  margin: 1em 0;
   overflow: auto;
   padding: 7px;
+  @include transition;
   white-space: pre;
   word-wrap: normal;
-}
-/* render a nice scrollbar in overflowed pre area's */
-pre {
+
+  &:hover {
+    background-color: darken($highlight-color, 3%);
+    @include box-shadow(0 0 0 1px darken($highlight-color, 16%));
+  }
+
+  // render a nice scrollbar in overflowed pre area's
   &::-webkit-scrollbar {
     height: 7px;
     -webkit-appearance: none;
@@ -233,7 +243,6 @@ pre {
       -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
   }
   &::-webkit-scrollbar-corner {
-    // background: transparent;
   }
 }
 

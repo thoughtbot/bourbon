@@ -115,7 +115,7 @@
 
 
   <p></p>
-  <p><em>Optional:</em> If you use a non-standard location for your sass files, you can specify the path to your sass files as an argument to the install task </p>
+  <p><em>Optional:</em> If you use a non-standard location for your sass files, you can specify the path to your sass files as an argument to the install task.</p>
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake bourbon:install<span class="o">[</span>app/stylesheets<span class="o">]</span>
 </code></pre>
@@ -132,7 +132,7 @@
 
   <p>This will create a <code>bourbon</code> directory that can be used by <code>sass --watch</code>. Move the generated directory into your project's sass directory, e.g. <code>stylesheets/sass/</code>. </p>
 
-  <p>To output properly, Bourbon must be explicitly required <code>-r</code> by Sass at the command line:</p>
+  <p>To output properly, Bourbon must be explicitly required (<code>-r</code>) by Sass at the command line:</p>
 
 <div class="highlight"><pre><code class="bash"><span class="c"># Example (project root directory)</span>
 sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb

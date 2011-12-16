@@ -947,17 +947,21 @@ h2 {
   font-weight: 300;
   margin-bottom: 0.5em; }
 
+p + h2, div.highlight + h2 {
+  margin-top: 2em; }
+
 h3 {
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  margin-top: 2em; }
 
 h4, h5, h6 {
   font-size: 13px;
   margin-top: 0; }
 
 p {
-  margin-top: 0; }
+  line-height: 1.5em; }
 
 a, a:link, a:active, a:visited {
   color: #2685f2;
@@ -1101,18 +1105,23 @@ div.wrapper {
 
 div.highlight {
   background-color: transparent;
+  width: 100%; }
+
+pre {
+  background-color: #fef9ec;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  border: 0;
-  -webkit-box-shadow: 0 0 0 1px #f9e5ae;
-  -moz-box-shadow: 0 0 0 1px #f9e5ae;
-  -ms-box-shadow: 0 0 0 1px #f9e5ae;
-  -o-box-shadow: 0 0 0 1px #f9e5ae;
-  box-shadow: 0 0 0 1px #f9e5ae;
-  margin-bottom: 10px;
+  -webkit-box-shadow: 0 0 0 1px #fbedc6;
+  -moz-box-shadow: 0 0 0 1px #fbedc6;
+  -ms-box-shadow: 0 0 0 1px #fbedc6;
+  -o-box-shadow: 0 0 0 1px #fbedc6;
+  box-shadow: 0 0 0 1px #fbedc6;
+  margin: 1em 0;
+  overflow: auto;
+  padding: 7px;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -ms-transition-property: all;
@@ -1133,25 +1142,23 @@ div.highlight {
   -ms-transition-delay: 0;
   -o-transition-delay: 0;
   transition-delay: 0;
-  width: 100%; }
-
-pre {
-  background-color: #fdf6e2;
-  margin: 0;
-  overflow: auto;
-  padding: 7px;
   white-space: pre;
   word-wrap: normal; }
-
-/* render a nice scrollbar in overflowed pre area's */
-pre::-webkit-scrollbar {
-  height: 7px;
-  -webkit-appearance: none;
-  width: 7px; }
-pre::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: #f8e6b5;
-  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
+  pre:hover {
+    background-color: #fdf4de;
+    -webkit-box-shadow: 0 0 0 1px #f8e1a0;
+    -moz-box-shadow: 0 0 0 1px #f8e1a0;
+    -ms-box-shadow: 0 0 0 1px #f8e1a0;
+    -o-box-shadow: 0 0 0 1px #f8e1a0;
+    box-shadow: 0 0 0 1px #f8e1a0; }
+  pre::-webkit-scrollbar {
+    height: 7px;
+    -webkit-appearance: none;
+    width: 7px; }
+  pre::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #f9e9be;
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
 
 p code {
   background-color: #f3f1ec;
