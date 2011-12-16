@@ -17,7 +17,7 @@ html, body {
   font-size: 13px;
   height: 100%;
   width: 100%;
-  background-color: hsl(43, 23%, 94%);
+  background-color: $background-color;
 }
 
 html {
@@ -70,11 +70,12 @@ nav.fixed-nav {
     // border-top: 4px solid hsl(0, 0%, 90%);
     margin-top: 40px;
     margin: 0;
-    max-height: 800px;
+    height: 100%;
     overflow-y: scroll;
     padding: 0;
     position: fixed;
     width: inherit;
+    background-color: darken($background-color, 10%);
 
     li {
       list-style-type: none;

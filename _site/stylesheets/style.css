@@ -970,11 +970,12 @@ nav.fixed-nav {
   nav.fixed-nav ul {
     margin-top: 40px;
     margin: 0;
-    max-height: 800px;
+    height: 100%;
     overflow-y: scroll;
     padding: 0;
     position: fixed;
-    width: inherit; }
+    width: inherit;
+    background-color: #e0dacd; }
     nav.fixed-nav ul li {
       list-style-type: none;
       line-height: 180%; }
