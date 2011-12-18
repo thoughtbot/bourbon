@@ -3,21 +3,21 @@
   <p>The animation mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.</p>
 
   <h3>Demo Code</h3>
-  {% highlight css %}
-    box:hover {
-      @include animation-name(scale);
-      @include animation-duration(1s);
-      @include animation-timing-function(ease-in);
-      @include animation-iteration-count(infinite);
-    }
+{% highlight css %}
+box:hover {
+  @include animation-name(scale);
+  @include animation-duration(1s);
+  @include animation-timing-function(ease-in);
+  @include animation-iteration-count(infinite);
+}
 
-    @mixin scale {
-      0%   { @include transform(scale(1.0)); }
-      50%  { @include transform(scale(2.0)); }
-      100% { @include transform(scale(1.0)); }
-    }
-    @-webkit-keyframes scale { @include scale; }
-  {% endhighlight %}
+@mixin scale {
+  0%   { @include transform(scale(1.0)); }
+  50%  { @include transform(scale(2.0)); }
+  100% { @include transform(scale(1.0)); }
+}
+@-webkit-keyframes scale { @include scale; }
+{% endhighlight %}
 
   <h3>Demo</h3>
   <section class="demo">

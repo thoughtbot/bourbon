@@ -1,16 +1,16 @@
 <section id="grid-width">
   <h2>Grid Width</h2>
-  <p>Easily setup and follow a grid based design. Need help busting a move grid-style?!? Check out <a href="http://gridulator.com/">gridulator.com</a></p>
+  <p>Easily setup and follow a grid based design. Check out <a href="http://gridulator.com/">gridulator.com</a></p>
+  <p>The <code>$gw-column</code> and <code>$gw-gutter</code> variables must be defined in your base stylesheet to properly use the grid-width function.</p>
 
   <h3>Demo Code</h3>
-  {% highlight css %}
-    # The $gw-column and $gw-gutter variables must be defined in your base stylesheet to properly use the grid-width function.
-    $gw-column: 100px;          // Column Width
-    $gw-gutter: 40px;           // Gutter Width
+{% highlight css %}
+$gw-column: 100px;          // Column Width
+$gw-gutter: 40px;           // Gutter Width
 
-    div {
-      width: grid-width(4);     // returns 520px;
-      margin-left: $gw-gutter;  // returns 40px;
-    }
-  {% endhighlight %}
+div {
+  width: grid-width(4);     // returns 520px;
+  margin-left: $gw-gutter;  // returns 40px;
+}
+{% endhighlight %}
 </section>

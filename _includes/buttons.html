@@ -7,21 +7,21 @@
     <div class="wrapper">
       <h3>Simple Button Style</h3>
       <p>The mixin can be called with no arguments, which will render a blue button with the "simple" style.</p>
-      {% highlight css %}
-        button {
-          @include button;
-        }
-      {% endhighlight %}
+{% highlight css %}
+button {
+  @include button;
+}
+{% endhighlight %}
       <button class="example-1">Simple button</button>
     </div>
 
     <div class="wrapper">
       <h3>Pill Button Style</h3>
-      {% highlight css %}
-        button {
-          @include button(pill);
-        }
-      {% endhighlight %}
+{% highlight css %}
+button {
+  @include button(pill);
+}
+{% endhighlight %}
       <button class="example-2">Pill Button</button>
     </div>
 
@@ -29,12 +29,12 @@
       <h3>Shiny Button Style</h3>
       <p>Create beautiful buttons by defining a style and color argument; using a single color, the mixin calculates the gradient, borders, box shadow, text shadow and text color of the button. The mixin will change the text to be light when on a dark background, and dark when on a light background.</p>
 
-      {% highlight css %}
-        # Style + color arguments
-        button {
-          @include button(shiny, #ff0000);
-        }
-      {% endhighlight %}
+{% highlight css %}
+# Style + color arguments
+button {
+  @include button(shiny, #ff0000);
+}
+{% endhighlight %}
       <button class="example-3">Shiny Button</button>
     </div>
   </section>
