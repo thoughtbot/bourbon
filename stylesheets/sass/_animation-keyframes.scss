@@ -14,3 +14,18 @@
 @-webkit-keyframes scale { @include scale; }
    @-moz-keyframes scale { @include scale; }
         @keyframes scale { @include scale; }
+
+@mixin slide {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes slide { @include slide; }
+   @-moz-keyframes slide { @include slide; }
+        @keyframes slide { @include slide; }

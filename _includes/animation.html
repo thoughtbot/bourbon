@@ -2,25 +2,17 @@
   <h2>Animations</h2>
   <p>The animation mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.</p>
 
-  <h3>Demo Code</h3>
 {% highlight scss %}
 box:hover {
-  @include animation-name(slideup, fadein);
-  @include animation-duration(1.0s, 1.2s);
-  @include animation-timing-function(ease-in-out, ease-out);
+  @include animation-name(scale, slide);
+  @include animation-duration(2s);
+  @include animation-timing-function(ease);
+  @include animation-iteration-count(infinite);
 
   // Animation shorthand works the same as the CSS3 animation shorthand
-  @include animation(slideup fadein, 1.0s 2.0s, ease-in);
+  @include animation(scale slide, 2.0s, ease);
 }
-
-@mixin scale {
-  0%   { @include transform(scale(1.0)); }
-  50%  { @include transform(scale(2.0)); }
-  100% { @include transform(scale(1.0)); }
-}
-@-webkit-keyframes scale { @include scale; }
 {% endhighlight %}
-
   <h3>Demo</h3>
   <section class="demo">
     <div id="run-demo" class="box"></div>

@@ -212,10 +212,10 @@ pre {
   white-space: pre;
   word-wrap: normal;
 
-  &:hover {
-    background-color: darken($highlight-color, 3%);
-    @include box-shadow(0 0 0 1px darken($highlight-color, 16%));
-  }
+  // &:hover {
+    // background-color: darken($highlight-color, 3%);
+    // @include box-shadow(0 0 0 1px darken($highlight-color, 16%));
+  // }
 
   // render a nice scrollbar in overflowed pre area's
   &::-webkit-scrollbar {
@@ -237,16 +237,4 @@ p code, ul code, ol code {
   color: hsl(0, 0%, 27%);
   padding: 0 .2em;
   border: 1px solid $base-border-color;
-}
-
-// Demo Box Style
-div.box {
-  $base-color: hsl(335, 94%, 42%);
-  background: red;
-  @include border-radius(40px);
-  border: 1px solid darken($base-color, 10%);
-  @include box-shadow(inset 0 1px 0 hsla(0, 0%, 100%, 0.45));
-  height: 40px;
-  @include linear-gradient(lighten($base-color, 20%), $base-color);
-  width: 40px;
 }

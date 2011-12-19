@@ -1,23 +1,26 @@
 <section id="border-radius">
   <h2>Border Radius</h2>
-  <p>border-radius will also take short-hard notation.</p>
 
-  <section class="demo">
-    <div class="wrapper">
-      <h3>10px Border On All Corners</h3>
+  <p>The border-radius mixin can take short-hand notation or the full radius expression.</p>
+
 {% highlight scss %}
 @include border-radius(10px);
+@include border-radius(5px 5px 2px 2px);
 {% endhighlight %}
-      <div class="example equal"></div>
-    </div>
 
-    <div class="wrapper">
-      <h3>Specify the Radius for Each Corner</h3>
+  <p>You can also specify individual corners.</p>
 {% highlight scss %}
-@include border-radius(5px 10px 20px 30px);
+@include border-top-left-radius(5px);
+@include border-top-right-radius(5px);
+@include border-bottom-right-radius(5px);
+@include border-bottom-left-radius(5px);
 {% endhighlight %}
-      <div class="example different"></div>
-    </div>
 
-  </section>
+  <p>Individual sides are supported as well.</p>
+{% highlight scss %}
+@include border-top-radius(5px);
+@include border-bottom-radius(5px);
+@include border-left-radius(5px);
+@include border-right-radius(5px);
+{% endhighlight %}
 </section>

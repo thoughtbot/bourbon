@@ -2,24 +2,19 @@
   <h2>Box Shadow</h2>
   <p>Box-shadow supports single or multiple arguments.</p>
 
+  <h3>Single Box Shadow</h3>
+{% highlight scss %}
+@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+{% endhighlight %}
   <section class="demo">
-    <div class="wrapper">
-      <h3>Single Box Shadow</h3>
-{% highlight scss %}
-div {
-@include box-shadow(0 0 10px 0 black);
-}
-{% endhighlight %}
-      <div class="example single"></div>
-    </div>
-
-    <div class="wrapper">
-      <h3>Multiple comma-delimited Box Shadows</h3>
-{% highlight scss %}
-@include box-shadow(1px 1px 10px 0 green, -1px -1px 10px 0 blue);
-{% endhighlight %}
-      <div class="example double"></div>
-    </div>
+    <div class="example single"></div>
   </section>
 
+  <h3>Multiple Box Shadows</h3>
+{% highlight scss %}
+@include box-shadow(1px 1px 5px 1px green, -1px -1px 5px 1px blue);
+{% endhighlight %}
+  <section class="demo">
+    <div class="example double"></div>
+  </section>
 </section>

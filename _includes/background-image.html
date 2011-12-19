@@ -1,11 +1,22 @@
 <section id="background-image">
   <h2>Background-image</h2>
-  <p></p>
+  <p>The background-image mixin is helpful for chaining multiple comma delimited background images and/or linear-gradients into one background-image property. The Background-image mixin supports up to 10 background-images.</p>
 
-  <h3>Demo Code</h3>
 {% highlight scss %}
-@include background-image(url("a.png"), url("b.png"));
+// Multiple image assets
+@include background-image(url("/images/a.png"), url("images/b.png"));
+
+// Linear-gradient
+@include background-image(linear-gradient(white 0, yellow 50%, transparent 50%));
+
+// Image asset with a linear-gradient
+@include background-image(url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+
+// Multiple linear-gradients - Demo
+@include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), 
+                          linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
 {% endhighlight %}
+
   <h3>Demo</h3>
   <section class="demo">
   </section>
