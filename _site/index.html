@@ -161,10 +161,12 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
   <h3>Demo Code</h3>
 <div class="highlight"><pre><code class="scss"><span class="nt">box</span><span class="nd">:hover</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> animation-name</span><span class="p">(</span><span class="n">scale</span><span class="p">);</span>
-  <span class="k">@include</span><span class="nd"> animation-duration</span><span class="p">(</span><span class="mi">1</span><span class="kt">s</span><span class="p">);</span>
-  <span class="k">@include</span><span class="nd"> animation-timing-function</span><span class="p">(</span><span class="n">ease-in</span><span class="p">);</span>
-  <span class="k">@include</span><span class="nd"> animation-iteration-count</span><span class="p">(</span><span class="n">infinite</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> animation-name</span><span class="p">(</span><span class="n">slideup</span><span class="o">,</span> <span class="n">fadein</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> animation-duration</span><span class="p">(</span><span class="mi">1</span><span class="mf">.0</span><span class="kt">s</span><span class="o">,</span> <span class="mi">1</span><span class="mf">.2</span><span class="kt">s</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> animation-timing-function</span><span class="p">(</span><span class="n">ease-in-out</span><span class="o">,</span> <span class="n">ease-out</span><span class="p">);</span>
+
+  <span class="c1">// Animation shorthand works the same as the CSS3 animation shorthand</span>
+  <span class="k">@include</span><span class="nd"> animation</span><span class="p">(</span><span class="n">slideup</span> <span class="n">fadein</span><span class="o">,</span> <span class="mi">1</span><span class="mf">.0</span><span class="kt">s</span> <span class="mi">2</span><span class="mf">.0</span><span class="kt">s</span><span class="o">,</span> <span class="n">ease-in</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="k">@mixin</span><span class="nf"> scale</span> <span class="p">{</span>
@@ -245,7 +247,9 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <section class="demo">
     <div class="wrapper">
       <h3>Single Box Shadow</h3>
-<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> box-shadow</span><span class="p">(</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">black</span><span class="p">);</span>
+<div class="highlight"><pre><code class="scss"><span class="nt">div</span> <span class="p">{</span>
+<span class="k">@include</span><span class="nd"> box-shadow</span><span class="p">(</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">black</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre>
 </div>
 
@@ -321,18 +325,15 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
         <section id="linear-gradient">
   <h2>Linear Gradient</h2>
-  <p>Gradient Position is optional, default is top. Position can be a degree. Color-stops are optional as well. Mixin will support up to 10 gradients.</p>
+  <p>Gradient Position is optional, default is <code>top</code>. Position can be a degree (<code>90deg</code>). Mixin supports up to 10 color-stops.</p>
 
-  <section class="demo">
-    <div class="wrapper">
-      <h3>Single Gradient</h3>
-<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> linear-gradient</span><span class="p">(</span><span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#2989d8</span><span class="p">);</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> linear-gradient</span><span class="p">(</span><span class="no">top</span><span class="o">,</span> <span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#2989d8</span><span class="p">);</span>
+
+<span class="k">@include</span><span class="nd"> linear-gradient</span><span class="p">(</span><span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#2989d8</span><span class="p">);</span>
 </code></pre>
 </div>
 
-      <div class="example single"></div>
-    </div>
-  </section>
+  <section class="demo"></section>
 </section>
 
         <section id="position">
@@ -438,28 +439,20 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
         <section id="golden-ratio">
   <h2>Golden Ratio</h2>
-  <p>Returns the golden ratio of a given number. Must provide a Pixel or Em value for first argument. Also takes a required incriment value that is a non-zero integer: ...-3, -2, -1, 1, 2, 3...</p>
+  <p>Returns the golden ratio of a given number. Must provide a pixel or em value for the first argument. Also takes a required integer for an incriment value: ...-3, -2, -1, 0, 1, 2, 3...</p>
+  <p>Note: The golden-ratio function can be wrapped in sass's <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down, or round up respectively.</p>
 
-  <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="scss"><span class="nt">div</span> <span class="p">{</span>
-                    <span class="na">Increment</span><span class="err"> </span><span class="na">Up</span><span class="err"> </span><span class="na">GR</span><span class="err"> </span><span class="na">with</span><span class="err"> </span><span class="na">positive</span><span class="err"> </span><span class="na">value</span>
-  <span class="na">font-size</span><span class="o">:</span>        <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span>  <span class="mi">1</span><span class="p">);</span>    <span class="c1">// returns: 22.652px</span>
+<div class="highlight"><pre><code class="scss"><span class="c1">// Positive number will increment up the golden-ratio</span>
+<span class="na">font-size</span><span class="o">:</span> <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span>  <span class="mi">1</span><span class="p">);</span>
+<span class="c1">// returns: 22.652px</span>
 
-                    <span class="na">Increment</span><span class="err"> </span><span class="na">Down</span><span class="err"> </span><span class="na">GR</span><span class="err"> </span><span class="na">with</span><span class="err"> </span><span class="na">negative</span><span class="err"> </span><span class="na">value</span>
-  <span class="na">font-size</span><span class="o">:</span>        <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span> <span class="mi">-1</span><span class="p">);</span>    <span class="c1">// returns: 8.653px</span>
-
-                    <span class="na">Can</span><span class="err"> </span><span class="na">be</span><span class="err"> </span><span class="na">used</span><span class="err"> </span><span class="na">with</span><span class="err"> </span><span class="na">ceil(round</span><span class="err"> </span><span class="na">up)</span><span class="err"> </span><span class="na">or</span><span class="err"> </span><span class="na">floor(round</span><span class="err"> </span><span class="na">down)</span>
-  <span class="na">font-size</span><span class="o">:</span> <span class="nf">floor</span><span class="p">(</span> <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span>  <span class="mi">1</span><span class="p">)</span> <span class="p">);</span>  <span class="c1">// returns: 22px</span>
-  <span class="na">font-size</span><span class="o">:</span>  <span class="nf">ceil</span><span class="p">(</span> <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span>  <span class="mi">1</span><span class="p">)</span> <span class="p">);</span>  <span class="c1">// returns: 23px</span>
-<span class="p">}</span>
+<span class="c1">// Negative number will increment down the golden-ratio</span>
+<span class="na">font-size</span><span class="o">:</span> <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span> <span class="mi">-1</span><span class="p">);</span>
+<span class="c1">// returns: 8.653px</span>
 </code></pre>
 </div>
 
   <p>Resources: <a href="http://modularscale.com/">modularscale.com</a> & <a href="http://goldenratiocalculator.com/">goldenrationcalculator.com</a></p>
-
-  <h3>Demo</h3>
-  <section class="demo">
-  </section>
 </section>
 
         <section id="grid-width">
@@ -467,7 +460,6 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>Easily setup and follow a grid based design. Check out <a href="http://gridulator.com/">gridulator.com</a></p>
   <p>The <code>$gw-column</code> and <code>$gw-gutter</code> variables must be defined in your base stylesheet to properly use the grid-width function.</p>
 
-  <h3>Demo Code</h3>
 <div class="highlight"><pre><code class="scss"><span class="na">$gw-column</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>          <span class="c1">// Column Width</span>
 <span class="na">$gw-gutter</span><span class="o">:</span> <span class="mi">40</span><span class="kt">px</span><span class="p">;</span>           <span class="c1">// Gutter Width</span>
 
@@ -482,19 +474,13 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
         <section id="linear-gradient-function">
   <h2>Linear Gradient</h2>
-  <p>Outputs a linear-gradient. Use in conjunction with the background-image mixin. The function takes the same arguments as the <a href="#linear-gradient">linear-gradient mixin</a>.</p>
+  <p>Outputs a linear-gradient. Use in conjunction with the <a href="#background-image">background-image mixin.</a> The function takes the same arguments as the <a href="#linear-gradient">linear-gradient mixin</a>.</p>
 
-  <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="scss"><span class="nn">#</span> <span class="nt">Image</span> <span class="nt">asset</span> <span class="nt">with</span> <span class="nt">a</span> <span class="nt">linear-gradient</span>
-<span class="o">@</span><span class="nt">include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">url</span><span class="o">(</span><span class="s2">&quot;/images/a.png&quot;</span><span class="o">),</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">white</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">yellow</span> <span class="nt">50</span><span class="err">%</span><span class="o">,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="err">%</span><span class="o">));</span>
-
-<span class="nn">#</span> <span class="nt">Multiple</span> <span class="nt">linear-gradients</span><span class="o">;</span>
-<span class="o">@</span><span class="nt">include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">hsla</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">100</span><span class="err">%</span><span class="o">,</span> <span class="nt">100</span><span class="err">%</span><span class="o">,</span> <span class="nt">0</span><span class="nc">.25</span><span class="o">)</span> <span class="nt">0</span><span class="err">%</span><span class="o">,</span> <span class="nt">hsla</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">100</span><span class="err">%</span><span class="o">,</span> <span class="nt">100</span><span class="err">%</span><span class="o">,</span> <span class="nt">0</span><span class="nc">.08</span><span class="o">)</span> <span class="nt">50</span><span class="err">%</span><span class="o">,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="err">%</span><span class="o">),</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nn">#4e7ba3</span><span class="o">,</span> <span class="nt">darken</span><span class="o">(</span><span class="nn">#4e7ba4</span><span class="o">,</span> <span class="nt">10</span><span class="err">%</span><span class="o">))</span> <span class="o">);</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span><span class="nf">linear-gradient</span><span class="p">(</span><span class="nb">white</span> <span class="mi">0</span><span class="o">,</span> <span class="nb">yellow</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">transparent</span> <span class="mi">50</span><span class="kt">%</span><span class="p">));</span>
 </code></pre>
 </div>
 
 
-  <h3>Demo</h3>
   <section class="demo">
   </section>
 </section>

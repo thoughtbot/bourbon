@@ -1,14 +1,11 @@
 <section id="linear-gradient">
   <h2>Linear Gradient</h2>
-  <p>Gradient Position is optional, default is top. Position can be a degree. Color-stops are optional as well. Mixin will support up to 10 gradients.</p>
+  <p>Gradient Position is optional, default is <code>top</code>. Position can be a degree (<code>90deg</code>). Mixin supports up to 10 color-stops.</p>
 
-  <section class="demo">
-    <div class="wrapper">
-      <h3>Single Gradient</h3>
 {% highlight scss %}
+@include linear-gradient(top, #1e5799, #2989d8);
+
 @include linear-gradient(#1e5799, #2989d8);
 {% endhighlight %}
-      <div class="example single"></div>
-    </div>
-  </section>
+  <section class="demo"></section>
 </section>

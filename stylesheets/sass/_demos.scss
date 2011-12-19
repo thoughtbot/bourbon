@@ -1,0 +1,102 @@
+//************************************************************************//
+// Animations Demo Section
+//************************************************************************//
+
+section#animations {
+  div.box {
+    &:hover {
+      @include animation-name(scale);
+      @include animation-duration(1s);
+      @include animation-timing-function(ease-in);
+      @include animation-iteration-count(infinite);
+    }
+  }
+}
+
+//************************************************************************//
+// Background-image Mixin
+//************************************************************************//
+section#background-image {
+  section.demo {
+    height: 40px;
+    width: 100%;
+
+   @include background-image(url("/images/a.png"), linear-gradient(#333, #999));
+   //@include background-image(url("/images/a.png"), url("/images/b.png"), url("/images/c.png"), linear-gradient(#ffff00 10%, #000 20%));
+  }
+}
+
+//************************************************************************//
+// Border-radius Mixin
+//************************************************************************//
+section#border-radius {
+  section.demo {
+    div.example {
+      @include background-image(linear-gradient(top, #f9438f, #d0065a));
+      height: 50px;
+      width: 200px;
+    }
+
+    div.example.equal {
+      @include border-radius(10px);
+    }
+
+    div.example.different {
+      @include border-radius(5px 10px 20px 30px);
+    }
+  }
+}
+
+//************************************************************************//
+// Box-Shadow Mixin
+//************************************************************************//
+section#box-shadow {
+  section.demo {
+    div.wrapper {
+      div.example {
+        @include background-image(linear-gradient(top, #f9438f, #d0065a));
+        height: 100px;
+        width: 100px;
+      }
+
+      div.example.single {
+        @include box-shadow(0 0 10px 0 #000);
+      }
+
+      div.example.double {
+        @include box-shadow(1px 1px 10px 0 green, -1px -1px 10px 0 blue);
+      }
+    }
+  }
+}
+
+
+//************************************************************************//
+// Linear-gradient Function
+//************************************************************************//
+section#linear-gradient-function {
+  section.demo {
+    @include background-image(linear-gradient(#ccc, #aaa));
+    height: 40px;
+  }
+}
+
+
+//************************************************************************//
+// Button Addon
+//************************************************************************//
+section#buttons {
+  section.demo {
+    button.example-1 {
+      @include button;
+    }
+
+    button.example-2 {
+      @include button(pill);
+    }
+
+    button.example-3 {
+      @include button(shiny, #ff0000);
+    }
+  }
+}

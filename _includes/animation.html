@@ -5,10 +5,12 @@
   <h3>Demo Code</h3>
 {% highlight scss %}
 box:hover {
-  @include animation-name(scale);
-  @include animation-duration(1s);
-  @include animation-timing-function(ease-in);
-  @include animation-iteration-count(infinite);
+  @include animation-name(slideup, fadein);
+  @include animation-duration(1.0s, 1.2s);
+  @include animation-timing-function(ease-in-out, ease-out);
+
+  // Animation shorthand works the same as the CSS3 animation shorthand
+  @include animation(slideup fadein, 1.0s 2.0s, ease-in);
 }
 
 @mixin scale {

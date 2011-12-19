@@ -86,7 +86,7 @@ The animation mixins support comma separated lists of values, which allows diffe
     @include animation-timing-function(ease-in-out, ease-out);
 
     # Shorthand for a basic animation. Supports multiple parentheses-deliminated values for each variable.
-    @include animation-basic((slideup, fadein), (1.0s, 2.0s), ease-in);
+    @include animation(slideup fadein, 1.0s 2.0s, ease-in);
 
 
 ### Appearance
