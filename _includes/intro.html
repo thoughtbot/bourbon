@@ -28,19 +28,19 @@ $ mv app/assets/stylesheets/application.css app/assets/stylesheets/application.c
   <p>Bourbon needs the sass files to be imported in a specific order to function properly. Therefore, you will need to disable the <code>require\_tree</code> sprocket directive.</p>
   <p>Delete the following sprocket directive in <code>application.css.scss</code>:</p>
 
-{% highlight scss %}
+{% highlight css %}
 *= require_tree .
 {% endhighlight %}
 
   <p>Import bourbon at the beginning of application.css.scss:</p>
 
-{% highlight scss %}
+{% highlight css %}
 @import "bourbon";
 {% endhighlight %}
 
   <p>Import all additional stylesheets from your <code>app/assets/stylesheets</code> directory underneath the bourbon import: </p>
 
-{% highlight scss %}
+{% highlight css %}
 @import "bourbon";
 @import "home";
 @import "users";
@@ -56,7 +56,7 @@ $ rake bourbon:install
 
   <p>Import the mixins at the beginning of your stylesheet </p>
 
-{% highlight scss %}
+{% highlight css %}
 @import 'bourbon/bourbon';
 {% endhighlight %}
 
@@ -85,7 +85,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
   <p>In this case, you will need to import the mixins at the beginning of your stylesheet:</p>
 
-{% highlight scss %}
+{% highlight css %}
 @import 'bourbon/bourbon';
 {% endhighlight %}
 
