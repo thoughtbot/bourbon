@@ -160,19 +160,19 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>The animation mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.</p>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="nt">box</span><span class="nd">:hover</span> <span class="p">{</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">name</span><span class="p">(</span><span class="n">scale</span><span class="p">);</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">duration</span><span class="p">(</span><span class="m">1s</span><span class="p">);</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">timing</span><span class="o">-</span><span class="n">function</span><span class="p">(</span><span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="p">);</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">animation</span><span class="o">-</span><span class="n">iteration</span><span class="o">-</span><span class="n">count</span><span class="p">(</span><span class="n">infinite</span><span class="p">);</span>
+<div class="highlight"><pre><code class="scss"><span class="nt">box</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> animation-name</span><span class="p">(</span><span class="n">scale</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> animation-duration</span><span class="p">(</span><span class="mi">1</span><span class="kt">s</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> animation-timing-function</span><span class="p">(</span><span class="n">ease-in</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> animation-iteration-count</span><span class="p">(</span><span class="n">infinite</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="k">@mixin</span> <span class="nt">scale</span> <span class="p">{</span>
-  <span class="nt">0</span><span class="o">%</span>   <span class="p">{</span> <span class="o">@</span><span class="n">include</span> <span class="n">transform</span><span class="p">(</span><span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="o">.</span><span class="m">0</span><span class="p">));</span> <span class="p">}</span>
-  <span class="nt">50</span><span class="o">%</span>  <span class="p">{</span> <span class="o">@</span><span class="n">include</span> <span class="n">transform</span><span class="p">(</span><span class="n">scale</span><span class="p">(</span><span class="m">2</span><span class="o">.</span><span class="m">0</span><span class="p">));</span> <span class="p">}</span>
-  <span class="nt">100</span><span class="o">%</span> <span class="p">{</span> <span class="o">@</span><span class="n">include</span> <span class="n">transform</span><span class="p">(</span><span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="o">.</span><span class="m">0</span><span class="p">));</span> <span class="p">}</span>
+<span class="k">@mixin</span><span class="nf"> scale</span> <span class="p">{</span>
+  <span class="nt">0</span><span class="err">%</span>   <span class="p">{</span> <span class="k">@include</span><span class="nd"> transform</span><span class="p">(</span><span class="nf">scale</span><span class="p">(</span><span class="mi">1</span><span class="mf">.0</span><span class="p">));</span> <span class="p">}</span>
+  <span class="nt">50</span><span class="err">%</span>  <span class="p">{</span> <span class="k">@include</span><span class="nd"> transform</span><span class="p">(</span><span class="nf">scale</span><span class="p">(</span><span class="mi">2</span><span class="mf">.0</span><span class="p">));</span> <span class="p">}</span>
+  <span class="nt">100</span><span class="err">%</span> <span class="p">{</span> <span class="k">@include</span><span class="nd"> transform</span><span class="p">(</span><span class="nf">scale</span><span class="p">(</span><span class="mi">1</span><span class="mf">.0</span><span class="p">));</span> <span class="p">}</span>
 <span class="p">}</span>
-<span class="k">@-webkit-keyframes</span> <span class="nt">scale</span> <span class="p">{</span> <span class="k">@include</span> <span class="nt">scale</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@-webkit-keyframes</span> <span class="nt">scale</span> <span class="p">{</span> <span class="k">@include</span><span class="nd"> scale</span><span class="p">;</span> <span class="p">}</span>
 </code></pre>
 </div>
 
@@ -188,7 +188,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p></p>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">url</span><span class="o">(</span><span class="s2">&quot;a.png&quot;</span><span class="o">),</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;b.png&quot;</span><span class="o">))</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span><span class="sx">url(&quot;a.png&quot;)</span><span class="o">,</span> <span class="sx">url(&quot;b.png&quot;)</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -203,7 +203,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>Border-image supports short-hand notation.</p>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">border-image</span><span class="o">(</span><span class="nt">url</span><span class="o">(</span><span class="nt">border</span><span class="nc">.png</span><span class="o">)</span> <span class="nt">27</span> <span class="nt">round</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> border-image</span><span class="p">(</span><span class="sx">url(border.png)</span> <span class="mi">27</span> <span class="n">round</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -219,7 +219,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <section class="demo">
     <div class="wrapper">
       <h3>10px Border On All Corners</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">border-radius</span><span class="o">(</span><span class="nt">10px</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> border-radius</span><span class="p">(</span><span class="mi">10</span><span class="kt">px</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -228,7 +228,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
     <div class="wrapper">
       <h3>Specify the Radius for Each Corner</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">border-radius</span><span class="o">(</span><span class="nt">5px</span> <span class="nt">10px</span> <span class="nt">20px</span> <span class="nt">30px</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> border-radius</span><span class="p">(</span><span class="mi">5</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">30</span><span class="kt">px</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -245,7 +245,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <section class="demo">
     <div class="wrapper">
       <h3>Single Box Shadow</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">box-shadow</span><span class="o">(</span><span class="nt">0</span> <span class="nt">0</span> <span class="nt">10px</span> <span class="nt">0</span> <span class="nt">black</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> box-shadow</span><span class="p">(</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">black</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -254,7 +254,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
     <div class="wrapper">
       <h3>Multiple comma-delimited Box Shadows</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">box-shadow</span><span class="o">(</span><span class="nt">1px</span> <span class="nt">1px</span> <span class="nt">10px</span> <span class="nt">0</span> <span class="nt">green</span><span class="o">,</span> <span class="nt">-1px</span> <span class="nt">-1px</span> <span class="nt">10px</span> <span class="nt">0</span> <span class="nt">blue</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> box-shadow</span><span class="p">(</span><span class="mi">1</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">green</span><span class="o">,</span> <span class="mi">-1</span><span class="kt">px</span> <span class="mi">-1</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">blue</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -269,7 +269,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>Box-sizing will change the box-model of the element it is applied to.</p>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">box-sizing</span><span class="o">(</span><span class="nt">border-box</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> box-sizing</span><span class="p">(</span><span class="no">border</span><span class="o">-</span><span class="n">box</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -284,20 +284,20 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>The flex-box mixin is bases on the 2009 w3c spec. The mixin with change to the flexible box-model. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">more info</a></p>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="nt">div</span><span class="nc">.parent</span> <span class="p">{</span>
-  <span class="o">@</span><span class="n">include</span> <span class="k">display</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">align</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">orient</span><span class="p">(</span><span class="n">horizontal</span><span class="p">);</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">pack</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
+<div class="highlight"><pre><code class="scss"><span class="nt">div</span><span class="nc">.parent</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> display-box</span><span class="p">;</span>
+  <span class="k">@include</span><span class="nd"> box-align</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> box-orient</span><span class="p">(</span><span class="n">horizontal</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> box-pack</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nt">div</span><span class="nc">.parent</span> <span class="o">&gt;</span> <span class="nt">div</span><span class="nc">.child</span> <span class="p">{</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">flex</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> box-flex</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="err">#</span> <span class="nt">Alternative</span> <span class="nt">custom</span> <span class="nt">shorthand</span> <span class="nt">mixin</span><span class="o">.</span>
+<span class="nn">#</span> <span class="nt">Alternative</span> <span class="nt">custom</span> <span class="nt">shorthand</span> <span class="nt">mixin</span><span class="nc">.</span>
 <span class="nt">div</span><span class="nc">.parent</span> <span class="p">{</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="p">(</span><span class="err">$</span><span class="n">orient</span><span class="o">:</span> <span class="n">horizontal</span><span class="o">,</span> <span class="err">$</span><span class="n">pack</span><span class="o">:</span> <span class="k">center</span><span class="o">,</span> <span class="err">$</span><span class="n">align</span><span class="o">:</span> <span class="n">stretch</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> box</span><span class="p">(</span><span class="nv">$orient</span><span class="o">:</span> <span class="n">horizontal</span><span class="o">,</span> <span class="nv">$pack</span><span class="o">:</span> <span class="no">center</span><span class="o">,</span> <span class="nv">$align</span><span class="o">:</span> <span class="n">stretch</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -313,7 +313,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>The inline-block mixin provides support for the inline-block property in IE6 and IE7.</p>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">inline-block</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> inline-block</span><span class="p">;</span>
 </code></pre>
 </div>
 
@@ -326,7 +326,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <section class="demo">
     <div class="wrapper">
       <h3>Single Gradient</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nf">#1e5799</span><span class="o">,</span> <span class="nf">#2989d8</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> linear-gradient</span><span class="p">(</span><span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#2989d8</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -342,14 +342,14 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <h3>Position</h3>
   <p>Shorthand notation for setting the position of the elements in your page.</P>
   <p>Instead of writing:</p>
-<div class="highlight"><pre><code class="css"><span class="nt">position</span><span class="o">:</span> <span class="nt">relative</span><span class="o">;</span>
-<span class="nt">top</span><span class="o">:</span> <span class="nt">0px</span><span class="o">;</span>
-<span class="nt">left</span><span class="o">:</span> <span class="nt">100px</span><span class="o">;</span>
+<div class="highlight"><pre><code class="scss"><span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span>
+<span class="na">top</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="na">left</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
 </code></pre>
 </div>
 
   <p>Your can write:</p>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">position</span><span class="o">(</span><span class="nt">relative</span><span class="o">,</span> <span class="nt">0px</span> <span class="nt">0</span> <span class="nt">0</span> <span class="nt">100px</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> position</span><span class="p">(</span><span class="no">relative</span><span class="o">,</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">100</span><span class="kt">px</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -363,8 +363,8 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>Takes up to 10 gradients. Position and shape are required.
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">radial-gradient</span><span class="o">(</span><span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">circle</span> <span class="nt">cover</span><span class="o">,</span> <span class="nf">#1e5799</span><span class="o">,</span> <span class="nf">#efefef</span><span class="o">)</span><span class="p">;</span>
-<span class="k">@include</span> <span class="nt">radial-gradient</span><span class="o">(</span><span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">circle</span> <span class="nt">cover</span><span class="o">,</span> <span class="nf">#eee</span> <span class="nt">10</span><span class="o">%,</span> <span class="nf">#1e5799</span> <span class="nt">30</span><span class="o">%,</span> <span class="nf">#efefef</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#efefef</span><span class="p">);</span>
+<span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#eee</span> <span class="mi">10</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#1e5799</span> <span class="mi">30</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#efefef</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -378,7 +378,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <h2>Transform</h2>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">transform</span><span class="o">(</span><span class="nt">translateY</span><span class="o">(</span><span class="nt">50px</span><span class="o">))</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transform</span><span class="p">(</span><span class="nf">translateY</span><span class="p">(</span><span class="mi">50</span><span class="kt">px</span><span class="p">));</span>
 </code></pre>
 </div>
 
@@ -392,7 +392,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <h2>Transform Origin</h2>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">transform-origin</span><span class="o">(</span><span class="nt">center</span> <span class="nt">top</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transform-origin</span><span class="p">(</span><span class="no">center</span> <span class="no">top</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -407,9 +407,9 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>Shorthand mixin: Supports multiple parentheses-delimited values for each variable.</p>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">transition</span> <span class="o">(</span><span class="nt">all</span><span class="o">,</span> <span class="nt">2</span><span class="nc">.0s</span><span class="o">,</span> <span class="nt">ease-in-out</span><span class="o">)</span><span class="p">;</span>
-<span class="k">@include</span> <span class="nt">transition</span> <span class="o">((</span><span class="nt">opacity</span><span class="o">,</span> <span class="nt">width</span><span class="o">),</span> <span class="o">(</span><span class="nt">1</span><span class="nc">.0s</span><span class="o">,</span> <span class="nt">2</span><span class="nc">.0s</span><span class="o">),</span> <span class="nt">ease-in</span><span class="o">,</span> <span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">2s</span><span class="o">))</span><span class="p">;</span>
-<span class="k">@include</span> <span class="nt">transition</span> <span class="o">(</span><span class="err">$</span><span class="nt">property</span><span class="o">:(</span><span class="nt">opacity</span><span class="o">,</span> <span class="nt">width</span><span class="o">),</span> <span class="err">$</span><span class="nt">delay</span><span class="o">:</span> <span class="o">(</span><span class="nt">1</span><span class="nc">.5s</span><span class="o">,</span> <span class="nt">2</span><span class="nc">.5s</span><span class="o">))</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transition</span> <span class="p">(</span><span class="n">all</span><span class="o">,</span> <span class="mi">2</span><span class="mf">.0</span><span class="kt">s</span><span class="o">,</span> <span class="n">ease-in-out</span><span class="p">);</span>
+<span class="k">@include</span><span class="nd"> transition</span> <span class="p">((</span><span class="no">opacity</span><span class="o">,</span> <span class="no">width</span><span class="p">)</span><span class="o">,</span> <span class="p">(</span><span class="mi">1</span><span class="mf">.0</span><span class="kt">s</span><span class="o">,</span> <span class="mi">2</span><span class="mf">.0</span><span class="kt">s</span><span class="p">)</span><span class="o">,</span> <span class="n">ease-in</span><span class="o">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="kt">s</span><span class="p">));</span>
+<span class="k">@include</span><span class="nd"> transition</span> <span class="p">(</span><span class="nv">$property</span><span class="o">:</span><span class="p">(</span><span class="no">opacity</span><span class="o">,</span> <span class="no">width</span><span class="p">)</span><span class="o">,</span> <span class="nv">$delay</span><span class="o">:</span> <span class="p">(</span><span class="mi">1</span><span class="mf">.5</span><span class="kt">s</span><span class="o">,</span> <span class="mi">2</span><span class="mf">.5</span><span class="kt">s</span><span class="p">));</span>
 </code></pre>
 </div>
 
@@ -426,7 +426,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>The compact function will strip out any value from a list that is <code>false</code>. Takes up to 10 arguments.
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="err">$</span><span class="nt">full</span><span class="o">:</span>  <span class="nt">compact</span><span class="o">(</span><span class="err">$</span><span class="nt">name-1</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-2</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-3</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-4</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-5</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-6</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-7</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-8</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-9</span><span class="o">,</span> <span class="err">$</span><span class="nt">name-10</span><span class="o">);</span>
+<div class="highlight"><pre><code class="scss"><span class="nv">$full</span><span class="o">:</span>  <span class="nf">compact</span><span class="p">(</span><span class="nv">$name-1</span><span class="o">,</span> <span class="nv">$name-2</span><span class="o">,</span> <span class="nv">$name-3</span><span class="o">,</span> <span class="nv">$name-4</span><span class="o">,</span> <span class="nv">$name-5</span><span class="o">,</span> <span class="nv">$name-6</span><span class="o">,</span> <span class="nv">$name-7</span><span class="o">,</span> <span class="nv">$name-8</span><span class="o">,</span> <span class="nv">$name-9</span><span class="o">,</span> <span class="nv">$name-10</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -441,16 +441,16 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>Returns the golden ratio of a given number. Must provide a Pixel or Em value for first argument. Also takes a required incriment value that is a non-zero integer: ...-3, -2, -1, 1, 2, 3...</p>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="nt">div</span> <span class="p">{</span>
-                    <span class="n">Increment</span> <span class="n">Up</span> <span class="n">GR</span> <span class="n">with</span> <span class="n">positive</span> <span class="n">value</span>
-  <span class="k">font-size</span><span class="o">:</span>        <span class="n">golden</span><span class="o">-</span><span class="n">ratio</span><span class="p">(</span><span class="m">14px</span><span class="o">,</span>  <span class="m">1</span><span class="p">);</span>    <span class="o">//</span> <span class="n">returns</span><span class="o">:</span> <span class="m">22.652px</span>
+<div class="highlight"><pre><code class="scss"><span class="nt">div</span> <span class="p">{</span>
+                    <span class="na">Increment</span><span class="err"> </span><span class="na">Up</span><span class="err"> </span><span class="na">GR</span><span class="err"> </span><span class="na">with</span><span class="err"> </span><span class="na">positive</span><span class="err"> </span><span class="na">value</span>
+  <span class="na">font-size</span><span class="o">:</span>        <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span>  <span class="mi">1</span><span class="p">);</span>    <span class="c1">// returns: 22.652px</span>
 
-                    <span class="n">Increment</span> <span class="n">Down</span> <span class="n">GR</span> <span class="n">with</span> <span class="n">negative</span> <span class="n">value</span>
-  <span class="k">font-size</span><span class="o">:</span>        <span class="n">golden</span><span class="o">-</span><span class="n">ratio</span><span class="p">(</span><span class="m">14px</span><span class="o">,</span> <span class="m">-1</span><span class="p">);</span>    <span class="o">//</span> <span class="n">returns</span><span class="o">:</span> <span class="m">8.653px</span>
+                    <span class="na">Increment</span><span class="err"> </span><span class="na">Down</span><span class="err"> </span><span class="na">GR</span><span class="err"> </span><span class="na">with</span><span class="err"> </span><span class="na">negative</span><span class="err"> </span><span class="na">value</span>
+  <span class="na">font-size</span><span class="o">:</span>        <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span> <span class="mi">-1</span><span class="p">);</span>    <span class="c1">// returns: 8.653px</span>
 
-                    <span class="n">Can</span> <span class="n">be</span> <span class="n">used</span> <span class="n">with</span> <span class="n">ceil</span><span class="p">(</span><span class="n">round</span> <span class="n">up</span><span class="p">)</span> <span class="n">or</span> <span class="n">floor</span><span class="p">(</span><span class="n">round</span> <span class="n">down</span><span class="p">)</span>
-  <span class="k">font-size</span><span class="o">:</span> <span class="n">floor</span><span class="p">(</span> <span class="n">golden</span><span class="o">-</span><span class="n">ratio</span><span class="p">(</span><span class="m">14px</span><span class="o">,</span>  <span class="m">1</span><span class="p">)</span> <span class="p">);</span>  <span class="o">//</span> <span class="n">returns</span><span class="o">:</span> <span class="m">22px</span>
-  <span class="k">font-size</span><span class="o">:</span>  <span class="n">ceil</span><span class="p">(</span> <span class="n">golden</span><span class="o">-</span><span class="n">ratio</span><span class="p">(</span><span class="m">14px</span><span class="o">,</span>  <span class="m">1</span><span class="p">)</span> <span class="p">);</span>  <span class="o">//</span> <span class="n">returns</span><span class="o">:</span> <span class="m">23px</span>
+                    <span class="na">Can</span><span class="err"> </span><span class="na">be</span><span class="err"> </span><span class="na">used</span><span class="err"> </span><span class="na">with</span><span class="err"> </span><span class="na">ceil(round</span><span class="err"> </span><span class="na">up)</span><span class="err"> </span><span class="na">or</span><span class="err"> </span><span class="na">floor(round</span><span class="err"> </span><span class="na">down)</span>
+  <span class="na">font-size</span><span class="o">:</span> <span class="nf">floor</span><span class="p">(</span> <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span>  <span class="mi">1</span><span class="p">)</span> <span class="p">);</span>  <span class="c1">// returns: 22px</span>
+  <span class="na">font-size</span><span class="o">:</span>  <span class="nf">ceil</span><span class="p">(</span> <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span>  <span class="mi">1</span><span class="p">)</span> <span class="p">);</span>  <span class="c1">// returns: 23px</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -468,12 +468,12 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>The <code>$gw-column</code> and <code>$gw-gutter</code> variables must be defined in your base stylesheet to properly use the grid-width function.</p>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="err">$</span><span class="nt">gw-column</span><span class="o">:</span> <span class="nt">100px</span><span class="o">;</span>          <span class="o">//</span> <span class="nt">Column</span> <span class="nt">Width</span>
-<span class="err">$</span><span class="nt">gw-gutter</span><span class="o">:</span> <span class="nt">40px</span><span class="o">;</span>           <span class="o">//</span> <span class="nt">Gutter</span> <span class="nt">Width</span>
+<div class="highlight"><pre><code class="scss"><span class="na">$gw-column</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>          <span class="c1">// Column Width</span>
+<span class="na">$gw-gutter</span><span class="o">:</span> <span class="mi">40</span><span class="kt">px</span><span class="p">;</span>           <span class="c1">// Gutter Width</span>
 
 <span class="nt">div</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="n">grid</span><span class="o">-</span><span class="k">width</span><span class="p">(</span><span class="m">4</span><span class="p">);</span>     <span class="o">//</span> <span class="n">returns</span> <span class="m">520px</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="o">:</span> <span class="err">$</span><span class="n">gw</span><span class="o">-</span><span class="n">gutter</span><span class="p">;</span>  <span class="o">//</span> <span class="n">returns</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="na">width</span><span class="o">:</span> <span class="nf">grid-width</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>     <span class="c1">// returns 520px;</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="nv">$gw-gutter</span><span class="p">;</span>  <span class="c1">// returns 40px;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -485,11 +485,11 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>Outputs a linear-gradient. Use in conjunction with the background-image mixin. The function takes the same arguments as the <a href="#linear-gradient">linear-gradient mixin</a>.</p>
 
   <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="err">#</span> <span class="nt">Image</span> <span class="nt">asset</span> <span class="nt">with</span> <span class="nt">a</span> <span class="nt">linear-gradient</span>
-<span class="k">@include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">url</span><span class="o">(</span><span class="s2">&quot;/images/a.png&quot;</span><span class="o">),</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">white</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">yellow</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="o">%))</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="nn">#</span> <span class="nt">Image</span> <span class="nt">asset</span> <span class="nt">with</span> <span class="nt">a</span> <span class="nt">linear-gradient</span>
+<span class="o">@</span><span class="nt">include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">url</span><span class="o">(</span><span class="s2">&quot;/images/a.png&quot;</span><span class="o">),</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">white</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">yellow</span> <span class="nt">50</span><span class="err">%</span><span class="o">,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="err">%</span><span class="o">));</span>
 
-<span class="err">#</span> <span class="nt">Multiple</span> <span class="nt">linear-gradients</span><span class="o">;</span>
-<span class="k">@include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">hsla</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">0</span><span class="nc">.25</span><span class="o">)</span> <span class="nt">0</span><span class="o">%,</span> <span class="nt">hsla</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">0</span><span class="nc">.08</span><span class="o">)</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="o">%),</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nf">#4e7ba3</span><span class="o">,</span> <span class="nt">darken</span><span class="o">(</span><span class="nf">#4e7ba4</span><span class="o">,</span> <span class="nt">10</span><span class="o">%))</span> <span class="o">)</span><span class="p">;</span>
+<span class="nn">#</span> <span class="nt">Multiple</span> <span class="nt">linear-gradients</span><span class="o">;</span>
+<span class="o">@</span><span class="nt">include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">hsla</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">100</span><span class="err">%</span><span class="o">,</span> <span class="nt">100</span><span class="err">%</span><span class="o">,</span> <span class="nt">0</span><span class="nc">.25</span><span class="o">)</span> <span class="nt">0</span><span class="err">%</span><span class="o">,</span> <span class="nt">hsla</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">100</span><span class="err">%</span><span class="o">,</span> <span class="nt">100</span><span class="err">%</span><span class="o">,</span> <span class="nt">0</span><span class="nc">.08</span><span class="o">)</span> <span class="nt">50</span><span class="err">%</span><span class="o">,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="err">%</span><span class="o">),</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nn">#4e7ba3</span><span class="o">,</span> <span class="nt">darken</span><span class="o">(</span><span class="nn">#4e7ba4</span><span class="o">,</span> <span class="nt">10</span><span class="err">%</span><span class="o">))</span> <span class="o">);</span>
 </code></pre>
 </div>
 
@@ -501,18 +501,13 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
         <section id="tint-shade">
   <h2>Tint and Shade</h2>
-  <p>Tint and Shade are different from lighten() and darken() functions built into sass. Tint is a mix of color with white. Tint takes a color and percent argument.</p>
+  <p>Tint and Shade are different from <code>lighten()</code> and <code>darken()</code> functions that are built into sass.</p>
+  <p>Tint is a mix of color with white.<br>
+     Shade is a mix of color with black.<br>
+     Both take a color and a percent argument.</p>
 
-  <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="nt">background</span><span class="o">:</span> <span class="nt">tint</span><span class="o">(</span><span class="nt">red</span><span class="o">,</span> <span class="nt">40</span><span class="o">%);</span>
-</code></pre>
-</div>
-
-
-  <p>Shade is a mix of color with black. Shade takes a color and a percentage argument.</p>
-
-  <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="nt">background</span><span class="o">:</span> <span class="nt">shade</span><span class="o">(</span><span class="nt">blue</span><span class="o">,</span> <span class="nt">60</span><span class="o">%);</span>
+<div class="highlight"><pre><code class="scss"><span class="na">background</span><span class="o">:</span> <span class="nf">tint</span><span class="p">(</span><span class="nb">red</span><span class="o">,</span> <span class="mi">40</span><span class="kt">%</span><span class="p">);</span>
+<span class="na">background</span><span class="o">:</span> <span class="nf">shade</span><span class="p">(</span><span class="nb">blue</span><span class="o">,</span> <span class="mi">60</span><span class="kt">%</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -524,14 +519,27 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
         <section id="buttons">
   <h2>Buttons</h2>
   <p>The button add-on provides well-designed buttons with a single line in your CSS.</p>
-  <p>The mixin supports a style parameter and an optional color argument.<br/> The available styles are <strong>"simple"</strong> (default), <strong>"shiny"</strong> and <strong>"pill"</strong>.</p>
+  <p>The mixin supports a style parameter and an optional color argument.
+    <br/>The available button styles are:
+    <ul>
+      <li>
+        <code>simple</code> (default)
+      </li>
+      <li>
+        <code>shiny</code>
+      </li>
+      <li>
+        <code>pill</code>
+      </li>
+    </ul>
+  </p>
 
   <section class="demo">
     <div class="wrapper">
       <h3>Simple Button Style</h3>
-      <p>The mixin can be called with no arguments, which will render a blue button with the "simple" style.</p>
-<div class="highlight"><pre><code class="css"><span class="nt">button</span> <span class="p">{</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">;</span>
+      <p>The mixin can be called with no arguments, which will render a blue button with the <code>simple</code> style.</p>
+<div class="highlight"><pre><code class="scss"><span class="nt">button</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> button</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -541,8 +549,8 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
     <div class="wrapper">
       <h3>Pill Button Style</h3>
-<div class="highlight"><pre><code class="css"><span class="nt">button</span> <span class="p">{</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">(</span><span class="n">pill</span><span class="p">);</span>
+<div class="highlight"><pre><code class="scss"><span class="nt">button</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="n">pill</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -554,9 +562,8 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
       <h3>Shiny Button Style</h3>
       <p>Create beautiful buttons by defining a style and color argument; using a single color, the mixin calculates the gradient, borders, box shadow, text shadow and text color of the button. The mixin will change the text to be light when on a dark background, and dark when on a light background.</p>
 
-<div class="highlight"><pre><code class="css"><span class="err">#</span> <span class="nt">Style</span> <span class="o">+</span> <span class="nt">color</span> <span class="nt">arguments</span>
-<span class="nt">button</span> <span class="p">{</span>
-  <span class="o">@</span><span class="n">include</span> <span class="n">button</span><span class="p">(</span><span class="n">shiny</span><span class="o">,</span> <span class="m">#ff0000</span><span class="p">);</span>
+<div class="highlight"><pre><code class="scss"><span class="nt">button</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="n">shiny</span><span class="o">,</span> <span class="mh">#ff0000</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -569,25 +576,23 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
         <section id="html5-input-types">
   <h2>HTML5 Input Types</h2>
-  <p>This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimick input[type="text"].</p>
+  <p>This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimick <code>input[type="text"]</code>.</p>
+  <p>Note: You must use interpolation with the variable&mdash;<code>#{}</code>.</p>
 
-  <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="o">]</span>
-<span class="o">*</span> <span class="o">=</span> <span class="o">[</span><span class="nt">color</span><span class="o">,</span> <span class="nt">date</span><span class="o">,</span> <span class="nt">datetime</span><span class="o">,</span> <span class="nt">datetime-local</span><span class="o">,</span> <span class="nt">email</span><span class="o">,</span> <span class="nt">month</span><span class="o">,</span> <span class="nt">number</span><span class="o">,</span> <span class="nt">password</span><span class="o">,</span> <span class="nt">search</span><span class="o">,</span> <span class="nt">tel</span><span class="o">,</span> <span class="nt">text</span><span class="o">,</span> <span class="nt">time</span><span class="o">,</span> <span class="nt">url</span><span class="o">,</span> <span class="nt">week</span><span class="o">]</span>
+<h3>Example</h3>
+<div class="highlight"><pre><code class="scss"><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">all-text-inputs</span><span class="p">}</span> <span class="p">{</span>
+  <span class="na">border</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="nb">green</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre>
 </div>
 
 
-  <p>Usage Note: You must use interpolation with the variable.</p>
-
-  <h3>Demo Code</h3>
-<div class="highlight"><pre><code class="css"><span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="n">all</span><span class="o">-</span><span class="k">text</span><span class="o">-</span><span class="n">inputs</span><span class="p">}</span><span class="o">,</span> <span class="nt">textarea</span> <span class="p">{</span>
-  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">green</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nt">Output</span><span class="o">:</span>
-<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;number&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;search&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;tel&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;url&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;color&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;date&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;datetime&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;datetime-local&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;week&quot;</span><span class="o">],</span> <span class="nt">textarea</span> <span class="p">{</span>
-  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">green</span><span class="p">;</span>
+<h3>Output</h3>
+<div class="highlight"><pre><code class="scss"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;number&quot;</span><span class="o">],</span>   <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;search&quot;</span><span class="o">],</span>
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;tel&quot;</span><span class="o">],</span>   <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="o">],</span>     <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;url&quot;</span><span class="o">],</span>      <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;color&quot;</span><span class="o">],</span>
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;date&quot;</span><span class="o">],</span>  <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;datetime&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;datetime-local&quot;</span><span class="o">],</span>
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="o">],</span>     <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;week&quot;</span><span class="o">]</span> <span class="p">{</span>
+  <span class="na">border</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="nb">green</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -603,7 +608,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations and transitions. The provided timing functions are the same as the jQuery UI demo: <a href="http://jqueryui.com/demos/effect/easing.html">easing functions</a>.</p>
 
   <h3>Example Code</h3>
-<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">transition</span><span class="o">(</span><span class="nt">all</span><span class="o">,</span> <span class="nt">5s</span><span class="o">,</span> <span class="err">$</span><span class="nt">ease-in-circ</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transition</span><span class="p">(</span><span class="n">all</span><span class="o">,</span> <span class="mi">5</span><span class="kt">s</span><span class="o">,</span> <span class="nv">$ease-in-circ</span><span class="p">);</span>
 </code></pre>
 </div>
 

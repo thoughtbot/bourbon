@@ -246,7 +246,7 @@ pre {
   }
 }
 
-p code {
+p code, ul code, ol code {
   background-color: $background-color;
   color: hsl(0, 0%, 27%);
   padding: 0 .2em;

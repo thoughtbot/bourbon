@@ -1158,7 +1158,7 @@ pre {
     background-color: #f9e9be;
     -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
 
-p code {
+p code, ul code, ol code {
   background-color: #f3f1ec;
   color: #454545;
   padding: 0 .2em;

@@ -5,13 +5,13 @@
   <h3>Position</h3>
   <p>Shorthand notation for setting the position of the elements in your page.</P>
   <p>Instead of writing:</p>
-{% highlight css %}
+{% highlight scss %}
 position: relative;
 top: 0px;
 left: 100px;
 {% endhighlight %}
   <p>Your can write:</p>
-{% highlight css %}
+{% highlight scss %}
 @include position(relative, 0px 0 0 100px);
 {% endhighlight %}
   <p>The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.</p>

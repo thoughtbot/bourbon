@@ -27,7 +27,7 @@ To update the bourbon files with the latest version:
 For Code Highlighting within Jekyll:
     gem install pygmentize
 
-    {% highlight css %}
+    {% highlight scss %}
       <code here>
     {% endhighlight %}
 

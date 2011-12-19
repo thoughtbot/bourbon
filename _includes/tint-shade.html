@@ -1,16 +1,12 @@
 <section id="tint-shade">
   <h2>Tint and Shade</h2>
-  <p>Tint and Shade are different from lighten() and darken() functions built into sass. Tint is a mix of color with white. Tint takes a color and percent argument.</p>
+  <p>Tint and Shade are different from <code>lighten()</code> and <code>darken()</code> functions that are built into sass.</p>
+  <p>Tint is a mix of color with white.<br>
+     Shade is a mix of color with black.<br>
+     Both take a color and a percent argument.</p>
 
-  <h3>Demo Code</h3>
-{% highlight css %}
+{% highlight scss %}
 background: tint(red, 40%);
-{% endhighlight %}
-
-  <p>Shade is a mix of color with black. Shade takes a color and a percentage argument.</p>
-
-  <h3>Demo Code</h3>
-{% highlight css %}
 background: shade(blue, 60%);
 {% endhighlight %}
 
