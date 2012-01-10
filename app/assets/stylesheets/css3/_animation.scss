@@ -153,9 +153,19 @@
   }
 }
 
-// Official animation shorthand property. Needs more work to actually be useful.
-@mixin animation ($name, $duration, $timing-function, $delay, $iteration-count, $direction) {
-  -webkit-animation: $name $duration $timing-function $delay $iteration-count $direction;
-     -moz-animation: $name $duration $timing-function $delay $iteration-count $direction;
-          animation: $name $duration $timing-function $delay $iteration-count $direction;
+// Official animation shorthand property.
+@mixin animation ($animation-1,
+  $animation-2: false, $animation-3: false,
+  $animation-4: false, $animation-5: false,
+  $animation-6: false, $animation-7: false,
+  $animation-8: false, $animation-9: false)
+  {
+    $full: compact($animation-1, $animation-2, $animation-3, $animation-4,
+                   $animation-5, $animation-6, $animation-7, $animation-8, $animation-9);
+
+  -webkit-animation: $full;
+     -moz-animation: $full;
+      -ms-animation: $full;
+       -o-animation: $full;
+          animation: $full;
 }
