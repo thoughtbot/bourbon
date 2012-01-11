@@ -1,6 +1,22 @@
 // http://www.w3.org/TR/css3-animations/#the-animation-name-property-
 // Each of these mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
 
+// Official animation shorthand property.
+@mixin animation ($animation-1,
+  $animation-2: false, $animation-3: false,
+  $animation-4: false, $animation-5: false,
+  $animation-6: false, $animation-7: false,
+  $animation-8: false, $animation-9: false)
+  {
+    $full: compact($animation-1, $animation-2, $animation-3, $animation-4,
+                   $animation-5, $animation-6, $animation-7, $animation-8, $animation-9);
+
+  -webkit-animation: $full;
+     -moz-animation: $full;
+          animation: $full;
+}
+
+// Individual Animation Properties
 @mixin animation-name ($name-1,
   $name-2: false, $name-3: false,
   $name-4: false, $name-5: false,
@@ -127,45 +143,8 @@
 }
 
 
-// Shorthand for a basic animation. Supports multiple parentheses-deliminated values for each variable.
-// Example: @include animation-basic((slideup, fadein), (1.0s, 2.0s), ease-in);
+// Deprecated
 @mixin animation-basic ($name, $time: 0, $motion: ease) {
-    $length-of-name: length($name);
-    $length-of-time: length($time);
-  $length-of-motion: length($motion);
-
-  @if $length-of-name > 1 {
-    @include animation-name(zip($name));
-  } @else {
-    @include animation-name(    $name);
-  }
-
-  @if $length-of-time > 1 {
-    @include animation-duration(zip($time));
-  } @else {
-    @include animation-duration(    $time);
-  }
-
-  @if $length-of-motion > 1 {
-    @include animation-timing-function(zip($motion));
-  } @else {
-    @include animation-timing-function(    $motion);
-  }
+  @warn "The animation-basic mixin is deprecated. Use the animation mixin instead.";
 }
 
-// Official animation shorthand property.
-@mixin animation ($animation-1,
-  $animation-2: false, $animation-3: false,
-  $animation-4: false, $animation-5: false,
-  $animation-6: false, $animation-7: false,
-  $animation-8: false, $animation-9: false)
-  {
-    $full: compact($animation-1, $animation-2, $animation-3, $animation-4,
-                   $animation-5, $animation-6, $animation-7, $animation-8, $animation-9);
-
-  -webkit-animation: $full;
-     -moz-animation: $full;
-      -ms-animation: $full;
-       -o-animation: $full;
-          animation: $full;
-}
