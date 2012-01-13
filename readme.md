@@ -358,7 +358,7 @@ Create beautiful buttons by defining a style and color argument; using a single 
 
 ### Font-family
 Bourbon provides a few default font-families for convenience sake.
-Available font-family variables: `$georgia`, `$helvetica`, `$lucida-grand`, `$verdana`
+Available font-family variables: `$georgia`, `$helvetica`, `$lucida-grande`, `$verdana`
 
     font-family: $helvetica
 
