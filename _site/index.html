@@ -146,7 +146,7 @@
 
   <p>To output properly, Bourbon must be explicitly required (<code>-r</code>) by Sass at the command line:</p>
 
-<div class="highlight"><pre><code class="bash">// Example <span class="o">(</span>project root directory<span class="o">)</span>
+<div class="highlight"><pre><code class="bash"><span class="c"># Example (project root directory)</span>
 sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
 </code></pre>
 </div>
@@ -330,9 +330,8 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
         <section id="flex-box">
   <h2>Flex Box</h2>
-  <p>The flex-box mixin is bases on the 2009 w3c spec. The mixin with change to the flexible box-model. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">More info</a></p>
+  <p>The flex-box mixin is based on the 2009 w3c spec. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">More info</a></p>
 
-  <h3>Demo Code</h3>
 <div class="highlight"><pre><code class="scss"><span class="nt">div</span><span class="nc">.parent</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> display-box</span><span class="p">;</span>
   <span class="k">@include</span><span class="nd"> box-align</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
