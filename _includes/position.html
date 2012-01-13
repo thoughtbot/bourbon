@@ -5,14 +5,14 @@
   <p>Note: unit-less values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.</p>
 
   <p>Instead of writing:</p>
-{% highlight css %}
+{% highlight scss %}
 position: relative;
 top: 0px;
 left: 100px;
 {% endhighlight %}
 
   <p>Your can write:</p>
-{% highlight css %}
+{% highlight scss %}
 @include position(relative, 0px 0 0 100px);
 {% endhighlight %}
 </section>

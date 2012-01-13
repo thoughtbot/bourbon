@@ -20,7 +20,7 @@
     <div class="wrapper">
       <h3>Simple Button Style</h3>
       <p>The mixin can be called with no arguments, which will render a blue button with the <code>simple</code> style.</p>
-{% highlight css %}
+{% highlight scss %}
 button {
   @include button;
 }
@@ -30,7 +30,7 @@ button {
 
     <div class="wrapper">
       <h3>Pill Button Style</h3>
-{% highlight css %}
+{% highlight scss %}
 button {
   @include button(pill);
 }
@@ -42,7 +42,7 @@ button {
       <h3>Shiny Button Style</h3>
       <p>Create beautiful buttons by defining a style and color argument; using a single color, the mixin calculates the gradient, borders, box shadow, text shadow and text color of the button. The mixin will change the text to be light when on a dark background, and dark when on a light background.</p>
 
-{% highlight css %}
+{% highlight scss %}
 button {
   @include button(shiny, #ff0000);
 }
