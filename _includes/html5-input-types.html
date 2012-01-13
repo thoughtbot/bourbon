@@ -3,14 +3,13 @@
   <p>This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimick <code>input[type="text"]</code>.</p>
   <p>Note: You must use interpolation with the variable&mdash;<code>#{}</code>.</p>
 
-<h3>Example</h3>
 {% highlight scss %}
 #{$all-text-inputs} {
   border: 1px solid green;
 }
 {% endhighlight %}
 
-<h3>Output</h3>
+<h3>CSS Output</h3>
 {% highlight scss %}
 input[type="email"], input[type="number"],   input[type="password"], input[type="search"],
 input[type="tel"],   input[type="text"],     input[type="url"],      input[type="color"],
@@ -20,7 +19,4 @@ input[type="month"], input[type="time"],     input[type="week"] {
 }
 {% endhighlight %}
 
-  <!-- <h3>Demo</h3> -->
-  <!-- <section class="demo"> -->
-  <!-- </section> -->
 </section>

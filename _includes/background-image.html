@@ -7,19 +7,30 @@
 // Multiple image assets
 @include background-image(url("/images/a.png"), url("images/b.png"));
 
-// Linear-gradient
-@include background-image(linear-gradient(white 0, yellow 50%, transparent 50%));
-
 // Image asset with a linear-gradient
 @include background-image(url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
 
 // Multiple linear-gradients - Demo
 @include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), 
-                          linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
+                           linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)));
+
+// NOT SUPPORTED - Multiple image assets with shorthand notation
+@include background-image(url("/images/a.png") center no-repeat, url("images/b.png") left repeat);
 {% endhighlight %}
 
   <h3>Demo</h3>
   <section class="demo">
   </section>
+
+<h3>Note about shorthand notation</h3>
+
+<p>All CSS background properties support comma delimited values. For multiple background images you can specify the background properties like position, repeat, etc. for each image. For example:</p>
+
+{% highlight scss %}
+@include background-image(url("/images/a.png"), url("images/b.png"));
+background-position: center top, center;
+background-repeat: no-repeat, repeat-x;
+{% endhighlight %}
+
 </section>
 

@@ -11,6 +11,7 @@
       <nav class="fixed-nav">
   <ul>
     <!-- <input type="search" placeholder="Search..."></input> -->
+    <li><a href="https://github.com/thoughtbot/bourbon">View on Github</a></li>
     <li><a href="#install">Install</a></li>
     <li class="title"><a href="#mixins"><h3>Mixins</h3></a></li>
     <li><a href="#animations">Animations</a></li>
@@ -28,7 +29,6 @@
     <li><a href="#position">Position</a></li>
     <li><a href="#radial-gradient">Radial-gradient</a></li>
     <li><a href="#transform">Transform</a></li>
-    <li><a href="#transform-origin">Transform-origin</a></li>
     <li><a href="#transitions">Transitions</a></li>
 
     <li class="title"><a href="#functions"><h3>Functions</h3></a><li>
@@ -57,7 +57,6 @@
 
         <section id="intro">
   <p>The purpose of Bourbon Sass Mixins is to provide a comprehensive library of sass mixins that are designed to be as vanilla as possible, meaning they should not deter from the original CSS syntax. The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
-  <a href="http://github.com/thoughtbot/bourbon">View Bourbon on Github</a>
 </section>
 
 <section id="install">
@@ -133,7 +132,7 @@
 </div>
 
 
-  <h2>Install in a non-rails Project</h2>
+  <h2>Install in a non-rails project</h2>
   <p>Clone the repository.</p>
   <p>Bourbon includes an easy way to generate a directory with all the necessary files. </p>
 
@@ -159,10 +158,6 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 </div>
 
 
-</section>
-<section id="browser-support">
-  <h2>Browser support</h2>
-  <p>Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.</p>
 </section>
 
 
@@ -207,15 +202,15 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 <div class="highlight"><pre><code class="scss"><span class="c1">// Multiple image assets</span>
 <span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span><span class="sx">url(&quot;/images/a.png&quot;)</span><span class="o">,</span> <span class="sx">url(&quot;images/b.png&quot;)</span><span class="p">);</span>
 
-<span class="c1">// Linear-gradient</span>
-<span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span><span class="nf">linear-gradient</span><span class="p">(</span><span class="nb">white</span> <span class="mi">0</span><span class="o">,</span> <span class="nb">yellow</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">transparent</span> <span class="mi">50</span><span class="kt">%</span><span class="p">));</span>
-
 <span class="c1">// Image asset with a linear-gradient</span>
 <span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span><span class="sx">url(&quot;/images/a.png&quot;)</span><span class="o">,</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="nb">white</span> <span class="mi">0</span><span class="o">,</span> <span class="nb">yellow</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">transparent</span> <span class="mi">50</span><span class="kt">%</span><span class="p">));</span>
 
 <span class="c1">// Multiple linear-gradients - Demo</span>
 <span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span><span class="nf">linear-gradient</span><span class="p">(</span><span class="nf">hsla</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.25</span><span class="p">)</span> <span class="mi">0</span><span class="kt">%</span><span class="o">,</span> <span class="nf">hsla</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.08</span><span class="p">)</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">transparent</span> <span class="mi">50</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span> 
-                          <span class="nf">linear-gradient</span><span class="p">(</span><span class="mh">#4e7ba3</span><span class="o">,</span> <span class="nf">darken</span><span class="p">(</span><span class="mh">#4e7ba4</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">))</span> <span class="p">);</span>
+                           <span class="nf">linear-gradient</span><span class="p">(</span><span class="mh">#4e7ba3</span><span class="o">,</span> <span class="nf">darken</span><span class="p">(</span><span class="mh">#4e7ba4</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">)));</span>
+
+<span class="c1">// NOT SUPPORTED - Multiple image assets with shorthand notation</span>
+<span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span><span class="sx">url(&quot;/images/a.png&quot;)</span> <span class="no">center</span> <span class="no">no-repeat</span><span class="o">,</span> <span class="sx">url(&quot;images/b.png&quot;)</span> <span class="no">left</span> <span class="no">repeat</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -223,6 +218,18 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <h3>Demo</h3>
   <section class="demo">
   </section>
+
+<h3>Note about shorthand notation</h3>
+
+<p>All CSS background properties support comma delimited values. For multiple background images you can specify the background properties like position, repeat, etc. for each image. For example:</p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span><span class="sx">url(&quot;/images/a.png&quot;)</span><span class="o">,</span> <span class="sx">url(&quot;images/b.png&quot;)</span><span class="p">);</span>
+<span class="na">background-position</span><span class="o">:</span> <span class="no">center</span> <span class="no">top</span><span class="o">,</span> <span class="no">center</span><span class="p">;</span>
+<span class="na">background-repeat</span><span class="o">:</span> <span class="no">no-repeat</span><span class="o">,</span> <span class="no">repeat-x</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
 </section>
 
 
@@ -310,7 +317,6 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <h2>Box Sizing</h2>
   <p>Box-sizing will change the box-model of the element it is applied to.</p>
 
-  <h3>Demo Code</h3>
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> box-sizing</span><span class="p">(</span><span class="no">border</span><span class="o">-</span><span class="n">box</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -357,7 +363,6 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <h2>Inline Block</h2>
   <p>The inline-block mixin provides support for the inline-block property in IE6 and IE7.</p>
 
-  <h3>Demo Code</h3>
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> inline-block</span><span class="p">;</span>
 </code></pre>
 </div>
@@ -415,29 +420,15 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 </section>
 
         <section id="transform">
-  <h2>Transform</h2>
+  <h2>Transform &amp; Transform-origin</h2>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transform</span><span class="p">(</span><span class="nf">translateY</span><span class="p">(</span><span class="mi">50</span><span class="kt">px</span><span class="p">));</span>
+
+<span class="k">@include</span><span class="nd"> transform-origin</span><span class="p">(</span><span class="no">center</span> <span class="no">top</span><span class="p">);</span>
 </code></pre>
 </div>
 
 
-  <h3>Demo</h3>
-  <section class="demo">
-  </section>
-</section>
-
-        <section id="transform-origin">
-  <h2>Transform Origin</h2>
-
-<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transform-origin</span><span class="p">(</span><span class="no">center</span> <span class="no">top</span><span class="p">);</span>
-</code></pre>
-</div>
-
-
-  <h3>Demo</h3>
-  <section class="demo">
-  </section>
 </section>
 
         <section id="transitions">
@@ -450,9 +441,6 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 </div>
 
 
-  <h3>Demo</h3>
-  <section class="demo">
-  </section>
 </section>
 
 
@@ -461,15 +449,11 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <h2>Compact</h2>
   <p>The compact function will strip out any value from a list that is <code>false</code>. Takes up to 10 arguments.
 
-  <h3>Demo Code</h3>
 <div class="highlight"><pre><code class="scss"><span class="nv">$full</span><span class="o">:</span>  <span class="nf">compact</span><span class="p">(</span><span class="nv">$name-1</span><span class="o">,</span> <span class="nv">$name-2</span><span class="o">,</span> <span class="nv">$name-3</span><span class="o">,</span> <span class="nv">$name-4</span><span class="o">,</span> <span class="nv">$name-5</span><span class="o">,</span> <span class="nv">$name-6</span><span class="o">,</span> <span class="nv">$name-7</span><span class="o">,</span> <span class="nv">$name-8</span><span class="o">,</span> <span class="nv">$name-9</span><span class="o">,</span> <span class="nv">$name-10</span><span class="p">);</span>
 </code></pre>
 </div>
 
 
-  <h3>Demo</h3>
-  <section class="demo">
-  </section>
 </section>
 
         <section id="golden-ratio">
@@ -516,6 +500,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 </div>
 
 
+  <h3>Demo</h3>
   <section class="demo">
   </section>
 </section>
@@ -536,7 +521,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 </section>
 
         <section id="tint-shade">
-  <h2>Tint and Shade</h2>
+  <h2>Tint &amp; Shade</h2>
   <p>Tint and Shade are different from <code>lighten()</code> and <code>darken()</code> functions that are built into sass.</p>
   <p>Tint is a mix of color with white.<br>
      Shade is a mix of color with black.<br>
@@ -555,20 +540,18 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
         <section id="buttons">
   <h2>Buttons</h2>
   <p>The button add-on provides well-designed buttons with a single line in your CSS.</p>
-  <p>The mixin supports a style parameter and an optional color argument.
-    <br/>The available button styles are:
-    <ul>
-      <li>
-        <code>simple</code> (default)
-      </li>
-      <li>
-        <code>shiny</code>
-      </li>
-      <li>
-        <code>pill</code>
-      </li>
-    </ul>
-  </p>
+  <p>The mixin supports a style parameter and an optional color argument. The available button styles are:</p>
+  <ul>
+    <li>
+      <code>simple</code> (default)
+    </li>
+    <li>
+      <code>shiny</code>
+    </li>
+    <li>
+      <code>pill</code>
+    </li>
+  </ul>
 
   <section class="demo">
     <div class="wrapper">
@@ -637,7 +620,6 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimick <code>input[type="text"]</code>.</p>
   <p>Note: You must use interpolation with the variable&mdash;<code>#{}</code>.</p>
 
-<h3>Example</h3>
 <div class="highlight"><pre><code class="scss"><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">all-text-inputs</span><span class="p">}</span> <span class="p">{</span>
   <span class="na">border</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="nb">green</span><span class="p">;</span>
 <span class="p">}</span>
@@ -645,7 +627,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 </div>
 
 
-<h3>Output</h3>
+<h3>CSS Output</h3>
 <div class="highlight"><pre><code class="scss"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;number&quot;</span><span class="o">],</span>   <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;search&quot;</span><span class="o">],</span>
 <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;tel&quot;</span><span class="o">],</span>   <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="o">],</span>     <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;url&quot;</span><span class="o">],</span>      <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;color&quot;</span><span class="o">],</span>
 <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;date&quot;</span><span class="o">],</span>  <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;datetime&quot;</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;datetime-local&quot;</span><span class="o">],</span>
@@ -656,16 +638,12 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 </div>
 
 
-  <!-- <h3>Demo</h3> -->
-  <!-- <section class="demo"> -->
-  <!-- </section> -->
 </section>
 
         <section id="timing-functions">
   <h2>Timing Functions</h2>
   <p>These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations and transitions. The provided timing functions are the same as the jQuery UI demo: <a href="http://jqueryui.com/demos/effect/easing.html">easing functions</a>.</p>
 
-  <h3>Example Code</h3>
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transition</span><span class="p">(</span><span class="n">all</span><span class="o">,</span> <span class="mi">5</span><span class="kt">s</span><span class="o">,</span> <span class="nv">$ease-in-circ</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -828,7 +806,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
         <h1 id="footer"></h1>
         <section id="browser-support">
   <h2>Browser Support &amp; Pull Requests</h2>
-
+  <p>Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.</p>
   <p>A general rule when submitting a pull request for a new mixin, ask yourself the following: Do the following browsers <em>only</em> support the CSS3 properties using vendor specific prefixes?</p>
   <p>If the answer is yes, there is a high chance the mixin will be accepted via a pull request. </p>
   <ul>
