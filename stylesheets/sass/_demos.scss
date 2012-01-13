@@ -97,7 +97,7 @@ section#linear-gradient-function {
 //************************************************************************//
 // Radial-gradient Mixin
 //************************************************************************//
-section#radial-gradient {
+section#radial-gradient, section#radial-gradient-function {
   section.demo {
     @include radial-gradient(50% 50%, circle cover, $demo-color, $demo-color-alt);
     height: 40px;
@@ -124,6 +124,13 @@ section#buttons {
   }
 }
 
+
+//************************************************************************//
+// Font-Family
+//************************************************************************//
+section#font-family {
+}
+
 //************************************************************************//
 // Timing Functions Demo
 //************************************************************************//
@@ -139,9 +146,9 @@ section#timing-functions {
       }
     }
 
-    p {
+    code {
       display: inline-block;
-      width: grid-width(1);
+      width: grid-width(2);
       margin-right: $gw-gutter;
       vertical-align: top;
     }
@@ -158,7 +165,7 @@ section#timing-functions {
       height: 20px;
       width: 20px;
       @include transition-property(all);
-      @include transition-duration(5s);
+      @include transition-duration(3s);
     }
 
     div.ease-in-quad  { @include transition-timing-function($ease-in-quad ); }
@@ -168,6 +175,7 @@ section#timing-functions {
     div.ease-in-sine  { @include transition-timing-function($ease-in-sine ); }
     div.ease-in-expo  { @include transition-timing-function($ease-in-expo ); }
     div.ease-in-circ  { @include transition-timing-function($ease-in-circ ); }
+    div.ease-in-back  { @include transition-timing-function($ease-in-back ); }
 
     div.ease-out-quad  { @include transition-timing-function($ease-out-quad ); }
     div.ease-out-cubic { @include transition-timing-function($ease-out-cubic); }
@@ -176,6 +184,7 @@ section#timing-functions {
     div.ease-out-sine  { @include transition-timing-function($ease-out-sine ); }
     div.ease-out-expo  { @include transition-timing-function($ease-out-expo ); }
     div.ease-out-circ  { @include transition-timing-function($ease-out-circ ); }
+    div.ease-out-back  { @include transition-timing-function($ease-out-back ); }
 
     div.ease-in-out-quad  { @include transition-timing-function($ease-in-out-quad ); }
     div.ease-in-out-cubic { @include transition-timing-function($ease-in-out-cubic); }
@@ -184,5 +193,6 @@ section#timing-functions {
     div.ease-in-out-sine  { @include transition-timing-function($ease-in-out-sine ); }
     div.ease-in-out-expo  { @include transition-timing-function($ease-in-out-expo ); }
     div.ease-in-out-circ  { @include transition-timing-function($ease-in-out-circ ); }
+    div.ease-in-out-back  { @include transition-timing-function($ease-in-out-back ); }
   }
 }

@@ -30,16 +30,20 @@
     <li><a href="#transform">Transform</a></li>
     <li><a href="#transform-origin">Transform-origin</a></li>
     <li><a href="#transitions">Transitions</a></li>
+
     <li class="title"><a href="#functions"><h3>Functions</h3></a><li>
     <li><a href="#compact">Compact</a></li>
     <li><a href="#golden-ratio">Golden-ratio</a></li>
     <li><a href="#grid-width">Grid Width</a></li>
     <li><a href="#linear-gradient-function">Linear-gradient</a></li>
     <li><a href="#tint-shade">Tint and Shade</a></li>
+
     <li class="title"><a href="#add-ons"><h3>Add-ons</h3></a><li>
     <li><a href="#buttons">Buttons</a></li>
+    <li><a href="#font-family">Font-Family</a></li>
     <li><a href="#html5-input-types">HTML5 Input Types</a></li>
     <li><a href="#timing-functions">Timing Functions</a></li>
+
     <li class="title"><a href="#complete-list"><h3>Complete List</h3></a><li>
     <li><a href="#complete-list-mixins">Mixins</a></li>
     <li><a href="#complete-list-functions">Functions</a></li>
@@ -129,7 +133,8 @@
 </div>
 
 
-  <h2>Install without Rails </h2>
+  <h2>Install in a non-rails Project</h2>
+  <p>Clone the repository.</p>
   <p>Bourbon includes an easy way to generate a directory with all the necessary files. </p>
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake generate
@@ -196,18 +201,19 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
         <section id="background-image">
   <h2>Background-image</h2>
-  <p>The background-image mixin is helpful for chaining multiple comma delimited background images and/or linear-gradients into one background-image property. The Background-image mixin supports up to 10 background-images.</p>
+  <p>The background-image mixin is helpful for chaining multiple comma delimited background images and/or linear/radial-gradients into one background-image property. The Background-image mixin supports up to 10 background-images.</p>
+  <p>Use in combination with the <a href="#linear-gradient-function">linear-gradient function</a> and the <a href="#radial-gradient-function">radial-gradient function</a>.
 
-<div class="highlight"><pre><code class="css"><span class="o">//</span> <span class="nt">Multiple</span> <span class="nt">image</span> <span class="nt">assets</span>
+<div class="highlight"><pre><code class="css"><span class="c">/* Multiple image assets */</span>
 <span class="k">@include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">url</span><span class="o">(</span><span class="s2">&quot;/images/a.png&quot;</span><span class="o">),</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;images/b.png&quot;</span><span class="o">))</span><span class="p">;</span>
 
-<span class="o">//</span> <span class="nt">Linear-gradient</span>
+<span class="c">/* Linear-gradient */</span>
 <span class="k">@include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">white</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">yellow</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="o">%))</span><span class="p">;</span>
 
-<span class="o">//</span> <span class="nt">Image</span> <span class="nt">asset</span> <span class="nt">with</span> <span class="nt">a</span> <span class="nt">linear-gradient</span>
+<span class="c">/* Image asset with a linear-gradient */</span>
 <span class="k">@include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">url</span><span class="o">(</span><span class="s2">&quot;/images/a.png&quot;</span><span class="o">),</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">white</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">yellow</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="o">%))</span><span class="p">;</span>
 
-<span class="o">//</span> <span class="nt">Multiple</span> <span class="nt">linear-gradients</span> <span class="nt">-</span> <span class="nt">Demo</span>
+<span class="c">/* Multiple linear-gradients - Demo */</span>
 <span class="k">@include</span> <span class="nt">background-image</span><span class="o">(</span><span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">hsla</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">0</span><span class="nc">.25</span><span class="o">)</span> <span class="nt">0</span><span class="o">%,</span> <span class="nt">hsla</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">100</span><span class="o">%,</span> <span class="nt">0</span><span class="nc">.08</span><span class="o">)</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">transparent</span> <span class="nt">50</span><span class="o">%),</span> 
                           <span class="nt">linear-gradient</span><span class="o">(</span><span class="nf">#4e7ba3</span><span class="o">,</span> <span class="nt">darken</span><span class="o">(</span><span class="nf">#4e7ba4</span><span class="o">,</span> <span class="nt">10</span><span class="o">%))</span> <span class="o">)</span><span class="p">;</span>
 </code></pre>
@@ -396,7 +402,7 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
         <section id="radial-gradient">
   <h2>Radial Gradient</h2>
-  <p>Takes up to 10 gradients. Position and shape are required.
+  <p>Takes up to 10 gradients. Position and shape are required. See also the <a href="#background-image">background-image mixin</a>.</p>
 
 <div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">radial-gradient</span><span class="o">(</span><span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">circle</span> <span class="nt">cover</span><span class="o">,</span> <span class="nf">#1e5799</span><span class="o">,</span> <span class="nf">#3dc3d1</span><span class="o">)</span><span class="p">;</span>
 <span class="k">@include</span> <span class="nt">radial-gradient</span><span class="o">(</span><span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">circle</span> <span class="nt">cover</span><span class="o">,</span> <span class="nf">#eee</span> <span class="nt">10</span><span class="o">%,</span> <span class="nf">#1e5799</span> <span class="nt">30</span><span class="o">%,</span> <span class="nf">#efefef</span><span class="o">)</span><span class="p">;</span>
@@ -412,7 +418,6 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
         <section id="transform">
   <h2>Transform</h2>
 
-  <h3>Demo Code</h3>
 <div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">transform</span><span class="o">(</span><span class="nt">translateY</span><span class="o">(</span><span class="nt">50px</span><span class="o">))</span><span class="p">;</span>
 </code></pre>
 </div>
@@ -426,7 +431,6 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
         <section id="transform-origin">
   <h2>Transform Origin</h2>
 
-  <h3>Demo Code</h3>
 <div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">transform-origin</span><span class="o">(</span><span class="nt">center</span> <span class="nt">top</span><span class="o">)</span><span class="p">;</span>
 </code></pre>
 </div>
@@ -441,10 +445,8 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <h2>Transitions</h2>
   <p>Shorthand mixin: Supports multiple parentheses-delimited values for each variable.</p>
 
-  <h3>Demo Code</h3>
 <div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">transition</span> <span class="o">(</span><span class="nt">all</span><span class="o">,</span> <span class="nt">2</span><span class="nc">.0s</span><span class="o">,</span> <span class="nt">ease-in-out</span><span class="o">)</span><span class="p">;</span>
 <span class="k">@include</span> <span class="nt">transition</span> <span class="o">((</span><span class="nt">opacity</span><span class="o">,</span> <span class="nt">width</span><span class="o">),</span> <span class="o">(</span><span class="nt">1</span><span class="nc">.0s</span><span class="o">,</span> <span class="nt">2</span><span class="nc">.0s</span><span class="o">),</span> <span class="nt">ease-in</span><span class="o">,</span> <span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">2s</span><span class="o">))</span><span class="p">;</span>
-<span class="k">@include</span> <span class="nt">transition</span> <span class="o">(</span><span class="err">$</span><span class="nt">property</span><span class="o">:(</span><span class="nt">opacity</span><span class="o">,</span> <span class="nt">width</span><span class="o">),</span> <span class="err">$</span><span class="nt">delay</span><span class="o">:</span> <span class="o">(</span><span class="nt">1</span><span class="nc">.5s</span><span class="o">,</span> <span class="nt">2</span><span class="nc">.5s</span><span class="o">))</span><span class="p">;</span>
 </code></pre>
 </div>
 
@@ -476,13 +478,13 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>Returns the golden ratio of a given number. Must provide a pixel or em value for the first argument. Also takes a required integer for an incriment value: ...-3, -2, -1, 0, 1, 2, 3...</p>
   <p>Note: The golden-ratio function can be wrapped in sass's <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down, or round up respectively.</p>
 
-<div class="highlight"><pre><code class="css"><span class="o">//</span> <span class="nt">Positive</span> <span class="nt">number</span> <span class="nt">will</span> <span class="nt">increment</span> <span class="nt">up</span> <span class="nt">the</span> <span class="nt">golden-ratio</span>
-<span class="nt">font-size</span><span class="o">:</span> <span class="nt">golden-ratio</span><span class="o">(</span><span class="nt">14px</span><span class="o">,</span>  <span class="nt">1</span><span class="o">);</span>
-<span class="o">//</span> <span class="nt">returns</span><span class="o">:</span> <span class="nt">22</span><span class="nc">.652px</span>
+<div class="highlight"><pre><code class="scss"><span class="cm">/* Positive number will increment up the golden-ratio */</span>
+<span class="na">font-size</span><span class="o">:</span> <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span>  <span class="mi">1</span><span class="p">);</span>
+<span class="cm">/* returns: 22.652px */</span>
 
-<span class="o">//</span> <span class="nt">Negative</span> <span class="nt">number</span> <span class="nt">will</span> <span class="nt">increment</span> <span class="nt">down</span> <span class="nt">the</span> <span class="nt">golden-ratio</span>
-<span class="nt">font-size</span><span class="o">:</span> <span class="nt">golden-ratio</span><span class="o">(</span><span class="nt">14px</span><span class="o">,</span> <span class="nt">-1</span><span class="o">);</span>
-<span class="o">//</span> <span class="nt">returns</span><span class="o">:</span> <span class="nt">8</span><span class="nc">.653px</span>
+<span class="cm">/* Negative number will increment down the golden-ratio */</span>
+<span class="na">font-size</span><span class="o">:</span> <span class="nf">golden-ratio</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span> <span class="mi">-1</span><span class="p">);</span>
+<span class="c1">// returns: 8.653px</span>
 </code></pre>
 </div>
 
@@ -515,6 +517,21 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 </div>
 
 
+  <section class="demo">
+  </section>
+</section>
+
+        <section id="radial-gradient-function">
+  <h2>Radial Gradient</h2>
+  <p>Outputs a radial-gradient. Use in conjunction with the <a href="#background-image">background-image mixin.</a> The function takes the same arguments as the <a href="#radial-gradient">radial-gradient mixin</a>.</p>
+
+<div class="highlight"><pre><code class="css"><span class="k">@include</span> <span class="nt">radial-gradient</span><span class="o">(</span><span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">circle</span> <span class="nt">cover</span><span class="o">,</span> <span class="nf">#1e5799</span><span class="o">,</span> <span class="nf">#3dc3d1</span><span class="o">)</span><span class="p">;</span>
+<span class="k">@include</span> <span class="nt">radial-gradient</span><span class="o">(</span><span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%,</span> <span class="nt">circle</span> <span class="nt">cover</span><span class="o">,</span> <span class="nf">#eee</span> <span class="nt">10</span><span class="o">%,</span> <span class="nf">#1e5799</span> <span class="nt">30</span><span class="o">%,</span> <span class="nf">#efefef</span><span class="o">)</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+  <h3>Demo</h3>
   <section class="demo">
   </section>
 </section>
@@ -594,6 +611,28 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 
 </section>
 
+        <section id="font-family">
+  <h2>Font-Family</h2>
+  <p>Bourbon defines four default font-families as variables for convenience sake:</p>
+
+<div class="highlight"><pre><code class="css"><span class="nt">font-family</span><span class="o">:</span> <span class="err">$</span><span class="nt">helvetica</span><span class="o">;</span>
+<span class="nt">font-family</span><span class="o">:</span> <span class="err">$</span><span class="nt">georgia</span><span class="o">;</span>
+<span class="nt">font-family</span><span class="o">:</span> <span class="err">$</span><span class="nt">lucida-grande</span><span class="o">;</span>
+<span class="nt">font-family</span><span class="o">:</span> <span class="err">$</span><span class="nt">verdana</span><span class="o">;</span>
+</code></pre>
+</div>
+
+
+  <h3>CSS Output</h3>
+<div class="highlight"><pre><code class="css"><span class="nt">font-family</span><span class="o">:</span> <span class="s2">&quot;Helvetica Neue&quot;</span><span class="o">,</span> <span class="nt">Helvetica</span><span class="o">,</span> <span class="nt">Arial</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span>
+<span class="nt">font-family</span><span class="o">:</span> <span class="nt">Georgia</span><span class="o">,</span> <span class="nt">Cambria</span><span class="o">,</span> <span class="s2">&quot;Times New Roman&quot;</span><span class="o">,</span> <span class="nt">Times</span><span class="o">,</span> <span class="nt">serif</span><span class="o">;</span>
+<span class="nt">font-family</span><span class="o">:</span> <span class="s2">&quot;Lucida Grande&quot;</span><span class="o">,</span> <span class="nt">Tahoma</span><span class="o">,</span> <span class="nt">Verdana</span><span class="o">,</span> <span class="nt">Arial</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span>
+<span class="nt">font-family</span><span class="o">:</span> <span class="nt">Verdana</span><span class="o">,</span> <span class="nt">Geneva</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span>
+</code></pre>
+</div>
+
+</section>
+
         <section id="html5-input-types">
   <h2>HTML5 Input Types</h2>
   <p>This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimick <code>input[type="text"]</code>.</p>
@@ -638,33 +677,37 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <p>Many off the timing functions below may look the same in this demo, but in complex animations, they are intricatly different.</p>
   <section class="demo">
     <ul>
-      <li><p>ease-in-quad</p><div class="box ease-in-quad"></div></li>
-      <li><p>ease-out-quad</p><div class="box ease-in-quad"></div></li>
-      <li><p>ease-in-out-quad</p><div class="box ease-in-quad"></div></li>
+      <li><code>$ease-in-quad</code><div class="box ease-in-quad"></div></li>
+      <li><code>$ease-out-quad</code><div class="box ease-in-quad"></div></li>
+      <li><code>$ease-in-out-quad</code><div class="box ease-in-quad"></div></li>
 
-      <li><p>ease-in-cubic</p><div class="box ease-in-cubic"></div></li>
-      <li><p>ease-out-cubic</p><div class="box ease-in-cubic"></div></li>
-      <li><p>ease-in-out-cubic</p><div class="box ease-in-cubic"></div></li>
+      <li><code>$ease-in-cubic</code><div class="box ease-in-cubic"></div></li>
+      <li><code>$ease-out-cubic</code><div class="box ease-in-cubic"></div></li>
+      <li><code>$ease-in-out-cubic</code><div class="box ease-in-cubic"></div></li>
 
-      <li><p>ease-in-quart</p><div class="box ease-in-quart"></div></li>
-      <li><p>ease-out-quart</p><div class="box ease-in-quart"></div></li>
-      <li><p>ease-in-out-quart</p><div class="box ease-in-quart"></div></li>
+      <li><code>$ease-in-quart</code><div class="box ease-in-quart"></div></li>
+      <li><code>$ease-out-quart</code><div class="box ease-in-quart"></div></li>
+      <li><code>$ease-in-out-quart</code><div class="box ease-in-quart"></div></li>
 
-      <li><p>ease-in-quint</p><div class="box ease-in-quint"></div></li>
-      <li><p>ease-out-quint</p><div class="box ease-in-quint"></div></li>
-      <li><p>ease-in-out-quint</p><div class="box ease-in-quint"></div></li>
+      <li><code>$ease-in-quint</code><div class="box ease-in-quint"></div></li>
+      <li><code>$ease-out-quint</code><div class="box ease-in-quint"></div></li>
+      <li><code>$ease-in-out-quint</code><div class="box ease-in-quint"></div></li>
 
-      <li><p>ease-in-sine</p><div class="box ease-in-sine"></div></li>
-      <li><p>ease-out-sine</p><div class="box ease-in-sine"></div></li>
-      <li><p>ease-in-out-sine</p><div class="box ease-in-sine"></div></li>
+      <li><code>$ease-in-sine</code><div class="box ease-in-sine"></div></li>
+      <li><code>$ease-out-sine</code><div class="box ease-in-sine"></div></li>
+      <li><code>$ease-in-out-sine</code><div class="box ease-in-sine"></div></li>
 
-      <li><p>ease-in-expo</p><div class="box ease-in-expo"></div></li>
-      <li><p>ease-out-expo</p><div class="box ease-in-expo"></div></li>
-      <li><p>ease-in-out-expo</p><div class="box ease-in-expo"></div></li>
+      <li><code>$ease-in-expo</code><div class="box ease-in-expo"></div></li>
+      <li><code>$ease-out-expo</code><div class="box ease-in-expo"></div></li>
+      <li><code>$ease-in-out-expo</code><div class="box ease-in-expo"></div></li>
 
-      <li><p>ease-in-circ</p><div class="box ease-in-circ"></div></li>
-      <li><p>ease-out-circ</p><div class="box ease-in-circ"></div></li>
-      <li><p>ease-in-out-circ</p><div class="box ease-in-circ"></div></li>
+      <li><code>$ease-in-circ</code><div class="box ease-in-circ"></div></li>
+      <li><code>$ease-out-circ</code><div class="box ease-in-circ"></div></li>
+      <li><code>$ease-in-out-circ</code><div class="box ease-in-circ"></div></li>
+
+      <li><code>$ease-in-back</code><div class="box ease-in-back"></div></li>
+      <li><code>$ease-out-back</code><div class="box ease-out-back"></div></li>
+      <li><code>$ease-in-out-back</code><div class="box ease-in-out-back"></div></li>
     <ul>
   </section>
 </section>
@@ -673,13 +716,14 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
         <h1 id="complete-list">Complete List</h1>
         <section id="complete-list">
   <h2>All Supported Functions, Mixins, and Addons</h2>
-  <p><code>@</code> denotes a mixin and must be prefaced with @include.</p>
+  <p><code>@</code> denotes a mixin and must be prefaced with <code>@include</code>.</p>
 
 <h3 id="complete-list-functions">Functions</h3>
 <div class="highlight"><pre><code class="css"><span class="nt">compact</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="nt">golden-ratio</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-<span class="nt">linear-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="nt">grid-width</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="nt">linear-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="nt">radial-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="nt">shade</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="nt">tint</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 </code></pre>
@@ -689,7 +733,6 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
 <h3 id="complete-list-mixins">Mixins</h3>
 <div class="highlight"><pre><code class="css"><span class="nt">animation</span>
   <span class="o">@</span> <span class="nt">animation</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-  <span class="o">@</span> <span class="nt">animation-basic</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
   <span class="o">@</span> <span class="nt">animation-delay</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
   <span class="o">@</span> <span class="nt">animation-direction</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
   <span class="o">@</span> <span class="nt">animation-duration</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
@@ -775,10 +818,48 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   <span class="err">$</span><span class="nt">ease-in-</span><span class="o">*</span>
   <span class="err">$</span><span class="nt">ease-out-</span><span class="o">*</span>
   <span class="err">$</span><span class="nt">ease-in-out-</span><span class="o">*</span>
+  <span class="o">*</span> <span class="o">=</span> <span class="nt">quad</span><span class="o">,</span> <span class="nt">cubic</span><span class="o">,</span> <span class="nt">quart</span><span class="o">,</span> <span class="nt">quint</span><span class="o">,</span> <span class="nt">sine</span><span class="o">,</span> <span class="nt">expo</span><span class="o">,</span> <span class="nt">circ</span><span class="o">,</span> <span class="nt">back</span>
 </code></pre>
 </div>
 
 
+</section>
+
+
+        <h1 id="footer"></h1>
+        <section id="browser-support">
+  <h2>Browser Support &amp; Pull Requests</h2>
+
+  <p>A general rule when submitting a pull request for a new mixin, ask yourself the following: Do the following browsers <em>only</em> support the CSS3 properties using vendor specific prefixes?</p>
+  <p>If the answer is yes, there is a high chance the mixin will be accepted via a pull request. </p>
+  <ul>
+    <li>Firefox 3.6+</li>
+    <li>Safari 4.0+</li>
+    <li>Chrome 4.0+</li>
+    <li>Opera 10+</li>
+    <li>IE 9+</li>
+  </ul>
+
+  <p><strong>Bourbon does not intend to support IE filters.</strong></p>
+
+  <p>Resources for checking browser support:</p>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/">MDN - Moz Dev Network</a></li>
+    <li><a href="https://developer.mozilla.org/en/CSS_Reference/Mozilla_Extensions">Mozilla CSS Extensions</a></li>
+    <li><a href="http://css-infos.net/properties/webkit.php">Webkit CSS Properties</a></li>
+    <li><a href="http://msdn.microsoft.com/en-us/library/ms531207(v=VS.85).aspx">MSDN - Microsoft Dev Network</a></p></li>
+  </ul>
+</section>
+
+<section id="credits">
+  <a href="http://thoughtbot.com"><img src="http://thoughtbot.com/images/tm/logo.png"/></a>
+
+  <h3>Credits</h3>
+  <p>Bourbon is maintained and funded by <a href="http://thoughtbot.com/community">thoughtbot</a>.</p>
+  <p>The names and logos for thoughtbot are trademarks of thoughtbot, inc.</p>
+
+  <h3>License</h3>
+  <p>Bourbon is Copyright © 2011 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.</p>
 </section>
 
 

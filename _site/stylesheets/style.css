@@ -911,7 +911,7 @@ section#linear-gradient-function section.demo {
   background-image: linear-gradient(top, #8fdce5, #3dc3d1);
   height: 40px; }
 
-section#radial-gradient section.demo {
+section#radial-gradient section.demo, section#radial-gradient-function section.demo {
   background-color: #8fdce5;
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #8fdce5), color-stop(100%, #3dc3d1));
   background-image: -webkit-radial-gradient(50% 50%, circle cover, #8fdce5, #3dc3d1);
@@ -1074,9 +1074,9 @@ section#timing-functions section.demo ul {
   padding: 0; }
   section#timing-functions section.demo ul li {
     list-style-type: none; }
-section#timing-functions section.demo p {
+section#timing-functions section.demo code {
   display: inline-block;
-  width: 106px;
+  width: 228px;
   margin-right: 16px;
   vertical-align: top; }
 section#timing-functions section.demo div.box {
@@ -1095,11 +1095,11 @@ section#timing-functions section.demo div.box {
   -ms-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 5s;
-  -moz-transition-duration: 5s;
-  -ms-transition-duration: 5s;
-  -o-transition-duration: 5s;
-  transition-duration: 5s; }
+  -webkit-transition-duration: 3s;
+  -moz-transition-duration: 3s;
+  -ms-transition-duration: 3s;
+  -o-transition-duration: 3s;
+  transition-duration: 3s; }
 section#timing-functions section.demo div.ease-in-quad {
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -1142,6 +1142,12 @@ section#timing-functions section.demo div.ease-in-circ {
   -ms-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
   -o-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
   transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335); }
+section#timing-functions section.demo div.ease-in-back {
+  -webkit-transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -moz-transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -ms-transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -o-transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045); }
 section#timing-functions section.demo div.ease-out-quad {
   -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1184,6 +1190,12 @@ section#timing-functions section.demo div.ease-out-circ {
   -ms-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   -o-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+section#timing-functions section.demo div.ease-out-back {
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 section#timing-functions section.demo div.ease-in-out-quad {
   -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -moz-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -1226,3 +1238,9 @@ section#timing-functions section.demo div.ease-in-out-circ {
   -ms-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -o-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+section#timing-functions section.demo div.ease-in-out-back {
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -ms-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
