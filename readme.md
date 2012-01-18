@@ -76,13 +76,14 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
 
 
 # All Supported Functions, Mixins, and Addons
-[View the Bourbon documentation](http://thoughtbot.com/bourbon)  
+[View the Bourbon documentation](http://thoughtbot.com/bourbon)
 
 *@ denotes a mixin and must be prefaced with @include*
 
     #Functions
     --------------------------------
       compact(*args)
+      modular-scale(*args)
       golden-ratio(*args)
       grid-width(*args)
       linear-gradient(*args)
