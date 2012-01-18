@@ -28,3 +28,13 @@
 //  }
 //
 // modularscale.com
+
+@function golden-ratio($value, $increment) {
+  @return modular-scale($value, $increment, 1.618)
+}
+
+//  div {
+//    font-size: golden-ratio(14px, 1); // returns: 22.652px
+//  }
+//
+// goldenratiocalculator.com
