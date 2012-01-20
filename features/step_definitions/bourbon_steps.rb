@@ -1,10 +1,14 @@
+Given /^bourbon is already generated$/ do
+  set_up_bourbon_directory
+  generate_bourbon
+end
+
 When /^I set up bourbon$/ do
-  write_file("Gemfile", "gem 'bourbon', :path => '../../..'")
-  run_simple("bundle install")
+  set_up_bourbon_directory
 end
 
 When /^I generate bourbon files$/ do
-  run_simple("bundle exec bourbon generate")
+  generate_bourbon
 end
 
 Then /^the sass directories should have been generated$/ do
