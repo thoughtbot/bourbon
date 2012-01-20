@@ -56,7 +56,8 @@ Import the mixins at the beginning of your stylesheet
 # Install without Rails
 Bourbon includes an easy way to generate a directory with all the necessary files.
 
-    rake generate
+    gem install bourbon
+    bourbon generate
 
 This will create a `bourbon` directory that can be used by `sass --watch`. Move
 the generated directory into your project's sass directory, e.g. `stylesheets/sass/`.
@@ -69,7 +70,6 @@ To output properly, Bourbon must be explicitly required (`-r`) by Sass at the co
 In this case, you will need to import the mixins at the beginning of your stylesheet:
 
     @import 'bourbon/bourbon';
-
 
 # Browser support
 Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.
