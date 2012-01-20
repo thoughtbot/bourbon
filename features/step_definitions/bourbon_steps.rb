@@ -3,12 +3,13 @@ Given /^bourbon is already generated$/ do
   generate_bourbon
 end
 
-When /^I set up bourbon$/ do
+When /^I generate bourbon files$/ do
   set_up_bourbon_directory
+  generate_bourbon
 end
 
-When /^I generate bourbon files$/ do
-  generate_bourbon
+When /^I update bourbon files$/ do
+  update_bourbon
 end
 
 Then /^the sass directories should have been generated$/ do
@@ -23,4 +24,8 @@ end
 Then /^the lib files should have been generated$/ do
   check_file_presence(["bourbon/lib/sass_extensions.rb"], true)
   check_directory_presence(["bourbon/lib/sass_extensions"], true)
+end
+
+Then /^bourbon should not have been generated$/ do
+  check_directory_presence(["bourbon"], false)
 end

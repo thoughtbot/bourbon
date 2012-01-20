@@ -7,6 +7,10 @@ module BourbonSupport
   def generate_bourbon
     run_simple("bundle exec bourbon generate")
   end
+
+  def update_bourbon
+    run_simple("bundle exec bourbon update")
+  end
 end
 
 World(BourbonSupport)

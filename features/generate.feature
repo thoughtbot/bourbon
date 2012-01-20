@@ -1,8 +1,7 @@
 @disable-bundler
-Feature: Generate bourbon files via gem subcommand
+Feature: Generate bourbon files
 
   Scenario: Run `bourbon generate`
-    Given I set up bourbon
     When I generate bourbon files
     Then the sass directories should have been generated
     And the following directories should exist:
