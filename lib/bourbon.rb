@@ -1,3 +1,5 @@
+require "bourbon/generator"
+
 module Bourbon
   if defined?(Rails)
     class Engine < ::Rails::Engine
