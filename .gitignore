@@ -1,5 +1,7 @@
 *swp
 *gem
 .sass-cache/
-bourbon/
+/bourbon/
 demo/
+tmp/
+tags
