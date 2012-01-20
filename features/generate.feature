@@ -1,7 +1,7 @@
 @disable-bundler
 Feature: Generate bourbon files
 
-  Scenario: Run `bourbon generate`
+  Scenario: Bourbon generates a new bourbon installation
     When I generate bourbon files
     Then the sass directories should have been generated
     And the following directories should exist:
@@ -11,7 +11,7 @@ Feature: Generate bourbon files
     And the lib files should have been generated
     And the output should contain "Bourbon files generated to bourbon/"
 
-  Scenario: Generator does not overwrite an existing bourbon directory
+  Scenario: Generating does not overwrite an existing bourbon directory
     Given bourbon is already generated
     When I generate bourbon files
     Then the output should contain "Bourbon files already generated, doing nothing."
