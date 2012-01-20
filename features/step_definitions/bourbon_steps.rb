@@ -22,8 +22,10 @@ Then /^the master bourbon partial should have been generated$/ do
 end
 
 Then /^the lib files should have been generated$/ do
-  check_file_presence(["bourbon/lib/sass_extensions.rb"], true)
-  check_directory_presence(["bourbon/lib/sass_extensions"], true)
+  check_file_presence(["bourbon/lib/bourbon.rb"], true)
+  check_directory_presence(["bourbon/lib/bourbon"], true)
+  check_file_presence(["bourbon/lib/bourbon/sass_extensions.rb"], true)
+  check_directory_presence(["bourbon/lib/bourbon/sass_extensions"], true)
 end
 
 Then /^bourbon should not have been generated$/ do
