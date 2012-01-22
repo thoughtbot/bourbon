@@ -46,7 +46,7 @@ section#background-image {
 //************************************************************************//
 section#border-image {
   section.demo {
-    @include border-image(url(/images/border.png) 27 repeat);
+    @include border-image(url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat);
     border-width: 27px;
     width: 81px;
     height: 27px;

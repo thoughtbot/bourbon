@@ -863,11 +863,11 @@ section#background-image section.demo {
   width: 100%; }
 
 section#border-image section.demo {
-  -webkit-border-image: url(/images/border.png) 27 repeat;
-  -moz-border-image: url(/images/border.png) 27 repeat;
-  -ms-border-image: url(/images/border.png) 27 repeat;
-  -o-border-image: url(/images/border.png) 27 repeat;
-  border-image: url(/images/border.png) 27 repeat;
+  -webkit-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
+  -moz-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
+  -ms-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
+  -o-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
+  border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
   border-width: 27px;
   width: 81px;
   height: 27px; }

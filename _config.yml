@@ -7,7 +7,7 @@ base-url:    /
 source:      .
 destination: ./_site
 plugins:     ./_plugins
-exclude:     ./app, ./doc, ./bourbon, ./demo, ./lib, sass, ./bourbon.gemspec, ./Gemfile, ./Gemfile.lock, ./generate-bourbon.sh, ./LICENSE, ./Rakefile, ./readme.md
+exclude:     ./app, ./doc, ./bourbon, ./demo, ./lib, sass, ./bourbon.gemspec, ./Gemfile, ./Gemfile.lock, ./generate-bourbon.sh, ./LICENSE, ./Rakefile, ./readme.md, ./features
 
 future:      true
 lsi:         false
