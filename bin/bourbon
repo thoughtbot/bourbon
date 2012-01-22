@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require "bourbon"
+
+Bourbon::Generator.new(ARGV).run

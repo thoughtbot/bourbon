@@ -1,4 +1,4 @@
-# Bourbon Sass Mixins
+# Bourbon Sass Mixins – [View Documentation](http://thoughtbot.com/bourbon)
 The purpose of Bourbon Sass Mixins is to provide a comprehensive library of Sass
 mixins that are designed to be as vanilla as possible, meaning they should not
 deter you from using the original CSS syntax.
@@ -54,354 +54,53 @@ Import the mixins at the beginning of your stylesheet
     rake bourbon:install[app/stylesheets]
 
 # Install without Rails
-Bourbon includes an easy way to generate a directory with all the necessary files.
+Bourbon includes an easy way to generate a directory with all the necessary files.  
+Install the bourbon gem:
 
-    rake generate
+    gem install bourbon
 
-This will create a `bourbon` directory that can be used by `sass --watch`. Move
-the generated directory into your project's sass directory, e.g. `stylesheets/sass/`.
+Change the directory to where you want to generate the bourbon folder and files:
 
-To output properly, Bourbon must be explicitly required (`-r`) by Sass at the command line:
+    cd project_name/stylesheets/sass/
+
+Install bourbon:
+
+    bourbon install
+
+This will generate a folder called `bourbon` containing all the mixins and other necessary bourbon files. It is recommended not to add or modify the bourbon files so that you can update bourbon easily.
+
+Update an existing bourbon installation with:
+
+    bourbon update
+
+This will delete the bourbon directory and regenerate it.
+
+*Sass Watch:* To output properly, Bourbon must be explicitly required (`-r`) by Sass at the command line:
 
     # Example (project root directory)
     sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
 
-In this case, you will need to import the mixins at the beginning of your stylesheet:
+You will need to import the mixins at the beginning of your stylesheet(s):
 
     @import 'bourbon/bourbon';
+
 
 # Browser support
 Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.
 
-# Using Bourbon Mixins
-Below are a few examples of mixin usage. Note that these are just a few, explore the repo to find out more.
-
-
-### Animation
-
-The animation mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
-
-    @include animation-name(slideup, fadein);
-    @include animation-duration(1.0s, 1.2s);
-    @include animation-timing-function(ease-in-out, ease-out);
-
-    # Shorthand for a basic animation. Supports multiple parentheses-deliminated values for each variable.
-    @include animation(slideup fadein, 1.0s 2.0s, ease-in);
-
-
-### Appearance
-The `appearance` CSS property is used to display an element using a platform-native styling based on the operating system's theme.
-
-    @include appearance(none);
-
-
-### Background-size
-The background-size mixin supports multiple background-sizes for use with multiple background-images via comma delimitation.
-
-    # Single background-image
-    @include background-size(50% 100%);
-
-    # Multiple background-images
-    @include background-size(50% 100%, 75% 100%);
-
-
-### Background-image
-
-The background-image mixin is helpful for chaining multiple comma delimited background images and/or linear-gradients into one background-image property. background-image supports up to 10 background-images.
-
-    # Multiple image assets
-    @include background-image( url("/images/a.png"), url("images/b.png") );
-
-    # Image asset with a linear-gradient
-    @include background-image( url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%) );
-
-    # Multiple linear-gradients;
-    @include background-image( linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
-
-    # NOT SUPPORTED - Multiple image assets with shorthand notation
-    @include background-image( url("/images/a.png") center no-repeat, url("images/b.png") left repeat );
-
-#### Note about shorthand notation
-
-All CSS background properties support comma delimited values.  
-For multiple background images you can specify the background properties like position, repeat, etc. for each image. For example:
-
-    @include background-image( url("/images/a.png"), url("images/b.png") );
-    background-position: center top, center;
-    background-repeat: no-repeat, repeat-x;
-
-
-### Border-image
-
-border-image supports short-hand notation.
-
-    @include border-image(url(border.png) 27 round);
-
-
-### Border Radius
-
-border-radius can take short-hand notation, or the full radius expression.
-
-    @include border-radius(10px);
-    @include border-radius(5px 5px 2px 2px);
-
-You can also specify individual corners.
-
-    @include border-top-left-radius(5px);
-    @include border-top-right-radius(5px);
-    @include border-bottom-right-radius(5px);
-    @include border-bottom-left-radius(5px);
-
-Individual sides are supported as well.
-
-    @include border-top-radius(5px);
-    @include border-bottom-radius(5px);
-    @include border-left-radius(5px);
-    @include border-right-radius(5px);
-
-
-### Box Shadow
-
-box-shadow supports single or multiple arguments:
-
-    @include box-shadow(1px 1px 2px 0 #ff0000);
-
-    # Multiple arguments must be comma-delimited.
-    @include box-shadow(1px 1px 2px 0 #fff000, -1px -2px 0 #ccc);
-
-
-### Box Sizing
-
-Box-sizing will change the box-model of the element it is applied to.
-
-    @include box-sizing(border-box);
-
-
-### Columns
-All current CSS3 column properties are supported. See the list at the bottom of the page for more info.
-
-    @include columns(12 8em);
-    @include column-rule(1px solid green);
-
-
-### Flex Box
-
-The flex-box mixin is based on the 2009 w3c spec. The mixin with change to the flexible box-model. [More info.](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/)
-
-    div.parent {
-      @include display-box;
-      @include box-align(start);
-      @include box-orient(horizontal);
-      @include box-pack(start);
-    }
-
-    div.parent > div.child {
-      @include box-flex(2);
-    }
-
-    # Alternative custom shorthand mixin.
-    div.parent {
-      @include box($orient: horizontal, $pack: center, $align: stretch);
-    }
-
-
-### Inline-block
-
-The inline-block mixin provides support for the inline-block property in IE6 and IE7.
-
-    @include inline-block;
-
-
-### Linear-Gradient
-
-Gradient position is optional, default is top. Position can be a degree. Color-stops are optional as well. Mixin will support up to 10 gradients.
-
-    @include linear-gradient(#1e5799, #2989d8);
-    @include linear-gradient(top, #1e5799 0%, #2989d8 100%);
-    @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-
-
-### Position
-
-Shorthand notation for setting the position of elements in your page.
-
-Instead of writing:
-
-    position: relative;
-    top: 0px;
-    left: 100px;
-
-You can write:
-
-    @include position(relative, 0px 0 0 100px);
-
-The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.
-
-Note: unit-less values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.
-
-
-### Radial-Gradient
-
-Takes up to 10 gradients. Position and shape are required.
-
-    @include radial-gradient(50% 50%, circle cover, #1e5799, #efefef);
-    @include radial-gradient(50% 50%, circle cover, #eee 10%, #1e5799 30%, #efefef);
-
-
-### Transform & Transform-origin
-
-    @include transform(translateY(50px));
-    @include transform-origin(center top);
-
-
-### Transitions
-
-Shorthand mixin: Supports multiple parentheses-delimited values for each variable.
-
-    @include transition (all, 2.0s, ease-in-out);
-    @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
-    @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));`
-
-
-## Functions
-### Compact
-
-The compact function will strip out any value from a list that is 'false'. Takes up to 10 arguments.
-
-    $full:  compact($name-1, $name-2, $name-3, $name-4, $name-5, $name-6, $name-7, $name-8, $name-9, $name-10);
-
-
-### Golden Ratio
-
-Returns the golden ratio of a given number. Must provide a Pixel or Em value for first argument. Also takes a required increment value that is not zero and an integer: ...-3, -2, -1, 1, 2, 3...
-
-    div {
-                        Increment Up GR with positive value
-      font-size:        golden-ratio(14px,  1);    // returns: 22.652px
-
-                        Increment Down GR with negative value
-      font-size:        golden-ratio(14px, -1);    // returns: 8.653px
-
-                        Can be used with ceil(round up) or floor(round down)
-      font-size: floor( golden-ratio(14px,  1) );  // returns: 22px
-      font-size:  ceil( golden-ratio(14px,  1) );  // returns: 23px
-    }
-
-Resources: [modularscale.com](http://modularscale.com) & [goldenratiocalculator.com](http://goldenratiocalculator.com)
-
-
-### Linear-gradient
-
-Outputs a linear-gradient. Use in conjunction with the background-image mixin. The function takes the same arguments as the linear-gradient mixin (See Mixins section of this README).
-
-    # Image asset with a linear-gradient
-    @include background-image(url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
-
-    # Multiple linear-gradients;
-    @include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)) );
-
-
-### Grid-width
-
-Easily setup and follow a grid based design. Need help busting a move grid-style?!? Check out [gridulator.com](http://gridulator.com/)
-
-    # The $gw-column and $gw-gutter variables must be defined in your base stylesheet to properly use the grid-width function.
-    $gw-column: 100px;          // Column Width
-    $gw-gutter: 40px;           // Gutter Width
-
-    div {
-      width: grid-width(4);     // returns 520px;
-      margin-left: $gw-gutter;  // returns 40px;
-    }
-
-
-### Tint & Shade
-
-Tint & shade are different from lighten() and darken() functions built into sass.
-Tint is a mix of a color with white. Tint takes a color and a percent argument.
-
-    div {
-      background: tint(red, 40%);
-    }
-
-Shade is a mix of a color with black. Shade takes a color and a percent argument.
-
-    div {
-      background: shade(blue, 60%);
-    }
-
-
-## Add-ons
-
-### Buttons
-
-The button add-on provides well-designed buttons with a single line in your CSS.
-The mixin supports a style parameter and an optional color argument. The available styles are **"simple"** (default), **"shiny"**, and **"pill"**.
-
-    # The mixin can be called with no arguments, which will render a blue button with the "simple" style.
-    button, input[type="button"] {
-      @include button;
-    }
-
-    # Pass a style argument
-    button, input[type="button"] {
-      @include button(shiny);
-    }
-
-Create beautiful buttons by defining a style and color argument; using a single color, the mixin calculates the gradient, borders, box shadow, text shadow and text color of the button. The mixin will change the text to be light when on a dark background, and dark when on a light background.
-
-    # Style + color arguments
-    button, input[type="button"] {
-      @include button(shiny, #ff0000);
-    }
-
-
-### Font-family
-Bourbon provides a few default font-families for convenience sake.
-Available font-family variables: `$georgia`, `$helvetica`, `$lucida-grand`, `$verdana`
-
-    font-family: $helvetica
-
-
-### HTML5 Input Types
-This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea.
-In other words, it allows for easy targeting of all inputs that mimick input[type="text"].
-
-    input[type="*"]
-    * = [color, date, datetime, datetime-local, email, month, number, password, search, tel, text, time, url, week]
-
-
-Usage Note: You must use interpolation with the variable.
-
-    #{$all-text-inputs}, textarea {
-      border: 1px solid green;
-    }
-
-    Output:
-    input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], textarea {
-      border: 1px solid green;
-    }
-
-
-### Timing functions
-These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations. The provided timing functions are the same as the jQuery UI demo: [easing functions](http://jqueryui.com/demos/effect/easing.html).
-
-    Variables supported: $ease-in-*, $ease-out-*, $ease-in-out-*
-    * = [quad, cubic, quart, quint, sine, expo, circ, back]
-
-    @include animation-timing-function($ease-in-circ);
-    @include animation-basic(fade-in, 1s, $ease-in-quad);
-
 
 # All Supported Functions, Mixins, and Addons
+[View the Bourbon documentation](http://thoughtbot.com/bourbon)  
+
 *@ denotes a mixin and must be prefaced with @include*
 
     #Functions
     --------------------------------
       compact(*args)
       golden-ratio(*args)
-      linear-gradient(*args)
       grid-width(*args)
+      linear-gradient(*args)
+      radial-gradient(*args)
       shade(*args)
       tint(*args)
 
@@ -409,7 +108,6 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
     --------------------------------
       animation
         @ animation(*args)
-        @ animation-basic(*args)
         @ animation-delay(*args)
         @ animation-direction(*args)
         @ animation-duration(*args)
@@ -492,6 +190,7 @@ These CSS cubic-bezier timing functions are variables that can be used with CSS3
         $ease-in-*
         $ease-out-*
         $ease-in-out-*
+        * = quad, cubic, quart, quint, sine, expo, circ, back
 
 
 ## Help Out
