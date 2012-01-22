@@ -59,7 +59,7 @@ Install the bourbon gem:
 
     gem install bourbon
 
-From the terminal, change the directory to where you want to generate the bourbon folder and files:
+Change the directory to where you want to generate the bourbon folder and files:
 
     cd project_name/stylesheets/sass/
 
@@ -75,12 +75,12 @@ Update an existing bourbon installation with:
 
 This will delete the bourbon directory and regenerate it.
 
-To output properly, Bourbon must be explicitly required (`-r`) by Sass at the command line:
+*Sass Watch:* To output properly, Bourbon must be explicitly required (`-r`) by Sass at the command line:
 
     # Example (project root directory)
     sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
 
-In this case, you will need to import the mixins at the beginning of your stylesheet:
+You will need to import the mixins at the beginning of your stylesheet(s):
 
     @import 'bourbon/bourbon';
 
