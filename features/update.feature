@@ -2,7 +2,7 @@
 Feature: Update bourbon files
 
   Scenario: Updating updates an existing bourbon install
-    When I generate bourbon files
+    When I install bourbon files
     And I write to "bourbon/_bourbon.scss" with:
       """
       foobar

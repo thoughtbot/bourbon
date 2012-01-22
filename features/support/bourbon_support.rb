@@ -4,8 +4,8 @@ module BourbonSupport
     run_simple("bundle install")
   end
 
-  def generate_bourbon
-    run_simple("bundle exec bourbon generate")
+  def install_bourbon
+    run_simple("bundle exec bourbon install")
   end
 
   def update_bourbon

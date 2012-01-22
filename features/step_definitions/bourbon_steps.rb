@@ -1,11 +1,11 @@
-Given /^bourbon is already generated$/ do
+Given /^bourbon is already installed$/ do
   set_up_bourbon_directory
-  generate_bourbon
+  install_bourbon
 end
 
-When /^I generate bourbon files$/ do
+When /^I install bourbon files$/ do
   set_up_bourbon_directory
-  generate_bourbon
+  install_bourbon
 end
 
 When /^I update bourbon files$/ do

@@ -7,8 +7,8 @@ module Bourbon
     end
 
     def run
-      if @subcommand == "generate"
-        generate
+      if @subcommand == "install"
+       install
       elsif @subcommand == "update"
         update
       end
@@ -17,19 +17,19 @@ module Bourbon
     def update
       if bourbon_files_already_exist?
         remove_bourbon_directory
-        generate_files
+        install_files
         puts "Bourbon files updated."
       else
         puts "No existing bourbon installation. Doing nothing."
       end
     end
 
-    def generate
+    def install
       if bourbon_files_already_exist?
-        puts "Bourbon files already generated, doing nothing."
+        puts "Bourbon files already installed, doing nothing."
       else
-        generate_files
-        puts "Bourbon files generated to bourbon/"
+        install_files
+        puts "Bourbon files installed to bourbon/"
       end
     end
 
@@ -39,7 +39,7 @@ module Bourbon
       Dir.exist?("bourbon")
     end
 
-    def generate_files
+    def install_files
       make_lib_directory
       copy_in_sass_extensions
       copy_in_scss_files
