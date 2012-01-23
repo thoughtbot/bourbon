@@ -2,7 +2,8 @@
                        $G3: false, $G4: false,
                        $G5: false, $G6: false,
                        $G7: false, $G8: false,
-                       $G9: false, $G10: false) {
+                       $G9: false, $G10: false,
+                       $fallback: false) {
   // Detect what type of value exists in $pos
   $pos-type: type-of(nth($pos, 1));
 
@@ -15,7 +16,15 @@
 
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
 
-  background-color:  nth($G1, 1);
+  // Set $G1 as the default fallback color
+  $fallback-color: nth($G1, 1);
+
+  // If $fallback is a color use that color as the fallback color
+  @if type-of($fallback) == color {
+    $fallback-color: $fallback;
+  }
+
+  background-color: $fallback-color;
   background-image: deprecated-webkit-gradient(linear, $full); // Safari <= 5.0
   background-image:  -webkit-linear-gradient($pos, $full); // Safari 5.1+, Chrome
   background-image:     -moz-linear-gradient($pos, $full);
@@ -27,5 +36,6 @@
 
 // Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.
 // @include linear-gradient(#1e5799, #2989d8);
+// @include linear-gradient(#1e5799, #2989d8, $fallback:#2989d8);
 // @include linear-gradient(top, #1e5799 0%, #2989d8 50%);
 // @include linear-gradient(50deg, rgba(10, 10, 10, 0.5) 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
