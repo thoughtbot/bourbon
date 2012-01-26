@@ -235,6 +235,11 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 //        @include reset-box;
 //        padding : 2px; } }
 //
+//    // Create your own reset
+//    @mixin my-reset {
+//      @include reset;
+//      @include reset-html5; }
+//
 // Acknowledgements
 //
 // reset-elements: [Eric Meyer Reset v2.0 | 20110126](http://meyerweb.com/eric/tools/css/reset/)
