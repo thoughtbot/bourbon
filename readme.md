@@ -56,7 +56,7 @@ Import the mixins at the beginning of your stylesheet
     rake bourbon:install[app/stylesheets]
 
 # Install in a non-rails project (static site, jekyll, wordpress, other...)
-Bourbon includes an easy way to generate a directory with all the necessary files.  
+Bourbon includes an easy way to generate a directory with all the necessary files.
 Install the bourbon gem:
 
     gem install bourbon
@@ -99,10 +99,9 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
     #Functions
     --------------------------------
       compact(*args)
-      modular-scale(*args)
-      golden-ratio(*args)
       grid-width(*args)
       linear-gradient(*args)
+      modular-scale(*args)
       radial-gradient(*args)
       shade(*args)
       tint(*args)
@@ -189,11 +188,34 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
         $lucida-grande
         $verdana
 
+      reset
+        @ reset-and-normalize
+        @ reset
+        @ reset-root
+        @ reset-elements
+        @ reset-html5
+        @ reset-border
+        @ reset-box
+        @ reset-focus
+        @ reset-font
+        @ reset-list
+        @ reset-inline-whitespace
+        @ reset-quotation
+        @ reset-table
+        @ reset-table-cell
+        @ normalize
+        @ normalize-abbr
+        @ normalize-bold-text($indent)
+        @ normalize-list($indent)
+        @ normalize-textarea
+        @ normalize-script-text
+
       timing-functions
         $ease-in-*
         $ease-out-*
         $ease-in-out-*
         * = quad, cubic, quart, quint, sine, expo, circ, back
+
 
 
 ## Help Out
