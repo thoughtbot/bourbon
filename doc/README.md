@@ -16,18 +16,15 @@ To pull in the latest changes on gh-pages branch:
 To pull in the latest Bourbon changes, you must fetch and merge master into gh-pages:
     git fetch origin master && git merge master
 
-To push to gh-pages, you will always have to force push:
-    git push -f
-
-To update the bourbon files with the latest version:
-    ./generate-bourbon.sh
+To update the bourbon files with the latest version; from the root directory:
+    bourbon update
 
 ------------------------------------------------------------------------------------------
 
 For Code Highlighting within Jekyll:
     gem install pygmentize
 
-    {% highlight css %}
+    {% highlight scss %}
       <code here>
     {% endhighlight %}
 
