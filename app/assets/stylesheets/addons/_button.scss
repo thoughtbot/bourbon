@@ -41,10 +41,10 @@
 //************************************************************************//
 @mixin simple($base-color, $grayscale: false) {
   $color:         hsl(0, 0, 100%);
-  $border:        adjust-color($base-color, $saturation: 9%,  $lightness: -14%);
-  $inset-shadow:  adjust-color($base-color, $saturation: -8%, $lightness: 15%);
-  $stop-gradient: adjust-color($base-color, $saturation: 9%,  $lightness: -11%);
-  $text-shadow:   adjust-color($base-color, $saturation: 15%, $lightness: -18%);
+  $border:        adjust-color($base-color, $saturation:  9%,  $lightness: -14%);
+  $inset-shadow:  adjust-color($base-color, $saturation: -8%,  $lightness:  15%);
+  $stop-gradient: adjust-color($base-color, $saturation:  9%,  $lightness: -11%);
+  $text-shadow:   adjust-color($base-color, $saturation:  15%, $lightness: -18%);
 
   @if lightness($base-color) > 70% {
     $color:       hsl(0, 0, 20%);
@@ -72,8 +72,8 @@
 
   &:hover {
     $base-color-hover:    adjust-color($base-color, $saturation: -4%, $lightness: -5%);
-    $inset-shadow-hover:  adjust-color($base-color, $saturation: -7%, $lightness: 5%);
-    $stop-gradient-hover: adjust-color($base-color, $saturation: 8%,  $lightness: -14%);
+    $inset-shadow-hover:  adjust-color($base-color, $saturation: -7%, $lightness:  5%);
+    $stop-gradient-hover: adjust-color($base-color, $saturation:  8%, $lightness: -14%);
 
     @if $grayscale == true {
       $base-color-hover:    grayscale($base-color-hover);
@@ -107,11 +107,11 @@
   $color:         hsl(0, 0, 100%);
   $border:        adjust-color($base-color, $red: -117, $green: -111, $blue: -81);
   $border-bottom: adjust-color($base-color, $red: -126, $green: -127, $blue: -122);
-  $fourth-stop:   adjust-color($base-color, $red: -79, $green: -70, $blue: -46);
-  $inset-shadow:  adjust-color($base-color, $red: 37, $green: 29, $blue: 12);
-  $second-stop:   adjust-color($base-color, $red: -56, $green: -50, $blue: -33);
+  $fourth-stop:   adjust-color($base-color, $red: -79,  $green: -70,  $blue: -46);
+  $inset-shadow:  adjust-color($base-color, $red:  37,  $green:  29,  $blue:  12);
+  $second-stop:   adjust-color($base-color, $red: -56,  $green: -50,  $blue: -33);
   $text-shadow:   adjust-color($base-color, $red: -140, $green: -141, $blue: -114);
-  $third-stop:    adjust-color($base-color, $red: -86, $green: -75, $blue: -48);
+  $third-stop:    adjust-color($base-color, $red: -86,  $green: -75,  $blue: -48);
 
   @if lightness($base-color) > 70% {
     $color:       hsl(0, 0, 20%);
@@ -178,12 +178,12 @@
 //************************************************************************//
 @mixin pill($base-color, $grayscale: false) {
   $color:         hsl(0, 0, 100%);
-  $border-bottom: adjust-color($base-color, $hue: 8, $saturation: -11%, $lightness: -26%);
-  $border-sides:  adjust-color($base-color, $hue: 4, $saturation: -21%, $lightness: -21%);
+  $border-bottom: adjust-color($base-color, $hue:  8, $saturation: -11%, $lightness: -26%);
+  $border-sides:  adjust-color($base-color, $hue:  4, $saturation: -21%, $lightness: -21%);
   $border-top:    adjust-color($base-color, $hue: -1, $saturation: -30%, $lightness: -15%);
-  $inset-shadow:  adjust-color($base-color, $hue: -1, $saturation: -1%, $lightness: 7%);
-  $stop-gradient: adjust-color($base-color, $hue: 8, $saturation: 14%, $lightness: -10%);
-  $text-shadow:   adjust-color($base-color, $hue: 5, $saturation: -19%, $lightness: -15%);
+  $inset-shadow:  adjust-color($base-color, $hue: -1, $saturation: -1%,  $lightness:  7%);
+  $stop-gradient: adjust-color($base-color, $hue:  8, $saturation:  14%, $lightness: -10%);
+  $text-shadow:   adjust-color($base-color, $hue:  5, $saturation: -19%, $lightness: -15%);
 
   @if lightness($base-color) > 70% {
     $color:       hsl(0, 0, 20%);
@@ -215,13 +215,13 @@
   -webkit-background-clip: padding-box;
 
   &:hover {
-    $base-color-hover:    adjust-color($base-color, $lightness: -4.5%);
-    $border-bottom:       adjust-color($base-color, $hue: 8, $saturation: 13.5%, $lightness: -32%);
-    $border-sides:        adjust-color($base-color, $hue: 4, $saturation: -2%, $lightness: -27%);
-    $border-top:          adjust-color($base-color, $hue: -1, $saturation: -17%, $lightness: -21%);
-    $inset-shadow-hover:  adjust-color($base-color, $saturation: -1%, $lightness: 3%);
-    $stop-gradient-hover: adjust-color($base-color, $hue: 8, $saturation: -4%, $lightness: -15.5%);
-    $text-shadow-hover:   adjust-color($base-color, $hue: 5, $saturation: -5%, $lightness: -22%);
+    $base-color-hover:    adjust-color($base-color,                                $lightness: -4.5%);
+    $border-bottom:       adjust-color($base-color, $hue:  8, $saturation:  13.5%, $lightness: -32%);
+    $border-sides:        adjust-color($base-color, $hue:  4, $saturation: -2%,    $lightness: -27%);
+    $border-top:          adjust-color($base-color, $hue: -1, $saturation: -17%,   $lightness: -21%);
+    $inset-shadow-hover:  adjust-color($base-color,           $saturation: -1%,    $lightness:  3%);
+    $stop-gradient-hover: adjust-color($base-color, $hue:  8, $saturation: -4%,    $lightness: -15.5%);
+    $text-shadow-hover:   adjust-color($base-color, $hue:  5, $saturation: -5%,    $lightness: -22%);
 
     @if $grayscale == true {
       $base-color-hover:    grayscale($base-color-hover);
@@ -243,11 +243,11 @@
   }
 
   &:active {
-    $active-color:         adjust-color($base-color, $hue: 4, $saturation: -12%, $lightness: -10%);
-    $border-active:        adjust-color($base-color, $hue: 6, $saturation: -2.5%, $lightness: -30%);
-    $border-bottom-active: adjust-color($base-color, $hue: 11, $saturation: 6%, $lightness: -31%);
-    $inset-shadow-active:  adjust-color($base-color, $hue: 9, $saturation: 2%, $lightness: -21.5%);
-    $text-shadow-active:   adjust-color($base-color, $hue: 5, $saturation: -12%, $lightness: -21.5%);
+    $active-color:         adjust-color($base-color, $hue: 4,  $saturation: -12%,  $lightness: -10%);
+    $border-active:        adjust-color($base-color, $hue: 6,  $saturation: -2.5%, $lightness: -30%);
+    $border-bottom-active: adjust-color($base-color, $hue: 11, $saturation:  6%,   $lightness: -31%);
+    $inset-shadow-active:  adjust-color($base-color, $hue: 9,  $saturation:  2%,   $lightness: -21.5%);
+    $text-shadow-active:   adjust-color($base-color, $hue: 5,  $saturation: -12%,  $lightness: -21.5%);
 
     @if $grayscale == true {
       $active-color:         grayscale($active-color);
@@ -264,3 +264,4 @@
     text-shadow: 0 -1px 1px $text-shadow-active;
   }
 }
+
