@@ -199,15 +199,15 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
         @ reset-focus
         @ reset-font
         @ reset-list
-        @ reset-inline-whitespace
+        @ reset-inline-whitespace($font-size)
         @ reset-quotation
         @ reset-table
         @ reset-table-cell
         @ normalize
         @ normalize-abbr
         @ normalize-bold-text($indent)
+        @ normalize-forms
         @ normalize-list($indent)
-        @ normalize-textarea
         @ normalize-script-text
 
       timing-functions

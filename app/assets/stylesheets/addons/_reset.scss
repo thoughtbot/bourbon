@@ -178,11 +178,9 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
   ul {
     @include normalize-list; }
 
-  textarea {
-    @include normalize-textarea; }
-
   @include normalize-script-text;
   @include normalize-abbr;
+  @include normalize-forms;
 }
 
 // Underline abbr elements with a title attribute present
@@ -195,16 +193,47 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 @mixin normalize-bold-text($weight:700) {
   font-weight : $weight; }
 
+// Normalize form elements
+@mixin normalize-forms {
+  button,
+  input,
+  select,
+  textarea {
+    font-size      : 100%;
+    margin         : 0;
+    vertical-align : middle; }
+
+  button,
+  input {
+    *overflow   : visible; // Inner spacing ie7
+    line-height : normal;
+    &::-mox-focus-inner {
+      border  : 0;
+      padding : 0; } }
+
+  // Hand pointer to checkboxes and radio buttons
+  input[type="checkbox"],
+  input[type="radio"] {
+    cursor : pointer; }
+
+  // Hand pointer to all buttons
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    cursor             : pointer;
+    -webkit-appearance : button; /* Resemble native UI on iOS */ }
+
+  textarea {
+    overflow       : auto;
+    vertical-align : top; }
+
+}
+
 // Give lists a default appearance.
 // Use reset-list mixin to remove all default styling from lists.
 @mixin normalize-list($indent:24px) {
   padding : 0 0 0 $indent;
-}
-
-// Set alignment and overflow settings for textareas
-@mixin normalize-textarea {
-  overflow       : auto;
-  vertical-align : top;
 }
 
 // Prevent sub and sup affecting line-height
