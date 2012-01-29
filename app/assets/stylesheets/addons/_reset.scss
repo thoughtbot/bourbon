@@ -117,15 +117,22 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 // "Removes" the white space of inline-block element when the markup is not on one line
 // by setting the font-size property to 0.
 //
-// The child elements will require the font-size property to be re-applied:
+// The immediate child selectors automatically get the font-size property re-applied.
 //
 // .pagination {
 //   @include reset-inline-whitespace;
 //   li {
-//     font-size : 13px; } }
+//     display : inline-block; } }
 //
-@mixin reset-inline-whitespace {
+// The size of the font can be changed by passing it as an argument:
+//
+// .pagination {
+//   @include reset-inline-whitespace(15px); }
+//
+@mixin reset-inline-whitespace($font-size:13px) {
   font-size : 0;
+  > * {
+    font-size : $font-size; }
 }
 
 // Reset quotations
