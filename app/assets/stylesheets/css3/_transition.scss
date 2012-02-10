@@ -3,38 +3,22 @@
 //          @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
 //          @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));
 
-@mixin transition ($property: all, $duration: 0.15s, $timing-function: ease-out, $delay: 0) {
+@mixin transition ($prop-1: all 0.15s ease-out 0,
+  $prop-2: false, $prop-3: false,
+  $prop-4: false, $prop-5: false,
+  $prop-6: false, $prop-7: false,
+  $prop-8: false, $prop-9: false)
+  {
+    $full: compact($prop-1, $prop-2, $prop-3, $prop-4, $prop-5,
+                   $prop-6, $prop-7, $prop-8, $prop-9);
 
-  // Detect # of args passed into each variable
-  $length-of-property:        length($property);
-  $length-of-duration:        length($duration);
-  $length-of-timing-function: length($timing-function);
-  $length-of-delay:           length($delay);
-
-  @if $length-of-property > 1 {
-    @include transition-property(zip($property)); }
-  @else {
-    @include transition-property(    $property);
-  }
-
-  @if $length-of-duration > 1 {
-    @include transition-duration(zip($duration)); }
-  @else {
-    @include transition-duration(    $duration);
-  }
-
-  @if $length-of-timing-function > 1 {
-    @include transition-timing-function(zip($timing-function)); }
-  @else {
-    @include transition-timing-function(    $timing-function);
-  }
-
-  @if $length-of-delay > 1 {
-    @include transition-delay(zip($delay)); }
-  @else {
-    @include transition-delay(    $delay);
-  }
+  -webkit-transition: $full;
+     -moz-transition: $full;
+      -ms-transition: $full;
+       -o-transition: $full;
+          transition: $full;
 }
+
 
 
 @mixin transition-property ($prop-1: all,
