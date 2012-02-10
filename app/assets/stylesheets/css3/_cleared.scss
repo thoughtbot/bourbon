@@ -1,0 +1,10 @@
+@mixin cleared ($clear: both) {
+    &:after {
+        clear: $clear;
+        display: block;
+        content: " ";
+        font-size: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}
