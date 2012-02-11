@@ -18,35 +18,43 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 
   // Set the default line height
   body {
-    line-height : 1; }
+    line-height : 1;
+  }
 
   // Reset image borders on images and image links
   img,
   a img {
-    @include reset-border; }
+    @include reset-border;
+  }
 
   // Reset lists in the <nav> element
   nav {
     ol, ul {
-      @include reset-list; } }
+      @include reset-list;
+    }
+  }
 
   blockquote,
   q {
-    @include reset-quotation; }
+    @include reset-quotation;
+  }
 
   table {
     @include reset-table;
     caption,
     th,
     td {
-      @include reset-table-cell; } }
+      @include reset-table-cell;
+    }
+  }
 }
 
 // Reset root elements
 @mixin reset-root {
   html, body {
     @include reset-box;
-    @include reset-font; }
+    @include reset-font;
+  }
 }
 
 // Reset elements
@@ -66,13 +74,15 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
   time, mark, audio, video,
   #{$html5-deprecated} {
     @include reset-box;
-    @include reset-font; }
+    @include reset-font;
+  }
 }
 
 // Display unrecognized elements as block in browsers that don't recognize them.
 @mixin reset-html5 {
   #{$html5-block} {
-    display : block }
+    display : block;
+  }
 }
 
 // Reset the box model across all browsers.
@@ -131,15 +141,18 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 @mixin reset-inline-whitespace($font-size:13px) {
   font-size : 0;
   > * {
-    font-size : $font-size; }
+    font-size : $font-size;
+  }
 }
 
 // Reset quotations
 @mixin reset-quotation {
   quotes : none;
-    &:before, &:after {
-      content : "";
-      content : none; }
+  &:before,
+  &:after {
+    content : "";
+    content : none;
+  }
 }
 
 // Remove spacing between table cells
@@ -154,13 +167,17 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
   text-align     : left;
   vertical-align : middle;
   &.center {
-    text-align : center; }
+    text-align : center;
+  }
   &.right {
-    text-align : right; }
+    text-align : right;
+  }
   &.top {
-    vertical-align : top }
+    vertical-align : top;
+  }
   &.bottom {
-    vertical-align : bottom }
+    vertical-align : bottom;
+  }
 }
 
 //************************************************************************//
@@ -171,11 +188,13 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 @mixin normalize {
   b,
   strong {
-    @include normalize-bold-text; }
+    @include normalize-bold-text;
+  }
 
   ol,
   ul {
-    @include normalize-list; }
+    @include normalize-list;
+  }
 
   @include normalize-script-text;
   @include normalize-abbr;
@@ -185,12 +204,14 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 // Underline abbr elements with a title attribute present
 @mixin normalize-abbr {
   abbr[title] {
-    border-bottom: 1px dotted; }
+    border-bottom: 1px dotted;
+  }
 }
 
 // Set bold elements to use bold font weight.
 @mixin normalize-bold-text($weight:700) {
-  font-weight : $weight; }
+  font-weight : $weight;
+}
 
 // Normalize form elements
 @mixin normalize-forms {
@@ -200,7 +221,8 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
   textarea {
     font-size      : 100%;
     margin         : 0;
-    vertical-align : middle; }
+    vertical-align : middle;
+  }
 
   button,
   input {
@@ -208,12 +230,15 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
     line-height : normal;
     &::-mox-focus-inner {
       border  : 0;
-      padding : 0; } }
+      padding : 0;
+    }
+  }
 
   // Hand pointer to checkboxes and radio buttons
   input[type="checkbox"],
   input[type="radio"] {
-    cursor : pointer; }
+    cursor : pointer;
+  }
 
   // Hand pointer to all buttons
   button,
@@ -221,11 +246,13 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
   input[type="reset"],
   input[type="submit"] {
     cursor             : pointer;
-    -webkit-appearance : button; /* Resemble native UI on iOS */ }
+    -webkit-appearance : button; // Resemble native UI on iOS
+  }
 
   textarea {
     overflow       : auto;
-    vertical-align : top; }
+    vertical-align : top;
+  }
 
 }
 
@@ -242,11 +269,14 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
     font-size      : 75%;
     line-height    : 0;
     position       : relative;
-    vertical-align : baseline; }
+    vertical-align : baseline;
+  }
   sub {
-    bottom : -0.25em; }
+    bottom : -0.25em;
+  }
   sup {
-    top : -0.5em; }
+    top : -0.5em;
+  }
 }
 
 // Usage examples:
@@ -259,7 +289,8 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 //
 //    // Reset a navigation list
 //    ul.navigation {
-//      @include reset-list; }
+//      @include reset-list;
+//    }
 //
 //    // Reset an already styled block element
 //    .well {
@@ -268,12 +299,15 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 //      padding : 6px;
 //      &.basic {
 //        @include reset-box;
-//        padding : 2px; } }
+//        padding : 2px;
+//      }
+//    }
 //
 //    // Create your own reset
 //    @mixin my-reset {
 //      @include reset;
-//      @include reset-html5; }
+//      @include reset-html5;
+//    }
 //
 // Acknowledgements
 //
