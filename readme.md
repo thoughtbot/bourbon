@@ -179,6 +179,7 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
     #Addons
     --------------------------------
       @ button(*args)
+      @ clearfix
       @ position(*args)
 
       #{$all-text-inputs}
@@ -196,8 +197,6 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
         $ease-in-out-*
         * = quad, cubic, quart, quint, sine, expo, circ, back
 
-      utilities
-        @ clear
 
 
 ## Help Out
