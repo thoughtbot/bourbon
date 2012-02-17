@@ -20,7 +20,7 @@
   $fallback-color: nth($G1, 1);
 
   // If $fallback is a color use that color as the fallback color
-  @if type-of($fallback) == color {
+  @if (type-of($fallback) == color) or ($fallback == "transparent") {
     $fallback-color: $fallback;
   }
 
