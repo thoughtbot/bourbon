@@ -1,0 +1,6 @@
+@mixin user-select($arg: none) {
+  -webkit-user-select: $arg;
+     -moz-user-select: $arg;
+      -ms-user-select: $arg;
+          user-select: $arg;
+}
