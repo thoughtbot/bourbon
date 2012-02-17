@@ -9,6 +9,7 @@
 @mixin border-top-left-radius($radii) {
   -webkit-border-top-left-radius: $radii;
      -moz-border-top-left-radius: $radii;
+      -moz-border-radius-topleft: $radii;
       -ms-border-top-left-radius: $radii;
        -o-border-top-left-radius: $radii;
           border-top-left-radius: $radii;
@@ -17,6 +18,7 @@
 @mixin border-top-right-radius($radii) {
   -webkit-border-top-right-radius: $radii;
      -moz-border-top-right-radius: $radii;
+      -moz-border-radius-topright: $radii;
       -ms-border-top-right-radius: $radii;
        -o-border-top-right-radius: $radii;
           border-top-right-radius: $radii;
@@ -25,6 +27,7 @@
 @mixin border-bottom-left-radius($radii) {
   -webkit-border-bottom-left-radius: $radii;
      -moz-border-bottom-left-radius: $radii;
+      -moz-border-radius-bottomleft: $radii;
       -ms-border-bottom-left-radius: $radii;
        -o-border-bottom-left-radius: $radii;
           border-bottom-left-radius: $radii;
@@ -33,6 +36,7 @@
 @mixin border-bottom-right-radius($radii) {
   -webkit-border-bottom-right-radius: $radii;
      -moz-border-bottom-right-radius: $radii;
+      -moz-border-radius-bottomright: $radii;
       -ms-border-bottom-right-radius: $radii;
        -o-border-bottom-right-radius: $radii;
           border-bottom-right-radius: $radii;
