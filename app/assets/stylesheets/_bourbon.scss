@@ -1,8 +1,10 @@
 // Custom Functions
 @import "functions/deprecated-webkit-gradient";
-@import "functions/grid-width";
 @import "functions/flex-grid";
+@import "functions/grid-width";
+@import "functions/linear-gradient";
 @import "functions/modular-scale";
+@import "functions/radial-gradient";
 @import "functions/tint-shade";
 
 // CSS3 Mixins
@@ -25,8 +27,8 @@
 
 // Addons & other mixins
 @import "addons/button";
+@import "addons/clearfix";
 @import "addons/font-family";
 @import "addons/html5-input-types";
 @import "addons/position";
 @import "addons/timing-functions";
-@import "addons/clearfix";
