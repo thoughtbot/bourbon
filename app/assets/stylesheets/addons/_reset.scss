@@ -18,7 +18,7 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 
   // Set the default line height
   body {
-    line-height : 1;
+    line-height: 1;
   }
 
   // Reset image borders on images and image links
@@ -29,7 +29,8 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 
   // Reset lists in the <nav> element
   nav {
-    ol, ul {
+    ol,
+    ul {
       @include reset-list;
     }
   }
@@ -81,28 +82,28 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 // Display unrecognized elements as block in browsers that don't recognize them.
 @mixin reset-html5 {
   #{$html5-block} {
-    display : block;
+    display: block;
   }
 }
 
 // Reset the box model across all browsers.
 @mixin reset-box {
-  border  : 0;
-  margin  : 0;
-  padding : 0;
+  border:  0;
+  margin:  0;
+  padding: 0;
 }
 
 // Remove the outline when elements gain :focus.
 @mixin reset-focus {
-  outline : 0;
+  outline: 0;
 }
 
 // Reset fonts and vertical alignment.
 @mixin reset-font {
-  font-family    : inherit;
-  font-size      : 100%;
-  font-weight    : inherit;
-  vertical-align : baseline;
+  font-family:    inherit;
+  font-size:      100%;
+  font-weight:    inherit;
+  vertical-align: baseline;
 }
 
 // Reset (un)ordered lists.
@@ -110,17 +111,19 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 // .navigation {
 //   @include reset-list;
 //   li {
-//     display : inline-block; } }
+//     display: inline-block;
+//   }
+// }
 //
 @mixin reset-list {
-  list-style : none;
-  margin     : 0;
-  padding    : 0;
+  list-style: none;
+  margin:     0;
+  padding:    0;
 }
 
 // Reset border
 @mixin reset-border {
-  border : none;
+  border: none;
 }
 
 // "Removes" the white space of inline-block element when the markup is not on one line
@@ -131,52 +134,55 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 // .pagination {
 //   @include reset-inline-whitespace;
 //   li {
-//     display : inline-block; } }
+//     display: inline-block;
+//   }
+// }
 //
 // The size of the font can be changed by passing it as an argument:
 //
 // .pagination {
-//   @include reset-inline-whitespace(15px); }
+//   @include reset-inline-whitespace(15px);
+// }
 //
 @mixin reset-inline-whitespace($font-size:13px) {
-  font-size : 0;
+  font-size: 0;
   > * {
-    font-size : $font-size;
+    font-size: $font-size;
   }
 }
 
 // Reset quotations
 @mixin reset-quotation {
-  quotes : none;
+  quotes: none;
   &:before,
   &:after {
-    content : "";
-    content : none;
+    content: "";
+    content: none;
   }
 }
 
 // Remove spacing between table cells
 @mixin reset-table {
-  border-collapse : collapse;
-  border-spacing  : 0;
+  border-collapse: collapse;
+  border-spacing:  0;
 }
 
 // Reset table cells and add text alignment classes to override default left text alignment.
 @mixin reset-table-cell {
-  font-weight    : 400;
-  text-align     : left;
-  vertical-align : middle;
+  font-weight:    400;
+  text-align:     left;
+  vertical-align: middle;
   &.center {
-    text-align : center;
+    text-align: center;
   }
   &.right {
-    text-align : right;
+    text-align: right;
   }
   &.top {
-    vertical-align : top;
+    vertical-align: top;
   }
   &.bottom {
-    vertical-align : bottom;
+    vertical-align: bottom;
   }
 }
 
@@ -219,18 +225,18 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
   input,
   select,
   textarea {
-    font-size      : 100%;
-    margin         : 0;
-    vertical-align : middle;
+    font-size:      100%;
+    margin:         0;
+    vertical-align: middle;
   }
 
   button,
   input {
-    *overflow   : visible; // Inner spacing ie7
-    line-height : normal;
+    *overflow:   visible; // Inner spacing IE7
+    line-height: normal;
     &::-mox-focus-inner {
-      border  : 0;
-      padding : 0;
+      border:  0;
+      padding: 0;
     }
   }
 
@@ -245,13 +251,13 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
   input[type="button"],
   input[type="reset"],
   input[type="submit"] {
-    cursor             : pointer;
-    -webkit-appearance : button; // Resemble native UI on iOS
+    cursor:             pointer;
+    -webkit-appearance: button; // Resemble native UI on iOS
   }
 
   textarea {
-    overflow       : auto;
-    vertical-align : top;
+    overflow:       auto;
+    vertical-align: top;
   }
 
 }
@@ -259,23 +265,23 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 // Give lists a default appearance.
 // Use reset-list mixin to remove all default styling from lists.
 @mixin normalize-list($indent:24px) {
-  padding : 0 0 0 $indent;
+  padding: 0 0 0 $indent;
 }
 
 // Prevent sub and sup affecting line-height
 @mixin normalize-script-text {
   sub,
   sup {
-    font-size      : 75%;
-    line-height    : 0;
-    position       : relative;
-    vertical-align : baseline;
+    font-size:      75%;
+    line-height:    0;
+    position:       relative;
+    vertical-align: baseline;
   }
   sub {
-    bottom : -0.25em;
+    bottom: -0.25em;
   }
   sup {
-    top : -0.5em;
+    top: -0.5em;
   }
 }
 
@@ -294,12 +300,12 @@ $html5-block      : "article aside details figcaption figure footer header hgrou
 //
 //    // Reset an already styled block element
 //    .well {
-//      border  : 1px solid #000;
-//      margin  : 0 0 20px;
-//      padding : 6px;
+//      border:  1px solid #000;
+//      margin:  0 0 20px;
+//      padding: 6px;
 //      &.basic {
 //        @include reset-box;
-//        padding : 2px;
+//        padding: 2px;
 //      }
 //    }
 //
