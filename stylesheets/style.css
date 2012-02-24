@@ -379,11 +379,11 @@ table {
   h2, h3 {
     page-break-after: avoid; } }
 html, body {
+  background-color: #f3f1ec;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   height: 100%;
-  width: 100%;
-  background-color: #f3f1ec; }
+  width: 100%; }
 
 html {
   padding: 0; }
@@ -395,9 +395,9 @@ h1 {
 
 h2 {
   font-size: 26.652px;
-  margin-top: 0;
   font-weight: 300;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  margin-top: 0; }
 
 p + h2, div.highlight + h2 {
   margin-top: 2em; }
@@ -428,33 +428,32 @@ nav.fixed-nav {
   min-height: 300px;
   width: 228px; }
   nav.fixed-nav ul {
-    margin-top: 40px;
-    margin: 0;
+    border: 1px solid #d8d1c0;
+    border-bottom: 0;
+    border-left: 0;
+    border-top: 0;
+    -webkit-box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75);
+    box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75);
     height: 100%;
+    margin: 0;
     overflow-y: scroll;
     padding: 0;
     position: fixed;
-    width: inherit;
-    background-color: #edeae3;
-    border: 1px solid #d8d1c0;
-    border-top: 0;
-    border-bottom: 0;
-    -webkit-box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75), inset 1px 0 0px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75), inset 1px 0 0px rgba(255, 255, 255, 0.75);
-    -ms-box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75), inset 1px 0 0px rgba(255, 255, 255, 0.75);
-    -o-box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75), inset 1px 0 0px rgba(255, 255, 255, 0.75);
-    box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75), inset 1px 0 0px rgba(255, 255, 255, 0.75); }
+    width: inherit; }
     nav.fixed-nav ul input[type="search"] {
       margin-left: 20px; }
     nav.fixed-nav ul li {
-      list-style-type: none;
-      line-height: 180%; }
+      line-height: 180%;
+      list-style-type: none; }
       nav.fixed-nav ul li:first-child {
         margin-top: 15px; }
       nav.fixed-nav ul li.title:not(:first-child) {
-        margin-top: 10px; }
+        margin-bottom: 5px;
+        margin-top: 15px; }
       nav.fixed-nav ul li a {
         display: block;
+        padding: 0 20px;
         -webkit-transition-property: all;
         -moz-transition-property: all;
         -ms-transition-property: all;
@@ -474,13 +473,18 @@ nav.fixed-nav {
         -moz-transition-delay: 0;
         -ms-transition-delay: 0;
         -o-transition-delay: 0;
-        transition-delay: 0;
-        padding: 0 20px; }
-        nav.fixed-nav ul li a:hover {
-          background-color: #f3f1ec; }
+        transition-delay: 0; }
         nav.fixed-nav ul li a h3 {
-          color: black;
-          margin: 0; }
+          border-bottom: 1px solid #d8d1c0;
+          -webkit-box-shadow: 0 1px 0 white;
+          -moz-box-shadow: 0 1px 0 white;
+          box-shadow: 0 1px 0 white;
+          color: #333;
+          font-size: 12px;
+          font-weight: bold;
+          margin: 0;
+          text-shadow: 0 1px 0 white;
+          text-transform: uppercase; }
 
 div.main-content {
   margin: 0 auto;
@@ -493,8 +497,6 @@ div.main-inner {
   border-left: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
   box-sizing: border-box;
   clear: right;
   float: left;
@@ -503,13 +505,13 @@ div.main-inner {
   div.main-inner h1 {
     border-bottom: 1px solid #ededed; }
     div.main-inner h1 span a {
-      font-size: 13px;
       float: right;
+      font-size: 13px;
       margin-top: 20px; }
   div.main-inner > h1 {
+    margin-bottom: 0;
     margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 0; }
+    margin-right: 20px; }
   div.main-inner > section {
     border: 1px solid transparent;
     border-bottom: 1px solid #ebe8e0;
@@ -524,8 +526,6 @@ div.main-inner {
   div.main-inner > section:target {
     -webkit-box-shadow: inset 4px 0 0px 0 #fc511d;
     -moz-box-shadow: inset 4px 0 0px 0 #fc511d;
-    -ms-box-shadow: inset 4px 0 0px 0 #fc511d;
-    -o-box-shadow: inset 4px 0 0px 0 #fc511d;
     box-shadow: inset 4px 0 0px 0 #fc511d;
     -webkit-transition-property: all;
     -moz-transition-property: all;
@@ -566,8 +566,6 @@ pre {
   border-radius: 3px;
   -webkit-box-shadow: 0 0 0 1px #fbedc6;
   -moz-box-shadow: 0 0 0 1px #fbedc6;
-  -ms-box-shadow: 0 0 0 1px #fbedc6;
-  -o-box-shadow: 0 0 0 1px #fbedc6;
   box-shadow: 0 0 0 1px #fbedc6;
   margin: 1em 0;
   overflow: auto;
@@ -599,15 +597,15 @@ pre {
     -webkit-appearance: none;
     width: 7px; }
   pre::-webkit-scrollbar-thumb {
-    border-radius: 4px;
     background-color: #f9e9be;
+    border-radius: 4px;
     -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
 
 p code, ul code, ol code {
   background-color: #f3f1ec;
+  border: 1px solid #ebe8e0;
   color: #454545;
-  padding: 0 .2em;
-  border: 1px solid #ebe8e0; }
+  padding: 0 .2em; }
 
 @-webkit-keyframes scale {
   0% {
@@ -825,8 +823,6 @@ div.box {
   border: 1px solid #2aa4b2;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
-  -ms-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
   height: 40px;
   background-color: #8fdce5;
@@ -865,7 +861,6 @@ section#background-image section.demo {
 section#border-image section.demo {
   -webkit-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
   -moz-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
-  -ms-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
   -o-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
   border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
   border-width: 27px;
@@ -883,14 +878,10 @@ section#box-shadow section.demo div.example {
   section#box-shadow section.demo div.example.single {
     -webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.65);
     -moz-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.65);
-    -ms-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.65);
-    -o-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.65);
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.65); }
   section#box-shadow section.demo div.example.double {
     -webkit-box-shadow: 1px 1px 5px 1px green, -1px -1px 5px 1px blue;
     -moz-box-shadow: 1px 1px 5px 1px green, -1px -1px 5px 1px blue;
-    -ms-box-shadow: 1px 1px 5px 1px green, -1px -1px 5px 1px blue;
-    -o-box-shadow: 1px 1px 5px 1px green, -1px -1px 5px 1px blue;
     box-shadow: 1px 1px 5px 1px green, -1px -1px 5px 1px blue; }
 
 section#linear-gradient section.demo {
@@ -930,8 +921,6 @@ section#buttons section.demo button.example-1 {
   border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 0 0 #8ebcf1;
   -moz-box-shadow: inset 0 1px 0 0 #8ebcf1;
-  -ms-box-shadow: inset 0 1px 0 0 #8ebcf1;
-  -o-box-shadow: inset 0 1px 0 0 #8ebcf1;
   box-shadow: inset 0 1px 0 0 #8ebcf1;
   color: white;
   display: inline;
@@ -950,8 +939,6 @@ section#buttons section.demo button.example-1 {
   section#buttons section.demo button.example-1:hover {
     -webkit-box-shadow: inset 0 1px 0 0 #60a2ec;
     -moz-box-shadow: inset 0 1px 0 0 #60a2ec;
-    -ms-box-shadow: inset 0 1px 0 0 #60a2ec;
-    -o-box-shadow: inset 0 1px 0 0 #60a2ec;
     box-shadow: inset 0 1px 0 0 #60a2ec;
     cursor: pointer;
     background-color: #2f87ea;
@@ -965,17 +952,8 @@ section#buttons section.demo button.example-1 {
     border: 1px solid #076fe4;
     -webkit-box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee;
     -moz-box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee;
-    -ms-box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee;
-    -o-box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee;
     box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee; }
 section#buttons section.demo button.example-2 {
-  background-color: #4294f0;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4294f0), color-stop(100%, #0156fe));
-  background-image: -webkit-linear-gradient(top, #4294f0, #0156fe);
-  background-image: -moz-linear-gradient(top, #4294f0, #0156fe);
-  background-image: -ms-linear-gradient(top, #4294f0, #0156fe);
-  background-image: -o-linear-gradient(top, #4294f0, #0156fe);
-  background-image: linear-gradient(top, #4294f0, #0156fe);
   border: 1px solid #3371b2;
   border-color: #3371b2 #2457a3 #164297;
   -webkit-border-radius: 16px;
@@ -985,19 +963,30 @@ section#buttons section.demo button.example-2 {
   border-radius: 16px;
   -webkit-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
   -moz-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
-  -ms-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
-  -o-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
   box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
   color: white;
   display: inline;
   font-size: 11px;
   font-weight: normal;
   line-height: 1;
+  background-color: #4294f0;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4294f0), color-stop(100%, #0156fe));
+  background-image: -webkit-linear-gradient(top, #4294f0, #0156fe);
+  background-image: -moz-linear-gradient(top, #4294f0, #0156fe);
+  background-image: -ms-linear-gradient(top, #4294f0, #0156fe);
+  background-image: -o-linear-gradient(top, #4294f0, #0156fe);
+  background-image: linear-gradient(top, #4294f0, #0156fe);
   padding: 3px 16px 5px;
   text-align: center;
   text-shadow: 0 -1px 1px #2762bf;
   -webkit-background-clip: padding-box; }
   section#buttons section.demo button.example-2:hover {
+    border: 1px solid #2062a7;
+    border-color: #2062a7 #0e479a #01318e;
+    -webkit-box-shadow: inset 0 1px 0 0 #519cf0;
+    -moz-box-shadow: inset 0 1px 0 0 #519cf0;
+    box-shadow: inset 0 1px 0 0 #519cf0;
+    cursor: pointer;
     background-color: #2d88ee;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2d88ee), color-stop(100%, #1554ce));
     background-image: -webkit-linear-gradient(top, #2d88ee, #1554ce);
@@ -1005,14 +994,6 @@ section#buttons section.demo button.example-2 {
     background-image: -ms-linear-gradient(top, #2d88ee, #1554ce);
     background-image: -o-linear-gradient(top, #2d88ee, #1554ce);
     background-image: linear-gradient(top, #2d88ee, #1554ce);
-    border: 1px solid #2062a7;
-    border-color: #2062a7 #0e479a #01318e;
-    -webkit-box-shadow: inset 0 1px 0 0 #519cf0;
-    -moz-box-shadow: inset 0 1px 0 0 #519cf0;
-    -ms-box-shadow: inset 0 1px 0 0 #519cf0;
-    -o-box-shadow: inset 0 1px 0 0 #519cf0;
-    box-shadow: inset 0 1px 0 0 #519cf0;
-    cursor: pointer;
     text-shadow: 0 -1px 1px #134faf;
     -webkit-background-clip: padding-box; }
   section#buttons section.demo button.example-2:active {
@@ -1021,18 +1002,9 @@ section#buttons section.demo button.example-2 {
     border-bottom: 1px solid #062d8d;
     -webkit-box-shadow: inset 0 0 6px 3px #0c44b8, 0 1px 0 0 white;
     -moz-box-shadow: inset 0 0 6px 3px #0c44b8, 0 1px 0 0 white;
-    -ms-box-shadow: inset 0 0 6px 3px #0c44b8, 0 1px 0 0 white;
-    -o-box-shadow: inset 0 0 6px 3px #0c44b8, 0 1px 0 0 white;
     box-shadow: inset 0 0 6px 3px #0c44b8, 0 1px 0 0 white;
     text-shadow: 0 -1px 1px #1a52aa; }
 section#buttons section.demo button.example-3 {
-  background-color: red;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(50%, #c70000), color-stop(50%, #a90000), color-stop(100%, #b00000));
-  background-image: -webkit-linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
-  background-image: -moz-linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
-  background-image: -ms-linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
-  background-image: -o-linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
-  background-image: linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
   border: 1px solid #8a0000;
   border-bottom: 1px solid #810000;
   -webkit-border-radius: 5px;
@@ -1042,31 +1014,34 @@ section#buttons section.demo button.example-3 {
   border-radius: 5px;
   -webkit-box-shadow: inset 0 1px 0 0 #ff1d0c;
   -moz-box-shadow: inset 0 1px 0 0 #ff1d0c;
-  -ms-box-shadow: inset 0 1px 0 0 #ff1d0c;
-  -o-box-shadow: inset 0 1px 0 0 #ff1d0c;
   box-shadow: inset 0 1px 0 0 #ff1d0c;
   color: white;
   display: inline;
   font-size: 14px;
   font-weight: bold;
+  background-color: red;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(50%, #c70000), color-stop(50%, #a90000), color-stop(100%, #b00000));
+  background-image: -webkit-linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
+  background-image: -moz-linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
+  background-image: -ms-linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
+  background-image: -o-linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
+  background-image: linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
   padding: 7px 20px 8px;
-  text-decoration: none;
   text-align: center;
+  text-decoration: none;
   text-shadow: 0 -1px 1px #730000; }
   section#buttons section.demo button.example-3:hover {
+    cursor: pointer;
     background-color: #f20000;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f20000), color-stop(50%, #bd0000), color-stop(50%, #a20000), color-stop(100%, #a90000));
     background-image: -webkit-linear-gradient(top, #f20000 0%, #bd0000 50%, #a20000 50%, #a90000 100%);
     background-image: -moz-linear-gradient(top, #f20000 0%, #bd0000 50%, #a20000 50%, #a90000 100%);
     background-image: -ms-linear-gradient(top, #f20000 0%, #bd0000 50%, #a20000 50%, #a90000 100%);
     background-image: -o-linear-gradient(top, #f20000 0%, #bd0000 50%, #a20000 50%, #a90000 100%);
-    background-image: linear-gradient(top, #f20000 0%, #bd0000 50%, #a20000 50%, #a90000 100%);
-    cursor: pointer; }
+    background-image: linear-gradient(top, #f20000 0%, #bd0000 50%, #a20000 50%, #a90000 100%); }
   section#buttons section.demo button.example-3:active {
     -webkit-box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white;
     -moz-box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white;
-    -ms-box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white;
-    -o-box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white;
     box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white; }
 
 section#timing-functions section.demo ul {

@@ -1,10 +1,12 @@
 <section id="radial-gradient">
   <h2>Radial Gradient</h2>
   <p>Takes up to 10 gradients. Position and shape are required. See also the <a href="#background-image">background-image mixin</a>.</p>
+  <p>This mixin will output a fallback <code>background-color: #first-color;</code> declaration. A <code>$fallback</code> argument can be passed to change the fallback color.</p>
 
 {% highlight scss %}
 @include radial-gradient(50% 50%, circle cover, #1e5799, #3dc3d1);
 @include radial-gradient(50% 50%, circle cover, #eee 10%, #1e5799 30%, #efefef);
+@include radial-gradient(50% 50%, circle cover, #eee 10%, #1e5799 30%, #efefef, $fallback: red);
 {% endhighlight %}
 
   <h3>Demo</h3>

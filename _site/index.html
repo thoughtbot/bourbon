@@ -30,6 +30,7 @@
     <li><a href="#radial-gradient">Radial-gradient</a></li>
     <li><a href="#transform">Transform</a></li>
     <li><a href="#transitions">Transitions</a></li>
+    <li><a href="#user-select">User-select</a></li>
 
     <li class="title"><a href="#functions"><h3>Functions</h3></a><li>
     <li><a href="#compact">Compact</a></li>
@@ -56,7 +57,8 @@
         <h1>Bourbon &ndash; Sass Mixin Library <span class="view-on-github"><a href="https://github.com/thoughtbot/bourbon">View on Github</a></span></h1>
 
         <section id="intro">
-  <p>The purpose of Bourbon Sass Mixins is to provide a comprehensive library of sass mixins that are designed to be as vanilla as possible, meaning they should not deter from the original CSS syntax. The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
+  <p>The purpose of Bourbon Sass Mixins is to provide a comprehensive library of sass mixins that are designed to be as vanilla as possible, meaning they should not deter from the original CSS syntax.</p>
+  <p>The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
 </section>
 
 
@@ -271,12 +273,15 @@
         <section id="linear-gradient">
   <h2>Linear Gradient</h2>
   <p>Gradient Position is optional, default is <code>top</code>. Position can be a degree (<code>90deg</code>). Mixin supports up to 10 color-stops.</p>
+  <p>This mixin will output a fallback <code>background-color: #first-color;</code> declaration. A <code>$fallback</code> argument can be passed to change the fallback color.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> linear-gradient</span><span class="p">(</span><span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#2989d8</span><span class="p">);</span>
 <span class="k">@include</span><span class="nd"> linear-gradient</span><span class="p">(</span><span class="no">top</span><span class="o">,</span> <span class="mh">#8fdce5</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="p">);</span>
+<span class="k">@include</span><span class="nd"> linear-gradient</span><span class="p">(</span><span class="no">top</span><span class="o">,</span> <span class="mh">#8fdce5</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="o">,</span> <span class="nv">$fallback</span><span class="o">:</span> <span class="nb">red</span><span class="p">);</span>
 <span class="k">@include</span><span class="nd"> linear-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">deg</span><span class="o">,</span> <span class="mh">#1e5799</span> <span class="mi">0</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#2989d8</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#207cca</span> <span class="mi">51</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#7db9e8</span> <span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
 </code></pre>
 </div>
+
 
   <h3>Demo</h3>
   <section class="demo"></section>
@@ -306,9 +311,11 @@
         <section id="radial-gradient">
   <h2>Radial Gradient</h2>
   <p>Takes up to 10 gradients. Position and shape are required. See also the <a href="#background-image">background-image mixin</a>.</p>
+  <p>This mixin will output a fallback <code>background-color: #first-color;</code> declaration. A <code>$fallback</code> argument can be passed to change the fallback color.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="p">);</span>
 <span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#eee</span> <span class="mi">10</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#1e5799</span> <span class="mi">30</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#efefef</span><span class="p">);</span>
+<span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#eee</span> <span class="mi">10</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#1e5799</span> <span class="mi">30</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#efefef</span><span class="o">,</span> <span class="nv">$fallback</span><span class="o">:</span> <span class="nb">red</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -339,6 +346,16 @@
 </code></pre>
 </div>
 
+
+</section>
+
+        <section id="user-select">
+  <h2>User-select</h2>
+  <p>Controls the appearance (only) of selection.  This does not have any affect on actual selection operation.</p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> user-select</span><span class="p">(</span><span class="no">none</span><span class="p">);</span>
+</code></pre>
+</div>
 
 </section>
 
@@ -596,18 +613,6 @@
   <h2>All Supported Functions, Mixins, and Addons</h2>
   <p><code>@</code> denotes a mixin and must be prefaced with <code>@include</code>.</p>
 
-<h3 id="complete-list-functions">Functions</h3>
-<div class="highlight"><pre><code class="scss"><span class="nt">compact</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-<span class="nt">golden-ratio</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-<span class="nt">grid-width</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-<span class="nt">linear-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-<span class="nt">radial-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-<span class="nt">shade</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-<span class="nt">tint</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-</code></pre>
-</div>
-
-
 <h3 id="complete-list-mixins">Mixins</h3>
 <div class="highlight"><pre><code class="scss"><span class="nt">animation</span>
   <span class="o">@</span> <span class="nt">animation</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
@@ -675,6 +680,21 @@
   <span class="o">@</span> <span class="nt">transition-duration</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
   <span class="o">@</span> <span class="nt">transition-property</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
   <span class="o">@</span> <span class="nt">transition-timing-function</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+
+<span class="o">@</span> <span class="nt">user-select</span>
+</code></pre>
+</div>
+
+
+<h3 id="complete-list-functions">Functions</h3>
+<div class="highlight"><pre><code class="scss"><span class="nt">compact</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="nt">flex-grid</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="nt">golden-ratio</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="nt">grid-width</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="nt">linear-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="nt">radial-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="nt">shade</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="nt">tint</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 </code></pre>
 </div>
 

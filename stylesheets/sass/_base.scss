@@ -1,9 +1,9 @@
 html, body {
+  background-color: $background-color;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   height: 100%;
   width: 100%;
-  background-color: $background-color;
 }
 
 html {
@@ -18,9 +18,9 @@ h1 {
 
 h2 {
   font-size: golden-ratio(14px, 1) + 4px;
-  margin-top: 0;
   font-weight: 300;
   margin-bottom: 0.5em;
+  margin-top: 0;
 }
 
 p, div.highlight {
@@ -66,47 +66,49 @@ nav.fixed-nav {
   width: grid-width(2);
 
   ul {
-    margin-top: 40px;
-    margin: 0;
+    border: 1px solid darken($base-border-color, 10%);
+    border-bottom: 0;
+    border-left: 0;
+    border-top: 0;
+    @include box-shadow(inset -1px 0 0px hsla(0, 0%, 100%, 0.75));
     height: 100%;
+    margin: 0;
     overflow-y: scroll;
     padding: 0;
     position: fixed;
     width: inherit;
-    background-color: darken($background-color, 3%);
-    border: 1px solid darken($base-border-color, 10%);
-    border-top: 0;
-    border-bottom: 0;
-    @include box-shadow(inset -1px 0 0px hsla(0, 0%, 100%, 0.75), inset 1px 0 0px hsla(0, 0%, 100%, 0.75));
 
     input[type="search"] {
       margin-left: 20px;
     }
 
     li {
-      list-style-type: none;
       line-height: 180%;
+      list-style-type: none;
 
       &:first-child {
         margin-top: 15px;
       }
 
       &.title:not(:first-child) {
-        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-top: 15px;
       }
 
       a {
         display: block;
-        @include transition;
         padding: 0 20px;
-
-        &:hover {
-          background-color: $background-color;
-        }
+        @include transition;
 
         h3 {
-          color: black;
+          border-bottom: 1px solid darken($base-border-color, 10%);
+          @include box-shadow(0 1px 0 white);
+          color: #333;
+          font-size: 12px;
+          font-weight: bold;
           margin: 0;
+          text-shadow: 0 1px 0 white;
+          text-transform: uppercase;
         }
       }
     }
@@ -138,16 +140,16 @@ div.main-inner {
     border-bottom: 1px solid hsl(0, 0%, 93%);
 
     span a {
-      font-size: $base-font-size;
       float: right;
+      font-size: $base-font-size;
       margin-top: 20px;
     }
   }
 
   > h1 {
+    margin-bottom: 0;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 0;
   }
 
   > section {
@@ -174,13 +176,7 @@ div.main-inner {
   //************************************************************************//
   > section {
     &:target {
-      $target-color: hsl(205, 20%, 97%);
-      $target-border: darken($target-color, 20%);
-      // background-color: lighten($target-color, 2%);
-      // border: 1px solid $target-border;
-      // border-right-color: transparent;
       @include box-shadow(inset 4px 0 0px 0 hsl(14, 97%, 55%));
-      // @include box-shadow(inset 0 0 10px 1px $target-border);
       @include transition(all, 0.3s);
 
       h2 {
@@ -212,20 +208,16 @@ pre {
   white-space: pre;
   word-wrap: normal;
 
-  // &:hover {
-    // background-color: darken($highlight-color, 3%);
-    // @include box-shadow(0 0 0 1px darken($highlight-color, 16%));
-  // }
-
   // render a nice scrollbar in overflowed pre area's
   &::-webkit-scrollbar {
     height: 7px;
     -webkit-appearance: none;
     width: 7px;
   }
+
   &::-webkit-scrollbar-thumb {
-      border-radius: 4px;
       background-color: desaturate(darken($highlight-color, 10%), 5%);
+      border-radius: 4px;
       -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
   }
   &::-webkit-scrollbar-corner {
@@ -234,7 +226,7 @@ pre {
 
 p code, ul code, ol code {
   background-color: $background-color;
+  border: 1px solid $base-border-color;
   color: hsl(0, 0%, 27%);
   padding: 0 .2em;
-  border: 1px solid $base-border-color;
 }
