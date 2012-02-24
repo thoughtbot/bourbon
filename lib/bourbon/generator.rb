@@ -36,7 +36,7 @@ module Bourbon
     private
 
     def bourbon_files_already_exist?
-      Dir.exist?("bourbon")
+      File.directory?("bourbon")
     end
 
     def install_files

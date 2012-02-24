@@ -4,11 +4,20 @@
                        $G3: false, $G4: false,
                        $G5: false, $G6: false,
                        $G7: false, $G8: false,
-                       $G9: false, $G10: false) {
+                       $G9: false, $G10: false,
+                       $fallback: false) {
 
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
 
-  background-color:  nth($G1, 1);
+  // Set $G1 as the default fallback color
+  $fallback-color: nth($G1, 1);
+
+  // If $fallback is a color use that color as the fallback color
+  @if (type-of($fallback) == color) or ($fallback == "transparent") {
+    $fallback-color: $fallback;
+  }
+
+  background-color:  $fallback-color;
   background-image:          deprecated-webkit-gradient(radial, $full); // Safari <= 5.0
   background-image:  -webkit-radial-gradient($pos, $shape-size, $full);
   background-image:     -moz-radial-gradient($pos, $shape-size, $full);

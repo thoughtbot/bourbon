@@ -62,11 +62,12 @@
   @include border-radius (3px);
   @include box-shadow (inset 0 1px 0 0 $inset-shadow);
   color: $color;
-  display: inline;
+  display: inline-block;
   font-size: 11px;
   font-weight: bold;
   @include linear-gradient ($base-color, $stop-gradient);
   padding: 6px 18px 7px;
+  text-decoration: none;
   text-shadow: 0 1px 0 $text-shadow;
   -webkit-background-clip: padding-box;
 
@@ -133,7 +134,7 @@
   @include border-radius(5px);
   @include box-shadow(inset 0 1px 0 0 $inset-shadow);
   color: $color;
-  display: inline;
+  display: inline-block;
   font-size: 14px;
   font-weight: bold;
   @include linear-gradient(top, $base-color 0%, $second-stop 50%, $third-stop 50%, $fourth-stop 100%);
@@ -204,13 +205,14 @@
   @include border-radius(16px);
   @include box-shadow(inset 0 1px 0 0 $inset-shadow, 0 1px 2px 0 #b3b3b3);
   color: $color;
-  display: inline;
+  display: inline-block;
   font-size: 11px;
   font-weight: normal;
   line-height: 1;
   @include linear-gradient ($base-color, $stop-gradient);
   padding: 3px 16px 5px;
   text-align: center;
+  text-decoration: none;
   text-shadow: 0 -1px 1px $text-shadow;
   -webkit-background-clip: padding-box;
 

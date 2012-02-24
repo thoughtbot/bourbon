@@ -2,8 +2,6 @@
 // Background-image property for adding multiple background images with
 // gradients, or for stringing multiple gradients together.
 //************************************************************************//
-@import "../functions/linear-gradient";
-@import "../functions/radial-gradient";
 
 @mixin background-image(
   $image-1       , $image-2: false,
@@ -50,18 +48,6 @@
 }
 
 
-@function render-gradients($gradients, $gradient-type, $vendor: false) {
-  $vendor-gradients: false;
-  @if $vendor {
-    $vendor-gradients: -#{$vendor}-#{$gradient-type}-gradient($gradients);
-  }
-
-  @else if $vendor == false {
-    $vendor-gradients: "#{$gradient-type}-gradient(#{$gradients})";
-    $vendor-gradients: unquote($vendor-gradients);
-  }
-  @return $vendor-gradients;
-}
 
 //Examples:
   //@include background-image(linear-gradient(top, orange, red));
