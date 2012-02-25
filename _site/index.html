@@ -24,6 +24,7 @@
     <li><a href="#box-sizing">Box-sizing</a></li>
     <li><a href="#columns">Columns</a></li>
     <li><a href="#flex-box">Flex Box</a></li>
+    <li><a href="#flex-grid">Flex Grid</a></li>
     <li><a href="#inline-block">Inline-block</a></li>
     <li><a href="#linear-gradient">Linear-gradient</a></li>
     <li><a href="#position">Position</a></li>
@@ -41,6 +42,7 @@
 
     <li class="title"><a href="#add-ons"><h3>Add-ons</h3></a><li>
     <li><a href="#buttons">Buttons</a></li>
+    <li><a href="#clearfix">Clearfix</a></li>
     <li><a href="#font-family">Font-Family</a></li>
     <li><a href="#html5-input-types">HTML5 Input Types</a></li>
     <li><a href="#timing-functions">Timing Functions</a></li>
@@ -254,6 +256,36 @@
 <span class="nt">div</span><span class="nc">.parent</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> box</span><span class="p">(</span><span class="nv">$orient</span><span class="o">:</span> <span class="n">horizontal</span><span class="o">,</span> <span class="nv">$pack</span><span class="o">:</span> <span class="no">center</span><span class="o">,</span> <span class="nv">$align</span><span class="o">:</span> <span class="n">stretch</span><span class="p">);</span> <span class="c1">// defaults</span>
   <span class="k">@include</span><span class="nd"> box</span><span class="p">(</span><span class="n">vertical</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">stretch</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+</section>
+
+        <section id="flex-grid">
+  <h2>Flex Grid</h2>
+  <p>Use this mixin to easily create a flexible-grid layout.</p>
+  <p>The <code>$fg-column</code>, <code>$fg-gutter</code> and <code>$fg-max-columns</code> variables must be defined in your base stylesheet to properly use the flex-grid function.</p>
+  <p>This function takes the fluid grid equation (target / context = result) and uses columns to help define each.</p>
+
+<div class="highlight"><pre><code class="scss"><span class="na">$fg-column</span><span class="o">:</span> <span class="mi">60</span><span class="kt">px</span><span class="p">;</span>             <span class="c1">// Column Width</span>
+<span class="na">$fg-gutter</span><span class="o">:</span> <span class="mi">25</span><span class="kt">px</span><span class="p">;</span>             <span class="c1">// Gutter Width</span>
+<span class="na">$fg-max-columns</span><span class="o">:</span> <span class="mi">12</span><span class="p">;</span>          <span class="c1">// Total Columns For Main Container</span>
+
+<span class="nt">div</span> <span class="p">{</span>
+  <span class="na">width</span><span class="o">:</span> <span class="nf">flex-grid</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>        <span class="c1">// returns (315px / 1020px) = 30.882353%;</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="nf">flex-gutter</span><span class="p">();</span> <span class="c1">// returns (25px / 1020px) = 2.45098%;</span>
+
+  <span class="nt">p</span> <span class="p">{</span>
+    <span class="na">width</span><span class="o">:</span> <span class="nf">flex-grid</span><span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="p">);</span>   <span class="c1">// returns (145px / 315px) = 46.031746%;</span>
+    <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="p">;</span>
+    <span class="na">margin</span><span class="o">:</span> <span class="nf">flex-gutter</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>   <span class="c1">// returns (25px / 315px) = 7.936508%;</span>
+  <span class="p">}</span>
+
+  <span class="nt">blockquote</span> <span class="p">{</span>
+    <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="nf">flex-grid</span><span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="p">);</span>   <span class="c1">// returns (145px / 315px) = 46.031746%;</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -509,6 +541,19 @@
 
 </section>
 
+        <section id="clearfix">
+  <h2>Clearfix</h2>
+  <p>This mixin will output a clearfix to the selector where the mixin is declared.</p>
+  <p>This clearfix uses Nicolas Gallagher's <a href="http://nicolasgallagher.com/micro-clearfix-hack/">Micro Clearfix</a>.</p>
+
+<div class="highlight"><pre><code class="scss"><span class="nt">div</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> clearfix</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+</section>
+
         <section id="font-family">
   <h2>Font-Family</h2>
   <p>Bourbon defines four default font-families as variables for convenience sake:</p>
@@ -701,6 +746,7 @@
 
 <h3 id="complete-list-addons">Addons</h3>
 <div class="highlight"><pre><code class="scss"><span class="o">@</span> <span class="nt">button</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="o">@</span> <span class="nt">clearfix</span>
 <span class="o">@</span> <span class="nt">position</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 
 <span class="nt">HTML5</span> <span class="nt">Inputs</span>
@@ -752,6 +798,9 @@
 
 <section id="credits">
   <a href="http://thoughtbot.com"><img src="http://thoughtbot.com/images/tm/logo.png"/></a>
+
+  <h3>Got questions? Need help?</h3>
+  <p>Reach out to <a href="http://twitter.com/phillapier">Phil LaPier</a> on twiiter.</p>
 
   <h3>Credits</h3>
   <p>Bourbon is maintained and funded by <a href="http://thoughtbot.com/community">thoughtbot</a>.</p>

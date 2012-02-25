@@ -66,11 +66,10 @@ nav.fixed-nav {
   width: grid-width(2);
 
   ul {
-    border: 1px solid darken($base-border-color, 10%);
+    // border: 1px solid darken($base-border-color, 10%);
     border-bottom: 0;
     border-left: 0;
     border-top: 0;
-    @include box-shadow(inset -1px 0 0px hsla(0, 0%, 100%, 0.75));
     height: 100%;
     margin: 0;
     overflow-y: scroll;
@@ -103,7 +102,7 @@ nav.fixed-nav {
         h3 {
           border-bottom: 1px solid darken($base-border-color, 10%);
           @include box-shadow(0 1px 0 white);
-          color: #333;
+          color: hsl(0, 0%, 30%);
           font-size: 12px;
           font-weight: bold;
           margin: 0;
@@ -128,8 +127,9 @@ div.main-content {
 
 div.main-inner {
   background: white;
-  border: 1px solid $base-border-color;
-  border-left: 0;
+  border: 1px solid darken($base-border-color, 10%);
+  border-bottom: 0;
+  border-top: 0;
   @include box-sizing(border-box);
   clear: right;
   float: left;
@@ -168,6 +168,10 @@ div.main-inner {
       & + h1 {
         margin-top: 40px;
       }
+    }
+
+    &:last-child {
+      border: 0;
     }
   }
 

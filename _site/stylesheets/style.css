@@ -428,13 +428,9 @@ nav.fixed-nav {
   min-height: 300px;
   width: 228px; }
   nav.fixed-nav ul {
-    border: 1px solid #d8d1c0;
     border-bottom: 0;
     border-left: 0;
     border-top: 0;
-    -webkit-box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75);
-    box-shadow: inset -1px 0 0px rgba(255, 255, 255, 0.75);
     height: 100%;
     margin: 0;
     overflow-y: scroll;
@@ -479,7 +475,7 @@ nav.fixed-nav {
           -webkit-box-shadow: 0 1px 0 white;
           -moz-box-shadow: 0 1px 0 white;
           box-shadow: 0 1px 0 white;
-          color: #333;
+          color: #4d4d4d;
           font-size: 12px;
           font-weight: bold;
           margin: 0;
@@ -493,8 +489,9 @@ div.main-content {
 
 div.main-inner {
   background: white;
-  border: 1px solid #ebe8e0;
-  border-left: 0;
+  border: 1px solid #d8d1c0;
+  border-bottom: 0;
+  border-top: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -523,6 +520,8 @@ div.main-inner {
       padding-bottom: 0; }
       div.main-inner > section#intro + h1 {
         margin-top: 40px; }
+    div.main-inner > section:last-child {
+      border: 0; }
   div.main-inner > section:target {
     -webkit-box-shadow: inset 4px 0 0px 0 #fc511d;
     -moz-box-shadow: inset 4px 0 0px 0 #fc511d;
