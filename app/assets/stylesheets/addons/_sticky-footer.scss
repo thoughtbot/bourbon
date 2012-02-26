@@ -1,0 +1,47 @@
+@mixin sticky-footer(
+  $height:           50px,
+  $main-selector:    "#container",
+  $content-selector: "#content",
+  $footer-selector:  "#footer"
+) {
+  html,
+  body,
+  #{$main-selector} {
+    height: 100%;
+  }
+  body > #{$main-selector} {
+    height:     auto;
+    min-height: 100%;
+  }
+  #{$content-selector} {
+    @include clearfix;
+    margin-bottom: $height;
+  }
+  #{$footer-selector} {
+    clear:      both;
+    height:     $height;
+    margin-top: -$height;
+    position:   relative;
+    z-index:    10;
+  }
+}
+
+// A CSS-based sticky footer.
+//
+// Sticky footer markup:
+//
+//    <body>
+//      <div id="$main-selector">
+//        <article id="$content-selector">
+//        </article>
+//      </div>
+//      <div id="$footer-selector">
+//        <footer>
+//        </footer>
+//      </div>
+//    </body>
+//
+// Example usage:
+//
+//    @include sticky-footer(100px)
+//    @include sticky-footer(100px, "#frame", "#main")
