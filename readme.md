@@ -180,6 +180,7 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
     --------------------------------
       @ button(*args)
       @ clearfix
+      @ hide-text
       @ position(*args)
 
       #{$all-text-inputs}
