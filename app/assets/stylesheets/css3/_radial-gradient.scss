@@ -5,6 +5,10 @@
                        $G5: false, $G6: false,
                        $G7: false, $G8: false,
                        $G9: false, $G10: false,
+                       $deprecated-pos1: center center,
+                       $deprecated-pos2: center center,
+                       $deprecated-radius1: 0,
+                       $deprecated-radius2: 460,
                        $fallback: false) {
 
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
@@ -18,7 +22,7 @@
   }
 
   background-color:  $fallback-color;
-  background-image:          deprecated-webkit-gradient(radial, $full); // Safari <= 5.0
+  background-image:          deprecated-webkit-gradient(radial, $deprecated-pos1, $deprecated-pos2, $full, $deprecated-radius1, $deprecated-radius2); // Safari <= 5.0
   background-image:  -webkit-radial-gradient($pos, $shape-size, $full);
   background-image:     -moz-radial-gradient($pos, $shape-size, $full);
   background-image:      -ms-radial-gradient($pos, $shape-size, $full);
