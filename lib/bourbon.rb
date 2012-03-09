@@ -1,7 +1,7 @@
 require "bourbon/generator"
 
 module Bourbon
-  if defined?(Rails)
+  if defined?(Rails) && defined?(Rails::Engine)
     class Engine < ::Rails::Engine
       require 'bourbon/engine'
     end

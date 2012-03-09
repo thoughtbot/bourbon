@@ -1,4 +1,4 @@
-# Bourbon Sass Mixins – [View Documentation](http://thoughtbot.com/bourbon)
+# Bourbon Sass Mixins
 The purpose of Bourbon Sass Mixins is to provide a comprehensive library of Sass
 mixins that are designed to be as vanilla as possible, meaning they should not
 deter you from using the original CSS syntax.
@@ -9,6 +9,10 @@ browsers that support only CSS3 prefixed properties.  Bourbon uses SCSS syntax.
 # Requirements
 Sass 3.1+
 
+# Documentation
+
+Documentation is available at http://thoughtbot.com/bourbon.
+
 # Install for Rails
 In your Gemfile:
 
@@ -17,8 +21,6 @@ In your Gemfile:
 Then run:
 
     $ bundle install
-
-Bourbon On [RubyGems](https://rubygems.org/gems/bourbon)
 
 ## Rails 3.1.x
 
@@ -41,9 +43,9 @@ Import all additional stylesheets from your app/assets/stylesheets directory und
     @import "home";
     @import "users";
 
-## Rails 3.0.x and below
-For Rails < 3.1 you must run the installation rake task. Please note, you should run this task every time a new version of Bourbon is released.
-This will copy the Sass files into your project's public/stylesheets/sass directory.
+## Rails 3.0.x
+For Rails 3.0.x you must run the installation rake task. You should run this task every time a new version of Bourbon is released.
+This will copy the Sass files into your project's `public/stylesheets/sass` directory.
 
     rake bourbon:install
 
@@ -55,7 +57,7 @@ Import the mixins at the beginning of your stylesheet
 
     rake bourbon:install[app/stylesheets]
 
-# Install in a non-rails project (static site, jekyll, wordpress, other...)
+# Rails 2.3 or a non-Rails project (static site, jekyll, wordpress, other...)
 Bourbon includes an easy way to generate a directory with all the necessary files.
 Install the bourbon gem:
 
