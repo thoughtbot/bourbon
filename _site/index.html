@@ -24,7 +24,6 @@
     <li><a href="#box-sizing">Box-sizing</a></li>
     <li><a href="#columns">Columns</a></li>
     <li><a href="#flex-box">Flex Box</a></li>
-    <li><a href="#flex-grid">Flex Grid</a></li>
     <li><a href="#inline-block">Inline-block</a></li>
     <li><a href="#linear-gradient">Linear-gradient</a></li>
     <li><a href="#position">Position</a></li>
@@ -35,6 +34,7 @@
 
     <li class="title"><a href="#functions"><h3>Functions</h3></a><li>
     <li><a href="#compact">Compact</a></li>
+    <li><a href="#flex-grid">Flex Grid</a></li>
     <li><a href="#golden-ratio">Golden-ratio</a></li>
     <li><a href="#grid-width">Grid Width</a></li>
     <li><a href="#linear-gradient-function">Linear-gradient</a></li>
@@ -262,36 +262,6 @@
 
 </section>
 
-        <section id="flex-grid">
-  <h2>Flex Grid</h2>
-  <p>Use this mixin to easily create a flexible-grid layout.</p>
-  <p>The <code>$fg-column</code>, <code>$fg-gutter</code> and <code>$fg-max-columns</code> variables must be defined in your base stylesheet to properly use the flex-grid function.</p>
-  <p>This function takes the fluid grid equation (target / context = result) and uses columns to help define each.</p>
-
-<div class="highlight"><pre><code class="scss"><span class="na">$fg-column</span><span class="o">:</span> <span class="mi">60</span><span class="kt">px</span><span class="p">;</span>             <span class="c1">// Column Width</span>
-<span class="na">$fg-gutter</span><span class="o">:</span> <span class="mi">25</span><span class="kt">px</span><span class="p">;</span>             <span class="c1">// Gutter Width</span>
-<span class="na">$fg-max-columns</span><span class="o">:</span> <span class="mi">12</span><span class="p">;</span>          <span class="c1">// Total Columns For Main Container</span>
-
-<span class="nt">div</span> <span class="p">{</span>
-  <span class="na">width</span><span class="o">:</span> <span class="nf">flex-grid</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>        <span class="c1">// returns (315px / 1020px) = 30.882353%;</span>
-  <span class="na">margin-left</span><span class="o">:</span> <span class="nf">flex-gutter</span><span class="p">();</span> <span class="c1">// returns (25px / 1020px) = 2.45098%;</span>
-
-  <span class="nt">p</span> <span class="p">{</span>
-    <span class="na">width</span><span class="o">:</span> <span class="nf">flex-grid</span><span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="p">);</span>   <span class="c1">// returns (145px / 315px) = 46.031746%;</span>
-    <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="p">;</span>
-    <span class="na">margin</span><span class="o">:</span> <span class="nf">flex-gutter</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>   <span class="c1">// returns (25px / 315px) = 7.936508%;</span>
-  <span class="p">}</span>
-
-  <span class="nt">blockquote</span> <span class="p">{</span>
-    <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="p">;</span>
-    <span class="na">width</span><span class="o">:</span> <span class="nf">flex-grid</span><span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="p">);</span>   <span class="c1">// returns (145px / 315px) = 46.031746%;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
-
-</section>
-
         <section id="inline-block">
   <h2>Inline Block</h2>
   <p>The inline-block mixin provides support for the inline-block property in IE6 and IE7.</p>
@@ -401,6 +371,36 @@
 </code></pre>
 </div>
 
+
+</section>
+
+        <section id="flex-grid">
+  <h2>Flex Grid</h2>
+  <p>Use this mixin to easily create a flexible-grid layout.</p>
+  <p>The <code>$fg-column</code>, <code>$fg-gutter</code> and <code>$fg-max-columns</code> variables must be defined in your base stylesheet to properly use the flex-grid function.</p>
+  <p>This function takes the fluid grid equation (target / context = result) and uses columns to help define each.</p>
+
+<div class="highlight"><pre><code class="scss"><span class="na">$fg-column</span><span class="o">:</span> <span class="mi">60</span><span class="kt">px</span><span class="p">;</span>             <span class="c1">// Column Width</span>
+<span class="na">$fg-gutter</span><span class="o">:</span> <span class="mi">25</span><span class="kt">px</span><span class="p">;</span>             <span class="c1">// Gutter Width</span>
+<span class="na">$fg-max-columns</span><span class="o">:</span> <span class="mi">12</span><span class="p">;</span>          <span class="c1">// Total Columns For Main Container</span>
+
+<span class="nt">div</span> <span class="p">{</span>
+  <span class="na">width</span><span class="o">:</span> <span class="nf">flex-grid</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>        <span class="c1">// returns (315px / 1020px) = 30.882353%;</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="nf">flex-gutter</span><span class="p">();</span> <span class="c1">// returns (25px / 1020px) = 2.45098%;</span>
+
+  <span class="nt">p</span> <span class="p">{</span>
+    <span class="na">width</span><span class="o">:</span> <span class="nf">flex-grid</span><span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="p">);</span>   <span class="c1">// returns (145px / 315px) = 46.031746%;</span>
+    <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="p">;</span>
+    <span class="na">margin</span><span class="o">:</span> <span class="nf">flex-gutter</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>   <span class="c1">// returns (25px / 315px) = 7.936508%;</span>
+  <span class="p">}</span>
+
+  <span class="nt">blockquote</span> <span class="p">{</span>
+    <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="nf">flex-grid</span><span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="p">);</span>   <span class="c1">// returns (145px / 315px) = 46.031746%;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 </section>
 
