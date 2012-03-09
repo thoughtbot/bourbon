@@ -104,6 +104,7 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
       modular-scale(*args)
       golden-ratio(*args)
       grid-width(*args)
+      flex-grid(*args)
       linear-gradient(*args)
       radial-gradient(*args)
       shade(*args)
