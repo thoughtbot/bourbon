@@ -99,10 +99,9 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
     #Functions
     --------------------------------
       compact(*args)
-      modular-scale(*args)
-      golden-ratio(*args)
       grid-width(*args)
       linear-gradient(*args)
+      modular-scale(*args)
       radial-gradient(*args)
       shade(*args)
       tint(*args)
@@ -190,6 +189,28 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
         $lucida-grande
         $monospace
         $verdana
+
+      reset
+        @ reset-and-normalize
+        @ reset
+        @ reset-root
+        @ reset-elements
+        @ reset-html5
+        @ reset-border
+        @ reset-box
+        @ reset-focus
+        @ reset-font
+        @ reset-list
+        @ reset-inline-whitespace($font-size)
+        @ reset-quotation
+        @ reset-table
+        @ reset-table-cell
+        @ normalize
+        @ normalize-abbr
+        @ normalize-bold-text($indent)
+        @ normalize-forms
+        @ normalize-list($indent)
+        @ normalize-script-text
 
       timing-functions
         $ease-in-*

@@ -1,0 +1,321 @@
+$html5-deprecated : "acronym, applet, big, center, dir, strike, tt, u";
+$html5-block      : "article aside details figcaption figure footer header hgroup menu nav section summary";
+
+@mixin reset-and-normalize {
+  @include reset;
+  @include normalize;
+}
+
+//************************************************************************//
+// Resets
+//************************************************************************//
+
+// Global reset mixin
+@mixin reset {
+  @include reset-root;
+  @include reset-elements;
+  @include reset-html5;
+
+  // Set the default line height
+  body {
+    line-height: 1;
+  }
+
+  // Reset image borders on images and image links
+  img,
+  a img {
+    @include reset-border;
+  }
+
+  // Reset lists in the <nav> element
+  nav {
+    ol,
+    ul {
+      @include reset-list;
+    }
+  }
+
+  blockquote,
+  q {
+    @include reset-quotation;
+  }
+
+  table {
+    @include reset-table;
+    caption,
+    th,
+    td {
+      @include reset-table-cell;
+    }
+  }
+}
+
+// Reset root elements
+@mixin reset-root {
+  html, body {
+    @include reset-box;
+    @include reset-font;
+  }
+}
+
+// Reset elements
+@mixin reset-elements {
+  div, span, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, address, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strong, sub, sup, var,
+  b, i,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video,
+  #{$html5-deprecated} {
+    @include reset-box;
+    @include reset-font;
+  }
+}
+
+// Display unrecognized elements as block in browsers that don't recognize them.
+@mixin reset-html5 {
+  #{$html5-block} {
+    display: block;
+  }
+}
+
+// Reset the box model across all browsers.
+@mixin reset-box {
+  border:  0;
+  margin:  0;
+  padding: 0;
+}
+
+// Remove the outline when elements gain :focus.
+@mixin reset-focus {
+  outline: 0;
+}
+
+// Reset fonts and vertical alignment.
+@mixin reset-font {
+  font-family:    inherit;
+  font-size:      100%;
+  font-weight:    inherit;
+  vertical-align: baseline;
+}
+
+// Reset (un)ordered lists.
+//
+// .navigation {
+//   @include reset-list;
+//   li {
+//     display: inline-block;
+//   }
+// }
+//
+@mixin reset-list {
+  list-style: none;
+  margin:     0;
+  padding:    0;
+}
+
+// Reset border
+@mixin reset-border {
+  border: none;
+}
+
+// "Removes" the white space of inline-block element when the markup is not on one line
+// by setting the font-size property to 0.
+//
+// The immediate child selectors automatically get the font-size property re-applied.
+//
+// .pagination {
+//   @include reset-inline-whitespace;
+//   li {
+//     display: inline-block;
+//   }
+// }
+//
+// The size of the font can be changed by passing it as an argument:
+//
+// .pagination {
+//   @include reset-inline-whitespace(15px);
+// }
+//
+@mixin reset-inline-whitespace($font-size:13px) {
+  font-size: 0;
+  > * {
+    font-size: $font-size;
+  }
+}
+
+// Reset quotations
+@mixin reset-quotation {
+  quotes: none;
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+// Remove spacing between table cells
+@mixin reset-table {
+  border-collapse: collapse;
+  border-spacing:  0;
+}
+
+// Reset table cells and add text alignment classes to override default left text alignment.
+@mixin reset-table-cell {
+  font-weight:    400;
+  text-align:     left;
+  vertical-align: middle;
+  &.center {
+    text-align: center;
+  }
+  &.right {
+    text-align: right;
+  }
+  &.top {
+    vertical-align: top;
+  }
+  &.bottom {
+    vertical-align: bottom;
+  }
+}
+
+//************************************************************************//
+// Normalizations
+//************************************************************************//
+
+// Global normalization mixin
+@mixin normalize {
+  b,
+  strong {
+    @include normalize-bold-text;
+  }
+
+  ol,
+  ul {
+    @include normalize-list;
+  }
+
+  @include normalize-script-text;
+  @include normalize-abbr;
+  @include normalize-forms;
+}
+
+// Underline abbr elements with a title attribute present
+@mixin normalize-abbr {
+  abbr[title] {
+    border-bottom: 1px dotted;
+  }
+}
+
+// Set bold elements to use bold font weight.
+@mixin normalize-bold-text($weight:700) {
+  font-weight : $weight;
+}
+
+// Normalize form elements
+@mixin normalize-forms {
+  button,
+  input,
+  select,
+  textarea {
+    font-size:      100%;
+    margin:         0;
+    vertical-align: middle;
+  }
+
+  button,
+  input {
+    *overflow:   visible; // Inner spacing IE7
+    line-height: normal;
+    &::-mox-focus-inner {
+      border:  0;
+      padding: 0;
+    }
+  }
+
+  // Hand pointer to checkboxes and radio buttons
+  input[type="checkbox"],
+  input[type="radio"] {
+    cursor : pointer;
+  }
+
+  // Hand pointer to all buttons
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    cursor:             pointer;
+    -webkit-appearance: button; // Resemble native UI on iOS
+  }
+
+  textarea {
+    overflow:       auto;
+    vertical-align: top;
+  }
+
+}
+
+// Give lists a default appearance.
+// Use reset-list mixin to remove all default styling from lists.
+@mixin normalize-list($indent:24px) {
+  padding: 0 0 0 $indent;
+}
+
+// Prevent sub and sup affecting line-height
+@mixin normalize-script-text {
+  sub,
+  sup {
+    font-size:      75%;
+    line-height:    0;
+    position:       relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+}
+
+// Usage examples:
+//
+//    @include reset-and-normalize;  // Global reset and basic normalization
+//    @include reset;                // Global reset only
+//    @include reset-html5;          // Only reset HTML5 elements for older browsers
+//
+// Individual mixin usage examples:
+//
+//    // Reset a navigation list
+//    ul.navigation {
+//      @include reset-list;
+//    }
+//
+//    // Reset an already styled block element
+//    .well {
+//      border:  1px solid #000;
+//      margin:  0 0 20px;
+//      padding: 6px;
+//      &.basic {
+//        @include reset-box;
+//        padding: 2px;
+//      }
+//    }
+//
+//    // Create your own reset
+//    @mixin my-reset {
+//      @include reset;
+//      @include reset-html5;
+//    }
+//
+// Acknowledgements
+//
+// reset-elements: [Eric Meyer Reset v2.0 | 20110126](http://meyerweb.com/eric/tools/css/reset/)
+// normalize-script-text: [Ruthie BenDor](gist.github.com/413930)
