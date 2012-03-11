@@ -509,7 +509,7 @@ div.main-inner {
   div.main-inner h1 {
     border-bottom: 1px solid #ededed; }
     div.main-inner h1.logo {
-      background-image: url(/images/bourbon-logo.png);
+      background-image: url(http://thoughtbot.com/bourbon/images/bourbon-logo.png);
       background-repeat: no-repeat;
       border-bottom: 0;
       height: 58px;
