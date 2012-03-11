@@ -94,6 +94,11 @@ nav.fixed-nav {
         margin-top: 15px;
       }
 
+      &.title.complete-list h3 {
+        border-bottom: 0;
+        @include box-shadow(none);
+      }
+
       a {
         display: block;
         padding: 0 20px;
@@ -108,6 +113,10 @@ nav.fixed-nav {
           margin: 0;
           text-shadow: 0 1px 0 white;
           text-transform: uppercase;
+
+          &:hover {
+            color: hsl(0, 0%, 40%);
+          }
         }
       }
     }
@@ -139,17 +148,24 @@ div.main-inner {
   h1 {
     border-bottom: 1px solid hsl(0, 0%, 93%);
 
-    span a {
-      float: right;
-      font-size: $base-font-size;
-      margin-top: 20px;
+    &.logo {
+      background-image: url(/images/bourbon-logo.png);
+      background-repeat: no-repeat;
+      border-bottom: 0;
+      height: 58px;
+      margin-left: 24px;
+      text-indent: -9999px;
     }
+
   }
 
   > h1 {
-    margin-bottom: 0;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: auto 20px 0;
+  }
+
+  h2.tagline {
+    padding: 0 28px;
+    margin: 20px 0 0;
   }
 
   > section {
@@ -164,9 +180,14 @@ div.main-inner {
     &#intro {
       border-bottom: none;
       padding-bottom: 0;
+      padding-top: 0;
 
       & + h1 {
         margin-top: 40px;
+      }
+
+      p a + a {
+        margin-left: 20px;
       }
     }
 

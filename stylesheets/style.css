@@ -447,6 +447,11 @@ nav.fixed-nav {
       nav.fixed-nav ul li.title:not(:first-child) {
         margin-bottom: 5px;
         margin-top: 15px; }
+      nav.fixed-nav ul li.title.complete-list h3 {
+        border-bottom: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
       nav.fixed-nav ul li a {
         display: block;
         padding: 0 20px;
@@ -481,6 +486,8 @@ nav.fixed-nav {
           margin: 0;
           text-shadow: 0 1px 0 white;
           text-transform: uppercase; }
+          nav.fixed-nav ul li a h3:hover {
+            color: #666666; }
 
 div.main-content {
   margin: 0 auto;
@@ -501,14 +508,18 @@ div.main-inner {
   width: 854px; }
   div.main-inner h1 {
     border-bottom: 1px solid #ededed; }
-    div.main-inner h1 span a {
-      float: right;
-      font-size: 13px;
-      margin-top: 20px; }
+    div.main-inner h1.logo {
+      background-image: url(/images/bourbon-logo.png);
+      background-repeat: no-repeat;
+      border-bottom: 0;
+      height: 58px;
+      margin-left: 24px;
+      text-indent: -9999px; }
   div.main-inner > h1 {
-    margin-bottom: 0;
-    margin-left: 20px;
-    margin-right: 20px; }
+    margin: auto 20px 0; }
+  div.main-inner h2.tagline {
+    padding: 0 28px;
+    margin: 20px 0 0; }
   div.main-inner > section {
     border: 1px solid transparent;
     border-bottom: 1px solid #ebe8e0;
@@ -517,9 +528,12 @@ div.main-inner {
       margin-top: 100px; }
     div.main-inner > section#intro {
       border-bottom: none;
-      padding-bottom: 0; }
+      padding-bottom: 0;
+      padding-top: 0; }
       div.main-inner > section#intro + h1 {
         margin-top: 40px; }
+      div.main-inner > section#intro p a + a {
+        margin-left: 20px; }
     div.main-inner > section:last-child {
       border: 0; }
   div.main-inner > section:target {
