@@ -940,7 +940,7 @@ section#buttons section.demo button.example-1 {
   background-image: -ms-linear-gradient(top, #4294f0, #0776f3);
   background-image: -o-linear-gradient(top, #4294f0, #0776f3);
   background-image: linear-gradient(top, #4294f0, #0776f3);
-  padding: 6px 18px 7px;
+  padding: 7px 18px;
   text-decoration: none;
   text-shadow: 0 1px 0 #0065d6;
   -webkit-background-clip: padding-box; }
@@ -982,7 +982,7 @@ section#buttons section.demo button.example-2 {
   background-image: -ms-linear-gradient(top, #4294f0, #0156fe);
   background-image: -o-linear-gradient(top, #4294f0, #0156fe);
   background-image: linear-gradient(top, #4294f0, #0156fe);
-  padding: 3px 16px 5px;
+  padding: 5px 16px;
   text-align: center;
   text-decoration: none;
   text-shadow: 0 -1px 1px #2762bf;
@@ -1031,7 +1031,7 @@ section#buttons section.demo button.example-3 {
   background-image: -ms-linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
   background-image: -o-linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
   background-image: linear-gradient(top, red 0%, #c70000 50%, #a90000 50%, #b00000 100%);
-  padding: 7px 20px 8px;
+  padding: 8px 20px;
   text-align: center;
   text-decoration: none;
   text-shadow: 0 -1px 1px #730000; }
