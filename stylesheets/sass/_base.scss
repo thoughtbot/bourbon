@@ -249,7 +249,7 @@ div.main-inner {
   > section > section {
     &:target {
       @include box-shadow(inset 4px 0 0px 0 hsl(14, 97%, 55%));
-      @include transition(all, 0.3s);
+      @include transition(all 0.3s);
 
       h2 {
         font-weight: 500;

@@ -457,26 +457,11 @@ nav.fixed-nav {
       nav.fixed-nav ul li a {
         display: block;
         padding: 0 20px;
-        -webkit-transition-property: all;
-        -moz-transition-property: all;
-        -ms-transition-property: all;
-        -o-transition-property: all;
-        transition-property: all;
-        -webkit-transition-duration: 0.15s;
-        -moz-transition-duration: 0.15s;
-        -ms-transition-duration: 0.15s;
-        -o-transition-duration: 0.15s;
-        transition-duration: 0.15s;
-        -webkit-transition-timing-function: ease-out;
-        -moz-transition-timing-function: ease-out;
-        -ms-transition-timing-function: ease-out;
-        -o-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
-        -webkit-transition-delay: 0;
-        -moz-transition-delay: 0;
-        -ms-transition-delay: 0;
-        -o-transition-delay: 0;
-        transition-delay: 0; }
+        -webkit-transition: all 0.15s ease-out 0;
+        -moz-transition: all 0.15s ease-out 0;
+        -ms-transition: all 0.15s ease-out 0;
+        -o-transition: all 0.15s ease-out 0;
+        transition: all 0.15s ease-out 0; }
         nav.fixed-nav ul li a h3 {
           border-bottom: 1px solid #d8d1c0;
           -webkit-box-shadow: 0 1px 0 white;
@@ -542,26 +527,11 @@ div.main-inner {
   div.main-inner > section > section {
     border-bottom: 1px solid #ebe8e0;
     padding: 30px 28px;
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -ms-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.15s;
-    -moz-transition-duration: 0.15s;
-    -ms-transition-duration: 0.15s;
-    -o-transition-duration: 0.15s;
-    transition-duration: 0.15s;
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    -ms-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    -webkit-transition-delay: 0;
-    -moz-transition-delay: 0;
-    -ms-transition-delay: 0;
-    -o-transition-delay: 0;
-    transition-delay: 0; }
+    -webkit-transition: all 0.15s ease-out 0;
+    -moz-transition: all 0.15s ease-out 0;
+    -ms-transition: all 0.15s ease-out 0;
+    -o-transition: all 0.15s ease-out 0;
+    transition: all 0.15s ease-out 0; }
     div.main-inner > section > section a.view-source {
       color: #c8c3b7;
       float: right;
@@ -570,33 +540,16 @@ div.main-inner {
       padding: 2px 20px;
       text-shadow: 0 1px 0 white;
       text-transform: capitalize;
-      -webkit-transition-property: all;
-      -moz-transition-property: all;
-      -ms-transition-property: all;
-      -o-transition-property: all;
-      transition-property: all;
-      -webkit-transition-duration: 0.15s;
-      -moz-transition-duration: 0.15s;
-      -ms-transition-duration: 0.15s;
-      -o-transition-duration: 0.15s;
-      transition-duration: 0.15s;
-      -webkit-transition-timing-function: ease-out;
-      -moz-transition-timing-function: ease-out;
-      -ms-transition-timing-function: ease-out;
-      -o-transition-timing-function: ease-out;
-      transition-timing-function: ease-out;
-      -webkit-transition-delay: 0;
-      -moz-transition-delay: 0;
-      -ms-transition-delay: 0;
-      -o-transition-delay: 0;
-      transition-delay: 0;
+      -webkit-transition: all 0.15s ease-out 0;
+      -moz-transition: all 0.15s ease-out 0;
+      -ms-transition: all 0.15s ease-out 0;
+      -o-transition: all 0.15s ease-out 0;
+      transition: all 0.15s ease-out 0;
       opacity: 0; }
       div.main-inner > section > section a.view-source:hover {
         background-color: #f3f1ec;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        -o-border-radius: 20px;
         border-radius: 20px;
         color: #a69f8c; }
     div.main-inner > section > section:hover a.view-source {
@@ -617,26 +570,11 @@ div.main-inner {
     -webkit-box-shadow: inset 4px 0 0px 0 #fc511d;
     -moz-box-shadow: inset 4px 0 0px 0 #fc511d;
     box-shadow: inset 4px 0 0px 0 #fc511d;
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -ms-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -ms-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    -ms-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    -webkit-transition-delay: 0;
-    -moz-transition-delay: 0;
-    -ms-transition-delay: 0;
-    -o-transition-delay: 0;
-    transition-delay: 0; }
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
     div.main-inner > section > section:target h2 {
       font-weight: 500; }
 
@@ -651,8 +589,6 @@ pre {
   background-color: #fef9ec;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 0 1px #fbedc6;
   -moz-box-shadow: 0 0 0 1px #fbedc6;
@@ -660,26 +596,11 @@ pre {
   margin: 1em 0;
   overflow: auto;
   padding: 7px;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.15s;
-  -moz-transition-duration: 0.15s;
-  -ms-transition-duration: 0.15s;
-  -o-transition-duration: 0.15s;
-  transition-duration: 0.15s;
-  -webkit-transition-timing-function: ease-out;
-  -moz-transition-timing-function: ease-out;
-  -ms-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -ms-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0;
+  -webkit-transition: all 0.15s ease-out 0;
+  -moz-transition: all 0.15s ease-out 0;
+  -ms-transition: all 0.15s ease-out 0;
+  -o-transition: all 0.15s ease-out 0;
+  transition: all 0.15s ease-out 0;
   white-space: pre;
   word-wrap: normal; }
   pre::-webkit-scrollbar {
@@ -907,8 +828,6 @@ p code, ul code, ol code {
 div.box {
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
   border-radius: 40px;
   border: 1px solid #2aa4b2;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
@@ -993,7 +912,7 @@ section#linear-gradient-function section.demo {
   height: 40px; }
 
 section#radial-gradient section.demo, section#radial-gradient-function section.demo {
-  background-color: #8fdce5;
+  background-color: false;
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #8fdce5), color-stop(100%, #3dc3d1));
   background-image: -webkit-radial-gradient(50% 50%, circle cover, #8fdce5, #3dc3d1);
   background-image: -moz-radial-gradient(50% 50%, circle cover, #8fdce5, #3dc3d1);
@@ -1006,14 +925,12 @@ section#buttons section.demo button.example-1 {
   border: 1px solid #076fe4;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 0 0 #8ebcf1;
   -moz-box-shadow: inset 0 1px 0 0 #8ebcf1;
   box-shadow: inset 0 1px 0 0 #8ebcf1;
   color: white;
-  display: inline;
+  display: inline-block;
   font-size: 11px;
   font-weight: bold;
   background-color: #4294f0;
@@ -1024,6 +941,7 @@ section#buttons section.demo button.example-1 {
   background-image: -o-linear-gradient(top, #4294f0, #0776f3);
   background-image: linear-gradient(top, #4294f0, #0776f3);
   padding: 6px 18px 7px;
+  text-decoration: none;
   text-shadow: 0 1px 0 #0065d6;
   -webkit-background-clip: padding-box; }
   section#buttons section.demo button.example-1:hover {
@@ -1048,14 +966,12 @@ section#buttons section.demo button.example-2 {
   border-color: #3371b2 #2457a3 #164297;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -o-border-radius: 16px;
   border-radius: 16px;
   -webkit-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
   -moz-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
   box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
   color: white;
-  display: inline;
+  display: inline-block;
   font-size: 11px;
   font-weight: normal;
   line-height: 1;
@@ -1068,6 +984,7 @@ section#buttons section.demo button.example-2 {
   background-image: linear-gradient(top, #4294f0, #0156fe);
   padding: 3px 16px 5px;
   text-align: center;
+  text-decoration: none;
   text-shadow: 0 -1px 1px #2762bf;
   -webkit-background-clip: padding-box; }
   section#buttons section.demo button.example-2:hover {
@@ -1099,14 +1016,12 @@ section#buttons section.demo button.example-3 {
   border-bottom: 1px solid #810000;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: inset 0 1px 0 0 #ff1d0c;
   -moz-box-shadow: inset 0 1px 0 0 #ff1d0c;
   box-shadow: inset 0 1px 0 0 #ff1d0c;
   color: white;
-  display: inline;
+  display: inline-block;
   font-size: 14px;
   font-weight: bold;
   background-color: red;
