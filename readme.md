@@ -1,17 +1,17 @@
-# Bourbon Sass Mixins
-The purpose of Bourbon Sass Mixins is to provide a comprehensive library of Sass
-mixins that are designed to be as vanilla as possible, meaning they should not
-deter you from using the original CSS syntax.
+[![Bourbon Sass Mixin Library](http://thoughtbot.com/bourbon/images/bourbon-logo.png)](http://thoughtbot.com/bourbon)
+# A simple and lightweight mixin library for Sass
+Bourbon is a comprehensive library of sass mixins that are designed to be simple
+and easy to use. No configuration required. The mixins aim to be as vanilla as
+possible, meaning they should be as close to the original CSS syntax as possible.
+
 The mixins contain vendor specific prefixes for all CSS3 properties for support
 amongst modern browsers. The prefixes also ensure graceful degradation for older
-browsers that support only CSS3 prefixed properties.  Bourbon uses SCSS syntax.
+browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.
+
+#[Documentation & Demo](http://thoughtbot.com/bourbon)
 
 # Requirements
 Sass 3.1+
-
-# Documentation
-
-Documentation is available at http://thoughtbot.com/bourbon.
 
 # Install for Rails
 In your Gemfile:
@@ -23,7 +23,6 @@ Then run:
     $ bundle install
 
 ## Rails 3.1.x
-
 Rename application.css to application.css.scss:
 
     mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
@@ -57,7 +56,7 @@ Import the mixins at the beginning of your stylesheet
 
     rake bourbon:install[app/stylesheets]
 
-# Rails 2.3 or a non-Rails project (static site, jekyll, wordpress, other...)
+# Rails 2.3 or a non-Rails project (static site, jekyll, wordpress, etc...)
 Bourbon includes an easy way to generate a directory with all the necessary files.
 Install the bourbon gem:
 
@@ -98,18 +97,7 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
 
 *@ denotes a mixin and must be prefaced with @include*
 
-    #Functions
-    --------------------------------
-      compact(*args)
-      modular-scale(*args)
-      golden-ratio(*args)
-      grid-width(*args)
-      linear-gradient(*args)
-      radial-gradient(*args)
-      shade(*args)
-      tint(*args)
-
-    #Mixins
+    Mixins
     --------------------------------
       animation
         @ animation(*args)
@@ -130,11 +118,11 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
       border-radius
         @ border-radius(*args)
         @ border-radius-top(*args)
-          @ border-radius-top-left(*args)
-          @ border-radius-top-right(*args)
+        @ border-radius-top-left(*args)
+        @ border-radius-top-right(*args)
         @ border-radius-bottom(*args)
-          @ border-radius-bottom-left(*args)
-          @ border-radius-bottom-right(*args)
+        @ border-radius-bottom-left(*args)
+        @ border-radius-bottom-right(*args)
         @ border-radius-left(*args)
         @ border-radius-right(*args)
 
@@ -147,9 +135,9 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
         @column-fill(*args)
         @column-gap(*args)
         @column-rule(*args)
-          @column-rule-color(*args)
-          @column-rule-style(*args)
-          @column-rule-width(*args)
+        @column-rule-color(*args)
+        @column-rule-style(*args)
+        @column-rule-width(*args)
         @column-span(*args)
         @column-width(*args)
 
@@ -168,8 +156,10 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
       @ inline-block
       @ linear-gradient(*args)
       @ radial-gradient(*args)
-      @ transform(*args)
-      @ transform-origin(*args)
+
+      transform
+        @ transform(*args)
+        @ transform-origin(*args)
 
       transition
         @ transition(*args)
@@ -178,13 +168,27 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
         @ transition-property(*args)
         @ transition-timing-function(*args)
 
-    #Addons
+      @ user-select
+
+    Functions
     --------------------------------
+      compact(*args)
+      flex-grid(*args)
+      golden-ratio(*args)
+      grid-width(*args)
+      linear-gradient(*args)
+      radial-gradient(*args)
+      shade(*args)
+      tint(*args)
+
+    Addons
+    -------------------------------
       @ button(*args)
       @ clearfix
-      @ position(*args)
+      @ hide-text
 
-      #{$all-text-inputs}
+      HTML5 Inputs
+        #{$all-text-inputs}
 
       font-family
         $georgia
@@ -198,7 +202,6 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
         $ease-out-*
         $ease-in-out-*
         * = quad, cubic, quart, quint, sine, expo, circ, back
-
 
 
 ## Help Out
@@ -215,12 +218,15 @@ If the answer is yes, there is a high chance the mixin will be accepted via a pu
 
 *Bourbon does not intend to support IE filters.*
 
+
 Resources for checking browser support: [MDN - Moz Dev Network](https://developer.mozilla.org/en-US/), [Mozilla CSS Extensions](https://developer.mozilla.org/en/CSS_Reference/Mozilla_Extensions), [Webkit CSS Properties](http://css-infos.net/properties/webkit.php), [Firefox CSS Properties](http://css-infos.net/properties/firefox.php), [MSDN - Microsoft Dev Network](http://msdn.microsoft.com/en-us/library/ms531207(v=VS.85).aspx)
 
 Credits
 -------
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
+
+Got questions? Need help? Tweet at [@phillapier](http://twitter.com/phillapier).
 
 Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community)
 
