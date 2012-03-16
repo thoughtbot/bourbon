@@ -25,7 +25,6 @@
     <li><a href="#flex-box">Flex Box</a></li>
     <li><a href="#inline-block">Inline-block</a></li>
     <li><a href="#linear-gradient">Linear-gradient</a></li>
-    <li><a href="#position">Position</a></li>
     <li><a href="#radial-gradient">Radial-gradient</a></li>
     <li><a href="#transform">Transform</a></li>
     <li><a href="#transitions">Transitions</a></li>
@@ -45,6 +44,7 @@
     <li><a href="#buttons">Buttons</a></li>
     <li><a href="#clearfix">Clearfix</a></li>
     <li><a href="#font-family">Font Family</a></li>
+    <li><a href="#hide-text">Hide Text</a></li>
     <li><a href="#html5-input-types">HTML5 Input Types</a></li>
     <li><a href="#timing-functions">Timing Functions</a></li>
 
@@ -290,27 +290,6 @@
 
   <h3>Demo</h3>
   <section class="demo"></section>
-</section>
-
-          <section id="position">
-  <h2>Position <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_position.scss">View source</a></h2>
-  <p>Shorthand notation for setting the position of elements in your page.</p>
-  <p>The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.</p>
-  <p>Note: unit-less values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.</p>
-
-  <p>Instead of writing:</p>
-<div class="highlight"><pre><code class="scss"><span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span>
-<span class="na">top</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
-<span class="na">left</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
-</code></pre>
-</div>
-
-
-  <p>Your can write:</p>
-<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> position</span><span class="p">(</span><span class="no">relative</span><span class="o">,</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">100</span><span class="kt">px</span><span class="p">);</span>
-</code></pre>
-</div>
-
 </section>
 
           <section id="radial-gradient">
@@ -607,6 +586,17 @@
 
 </section>
 
+          <section id="hide-text">
+  <h2>Hide Text<a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_hide-text.scss">View Source</a></h2>
+  <p>Hide-text is an image replacement mixin. It is based off the <a href="https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7">HTML5-Boilerplate image-replacement</a>.</p>
+  <p>This image replacement technique is an alternative to the text-indent technique, which has <a href="http://nicolasgallagher.com/another-css-image-replacement-technique/">performance and other benefits</a>.</p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> hide-text</span><span class="p">;</span>
+</code></pre>
+</div>
+
+</section>
+
           <section id="html5-input-types">
   <h2>HTML5 Input Types <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_html5-input-types.scss">View source</a></h2>
   <p>This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimic <code>input[type="text"]</code>.</p>
@@ -747,8 +737,10 @@
 <span class="o">@</span> <span class="nt">inline-block</span>
 <span class="o">@</span> <span class="nt">linear-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="o">@</span> <span class="nt">radial-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-<span class="o">@</span> <span class="nt">transform</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
-<span class="o">@</span> <span class="nt">transform-origin</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+
+<span class="nt">transform</span>
+  <span class="o">@</span> <span class="nt">transform</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+  <span class="o">@</span> <span class="nt">transform-origin</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 
 <span class="nt">transition</span>
   <span class="o">@</span> <span class="nt">transition</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
@@ -768,6 +760,7 @@
 <span class="nt">golden-ratio</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="nt">grid-width</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="nt">linear-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="nt">modular-scale</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="nt">radial-gradient</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="nt">shade</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="nt">tint</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
@@ -778,7 +771,7 @@
 <h3 id="complete-list-addons">Addons</h3>
 <div class="highlight"><pre><code class="scss"><span class="o">@</span> <span class="nt">button</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="o">@</span> <span class="nt">clearfix</span>
-<span class="o">@</span> <span class="nt">position</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
+<span class="o">@</span> <span class="nt">hide-text</span>
 
 <span class="nt">HTML5</span> <span class="nt">Inputs</span>
   <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">all-text-inputs</span><span class="p">}</span>

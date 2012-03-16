@@ -61,8 +61,10 @@ flex-box
 @ inline-block
 @ linear-gradient(*args)
 @ radial-gradient(*args)
-@ transform(*args)
-@ transform-origin(*args)
+
+transform
+  @ transform(*args)
+  @ transform-origin(*args)
 
 transition
   @ transition(*args)
@@ -81,6 +83,7 @@ flex-grid(*args)
 golden-ratio(*args)
 grid-width(*args)
 linear-gradient(*args)
+modular-scale(*args)
 radial-gradient(*args)
 shade(*args)
 tint(*args)
@@ -90,7 +93,7 @@ tint(*args)
 {% highlight scss %}
 @ button(*args)
 @ clearfix
-@ position(*args)
+@ hide-text
 
 HTML5 Inputs
   #{$all-text-inputs}
