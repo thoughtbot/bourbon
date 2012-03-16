@@ -3,8 +3,7 @@
   <p>Shorthand mixin: Supports multiple parentheses-delimited values for each variable.</p>
 
 {% highlight scss %}
-@include transition (all, 2.0s, ease-in-out);
-@include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
+@include transition (all 2.0s ease-in-out);
+@include transition (opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
 {% endhighlight %}
-
 </section>

@@ -10,6 +10,15 @@
 @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
 {% endhighlight %}
 
+<br>
+<p>Optional variables can be passed to control the deprecated <code>-webkit-gradient()</code> function (iOS 4):
+<br>
+<code>$deprecated-pos1</code>, <code>$deprecated-pos2</code></p>
+
+{% highlight scss %}
+@include linear-gradient(#1e5799, #3dc3d1, $deprecated-pos1: left center, $deprecated-pos2: left top);
+{% endhighlight %}
+
   <h3>Demo</h3>
   <section class="demo"></section>
 </section>

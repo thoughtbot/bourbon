@@ -288,18 +288,40 @@
 </div>
 
 
+<br>
+<p>Optional variables can be passed to control the deprecated <code>-webkit-gradient()</code> function (iOS 4):
+<br>
+<code>$deprecated-pos1</code>, <code>$deprecated-pos2</code></p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> linear-gradient</span><span class="p">(</span><span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="o">,</span> <span class="nv">$deprecated-pos1</span><span class="o">:</span> <span class="no">left</span> <span class="no">center</span><span class="o">,</span> <span class="nv">$deprecated-pos2</span><span class="o">:</span> <span class="no">left</span> <span class="no">top</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
   <h3>Demo</h3>
   <section class="demo"></section>
 </section>
 
           <section id="radial-gradient">
   <h2>Radial Gradient <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_radial-gradient.scss">View source</a></h2>
-  <p>Takes up to 10 gradients. Position and shape are required. See also the <a href="#background-image">background-image mixin</a>.</p>
+  <p>Takes up to 10 gradients. See also the <a href="#background-image">background-image mixin</a>.</p>
   <p>This mixin will output a fallback <code>background-color: #first-color;</code> declaration. A <code>$fallback</code> argument can be passed to change the fallback color.</p>
 
-<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="p">);</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="p">);</span>
 <span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#eee</span> <span class="mi">10</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#1e5799</span> <span class="mi">30</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#efefef</span><span class="p">);</span>
 <span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#eee</span> <span class="mi">10</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#1e5799</span> <span class="mi">30</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#efefef</span><span class="o">,</span> <span class="nv">$fallback</span><span class="o">:</span> <span class="nb">red</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
+<br>
+<p>Optional variables can be passed to control the deprecated <code>-webkit-gradient()</code> function (iOS 4):
+<br>
+<code>$deprecated-pos1</code>, <code>$deprecated-pos2</code>, <code>$deprecated-radius1</code>, <code>$deprecated-radius2</code></p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="o">,</span>
+                         <span class="nv">$deprecated-pos1</span><span class="o">:</span> <span class="no">left</span> <span class="no">center</span><span class="o">,</span> <span class="nv">$deprecated-pos2</span><span class="o">:</span> <span class="no">left</span> <span class="no">top</span><span class="o">,</span>
+                         <span class="nv">$deprecated-radius1</span><span class="o">:</span> <span class="mi">50</span><span class="o">,</span> <span class="nv">$deprecated-radius2</span><span class="o">:</span> <span class="mi">360</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -325,11 +347,10 @@
   <h2>Transitions <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_transition.scss">View source</a></h2>
   <p>Shorthand mixin: Supports multiple parentheses-delimited values for each variable.</p>
 
-<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transition</span> <span class="p">(</span><span class="n">all</span><span class="o">,</span> <span class="mi">2</span><span class="mf">.0</span><span class="kt">s</span><span class="o">,</span> <span class="n">ease-in-out</span><span class="p">);</span>
-<span class="k">@include</span><span class="nd"> transition</span> <span class="p">((</span><span class="no">opacity</span><span class="o">,</span> <span class="no">width</span><span class="p">)</span><span class="o">,</span> <span class="p">(</span><span class="mi">1</span><span class="mf">.0</span><span class="kt">s</span><span class="o">,</span> <span class="mi">2</span><span class="mf">.0</span><span class="kt">s</span><span class="p">)</span><span class="o">,</span> <span class="n">ease-in</span><span class="o">,</span> <span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="kt">s</span><span class="p">));</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transition</span> <span class="p">(</span><span class="n">all</span> <span class="mi">2</span><span class="mf">.0</span><span class="kt">s</span> <span class="n">ease-in-out</span><span class="p">);</span>
+<span class="k">@include</span><span class="nd"> transition</span> <span class="p">(</span><span class="no">opacity</span> <span class="mi">1</span><span class="mf">.0</span><span class="kt">s</span> <span class="n">ease-in</span> <span class="mi">0</span><span class="kt">s</span><span class="o">,</span> <span class="no">width</span> <span class="mi">2</span><span class="mf">.0</span><span class="kt">s</span> <span class="n">ease-in</span> <span class="mi">2</span><span class="kt">s</span><span class="p">);</span>
 </code></pre>
 </div>
-
 
 </section>
 
@@ -432,6 +453,16 @@
 </div>
 
 
+<br>
+<p>Optional variables can be passed to control the deprecated <code>-webkit-gradient()</code> function (iOS 4):
+<br>
+<code>$deprecated-pos1</code>, <code>$deprecated-pos2</code></p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> linear-gradient</span><span class="p">(</span><span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="o">,</span> <span class="nv">$deprecated-pos1</span><span class="o">:</span> <span class="no">left</span> <span class="no">center</span><span class="o">,</span> <span class="nv">$deprecated-pos2</span><span class="o">:</span> <span class="no">left</span> <span class="no">top</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
   <h3>Demo</h3>
   <section class="demo">
   </section>
@@ -463,11 +494,23 @@
   <h2>Radial Gradient <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_radial-gradient.scss">View source</a></h2>
   <p>Outputs a radial-gradient. Use in conjunction with the <a href="#background-image">background-image mixin.</a> The function takes the same arguments as the <a href="#radial-gradient">radial-gradient mixin</a>.</p>
 
-<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span> <span class="nf">radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="p">)</span> <span class="p">);</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> backgorund-image</span><span class="p">(</span> <span class="nf">radial-gradient</span><span class="p">(</span><span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="p">)</span> <span class="p">);</span>
+<span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span> <span class="nf">radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="p">)</span> <span class="p">);</span>
 <span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span> <span class="nf">radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#eee</span> <span class="mi">10</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#1e5799</span> <span class="mi">30</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#efefef</span><span class="p">)</span> <span class="p">);</span>
 </code></pre>
 </div>
 
+
+<br>
+<p>Optional variables can be passed to control the deprecated <code>-webkit-gradient()</code> function (iOS 4):
+<br>
+<code>$deprecated-pos1</code>, <code>$deprecated-pos2</code>, <code>$deprecated-radius1</code>, <code>$deprecated-radius2</code></p>
+
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="o">,</span>
+                         <span class="nv">$deprecated-pos1</span><span class="o">:</span> <span class="no">left</span> <span class="no">center</span><span class="o">,</span> <span class="nv">$deprecated-pos2</span><span class="o">:</span> <span class="no">left</span> <span class="no">top</span><span class="o">,</span>
+                         <span class="nv">$deprecated-radius1</span><span class="o">:</span> <span class="mi">50</span><span class="o">,</span> <span class="nv">$deprecated-radius2</span><span class="o">:</span> <span class="mi">360</span><span class="p">);</span>
+</code></pre>
+</div>
 
   <h3>Demo</h3>
   <section class="demo">
