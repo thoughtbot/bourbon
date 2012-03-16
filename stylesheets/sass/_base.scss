@@ -11,13 +11,15 @@ html {
 }
 
 h1 {
-  font-size: golden-ratio(14px, 2);
   font-weight: 300;
   margin-top: 0;
 }
 
-h2 {
+h1, h2 {
   font-size: golden-ratio(14px, 1) + 4px;
+}
+
+h2 {
   font-weight: 300;
   margin-bottom: 0.5em;
   margin-top: 0;
@@ -84,6 +86,7 @@ nav.fixed-nav {
     li {
       line-height: 180%;
       list-style-type: none;
+      text-transform: capitalize;
 
       &:first-child {
         margin-top: 15px;
@@ -145,41 +148,81 @@ div.main-inner {
   padding: 35px 0px;
   width: grid-width(7) + $gw-gutter;
 
-  h1 {
-    border-bottom: 1px solid hsl(0, 0%, 93%);
-
-    &.logo {
-      background-image: url(../images/bourbon-logo.png);
-      background-repeat: no-repeat;
-      border-bottom: 0;
-      height: 58px;
-      margin-left: 24px;
-      text-indent: -9999px;
-    }
-
-  }
-
-  > h1 {
-    margin: auto 20px 0;
-  }
 
   h2.tagline {
     padding: 0 28px;
     margin: 20px 0 0;
   }
 
+  // Top Level Section
+  //************************************************************************//
   > section {
-    border: 1px solid transparent;
+    h1 {
+      background-color: hsl(43, 23%, 94%);
+      border: 1px solid hsl(0, 0%, 88%);
+      border-left: 0;
+      border-right: 0;
+      @include box-shadow(1px 0 0 $background-color, -1px 0 0 $background-color);
+      font-size: 27px;
+      font-weight: 500;
+      line-height: 100%;
+      margin: 30px 0 0;
+      margin-top: 40px;
+      padding: 15px 30px;
+      text-shadow: 0 1px 0 white;
+
+      &.logo {
+        background-color: transparent;
+        background-image: url(../images/bourbon-logo.png);
+        background-repeat: no-repeat;
+        border: 0;
+        @include box-shadow(none);
+        height: 58px;
+        margin-left: 24px;
+        margin-top: 0;
+        padding: 0;
+        text-indent: -9999px;
+      }
+    }
+  }
+
+  > section > section {
     border-bottom: 1px solid $base-border-color;
     padding: 30px 28px;
+    @include transition;
 
-    & + h1 {
-      margin-top: 100px;
+    // View Source Link
+    //************************************************************************//
+    a.view-source {
+      color: hsl(43, 13%, 75%);
+      float: right;
+      font-size: $base-font-size;
+      margin-top: 5px;
+      padding: 2px 20px;
+      text-shadow: 0 1px 0 white;
+      text-transform: capitalize;
+      @include transition;
+      opacity: 0;
+
+      &:hover {
+        background-color: $background-color;
+        @include border-radius(20px);
+        color: hsl(43, 13%, 60%);
+      }
     }
 
+    // Show link on hover
+    &:hover {
+      a.view-source {
+        opacity: 1;
+      }
+    }
+
+    // Intro Text
+    //************************************************************************//
     &#intro {
       border-bottom: none;
-      padding-bottom: 0;
+      padding-bottom: 0px;
       padding-top: 0;
 
       & + h1 {
@@ -188,6 +231,10 @@ div.main-inner {
 
       p a + a {
         margin-left: 20px;
+      }
+
+      p:last-child {
+        margin: 20px 0 50px;
       }
     }
 
@@ -199,7 +246,7 @@ div.main-inner {
 
   // Target Styles
   //************************************************************************//
-  > section {
+  > section > section {
     &:target {
       @include box-shadow(inset 4px 0 0px 0 hsl(14, 97%, 55%));
       @include transition(all, 0.3s);

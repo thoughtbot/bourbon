@@ -15,51 +15,64 @@ title: Bourbon Sass Mixins Library
       {% include navigation.html %}
 
       <div class="main-inner">
-        <h1 class="logo">Bourbon &ndash; Sass Mixin Library</h1>
-        <h2 class="tagline">A simple and lightweight mixin library for Sass.</h2>
+        <section class="intro-wrapper">
+          <h1 class="logo">Bourbon &ndash; Sass Mixin Library</h1>
+          <h2 class="tagline">A simple and lightweight mixin library for Sass.</h2>
 
-        {% include intro.html %}
+          {% include intro.html %}
+        </section>
 
-        <h1 id="mixins">Mixins</h1>
-        {% include animation.html %}
-        {% include appearance.html %}
-        {% include background-image.html %}
-        {% include background-size.html %}
-        {% include border-image.html %}
-        {% include border-radius.html %}
-        {% include box-shadow.html %}
-        {% include box-sizing.html %}
-        {% include columns.html %}
-        {% include flex-box.html %}
-        {% include inline-block.html %}
-        {% include linear-gradient.html %}
-        {% include position.html %}
-        {% include radial-gradient.html %}
-        {% include transform.html %}
-        {% include transitions.html %}
-        {% include user-select.html %}
+        <section class="mixins">
+          <h1 id="mixins">Mixins</h1>
+          {% include animation.html %}
+          {% include appearance.html %}
+          {% include background-image.html %}
+          {% include background-size.html %}
+          {% include border-image.html %}
+          {% include border-radius.html %}
+          {% include box-shadow.html %}
+          {% include box-sizing.html %}
+          {% include columns.html %}
+          {% include flex-box.html %}
+          {% include inline-block.html %}
+          {% include linear-gradient.html %}
+          {% include position.html %}
+          {% include radial-gradient.html %}
+          {% include transform.html %}
+          {% include transitions.html %}
+          {% include user-select.html %}
+        </section>
 
-        <h1 id="functions">Functions</h1>
-        {% include compact.html %}
-        {% include flex-grid.html %}
-        {% include golden-ratio.html %}
-        {% include grid-width.html %}
-        {% include linear-gradient-function.html %}
-        {% include radial-gradient-function.html %}
-        {% include tint-shade.html %}
+        <section ckass="functions">
+          <h1 id="functions">Functions</h1>
+          {% include compact.html %}
+          {% include flex-grid.html %}
+          {% include golden-ratio.html %}
+          {% include grid-width.html %}
+          {% include linear-gradient-function.html %}
+          {% include modular-scale.html %}
+          {% include radial-gradient-function.html %}
+          {% include tint-shade.html %}
+        </section>
 
-        <h1 id="add-ons">Add-ons</h1>
-        {% include buttons.html %}
-        {% include clearfix.html %}
-        {% include font-family.html %}
-        {% include html5-input-types.html %}
-        {% include timing-functions.html %}
+        <section class="addons">
+          <h1 id="add-ons">Add-ons</h1>
+          {% include buttons.html %}
+          {% include clearfix.html %}
+          {% include font-family.html %}
+          {% include html5-input-types.html %}
+          {% include timing-functions.html %}
+        </section>
 
-        <h1 id="complete-list">Complete List</h1>
-        {% include complete-list.html %}
+        <section class="complete-list">
+          <h1 id="complete-list">Complete List</h1>
+          {% include complete-list.html %}
+        </section>
 
-        <h1 id="footer"></h1>
-        {% include footer.html %}
+        <section class="footer">
+          <h1 id="footer"></h1>
+          {% include footer.html %}
+        </section>
 
       </div>
     </div>

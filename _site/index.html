@@ -29,20 +29,22 @@
     <li><a href="#radial-gradient">Radial-gradient</a></li>
     <li><a href="#transform">Transform</a></li>
     <li><a href="#transitions">Transitions</a></li>
-    <li><a href="#user-select">User-select</a></li>
+    <li><a href="#user-select">User Select</a></li>
 
     <li class="title"><a href="#functions"><h3>Functions</h3></a><li>
     <li><a href="#compact">Compact</a></li>
     <li><a href="#flex-grid">Flex Grid</a></li>
-    <li><a href="#golden-ratio">Golden-ratio</a></li>
+    <li><a href="#golden-ratio">Golden Ratio</a></li>
     <li><a href="#grid-width">Grid Width</a></li>
     <li><a href="#linear-gradient-function">Linear-gradient</a></li>
-    <li><a href="#tint-shade">Tint and Shade</a></li>
+    <li><a href="#modular-scale">Modular Scale</a></li>
+    <li><a href="#radial-gradient-function">Radial-gradient</a></li>
+    <li><a href="#tint-shade">Tint &amp; Shade</a></li>
 
     <li class="title"><a href="#add-ons"><h3>Add-ons</h3></a><li>
     <li><a href="#buttons">Buttons</a></li>
     <li><a href="#clearfix">Clearfix</a></li>
-    <li><a href="#font-family">Font-Family</a></li>
+    <li><a href="#font-family">Font Family</a></li>
     <li><a href="#html5-input-types">HTML5 Input Types</a></li>
     <li><a href="#timing-functions">Timing Functions</a></li>
 
@@ -52,19 +54,22 @@
 
 
       <div class="main-inner">
-        <h1 class="logo">Bourbon &ndash; Sass Mixin Library</h1>
-        <h2 class="tagline">A simple and lightweight mixin library for Sass.</h2>
+        <section class="intro-wrapper">
+          <h1 class="logo">Bourbon &ndash; Sass Mixin Library</h1>
+          <h2 class="tagline">A simple and lightweight mixin library for Sass.</h2>
 
-        <section id="intro">
+          <section id="intro">
   <p>Bourbon is a comprehensive library of sass mixins that are designed to be simple and easy to use. No configuration required.<br> The mixins aim to be as vanilla as possible, meaning they should be as close to the original CSS syntax as possible.</p>
   <p>The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
   <p><a href="http://github.com/thoughtbot/bourbon#readme">Install Bourbon</a><a href="http://github.com/thoughtbot/bourbon">View on Github</a></p>
 </section>
 
+        </section>
 
-        <h1 id="mixins">Mixins</h1>
-        <section id="animations">
-  <h2>Animations</h2>
+        <section class="mixins">
+          <h1 id="mixins">Mixins</h1>
+          <section id="animations">
+  <h2>Animations <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_animation.scss">View source</a></h2>
   <p>The animation mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="nt">box</span><span class="nd">:hover</span> <span class="p">{</span>
@@ -85,8 +90,8 @@
   </section>
 </section>
 
-        <section id="appearance">
-  <h2>Appearance</h2>
+          <section id="appearance">
+  <h2>Appearance <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_appearance.scss">View source</a></h2>
   <p>The <code>appearance</code> CSS property is used to display an element using a platform-native styling based on the operating system's theme.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> appearance</span><span class="p">(</span><span class="no">none</span><span class="p">);</span>
@@ -95,8 +100,8 @@
 
 </section>
 
-        <section id="background-image">
-  <h2>Background-image</h2>
+          <section id="background-image">
+  <h2>Background Image <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_background-image.scss">View source</a></h2>
   <p>The background-image mixin is helpful for chaining multiple comma delimited background images and/or linear/radial-gradients into one background-image property. The Background-image mixin supports up to 10 background-images.</p>
   <p>Use in combination with the <a href="#linear-gradient-function">linear-gradient function</a> and the <a href="#radial-gradient-function">radial-gradient function</a>.
 
@@ -134,8 +139,8 @@
 </section>
 
 
-        <section id="background-size">
-  <h2>Background-size</h2>
+          <section id="background-size">
+  <h2>Background Size<a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_background-size.scss">View source</a></h2>
   <p>The background-size mixin supports multiple background-sizes for use with multiple background-images via comma delimitation.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> background-size</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">100</span><span class="kt">%</span><span class="p">);</span> <span class="c1">// Single</span>
@@ -148,8 +153,8 @@
 
 
 
-        <section id="border-image">
-  <h2>Border-image</h2>
+          <section id="border-image">
+  <h2>Border Image<a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_border-image.scss">View source</a></h2>
   <p>Border-image supports short-hand notation.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> border-image</span><span class="p">(</span><span class="sx">url(/images/border.png)</span> <span class="mi">27</span> <span class="no">repeat</span><span class="p">);</span>
@@ -161,8 +166,8 @@
   </section>
 </section>
 
-        <section id="border-radius">
-  <h2>Border Radius</h2>
+          <section id="border-radius">
+  <h2>Border Radius <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_border-radius.scss">View source</a></h2>
 
   <p>The border-radius mixin can take short-hand notation or the full radius expression.</p>
 
@@ -191,8 +196,8 @@
 
 </section>
 
-        <section id="box-shadow">
-  <h2>Box Shadow</h2>
+          <section id="box-shadow">
+  <h2>Box Shadow<a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_box-shadow.scss">View source</a></h2>
   <p>Box-shadow supports single or multiple arguments.</p>
 
   <h3>Single Box Shadow</h3>
@@ -214,8 +219,8 @@
   </section>
 </section>
 
-        <section id="box-sizing">
-  <h2>Box Sizing</h2>
+          <section id="box-sizing">
+  <h2>Box Sizing<a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_box-sizing.scss">View source</a></h2>
   <p>Box-sizing will change the box-model of the element it is applied to.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> box-sizing</span><span class="p">(</span><span class="no">border</span><span class="o">-</span><span class="n">box</span><span class="p">);</span>
@@ -224,8 +229,8 @@
 
 </section>
 
-        <section id="columns">
-  <h2>Columns</h2>
+          <section id="columns">
+  <h2>Columns <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_columns.scss">View source</a></h2>
   <p>All current CSS3 column properties are supported. See the <a href="#complete-list-mixins">complete list of mixins</a> for more info.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> columns</span><span class="p">(</span><span class="mi">12</span> <span class="mi">8</span><span class="kt">em</span><span class="p">);</span>
@@ -235,8 +240,8 @@
 
 </section>
 
-        <section id="flex-box">
-  <h2>Flex Box</h2>
+          <section id="flex-box">
+  <h2>Flex Box <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_flex-box.scss">View source</a></h2>
   <p>The flex-box mixin is based on the 2009 w3c spec. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">More info</a></p>
 
 <div class="highlight"><pre><code class="scss"><span class="nt">div</span><span class="nc">.parent</span> <span class="p">{</span>
@@ -260,8 +265,8 @@
 
 </section>
 
-        <section id="inline-block">
-  <h2>Inline Block</h2>
+          <section id="inline-block">
+  <h2>Inline Block <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_inline-block.scss">View source</a></h2>
   <p>The inline-block mixin provides support for the inline-block property in IE6 and IE7.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> inline-block</span><span class="p">;</span>
@@ -270,8 +275,8 @@
 
 </section>
 
-        <section id="linear-gradient">
-  <h2>Linear Gradient</h2>
+          <section id="linear-gradient">
+  <h2>Linear Gradient <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_linear-gradient.scss">View source</a></h2>
   <p>Gradient Position is optional, default is <code>top</code>. Position can be a degree (<code>90deg</code>). Mixin supports up to 10 color-stops.</p>
   <p>This mixin will output a fallback <code>background-color: #first-color;</code> declaration. A <code>$fallback</code> argument can be passed to change the fallback color.</p>
 
@@ -287,8 +292,8 @@
   <section class="demo"></section>
 </section>
 
-        <section id="position">
-  <h2>Position</h2>
+          <section id="position">
+  <h2>Position <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_position.scss">View source</a></h2>
   <p>Shorthand notation for setting the position of elements in your page.</p>
   <p>The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.</p>
   <p>Note: unit-less values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.</p>
@@ -308,8 +313,8 @@
 
 </section>
 
-        <section id="radial-gradient">
-  <h2>Radial Gradient</h2>
+          <section id="radial-gradient">
+  <h2>Radial Gradient <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_radial-gradient.scss">View source</a></h2>
   <p>Takes up to 10 gradients. Position and shape are required. See also the <a href="#background-image">background-image mixin</a>.</p>
   <p>This mixin will output a fallback <code>background-color: #first-color;</code> declaration. A <code>$fallback</code> argument can be passed to change the fallback color.</p>
 
@@ -325,8 +330,8 @@
   </section>
 </section>
 
-        <section id="transform">
-  <h2>Transform &amp; Transform-origin</h2>
+          <section id="transform">
+  <h2>Transform &amp; Transform-origin <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_transform.scss">View source</a></h2>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transform</span><span class="p">(</span><span class="nf">translateY</span><span class="p">(</span><span class="mi">50</span><span class="kt">px</span><span class="p">));</span>
 
@@ -337,8 +342,8 @@
 
 </section>
 
-        <section id="transitions">
-  <h2>Transitions</h2>
+          <section id="transitions">
+  <h2>Transitions <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_transition.scss">View source</a></h2>
   <p>Shorthand mixin: Supports multiple parentheses-delimited values for each variable.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transition</span> <span class="p">(</span><span class="n">all</span><span class="o">,</span> <span class="mi">2</span><span class="mf">.0</span><span class="kt">s</span><span class="o">,</span> <span class="n">ease-in-out</span><span class="p">);</span>
@@ -349,8 +354,8 @@
 
 </section>
 
-        <section id="user-select">
-  <h2>User-select</h2>
+          <section id="user-select">
+  <h2>User-select <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_user-select.scss">View source</a></h2>
   <p>Controls the appearance (only) of selection.  This does not have any affect on actual selection operation.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> user-select</span><span class="p">(</span><span class="no">none</span><span class="p">);</span>
@@ -359,10 +364,12 @@
 
 </section>
 
+        </section>
 
-        <h1 id="functions">Functions</h1>
-        <section id="compact">
-  <h2>Compact</h2>
+        <section ckass="functions">
+          <h1 id="functions">Functions</h1>
+          <section id="compact">
+  <h2>Compact <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/lib/bourbon/sass_extensions/functions/compact.rb">View Source</a></h2>
   <p>The compact function will strip out any value from a list that is <code>false</code>. Takes up to 10 arguments.
 
 <div class="highlight"><pre><code class="scss"><span class="nv">$full</span><span class="o">:</span>  <span class="nf">compact</span><span class="p">(</span><span class="nv">$name-1</span><span class="o">,</span> <span class="nv">$name-2</span><span class="o">,</span> <span class="nv">$name-3</span><span class="o">,</span> <span class="nv">$name-4</span><span class="o">,</span> <span class="nv">$name-5</span><span class="o">,</span> <span class="nv">$name-6</span><span class="o">,</span> <span class="nv">$name-7</span><span class="o">,</span> <span class="nv">$name-8</span><span class="o">,</span> <span class="nv">$name-9</span><span class="o">,</span> <span class="nv">$name-10</span><span class="p">);</span>
@@ -372,8 +379,8 @@
 
 </section>
 
-        <section id="flex-grid">
-  <h2>Flex Grid</h2>
+          <section id="flex-grid">
+  <h2>Flex Grid <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_flex-grid.scss">View source</a></h2>
   <p>Use this mixin to easily create a flexible-grid layout.</p>
   <p>The <code>$fg-column</code>, <code>$fg-gutter</code> and <code>$fg-max-columns</code> variables must be defined in your base stylesheet to properly use the flex-grid function.</p>
   <p>This function takes the fluid grid equation (target / context = result) and uses columns to help define each.</p>
@@ -402,8 +409,8 @@
 
 </section>
 
-        <section id="golden-ratio">
-  <h2>Golden Ratio</h2>
+          <section id="golden-ratio">
+  <h2>Golden Ratio <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">View Source</a></h2>
   <p>Returns the golden ratio of a given number. Must provide a pixel or em value for the first argument. Also takes a required integer for an increment value: ...-3, -2, -1, 0, 1, 2, 3...</p>
   <p>Note: The golden-ratio function can be wrapped in sass's <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down, or round up respectively.</p>
 
@@ -420,8 +427,8 @@
   <p>Resources: <a href="http://modularscale.com/">modularscale.com</a> & <a href="http://goldenratiocalculator.com/">goldenrationcalculator.com</a></p>
 </section>
 
-        <section id="grid-width">
-  <h2>Grid Width</h2>
+          <section id="grid-width">
+  <h2>Grid Width <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_grid-width.scss">View source</a></h2>
   <p>Easily setup and follow a grid based design. Check out <a href="http://gridulator.com/">gridulator.com</a></p>
   <p>The <code>$gw-column</code> and <code>$gw-gutter</code> variables must be defined in your base stylesheet to properly use the grid-width function.</p>
 
@@ -437,8 +444,8 @@
 
 </section>
 
-        <section id="linear-gradient-function">
-  <h2>Linear Gradient</h2>
+          <section id="linear-gradient-function">
+  <h2>Linear Gradient <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_linear-gradient.scss">View source</a></h2>
   <p>Outputs a linear-gradient. Use in conjunction with the <a href="#background-image">background-image mixin.</a> The function takes the same arguments as the <a href="#linear-gradient">linear-gradient mixin</a>.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span><span class="nf">linear-gradient</span><span class="p">(</span><span class="nb">white</span> <span class="mi">0</span><span class="o">,</span> <span class="nb">yellow</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">transparent</span> <span class="mi">50</span><span class="kt">%</span><span class="p">));</span>
@@ -451,12 +458,34 @@
   </section>
 </section>
 
-        <section id="radial-gradient-function">
-  <h2>Radial Gradient</h2>
+          <section id="modular-scale">
+  <h2>Modular Scale <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">View Source</a></h2>
+  <p>Returns the modular scale of a given number. Must provide a number value for the first argument. The second argument is a required integer for an increment value: ...-3, -2, -1, 0, 1, 2, 3... The third value is the ratio number.</p>
+  <p>Note: The function can be wrapped in sass's <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down, or round up respectively.</p>
+
+<div class="highlight"><pre><code class="scss"><span class="nt">div</span> <span class="p">{</span>
+ <span class="c1">// Increment Up GR with positive value</span>
+ <span class="na">font-size</span><span class="o">:</span>        <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span>   <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="mf">.618</span><span class="p">);</span> <span class="c1">// returns: 22.652px</span>
+
+ <span class="c1">// Increment Down GR with negative value</span>
+ <span class="na">font-size</span><span class="o">:</span>        <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span>  <span class="mi">-1</span><span class="o">,</span> <span class="mi">1</span><span class="mf">.618</span><span class="p">);</span> <span class="c1">// returns: 8.653px</span>
+
+ <span class="c1">// Can be used with ceil(round up) or floor(round down)</span>
+ <span class="na">font-size</span><span class="o">:</span> <span class="nf">floor</span><span class="p">(</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="mf">.618</span><span class="p">)</span> <span class="p">);</span> <span class="c1">// returns: 22px</span>
+ <span class="na">font-size</span><span class="o">:</span>  <span class="nf">ceil</span><span class="p">(</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">14</span><span class="kt">px</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="mf">.618</span><span class="p">)</span> <span class="p">);</span> <span class="c1">// returns: 23px</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+  <p>Resources: <a href="http://modularscale.com/">modularscale.com</a> & <a href="http://goldenratiocalculator.com/">goldenrationcalculator.com</a></p>
+</section>
+
+          <section id="radial-gradient-function">
+  <h2>Radial Gradient <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_radial-gradient.scss">View source</a></h2>
   <p>Outputs a radial-gradient. Use in conjunction with the <a href="#background-image">background-image mixin.</a> The function takes the same arguments as the <a href="#radial-gradient">radial-gradient mixin</a>.</p>
 
-<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="p">);</span>
-<span class="k">@include</span><span class="nd"> radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#eee</span> <span class="mi">10</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#1e5799</span> <span class="mi">30</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#efefef</span><span class="p">);</span>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span> <span class="nf">radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#1e5799</span><span class="o">,</span> <span class="mh">#3dc3d1</span><span class="p">)</span> <span class="p">);</span>
+<span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span> <span class="nf">radial-gradient</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="no">circle</span> <span class="n">cover</span><span class="o">,</span> <span class="mh">#eee</span> <span class="mi">10</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#1e5799</span> <span class="mi">30</span><span class="kt">%</span><span class="o">,</span> <span class="mh">#efefef</span><span class="p">)</span> <span class="p">);</span>
 </code></pre>
 </div>
 
@@ -466,8 +495,8 @@
   </section>
 </section>
 
-        <section id="tint-shade">
-  <h2>Tint &amp; Shade</h2>
+          <section id="tint-shade">
+  <h2>Tint &amp; Shade <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_tint-shade.scss">View source</a></h2>
   <p>Tint and Shade are different from <code>lighten()</code> and <code>darken()</code> functions that are built into sass.</p>
   <p>Tint is a mix of color with white.<br>
      Shade is a mix of color with black.<br>
@@ -481,10 +510,12 @@
 
 </section>
 
+        </section>
 
-        <h1 id="add-ons">Add-ons</h1>
-        <section id="buttons">
-  <h2>Buttons</h2>
+        <section class="addons">
+          <h1 id="add-ons">Add-ons</h1>
+          <section id="buttons">
+  <h2>Buttons <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_button.scss">View source</a></h2>
   <p>The button add-on provides well-designed buttons with a single line in your CSS.</p>
   <p>The mixin supports a style parameter and an optional color argument. The available button styles are:</p>
   <ul>
@@ -539,8 +570,8 @@
 
 </section>
 
-        <section id="clearfix">
-  <h2>Clearfix</h2>
+          <section id="clearfix">
+  <h2>Clearfix <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_clearfix.scss">View source</a></h2>
   <p>This mixin will output a clearfix to the selector where the mixin is declared.</p>
   <p>This clearfix uses Nicolas Gallagher's <a href="http://nicolasgallagher.com/micro-clearfix-hack/">Micro Clearfix</a>.</p>
 
@@ -552,8 +583,8 @@
 
 </section>
 
-        <section id="font-family">
-  <h2>Font-Family</h2>
+          <section id="font-family">
+  <h2>Font-Family <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_font-family.scss">View source</a></h2>
   <p>Bourbon defines four default font-families as variables for the sake of convenience:</p>
 
 <div class="highlight"><pre><code class="scss"><span class="na">font-family</span><span class="o">:</span> <span class="nv">$helvetica</span><span class="p">;</span>
@@ -576,8 +607,8 @@
 
 </section>
 
-        <section id="html5-input-types">
-  <h2>HTML5 Input Types</h2>
+          <section id="html5-input-types">
+  <h2>HTML5 Input Types <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_html5-input-types.scss">View source</a></h2>
   <p>This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimic <code>input[type="text"]</code>.</p>
   <p>Note: You must use interpolation with the variable&mdash;<code>#{}</code>.</p>
 
@@ -601,8 +632,8 @@
 
 </section>
 
-        <section id="timing-functions">
-  <h2>Timing Functions</h2>
+          <section id="timing-functions">
+  <h2>Timing Functions <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_timing-functions.scss">View source</a></h2>
   <p>These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations and transitions. The provided timing functions are the same as the jQuery UI demo: <a href="http://jqueryui.com/demos/effect/easing.html">easing functions</a>.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> transition</span><span class="p">(</span><span class="n">all</span><span class="o">,</span> <span class="mi">5</span><span class="kt">s</span><span class="o">,</span> <span class="nv">$ease-in-circ</span><span class="p">);</span>
@@ -650,9 +681,11 @@
   </section>
 </section>
 
+        </section>
 
-        <h1 id="complete-list">Complete List</h1>
-        <section id="complete-list">
+        <section class="complete-list">
+          <h1 id="complete-list">Complete List</h1>
+          <section id="complete-list">
   <h2>All Supported Functions, Mixins, and Addons</h2>
   <p><code>@</code> denotes a mixin and must be prefaced with <code>@include</code>.</p>
 
@@ -768,9 +801,11 @@
 
 </section>
 
+        </section>
 
-        <h1 id="footer"></h1>
-        <section id="browser-support">
+        <section class="footer">
+          <h1 id="footer"></h1>
+          <section id="browser-support">
   <h2>Browser Support &amp; Pull Requests</h2>
   <p>Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.</p>
   <p>A general rule when submitting a pull request for a new mixin, ask yourself the following: Do the following browsers <em>only</em> support the CSS3 properties using vendor specific prefixes?</p>
@@ -808,6 +843,7 @@
   <p>Bourbon is Copyright © 2011 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.</p>
 </section>
 
+        </section>
 
       </div>
     </div>

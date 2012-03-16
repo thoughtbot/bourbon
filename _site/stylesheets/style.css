@@ -389,12 +389,13 @@ html {
   padding: 0; }
 
 h1 {
-  font-size: 36.651px;
   font-weight: 300;
   margin-top: 0; }
 
+h1, h2 {
+  font-size: 26.652px; }
+
 h2 {
-  font-size: 26.652px;
   font-weight: 300;
   margin-bottom: 0.5em;
   margin-top: 0; }
@@ -441,7 +442,8 @@ nav.fixed-nav {
       margin-left: 20px; }
     nav.fixed-nav ul li {
       line-height: 180%;
-      list-style-type: none; }
+      list-style-type: none;
+      text-transform: capitalize; }
       nav.fixed-nav ul li:first-child {
         margin-top: 15px; }
       nav.fixed-nav ul li.title:not(:first-child) {
@@ -506,37 +508,112 @@ div.main-inner {
   float: left;
   padding: 35px 0px;
   width: 854px; }
-  div.main-inner h1 {
-    border-bottom: 1px solid #ededed; }
-    div.main-inner h1.logo {
-      background-image: url(../images/bourbon-logo.png);
-      background-repeat: no-repeat;
-      border-bottom: 0;
-      height: 58px;
-      margin-left: 24px;
-      text-indent: -9999px; }
-  div.main-inner > h1 {
-    margin: auto 20px 0; }
   div.main-inner h2.tagline {
     padding: 0 28px;
     margin: 20px 0 0; }
-  div.main-inner > section {
-    border: 1px solid transparent;
+  div.main-inner > section h1 {
+    background-color: #f3f1ec;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    border-right: 0;
+    -webkit-box-shadow: 1px 0 0 #f3f1ec, -1px 0 0 #f3f1ec;
+    -moz-box-shadow: 1px 0 0 #f3f1ec, -1px 0 0 #f3f1ec;
+    box-shadow: 1px 0 0 #f3f1ec, -1px 0 0 #f3f1ec;
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 100%;
+    margin: 30px 0 0;
+    margin-top: 40px;
+    padding: 15px 30px;
+    text-shadow: 0 1px 0 white; }
+    div.main-inner > section h1.logo {
+      background-color: transparent;
+      background-image: url(../images/bourbon-logo.png);
+      background-repeat: no-repeat;
+      border: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      height: 58px;
+      margin-left: 24px;
+      margin-top: 0;
+      padding: 0;
+      text-indent: -9999px; }
+  div.main-inner > section > section {
     border-bottom: 1px solid #ebe8e0;
-    padding: 30px 28px; }
-    div.main-inner > section + h1 {
-      margin-top: 100px; }
-    div.main-inner > section#intro {
+    padding: 30px 28px;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -ms-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+    -ms-transition-duration: 0.15s;
+    -o-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    -ms-transition-delay: 0;
+    -o-transition-delay: 0;
+    transition-delay: 0; }
+    div.main-inner > section > section a.view-source {
+      color: #c8c3b7;
+      float: right;
+      font-size: 13px;
+      margin-top: 5px;
+      padding: 2px 20px;
+      text-shadow: 0 1px 0 white;
+      text-transform: capitalize;
+      -webkit-transition-property: all;
+      -moz-transition-property: all;
+      -ms-transition-property: all;
+      -o-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -moz-transition-duration: 0.15s;
+      -ms-transition-duration: 0.15s;
+      -o-transition-duration: 0.15s;
+      transition-duration: 0.15s;
+      -webkit-transition-timing-function: ease-out;
+      -moz-transition-timing-function: ease-out;
+      -ms-transition-timing-function: ease-out;
+      -o-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+      -webkit-transition-delay: 0;
+      -moz-transition-delay: 0;
+      -ms-transition-delay: 0;
+      -o-transition-delay: 0;
+      transition-delay: 0;
+      opacity: 0; }
+      div.main-inner > section > section a.view-source:hover {
+        background-color: #f3f1ec;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        border-radius: 20px;
+        color: #a69f8c; }
+    div.main-inner > section > section:hover a.view-source {
+      opacity: 1; }
+    div.main-inner > section > section#intro {
       border-bottom: none;
-      padding-bottom: 0;
+      padding-bottom: 0px;
       padding-top: 0; }
-      div.main-inner > section#intro + h1 {
+      div.main-inner > section > section#intro + h1 {
         margin-top: 40px; }
-      div.main-inner > section#intro p a + a {
+      div.main-inner > section > section#intro p a + a {
         margin-left: 20px; }
-    div.main-inner > section:last-child {
+      div.main-inner > section > section#intro p:last-child {
+        margin: 20px 0 50px; }
+    div.main-inner > section > section:last-child {
       border: 0; }
-  div.main-inner > section:target {
+  div.main-inner > section > section:target {
     -webkit-box-shadow: inset 4px 0 0px 0 #fc511d;
     -moz-box-shadow: inset 4px 0 0px 0 #fc511d;
     box-shadow: inset 4px 0 0px 0 #fc511d;
@@ -560,7 +637,7 @@ div.main-inner {
     -ms-transition-delay: 0;
     -o-transition-delay: 0;
     transition-delay: 0; }
-    div.main-inner > section:target h2 {
+    div.main-inner > section > section:target h2 {
       font-weight: 500; }
 
 div.wrapper {
@@ -872,10 +949,10 @@ section#background-image section.demo {
   width: 100%; }
 
 section#border-image section.demo {
-  -webkit-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
-  -moz-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
-  -o-border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
-  border-image: url(http://thoughtbot.com/bourbon/images/border.png) 27 repeat;
+  -webkit-border-image: url(../images/border.png) 27 repeat;
+  -moz-border-image: url(../images/border.png) 27 repeat;
+  -o-border-image: url(../images/border.png) 27 repeat;
+  border-image: url(../images/border.png) 27 repeat;
   border-width: 27px;
   width: 81px;
   height: 27px; }
