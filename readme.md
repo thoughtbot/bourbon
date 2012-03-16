@@ -185,6 +185,7 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
       @ clearfix
       @ hide-text
       @ position(*args)
+      @ sticky-footer(*args)
 
       HTML5 Inputs
         #{$all-text-inputs}
