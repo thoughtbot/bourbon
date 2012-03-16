@@ -11,7 +11,10 @@ namespace :bourbon do
     FileUtils.mkdir_p "#{Rails.root}/#{args.sass_path}/bourbon"
     FileUtils.cp_r "#{source_root}/app/assets/stylesheets/.", "#{Rails.root}/#{args.sass_path}/bourbon", {:preserve => true}
     Find.find("#{Rails.root}/#{args.sass_path}/bourbon") do |path|
-      FileUtils.mv(path path.gsub(".css.scss", "")<<".scss") if File.basename(path).end_with?(".css.scss")
+      if path.end_with?(".css.scss")
+	    path_without_css_extention = path.gsub(".css.scss", "")<<".scss"
+	    FileUtils.mv(path, path_without_css_extention)
+      end
     end
   end
 end
