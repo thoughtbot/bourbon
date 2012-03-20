@@ -629,7 +629,20 @@
 
 </section>
 
-          Included file 'hide-text.html' not found in _includes directory
+          <section id="hide-text">
+  <h2>Hide Text<a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_hide-text.scss">View Source</a></h2>
+  <p>Hide-text is an image replacement mixin. It is based off the <a href="https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7">HTML5-Boilerplate image-replacement</a>.</p>
+  <p>This image replacement technique is an alternative to the text-indent technique, which has <a href="http://nicolasgallagher.com/another-css-image-replacement-technique/">performance and other benefits</a>.</p>
+
+<div class="highlight"><pre><code class="scss"><span class="nt">div</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> hide-text</span><span class="p">;</span>
+  <span class="na">background-image</span><span class="o">:</span> <span class="sx">url(logo.png)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+</section>
+
           <section id="html5-input-types">
   <h2>HTML5 Input Types <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_html5-input-types.scss">View source</a></h2>
   <p>This addon generates a variable which contains a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimic <code>input[type="text"]</code>.</p>
