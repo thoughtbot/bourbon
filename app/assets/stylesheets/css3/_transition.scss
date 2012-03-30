@@ -30,11 +30,11 @@
     $full: compact($prop-1, $prop-2, $prop-3, $prop-4, $prop-5,
                    $prop-6, $prop-7, $prop-8, $prop-9);
 
-  -webkit-transition-property: $full;
-     -moz-transition-property: $full;
-      -ms-transition-property: $full;
-       -o-transition-property: $full;
-          transition-property: $full;
+   -webkit-transition-property: transition-property-names($full, 'webkit');
+      -moz-transition-property: transition-property-names($full, 'moz');
+       -ms-transition-property: transition-property-names($full, 'ms');
+        -o-transition-property: transition-property-names($full, 'o');
+           transition-property: transition-property-names($full, false);
 }
 
 @mixin transition-duration ($time-1: 0,
