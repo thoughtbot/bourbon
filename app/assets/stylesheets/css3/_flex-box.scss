@@ -16,52 +16,37 @@
 
 @mixin box-orient($orient: inline-axis) {
 // horizontal|vertical|inline-axis|block-axis|inherit
-  -webkit-box-orient: $orient;
-     -moz-box-orient: $orient;
-          box-orient: $orient;
+  @include prefixer(box-orient, $orient);
 }
 
 @mixin box-pack($pack: start) {
 // start|end|center|justify
-  -webkit-box-pack: $pack;
-     -moz-box-pack: $pack;
-          box-pack: $pack;
+  @include prefixer(box-pack, $pack);
 }
 
 @mixin box-align($align: stretch) {
 // start|end|center|baseline|stretch
-  -webkit-box-align: $align;
-     -moz-box-align: $align;
-          box-align: $align;
+  @include prefixer(box-align, $align);
 }
 
 @mixin box-direction($direction: normal) {
 // normal|reverse|inherit
-  -webkit-box-direction: $direction;
-     -moz-box-direction: $direction;
-          box-direction: $direction;
-}
-@mixin box-lines($lines: single) {
-// single|multiple
-  -webkit-box-lines: $lines;
-     -moz-box-lines: $lines;
-          box-lines: $lines;
+  @include prefixer(box-direction, $direction);
 }
 
-@mixin box-ordinal-group($integer: 1) {
-  -webkit-box-ordinal-group: $integer;
-     -moz-box-ordinal-group: $integer;
-          box-ordinal-group: $integer;
+@mixin box-lines($lines: single) {
+// single|multiple
+  @include prefixer(box-lines, $lines);
+}
+
+@mixin box-ordinal-group($int: 1) {
+  @include prefixer(box-ordinal-group, $int);
 }
 
 @mixin box-flex($value: 0.0) {
-  -webkit-box-flex: $value;
-     -moz-box-flex: $value;
-          box-flex: $value;
+  @include prefixer(box-flex, $value);
 }
 
-@mixin box-flex-group($integer: 1) {
-  -webkit-box-flex-group: $integer;
-     -moz-box-flex-group: $integer;
-          box-flex-group: $integer;
+@mixin box-flex-group($int: 1) {
+  @include prefixer(box-flex-group, $int);
 }
