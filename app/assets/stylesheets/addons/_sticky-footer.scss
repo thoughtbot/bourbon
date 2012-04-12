@@ -1,28 +1,27 @@
 @mixin sticky-footer(
-  $height:           50px,
-  $main-selector:    "#container",
-  $content-selector: "#content",
-  $footer-selector:  "#footer"
+  $height:          50px,
+  $main-selector:   '#main',
+  $footer-selector: '#footer',
+  $push-selector:   '#push-footer'
 ) {
   html,
-  body,
-  #{$main-selector} {
+  body {
     height: 100%;
   }
   body > #{$main-selector} {
-    height:     auto;
-    min-height: 100%;
-  }
-  #{$content-selector} {
-    @include clearfix;
-    margin-bottom: $height;
+    height:        auto !important;
+    height:        100%;
+    margin-bottom: -$height;
+    min-height:    100%;
+    #{$push-selector} {
+      clear:  both;
+      height: $height;
+    }
   }
   #{$footer-selector} {
-    clear:      both;
-    height:     $height;
-    margin-top: -$height;
-    position:   relative;
-    z-index:    10;
+    clear:    both;
+    height:   $height;
+    position: relative;
   }
 }
 
@@ -31,17 +30,17 @@
 // Sticky footer markup:
 //
 //    <body>
-//      <div id="container">
-//        <article id="content">
-//        </article>
+//      <div id="main">
+//        <header>...</header>
+//        <article>...</article>
+//        <div id="push-footer"></div>
 //      </div>
 //      <div id="footer">
-//        <footer>
-//        </footer>
+//        <footer>...</footer>
 //      </div>
 //    </body>
 //
 // Example usage:
 //
 //    @include sticky-footer(100px)
-//    @include sticky-footer(100px, "#frame", "#main")
+//    @include sticky-footer(100px, "#wrapper")
