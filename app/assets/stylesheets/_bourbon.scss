@@ -9,6 +9,7 @@
 @import "functions/tint-shade";
 
 // CSS3 Mixins
+@import "css3/prefixer";
 @import "css3/animation";
 @import "css3/appearance";
 @import "css3/background-image";
@@ -29,6 +30,7 @@
 // Addons & other mixins
 @import "addons/button";
 @import "addons/clearfix";
+@import "addons/font-face";
 @import "addons/font-family";
 @import "addons/hide-text";
 @import "addons/html5-input-types";
