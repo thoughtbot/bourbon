@@ -1,12 +1,12 @@
 @mixin hide-text {
-  background-color: transparent;
-  border:           0;
-  color:            transparent;
-  font:             0/0 a;
-  text-shadow:      none;
+  text-indent: -9999px;
+  overflow: hidden;
 }
 
-// A CSS image replacement method that does not require the use of text-indent.
+// A CSS image replacement method that fixes the problems with using text-indent
+// http://www.css-101.org/articles/image-replacement/the_new_new_image-replacement_techniques.php
+// Summary: Developers dropped overflow: hidden; from original Phark method for IE5 support.
+//          Adding it back in solves performance problem with drawing a large off-screen box.
 //
 // Examples
 //
