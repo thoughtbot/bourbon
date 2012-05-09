@@ -37,8 +37,7 @@
 
   &:disabled {
     opacity: 0.5;
-    filter: alpha(opacity = 50);
-    cursor: default;
+    cursor: not-allowed;
   }
 }
 
