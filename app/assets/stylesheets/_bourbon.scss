@@ -7,6 +7,7 @@
 @import "functions/radial-gradient";
 @import "functions/render-gradients";
 @import "functions/tint-shade";
+@import "functions/transition_propery_name";
 
 // CSS3 Mixins
 @import "css3/animation";
@@ -32,4 +33,5 @@
 @import "addons/font-family";
 @import "addons/hide-text";
 @import "addons/html5-input-types";
+@import "addons/position";
 @import "addons/timing-functions";

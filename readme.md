@@ -117,14 +117,14 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
 
       border-radius
         @ border-radius(*args)
-        @ border-radius-top(*args)
-        @ border-radius-top-left(*args)
-        @ border-radius-top-right(*args)
-        @ border-radius-bottom(*args)
-        @ border-radius-bottom-left(*args)
-        @ border-radius-bottom-right(*args)
-        @ border-radius-left(*args)
-        @ border-radius-right(*args)
+        @ border-top-radius(*args)
+        @ border-top-left-radius(*args)
+        @ border-top-right-radius(*args)
+        @ border-bottom-radius(*args)
+        @ border-bottom-left-radius(*args)
+        @ border-bottom-right-radius(*args)
+        @ border-left-radius(*args)
+        @ border-right-radius(*args)
 
       @ box-shadow(*args)
       @ box-sizing(*args)
