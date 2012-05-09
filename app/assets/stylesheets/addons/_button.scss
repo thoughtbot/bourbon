@@ -34,6 +34,12 @@
       @include pill($base-color);
     }
   }
+
+  &:disabled {
+    opacity: 0.5;
+    filter: alpha(opacity = 50);
+    cursor: default;
+  }
 }
 
 
@@ -71,7 +77,7 @@
   text-shadow: 0 1px 0 $text-shadow;
   -webkit-background-clip: padding-box;
 
-  &:hover {
+  &:hover:not(:disabled) {
     $base-color-hover:    adjust-color($base-color, $saturation: -4%, $lightness: -5%);
     $inset-shadow-hover:  adjust-color($base-color, $saturation: -7%, $lightness:  5%);
     $stop-gradient-hover: adjust-color($base-color, $saturation:  8%, $lightness: -14%);
@@ -87,7 +93,7 @@
     @include linear-gradient ($base-color-hover, $stop-gradient-hover);
   }
 
-  &:active {
+  &:active:not(:disabled) {
     $border-active:       adjust-color($base-color, $saturation: 9%, $lightness: -14%);
     $inset-shadow-active: adjust-color($base-color, $saturation: 7%, $lightness: -17%);
 
@@ -143,7 +149,7 @@
   text-decoration: none;
   text-shadow: 0 -1px 1px $text-shadow;
 
-  &:hover {
+  &:hover:not(:disabled) {
     $first-stop-hover:  adjust-color($base-color, $red: -13, $green: -15, $blue: -18);
     $second-stop-hover: adjust-color($base-color, $red: -66, $green: -62, $blue: -51);
     $third-stop-hover:  adjust-color($base-color, $red: -93, $green: -85, $blue: -66);
@@ -163,7 +169,7 @@
                                   $fourth-stop-hover 100%);
   }
 
-  &:active {
+  &:active:not(:disabled) {
     $inset-shadow-active: adjust-color($base-color, $red: -111, $green: -116, $blue: -122);
 
     @if $grayscale == true {
@@ -216,7 +222,7 @@
   text-shadow: 0 -1px 1px $text-shadow;
   -webkit-background-clip: padding-box;
 
-  &:hover {
+  &:hover:not(:disabled) {
     $base-color-hover:    adjust-color($base-color,                                $lightness: -4.5%);
     $border-bottom:       adjust-color($base-color, $hue:  8, $saturation:  13.5%, $lightness: -32%);
     $border-sides:        adjust-color($base-color, $hue:  4, $saturation: -2%,    $lightness: -27%);
@@ -244,7 +250,7 @@
     -webkit-background-clip: padding-box;
   }
 
-  &:active {
+  &:active:not(:disabled) {
     $active-color:         adjust-color($base-color, $hue: 4,  $saturation: -12%,  $lightness: -10%);
     $border-active:        adjust-color($base-color, $hue: 6,  $saturation: -2.5%, $lightness: -30%);
     $border-bottom-active: adjust-color($base-color, $hue: 11, $saturation:  6%,   $lightness: -31%);
@@ -266,4 +272,3 @@
     text-shadow: 0 -1px 1px $text-shadow-active;
   }
 }
-
