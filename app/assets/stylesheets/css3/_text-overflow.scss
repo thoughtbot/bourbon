@@ -1,0 +1,9 @@
+@mixin text-overflow($overflow) {
+//  clip | ellipsis | string
+   -webkit-text-overflow: $overflow;  
+    -khtml-text-overflow: $overflow;
+     -icab-text-overflow: $overflow;
+      -moz-text-overflow: $overflow;
+        -o-text-overflow: $overflow;
+           text-overflow: $overflow;
+}
