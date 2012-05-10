@@ -1,12 +1,12 @@
 @mixin prefixer ($property, $value,
-                 $moz:    true,
                  $webkit: true,
-                 $o:      false,
-                 $ms:     false,
-                 $spec:   true) {
-  @if $moz    {    -moz-#{$property}: $value; }
+                    $moz: true,
+                     $ms: false,
+                      $o: false,
+                   $spec: true) {
   @if $webkit { -webkit-#{$property}: $value; }
-  @if $o      {      -o-#{$property}: $value; }
+  @if $moz    {    -moz-#{$property}: $value; }
   @if $ms     {     -ms-#{$property}: $value; }
+  @if $o      {      -o-#{$property}: $value; }
   @if $spec   {         #{$property}: $value; }
 }

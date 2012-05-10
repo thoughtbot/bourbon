@@ -12,7 +12,7 @@
     $full: compact($prop-1, $prop-2, $prop-3, $prop-4, $prop-5,
                    $prop-6, $prop-7, $prop-8, $prop-9);
 
-  @include prefixer(transition, $full, moz, webkit, o, ms);
+  @include prefixer(transition, $full, webkit, moz, ms, o);
 }
 
 
@@ -26,7 +26,7 @@
     $full: compact($prop-1, $prop-2, $prop-3, $prop-4, $prop-5,
                    $prop-6, $prop-7, $prop-8, $prop-9);
 
-  @include prefixer(transition-property, $full, moz, webkit, o, ms);
+  @include prefixer(transition-property, $full, webkit, moz, ms, o);
 }
 
 @mixin transition-duration ($time-1: 0,
@@ -38,7 +38,7 @@
     $full: compact($time-1, $time-2, $time-3, $time-4, $time-5,
                    $time-6, $time-7, $time-8, $time-9);
 
-  @include prefixer(transition-duration, $full, moz, webkit, o, ms);
+  @include prefixer(transition-duration, $full, webkit, moz, ms, o);
 }
 
 @mixin transition-timing-function ($motion-1: ease,
@@ -51,7 +51,7 @@
                    $motion-6, $motion-7, $motion-8, $motion-9);
 
 // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
-  @include prefixer(transition-timing-function, $full, moz, webkit, o, ms);
+  @include prefixer(transition-timing-function, $full, webkit, moz, ms, o);
 }
 
 @mixin transition-delay ($time-1: 0,
@@ -63,6 +63,6 @@
     $full: compact($time-1, $time-2, $time-3, $time-4, $time-5,
                    $time-6, $time-7, $time-8, $time-9);
 
-  @include prefixer(transition-transition-delay, $full, moz, webkit, o, ms);
+  @include prefixer(transition-transition-delay, $full, webkit, moz, ms, o);
 }
 
