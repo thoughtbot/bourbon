@@ -12,19 +12,31 @@
 
   position: $position;
 
-  @if not(unitless($top)) {
+  @if $top == auto {
+    top: $top;
+  }
+  @else if not(unitless($top)) {
     top: $top;
   }
 
-  @if not(unitless($right)) {
+  @if $right == auto {
+    right: $right;
+  }
+  @else if not(unitless($right)) {
     right: $right;
   }
 
-  @if not(unitless($bottom)) {
+  @if $bottom == auto {
+    bottom: $bottom;
+  }
+  @else if not(unitless($bottom)) {
     bottom: $bottom;
   }
 
-  @if not(unitless($left)) {
+  @if $left == auto {
+    left: $left;
+  }
+  @else if not(unitless($left)) {
     left: $left;
   }
 }
