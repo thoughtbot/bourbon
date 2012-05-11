@@ -1,24 +1,26 @@
 @mixin border-radius ($radii) {
-  @include prefixer(border-radius, $radii);
+  @include prefixer(border-radius, $radii, webkit, not moz);
+  @warn "border-radius mixin is deprecated and will be removed in the next major version release.";
 }
 
 @mixin border-top-left-radius($radii) {
-  -moz-border-radius-topleft: $radii;
-  @include prefixer(border-top-left-radius, $radii);
+  @include prefixer(border-top-left-radius, $radii, webkit, not moz);
+  @warn "border-top-left-radius mixin is deprecated and will be removed in the next major version release.";
 }
 
 @mixin border-top-right-radius($radii) {
-  -moz-border-radius-topright: $radii;
-  @include prefixer(border-top-right-radius, $radii);
+  @include prefixer(border-top-right-radius, $radii, webkit, not moz);
+  @warn "border-top-right-radius mixin is deprecated and will be removed in the next major version release.";
 }
 
 @mixin border-bottom-left-radius($radii) {
-  -moz-border-radius-bottomleft: $radii;
-  @include prefixer(border-bottom-left-radius, $radii);
+  @include prefixer(border-bottom-left-radius, $radii, webkit, not moz);
+  @warn "border-bottom-left-radius mixin is deprecated and will be removed in the next major version release.";
 }
 
 @mixin border-bottom-right-radius($radii) {
-  @include prefixer(border-bottom-right-radius, $radii);
+  @include prefixer(border-bottom-right-radius, $radii, webkit, not moz);
+  @warn "border-bottom-right-radius mixin is deprecated and will be removed in the next major version release.";
 }
 
 @mixin border-top-radius($radii) {
