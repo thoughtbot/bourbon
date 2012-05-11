@@ -46,6 +46,7 @@
     <li><a href="#font-family">Font Family</a></li>
     <li><a href="#hide-text">Hide Text</a></li>
     <li><a href="#html5-input-types">HTML5 Input Types</a></li>
+    <li><a href="#position">Position</a></li>
     <li><a href="#timing-functions">Timing Functions</a></li>
 
     <li class="title complete-list"><a href="#complete-list"><h3>Complete List</h3></a><li>
@@ -669,6 +670,27 @@
 
 </section>
 
+          <section id="position">
+  <h2>Position <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_position.scss">View source</a></h2>
+  <p>Shorthand notation for setting the position of elements in your page.</p>
+  <p>The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.</p>
+  <p>Note: unit-less values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.</p>
+
+  <p>Instead of writing:</p>
+<div class="highlight"><pre><code class="scss"><span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span>
+<span class="na">top</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="na">left</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+  <p>Your can write:</p>
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> position</span><span class="p">(</span><span class="no">relative</span><span class="o">,</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">100</span><span class="kt">px</span><span class="p">);</span>
+</code></pre>
+</div>
+
+</section>
+
           <section id="timing-functions">
   <h2>Timing Functions <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_timing-functions.scss">View source</a></h2>
   <p>These CSS cubic-bezier timing functions are variables that can be used with CSS3 animations and transitions. The provided timing functions are the same as the jQuery UI demo: <a href="http://jqueryui.com/demos/effect/easing.html">easing functions</a>.</p>
@@ -819,6 +841,7 @@
 <div class="highlight"><pre><code class="scss"><span class="o">@</span> <span class="nt">button</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 <span class="o">@</span> <span class="nt">clearfix</span>
 <span class="o">@</span> <span class="nt">hide-text</span>
+<span class="o">@</span> <span class="nt">position</span><span class="o">(*</span><span class="nt">args</span><span class="o">)</span>
 
 <span class="nt">HTML5</span> <span class="nt">Inputs</span>
   <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">all-text-inputs</span><span class="p">}</span>
