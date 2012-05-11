@@ -423,6 +423,13 @@ a, a:link, a:active, a:visited {
 a:hover {
   color: #0656b2; }
 
+div.wrapper {
+  margin-bottom: 20px; }
+
+.alert {
+  color: #fc511d;
+  font-style: italic; }
+
 nav.fixed-nav {
   clear: left;
   float: left;
@@ -577,9 +584,6 @@ div.main-inner {
     transition: all 0.3s; }
     div.main-inner > section > section:target h2 {
       font-weight: 500; }
-
-div.wrapper {
-  margin-bottom: 20px; }
 
 div.highlight {
   background-color: transparent;
