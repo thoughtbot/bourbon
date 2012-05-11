@@ -7,9 +7,5 @@
     $full: compact($length-1, $length-2, $length-3, $length-4,
                    $length-5, $length-6, $length-7, $length-8, $length-9);
 
-  -webkit-background-size: $full;
-     -moz-background-size: $full;
-      -ms-background-size: $full;
-       -o-background-size: $full;
-          background-size: $full;
+@include prefixer(background-size, $full, webkit, moz, ms, o);
 }
