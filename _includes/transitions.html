@@ -1,9 +1,13 @@
 <section id="transitions">
   <h2>Transitions <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_transition.scss">View source</a></h2>
-  <p>Shorthand mixin: Supports multiple parentheses-delimited values for each variable.</p>
+  <p>The shorthand mixin supports multiple transition.</p>
+  <p>Transition a vendor-prefixed property: <a href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_transition-property-name.scss">View source</a></p>
 
 {% highlight scss %}
 @include transition (all 2.0s ease-in-out);
 @include transition (opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
+
+// Transition a vendor-prefixed property (transform)
+@include transition (transition-property-names((transform, color, background), moz) 1.0s ease-in 0s);
 {% endhighlight %}
 </section>
