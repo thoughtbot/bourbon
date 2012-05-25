@@ -1,0 +1,28 @@
+<section id="flex-grid">
+  <h2>Flex Grid <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_flex-grid.scss">View source</a></h2>
+  <p>Use this mixin to easily create a flexible-grid layout.</p>
+  <p>The <code>$fg-column</code>, <code>$fg-gutter</code> and <code>$fg-max-columns</code> variables must be defined in your base stylesheet to properly use the flex-grid function.</p>
+  <p>This function takes the fluid grid equation (target / context = result) and uses columns to help define each.</p>
+
+{% highlight scss %}
+$fg-column: 60px;             // Column Width
+$fg-gutter: 25px;             // Gutter Width
+$fg-max-columns: 12;          // Total Columns For Main Container
+
+div {
+  width: flex-grid(4);        // returns (315px / 1020px) = 30.882353%;
+  margin-left: flex-gutter(); // returns (25px / 1020px) = 2.45098%;
+
+  p {
+    width: flex-grid(2, 4);   // returns (145px / 315px) = 46.031746%;
+    float: left;
+    margin: flex-gutter(4);   // returns (25px / 315px) = 7.936508%;
+  }
+
+  blockquote {
+    float: left;
+    width: flex-grid(2, 4);   // returns (145px / 315px) = 46.031746%;
+  }
+}
+{% endhighlight %}
+</section>

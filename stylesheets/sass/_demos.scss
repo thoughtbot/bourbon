@@ -1,0 +1,198 @@
+//************************************************************************//
+// Demo Box Style
+//************************************************************************//
+$demo-base: hsl(186, 62%, 53%);
+$demo-color: lighten($demo-base, 20%);
+$demo-color-alt: $demo-base;
+div.box {
+  @include border-radius(40px);
+  border: 1px solid darken($demo-color-alt, 10%);
+  @include box-shadow(inset 0 1px 0 hsla(0, 0%, 100%, 0.45));
+  height: 40px;
+  @include linear-gradient($demo-color, $demo-color-alt);
+  width: 40px;
+}
+
+//************************************************************************//
+// Animations Demo Section
+//************************************************************************//
+
+section#animations {
+  div.box {
+    &:hover {
+      @include animation-name(scale, slide);
+      @include animation-duration(2s);
+      @include animation-timing-function(ease);
+      @include animation-iteration-count(infinite);
+      position: relative;
+      // @include animation(scale slide, 2.0s, ease);
+    }
+  }
+}
+
+//************************************************************************//
+// Background-image Mixin
+//************************************************************************//
+section#background-image {
+  section.demo {
+    @include background-image(linear-gradient(hsla(0, 100%, 100%, 0.35) 0%, hsla(0, 100%, 100%, 0.15) 50%, transparent 50%), linear-gradient($demo-color, $demo-color-alt));
+    height: 40px;
+    width: 100%;
+  }
+}
+
+//************************************************************************//
+// Border-image Mixin
+//************************************************************************//
+section#border-image {
+  section.demo {
+    @include border-image(url(../images/border.png) 27 repeat);
+    border-width: 27px;
+    width: 81px;
+    height: 27px;
+  }
+}
+
+
+//************************************************************************//
+// Box-Shadow Mixin
+//************************************************************************//
+section#box-shadow {
+  section.demo {
+    div.example {
+      @include background-image(linear-gradient(top, $demo-color, $demo-color-alt));
+      height: 50px;
+      width: 100px;
+
+      &.single {
+        @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+      }
+
+      &.double {
+        @include box-shadow(1px 1px 5px 1px green, -1px -1px 5px 1px blue);
+      }
+    }
+  }
+}
+
+//************************************************************************//
+// Linear-gradient Function
+//************************************************************************//
+section#linear-gradient {
+  section.demo {
+    @include linear-gradient($demo-color, $demo-color-alt);
+    height: 40px;
+  }
+}
+
+//************************************************************************//
+// Linear-gradient Function
+//************************************************************************//
+section#linear-gradient-function {
+  section.demo {
+    @include background-image(linear-gradient($demo-color, $demo-color-alt));
+    height: 40px;
+  }
+}
+//************************************************************************//
+// Radial-gradient Mixin
+//************************************************************************//
+section#radial-gradient, section#radial-gradient-function {
+  section.demo {
+    @include radial-gradient(50% 50%, circle cover, $demo-color, $demo-color-alt);
+    height: 40px;
+  }
+}
+
+
+//************************************************************************//
+// Button Addon
+//************************************************************************//
+section#buttons {
+  section.demo {
+    button.example-1 {
+      @include button;
+    }
+
+    button.example-2 {
+      @include button(pill);
+    }
+
+    button.example-3 {
+      @include button(shiny, #ff0000);
+    }
+  }
+}
+
+
+//************************************************************************//
+// Font-Family
+//************************************************************************//
+section#font-family {
+}
+
+//************************************************************************//
+// Timing Functions Demo
+//************************************************************************//
+
+section#timing-functions {
+  section.demo {
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+      }
+    }
+
+    code {
+      display: inline-block;
+      width: grid-width(2);
+      margin-right: $gw-gutter;
+      vertical-align: top;
+    }
+
+    div.box {
+      display: inline-block;
+    }
+
+    &:hover div.box {
+      @include transform(translateX(500px));
+    }
+
+    div.box {
+      height: 20px;
+      width: 20px;
+      @include transition-property(all);
+      @include transition-duration(3s);
+    }
+
+    div.ease-in-quad  { @include transition-timing-function($ease-in-quad ); }
+    div.ease-in-cubic { @include transition-timing-function($ease-in-cubic); }
+    div.ease-in-quart { @include transition-timing-function($ease-in-quart); }
+    div.ease-in-quint { @include transition-timing-function($ease-in-quint); }
+    div.ease-in-sine  { @include transition-timing-function($ease-in-sine ); }
+    div.ease-in-expo  { @include transition-timing-function($ease-in-expo ); }
+    div.ease-in-circ  { @include transition-timing-function($ease-in-circ ); }
+    div.ease-in-back  { @include transition-timing-function($ease-in-back ); }
+
+    div.ease-out-quad  { @include transition-timing-function($ease-out-quad ); }
+    div.ease-out-cubic { @include transition-timing-function($ease-out-cubic); }
+    div.ease-out-quart { @include transition-timing-function($ease-out-quart); }
+    div.ease-out-quint { @include transition-timing-function($ease-out-quint); }
+    div.ease-out-sine  { @include transition-timing-function($ease-out-sine ); }
+    div.ease-out-expo  { @include transition-timing-function($ease-out-expo ); }
+    div.ease-out-circ  { @include transition-timing-function($ease-out-circ ); }
+    div.ease-out-back  { @include transition-timing-function($ease-out-back ); }
+
+    div.ease-in-out-quad  { @include transition-timing-function($ease-in-out-quad ); }
+    div.ease-in-out-cubic { @include transition-timing-function($ease-in-out-cubic); }
+    div.ease-in-out-quart { @include transition-timing-function($ease-in-out-quart); }
+    div.ease-in-out-quint { @include transition-timing-function($ease-in-out-quint); }
+    div.ease-in-out-sine  { @include transition-timing-function($ease-in-out-sine ); }
+    div.ease-in-out-expo  { @include transition-timing-function($ease-in-out-expo ); }
+    div.ease-in-out-circ  { @include transition-timing-function($ease-in-out-circ ); }
+    div.ease-in-out-back  { @include transition-timing-function($ease-in-out-back ); }
+  }
+}
