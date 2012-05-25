@@ -448,7 +448,7 @@ nav.fixed-nav {
     nav.fixed-nav ul input[type="search"] {
       margin-left: 20px; }
     nav.fixed-nav ul li {
-      line-height: 180%;
+      line-height: 170%;
       list-style-type: none;
       text-transform: capitalize; }
       nav.fixed-nav ul li:first-child {
@@ -948,7 +948,7 @@ section#buttons section.demo button.example-1 {
   text-decoration: none;
   text-shadow: 0 1px 0 #0065d6;
   -webkit-background-clip: padding-box; }
-  section#buttons section.demo button.example-1:hover {
+  section#buttons section.demo button.example-1:hover:not(:disabled) {
     -webkit-box-shadow: inset 0 1px 0 0 #60a2ec;
     -moz-box-shadow: inset 0 1px 0 0 #60a2ec;
     box-shadow: inset 0 1px 0 0 #60a2ec;
@@ -960,11 +960,14 @@ section#buttons section.demo button.example-1 {
     background-image: -ms-linear-gradient(top, #2f87ea, #086fe3);
     background-image: -o-linear-gradient(top, #2f87ea, #086fe3);
     background-image: linear-gradient(top, #2f87ea, #086fe3); }
-  section#buttons section.demo button.example-1:active {
+  section#buttons section.demo button.example-1:active:not(:disabled) {
     border: 1px solid #076fe4;
     -webkit-box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee;
     -moz-box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee;
     box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee; }
+  section#buttons section.demo button.example-1:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
 section#buttons section.demo button.example-2 {
   border: 1px solid #3371b2;
   border-color: #3371b2 #2457a3 #164297;
@@ -991,7 +994,7 @@ section#buttons section.demo button.example-2 {
   text-decoration: none;
   text-shadow: 0 -1px 1px #2762bf;
   -webkit-background-clip: padding-box; }
-  section#buttons section.demo button.example-2:hover {
+  section#buttons section.demo button.example-2:hover:not(:disabled) {
     border: 1px solid #2062a7;
     border-color: #2062a7 #0e479a #01318e;
     -webkit-box-shadow: inset 0 1px 0 0 #519cf0;
@@ -1007,7 +1010,7 @@ section#buttons section.demo button.example-2 {
     background-image: linear-gradient(top, #2d88ee, #1554ce);
     text-shadow: 0 -1px 1px #134faf;
     -webkit-background-clip: padding-box; }
-  section#buttons section.demo button.example-2:active {
+  section#buttons section.demo button.example-2:active:not(:disabled) {
     background: #226edd;
     border: 1px solid #0d3c8c;
     border-bottom: 1px solid #062d8d;
@@ -1015,6 +1018,9 @@ section#buttons section.demo button.example-2 {
     -moz-box-shadow: inset 0 0 6px 3px #0c44b8, 0 1px 0 0 white;
     box-shadow: inset 0 0 6px 3px #0c44b8, 0 1px 0 0 white;
     text-shadow: 0 -1px 1px #1a52aa; }
+  section#buttons section.demo button.example-2:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
 section#buttons section.demo button.example-3 {
   border: 1px solid #8a0000;
   border-bottom: 1px solid #810000;
@@ -1039,7 +1045,7 @@ section#buttons section.demo button.example-3 {
   text-align: center;
   text-decoration: none;
   text-shadow: 0 -1px 1px #730000; }
-  section#buttons section.demo button.example-3:hover {
+  section#buttons section.demo button.example-3:hover:not(:disabled) {
     cursor: pointer;
     background-color: #f20000;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f20000), color-stop(50%, #bd0000), color-stop(50%, #a20000), color-stop(100%, #a90000));
@@ -1048,10 +1054,13 @@ section#buttons section.demo button.example-3 {
     background-image: -ms-linear-gradient(top, #f20000 0%, #bd0000 50%, #a20000 50%, #a90000 100%);
     background-image: -o-linear-gradient(top, #f20000 0%, #bd0000 50%, #a20000 50%, #a90000 100%);
     background-image: linear-gradient(top, #f20000 0%, #bd0000 50%, #a20000 50%, #a90000 100%); }
-  section#buttons section.demo button.example-3:active {
+  section#buttons section.demo button.example-3:active:not(:disabled) {
     -webkit-box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white;
     -moz-box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white;
     box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white; }
+  section#buttons section.demo button.example-3:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
 
 section#timing-functions section.demo ul {
   margin: 0;
