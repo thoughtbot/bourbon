@@ -58,14 +58,30 @@
 
     // If shorthand is a list
     @if $type == list {
-      $first-member: nth(nth($backgrounds, $i), 1); // Get first member of shorthand
+      $first-member: nth($shorthand, 1); // Get first member of shorthand
 
       // Linear Gradient
-      @if (nth($shorthand, 1) == linear or nth($shorthand, 1) == radial) {
-        $gradient-type: $first-member; // linear || radial
-        $gradient-args: nth(nth($backgrounds, $i), 2); // Get actual gradient (red, blue)
+      @if index(linear radial, nth($first-member, 1)) {
+        $gradient-type: nth($first-member, 1); // linear || radial
+
+        // Get actual gradient (red, blue)
+        $gradient-args: false;
+        $shorthand-start: false;
+        // Linear gradient and positioning, repeat, etc. values
+        @if type-of($first-member) == list {
+          $gradient-args: nth($first-member, 2);
+          $shorthand-start: 2;
+        }
+        // Linear gradient only
+        @else {
+          $gradient-args: nth($shorthand, 2); // Get actual gradient (red, blue)
+          $shorthand-start: 3;
+        }
 
         $gradient: render-gradients($gradient-args, $gradient-type, $vendor);
+        @for $j from $shorthand-start through length($shorthand) {
+          $gradient: join($gradient, nth($shorthand, $j), space);
+        }
         $backgrounds-prefixed: append($backgrounds-prefixed, $gradient, comma);
       }
 
