@@ -24,7 +24,7 @@
   @else {
     $fallback-color: extract-background-color($backgrounds);
   }
-  
+
   @if $fallback-color {
     background-color: $fallback-color;
   }
