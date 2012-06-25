@@ -67,6 +67,6 @@
     $full: compact($time-1, $time-2, $time-3, $time-4, $time-5,
                    $time-6, $time-7, $time-8, $time-9);
 
-  @include prefixer(transition-transition-delay, $full, webkit, moz, ms, o);
+  @include prefixer(transition-delay, $full, webkit, moz, ms, o);
 }
 
