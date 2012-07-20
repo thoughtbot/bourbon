@@ -383,7 +383,9 @@ html, body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  width: 1114px;
+  margin: 0 auto; }
 
 html {
   padding: 0; }
@@ -434,8 +436,11 @@ nav.fixed-nav {
   clear: left;
   float: left;
   min-height: 300px;
-  width: 228px; }
+  width: 228px;
+  position: relative;
+  z-index: 1; }
   nav.fixed-nav ul {
+    background-color: #f3f1ec;
     border-bottom: 0;
     border-left: 0;
     border-top: 0;
@@ -484,9 +489,7 @@ nav.fixed-nav {
             color: #666666; }
 
 div.main-content {
-  margin: 0 auto;
-  padding: 0px 16px;
-  width: 1082px; }
+  padding: 0px 16px; }
 
 div.main-inner {
   background: white;
@@ -499,7 +502,9 @@ div.main-inner {
   clear: right;
   float: left;
   padding: 35px 0px;
-  width: 854px; }
+  width: 854px;
+  position: relative;
+  z-index: 1; }
   div.main-inner h2.tagline {
     padding: 0 28px;
     margin: 20px 0 0; }

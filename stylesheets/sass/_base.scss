@@ -8,6 +8,8 @@ html, body {
   font-size: 13px;
   height: 100%;
   width: 100%;
+  width: grid-width(9) + ($gw-gutter * 2);
+  margin: 0 auto;
 }
 
 html {
@@ -80,9 +82,11 @@ nav.fixed-nav {
   float: left;
   min-height: 300px;
   width: grid-width(2);
+  position: relative;
+  z-index: 1;
 
   ul {
-    // border: 1px solid darken($base-border-color, 10%);
+    background-color: $background-color;
     border-bottom: 0;
     border-left: 0;
     border-top: 0;
@@ -146,9 +150,7 @@ nav.fixed-nav {
 //************************************************************************//
 div.main-content {
   @extend .clearfix;
-  margin: 0 auto;
   padding: 0px $gw-gutter;
-  width: grid-width(9);
 }
 
 div.main-inner {
@@ -161,6 +163,8 @@ div.main-inner {
   float: left;
   padding: 35px 0px;
   width: grid-width(7) + $gw-gutter;
+  position: relative;
+  z-index: 1;
 
 
   h2.tagline {
