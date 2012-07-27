@@ -391,7 +391,7 @@ html {
   padding: 0; }
 
 h1 {
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 0; }
 
 h1, h2 {
@@ -517,12 +517,14 @@ div.main-inner {
     -webkit-box-shadow: 1px 0 0 #f3f1ec, -1px 0 0 #f3f1ec;
     -moz-box-shadow: 1px 0 0 #f3f1ec, -1px 0 0 #f3f1ec;
     box-shadow: 1px 0 0 #f3f1ec, -1px 0 0 #f3f1ec;
-    font-size: 27px;
+    color: #8B8880;
+    text-align: center;
+    font-size: 30px;
     font-weight: 500;
     line-height: 100%;
     margin: 30px 0 0;
     margin-top: 40px;
-    padding: 15px 28px;
+    padding: 25px 0px 15px;
     text-shadow: 0 1px 0 white; }
     div.main-inner > section h1.logo {
       background-color: transparent;
