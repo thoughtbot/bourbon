@@ -1,0 +1,10 @@
+<section id="background">
+  <h2>Background <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_appearance.scss">View source</a></h2>
+  <p>The <code>background</code> mixin is used for adding multiple backgrounds using shorthand notation.
+
+{% highlight scss %}
+@include background(linear-gradient(red, green) left repeat);
+@include background(url("/images/a.png"), linear-gradient(red, green) center no-repeat orange scroll);
+@include background(url("/images/a.png") center no-repeat, linear-gradient(red, green) left repeat, radial-gradient(red, orange) left repeat);
+{% endhighlight %}
+</section>

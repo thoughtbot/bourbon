@@ -15,6 +15,7 @@
     <li class="title"><a href="#mixins"><h3>Mixins</h3></a></li>
     <li><a href="#animations">Animations</a></li>
     <li><a href="#appearance">Appearance</a></li>
+    <li><a href="#background">Background</a></li>
     <li><a href="#background-image">Background-Image</a></li>
     <li><a href="#background-size">Background-Size</a></li>
     <li><a href="#border-image">Border-Image</a></li>
@@ -97,6 +98,18 @@
   <p>The <code>appearance</code> CSS property is used to display an element using a platform-native styling based on the operating system's theme.</p>
 
 <div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> appearance</span><span class="p">(</span><span class="no">none</span><span class="p">);</span>
+</code></pre>
+</div>
+
+</section>
+
+          <section id="background">
+  <h2>Background <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_appearance.scss">View source</a></h2>
+  <p>The <code>background</code> mixin is used for adding multiple backgrounds using shorthand notation.
+
+<div class="highlight"><pre><code class="scss"><span class="k">@include</span><span class="nd"> background</span><span class="p">(</span><span class="nf">linear-gradient</span><span class="p">(</span><span class="nb">red</span><span class="o">,</span> <span class="nb">green</span><span class="p">)</span> <span class="no">left</span> <span class="no">repeat</span><span class="p">);</span>
+<span class="k">@include</span><span class="nd"> background</span><span class="p">(</span><span class="sx">url(&quot;/images/a.png&quot;)</span><span class="o">,</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="nb">red</span><span class="o">,</span> <span class="nb">green</span><span class="p">)</span> <span class="no">center</span> <span class="no">no-repeat</span> <span class="ni">orange</span> <span class="no">scroll</span><span class="p">);</span>
+<span class="k">@include</span><span class="nd"> background</span><span class="p">(</span><span class="sx">url(&quot;/images/a.png&quot;)</span> <span class="no">center</span> <span class="no">no-repeat</span><span class="o">,</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="nb">red</span><span class="o">,</span> <span class="nb">green</span><span class="p">)</span> <span class="no">left</span> <span class="no">repeat</span><span class="o">,</span> <span class="nf">radial-gradient</span><span class="p">(</span><span class="nb">red</span><span class="o">,</span> <span class="ni">orange</span><span class="p">)</span> <span class="no">left</span> <span class="no">repeat</span><span class="p">);</span>
 </code></pre>
 </div>
 
