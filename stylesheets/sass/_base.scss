@@ -17,12 +17,13 @@ html {
 }
 
 h1 {
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 0;
 }
 
 h1, h2 {
   font-size: golden-ratio(14px, 1) + 4px;
+  font-family: "proxima-nova-soft", $helvetica;
 }
 
 h2 {

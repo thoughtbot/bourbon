@@ -391,11 +391,12 @@ html {
   padding: 0; }
 
 h1 {
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 0; }
 
 h1, h2 {
-  font-size: 26.652px; }
+  font-size: 26.652px;
+  font-family: "proxima-nova-soft", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h2 {
   font-weight: 300;
