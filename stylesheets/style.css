@@ -470,11 +470,23 @@ nav.fixed-nav {
       nav.fixed-nav ul li a {
         display: block;
         padding: 0 20px;
+        position: relative;
         -webkit-transition: all 0.15s ease-out 0;
         -moz-transition: all 0.15s ease-out 0;
         -ms-transition: all 0.15s ease-out 0;
         -o-transition: all 0.15s ease-out 0;
         transition: all 0.15s ease-out 0; }
+        nav.fixed-nav ul li a.active:before, nav.fixed-nav ul li a.inview:before {
+          border-radius: 100px;
+          border-top: .25em solid #ccc;
+          content: '';
+          display: block;
+          position: absolute;
+          top: 8px;
+          left: 0px;
+          width: .8em; }
+        nav.fixed-nav ul li a.active:before {
+          border-color: #fc511d; }
         nav.fixed-nav ul li a h3 {
           border-bottom: 1px solid #d8d1c0;
           -webkit-box-shadow: 0 1px 0 white;
