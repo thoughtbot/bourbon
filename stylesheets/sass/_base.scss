@@ -124,7 +124,26 @@ nav.fixed-nav {
       a {
         display: block;
         padding: 0 20px;
+        position: relative;
         @include transition;
+
+        &.active, &.inview {
+          &:before {
+            border-radius: 100px;
+            border-top: .25em solid #ccc;
+            content: '';
+            display: block;
+            @include position(absolute, 8px 0 0 0px);
+            width: .8em;
+
+          }
+        }
+
+        &.active {
+          &:before {
+            border-color: $orange;
+          }
+        }
 
         h3 {
           border-bottom: 1px solid darken($base-border-color, 10%);
@@ -151,7 +170,7 @@ nav.fixed-nav {
 //************************************************************************//
 div.main-content {
   @extend .clearfix;
-  padding: 0px $gw-gutter;
+  padding: 0px $gw-gutter; 
 }
 
 div.main-inner {
