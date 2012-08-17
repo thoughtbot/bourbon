@@ -5,6 +5,9 @@ Bourbon README for getting the gh-pages server up and running
 Run the server locally:
     jekyll --server
 
+Install Bourbon in the root directory:
+    bourbon install
+
 Watch the sass folder from root directory:
     sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
 
@@ -22,7 +25,8 @@ To update the bourbon files with the latest version; from the root directory:
 ------------------------------------------------------------------------------------------
 
 For Code Highlighting within Jekyll:
-    gem install pygmentize
+    http://pygments.org/download/
+
 
     {% highlight scss %}
       <code here>
