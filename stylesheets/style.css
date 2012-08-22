@@ -465,7 +465,6 @@ nav.fixed-nav {
       nav.fixed-nav ul li.title.complete-list h3 {
         border-bottom: 0;
         -webkit-box-shadow: none;
-        -moz-box-shadow: none;
         box-shadow: none; }
       nav.fixed-nav ul li a {
         display: block;
@@ -490,7 +489,6 @@ nav.fixed-nav {
         nav.fixed-nav ul li a h3 {
           border-bottom: 1px solid #d8d1c0;
           -webkit-box-shadow: 0 1px 0 white;
-          -moz-box-shadow: 0 1px 0 white;
           box-shadow: 0 1px 0 white;
           color: #4d4d4d;
           font-size: 12px;
@@ -527,9 +525,8 @@ div.main-inner {
     border-left: 0;
     border-right: 0;
     -webkit-box-shadow: 1px 0 0 #f3f1ec, -1px 0 0 #f3f1ec;
-    -moz-box-shadow: 1px 0 0 #f3f1ec, -1px 0 0 #f3f1ec;
     box-shadow: 1px 0 0 #f3f1ec, -1px 0 0 #f3f1ec;
-    color: #8B8880;
+    color: #8b8880;
     text-align: center;
     font-size: 30px;
     font-weight: 600;
@@ -544,7 +541,6 @@ div.main-inner {
       background-repeat: no-repeat;
       border: 0;
       -webkit-box-shadow: none;
-      -moz-box-shadow: none;
       box-shadow: none;
       height: 58px;
       margin-left: 24px;
@@ -571,16 +567,12 @@ div.main-inner {
       -moz-transition: all 0.15s ease-out 0;
       -ms-transition: all 0.15s ease-out 0;
       -o-transition: all 0.15s ease-out 0;
-      transition: all 0.15s ease-out 0;
-      opacity: 0; }
+      transition: all 0.15s ease-out 0; }
       div.main-inner > section > section a.view-source:hover {
         background-color: #f3f1ec;
         -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
         border-radius: 20px;
         color: #a69f8c; }
-    div.main-inner > section > section:hover a.view-source {
-      opacity: 1; }
     div.main-inner > section > section#intro {
       border-bottom: none;
       padding-bottom: 0px;
@@ -589,13 +581,24 @@ div.main-inner {
         margin-top: 40px; }
       div.main-inner > section > section#intro p a + a {
         margin-left: 20px; }
-      div.main-inner > section > section#intro p:last-child {
-        margin: 20px 0 50px; }
+      div.main-inner > section > section#intro ul {
+        padding: 10px 0; }
+        div.main-inner > section > section#intro ul li {
+          list-style-type: none;
+          margin: 0; }
+          div.main-inner > section > section#intro ul li h4 {
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 0;
+            line-height: 1.6em; }
+          div.main-inner > section > section#intro ul li p {
+            margin: 0 0 1.0em;
+            color: #7e7b73; }
     div.main-inner > section > section:last-child {
       border: 0; }
   div.main-inner > section > section:target {
     -webkit-box-shadow: inset 4px 0 0px 0 #fc511d;
-    -moz-box-shadow: inset 4px 0 0px 0 #fc511d;
     box-shadow: inset 4px 0 0px 0 #fc511d;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -612,10 +615,8 @@ div.highlight {
 pre {
   background-color: #fef9ec;
   -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 0 1px #fbedc6;
-  -moz-box-shadow: 0 0 0 1px #fbedc6;
   box-shadow: 0 0 0 1px #fbedc6;
   margin: 1em 0;
   overflow: auto;
@@ -851,11 +852,9 @@ p code, ul code, ol code {
 
 div.box {
   -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
   border-radius: 40px;
   border: 1px solid #2aa4b2;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
   height: 40px;
   background-color: #8fdce5;
@@ -910,11 +909,9 @@ section#box-shadow section.demo div.example {
   width: 100px; }
   section#box-shadow section.demo div.example.single {
     -webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.65);
-    -moz-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.65);
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.65); }
   section#box-shadow section.demo div.example.double {
     -webkit-box-shadow: 1px 1px 5px 1px green, -1px -1px 5px 1px blue;
-    -moz-box-shadow: 1px 1px 5px 1px green, -1px -1px 5px 1px blue;
     box-shadow: 1px 1px 5px 1px green, -1px -1px 5px 1px blue; }
 
 section#linear-gradient section.demo {
@@ -948,10 +945,8 @@ section#radial-gradient section.demo, section#radial-gradient-function section.d
 section#buttons section.demo button.example-1 {
   border: 1px solid #076fe4;
   -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 0 0 #8ebcf1;
-  -moz-box-shadow: inset 0 1px 0 0 #8ebcf1;
   box-shadow: inset 0 1px 0 0 #8ebcf1;
   color: white;
   display: inline-block;
@@ -970,7 +965,6 @@ section#buttons section.demo button.example-1 {
   -webkit-background-clip: padding-box; }
   section#buttons section.demo button.example-1:hover:not(:disabled) {
     -webkit-box-shadow: inset 0 1px 0 0 #60a2ec;
-    -moz-box-shadow: inset 0 1px 0 0 #60a2ec;
     box-shadow: inset 0 1px 0 0 #60a2ec;
     cursor: pointer;
     background-color: #2f87ea;
@@ -983,7 +977,6 @@ section#buttons section.demo button.example-1 {
   section#buttons section.demo button.example-1:active:not(:disabled) {
     border: 1px solid #076fe4;
     -webkit-box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee;
-    -moz-box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee;
     box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee; }
   section#buttons section.demo button.example-1:disabled {
     opacity: 0.5;
@@ -992,10 +985,8 @@ section#buttons section.demo button.example-2 {
   border: 1px solid #3371b2;
   border-color: #3371b2 #2457a3 #164297;
   -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
   border-radius: 16px;
   -webkit-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
-  -moz-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
   box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
   color: white;
   display: inline-block;
@@ -1018,7 +1009,6 @@ section#buttons section.demo button.example-2 {
     border: 1px solid #2062a7;
     border-color: #2062a7 #0e479a #01318e;
     -webkit-box-shadow: inset 0 1px 0 0 #519cf0;
-    -moz-box-shadow: inset 0 1px 0 0 #519cf0;
     box-shadow: inset 0 1px 0 0 #519cf0;
     cursor: pointer;
     background-color: #2d88ee;
@@ -1035,7 +1025,6 @@ section#buttons section.demo button.example-2 {
     border: 1px solid #0d3c8c;
     border-bottom: 1px solid #062d8d;
     -webkit-box-shadow: inset 0 0 6px 3px #0c44b8, 0 1px 0 0 white;
-    -moz-box-shadow: inset 0 0 6px 3px #0c44b8, 0 1px 0 0 white;
     box-shadow: inset 0 0 6px 3px #0c44b8, 0 1px 0 0 white;
     text-shadow: 0 -1px 1px #1a52aa; }
   section#buttons section.demo button.example-2:disabled {
@@ -1045,10 +1034,8 @@ section#buttons section.demo button.example-3 {
   border: 1px solid #8a0000;
   border-bottom: 1px solid #810000;
   -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: inset 0 1px 0 0 #ff1d0c;
-  -moz-box-shadow: inset 0 1px 0 0 #ff1d0c;
   box-shadow: inset 0 1px 0 0 #ff1d0c;
   color: white;
   display: inline-block;
@@ -1076,7 +1063,6 @@ section#buttons section.demo button.example-3 {
     background-image: linear-gradient(top, #f20000 0%, #bd0000 50%, #a20000 50%, #a90000 100%); }
   section#buttons section.demo button.example-3:active:not(:disabled) {
     -webkit-box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white;
-    -moz-box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white;
     box-shadow: inset 0 0 20px 0 #900000, 0 1px 0 white; }
   section#buttons section.demo button.example-3:disabled {
     opacity: 0.5;

@@ -201,7 +201,7 @@ div.main-inner {
       border-left: 0;
       border-right: 0;
       @include box-shadow(1px 0 0 $background-color, -1px 0 0 $background-color);
-      color: #8B8880;
+      color: $base-font-color-alt;
       text-align: center;
       font-size: 30px;
       font-weight: 600;
@@ -242,19 +242,11 @@ div.main-inner {
       text-shadow: 0 1px 0 white;
       text-transform: capitalize;
       @include transition;
-      opacity: 0;
 
       &:hover {
         background-color: $background-color;
         @include border-radius(20px);
         color: hsl(43, 13%, 60%);
-      }
-    }
-
-    // Show link on hover
-    &:hover {
-      a.view-source {
-        opacity: 1;
       }
     }
 
@@ -273,8 +265,26 @@ div.main-inner {
         margin-left: 20px;
       }
 
-      p:last-child {
-        margin: 20px 0 50px;
+      ul {
+        padding: 10px 0;
+
+        li {
+          list-style-type: none;
+          margin: 0;
+
+          h4 {
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 0;
+            line-height: 1.6em;
+          }
+
+          p {
+            margin: 0 0 1.0em;
+            color: darken($base-font-color-alt, 5%);
+          }
+        }
       }
     }
 
