@@ -1,3 +1,7 @@
+//************************************************************************//
+// Default: Webkit, moz, spec
+// Example: @include prefixer(border-radius, $radii, $o: true);
+//************************************************************************//
 @mixin prefixer ($property, $value,
                  $webkit: true,
                     $moz: true,
