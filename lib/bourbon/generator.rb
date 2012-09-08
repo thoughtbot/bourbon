@@ -1,19 +1,19 @@
 require "fileutils"
+require 'thor'
 
 module Bourbon
-  class Generator
-    def initialize(arguments)
-      @subcommand = arguments.first
-    end
-
-    def run
-      if @subcommand == "install"
-       install
-      elsif @subcommand == "update"
-        update
+  class Generator < Thor
+    desc 'install', 'Install Bourbon into your project'
+    def install
+      if bourbon_files_already_exist?
+        puts "Bourbon files already installed, doing nothing."
+      else
+        install_files
+        puts "Bourbon files installed to bourbon/"
       end
     end
 
+    desc 'update', 'Update Bourbon'
     def update
       if bourbon_files_already_exist?
         remove_bourbon_directory
@@ -21,15 +21,6 @@ module Bourbon
         puts "Bourbon files updated."
       else
         puts "No existing bourbon installation. Doing nothing."
-      end
-    end
-
-    def install
-      if bourbon_files_already_exist?
-        puts "Bourbon files already installed, doing nothing."
-      else
-        install_files
-        puts "Bourbon files installed to bourbon/"
       end
     end
 
