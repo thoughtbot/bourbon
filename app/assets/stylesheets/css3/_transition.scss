@@ -3,19 +3,16 @@
 //          @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
 //          @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));
 
-@mixin transition ($prop-1: all 0.15s ease-out 0,
-  $prop-2: false, $prop-3: false,
-  $prop-4: false, $prop-5: false,
-  $prop-6: false, $prop-7: false,
-  $prop-8: false, $prop-9: false)
-  {
-    $full: compact($prop-1, $prop-2, $prop-3, $prop-4, $prop-5,
-                   $prop-6, $prop-7, $prop-8, $prop-9);
+@mixin transition ($properties...) {
+  @if length($properties) >= 1 {
+    @include prefixer(transition, $properties, webkit, moz, ms, o);
+  }
 
-  @include prefixer(transition, $full, webkit, moz, ms, o);
+  @else {
+    $properties: all 0.15s ease-out 0;
+    @include prefixer(transition, $properties, webkit, moz, ms, o);
+  }
 }
-
-
 
 @mixin transition-property ($properties...) {
    -webkit-transition-property: transition-property-names($properties, 'webkit');
@@ -37,4 +34,3 @@
 @mixin transition-delay ($times...) {
   @include prefixer(transition-delay, $times, webkit, moz, ms, o);
 }
-
