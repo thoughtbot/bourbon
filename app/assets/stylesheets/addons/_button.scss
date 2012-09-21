@@ -64,7 +64,7 @@
   }
 
   border: 1px solid $border;
-  @include border-radius (3px);
+  border-radius: 3px;
   @include box-shadow (inset 0 1px 0 0 $inset-shadow);
   color: $color;
   display: inline-block;
@@ -136,7 +136,7 @@
 
   border: 1px solid $border;
   border-bottom: 1px solid $border-bottom;
-  @include border-radius(5px);
+  border-radius: 5px;
   @include box-shadow(inset 0 1px 0 0 $inset-shadow);
   color: $color;
   display: inline-block;
@@ -207,7 +207,7 @@
 
   border: 1px solid $border-top;
   border-color: $border-top $border-sides $border-bottom;
-  @include border-radius(16px);
+  border-radius: 16px;
   @include box-shadow(inset 0 1px 0 0 $inset-shadow, 0 1px 2px 0 #b3b3b3);
   color: $color;
   display: inline-block;
