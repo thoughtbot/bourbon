@@ -27,6 +27,7 @@ that support only CSS3 prefixed properties.
   s.require_paths = ["lib"]
 
   s.add_dependency('sass', '>= 3.1')
+  s.add_dependency('thor')
 
   s.add_development_dependency('aruba', '~> 0.4')
   s.add_development_dependency('rake')

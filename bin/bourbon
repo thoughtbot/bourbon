@@ -2,4 +2,4 @@
 
 require "bourbon"
 
-Bourbon::Generator.new(ARGV).run
+Bourbon::Generator.start
