@@ -23,7 +23,8 @@ To pull in the latest changes on gh-pages branch:
 To pull in the latest Bourbon changes, you must fetch and merge master into gh-pages:
     `$ git fetch origin master && git merge master`
 
-To update the bourbon files with the latest version; from the root directory:
+To update the bourbon files with the latest version; 
+From the root directory:
     `$ bourbon update`
 
 ------------------------------------------------------------------------------------------
