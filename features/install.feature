@@ -2,16 +2,26 @@
 Feature: Install bourbon files
 
   Scenario: Bourbon generates a new bourbon installation
-    When I install bourbon files
+    When I run `bundle exec bourbon install`
     Then the sass directories should have been generated
     And the following directories should exist:
-      | bourbon           |
-      | bourbon/lib       |
+      | bourbon     |
+      | bourbon/lib |
     And the master bourbon partial should have been generated
     And the lib files should have been generated
     And the output should contain "Bourbon files installed to bourbon/"
 
   Scenario: Generating does not overwrite an existing bourbon directory
     Given bourbon is already installed
-    When I install bourbon files
+    When I run `bundle exec bourbon install`
     Then the output should contain "Bourbon files already installed, doing nothing."
+
+  Scenario: Install Bourbon into a custom path
+    When I run `bundle exec bourbon install --path=custom_path`
+    Then the sass directories with "custom_path" prefix should have been generated
+    And the following directories should exist:
+      | custom_path/bourbon     |
+      | custom_path/bourbon/lib |
+    And the master bourbon partial should have been generated within "custom_path" directory
+    And the lib files should have been generated within "custom_path" directory
+    And the output should contain "Bourbon files installed to custom_path/bourbon/"

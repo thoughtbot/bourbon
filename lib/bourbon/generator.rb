@@ -4,12 +4,13 @@ require 'thor'
 module Bourbon
   class Generator < Thor
     desc 'install', 'Install Bourbon into your project'
+    method_options :path => :string
     def install
       if bourbon_files_already_exist?
         puts "Bourbon files already installed, doing nothing."
       else
         install_files
-        puts "Bourbon files installed to bourbon/"
+        puts "Bourbon files installed to #{install_path}/"
       end
     end
 
@@ -27,7 +28,15 @@ module Bourbon
     private
 
     def bourbon_files_already_exist?
-      File.directory?("bourbon")
+      install_path.exist?
+    end
+
+    def install_path
+      @install_path ||= if options[:path]
+          Pathname.new(File.join(options[:path], 'bourbon'))
+        else
+          Pathname.new('bourbon')
+        end
     end
 
     def install_files
@@ -41,17 +50,17 @@ module Bourbon
     end
 
     def make_lib_directory
-      FileUtils.mkdir_p("bourbon/lib/bourbon")
+      FileUtils.mkdir_p(install_path.join('lib', 'bourbon'))
     end
 
     def copy_in_sass_extensions
-      FileUtils.cp(File.join(lib_directory, "bourbon.rb"), "bourbon/lib/")
-      FileUtils.cp(File.join(lib_bourbon_directory, "sass_extensions.rb"), "bourbon/lib/bourbon/")
-      FileUtils.cp_r(File.join(lib_bourbon_directory, "sass_extensions"), "bourbon/lib/bourbon/")
+      FileUtils.cp(File.join(lib_directory, "bourbon.rb"), install_path.join('lib'))
+      FileUtils.cp(File.join(lib_bourbon_directory, "sass_extensions.rb"), install_path.join('lib', 'bourbon'))
+      FileUtils.cp_r(File.join(lib_bourbon_directory, "sass_extensions"), install_path.join('lib', 'bourbon'))
     end
 
     def copy_in_scss_files
-      FileUtils.cp_r(all_stylesheets, "bourbon/")
+      FileUtils.cp_r(all_stylesheets, install_path)
     end
 
     def all_stylesheets
