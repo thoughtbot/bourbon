@@ -1,0 +1,4 @@
+@mixin perspective($depth: none) {
+	// none | <length>
+	@include prefixer(perspective, $depth, $o: true;);
+}
