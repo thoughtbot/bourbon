@@ -17,6 +17,7 @@ module Bourbon
     end
 
     desc 'update', 'Update Bourbon'
+    method_options :path => :string
     def update
       if bourbon_files_already_exist?
         remove_bourbon_directory

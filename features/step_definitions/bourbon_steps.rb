@@ -2,12 +2,7 @@ Given /^bourbon is already installed$/ do
   install_bourbon
 end
 
-When /^I install bourbon files$/ do
-  install_bourbon
-end
-
-When /^I update bourbon files$/ do
-  update_bourbon
+Given /^I install bourbon to "([^"]*)"$/ do |path|
 end
 
 Then /^the sass directories(?: with "([^"]+)" prefix)? should have been generated$/ do |prefix|
