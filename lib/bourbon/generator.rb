@@ -4,9 +4,9 @@ require 'thor'
 module Bourbon
   class Generator < Thor
     desc 'install', 'Install Bourbon into your project'
-    method_options :path => :string
+    method_options :path => :string, :force => :boolean
     def install
-      if bourbon_files_already_exist?
+      if bourbon_files_already_exist? && !options[:force]
         puts "Bourbon files already installed, doing nothing."
       else
         install_files
