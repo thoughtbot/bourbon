@@ -3,6 +3,8 @@ require 'thor'
 
 module Bourbon
   class Generator < Thor
+    map ['-v', '--version'] => :version
+
     desc 'install', 'Install Bourbon into your project'
     method_options :path => :string, :force => :boolean
     def install
@@ -23,6 +25,11 @@ module Bourbon
       else
         puts "No existing bourbon installation. Doing nothing."
       end
+    end
+
+    desc 'version', 'Show Bourbon version'
+    def version
+      say "Bourbon #{Bourbon::VERSION}"
     end
 
     private

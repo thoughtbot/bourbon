@@ -30,3 +30,7 @@ end
 Then /^bourbon should not have been generated$/ do
   check_directory_presence(['bourbon'], false)
 end
+
+Then /^the output should contain the current version of Bourbon$/ do
+  step %(the output should contain exactly "Bourbon #{Bourbon::VERSION}\n")
+end
