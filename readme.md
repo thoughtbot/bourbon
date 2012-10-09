@@ -130,16 +130,16 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
       @ box-sizing(*args)
 
       columns
-        @columns(*args)
-        @column-count(*args)
-        @column-fill(*args)
-        @column-gap(*args)
-        @column-rule(*args)
-        @column-rule-color(*args)
-        @column-rule-style(*args)
-        @column-rule-width(*args)
-        @column-span(*args)
-        @column-width(*args)
+        @ columns(*args)
+        @ column-count(*args)
+        @ column-fill(*args)
+        @ column-gap(*args)
+        @ column-rule(*args)
+        @ column-rule-color(*args)
+        @ column-rule-style(*args)
+        @ column-rule-width(*args)
+        @ column-span(*args)
+        @ column-width(*args)
 
       flex-box
         @ box(*args)
