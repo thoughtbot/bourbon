@@ -1,6 +1,8 @@
 module Bourbon::SassExtensions
 end
 
-require "sass"
+unless defined?(Sass)
+  require 'sass'
+end
 
-require File.join(File.dirname(__FILE__), "/sass_extensions/functions")
+require File.join(File.dirname(__FILE__), '/sass_extensions/functions')
