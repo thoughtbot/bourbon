@@ -1,0 +1,263 @@
+$root-font-size: 100% !default;
+
+$root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
+
+@mixin font-size($value, $increment, $ratio){
+  @if $ratio == unison {
+      $value: $value;  
+    }
+  
+  @else if $ratio == minor-second {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.067);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.067);
+        }
+    } 
+  }
+ 
+  @else if $ratio == major-second {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.125);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.125);
+        }
+    } 
+  }
+
+  @else if $ratio == minor-third {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.2);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.2);
+        }
+    } 
+  }
+
+  @else if $ratio == major-third {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.25);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.25);
+        }
+    } 
+  }
+
+  @else if $ratio == perfect-fourth {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.333);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.333);
+        }
+    } 
+  }
+
+  @else if $ratio == augmented-fourth {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.414);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.414);
+        }
+    } 
+  }
+
+ @else if $ratio == perfect-fifth {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.5);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.5);
+        }
+    } 
+  }
+
+ @else if $ratio == minor-sixth {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.6);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.6);
+        }
+    } 
+  }
+
+  @else if $ratio == major-sixth {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.667);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.667);
+        }
+    } 
+  }
+  
+   @else if $ratio == minor-seventh {
+     @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.778);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.778);
+        }
+    } 
+  }
+
+  @else if $ratio == major-seventh {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.875);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.875);
+        }
+    } 
+  }
+
+  @else if $ratio == octave {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 2);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 2);
+        }
+    } 
+  }
+
+ @else if $ratio == major-tenth {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 2.5);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 2.5);
+        }
+    } 
+  }
+ 
+ @else if $ratio == major-eleventh {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 2.667);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 2.667);
+        }
+    } 
+  }
+
+   @else if $ratio == major-twelfth {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 3);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 3);
+        }
+    } 
+  }
+ 
+  @else if $ratio == double-octave {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 4);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 4);
+        }
+    } 
+  }
+
+  @else if $ratio == golden {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+      $value: ($value * 1.618);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / 1.618);
+        }
+    } 
+  }
+  @else {
+    @if $increment > 0 {
+      @for $i from 1 through $increment {
+        $value: ($value * $ratio);
+      }
+    }
+    @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / $ratio);
+        }
+    } 
+  }  
+
+  font-size: $value * $root-font-multiplier * 16px;
+  font-size: $value * 1rem;
+}
