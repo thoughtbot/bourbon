@@ -31,7 +31,7 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
     $ratio: 1.414;
   }
 
-  @else if $ratio == augmented-fourth {
+  @else if $ratio == diminished-fifth {
     $ratio: 1.414;
   }
 
