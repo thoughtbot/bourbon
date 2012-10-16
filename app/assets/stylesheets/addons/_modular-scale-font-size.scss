@@ -44,118 +44,40 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
   }
   
    @else if $ratio == minor-seventh {
-     @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.778);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.778);
-        }
-    } 
+    $ratio: 1.778;
   }
 
   @else if $ratio == major-seventh {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.875);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.875);
-        }
-    } 
+          $ratio: 1.875;
   }
 
   @else if $ratio == octave {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 2);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 2);
-        }
-    } 
+          $ratio: 2;
   }
 
  @else if $ratio == major-tenth {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 2.5);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 2.5);
-        }
-    } 
+          $ratio: 2.5;
   }
  
  @else if $ratio == major-eleventh {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 2.667);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 2.667);
-        }
-    } 
+          $ratio: 2.667;
   }
 
    @else if $ratio == major-twelfth {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 3);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 3);
-        }
-    } 
+          $ratio: 3;
   }
  
   @else if $ratio == double-octave {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 4);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 4);
-        }
-    } 
+          $ratio: 4;
   }
 
   @else if $ratio == golden {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.618);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.618);
-        }
-    } 
+          $ratio: 1.618;
   }
   @else {
-    @if $increment > 0 {
+    $ratio: $ratio;
+  }
+  @if $increment > 0 {
       @for $i from 1 through $increment {
         $value: ($value * $ratio);
       }
@@ -165,10 +87,8 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
         @for $i from 1 through $increment {
           $value: ($value / $ratio);
         }
-    } 
-  }  
+    }   
 
   font-size: $value * $root-font-multiplier * 16px;
   font-size: $value * 1rem;
 }
-
