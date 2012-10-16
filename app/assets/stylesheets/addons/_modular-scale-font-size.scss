@@ -45,11 +45,11 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
     $ratio: 1.414;
   }
 
- @else if $ratio == perfect-fifth {
+  @else if $ratio == perfect-fifth {
     $ratio: 1.5;
   }
 
- @else if $ratio == minor-sixth {
+  @else if $ratio == minor-sixth {
     $ratio: 1.6;
   }
 
@@ -57,7 +57,7 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
     $ratio: 1.667;
   }
   
-   @else if $ratio == minor-seventh {
+  @else if $ratio == minor-seventh {
     $ratio: 1.778;
   }
 
@@ -69,15 +69,15 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
           $ratio: 2;
   }
 
- @else if $ratio == major-tenth {
+  @else if $ratio == major-tenth {
           $ratio: 2.5;
   }
  
- @else if $ratio == major-eleventh {
+  @else if $ratio == major-eleventh {
           $ratio: 2.667;
   }
 
-   @else if $ratio == major-twelfth {
+  @else if $ratio == major-twelfth {
           $ratio: 3;
   }
  
@@ -97,13 +97,13 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
       @for $i from 1 through $increment {
         $value: ($value * $ratio);
       }
-    }
-    @if $increment < 0 { 
+  }
+  @if $increment < 0 { 
       $increment: abs($increment);
         @for $i from 1 through $increment {
           $value: ($value / $ratio);
         }
-    }   
+  }   
 
   font-size: $value * $root-font-multiplier * 16px;
   font-size: $value * 1rem;
