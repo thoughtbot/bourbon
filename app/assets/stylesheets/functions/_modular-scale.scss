@@ -38,3 +38,77 @@
 //  }
 //
 // goldenratiocalculator.com
+
+// Music Intervals
+
+@function unison($value, $increment) {
+  @return modular-scale($value, $increment, 1)
+}
+
+@function minor-second($value, $increment) {
+  @return modular-scale($value, $increment, 1.067)
+}
+
+@function major-second($value, $increment) {
+  @return modular-scale($value, $increment, 1.125)
+}
+
+@function minor-third($value, $increment) {
+  @return modular-scale($value, $increment, 1.2)
+}
+
+@function major-third($value, $increment) {
+  @return modular-scale($value, $increment, 1.25)
+}
+
+@function perfect-fourth($value, $increment) {
+  @return modular-scale($value, $increment, 1.333)
+}
+
+@function augmented-forth($value, $increment) {
+  @return modular-scale($value, $increment, 1.414)
+}
+
+@function diminished-fifth($value, $increment) {
+  @return modular-scale($value, $increment, 1.414)
+}
+
+@function perfect-fifth($value, $increment) {
+  @return modular-scale($value, $increment, 1.5)
+}
+
+@function minor-sixth($value, $increment) {
+  @return modular-scale($value, $increment, 1.6)
+}
+
+@function major-sixth($value, $increment) {
+  @return modular-scale($value, $increment, 1.667)
+}
+
+@function minor-seventh($value, $increment) {
+  @return modular-scale($value, $increment, 1.778)
+}
+
+@function major-seventh($value, $increment) {
+  @return modular-scale($value, $increment, 1.875)
+}
+
+@function octave($value, $increment) {
+  @return modular-scale($value, $increment, 2)
+}
+
+@function major-tenth($value, $increment) {
+  @return modular-scale($value, $increment, 2.5)
+}
+
+@function major-eleventh($value, $increment) {
+  @return modular-scale($value, $increment, 2.667)
+}
+
+@function major-twelfth($value, $increment) {
+  @return modular-scale($value, $increment, 3)
+}
+
+@function double-octave($value, $increment) {
+  @return modular-scale($value, $increment, 4)
+}

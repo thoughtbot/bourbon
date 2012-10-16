@@ -31,6 +31,10 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
     $ratio: 1.414;
   }
 
+  @else if $ratio == augmented-fourth {
+    $ratio: 1.414;
+  }
+
  @else if $ratio == perfect-fifth {
     $ratio: 1.5;
   }
@@ -71,12 +75,14 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
           $ratio: 4;
   }
 
-  @else if $ratio == golden {
+  @else if $ratio == golden-ratio {
           $ratio: 1.618;
   }
+  
   @else {
     $ratio: $ratio;
   }
+  
   @if $increment > 0 {
       @for $i from 1 through $increment {
         $value: ($value * $ratio);
