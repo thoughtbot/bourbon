@@ -112,3 +112,10 @@
 @function double-octave($value, $increment) {
   @return modular-scale($value, $increment, 4)
 }
+
+// Added function aliases for Music Interval scales.  http://24ways.org/2011/composing-the-new-canon 
+// Usage 
+// div {
+//    font-size: perfect-fourth(14px, 1); // returns: 18.662px
+//  }
+

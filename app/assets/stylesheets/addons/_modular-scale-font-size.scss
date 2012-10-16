@@ -1,8 +1,18 @@
+/* Usage
+ * This makes using rem easier by setting a pixel fallback for lesser browser.
+ *
+ *This mixin expects the $value to be an *intended* em value, an increment value {Where on the scale it is} and a ratio that is either a value of your own devising or one of the named values below.
+ * e.g. @include  modular-scale-font-size(1,6, minor-third) or modular-scale-font-size(1.05,3, 1.0004)
+ *
+ * The mixin will also take into account a root-font-size if it is set with the variable $root-font-size. If not it defaults to 100%.
+ *
+ * More info: http://snook.ca/archives/html_and_css/font-size-with-rem, http://24ways.org/2011/composing-the-new-canon 
+*/
 $root-font-size: 100% !default;
 
 $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
 
-@mixin font-size($value, $increment, $ratio){
+@mixin modular-scale-font-size($value, $increment, $ratio){
   @if $ratio == unison {
     $ratio: 1;  
   }
