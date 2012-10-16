@@ -4,133 +4,43 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
 
 @mixin font-size($value, $increment, $ratio){
   @if $ratio == unison {
-      $value: $value;  
-    }
-  
+    $ratio: 1;  
+  }
+
   @else if $ratio == minor-second {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.067);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.067);
-        }
-    } 
+    $ratio: 1.067;
   }
  
   @else if $ratio == major-second {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.125);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.125);
-        }
-    } 
+    $ratio: 1.125;
   }
 
   @else if $ratio == minor-third {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.2);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.2);
-        }
-    } 
+    $ratio: 1.2;
   }
 
   @else if $ratio == major-third {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.25);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.25);
-        }
-    } 
+    $ratio: 1.25;
   }
 
   @else if $ratio == perfect-fourth {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.333);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.333);
-        }
-    } 
+    $ratio: 1.333;
   }
 
   @else if $ratio == augmented-fourth {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.414);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.414);
-        }
-    } 
+    $ratio: 1.414;
   }
 
  @else if $ratio == perfect-fifth {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.5);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.5);
-        }
-    } 
+    $ratio: 1.5;
   }
 
  @else if $ratio == minor-sixth {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.6);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.6);
-        }
-    } 
+    $ratio: 1.6;
   }
 
   @else if $ratio == major-sixth {
-    @if $increment > 0 {
-      @for $i from 1 through $increment {
-      $value: ($value * 1.667);
-      }
-    }
-    @if $increment < 0 { 
-      $increment: abs($increment);
-        @for $i from 1 through $increment {
-          $value: ($value / 1.667);
-        }
-    } 
+    $ratio: 1.667;
   }
   
    @else if $ratio == minor-seventh {
@@ -261,3 +171,4 @@ $root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
   font-size: $value * $root-font-multiplier * 16px;
   font-size: $value * 1rem;
 }
+
