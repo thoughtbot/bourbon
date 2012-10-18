@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "bourbon"
   s.version     = Bourbon::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Phil LaPier", "Chad Mazzola", "Matt Jankowski", "Nick Quaranto", "Jeremy Raines", "Mike Burns", "Andres Mejia", "Travis Haynes", "Chris Lloyd", "Gabe Berke-Williams", "J. Edward Dewyea"]
+  s.authors     = ["Phil LaPier", "Chad Mazzola", "Matt Jankowski", "Nick Quaranto", "Jeremy Raines", "Mike Burns", "Andres Mejia", "Travis Haynes", "Chris Lloyd", "Gabe Berke-Williams", "J. Edward Dewyea", "Reda Lemeden"]
   s.email       = ["support@thoughtbot.com"]
   s.homepage    = "https://github.com/thoughtbot/bourbon"
   s.summary     = "Bourbon Sass Mixins using SCSS syntax."
@@ -26,7 +26,7 @@ that support only CSS3 prefixed properties.
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency('sass', '>= 3.1')
+  s.add_dependency('sass', '>= 3.2')
   s.add_dependency('thor')
 
   s.add_development_dependency('aruba', '~> 0.4')
