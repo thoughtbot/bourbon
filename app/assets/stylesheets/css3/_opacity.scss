@@ -1,0 +1,12 @@
+//************************************************************************//
+// Example: @include opacity(0.3);
+//************************************************************************//
+
+@mixin opacity($propery) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = #{$propery * 100})";
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=$propery * 100);
+  -khtml-opacity: $propery;
+  -moz-opacity: $propery;
+  opacity: $propery;
+}
