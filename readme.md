@@ -155,6 +155,7 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
 
       @ inline-block
       @ linear-gradient(*args)
+      @ opacity
       @ radial-gradient(*args)
 
       transform
