@@ -34,13 +34,13 @@ Delete the following sprocket directive in application.css.scss:
 
 Import bourbon at the beginning of application.css.scss:
 
-    @import "bourbon";
+    @import 'bourbon';
 
 Import all additional stylesheets from your app/assets/stylesheets directory underneath the bourbon import:
 
-    @import "bourbon";
-    @import "home";
-    @import "users";
+    @import 'bourbon';
+    @import 'home';
+    @import 'users';
 
 ## Rails 3.0.x
 For Rails 3.0.x you must run the installation rake task. You should run this task every time a new version of Bourbon is released.
