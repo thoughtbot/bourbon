@@ -1,4 +1,4 @@
-[![Bourbon Sass Mixin Library](http://thoughtbot.com/bourbon/images/bourbon-logo.png)](http://thoughtbot.com/bourbon)
+[![Bourbon Sass Mixin Library](http://bourbon.io/images/bourbon-logo.png)](http://bourbon.io)
 # A simple and lightweight mixin library for Sass
 Bourbon is a comprehensive library of sass mixins that are designed to be simple
 and easy to use. No configuration required. The mixins aim to be as vanilla as
@@ -8,7 +8,7 @@ The mixins contain vendor specific prefixes for all CSS3 properties for support
 amongst modern browsers. The prefixes also ensure graceful degradation for older
 browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.
 
-#[Documentation & Demo](http://thoughtbot.com/bourbon)
+#[Documentation & Demo](http://bourbon.io)
 
 # Requirements
 Sass 3.1+
@@ -93,7 +93,7 @@ Bourbon aims to provide support for CSS3 properties that are not yet fully suppo
 
 
 # All Supported Functions, Mixins, and Addons
-[View the Bourbon documentation](http://thoughtbot.com/bourbon)
+[View the Bourbon documentation](http://bourbon.io)
 
 *@ denotes a mixin and must be prefaced with @include*
 
