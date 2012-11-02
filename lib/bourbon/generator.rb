@@ -62,9 +62,9 @@ module Bourbon
     end
 
     def copy_in_sass_extensions
-      FileUtils.cp(File.join(lib_directory, "bourbon.rb"), install_path.join('lib'))
-      FileUtils.cp(File.join(lib_bourbon_directory, "sass_extensions.rb"), install_path.join('lib', 'bourbon'))
-      FileUtils.cp_r(File.join(lib_bourbon_directory, "sass_extensions"), install_path.join('lib', 'bourbon'))
+      FileUtils.cp(File.join(lib_directory, 'bourbon.rb'), install_path.join('lib'))
+      FileUtils.cp(File.join(lib_bourbon_directory, 'sass_extensions.rb'), install_path.join('lib', 'bourbon'))
+      FileUtils.cp_r(File.join(lib_bourbon_directory, 'sass_extensions'), install_path.join('lib', 'bourbon'))
     end
 
     def copy_in_scss_files
