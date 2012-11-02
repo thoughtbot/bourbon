@@ -14,7 +14,7 @@ browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.
 # Requirements
 Sass 3.2+
 
-# Install for Rails 3.1.x
+# Install for Rails 3.1+
 In your Gemfile:
 
     gem 'bourbon'
@@ -38,7 +38,7 @@ Import Bourbon at the beginning of application.css.scss. All additional styleshe
     @import "users";
 
 
-[Help! I'm getting an undefined mixin error.](https://github.com/thoughtbot/bourbon/wiki/Rails-Help)
+[Help! I'm getting an undefined mixin error.](https://github.com/thoughtbot/bourbon/wiki/Rails-Help-%5C-Undefined-mixin)
 
 ##### [Rails 3.0.x Install Instructions](https://github.com/thoughtbot/bourbon/wiki/Rails-3.0.x-Install)
 
