@@ -1,3 +1,4 @@
+require 'bourbon/version'
 require "fileutils"
 require 'thor'
 
