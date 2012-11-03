@@ -11,7 +11,7 @@ browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.
 
 #[Documentation & Demo](http://bourbon.io)
 
-# Requirements
+## Requirements
 Sass 3.2+
 
 # Install for Rails 3.1+
@@ -75,32 +75,12 @@ Visit the [Command line tools wiki](https://github.com/thoughtbot/bourbon/wiki/C
 
     bourbon help
     bourbon update
+    
+-------
+# [Changelog](https://github.com/thoughtbot/bourbon/wiki)
 
-# Browser support
-Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.
-
-
-## Help Out
-
-Currently the project is a work in progress. Feel free to help out.
-A general rule when considering filing a pull request for a new mixin: Do the following browsers *only* support the CSS3 property using vendor specific prefixes?
-If the answer is yes, there is a high chance the mixin will be accepted via a pull request.
-
-* Firefox 3.6+
-* Safari 4.0+
-* Chrome 4.0+
-* Opera 10+
-* IE 9+
-
-*Bourbon does not intend to support IE filters.*
-
-
-Resources for checking browser support:
-
-* [MDN - Moz Dev Network](https://developer.mozilla.org/en-US/)
-* [Mozilla CSS Extensions](https://developer.mozilla.org/en/CSS_Reference/Mozilla_Extensions)
-* [Webkit CSS Properties](http://css-infos.net/properties/webkit.php)
-* [MSDN - Microsoft Dev Network](http://msdn.microsoft.com/en-us/library/ms531207\(v=VS.85\).aspx)
+# [Browser support](https://github.com/thoughtbot/bourbon/wiki/Browser-Support)
+-------
 
 Credits
 -------
