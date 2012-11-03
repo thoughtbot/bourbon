@@ -21,10 +21,11 @@
 @import "css3/box-sizing";
 @import "css3/columns";
 @import "css3/flex-box";
+@import "css3/font-face";
+@import "css3/hidpi-media-query";
 @import "css3/image-rendering";
 @import "css3/inline-block";
 @import "css3/linear-gradient";
-@import "css3/prefixer";
 @import "css3/radial-gradient";
 @import "css3/transform";
 @import "css3/transition";
@@ -33,10 +34,9 @@
 // Addons & other mixins
 @import "addons/button";
 @import "addons/clearfix";
-@import "addons/font-face";
 @import "addons/font-family";
 @import "addons/hide-text";
 @import "addons/html5-input-types";
 @import "addons/position";
+@import "addons/prefixer";
 @import "addons/timing-functions";
-@import "addons/hidpi-media-query";
