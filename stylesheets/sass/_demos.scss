@@ -17,7 +17,7 @@ div.box {
 // Animations Demo Section
 //************************************************************************//
 
-section#animations {
+article#animations {
   div.box {
     &:hover {
       @include animation-name(scale, slide);
@@ -33,7 +33,7 @@ section#animations {
 //************************************************************************//
 // Background-image Mixin
 //************************************************************************//
-section#background-image {
+article#background-image {
   section.demo {
     @include background-image(linear-gradient(hsla(0, 100%, 100%, 0.35) 0%, hsla(0, 100%, 100%, 0.15) 50%, transparent 50%), linear-gradient($demo-color, $demo-color-alt));
     height: 40px;
@@ -44,7 +44,7 @@ section#background-image {
 //************************************************************************//
 // Border-image Mixin
 //************************************************************************//
-section#border-image {
+article#border-image {
   section.demo {
     @include border-image(url(../images/border.png) 27 repeat);
     border-width: 27px;
@@ -57,7 +57,7 @@ section#border-image {
 //************************************************************************//
 // Box-Shadow Mixin
 //************************************************************************//
-section#box-shadow {
+article#box-shadow {
   section.demo {
     div.example {
       @include background-image(linear-gradient(top, $demo-color, $demo-color-alt));
@@ -78,7 +78,7 @@ section#box-shadow {
 //************************************************************************//
 // Linear-gradient Function
 //************************************************************************//
-section#linear-gradient {
+article#linear-gradient {
   section.demo {
     @include linear-gradient($demo-color, $demo-color-alt);
     height: 40px;
@@ -88,7 +88,7 @@ section#linear-gradient {
 //************************************************************************//
 // Linear-gradient Function
 //************************************************************************//
-section#linear-gradient-function {
+article#linear-gradient-function {
   section.demo {
     @include background-image(linear-gradient($demo-color, $demo-color-alt));
     height: 40px;
@@ -97,7 +97,7 @@ section#linear-gradient-function {
 //************************************************************************//
 // Radial-gradient Mixin
 //************************************************************************//
-section#radial-gradient, section#radial-gradient-function {
+article#radial-gradient, article#radial-gradient-function {
   section.demo {
     @include radial-gradient(50% 50%, circle cover, $demo-color, $demo-color-alt);
     height: 40px;
@@ -108,7 +108,7 @@ section#radial-gradient, section#radial-gradient-function {
 //************************************************************************//
 // Button Addon
 //************************************************************************//
-section#buttons {
+article#buttons {
   section.demo {
     button.example-1 {
       @include button;
@@ -128,14 +128,14 @@ section#buttons {
 //************************************************************************//
 // Font-Family
 //************************************************************************//
-section#font-family {
+article#font-family {
 }
 
 //************************************************************************//
 // Timing Functions Demo
 //************************************************************************//
 
-section#timing-functions {
+article#timing-functions {
   section.demo {
     ul {
       margin: 0;

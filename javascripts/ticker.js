@@ -6,7 +6,7 @@ $('nav a').live('click', function() {
 });
 
 $(function() {
-  $('.main-inner > section > section').waypoint(function(event, direction) {
+  $('.main-inner > section > article').waypoint(function(event, direction) {
     if (direction === 'down') {
       $(window).scrollTop($(window).scrollTop() + 1);
     }
