@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require "bourbon"
+# CodeKit needs relative paths
+require File.dirname(__FILE__) + '/../lib/bourbon.rb'
 
 Bourbon::Generator.start
