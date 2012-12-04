@@ -50,7 +50,6 @@ module Bourbon
 
     def install_files
       make_lib_directory
-      copy_in_sass_extensions
       copy_in_scss_files
     end
 
@@ -59,13 +58,7 @@ module Bourbon
     end
 
     def make_lib_directory
-      FileUtils.mkdir_p(install_path.join('lib', 'bourbon'))
-    end
-
-    def copy_in_sass_extensions
-      FileUtils.cp(File.join(lib_directory, 'bourbon.rb'), install_path.join('lib'))
-      FileUtils.cp(File.join(lib_bourbon_directory, 'sass_extensions.rb'), install_path.join('lib', 'bourbon'))
-      FileUtils.cp_r(File.join(lib_bourbon_directory, 'sass_extensions'), install_path.join('lib', 'bourbon'))
+      FileUtils.mkdir_p(install_path)
     end
 
     def copy_in_scss_files
@@ -78,14 +71,6 @@ module Bourbon
 
     def stylesheets_directory
       File.join(top_level_directory, "app", "assets", "stylesheets")
-    end
-
-    def lib_directory
-      File.join(top_level_directory, "lib")
-    end
-
-    def lib_bourbon_directory
-      File.join(top_level_directory, "lib", "bourbon")
     end
 
     def top_level_directory
