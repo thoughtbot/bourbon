@@ -11,7 +11,7 @@
     $full: compact($animation-1, $animation-2, $animation-3, $animation-4,
                    $animation-5, $animation-6, $animation-7, $animation-8, $animation-9);
 
-  @include prefixer(animation, $full);
+  @include prefixer(animation, $full, webkit moz spec);
 }
 
 // Individual Animation Properties
@@ -24,7 +24,7 @@
     $full:  compact($name-1, $name-2, $name-3, $name-4,
                     $name-5, $name-6, $name-7, $name-8, $name-9);
 
-  @include prefixer(animation-name, $full);
+  @include prefixer(animation-name, $full, webkit moz spec);
 }
 
 
@@ -37,7 +37,7 @@
     $full:  compact($time-1, $time-2, $time-3, $time-4,
                     $time-5, $time-6, $time-7, $time-8, $time-9);
 
-  @include prefixer(animation-duration, $full);
+  @include prefixer(animation-duration, $full, webkit moz spec);
 }
 
 
@@ -51,7 +51,7 @@
     $full:  compact($motion-1, $motion-2, $motion-3, $motion-4,
                     $motion-5, $motion-6, $motion-7, $motion-8, $motion-9);
 
-  @include prefixer(animation-timing-function, $full);
+  @include prefixer(animation-timing-function, $full, webkit moz spec);
 }
 
 
@@ -65,7 +65,7 @@
     $full:  compact($value-1, $value-2, $value-3, $value-4,
                     $value-5, $value-6, $value-7, $value-8, $value-9);
 
-  @include prefixer(animation-iteration-count, $full);
+  @include prefixer(animation-iteration-count, $full, webkit moz spec);
 }
 
 
@@ -79,7 +79,7 @@
     $full:  compact($direction-1, $direction-2, $direction-3, $direction-4,
                     $direction-5, $direction-6, $direction-7, $direction-8, $direction-9);
 
-  @include prefixer(animation-direction, $full);
+  @include prefixer(animation-direction, $full, webkit moz spec);
 }
 
 
@@ -93,7 +93,7 @@
     $full:  compact($state-1, $state-2, $state-3, $state-4,
                     $state-5, $state-6, $state-7, $state-8, $state-9);
 
-  @include prefixer(animation-play-state, $full);
+  @include prefixer(animation-play-state, $full, webkit moz spec);
 }
 
 
@@ -106,7 +106,7 @@
     $full:  compact($time-1, $time-2, $time-3, $time-4,
                     $time-5, $time-6, $time-7, $time-8, $time-9);
 
-  @include prefixer(animation-delay, $full);
+  @include prefixer(animation-delay, $full, webkit moz spec);
 }
 
 
@@ -121,5 +121,5 @@
     $full:  compact($mode-1, $mode-2, $mode-3, $mode-4,
                     $mode-5, $mode-6, $mode-7, $mode-8, $mode-9);
 
-  @include prefixer(animation-fill-mode, $full);
+  @include prefixer(animation-fill-mode, $full, webkit moz spec);
 }
