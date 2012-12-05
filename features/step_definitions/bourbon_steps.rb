@@ -15,13 +15,6 @@ Then /^the master bourbon partial should have been generated(?: within "([^"]+)"
   check_file_presence([bourbon_path(prefix, '_bourbon.scss')], true)
 end
 
-Then /^the lib files should have been generated(?: within "([^"]+)" directory)?$/ do |prefix|
-  check_file_presence([bourbon_path(prefix, 'lib/bourbon.rb')], true)
-  check_directory_presence([bourbon_path(prefix, 'lib/bourbon')], true)
-  check_file_presence([bourbon_path(prefix, 'lib/bourbon/sass_extensions.rb')], true)
-  check_directory_presence([bourbon_path(prefix, 'lib/bourbon/sass_extensions')], true)
-end
-
 Then /^bourbon should not have been generated$/ do
   check_directory_presence(['bourbon'], false)
 end

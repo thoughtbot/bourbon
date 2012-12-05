@@ -20,4 +20,6 @@ module Bourbon
   end
 end
 
-require File.join(File.dirname(__FILE__), "/bourbon/sass_extensions")
+unless defined?(Sass)
+  require 'sass'
+end

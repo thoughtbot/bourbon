@@ -6,9 +6,7 @@ Feature: Install bourbon files
     Then the sass directories should have been generated
     And the following directories should exist:
       | bourbon     |
-      | bourbon/lib |
     And the master bourbon partial should have been generated
-    And the lib files should have been generated
     And the output should contain "Bourbon files installed to bourbon/"
 
   Scenario: Generating does not overwrite an existing bourbon directory
@@ -21,9 +19,7 @@ Feature: Install bourbon files
     Then the sass directories with "custom_path" prefix should have been generated
     And the following directories should exist:
       | custom_path/bourbon     |
-      | custom_path/bourbon/lib |
     And the master bourbon partial should have been generated within "custom_path" directory
-    And the lib files should have been generated within "custom_path" directory
     And the output should contain "Bourbon files installed to custom_path/bourbon/"
 
   Scenario: Forcing install of bourbon

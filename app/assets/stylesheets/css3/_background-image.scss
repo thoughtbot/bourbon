@@ -3,19 +3,7 @@
 // gradients, or for stringing multiple gradients together.
 //************************************************************************//
 
-@mixin background-image(
-  $image-1       , $image-2: false,
-  $image-3: false, $image-4: false,
-  $image-5: false, $image-6: false,
-  $image-7: false, $image-8: false,
-  $image-9: false, $image-10: false
-) {
-  $images: compact($image-1, $image-2,
-           $image-3, $image-4,
-           $image-5, $image-6,
-           $image-7, $image-8,
-           $image-9, $image-10);
-
+@mixin background-image($images...) {
   background-image: add-prefix($images, webkit);
   background-image: add-prefix($images, moz);
   background-image: add-prefix($images, ms);
@@ -48,10 +36,9 @@
 }
 
 
-
 //Examples:
   //@include background-image(linear-gradient(top, orange, red));
   //@include background-image(radial-gradient(50% 50%, cover circle, orange, red));
   //@include background-image(url("/images/a.png"), linear-gradient(orange, red));
   //@include background-image(url("image.png"), linear-gradient(orange, red), url("image.png"));
-  //@include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(orange, red);
+  //@include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(orange, red));
