@@ -56,7 +56,9 @@
 
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
 
-  $fallback-color: nth($G1, 1);
+  // Set $G1 as the default fallback color
+  $first-color: nth($full, 1);
+  $fallback-color: nth($first-color, 1);
 
   @if (type-of($fallback) == color) or ($fallback == "transparent") {
     $fallback-color: $fallback;

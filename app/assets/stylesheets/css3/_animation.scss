@@ -2,124 +2,51 @@
 // Each of these mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
 
 // Official animation shorthand property.
-@mixin animation ($animation-1,
-  $animation-2: false, $animation-3: false,
-  $animation-4: false, $animation-5: false,
-  $animation-6: false, $animation-7: false,
-  $animation-8: false, $animation-9: false)
-  {
-    $full: compact($animation-1, $animation-2, $animation-3, $animation-4,
-                   $animation-5, $animation-6, $animation-7, $animation-8, $animation-9);
-
-  @include prefixer(animation, $full);
+@mixin animation ($animations...) {
+  @include prefixer(animation, $animations, webkit moz spec);
 }
 
 // Individual Animation Properties
-@mixin animation-name ($name-1,
-  $name-2: false, $name-3: false,
-  $name-4: false, $name-5: false,
-  $name-6: false, $name-7: false,
-  $name-8: false, $name-9: false)
-  {
-    $full:  compact($name-1, $name-2, $name-3, $name-4,
-                    $name-5, $name-6, $name-7, $name-8, $name-9);
-
-  @include prefixer(animation-name, $full);
+@mixin animation-name ($names...) {
+  @include prefixer(animation-name, $names, webkit moz spec);
 }
 
 
-@mixin animation-duration ($time-1: 0,
-  $time-2: false, $time-3: false,
-  $time-4: false, $time-5: false,
-  $time-6: false, $time-7: false,
-  $time-8: false, $time-9: false)
-  {
-    $full:  compact($time-1, $time-2, $time-3, $time-4,
-                    $time-5, $time-6, $time-7, $time-8, $time-9);
-
-  @include prefixer(animation-duration, $full);
+@mixin animation-duration ($times...) {
+  @include prefixer(animation-duration, $times, webkit moz spec);
 }
 
 
-@mixin animation-timing-function ($motion-1: ease,
-//  ease | linear | ease-in | ease-out | ease-in-out
-  $motion-2: false, $motion-3: false,
-  $motion-4: false, $motion-5: false,
-  $motion-6: false, $motion-7: false,
-  $motion-8: false, $motion-9: false)
-  {
-    $full:  compact($motion-1, $motion-2, $motion-3, $motion-4,
-                    $motion-5, $motion-6, $motion-7, $motion-8, $motion-9);
-
-  @include prefixer(animation-timing-function, $full);
+@mixin animation-timing-function ($motions...) {
+// ease | linear | ease-in | ease-out | ease-in-out
+  @include prefixer(animation-timing-function, $motions, webkit moz spec);
 }
 
 
-@mixin animation-iteration-count ($value-1: 1,
-//  infinite | <number>
-  $value-2: false, $value-3: false,
-  $value-4: false, $value-5: false,
-  $value-6: false, $value-7: false,
-  $value-8: false, $value-9: false)
-  {
-    $full:  compact($value-1, $value-2, $value-3, $value-4,
-                    $value-5, $value-6, $value-7, $value-8, $value-9);
-
-  @include prefixer(animation-iteration-count, $full);
+@mixin animation-iteration-count ($values...) {
+// infinite | <number>
+  @include prefixer(animation-iteration-count, $values, webkit moz spec);
 }
 
 
-@mixin animation-direction ($direction-1: normal,
-//  normal | alternate
-  $direction-2: false, $direction-3: false,
-  $direction-4: false, $direction-5: false,
-  $direction-6: false, $direction-7: false,
-  $direction-8: false, $direction-9: false)
-  {
-    $full:  compact($direction-1, $direction-2, $direction-3, $direction-4,
-                    $direction-5, $direction-6, $direction-7, $direction-8, $direction-9);
-
-  @include prefixer(animation-direction, $full);
+@mixin animation-direction ($directions...) {
+// normal | alternate
+  @include prefixer(animation-direction, $directions, webkit moz spec);
 }
 
 
-@mixin animation-play-state ($state-1: running,
-//  running | paused
-  $state-2: false, $state-3: false,
-  $state-4: false, $state-5: false,
-  $state-6: false, $state-7: false,
-  $state-8: false, $state-9: false)
-  {
-    $full:  compact($state-1, $state-2, $state-3, $state-4,
-                    $state-5, $state-6, $state-7, $state-8, $state-9);
-
-  @include prefixer(animation-play-state, $full);
+@mixin animation-play-state ($states...) {
+// running | paused
+  @include prefixer(animation-play-state, $states, webkit moz spec);
 }
 
 
-@mixin animation-delay ($time-1: 0,
-  $time-2: false, $time-3: false,
-  $time-4: false, $time-5: false,
-  $time-6: false, $time-7: false,
-  $time-8: false, $time-9: false)
-  {
-    $full:  compact($time-1, $time-2, $time-3, $time-4,
-                    $time-5, $time-6, $time-7, $time-8, $time-9);
-
-  @include prefixer(animation-delay, $full);
+@mixin animation-delay ($times...) {
+  @include prefixer(animation-delay, $times, webkit moz spec);
 }
 
 
-@mixin animation-fill-mode ($mode-1: none,
-//  http://goo.gl/l6ckm
-//  none | forwards | backwards | both
-  $mode-2: false, $mode-3: false,
-  $mode-4: false, $mode-5: false,
-  $mode-6: false, $mode-7: false,
-  $mode-8: false, $mode-9: false)
-  {
-    $full:  compact($mode-1, $mode-2, $mode-3, $mode-4,
-                    $mode-5, $mode-6, $mode-7, $mode-8, $mode-9);
-
-  @include prefixer(animation-fill-mode, $full);
+@mixin animation-fill-mode ($modes...) {
+// none | forwards | backwards | both
+  @include prefixer(animation-fill-mode, $modes, webkit moz spec);
 }

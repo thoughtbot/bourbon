@@ -18,7 +18,7 @@
       $gradient-list: join($gradient-list, $color-stop, comma);
     }
 
-    @else {
+    @else if $gradient != null {
       @if $i == $full-length {
         $percentage: 100%;
       }
