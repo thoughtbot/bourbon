@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    bourbon (2.2.0)
-      sass (>= 3.2.1)
+    bourbon (3.0.0)
+      sass (>= 3.2.0)
       thor
 
 GEM
