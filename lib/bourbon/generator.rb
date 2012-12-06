@@ -49,7 +49,7 @@ module Bourbon
     end
 
     def install_files
-      make_lib_directory
+      make_install_directory
       copy_in_scss_files
     end
 
@@ -57,7 +57,7 @@ module Bourbon
       FileUtils.rm_rf("bourbon")
     end
 
-    def make_lib_directory
+    def make_install_directory
       FileUtils.mkdir_p(install_path)
     end
 
