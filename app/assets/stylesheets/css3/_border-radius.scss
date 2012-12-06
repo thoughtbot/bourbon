@@ -1,44 +1,22 @@
-@mixin border-radius ($radii) {
-  @include prefixer(border-radius, $radii, webkit, not moz);
-  @warn "border-radius mixin is deprecated and will be removed in the next major version release.";
-}
-
-@mixin border-top-left-radius($radii) {
-  @include prefixer(border-top-left-radius, $radii, webkit, not moz);
-  @warn "border-top-left-radius mixin is deprecated and will be removed in the next major version release.";
-}
-
-@mixin border-top-right-radius($radii) {
-  @include prefixer(border-top-right-radius, $radii, webkit, not moz);
-  @warn "border-top-right-radius mixin is deprecated and will be removed in the next major version release.";
-}
-
-@mixin border-bottom-left-radius($radii) {
-  @include prefixer(border-bottom-left-radius, $radii, webkit, not moz);
-  @warn "border-bottom-left-radius mixin is deprecated and will be removed in the next major version release.";
-}
-
-@mixin border-bottom-right-radius($radii) {
-  @include prefixer(border-bottom-right-radius, $radii, webkit, not moz);
-  @warn "border-bottom-right-radius mixin is deprecated and will be removed in the next major version release.";
-}
-
+//************************************************************************//
+// Shorthand Border-radius mixins
+//************************************************************************//
 @mixin border-top-radius($radii) {
-  @include border-top-left-radius($radii);
-  @include border-top-right-radius($radii);
-}
-
-@mixin border-right-radius($radii) {
-  @include border-top-right-radius($radii);
-  @include border-bottom-right-radius($radii);
+  @include prefixer(border-top-left-radius, $radii, spec);
+  @include prefixer(border-top-right-radius, $radii, spec);
 }
 
 @mixin border-bottom-radius($radii) {
-  @include border-bottom-left-radius($radii);
-  @include border-bottom-right-radius($radii);
+  @include prefixer(border-bottom-left-radius, $radii, spec);
+  @include prefixer(border-bottom-right-radius, $radii, spec);
 }
 
 @mixin border-left-radius($radii) {
-  @include border-top-left-radius($radii);
-  @include border-bottom-left-radius($radii);
+  @include prefixer(border-top-left-radius, $radii, spec);
+  @include prefixer(border-bottom-left-radius, $radii, spec);
+}
+
+@mixin border-right-radius($radii) {
+  @include prefixer(border-top-right-radius, $radii, spec);
+  @include prefixer(border-bottom-right-radius, $radii, spec);
 }

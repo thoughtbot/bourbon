@@ -1,0 +1,17 @@
+// functions/_compact.scss
+
+/**
+ * Sass implementation of `compact` function from the bourbon.rb library
+ */
+@function compact($var-1, $var-2: false, $var-3: false, $var-4: false, $var-5: false, $var-6: false, $var-7: false, $var-8: false, $var-9: false, $var-10: false, $var-11: false, $var-12: false,$var-13: false, $var-14: false, $var-15: false, $var-16: false) {
+    $list: ();
+    $vars: $var-1, $var-2, $var-3, $var-4, $var-5, $var-6, $var-7, $var-8, $var-9, $var-10, $var-11, $var-12, $var-13, $var-14, $var-15;
+
+    @each $var in $vars {
+        @if $var {
+            $list: append($list, $var, comma);
+        }
+    }
+
+    @return $list;
+}

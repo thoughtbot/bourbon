@@ -40,15 +40,13 @@ Import Bourbon at the beginning of application.css.scss. All additional styleshe
 
 [Help! I'm getting an undefined mixin error.](https://github.com/thoughtbot/bourbon/wiki/Rails-Help-%5C-Undefined-mixin)
 
-##### [Rails 3.0.x Install Instructions](https://github.com/thoughtbot/bourbon/wiki/Rails-3.0.x-Install)
-
-##### Rails 2.3 - follow the [non-rails installation](#non-rails)
+##### [Rails 3.0.x Install Instructions](https://github.com/thoughtbot/bourbon/wiki/Rails-3.0.x-Install) | [Rails 2.3 Install Instructions](https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install)
 
 # <span id="non-rails"></span>Non-Rails projects
 Bourbon includes an easy way to generate a directory with all the necessary files.  
 For command line help: `$ bourbon help` or visit the [Command line tools wiki](https://github.com/thoughtbot/bourbon/wiki/Command-Line-Tools)
 
-####Install
+####Install (Bourbon v3.0+)
 
     gem install bourbon
 
@@ -56,19 +54,15 @@ Install Bourbon into the current directory by generating the `bourbon` folder:
 
     bourbon install
 
-<small>The generated folder will contain all the mixins and other necessary Bourbon files.   
-It is recommended not to add or modify the Bourbon files so that you can update Bourbon easily.</small>
+The generated folder will contain all the mixins and other necessary Bourbon files. It is recommended not to add or modify the Bourbon files so that you can update Bourbon easily.
 
-#### Sass Watch
-*Sass Watch:* To output properly, Bourbon must be explicitly required (`-r`) by Sass at the command line:
-
-    # Example (project root directory)
-    sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bourbon.rb
+#### Import
 
 Lastly, import the mixins at the beginning of your stylesheet(s):
 
     @import 'bourbon/bourbon';
 
+Note: Bourbon no longer requires a custom `sass --watch` command for Bourbon v3.0+
 
 #### Other Commands
 Visit the [Command line tools wiki](https://github.com/thoughtbot/bourbon/wiki/Command-Line-Tools) for a complete list
@@ -76,6 +70,8 @@ Visit the [Command line tools wiki](https://github.com/thoughtbot/bourbon/wiki/C
     bourbon help
     bourbon update
     
+##### [Bourbon v2.x install instructions](https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install)
+
 -------
 # [Changelog](https://github.com/thoughtbot/bourbon/wiki)
 

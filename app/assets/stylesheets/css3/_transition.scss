@@ -3,70 +3,34 @@
 //          @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
 //          @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));
 
-@mixin transition ($prop-1: all 0.15s ease-out 0,
-  $prop-2: false, $prop-3: false,
-  $prop-4: false, $prop-5: false,
-  $prop-6: false, $prop-7: false,
-  $prop-8: false, $prop-9: false)
-  {
-    $full: compact($prop-1, $prop-2, $prop-3, $prop-4, $prop-5,
-                   $prop-6, $prop-7, $prop-8, $prop-9);
+@mixin transition ($properties...) {
+  @if length($properties) >= 1 {
+    @include prefixer(transition, $properties, webkit moz ms o spec);
+  }
 
-  @include prefixer(transition, $full, webkit, moz, ms, o);
+  @else {
+    $properties: all 0.15s ease-out 0;
+    @include prefixer(transition, $properties, webkit moz ms o spec);
+  }
 }
 
-
-
-@mixin transition-property ($prop-1: all,
-  $prop-2: false, $prop-3: false,
-  $prop-4: false, $prop-5: false,
-  $prop-6: false, $prop-7: false,
-  $prop-8: false, $prop-9: false)
-  {
-    $full: compact($prop-1, $prop-2, $prop-3, $prop-4, $prop-5,
-                   $prop-6, $prop-7, $prop-8, $prop-9);
-
-   -webkit-transition-property: transition-property-names($full, 'webkit');
-      -moz-transition-property: transition-property-names($full, 'moz');
-       -ms-transition-property: transition-property-names($full, 'ms');
-        -o-transition-property: transition-property-names($full, 'o');
-           transition-property: transition-property-names($full, false);
+@mixin transition-property ($properties...) {
+   -webkit-transition-property: transition-property-names($properties, 'webkit');
+      -moz-transition-property: transition-property-names($properties, 'moz');
+       -ms-transition-property: transition-property-names($properties, 'ms');
+        -o-transition-property: transition-property-names($properties, 'o');
+           transition-property: transition-property-names($properties, false);
 }
 
-@mixin transition-duration ($time-1: 0,
-  $time-2: false, $time-3: false,
-  $time-4: false, $time-5: false,
-  $time-6: false, $time-7: false,
-  $time-8: false, $time-9: false)
-  {
-    $full: compact($time-1, $time-2, $time-3, $time-4, $time-5,
-                   $time-6, $time-7, $time-8, $time-9);
-
-  @include prefixer(transition-duration, $full, webkit, moz, ms, o);
+@mixin transition-duration ($times...) {
+  @include prefixer(transition-duration, $times, webkit moz ms o spec);
 }
 
-@mixin transition-timing-function ($motion-1: ease,
-  $motion-2: false, $motion-3: false,
-  $motion-4: false, $motion-5: false,
-  $motion-6: false, $motion-7: false,
-  $motion-8: false, $motion-9: false)
-  {
-    $full: compact($motion-1, $motion-2, $motion-3, $motion-4, $motion-5,
-                   $motion-6, $motion-7, $motion-8, $motion-9);
-
+@mixin transition-timing-function ($motions...) {
 // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
-  @include prefixer(transition-timing-function, $full, webkit, moz, ms, o);
+  @include prefixer(transition-timing-function, $motions, webkit moz ms o spec);
 }
 
-@mixin transition-delay ($time-1: 0,
-  $time-2: false, $time-3: false,
-  $time-4: false, $time-5: false,
-  $time-6: false, $time-7: false,
-  $time-8: false, $time-9: false)
-  {
-    $full: compact($time-1, $time-2, $time-3, $time-4, $time-5,
-                   $time-6, $time-7, $time-8, $time-9);
-
-  @include prefixer(transition-delay, $full, webkit, moz, ms, o);
+@mixin transition-delay ($times...) {
+  @include prefixer(transition-delay, $times, webkit moz ms o spec);
 }
-

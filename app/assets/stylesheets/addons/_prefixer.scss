@@ -1,16 +1,27 @@
 //************************************************************************//
-// Default: Webkit, moz, spec
-// Example: @include prefixer(border-radius, $radii, $o: true);
+// Example: @include prefixer(border-radius, $radii, webkit ms spec);
 //************************************************************************//
-@mixin prefixer ($property, $value,
-                 $webkit: true,
-                    $moz: true,
-                     $ms: false,
-                      $o: false,
-                   $spec: true) {
-  @if $webkit { -webkit-#{$property}: $value; }
-  @if $moz    {    -moz-#{$property}: $value; }
-  @if $ms     {     -ms-#{$property}: $value; }
-  @if $o      {      -o-#{$property}: $value; }
-  @if $spec   {         #{$property}: $value; }
+@mixin prefixer ($property, $value, $prefixes) {
+
+  @each $prefix in $prefixes {
+
+    @if $prefix == webkit {
+      -webkit-#{$property}: $value;
+    }
+    @else if $prefix == moz {
+      -moz-#{$property}: $value;
+    }
+    @else if $prefix == ms {
+      -ms-#{$property}: $value;
+    }
+    @else if $prefix == o {
+      -o-#{$property}: $value;
+    }
+    @else if $prefix == spec {
+      #{$property}: $value;
+    }
+    @else  {
+      @warn "Unrecognized prefix: #{$prefix}";
+    }
+  }
 }
