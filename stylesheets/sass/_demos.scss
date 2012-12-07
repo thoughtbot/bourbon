@@ -5,7 +5,7 @@ $demo-base: hsl(186, 62%, 53%);
 $demo-color: lighten($demo-base, 20%);
 $demo-color-alt: $demo-base;
 div.box {
-  @include border-radius(40px);
+  border-radius: 40px;
   border: 1px solid darken($demo-color-alt, 10%);
   @include box-shadow(inset 0 1px 0 hsla(0, 0%, 100%, 0.45));
   height: 40px;
@@ -74,6 +74,65 @@ article#box-shadow {
     }
   }
 }
+
+//************************************************************************//
+// Perspective Mixins
+//************************************************************************//
+article#perspective {
+  section.demo {
+    div.example {
+      width: 100px;
+      height: 100px;
+      margin-left: 5px;
+      @include perspective(300px);
+      @include perspective-origin(30% 30%);
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+
+      div {
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: none;
+        line-height: 100px;
+        font-family: arial, sans-serif;
+        font-size: 60px;
+        color: white;
+        text-align: center;
+      }
+
+      div.front {
+        background: rgba( 0, 0, 0, 0.3 );
+        @include transform(translateZ( 50px ));
+      }
+      div.back {
+        background: rgba( 0, 255, 0, 1 );
+        color: black;
+        @include transform(translateZ( -50px ));
+      }
+      div.right {
+        background: rgba( 196, 0, 0, 0.7 );
+        @include transform(rotateY( 90deg) translateZ( 50px ));
+      }
+      div.left {
+        background: rgba( 0, 0, 196, 0.7 );
+        @include transform(rotateY( -90deg) translateZ( 50px ));
+      }
+      div.top {
+        background: rgba( 196, 196, 0, 0.7 );
+        @include transform(rotateX( 90deg) translateZ( 50px ));
+      }
+      div.bottom {
+        background: rgba( 196, 0, 196, 0.7);
+        @include transform(rotateX( -90deg) translateZ( 50px ));
+      }
+    }
+  }
+}
+
 
 //************************************************************************//
 // Linear-gradient Function

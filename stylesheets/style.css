@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/**
+ * Sass implementation of `compact` function from the bourbon.rb library
+ */
 /*
  * HTML5 âœ° Boilerplate
  *
@@ -508,7 +511,6 @@ section > article {
     transition: all 0.15s ease-out 0; }
     section > article a.view-source:hover {
       background-color: #f3f1ec;
-      -webkit-border-radius: 20px;
       border-radius: 20px;
       color: #a69f8c; }
 
@@ -618,7 +620,6 @@ div.highlight {
 
 pre {
   background-color: #fef9ec;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 0 1px #fbedc6;
   box-shadow: 0 0 0 1px #fbedc6;
@@ -855,7 +856,6 @@ p code, ul code, ol code {
   font-weight: bold; }
 
 div.box {
-  -webkit-border-radius: 40px;
   border-radius: 40px;
   border: 1px solid #2aa4b2;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
@@ -886,11 +886,11 @@ article#animations div.box:hover {
   position: relative; }
 
 article#background-image section.demo {
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 50%), -webkit-linear-gradient(top, #8fdce5, #3dc3d1);
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 50%), -moz-linear-gradient(top, #8fdce5, #3dc3d1);
-  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 50%), -ms-linear-gradient(top, #8fdce5, #3dc3d1);
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 50%), -o-linear-gradient(top, #8fdce5, #3dc3d1);
-  background-image: linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 50%), linear-gradient(top, #8fdce5, #3dc3d1);
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 50%), -webkit-linear-gradient(#8fdce5, #3dc3d1);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 50%), -moz-linear-gradient(#8fdce5, #3dc3d1);
+  background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 50%), -ms-linear-gradient(#8fdce5, #3dc3d1);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 50%), -o-linear-gradient(#8fdce5, #3dc3d1);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 50%), linear-gradient(#8fdce5, #3dc3d1);
   height: 40px;
   width: 100%; }
 
@@ -918,6 +918,77 @@ article#box-shadow section.demo div.example {
     -webkit-box-shadow: 1px 1px 5px 1px green, -1px -1px 5px 1px blue;
     box-shadow: 1px 1px 5px 1px green, -1px -1px 5px 1px blue; }
 
+article#perspective section.demo div.example {
+  width: 100px;
+  height: 100px;
+  margin-left: 5px;
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  -o-perspective: 300px;
+  perspective: 300px;
+  -webkit-perspective-origin: 30% 30%;
+  -moz-perspective-origin: 30% 30%;
+  -o-perspective-origin: 30% 30%;
+  perspective-origin: 30% 30%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+  article#perspective section.demo div.example div {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: none;
+    line-height: 100px;
+    font-family: arial, sans-serif;
+    font-size: 60px;
+    color: white;
+    text-align: center; }
+  article#perspective section.demo div.example div.front {
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-transform: translateZ(50px);
+    -moz-transform: translateZ(50px);
+    -ms-transform: translateZ(50px);
+    -o-transform: translateZ(50px);
+    transform: translateZ(50px); }
+  article#perspective section.demo div.example div.back {
+    background: lime;
+    color: black;
+    -webkit-transform: translateZ(-50px);
+    -moz-transform: translateZ(-50px);
+    -ms-transform: translateZ(-50px);
+    -o-transform: translateZ(-50px);
+    transform: translateZ(-50px); }
+  article#perspective section.demo div.example div.right {
+    background: rgba(196, 0, 0, 0.7);
+    -webkit-transform: rotateY(90deg) translateZ(50px);
+    -moz-transform: rotateY(90deg) translateZ(50px);
+    -ms-transform: rotateY(90deg) translateZ(50px);
+    -o-transform: rotateY(90deg) translateZ(50px);
+    transform: rotateY(90deg) translateZ(50px); }
+  article#perspective section.demo div.example div.left {
+    background: rgba(0, 0, 196, 0.7);
+    -webkit-transform: rotateY(-90deg) translateZ(50px);
+    -moz-transform: rotateY(-90deg) translateZ(50px);
+    -ms-transform: rotateY(-90deg) translateZ(50px);
+    -o-transform: rotateY(-90deg) translateZ(50px);
+    transform: rotateY(-90deg) translateZ(50px); }
+  article#perspective section.demo div.example div.top {
+    background: rgba(196, 196, 0, 0.7);
+    -webkit-transform: rotateX(90deg) translateZ(50px);
+    -moz-transform: rotateX(90deg) translateZ(50px);
+    -ms-transform: rotateX(90deg) translateZ(50px);
+    -o-transform: rotateX(90deg) translateZ(50px);
+    transform: rotateX(90deg) translateZ(50px); }
+  article#perspective section.demo div.example div.bottom {
+    background: rgba(196, 0, 196, 0.7);
+    -webkit-transform: rotateX(-90deg) translateZ(50px);
+    -moz-transform: rotateX(-90deg) translateZ(50px);
+    -ms-transform: rotateX(-90deg) translateZ(50px);
+    -o-transform: rotateX(-90deg) translateZ(50px);
+    transform: rotateX(-90deg) translateZ(50px); }
+
 article#linear-gradient section.demo {
   background-color: #8fdce5;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8fdce5), color-stop(100%, #3dc3d1));
@@ -929,15 +1000,15 @@ article#linear-gradient section.demo {
   height: 40px; }
 
 article#linear-gradient-function section.demo {
-  background-image: -webkit-linear-gradient(top, #8fdce5, #3dc3d1);
-  background-image: -moz-linear-gradient(top, #8fdce5, #3dc3d1);
-  background-image: -ms-linear-gradient(top, #8fdce5, #3dc3d1);
-  background-image: -o-linear-gradient(top, #8fdce5, #3dc3d1);
-  background-image: linear-gradient(top, #8fdce5, #3dc3d1);
+  background-image: -webkit-linear-gradient(#8fdce5, #3dc3d1);
+  background-image: -moz-linear-gradient(#8fdce5, #3dc3d1);
+  background-image: -ms-linear-gradient(#8fdce5, #3dc3d1);
+  background-image: -o-linear-gradient(#8fdce5, #3dc3d1);
+  background-image: linear-gradient(#8fdce5, #3dc3d1);
   height: 40px; }
 
 article#radial-gradient section.demo, article#radial-gradient-function section.demo {
-  background-color: false;
+  background-color: #8fdce5;
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #8fdce5), color-stop(100%, #3dc3d1));
   background-image: -webkit-radial-gradient(50% 50%, circle cover, #8fdce5, #3dc3d1);
   background-image: -moz-radial-gradient(50% 50%, circle cover, #8fdce5, #3dc3d1);
@@ -948,7 +1019,6 @@ article#radial-gradient section.demo, article#radial-gradient-function section.d
 
 article#buttons section.demo button.example-1 {
   border: 1px solid #076fe4;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 0 0 #8ebcf1;
   box-shadow: inset 0 1px 0 0 #8ebcf1;
@@ -988,7 +1058,6 @@ article#buttons section.demo button.example-1 {
 article#buttons section.demo button.example-2 {
   border: 1px solid #3371b2;
   border-color: #3371b2 #2457a3 #164297;
-  -webkit-border-radius: 16px;
   border-radius: 16px;
   -webkit-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
   box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3;
@@ -1037,7 +1106,6 @@ article#buttons section.demo button.example-2 {
 article#buttons section.demo button.example-3 {
   border: 1px solid #8a0000;
   border-bottom: 1px solid #810000;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: inset 0 1px 0 0 #ff1d0c;
   box-shadow: inset 0 1px 0 0 #ff1d0c;

@@ -87,7 +87,7 @@ section > article {
 
     &:hover {
       background-color: $background-color;
-      @include border-radius(20px);
+      border-radius: 20px;
       color: hsl(43, 13%, 60%);
     }
   }
