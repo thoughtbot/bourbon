@@ -5,12 +5,7 @@
                        $G7: false, $G8: false,
                        $G9: false, $G10: false,
                        $pos: 50% 50%,
-                       $shape-size: ellipse cover,
-                       $deprecated-pos1: center center,
-                       $deprecated-pos2: center center,
-                       $deprecated-radius1: 0,
-                       $deprecated-radius2: 50,
-                       $fallback: false) {
+                       $shape-size: ellipse cover) {
 
   @each $value in $G1, $G2 {
     $first-val: nth($value, 1);
