@@ -76,55 +76,55 @@
 }
 
 @mixin flex($value) {
-  @include prefixer(flex, $value);
+  @include prefixer(flex, $value, webkit moz spec);
 }
 
 @mixin flex-direction($value: row) {
 //  row | row-reverse | column | column-reverse
-  @include prefixer(flex-direction, $value);
+  @include prefixer(flex-direction, $value, webkit moz spec);
 }
 
 @mixin flex-wrap($value: nowrap) {
 // nowrap | wrap | wrap-reverse
-  @include prefixer(flex-wrap, $value);
+  @include prefixer(flex-wrap, $value, webkit moz spec);
 }
 @mixin flex-flow($value) {
 // flex-direction || flex-wrap
-  @include prefixer(flex-flow, $value);
+  @include prefixer(flex-flow, $value, webkit moz spec);
 }
 
 @mixin order($int: 0) {
-  @include prefixer(order, $int);
+  @include prefixer(order, $int, webkit moz spec);
 }
 
 @mixin flex-grow($number: 0) {
-  @include prefixer(flex-grow, $number);
+  @include prefixer(flex-grow, $number, webkit moz spec);
 }
 
 @mixin flex-shrink($number: 1) {
-  @include prefixer(flex-shrink, $number);
+  @include prefixer(flex-shrink, $number, webkit moz spec);
 }
 
 @mixin flex-basis($width: auto) {
-  @include prefixer(flex-basis, $width);
+  @include prefixer(flex-basis, $width, webkit moz spec);
 }
 
 @mixin justify-content ($value: flex-start) {
 // flex-start | flex-end | center | space-between | space-around
-  @include prefixer(justify-content, $value)
+  @include prefixer(justify-content, $value, webkit moz spec)
 }
 
 @mixin align-items($value: stretch) {
 // flex-start | flex-end | center | baseline | stretch
-  @include prefixer(align-items, $value)
+  @include prefixer(align-items, $value, webkit moz spec)
 }
 
 @mixin align-self($value: auto) {
 // auto | flex-start | flex-end | center | baseline | stretch
-  @include prefixer(align-self, $value)
+  @include prefixer(align-self, $value, webkit moz spec)
 }
 
 @mixin align-content($value: stretch) {
 // flex-start | flex-end | center | space-between | space-around | stretch
-  @include prefixer(align-content, $value)
+  @include prefixer(align-content, $value, webkit moz spec)
 }
