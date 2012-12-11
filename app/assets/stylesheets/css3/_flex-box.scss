@@ -64,7 +64,7 @@
     display: flex;
   }
 
-  @elseif $value == "inline-flex" {
+  @else if $value == "inline-flex" {
     display: -webkit-inline-flex;
     display: -moz-inline-flex;
     display: flex;
@@ -81,50 +81,50 @@
 
 @mixin flex-direction($value: row) {
 //  row | row-reverse | column | column-reverse
-  @include prefixer(flex-direction, $value);
+  @include prefixer(flex-direction, $value, spec webkit ms moz o);
 }
 
 @mixin flex-wrap($value: nowrap) {
 // nowrap | wrap | wrap-reverse
-  @include prefixer(flex-wrap, $value);
+  @include prefixer(flex-wrap, $value, spec webkit ms moz o);
 }
 @mixin flex-flow($value) {
 // flex-direction || flex-wrap
-  @include prefixer(flex-flow, $value);
+  @include prefixer(flex-flow, $value, spec webkit ms moz o);
 }
 
 @mixin order($int: 0) {
-  @include prefixer(order, $int);
+  @include prefixer(order, $int, spec webkit ms moz o);
 }
 
 @mixin flex-grow($number: 0) {
-  @include prefixer(flex-grow, $number);
+  @include prefixer(flex-grow, $number, spec webkit ms moz o);
 }
 
 @mixin flex-shrink($number: 1) {
-  @include prefixer(flex-shrink, $number);
+  @include prefixer(flex-shrink, $number, spec webkit ms moz o);
 }
 
 @mixin flex-basis($width: auto) {
-  @include prefixer(flex-basis, $width);
+  @include prefixer(flex-basis, $width, spec webkit ms moz o);
 }
 
-@mixin justify-content ($value: flex-start) {
+@mixin justify-content($value: flex-start) {
 // flex-start | flex-end | center | space-between | space-around
-  @include prefixer(justify-content, $value)
+  @include prefixer(justify-content, $value, spec webkit ms moz o);
 }
 
 @mixin align-items($value: stretch) {
 // flex-start | flex-end | center | baseline | stretch
-  @include prefixer(align-items, $value)
+  @include prefixer(align-items, $value, spec webkit ms moz o);
 }
 
 @mixin align-self($value: auto) {
 // auto | flex-start | flex-end | center | baseline | stretch
-  @include prefixer(align-self, $value)
+  @include prefixer(align-self, $value, spec webkit ms moz o);
 }
 
 @mixin align-content($value: stretch) {
 // flex-start | flex-end | center | space-between | space-around | stretch
-  @include prefixer(align-content, $value)
+  @include prefixer(align-content, $value, spec webkit ms moz o);
 }
