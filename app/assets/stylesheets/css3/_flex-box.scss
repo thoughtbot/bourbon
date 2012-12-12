@@ -74,7 +74,7 @@
 }
 
 @mixin flex($value) {
-  @include prefixer(flex, $value);
+  @include prefixer(flex, $value, spec webkit);
 }
 
 @mixin flex-direction($value: row) {
