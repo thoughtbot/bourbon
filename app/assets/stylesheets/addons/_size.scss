@@ -1,0 +1,15 @@
+@mixin size($width, $height) {
+	
+	@if $width == auto {
+    	width: $width;
+  	}
+  	@else if not(unitless($width)) {
+    	width: $width;
+  	}
+  	@if $height == auto {
+    	height: $height;
+  	}
+  	@else if not(unitless($height)) {
+    	height: $height;
+  	}
+}
