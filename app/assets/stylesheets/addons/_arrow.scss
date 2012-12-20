@@ -1,0 +1,22 @@
+@mixin arrow($direction, $h, $a, $b, $color) {
+  $a-dir: bottom;
+  $b-dir: top;
+  @if $direction == left or $direction == right {
+    $a-dir: bottom;
+    $b-dir: top;
+  }
+  @if $direction == top or $direction == bottom {
+    $a-dir: left;
+    $b-dir: right;
+  }
+
+  border-#{$a-dir}: $a solid transparent;
+  border-#{$b-dir}: $b solid transparent;
+  border-#{$direction}: $h solid $color;
+  bottom: 0;
+  content: '';
+  height: 0;
+  position: absolute;
+  right: 0;
+  width: 0;
+}
