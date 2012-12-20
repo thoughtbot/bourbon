@@ -1,34 +1,45 @@
-@mixin triangle ($width, $color, $direction) {
-	width: 0;
-	height: 0;
+@mixin triangle ($size, $color, $direction) {
+  height: 0;
+  width: 0;
 
-	@if $direction == up {
-		border-width: $width / 2;
-		border-style: solid;
-		border-color: transparent transparent $color transparent;
-	} @else if $direction == right {
-		border-width: $width / 2;
-		border-style: solid;
-		border-color: transparent transparent transparent $color;
-	} @else if $direction == down {
-		border-width: $width / 2;
-		border-style: solid;
-		border-color: $color transparent transparent transparent;
-	} @else if $direction == left {
-		border-width: $width / 2;
-		border-style: solid;
-		border-color: transparent $color transparent transparent;
-	} @else if $direction == upright {
-		border-top: $width solid $color;
-		border-left: $width solid transparent ;
-	} @else if $direction == upleft {
-		border-top: $width solid $color;
-		border-right: $width solid transparent ;
-	} @else if $direction == downright {
-		border-bottom: $width solid $color;
-		border-left: $width solid transparent ;
-	} @else if $direction == downleft {
-		border-bottom: $width solid $color;
-		border-right: $width solid transparent ;
-	}
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size / 2;
+
+    @if $direction == up {
+      border-bottom-color: $color;
+
+    } @else if $direction == right {
+      border-left-color:   $color;
+
+    } @else if $direction == down {
+      border-top-color:    $color;
+
+    } @else if $direction == left {
+      border-right-color:  $color;
+    }
+  }
+
+  @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $size solid $color;
+
+    @if $direction == up-right {
+      border-left:  $size solid transparent;
+
+    } @else if $direction == up-left {
+      border-right: $size solid transparent;
+    }
+  }
+
+  @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $size solid $color;
+
+    @if $direction == down-right {
+      border-left:  $size solid transparent;
+
+    } @else if $direction == down-left {
+      border-right: $size solid transparent;
+    }
+  }
 }
