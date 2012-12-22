@@ -1,0 +1,40 @@
+// Adds keyframes blocks for supported prefixes, removing redundant prefixes in the block's content
+@mixin keyframes($name) {
+  $original-prefixer-enabled-for-mozilla:   $prefixer-enabled-for-mozilla;
+  $original-prefixer-enabled-for-webkit:    $prefixer-enabled-for-webkit;
+  $original-prefixer-enabled-for-opera:     $prefixer-enabled-for-opera;
+  $original-prefixer-enabled-for-microsoft: $prefixer-enabled-for-microsoft;
+  $original-prefixer-enabled-for-spec:      $prefixer-enabled-for-spec;
+  
+  @if $original-prefixer-enabled-for-mozilla {
+    @include prefixer-disable-all();
+    $prefixer-enabled-for-mozilla: true;
+    @-moz-keyframes #{$name} { @content; }
+  }
+  @if $original-prefixer-enabled-for-webkit {
+    @include prefixer-disable-all();
+    $prefixer-enabled-for-webkit: true;
+    @-webkit-keyframes #{$name} { @content; }
+  }
+  @if $original-prefixer-enabled-for-opera {
+    @include prefixer-disable-all();
+    $prefixer-enabled-for-opera: true;
+    @-o-keyframes #{$name} { @content; }
+  }
+  @if $original-prefixer-enabled-for-microsoft {
+    @include prefixer-disable-all();
+    $prefixer-enabled-for-microsoft: true;
+    @-ms-keyframes #{$name} { @content; }
+  }
+  @if $original-prefixer-enabled-for-spec {
+    @include prefixer-disable-all();
+    $prefixer-enabled-for-spec: true;
+    @keyframes #{$name} { @content; }
+  }
+
+  $prefixer-enabled-for-mozilla:   $original-prefixer-enabled-for-mozilla;
+  $prefixer-enabled-for-webkit:    $original-prefixer-enabled-for-webkit;
+  $prefixer-enabled-for-opera:     $original-prefixer-enabled-for-opera;
+  $prefixer-enabled-for-microsoft: $original-prefixer-enabled-for-microsoft;
+  $prefixer-enabled-for-spec:      $original-prefixer-enabled-for-spec; 
+}
