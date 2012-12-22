@@ -1,27 +1,50 @@
+$prefixer-enabled-for-mozilla: true;
+$prefixer-enabled-for-webkit: true;
+$prefixer-enabled-for-opera: true;
+$prefixer-enabled-for-microsoft: true;
+$prefixer-enabled-for-spec: true;
+
 //************************************************************************//
 // Example: @include prefixer(border-radius, $radii, webkit ms spec);
 //************************************************************************//
 @mixin prefixer ($property, $value, $prefixes) {
 
   @each $prefix in $prefixes {
-
     @if $prefix == webkit {
-      -webkit-#{$property}: $value;
+      @if $prefixer-enabled-for-webkit {
+        -webkit-#{$property}: $value;
+      }
     }
     @else if $prefix == moz {
-      -moz-#{$property}: $value;
+      @if $prefixer-enabled-for-mozilla {
+        -moz-#{$property}: $value;
+      }
     }
     @else if $prefix == ms {
-      -ms-#{$property}: $value;
+      @if $prefixer-enabled-for-microsoft {
+        -ms-#{$property}: $value;
+      }
     }
     @else if $prefix == o {
-      -o-#{$property}: $value;
+      @if $prefixer-enabled-for-opera {
+        -o-#{$property}: $value;
+      }
     }
     @else if $prefix == spec {
-      #{$property}: $value;
+      @if $prefixer-enabled-for-spec {
+        #{$property}: $value;
+      }
     }
     @else  {
       @warn "Unrecognized prefix: #{$prefix}";
     }
   }
+}
+
+@mixin prefixer-disable-all() {
+  $prefixer-enabled-for-mozilla: false;
+  $prefixer-enabled-for-webkit: false;
+  $prefixer-enabled-for-opera: false;
+  $prefixer-enabled-for-microsoft: false;
+  $prefixer-enabled-for-spec: false;
 }
