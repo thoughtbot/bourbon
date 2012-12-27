@@ -4,6 +4,10 @@ $LOAD_PATH.unshift dir unless $LOAD_PATH.include?(dir)
 
 require "bourbon/generator"
 
+unless defined?(Sass)
+  require 'sass'
+end
+
 module Bourbon
   if defined?(Rails) && defined?(Rails::Engine)
     class Engine < ::Rails::Engine
@@ -17,9 +21,7 @@ module Bourbon
         end
       end
     end
+  else
+    Sass.load_paths << File.expand_path("../../app/assets/stylesheets", __FILE__)
   end
-end
-
-unless defined?(Sass)
-  require 'sass'
 end
