@@ -33,5 +33,11 @@
   <p>The names and logos for thoughtbot are trademarks of thoughtbot, inc.</p>
 
   <h3>License</h3>
-  <p>Bourbon is Copyright © 2011 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.</p>
+  <p>Bourbon is Copyright © <span id="year">2013</span> thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.</p>
 </article>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#year").text( new Date().getFullYear() );
+  });
+</script>
