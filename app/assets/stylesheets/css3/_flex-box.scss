@@ -50,3 +50,79 @@
 @mixin box-flex-group($int: 1) {
   @include prefixer(box-flex-group, $int, webkit moz spec);
 }
+
+
+//************************************************************************//
+// New Flexbox 2012 Spec
+// http://dev.w3.org/csswg/css3-flexbox/
+//************************************************************************//
+@mixin display($value) {
+//  flex | inline-flex
+  @if $value == "flex" {
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  @else if $value == "inline-flex" {
+    display: -webkit-inline-flex;
+    display: flex;
+  }
+
+  @else {
+    display: $value;
+  }
+}
+
+@mixin flex($value) {
+  @include prefixer(flex, $value, spec webkit);
+}
+
+@mixin flex-direction($value: row) {
+//  row | row-reverse | column | column-reverse
+  @include prefixer(flex-direction, $value, spec webkit);
+}
+
+@mixin flex-wrap($value: nowrap) {
+// nowrap | wrap | wrap-reverse
+  @include prefixer(flex-wrap, $value, spec webkit);
+}
+@mixin flex-flow($value) {
+// flex-direction || flex-wrap
+  @include prefixer(flex-flow, $value, spec webkit);
+}
+
+@mixin order($int: 0) {
+  @include prefixer(order, $int, spec webkit);
+}
+
+@mixin flex-grow($number: 0) {
+  @include prefixer(flex-grow, $number, spec webkit);
+}
+
+@mixin flex-shrink($number: 1) {
+  @include prefixer(flex-shrink, $number, spec webkit);
+}
+
+@mixin flex-basis($width: auto) {
+  @include prefixer(flex-basis, $width, spec webkit);
+}
+
+@mixin justify-content($value: flex-start) {
+// flex-start | flex-end | center | space-between | space-around
+  @include prefixer(justify-content, $value, spec webkit);
+}
+
+@mixin align-items($value: stretch) {
+// flex-start | flex-end | center | baseline | stretch
+  @include prefixer(align-items, $value, spec webkit);
+}
+
+@mixin align-self($value: auto) {
+// auto | flex-start | flex-end | center | baseline | stretch
+  @include prefixer(align-self, $value, spec webkit);
+}
+
+@mixin align-content($value: stretch) {
+// flex-start | flex-end | center | space-between | space-around | stretch
+  @include prefixer(align-content, $value, spec webkit);
+}
