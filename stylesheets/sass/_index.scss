@@ -11,7 +11,7 @@ div.main-inner {
   border-top: 0;
   @include box-sizing(border-box);
   clear: right;
-  float: left;
+  float: right;
   padding: 35px 0px;
   width: grid-width(7) + $gw-gutter;
   position: relative;
