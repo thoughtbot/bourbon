@@ -82,6 +82,11 @@
            $(parent).offset().top + $(parent).outerHeight();
   }
 
+  function page_starts_scrolled() {
+    return $(window).scrollTop() > 0 && relative_top_pos_up == 0;
+  }
+
+
   // if the item is taller than the viewport, run scrolling listener
   if ($(item).outerHeight() > $(window).height()) {
     $(window).scroll(function() {
@@ -89,8 +94,10 @@
 
       // while scroll up
       if (st < last_scroll_top) {
-
-        if (top_of_item_offscreen()) {
+        if (page_starts_scrolled()) {
+          relative_top_pos_up = $(item).offset().top - $(parent).offset().top;
+        }
+        else if (top_of_item_offscreen()) {
           $(item).css({
             'position': 'absolute',
             'top': relative_top_pos_up,
@@ -112,7 +119,6 @@
             'bottom': 'auto'
           });
         }
-
       }
 
       // while scroll down
