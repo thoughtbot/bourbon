@@ -7,7 +7,7 @@ nav.fixed-nav {
   float: left;
   min-height: 300px;
   width: grid-width(2);
-  position: relative;
+  position: fixed;
   z-index: 1;
 
   ul {
@@ -15,12 +15,9 @@ nav.fixed-nav {
     border-bottom: 0;
     border-left: 0;
     border-top: 0;
-    height: 100%;
     margin: 0;
-    overflow-y: scroll;
     padding: 0;
-    position: fixed;
-    width: inherit;
+    width: 100%;
 
     li {
       line-height: 170%;

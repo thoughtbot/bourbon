@@ -10,9 +10,19 @@ title: Bourbon Sass Mixins Library
     <meta name="description" content="A simple and lightweight mixin library for Sass.">
     <meta name="keywords" content="Bourbon, sass, scss, library, framework, syntactically awesome stylesheets, css" >
     <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="javascripts/waypoints.min.js"></script>
+    <script src="javascripts/smoothscroll.js"></script>
     <script src="javascripts/ticker.js"></script>
+    <script src="javascripts/stickem.js"></script>
+    <script src="javascripts/wigglesticks.js"></script>
+    <script type="text/javascript">
+      $(function() {
+          $('nav.fixed-nav').wigglesticks({
+          'container': '.main-content'
+        });
+      });
+    </script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-1485842-21']);
@@ -99,7 +109,6 @@ title: Bourbon Sass Mixins Library
         <section class="footer">
           {% include footer.html %}
         </section>
-
       </div>
     </div>
   </body>
