@@ -28,12 +28,12 @@ div.main-inner {
     background-color: hsl(43, 23%, 94%);
     @include box-shadow(1px 0 0 $background-color, -1px 0 0 $background-color);
     color: $base-font-color-alt;
-    text-align: center;
     font-size: 30px;
     font-weight: 600;
     line-height: 100%;
     margin: 00px 0 0;
     padding: 25px 0px 15px;
+    text-align: center;
     text-shadow: 0 1px 0 white;
 
     &.logo {
@@ -42,10 +42,17 @@ div.main-inner {
       background-repeat: no-repeat;
       border: 0;
       @include box-shadow(none);
+      display: inline-block;
       height: 58px;
       margin: 0 0 20px 0;
       padding: 0;
       text-indent: -9999px;
+      width: 400px;
+      background-size: contain;
+
+      @include hidpi {
+        background-image: url(../images/bourbon-logo@2x.png);
+      }
     }
   }
 }

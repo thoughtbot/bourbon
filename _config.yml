@@ -1,19 +1,18 @@
 safe:        false
 auto:        true
-server:      false
+server:      true
 server_port: 4000
 base-url:    /
 
 source:      .
 destination: ./_site
 plugins:     ./_plugins
-exclude:     ./app, ./doc, ./bourbon, ./demo, ./lib, sass, ./bourbon.gemspec, ./Gemfile, ./Gemfile.lock, ./generate-bourbon.sh, ./LICENSE, ./Rakefile, ./readme.md, ./features
+exclude:     ./app, ./documentation, ./bourbon, ./demo, ./lib, sass, ./bourbon.gemspec, ./Gemfile, ./Gemfile.lock, ./generate-bourbon.sh, ./LICENSE, ./Rakefile, ./readme.md, ./features
 
 future:      true
 lsi:         false
 pygments:    true
 markdown:    maruku
-permalink:   date
 
 maruku:
   use_tex:    false
@@ -39,4 +38,3 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: style
-
