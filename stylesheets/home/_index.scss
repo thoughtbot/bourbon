@@ -25,7 +25,6 @@ header {
     @include hide-text;
     @include calc(width, "100% - (#{$button-width} * 2 + 20px)");
     background: url('../images/bourbon-logo.png') no-repeat;
-    background-size: contain;
     display: block;
     height: 4.125rem;
     float: left;
@@ -37,6 +36,7 @@ header {
 
     @include hidpi {
       background-image: url('../images/bourbon-logo@2x.png');
+      background-size: contain;
     }
   }
 }
