@@ -1,0 +1,43 @@
+<article id="browser-support">
+  <h2>Browser Support &amp; Pull Requests</h2>
+  <p>Bourbon aims to provide support for CSS3 properties that are not yet fully supported in modern stable browsers.</p>
+  <p>A general rule when submitting a pull request for a new mixin, ask yourself the following: Do the following browsers <em>only</em> support the CSS3 properties using vendor specific prefixes?</p>
+  <p>If the answer is yes, there is a high chance the mixin will be accepted via a pull request. </p>
+  <ul>
+    <li>Firefox 3.6+</li>
+    <li>Safari 4.0+</li>
+    <li>Chrome 4.0+</li>
+    <li>Opera 10+</li>
+    <li>IE 9+</li>
+  </ul>
+
+  <p><strong>Bourbon does not intend to support IE filters.</strong></p>
+
+  <p>Resources for checking browser support:</p>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/">MDN - Moz Dev Network</a></li>
+    <li><a href="https://developer.mozilla.org/en/CSS_Reference/Mozilla_Extensions">Mozilla CSS Extensions</a></li>
+    <li><a href="http://css-infos.net/properties/webkit.php">Webkit CSS Properties</a></li>
+    <li><a href="http://msdn.microsoft.com/en-us/library/ms531207(v=VS.85).aspx">MSDN - Microsoft Dev Network</a></p></li>
+  </ul>
+</article>
+
+<article id="credits">
+  <a href="http://thoughtbot.com"><img src="images/thoughtbot-logo.png"/></a>
+
+  <h3>Got questions? Need help?</h3>
+  <p>Tweet at <a href="http://twitter.com/phillapier">@phillapier</a></p>
+
+  <h3>Credits</h3>
+  <p>Bourbon is maintained and funded by <a href="http://thoughtbot.com/community">thoughtbot</a>.</p>
+  <p>The names and logos for thoughtbot are trademarks of thoughtbot, inc.</p>
+
+  <h3>License</h3>
+  <p>Bourbon is Copyright © <span id="year">2013</span> thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.</p>
+</article>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#year").text( new Date().getFullYear() );
+  });
+</script>

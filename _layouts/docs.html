@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="description" content="{{ page.meta_description }}">
+    <meta name="keywords" content="{{ page.meta_keywords}}" >
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="shortcut icon" href="favicon.ico"/>
+  </head>
+  <body>
+
+  {{ content }}
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="/js/waypoints.min.js"></script>
+  <script src="/js/smoothscroll.js"></script>
+  <script src="/js/ticker.js"></script>
+  <script src="/js/stickem.js"></script>
+  <script src="/js/wigglesticks.js"></script>
+  <script type="text/javascript">
+    $(function() {
+        $('nav.fixed-nav').wigglesticks({
+        'container': '.main-content'
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1485842-21']);
+    _gaq.push(['_setDomainName', 'bourbon.io']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <script type="text/javascript" src="//use.typekit.net/icc0mhe.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </body>
+</html>

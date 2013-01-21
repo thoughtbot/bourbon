@@ -33,9 +33,9 @@ Delete the sprocket directive in application.css.scss: [Why?](https://github.com
 
 Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:
 
-    @import "bourbon";
-    @import "home";
-    @import "users";
+    @import 'bourbon';
+    @import 'home';
+    @import 'users';
 
 
 [Help! I'm getting an undefined mixin error.](https://github.com/thoughtbot/bourbon/wiki/Rails-Help-%5C-Undefined-mixin)

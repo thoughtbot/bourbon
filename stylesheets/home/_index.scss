@@ -1,0 +1,476 @@
+//************************************************************************//
+// Index
+//************************************************************************//
+
+header {
+  padding:2rem 0;
+
+  .buttons {
+    @include clearfix;
+    float: left;
+    width: $button-width * 2 + 20;
+
+    @include breakpoint(max-width 700px) {
+      @include span-columns(12);
+      margin-bottom: 20px;
+
+      .button {
+        margin: 0;
+        @include span-columns(6);
+      }
+    }
+  }
+
+  h1.brand {
+    @include hide-text;
+    @include calc(width, "100% - (#{$button-width} * 2 + 20px)");
+    background: url('../images/bourbon-logo.png') no-repeat;
+    background-size: contain;
+    display: block;
+    height: 4.125rem;
+    float: left;
+    margin-bottom: 2rem;
+
+    @include breakpoint(max-width 700px) {
+      @include span-columns(12);
+    }
+
+    @include hidpi {
+      background-image: url('../images/bourbon-logo@2x.png');
+    }
+  }
+}
+
+.content-wrapper {
+  // fix tooltip bug
+  overflow: hidden;
+}
+
+section.demo {
+  @include box-shadow(inset 0 -1px #eb412b, 0px 1px #e3e2dd);
+  @include linear-gradient(#f47a33, #f26234);
+  border-top: 1px solid #eb412b;
+  margin-bottom: -100px;
+  // overflow: hidden;
+
+  h2 {
+    color: white;
+    font-size: 4.5rem;
+    line-height: 1.2em;
+    padding: 50px 0;
+    text-align: center;
+    text-shadow: 0px 2px 2px darken(#d6692e, 10%);
+
+    @include breakpoint(max-width 768px) {
+      font-size: 2rem;
+      line-height: 1.4em;
+    }
+  }
+
+  .browser-wrapper {
+    $bottom: 0;
+    $left: 62;
+    $right: 10;
+    $top: 23;
+    @include border-image(url(../images/browser-frame.png) $top $right $bottom $left repeat);
+    border-radius: 6px 6px 0px 0px;
+    border-style: solid;
+    border-width: $top+px $right+px $bottom+px $left+px;
+    margin: 0 auto;
+    max-width: 960px;
+
+    @include hidpi {
+      @include border-image(url(../images/browser-frame@2x.png) $top*2 $right*2 $bottom $left*2 repeat);
+      border-width: $top+px $right+px $bottom+px $left+px;
+    }
+
+  }
+
+  #browser-container {
+    background: $base-background-color-blue;
+    @include box-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+    margin: 0 auto;
+    max-width: 960px;
+    position: relative;
+    font-size: 18px;
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+
+.browser-code {
+  position: relative;
+  color: #888;
+  padding-left: 30px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  pre {
+    background: $base-background-color-blue;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .row {
+    ::before {
+      background: hsla(0, 0%, 100%, 0.0);
+      content: "";
+      height: 19px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+      @include transition(background 0.3s);
+    }
+  }
+
+  .row.active, .row:hover {
+    ::before {
+      background: hsla(0, 0%, 100%, 0.025);
+    }
+  }
+
+  .row:hover {
+    cursor: pointer;
+  }
+
+  .a {
+    color: #F3712B;
+  }
+  .b {
+    color: desaturate(lighten(#2C8AD1, 15%), 00%);
+  }
+  .c {
+    color: lighten(#67CAD9, 10%);
+  }
+}
+
+//************************************************************************//
+// Browser Tooltip
+//************************************************************************//
+.tooltip {
+  background: white;
+  border-radius: 4px;
+  padding: 15px 30px 30px 30px;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 60%;
+  box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.20);
+  pointer-events: none;
+
+  &::before {
+    $size: 12px;
+    content: "";
+    height: $size;
+    width: $size;
+    position: absolute;
+    left: -6px;
+    top: 46%;
+    @include transform(rotate(45deg));
+    background: white;
+    line-height: 0;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  code {
+    color: #5A5A5A;
+  }
+}
+
+.show {
+  @extend %animation-poopin;
+  pointer-events: auto;
+}
+
+.hide {
+  @extend %animation-poopout;
+}
+
+@mixin pos-under {
+  width: 90% !important;
+  left: 20px !important;
+  padding: 15px 20px 20px !important;
+
+  &::before {
+    left: 60px;
+    top: -5px;
+    background: white;
+  }
+
+  code {
+    white-space: pre-wrap;
+  }
+}
+
+.tooltip.pos-under {
+  @include pos-under;
+  width: auto !important;
+}
+
+@include breakpoint(max-width 640px) {
+  .browser-code {
+    padding-left: 0px;
+  }
+  .tooltip {
+    @include pos-under;
+  }
+}
+
+@include breakpoint(max-width 480px) {
+}
+
+//************************************************************************//
+// 
+//************************************************************************//
+section.examples {
+  @include box-shadow(0 -5px 0 5px white, 0 -6px 0 6px #eb412b);
+  background-color:#f5f4f1;
+  border-top: 1px solid #e3e2dd;
+  padding-top: 100px;
+
+  .sass-wrapper {
+    @include span-columns(5);
+
+    @include breakpoint(max-width 768px) {
+      @include span-columns(12);
+    }
+  }
+
+  .css-wrapper {
+    @include span-columns(7);
+    @include omega;
+
+    @include breakpoint(max-width 768px) {
+      @include span-columns(12);
+    }
+  }
+}
+
+section.usage {
+  @include box-shadow(0px -1px #bfccd4, 0px -1px 0 1px #d8e1e5, 0px -2px 0 2px #bfccd4);
+  background-color: #f1f4f6;
+  margin: 3rem 0 0;
+  padding: 3rem 0 8rem;
+
+  @include breakpoint(max-width 480px) {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint(max-width 480px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  img.ruby {
+    display: block;
+    float: none;
+    margin: 1rem auto;
+    width: 125px;
+  }
+
+  .install-info {
+    @include span-columns(4);
+    @include shift(4);
+    clear: both;
+    text-align: center;
+
+    @include breakpoint(max-width 768px) {
+      @include span-columns(12);
+      margin: 0;
+    }
+  }
+
+  .install-instructions {
+    @include span-columns(8);
+    @include shift(2);
+    clear: both;
+
+    @include breakpoint(max-width 768px) {
+      @include span-columns(12);
+      margin: 0;
+    }
+  }
+
+  span a {
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
+    display: block;
+  }
+}
+
+section.apps {
+  background-color: #d8e1e5;
+  border-bottom: 1px solid #ced1d3;
+  border-top: 1px solid #ced1d3;
+  color: #535454;
+  padding: 6rem 0;
+  text-shadow: 0 1px white;
+
+  @include breakpoint(max-width 480px) {
+    padding: 3rem 0;
+  }
+
+  h3 {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    @include breakpoint(max-width 480px) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+section.apps ul.app-list {
+  @include span-columns(5);
+  margin-top: 3rem;
+
+  @include breakpoint(max-width 768px) {
+    @include span-columns(12);
+  }
+
+  @include breakpoint(max-width 480px) {
+    margin-top: 1.5rem;
+  }
+
+  li {
+    @include clearfix;
+    margin-bottom: 2rem;
+    padding-right: 20px;
+  }
+
+  li > a {
+    @include hide-text;
+    display: block;
+    height: 71px;
+    width: 71px;
+    float: left;
+
+    &.codekit {
+      background: url('../images/codekit.png') no-repeat;
+    }
+
+    &.hammer {
+      background: url('../images/hammer.png') no-repeat;
+    }
+
+    &.livereload {
+      background: url('../images/livereload.png') no-repeat;
+    }
+
+    @include hidpi {
+      &.codekit {
+        background: url('../images/codekit@2x.png') no-repeat;
+        background-size: 71px;
+      }
+
+      &.hammer {
+        background: url('../images/hammer@2x.png') no-repeat;
+        background-size: 71px;
+      }
+
+      &.livereload {
+        background: url('../images/livereload@2x.png') no-repeat;
+        background-size: 71px;
+      }
+    }
+  }
+
+  li p {
+    padding-left: 90px;
+
+    a {
+      color: #535454;
+    }
+  }
+}
+
+section.apps img {
+  @include span-columns(7);
+  @include omega;
+
+  @include breakpoint(max-width 768px) {
+    @include span-columns(12);
+  }
+}
+
+section.websites {
+  padding: 6rem 0;
+
+  @include breakpoint(max-width 480px) {
+    padding: 3rem 0;
+  }
+}
+
+section.websites a.website {
+  @include clearfix;
+  @include hide-text;
+  @include span-columns(3);
+  @include box-shadow(0 1px 2px rgba(0,0,0,.2));
+  border: 3px solid white;
+  display: block;
+  margin-top: 2rem;
+
+  @include breakpoint(max-width 768px) {
+    @include span-columns(6);
+    @include nth-omega(2n);
+  }
+
+  @include breakpoint(max-width 350px) {
+    @include span-columns(12);
+  }
+
+  img {
+    max-width: 100%;
+
+    &:hover {
+      -webkit-filter: brightness(5%);
+    }
+  }
+}
+
+footer {
+  background-color: $base-background-color-blue;
+  margin-top: 3rem;
+  padding: 3rem 0;
+
+  section.footer-text {
+
+    p {
+      color: #bbb;
+    }
+  }
+
+  section.buttons {
+    float: left;
+    margin-top: 2rem;
+    @include span-columns(12);
+
+    .button.docs {
+      border-color: black;
+
+      @include breakpoint(max-width 480px) {
+        @include span-columns(12);
+        margin: 10px 0 0;
+      }
+    }
+
+    .button.installation {
+      border-color: black;
+
+      @include breakpoint(max-width 480px) {
+        @include span-columns(12);
+      }
+    }
+  }
+}

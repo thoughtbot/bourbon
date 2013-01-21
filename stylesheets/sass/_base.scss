@@ -1,0 +1,74 @@
+//************************************************************************//
+// Base Styles
+//************************************************************************//
+
+html, body {
+  background-color: $background-color;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  width: 100%;
+  width: grid-width(9) + ($gw-gutter * 2);
+  margin: 0 auto;
+}
+
+html {
+  padding: 0;
+}
+
+h1 {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+h1, h2 {
+  font-size: golden-ratio(14px, 1) + 4px;
+  font-family: "proxima-nova-soft", $helvetica;
+}
+
+h2 {
+  font-weight: 300;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+p, div.highlight {
+  & + h2 {
+    margin-top: 2em;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+}
+
+h4, h5, h6 {
+  font-size: golden-ratio(13px, 0);
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+a, a:link, a:active, a:visited {
+  color: hsl(212, 89%, 55%);
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(212, 94%, 36%);
+}
+
+// Wrapper for any occasion
+div.wrapper {
+  margin-bottom: 20px;
+}
+
+.alert {
+  color: $orange;
+  font-style: italic;
+}

@@ -1,0 +1,14 @@
+<article id="font-face">
+  <h2>Font-Face <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss">View source</a></h2>
+  <p>A simple <code>@font-face</code> mixin allowing easier custom fonts integration, like so:</p>
+  <p>The mixin also takes an optional <code>$asset-pipeline: true</code> argument for use with the Rails asset pipeline.</p>
+
+{% highlight scss %}
+@include font-face(nobile, '/fonts/nobile');
+@include font-face(nobile, '/fonts/nobile_bold', bold);
+@include font-face(nobile, '/fonts/nobile_italic', normal, italic);
+
+// Rails asset-pipeline - place fonts in app/assets/fonts/
+@include font-face(nobile, '/nobile', normal, $asset-pipeline: true);
+{% endhighlight %}
+</article>

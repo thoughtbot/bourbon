@@ -1,0 +1,50 @@
+<article id="html5-input-types">
+  <h2>HTML5 Input Types <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_html5-input-types.scss">View source</a></h2>
+  <p>This addon provides you with three variables which each contain a list of all html5 input types that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimic <code>input[type="text"]</code>.</p>
+  <!-- <p>There are three variables you can use:</p> -->
+  <!-- <ul> -->
+    <!-- <li><code>#{$all-text-inputs}</code></li> -->
+    <!-- <li><code>#{$all-text-inputs-hover}</code>&mdash; generates selectors that target all-text-inputs with <code>:hover</code> pseudo-classes</li> -->
+    <!-- <li><code>#{$all-text-inputs-focus}</code>&mdash; generates selectors that target all-text-inputs with <code>:focus</code> pseudo-classes</li> -->
+  </ul>
+  <p>Note: You must use interpolation with the variable&mdash;<code>#{ }</code>.</p>
+
+{% highlight scss %}
+#{$all-text-inputs} {
+  border: 1px solid green;
+}
+
+#{$all-text-inputs-hover} { // Target the :hover pseudo-class
+  background: yellow;
+}
+
+#{$all-text-inputs-focus} { // Target the :focus pseudo-class
+  background: white;
+}
+{% endhighlight %}
+
+<h3>CSS Output</h3>
+{% highlight scss %}
+input[type="email"], input[type="number"],   input[type="password"], input[type="search"],
+input[type="tel"],   input[type="text"],     input[type="url"],      input[type="color"],
+input[type="date"],  input[type="datetime"], input[type="datetime-local"],
+input[type="month"], input[type="time"],     input[type="week"] {
+  border: 1px solid green;
+}
+
+input[type="email"]:hover, input[type="number"]:hover,   input[type="password"]:hover, input[type="search"]:hover,
+input[type="tel"]:hover,   input[type="text"]:hover,     input[type="url"]:hover,      input[type="color"]:hover,
+input[type="date"]:hover,  input[type="datetime"]:hover, input[type="datetime-local"]:hover,
+input[type="month"]:hover, input[type="time"]:hover,     input[type="week"]:hover {
+  background: yellow;
+}
+
+input[type="email"]:focus, input[type="number"]:focus,   input[type="password"]:focus, input[type="search"]:focus,
+input[type="tel"]:focus,   input[type="text"]:focus,     input[type="url"]:focus,      input[type="color"]:focus,
+input[type="date"]:focus,  input[type="datetime"]:focus, input[type="datetime-local"]:focus,
+input[type="month"]:focus, input[type="time"]:focus,     input[type="week"]:focus {
+  background: white;
+}
+{% endhighlight %}
+
+</article>

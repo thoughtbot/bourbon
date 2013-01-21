@@ -1,0 +1,16 @@
+<article id="golden-ratio">
+  <h2>Golden Ratio <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">View Source</a></h2>
+  <p>Returns the golden ratio of a given number. Must provide a pixel or em value for the first argument. Also takes a required integer for an increment value: ...-3, -2, -1, 0, 1, 2, 3...</p>
+  <p>Note: The golden-ratio function can be wrapped in sass's <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down, or round up respectively.</p>
+
+{% highlight scss %}
+// Positive number will increment up the golden-ratio
+font-size: golden-ratio(14px,  1);
+// returns: 22.652px
+
+// Negative number will increment down the golden-ratio
+font-size: golden-ratio(14px, -1);
+// returns: 8.653px
+{% endhighlight %}
+  <p>Resources: <a href="http://modularscale.com/">modularscale.com</a> & <a href="http://goldenratiocalculator.com/">goldenrationcalculator.com</a></p>
+</article>
