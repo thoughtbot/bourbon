@@ -614,6 +614,14 @@ nav.fixed-nav {
           nav.fixed-nav ul li a h3:hover {
             color: #666666; }
 
+@media only screen and (max-device-width: 1024px) {
+  nav.fixed-nav {
+    position: static; }
+    nav.fixed-nav ul {
+      height: 100%;
+      overflow-y: scroll;
+      position: fixed;
+      width: inherit; } }
 div.highlight {
   background-color: transparent;
   width: 100%; }
