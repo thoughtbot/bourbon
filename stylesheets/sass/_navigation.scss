@@ -7,7 +7,7 @@ nav.fixed-nav {
   float: left;
   min-height: 300px;
   width: grid-width(2);
-  position: fixed;
+  position: relative;
   z-index: 1;
 
   ul {
@@ -15,9 +15,13 @@ nav.fixed-nav {
     border-bottom: 0;
     border-left: 0;
     border-top: 0;
+    height: 100%;
     margin: 0;
+    overflow-y: scroll;
     padding: 0;
-    width: 100%;
+    position: fixed;
+    width: inherit;
+
 
     li {
       line-height: 170%;
@@ -81,19 +85,6 @@ nav.fixed-nav {
           }
         }
       }
-    }
-  }
-}
-
-@media only screen and (max-device-width: 1024px) {
-  nav.fixed-nav {
-    position: static;
-
-    ul {
-      height: 100%;
-      overflow-y: scroll;
-      position: fixed;
-      width: inherit;
     }
   }
 }
