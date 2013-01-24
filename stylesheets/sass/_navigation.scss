@@ -84,3 +84,16 @@ nav.fixed-nav {
     }
   }
 }
+
+@media only screen and (max-device-width: 1024px) {
+  nav.fixed-nav {
+    position: static;
+
+    ul {
+      height: 100%;
+      overflow-y: scroll;
+      position: fixed;
+      width: inherit;
+    }
+  }
+}
