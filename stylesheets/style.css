@@ -474,7 +474,7 @@ div.main-inner {
       margin: 0 0 20px 0;
       padding: 0;
       text-indent: -9999px;
-      width: 400px;
+      width: 330px;
       background-size: contain; }
       @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
         div.main-inner h1.logo {
@@ -518,27 +518,10 @@ section > article {
       color: #a69f8c; }
 
 section.intro-wrapper article {
-  padding-top: 45px; }
-section.intro-wrapper #intro {
-  border-bottom: none;
-  padding-bottom: 0px;
-  padding-top: 0; }
-  section.intro-wrapper #intro p a + a {
-    margin-left: 20px; }
-  section.intro-wrapper #intro ul {
-    padding: 10px 0; }
-    section.intro-wrapper #intro ul li {
-      list-style-type: none;
-      margin: 0; }
-      section.intro-wrapper #intro ul li h4 {
-        color: #333;
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 0;
-        line-height: 1.6em; }
-      section.intro-wrapper #intro ul li p {
-        margin: 0 0 1em;
-        color: #7e7b73; }
+  background: none;
+  border: 0;
+  padding: 0;
+  text-align: center; }
 
 article:target {
   -webkit-box-shadow: inset 4px 0 0px 0 #fc511d;

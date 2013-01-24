@@ -47,7 +47,7 @@ div.main-inner {
       margin: 0 0 20px 0;
       padding: 0;
       text-indent: -9999px;
-      width: 400px;
+      width: 330px;
       background-size: contain;
 
       @include hidpi {
@@ -106,39 +106,10 @@ section > article {
 //************************************************************************//
 section.intro-wrapper {
   article {
-    padding-top: 45px;
-  }
-
-  #intro {
-    border-bottom: none;
-    padding-bottom: 0px;
-    padding-top: 0;
-
-    p a + a {
-      margin-left: 20px;
-    }
-
-    ul {
-      padding: 10px 0;
-
-      li {
-        list-style-type: none;
-        margin: 0;
-
-        h4 {
-          color: #333;
-          font-size: 14px;
-          font-weight: bold;
-          margin-bottom: 0;
-          line-height: 1.6em;
-        }
-
-        p {
-          margin: 0 0 1.0em;
-          color: darken($base-font-color-alt, 5%);
-        }
-      }
-    }
+    background: none;
+    border: 0;
+    padding: 0;
+    text-align: center;
   }
 }
 
