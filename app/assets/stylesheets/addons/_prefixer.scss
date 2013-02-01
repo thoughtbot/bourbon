@@ -1,20 +1,25 @@
 //************************************************************************//
 // Example: @include prefixer(border-radius, $radii, webkit ms spec);
 //************************************************************************//
+$experimental-support-for-webkit    : true !default;
+$experimental-support-for-mozilla   : true !default;
+$experimental-support-for-microsoft : true !default;
+$experimental-support-for-opera     : true !default;
+
 @mixin prefixer ($property, $value, $prefixes) {
 
   @each $prefix in $prefixes {
 
-    @if $prefix == webkit {
+    @if $prefix == webkit and $experimental-support-for-webkit == true {
       -webkit-#{$property}: $value;
     }
-    @else if $prefix == moz {
+    @else if $prefix == moz and $experimental-support-for-mozilla == true {
       -moz-#{$property}: $value;
     }
-    @else if $prefix == ms {
+    @else if $prefix == ms and $experimental-support-for-microsoft == true {
       -ms-#{$property}: $value;
     }
-    @else if $prefix == o {
+    @else if $prefix == o and $experimental-support-for-opera == true {
       -o-#{$property}: $value;
     }
     @else if $prefix == spec {
