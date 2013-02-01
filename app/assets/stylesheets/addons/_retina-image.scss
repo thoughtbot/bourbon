@@ -1,7 +1,5 @@
-@mixin retina-image($filename, $image-width, $image-height, $extension: png, $retina-filename: null, $asset-pipeline: false) {
+@mixin retina-image($filename, $background-size, $extension: png, $retina-filename: null, $asset-pipeline: false) {
   background-image: url($filename + "." + $extension);
-  height: $image-height;
-  width:  $image-width;
 
   @include hidpi {
 
@@ -23,7 +21,7 @@
       }
     }
 
-    background-size: $image-width $image-height;
+    background-size: $background-size;
 
   }
 }
