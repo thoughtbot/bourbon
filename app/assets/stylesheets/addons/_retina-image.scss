@@ -5,7 +5,7 @@
 
     @if $asset-pipeline {
       @if $retina-filename {
-        background-image: image_url($retina-filename + "@2x" + "." + $extension);
+        background-image: image_url($retina-filename + "." + $extension);
       }
       @else {
         background-image: image_url($filename + "@2x" + "." + $extension);
@@ -14,7 +14,7 @@
 
     @else {
       @if $retina-filename {
-        background-image: url($retina-filename + "@2x" + "." + $extension);
+        background-image: url($retina-filename + "." + $extension);
       }
       @else {
         background-image: url($filename + "@2x" + "." + $extension);
