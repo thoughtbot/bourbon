@@ -1,0 +1,11 @@
+@mixin class-prefix($selector, $property, $value...) {
+  .#{$selector} & {
+    #{$property}: $value;
+  }
+}
+
+@mixin id-prefix($selector, $property, $value...) {
+  ##{$selector} & {
+    #{$property}: $value;
+  }
+}
