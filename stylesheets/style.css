@@ -551,8 +551,7 @@ nav.fixed-nav {
     width: inherit; }
     nav.fixed-nav ul li {
       line-height: 170%;
-      list-style-type: none;
-      text-transform: capitalize; }
+      list-style-type: none; }
       nav.fixed-nav ul li:first-child {
         margin-top: 35px; }
       nav.fixed-nav ul li.title:not(:first-child) {
