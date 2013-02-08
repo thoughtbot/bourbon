@@ -162,6 +162,21 @@ article#radial-gradient, article#radial-gradient-function {
     height: 40px;
   }
 }
+//************************************************************************//
+// triangle
+//************************************************************************//
+article#triangle {
+  section.demo {
+    $positions: up, right, down, left, up-right, down-right, down-left, up-left;
+    @each $pos in $positions {
+      div.#{$pos} {
+        @include triangle(12px, gray, $pos);
+        display: inline-block;
+      }
+    }
+  }
+}
+
 
 
 //************************************************************************//
