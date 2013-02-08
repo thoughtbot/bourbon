@@ -994,63 +994,6 @@ article#radial-gradient section.demo, article#radial-gradient-function section.d
   background-image: radial-gradient(50% 50%, circle cover, #8fdce5, #3dc3d1);
   height: 40px; }
 
-article#triangle section.demo div.up {
-  height: 0;
-  width: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 6px;
-  border-bottom-color: gray;
-  display: inline-block; }
-article#triangle section.demo div.right {
-  height: 0;
-  width: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 6px;
-  border-left-color: gray;
-  display: inline-block; }
-article#triangle section.demo div.down {
-  height: 0;
-  width: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 6px;
-  border-top-color: gray;
-  display: inline-block; }
-article#triangle section.demo div.left {
-  height: 0;
-  width: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 6px;
-  border-right-color: gray;
-  display: inline-block; }
-article#triangle section.demo div.up-right {
-  height: 0;
-  width: 0;
-  border-top: 12px solid gray;
-  border-left: 12px solid transparent;
-  display: inline-block; }
-article#triangle section.demo div.down-right {
-  height: 0;
-  width: 0;
-  border-bottom: 12px solid gray;
-  border-left: 12px solid transparent;
-  display: inline-block; }
-article#triangle section.demo div.down-left {
-  height: 0;
-  width: 0;
-  border-bottom: 12px solid gray;
-  border-right: 12px solid transparent;
-  display: inline-block; }
-article#triangle section.demo div.up-left {
-  height: 0;
-  width: 0;
-  border-top: 12px solid gray;
-  border-right: 12px solid transparent;
-  display: inline-block; }
-
 article#buttons section.demo button.example-1 {
   border: 1px solid #076fe4;
   border-radius: 3px;
@@ -1341,3 +1284,60 @@ article#timing-functions section.demo div.ease-in-out-back {
   -ms-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -o-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+article#triangle section.demo div.up {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 6px;
+  border-bottom-color: gray;
+  display: inline-block; }
+article#triangle section.demo div.right {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 6px;
+  border-left-color: gray;
+  display: inline-block; }
+article#triangle section.demo div.down {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 6px;
+  border-top-color: gray;
+  display: inline-block; }
+article#triangle section.demo div.left {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 6px;
+  border-right-color: gray;
+  display: inline-block; }
+article#triangle section.demo div.up-right {
+  height: 0;
+  width: 0;
+  border-top: 12px solid gray;
+  border-left: 12px solid transparent;
+  display: inline-block; }
+article#triangle section.demo div.down-right {
+  height: 0;
+  width: 0;
+  border-bottom: 12px solid gray;
+  border-left: 12px solid transparent;
+  display: inline-block; }
+article#triangle section.demo div.down-left {
+  height: 0;
+  width: 0;
+  border-bottom: 12px solid gray;
+  border-right: 12px solid transparent;
+  display: inline-block; }
+article#triangle section.demo div.up-left {
+  height: 0;
+  width: 0;
+  border-top: 12px solid gray;
+  border-right: 12px solid transparent;
+  display: inline-block; }

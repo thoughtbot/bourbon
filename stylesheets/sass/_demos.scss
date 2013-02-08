@@ -153,6 +153,7 @@ article#linear-gradient-function {
     height: 40px;
   }
 }
+
 //************************************************************************//
 // Radial-gradient Mixin
 //************************************************************************//
@@ -162,22 +163,6 @@ article#radial-gradient, article#radial-gradient-function {
     height: 40px;
   }
 }
-//************************************************************************//
-// triangle
-//************************************************************************//
-article#triangle {
-  section.demo {
-    $positions: up, right, down, left, up-right, down-right, down-left, up-left;
-    @each $pos in $positions {
-      div.#{$pos} {
-        @include triangle(12px, gray, $pos);
-        display: inline-block;
-      }
-    }
-  }
-}
-
-
 
 //************************************************************************//
 // Button Addon
@@ -197,7 +182,6 @@ article#buttons {
     }
   }
 }
-
 
 //************************************************************************//
 // Font-Family
@@ -268,5 +252,20 @@ article#timing-functions {
     div.ease-in-out-expo  { @include transition-timing-function($ease-in-out-expo ); }
     div.ease-in-out-circ  { @include transition-timing-function($ease-in-out-circ ); }
     div.ease-in-out-back  { @include transition-timing-function($ease-in-out-back ); }
+  }
+}
+
+//************************************************************************//
+// triangle
+//************************************************************************//
+article#triangle {
+  section.demo {
+    $positions: up, right, down, left, up-right, down-right, down-left, up-left;
+    @each $pos in $positions {
+      div.#{$pos} {
+        @include triangle(12px, gray, $pos);
+        display: inline-block;
+      }
+    }
   }
 }
