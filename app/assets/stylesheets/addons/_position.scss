@@ -5,6 +5,8 @@
     $position: relative;
   }
 
+  $coordinates: unpack($coordinates);
+
   $top: nth($coordinates, 1);
   $right: nth($coordinates, 2);
   $bottom: nth($coordinates, 3);
