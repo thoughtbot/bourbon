@@ -1,0 +1,6 @@
+// This mixin assumes `font-size: 62.5%` on the html or body tag.
+// Doing so gives us a convenient 1rem == 10px relation.
+@mixin rem($font-size) {
+  font-size: $font-size + px;
+  font-size: $font-size / 10 + rem;
+}
