@@ -1,5 +1,10 @@
 @mixin retina-image($filename, $background-size, $extension: png, $retina-filename: null, $asset-pipeline: false) {
-  background-image: url($filename + "." + $extension);
+  @if $asset-pipeline {
+    background-image: image_url($filename + "." + $extension);
+  }
+  @else {
+    background-image: url($filename + "." + $extension);
+  }
 
   @include hidpi {
 
