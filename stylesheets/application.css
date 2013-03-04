@@ -202,7 +202,7 @@ h5 {
 
 p {
   font-size: 1.125rem;
-  margin: .5em 0;
+  margin: 0.5em 0;
   line-height: 1.5em; }
 
 a, a:link, a:active, a:visited {
@@ -545,7 +545,7 @@ header {
     width: -o-calc(100% - (154px * 2 + 20px));
     width: -webkit-calc(100% - (154px * 2 + 20px));
     width: calc(100% - (154px * 2 + 20px));
-    background: url("../images/bourbon-logo.png") no-repeat;
+    background: url("../images/shared/bourbon-logo.png") no-repeat;
     display: block;
     height: 4.125rem;
     float: left;
@@ -560,7 +560,7 @@ header {
           margin-right: 0; } }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
       header h1.brand {
-        background-image: url("../images/bourbon-logo@2x.png");
+        background-image: url("../images/shared/bourbon-logo@2x.png");
         background-size: contain; } }
 
 .content-wrapper {
@@ -590,10 +590,10 @@ section.demo {
         font-size: 2rem;
         line-height: 1.4em; } }
   section.demo .browser-wrapper {
-    -webkit-border-image: url(../images/browser-frame.png) 23 10 0 62 repeat;
-    -moz-border-image: url(../images/browser-frame.png) 23 10 0 62 repeat;
-    -o-border-image: url(../images/browser-frame.png) 23 10 0 62 repeat;
-    border-image: url(../images/browser-frame.png) 23 10 0 62 repeat;
+    -webkit-border-image: url(../images/marketing/browser-frame.png) 23 10 0 62 repeat;
+    -moz-border-image: url(../images/marketing/browser-frame.png) 23 10 0 62 repeat;
+    -o-border-image: url(../images/marketing/browser-frame.png) 23 10 0 62 repeat;
+    border-image: url(../images/marketing/browser-frame.png) 23 10 0 62 repeat;
     border-radius: 6px 6px 0px 0px;
     border-style: solid;
     border-width: 23px 10px 0px 62px;
@@ -601,10 +601,10 @@ section.demo {
     max-width: 960px; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
       section.demo .browser-wrapper {
-        -webkit-border-image: url(../images/browser-frame@2x.png) 46 20 0 124 repeat;
-        -moz-border-image: url(../images/browser-frame@2x.png) 46 20 0 124 repeat;
-        -o-border-image: url(../images/browser-frame@2x.png) 46 20 0 124 repeat;
-        border-image: url(../images/browser-frame@2x.png) 46 20 0 124 repeat;
+        -webkit-border-image: url(../images/marketing/browser-frame@2x.png) 46 20 0 124 repeat;
+        -moz-border-image: url(../images/marketing/browser-frame@2x.png) 46 20 0 124 repeat;
+        -o-border-image: url(../images/marketing/browser-frame@2x.png) 46 20 0 124 repeat;
+        border-image: url(../images/marketing/browser-frame@2x.png) 46 20 0 124 repeat;
         border-width: 23px 10px 0px 62px; } }
   section.demo #browser-container {
     background: #494f57;
@@ -868,20 +868,20 @@ section.apps ul.app-list {
     width: 71px;
     float: left; }
     section.apps ul.app-list li > a.codekit {
-      background: url("../images/codekit.png") no-repeat; }
+      background: url("../images/marketing/codekit.png") no-repeat; }
     section.apps ul.app-list li > a.hammer {
-      background: url("../images/hammer.png") no-repeat; }
+      background: url("../images/marketing/hammer.png") no-repeat; }
     section.apps ul.app-list li > a.livereload {
-      background: url("../images/livereload.png") no-repeat; }
+      background: url("../images/marketing/livereload.png") no-repeat; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
       section.apps ul.app-list li > a.codekit {
-        background: url("../images/codekit@2x.png") no-repeat;
+        background: url("../images/marketing/codekit@2x.png") no-repeat;
         background-size: 71px; }
       section.apps ul.app-list li > a.hammer {
-        background: url("../images/hammer@2x.png") no-repeat;
+        background: url("../images/marketing/hammer@2x.png") no-repeat;
         background-size: 71px; }
       section.apps ul.app-list li > a.livereload {
-        background: url("../images/livereload@2x.png") no-repeat;
+        background: url("../images/marketing/livereload@2x.png") no-repeat;
         background-size: 71px; } }
   section.apps ul.app-list li p {
     padding-left: 90px; }

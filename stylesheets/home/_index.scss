@@ -24,7 +24,7 @@ header {
   h1.brand {
     @include hide-text;
     @include calc(width, "100% - (#{$button-width} * 2 + 20px)");
-    background: url('../images/bourbon-logo.png') no-repeat;
+    background: url('../images/shared/bourbon-logo.png') no-repeat;
     display: block;
     height: 4.125rem;
     float: left;
@@ -35,7 +35,7 @@ header {
     }
 
     @include hidpi {
-      background-image: url('../images/bourbon-logo@2x.png');
+      background-image: url('../images/shared/bourbon-logo@2x.png');
       background-size: contain;
     }
   }
@@ -72,7 +72,7 @@ section.demo {
     $left: 62;
     $right: 10;
     $top: 23;
-    @include border-image(url(../images/browser-frame.png) $top $right $bottom $left repeat);
+    @include border-image(url(../images/marketing/browser-frame.png) $top $right $bottom $left repeat);
     border-radius: 6px 6px 0px 0px;
     border-style: solid;
     border-width: $top+px $right+px $bottom+px $left+px;
@@ -80,7 +80,7 @@ section.demo {
     max-width: 960px;
 
     @include hidpi {
-      @include border-image(url(../images/browser-frame@2x.png) $top*2 $right*2 $bottom $left*2 repeat);
+      @include border-image(url(../images/marketing/browser-frame@2x.png) $top*2 $right*2 $bottom $left*2 repeat);
       border-width: $top+px $right+px $bottom+px $left+px;
     }
 
@@ -357,30 +357,30 @@ section.apps ul.app-list {
     float: left;
 
     &.codekit {
-      background: url('../images/codekit.png') no-repeat;
+      background: url('../images/marketing/codekit.png') no-repeat;
     }
 
     &.hammer {
-      background: url('../images/hammer.png') no-repeat;
+      background: url('../images/marketing/hammer.png') no-repeat;
     }
 
     &.livereload {
-      background: url('../images/livereload.png') no-repeat;
+      background: url('../images/marketing/livereload.png') no-repeat;
     }
 
     @include hidpi {
       &.codekit {
-        background: url('../images/codekit@2x.png') no-repeat;
+        background: url('../images/marketing/codekit@2x.png') no-repeat;
         background-size: 71px;
       }
 
       &.hammer {
-        background: url('../images/hammer@2x.png') no-repeat;
+        background: url('../images/marketing/hammer@2x.png') no-repeat;
         background-size: 71px;
       }
 
       &.livereload {
-        background: url('../images/livereload@2x.png') no-repeat;
+        background: url('../images/marketing/livereload@2x.png') no-repeat;
         background-size: 71px;
       }
     }

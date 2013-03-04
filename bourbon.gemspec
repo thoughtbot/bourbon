@@ -31,4 +31,8 @@ that support only CSS3 prefixed properties.
 
   s.add_development_dependency('aruba', '~> 0.4')
   s.add_development_dependency('rake')
+  s.add_development_dependency('jekyll')
+  s.add_development_dependency('albino')
+  s.add_development_dependency('nokogiri')
+  s.add_development_dependency('sqlite3')
 end

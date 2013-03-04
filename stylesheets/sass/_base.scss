@@ -10,6 +10,10 @@ html, body {
   width: 100%;
   width: grid-width(9) + ($gw-gutter * 2);
   margin: 0 auto;
+
+  &.docset {
+    width: 100%;
+  }
 }
 
 html {

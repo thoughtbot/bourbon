@@ -95,7 +95,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -113,7 +113,7 @@ mark {
 /* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
 pre, code, kbd, samp {
   font-family: monospace, monospace;
-  _font-family: 'courier new', monospace;
+  _font-family: "courier new", monospace;
   font-size: 1em; }
 
 /* Improve readability of pre-formatted text in all browsers */
@@ -342,7 +342,7 @@ table {
 
   /* Black prints faster: sanbeiji.com/archives/953 */
   a, a:visited {
-    color: #444 !important;
+    color: #444444 !important;
     text-decoration: underline; }
 
   a[href]:after {
@@ -356,7 +356,7 @@ table {
 
   /* Don't show links for images, or javascript/internal links */
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid; }
 
   thead {
@@ -386,6 +386,8 @@ html, body {
   width: 100%;
   width: 1114px;
   margin: 0 auto; }
+  html.docset, body.docset {
+    width: 100%; }
 
 html {
   padding: 0; }
@@ -436,7 +438,7 @@ div.wrapper {
 div.main-content {
   padding: 0px 16px; }
 
-div.main-inner {
+div.main-inner, div.docset-content {
   border-bottom: 0;
   border-top: 0;
   -webkit-box-sizing: border-box;
@@ -448,22 +450,22 @@ div.main-inner {
   width: 854px;
   position: relative;
   z-index: 1; }
-  div.main-inner h2.tagline {
+  div.main-inner h2.tagline, div.docset-content h2.tagline {
     margin: 0; }
-  div.main-inner h1 {
+  div.main-inner h1, div.docset-content h1 {
     background-color: #f3f1ec;
     box-shadow: 1px 0 0 #f3f1ec, -1px 0 0 #f3f1ec;
     color: #8b8880;
     font-size: 30px;
     font-weight: 600;
     line-height: 100%;
-    margin: 00px 0 0;
+    margin: 0px 0 0;
     padding: 25px 0px 15px;
     text-align: center;
     text-shadow: 0 1px 0 white; }
-    div.main-inner h1.logo {
+    div.main-inner h1.logo, div.docset-content h1.logo {
       background-color: transparent;
-      background-image: url(../images/bourbon-logo.png);
+      background-image: url(../images/shared/bourbon-logo.png);
       background-repeat: no-repeat;
       border: 0;
       box-shadow: none;
@@ -475,8 +477,16 @@ div.main-inner {
       width: 330px;
       background-size: contain; }
       @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-        div.main-inner h1.logo {
-          background-image: url(../images/bourbon-logo@2x.png); } }
+        div.main-inner h1.logo, div.docset-content h1.logo {
+          background-image: url(../images/shared/bourbon-logo@2x.png); } }
+
+div.docset-content {
+  float: left;
+  width: 100%; }
+  div.docset-content h1 {
+    text-align: left; }
+  div.docset-content section.intro-wrapper article {
+    text-align: left; }
 
 section > article {
   background: white;
@@ -573,7 +583,7 @@ nav.fixed-nav {
         transition: all 0.15s ease-out 0; }
         nav.fixed-nav ul li a.active:before, nav.fixed-nav ul li a.inview:before {
           border-radius: 100px;
-          border-top: .25em solid #ccc;
+          border-top: 0.25em solid #cccccc;
           content: '';
           display: block;
           position: absolute;
@@ -625,7 +635,7 @@ p code, ul code, ol code {
   background-color: #f3f1ec;
   border: 1px solid #ebe8e0;
   color: #454545;
-  padding: 0 .2em; }
+  padding: 0 0.2em; }
 
 @-webkit-keyframes scale {
   0% {
@@ -873,10 +883,10 @@ article#background-image section.demo {
   width: 100%; }
 
 article#border-image section.demo {
-  -webkit-border-image: url(../images/border.png) 27 repeat;
-  -moz-border-image: url(../images/border.png) 27 repeat;
-  -o-border-image: url(../images/border.png) 27 repeat;
-  border-image: url(../images/border.png) 27 repeat;
+  -webkit-border-image: url(../images/documentation/border.png) 27 repeat;
+  -moz-border-image: url(../images/documentation/border.png) 27 repeat;
+  -o-border-image: url(../images/documentation/border.png) 27 repeat;
+  border-image: url(../images/documentation/border.png) 27 repeat;
   border-width: 27px;
   width: 81px;
   height: 27px; }
