@@ -1,0 +1,15 @@
+<article id="grid-width" data-type="function">
+  <h2>Grid Width <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_grid-width.scss">View source</a></h2>
+  <p>Easily setup and follow a grid based design. Check out <a href="http://gridulator.com/">gridulator.com</a></p>
+  <p>The <code>$gw-column</code> and <code>$gw-gutter</code> variables must be defined in your base stylesheet to properly use the grid-width function.</p>
+
+{% highlight scss %}
+$gw-column: 100px;          // Column Width
+$gw-gutter: 40px;           // Gutter Width
+
+div {
+  width: grid-width(4);     // returns 520px;
+  margin-left: $gw-gutter;  // returns 40px;
+}
+{% endhighlight %}
+</article>

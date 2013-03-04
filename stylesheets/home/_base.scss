@@ -1,0 +1,166 @@
+//************************************************************************//
+// Base Global Styles
+//************************************************************************//
+
+body, html {
+  background: #f5f4f1;
+  font-size: 16px;
+}
+
+body {
+  min-width: 320px;
+  font-size: 16px;
+  font-family: $base-font-family;
+  color: #5a5a5a;
+}
+
+div.inner-wrapper {
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $base-font-family;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 800;
+
+  @include breakpoint(max-width 480px) {
+    font-size: 2rem;
+  }
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 1.75em;
+
+  @include breakpoint(max-width 480px) {
+    font-size: 1.25rem;
+  }
+}
+
+h5 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-top: 1em;
+
+  @include breakpoint(max-width 480px) {
+    font-size: 1.125em;
+  }
+}
+
+p {
+  font-size: 1.125rem;
+  margin: .5em 0;
+  line-height: 1.5em;
+}
+
+a, a:link, a:active, a:visited {
+  @include transition;
+  color: $base-link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darken($base-link-color, 15%);
+  text-decoration: underline;
+}
+
+i {
+  text-transform: italic;
+}
+
+code {
+  font-size: .8125em;
+  font-family: $monospace;
+}
+
+$selection: #fefa83;
+::selection {
+  background: $selection;
+}
+
+::-moz-selection {
+  background: $selection;
+}
+
+.container {
+  @include outer-container;
+
+  @include breakpoint(max-width $max-width) {
+    padding: 0 20px;
+  }
+}
+
+button {
+  @include button;
+}
+
+.highlight pre {
+  border-radius: 3px;
+  background-color: #fffbea;
+  border: 1px solid #d2caa7;
+  font-family: $monospace;
+  margin-bottom: 2em;
+  overflow: scroll;
+  padding: 7px;
+  width: 100%;
+}
+
+$button-width: 154px;
+
+a.button {
+  border-radius: 5px;
+  @include box-shadow(inset 0px 1px rgba(255,255,255,.4));
+  display: block;
+  float: left;
+  padding: 20px 0;
+  font-size: .875rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  width: $button-width;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    @include box-shadow(inset 0 0 10px rgba(0,0,0,.2));
+    @include transition(.25s);
+  }
+
+  &.installation {
+    @include linear-gradient(#afe4ec, #68cad8);
+    border: 1px solid #40a9b8;
+    color: #156571;
+    text-shadow: 0px 1px #b2e4eb;
+
+    &:hover {
+      @include linear-gradient(lighten(#afe4ec, 5%), lighten(#68cad8, 5%));
+    }
+  }
+
+  &.docs {
+    @include linear-gradient(#afece4, #68d8ca);
+    border: 1px solid #22baa8;
+    color: #278276;
+    margin-left: 20px;
+    text-shadow: 0px 1px #b0ebe4;
+
+    &:hover {
+      @include linear-gradient(lighten(#afece4, 5%), lighten(#68d8ca, 5%));
+    }
+  }
+}
+
+@mixin calc($property, $expression) { 
+  #{$property}: -moz-calc(#{$expression}); 
+  #{$property}: -o-calc(#{$expression}); 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+}

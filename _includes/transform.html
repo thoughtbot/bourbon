@@ -1,0 +1,15 @@
+<article id="transform" data-type="mixin">
+  <h2>Transform / origin / style<a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_transform.scss">View source</a></h2>
+  <p>The CSS <code>transform</code> property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed according to the values set</p>
+  <p>The <code>transform-origin</code> CSS property lets you modify the origin for transformations of an element.</p>
+  <p>The <code>transform-style</code> CSS property determines if the children of the element are positioned in the 3D-space or are flattened in the plane of the element.</p>
+
+{% highlight scss %}
+@include transform(translateY(50px));
+
+@include transform-origin(center top);
+
+@include transform-style(preserve-3d);
+{% endhighlight %}
+
+</article>

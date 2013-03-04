@@ -1,0 +1,24 @@
+<article id="perspective" data-type="mixin">
+  <h2>Perspective <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_perspective.scss">View source</a></h2>
+  <p>The <code>perspective</code> CSS property determines the distance between the z=0 plane and the user in order to give to the 3D-positioned element some perspective.</p>
+  <p>The <code>perspective-origin</code> CSS property determines the position the viewer is looking at. It is used as the vanishing point by the <code>perspective</code> property.</p>
+
+{% highlight scss %}
+@include perspective(300px);
+@include perspective-origin(30% 30%);
+{% endhighlight %}
+
+
+  <h3>Demo</h3>
+  <section class="demo">
+    <div class="example">
+      <div class="front">1</div>
+      <div class="back">2</div>
+      <div class="right">3</div>
+      <div class="left">4</div>
+      <div class="top">5</div>
+      <div class="bottom">6</div>
+    </div>
+  </section>
+</article>
+

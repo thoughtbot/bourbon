@@ -1,0 +1,54 @@
+<article id="keyframes" data-type="mixin">
+  <h2>Keyframes<a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_keyframes.scss">View source</a></h2>
+  <p>A mixin for generating clean vendor-prefixed keyframes.</p>
+
+{% highlight scss %}
+@include keyframes(fadeIn) {
+  from {
+    @include transform(scale(0));
+  }
+  to {
+    @include transform(scale(1));
+  }
+}
+{% endhighlight %}
+  <h3>CSS Output</h3>
+{% highlight scss %}
+@-webkit-keyframes fadeIn {
+  from {
+    -webkit-transform: scale(0); }
+
+  to {
+    -webkit-transform: scale(1); } }
+
+@-moz-keyframes fadeIn {
+  from {
+    -moz-transform: scale(0); }
+
+  to {
+    -moz-transform: scale(1); } }
+
+@-ms-keyframes fadeIn {
+  from {
+    -ms-transform: scale(0); }
+
+  to {
+    -ms-transform: scale(1); } }
+
+@-o-keyframes fadeIn {
+  from {
+    -o-transform: scale(0); }
+
+  to {
+    -o-transform: scale(1); } }
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0); }
+
+  to {
+    transform: scale(1); } }
+{% endhighlight %}
+</article>
+
+

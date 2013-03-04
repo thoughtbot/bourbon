@@ -1,0 +1,20 @@
+<article id="box-shadow" data-type="mixin">
+  <h2>Box Shadow<a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_box-shadow.scss">View source</a></h2>
+  <p>Box-shadow supports single or multiple arguments.</p>
+
+  <h3>Single Box Shadow</h3>
+{% highlight scss %}
+@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+{% endhighlight %}
+  <section class="demo">
+    <div class="example single"></div>
+  </section>
+
+  <h3>Multiple Box Shadows</h3>
+{% highlight scss %}
+@include box-shadow(1px 1px 5px 1px green, -1px -1px 5px 1px blue);
+{% endhighlight %}
+  <section class="demo">
+    <div class="example double"></div>
+  </section>
+</article>

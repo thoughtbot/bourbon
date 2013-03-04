@@ -1,0 +1,58 @@
+// Fade In animation
+%animation-fadein {
+  @include animation-name(fadein);
+  @include animation-duration(0.4s);
+  @include animation-timing-function(ease-in);
+  @include animation-fill-mode(both);
+}
+@mixin fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein { @include fadein; }
+   @-moz-keyframes fadein { @include fadein; }
+        @keyframes fadein { @include fadein; }
+
+%animation-poopin {
+  @include animation-name(poopin);
+  @include animation-duration(0.5s);
+  @include animation-timing-function($ease-out-back);
+  @include animation-fill-mode(forwards);
+}
+@mixin poopin {
+  50% {
+    opacity: 0;
+    @include transform(scale(0) translateZ(0));
+  }
+  to {
+    opacity: 1;
+    @include transform(scale(1) translateZ(0));
+  }
+}
+@-webkit-keyframes poopin { @include poopin; }
+   @-moz-keyframes poopin { @include poopin; }
+        @keyframes poopin { @include poopin; }
+
+%animation-poopout {
+  @include animation-duration(0.5s);
+  @include animation-fill-mode(forwards);
+  @include animation-name(poopout);
+  @include animation-timing-function($ease-in-back);
+}
+@mixin poopout {
+  from {
+    @include transform(scale(1) translateZ(0));
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    @include transform(scale(0) translateZ(0));
+  }
+}
+@-webkit-keyframes poopout { @include poopout; }
+   @-moz-keyframes poopout { @include poopout; }
+        @keyframes poopout { @include poopout; }
