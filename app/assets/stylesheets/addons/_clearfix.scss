@@ -11,8 +11,12 @@
 //      }
 //    }
 
+$legacy-for-ie: true !default;
+
 @mixin clearfix {
-  *zoom: 1;
+  @if $legacy-for-ie {
+    *zoom: 1;
+  }
 
   &:before,
   &:after {
