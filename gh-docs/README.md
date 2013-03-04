@@ -42,3 +42,8 @@ https://github.com/mojombo/jekyll/wiki
 
 Pygmentize:
 http://pygments.org/
+
+------------------------------------------------------------------------------------------
+
+To generate or update the docset, run:
+    `$ rake docset`

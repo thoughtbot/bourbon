@@ -17,7 +17,6 @@ div.main-inner {
   position: relative;
   z-index: 1;
 
-
   h2.tagline {
     margin: 0;
   }
@@ -38,7 +37,7 @@ div.main-inner {
 
     &.logo {
       background-color: transparent;
-      background-image: url(../images/bourbon-logo.png);
+      background-image: url(../images/shared/bourbon-logo.png);
       background-repeat: no-repeat;
       border: 0;
       @include box-shadow(none);
@@ -51,8 +50,24 @@ div.main-inner {
       background-size: contain;
 
       @include hidpi {
-        background-image: url(../images/bourbon-logo@2x.png);
+        background-image: url(../images/shared/bourbon-logo@2x.png);
       }
+    }
+  }
+}
+
+div.docset-content {
+  @extend div.main-inner;
+  float: left;
+  width: 100%;
+
+  h1 {
+    text-align: left;
+  }
+
+  section.intro-wrapper {
+    article {
+      text-align: left;
     }
   }
 }
