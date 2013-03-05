@@ -15,7 +15,6 @@ task :docset do
   generate_docset_dirs
   puts "Copying docset assets..."
   copy_plist_file
-  copy_docset_icon
   copy_docset_markup
   puts "Generating docset database..."
   generate_database

@@ -11,10 +11,6 @@ def copy_plist_file
   FileUtils.cp_r("#{doc_assets_path}/Info.plist", contents_path)
 end
 
-def copy_docset_icon
-  FileUtils.cp_r("#{doc_assets_path}/icon.png", package_path)
-end
-
 def copy_docset_markup
   FileUtils.cp_r("#{site_path}/docset/index.html", docset_path)
   FileUtils.cp_r("#{site_path}/stylesheets/style.css", docset_path)
