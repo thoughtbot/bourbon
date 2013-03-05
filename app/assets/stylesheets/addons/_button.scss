@@ -65,7 +65,7 @@
 
   border: 1px solid $border;
   border-radius: 3px;
-  @include box-shadow (inset 0 1px 0 0 $inset-shadow);
+  box-shadow: inset 0 1px 0 0 $inset-shadow;
   color: $color;
   display: inline-block;
   font-size: 11px;
@@ -87,7 +87,7 @@
       $stop-gradient-hover: grayscale($stop-gradient-hover);
     }
 
-    @include box-shadow (inset 0 1px 0 0 $inset-shadow-hover);
+    box-shadow: inset 0 1px 0 0 $inset-shadow-hover;
     cursor: pointer;
     @include linear-gradient ($base-color-hover, $stop-gradient-hover);
   }
@@ -102,7 +102,7 @@
     }
 
     border: 1px solid $border-active;
-    @include box-shadow (inset 0 0 8px 4px $inset-shadow-active, inset 0 0 8px 4px $inset-shadow-active, 0 1px 1px 0 #eee);
+    box-shadow: inset 0 0 8px 4px $inset-shadow-active, inset 0 0 8px 4px $inset-shadow-active, 0 1px 1px 0 #eee;
   }
 }
 
@@ -137,7 +137,7 @@
   border: 1px solid $border;
   border-bottom: 1px solid $border-bottom;
   border-radius: 5px;
-  @include box-shadow(inset 0 1px 0 0 $inset-shadow);
+  box-shadow: inset 0 1px 0 0 $inset-shadow;
   color: $color;
   display: inline-block;
   font-size: 14px;
@@ -175,7 +175,7 @@
       $inset-shadow-active: grayscale($inset-shadow-active);
     }
 
-    @include box-shadow(inset 0 0 20px 0 $inset-shadow-active, 0 1px 0 #fff);
+    box-shadow: inset 0 0 20px 0 $inset-shadow-active, 0 1px 0 #fff;
   }
 }
 
@@ -208,7 +208,7 @@
   border: 1px solid $border-top;
   border-color: $border-top $border-sides $border-bottom;
   border-radius: 16px;
-  @include box-shadow(inset 0 1px 0 0 $inset-shadow, 0 1px 2px 0 #b3b3b3);
+  box-shadow: inset 0 1px 0 0 $inset-shadow, 0 1px 2px 0 #b3b3b3;
   color: $color;
   display: inline-block;
   font-size: 11px;
@@ -242,7 +242,7 @@
 
     border: 1px solid $border-top;
     border-color: $border-top $border-sides $border-bottom;
-    @include box-shadow(inset 0 1px 0 0 $inset-shadow-hover);
+    box-shadow: inset 0 1px 0 0 $inset-shadow-hover;
     cursor: pointer;
     @include linear-gradient ($base-color-hover, $stop-gradient-hover);
     text-shadow: 0 -1px 1px $text-shadow-hover;
@@ -267,7 +267,7 @@
     background: $active-color;
     border: 1px solid $border-active;
     border-bottom: 1px solid $border-bottom-active;
-    @include box-shadow(inset 0 0 6px 3px $inset-shadow-active, 0 1px 0 0 #fff);
+    box-shadow: inset 0 0 6px 3px $inset-shadow-active, 0 1px 0 0 #fff;
     text-shadow: 0 -1px 1px $text-shadow-active;
   }
 }

@@ -92,4 +92,4 @@ Got questions? Need help? Tweet at [@phillapier](http://twitter.com/phillapier).
 License
 -------
 
-Bourbon is Copyright © 2011-2012 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+Bourbon is Copyright © 2011-2013 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.

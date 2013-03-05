@@ -14,13 +14,17 @@
 // The $fg-column, $fg-gutter and $fg-max-columns variables must be defined in your base stylesheet to properly use the flex-grid function.
 // This function takes the fluid grid equation (target / context = result) and uses columns to help define each.
 //
+// The calculation presumes that your column structure will be missing the last gutter:
+//
+//   -- column -- gutter -- column -- gutter -- column
+//
 //  $fg-column: 60px;             // Column Width
 //  $fg-gutter: 25px;             // Gutter Width
 //  $fg-max-columns: 12;          // Total Columns For Main Container
 //
 //  div {
-//    width: flex-grid(4);        // returns (315px / 1020px) = 30.882353%;
-//    margin-left: flex-gutter(); // returns (25px / 1020px) = 2.45098%;
+//    width: flex-grid(4);        // returns (315px / 995px) = 31.65829%;
+//    margin-left: flex-gutter(); // returns (25px / 995px) = 2.51256%;
 //
 //    p {
 //      width: flex-grid(2, 4);  // returns (145px / 315px) = 46.031746%;
