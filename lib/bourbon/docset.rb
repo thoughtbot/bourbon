@@ -33,7 +33,7 @@ def generate_database
   database.execute("CREATE TABLE searchIndex(id INTEGER PRIMARY KEY, name TEXT, type TEXT, path TEXT)")
 
   parse_elements.each_with_index do |element, index|
-    name = element.css('h2').text.sub(%r((?i)view source), '').strip.capitalize
+    name = element.css('h2').text.sub(%r((?i)view source), '').strip
     type = element['data-type'].capitalize
     path = "docset/index.html##{element['id']}"
     database.execute("INSERT INTO searchIndex (id, name, type, path) VALUES (?, ?, ?, ?)", [index+1, name, type, path])
