@@ -20,6 +20,8 @@ def copy_docset_markup
   FileUtils.cp_r("#{site_path}/stylesheets/style.css", docset_path)
   FileUtils.cp_r("#{site_path}/images/shared/", images_path)
   FileUtils.cp_r("#{site_path}/images/documentation/", images_path)
+  FileUtils.cp_r("#{site_path}/js/docs.js", docset_path)
+  `curl -s -o #{docset_path}/jquery.min.js http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js`
 end
 
 def delete_package_file
