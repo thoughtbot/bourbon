@@ -46,7 +46,7 @@ def generate_feed
     }
   end
 
-  File.open("#{root_path}/docset/bourbon.xml", 'w') do |file|
+  File.open("#{root_path}/docset/Bourbon.xml", 'w') do |file|
     file << (feed.to_xml :save_with => 3) # Removes XML header
   end
 end
