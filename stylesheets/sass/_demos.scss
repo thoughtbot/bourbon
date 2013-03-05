@@ -223,7 +223,7 @@ article#timing-functions {
       height: 20px;
       width: 20px;
       @include transition-property(all);
-      @include transition-duration(3s);
+      @include transition-duration(2.6s);
     }
 
     div.ease-in-quad  { @include transition-timing-function($ease-in-quad ); }

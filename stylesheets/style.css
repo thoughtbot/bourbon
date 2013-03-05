@@ -1144,11 +1144,11 @@ article#timing-functions section.demo div.box {
   -ms-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 3s;
-  -moz-transition-duration: 3s;
-  -ms-transition-duration: 3s;
-  -o-transition-duration: 3s;
-  transition-duration: 3s; }
+  -webkit-transition-duration: 2.6s;
+  -moz-transition-duration: 2.6s;
+  -ms-transition-duration: 2.6s;
+  -o-transition-duration: 2.6s;
+  transition-duration: 2.6s; }
 article#timing-functions section.demo div.ease-in-quad {
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   -moz-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
