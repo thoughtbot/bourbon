@@ -1,4 +1,4 @@
-$('nav a').live('click', function() {
+$('nav a').bind('click', function() {
   $('nav a').removeClass('active');
   if (!$(this).parent().hasClass('title')) {
     $(this).addClass('active');
