@@ -148,7 +148,7 @@ a.button {
   &.docs {
     @include linear-gradient(#afece4, #68d8ca);
     border: 1px solid #22baa8;
-    color: #278276;
+    color: darken(#278276, 5%);
     margin-left: 20px;
     text-shadow: 0px 1px #b0ebe4;
 

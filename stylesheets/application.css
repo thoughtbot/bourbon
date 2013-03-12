@@ -202,7 +202,7 @@ h5 {
 
 p {
   font-size: 1.125rem;
-  margin: 0.5em 0;
+  margin: .5em 0;
   line-height: 1.5em; }
 
 a, a:link, a:active, a:visited {
@@ -344,7 +344,7 @@ a.button {
     background-image: -o-linear-gradient(top, #afece4, #68d8ca);
     background-image: linear-gradient(top, #afece4, #68d8ca);
     border: 1px solid #22baa8;
-    color: #278276;
+    color: #216e64;
     margin-left: 20px;
     text-shadow: 0px 1px #b0ebe4; }
     a.button.docs:hover {
