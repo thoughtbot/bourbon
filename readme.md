@@ -1,4 +1,4 @@
-[![Bourbon Sass Mixin Library](http://bourbon.io/images/bourbon-logo.png)](http://bourbon.io)
+[![Bourbon Sass Mixin Library](http://bourbon.io/images/shared/bourbon-logo.png)](http://bourbon.io)
 
 # A simple and lightweight mixin library for Sass
 Bourbon is a comprehensive library of sass mixins that are designed to be simple
