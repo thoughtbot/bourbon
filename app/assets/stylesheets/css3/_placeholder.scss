@@ -9,6 +9,17 @@ $placeholders: '-webkit-input-placeholder',
         @content;
       }
     }
+    @else if $placeholder == "-moz-placeholder" {
+      // FF 18-
+      &:#{$placeholder} {
+        @content;
+      }
+
+      // FF 19+
+      &::#{$placeholder} {
+        @content;
+      }
+    }
     @else {
       &:#{$placeholder} {
         @content;
