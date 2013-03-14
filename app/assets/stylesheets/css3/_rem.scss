@@ -1,6 +1,9 @@
-// This mixin assumes `font-size: 62.5%` on the html or body tag.
-// Doing so gives us a convenient 1rem == 10px relation.
-@mixin rem($font-size) {
+// Convert pixels font-size value to rem while keeping a pixel fallback
+// This mixin assumes the body font-size is the default `100%`
+// If not, you can use the optional $base-size param
+// eg. for a body font-size of `62.5%`, use `@include rem(24, 62.5)`
+
+@mixin rem($font-size, $base-size: 100) {
   font-size: $font-size + px;
-  font-size: $font-size / 10 + rem;
+  font-size: ($font-size / $base-size * 100 / 16) + rem;
 }
