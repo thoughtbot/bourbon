@@ -8,12 +8,68 @@
                        $fallback: false) {
   // Detect what type of value exists in $pos
   $pos-type: type-of(nth($pos, 1));
+  $pos-spec: null;
+  $pos-degree: null;
 
   // If $pos is missing from mixin, reassign vars and add default position
   @if ($pos-type == color) or (nth($pos, 1) == "transparent")  {
     $G10: $G9; $G9: $G8; $G8: $G7; $G7: $G6; $G6: $G5;
      $G5: $G4; $G4: $G3; $G3: $G2; $G2: $G1; $G1: $pos;
-    $pos: top; // Default position
+     $pos: null;
+  }
+
+  @if $pos {
+    $pos-side: null;
+    $pos-corner: null;
+    $pos-length: length($pos);
+
+    // Parse Side and corner positions
+    @if ($pos-length > 1) {
+      @if nth($pos, 1) == "to" {
+        $pos-side: nth($pos, 2);
+
+        @if $pos-length == 2 {
+          // Swap for backwards compatability
+          $pos-degree: _flip-position(nth($pos, 2));
+        }
+
+        @else if $pos-length == 3 {
+          $pos-corner: nth($pos, 3);
+        }
+        @if ("#{$pos-side} #{$pos-corner}" == "left top") or ("#{$pos-side} #{$pos-corner}" == "top left") {
+          $pos-degree: 135deg;
+        }
+        @else if ("#{$pos-side} #{$pos-corner}" == "right top") or ("#{$pos-side} #{$pos-corner}" == "top right") {
+          $pos-degree: 45deg;
+        }
+        @else if ("#{$pos-side} #{$pos-corner}" == "right bottom") or ("#{$pos-side} #{$pos-corner}" == "bottom right") {
+          $pos-degree: -45deg;
+        }
+        @else if ("#{$pos-side} #{$pos-corner}" == "left bottom") or ("#{$pos-side} #{$pos-corner}" == "bottom left") {
+          $pos-degree: -135deg;
+        }
+      }
+      @else {
+        @warn "Incorrect gradient syntax";
+      }
+
+      $pos-spec: to $pos-side $pos-corner;
+    }
+
+    @else if $pos-length == 1 {
+      // Swap for backwards compatability
+      @if $pos-type == string {
+        $pos-degree: $pos;
+        $pos-spec: to _flip-position($pos);
+      }
+      @else {
+        $pos-degree: (-45*6) - $pos; //rotate the gradient opposite from spec
+        $pos-spec: $pos;
+      }
+    }
+
+    $pos-degree: unquote($pos-degree + ",");
+    $pos-spec:   unquote($pos-spec + ",");
   }
 
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
@@ -28,16 +84,14 @@
 
   background-color: $fallback-color;
   background-image: deprecated-webkit-gradient(linear, $deprecated-pos1, $deprecated-pos2, $full); // Safari <= 5.0
-  background-image:  -webkit-linear-gradient($pos, $full); // Safari 5.1+, Chrome
-  background-image:     -moz-linear-gradient($pos, $full);
-  background-image:      -ms-linear-gradient($pos, $full);
-  background-image:       -o-linear-gradient($pos, $full);
-  background-image: unquote("linear-gradient(#{$pos}, #{$full})");
+  background-image:  -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
+  background-image: unquote("linear-gradient(#{$pos-spec}#{$full})");
 }
 
-
-// Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.
-// @include linear-gradient(#1e5799, #2989d8);
-// @include linear-gradient(#1e5799, #2989d8, $fallback:#2989d8);
-// @include linear-gradient(top, #1e5799 0%, #2989d8 50%);
-// @include linear-gradient(50deg, rgba(10, 10, 10, 0.5) 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+// Helper Function
+@function _flip-position($pos) {
+ @return if($pos == left, right, null)
+         if($pos == right, left, null)
+         if($pos == top, bottom, null)
+         if($pos == bottom, top, null);
+}
