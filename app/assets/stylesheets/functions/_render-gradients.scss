@@ -1,13 +1,22 @@
 // User for linear and radial gradients within background-image or border-image properties
 
-@function render-gradients($gradients, $gradient-type, $vendor: false) {
+@function render-gradients($gradient-positions, $gradients, $gradient-type, $vendor: false) {
+  $pos-degree: null;
+  $pos-spec: null;
+
+  @if $gradient-positions {
+    $pos-degree: nth($gradient-positions, 1);
+    $pos-spec:   nth($gradient-positions, 2);
+  }
+
   $vendor-gradients: false;
+
   @if $vendor {
-    $vendor-gradients: -#{$vendor}-#{$gradient-type}-gradient($gradients);
+    $vendor-gradients: -#{$vendor}-#{$gradient-type}-gradient(#{$pos-degree} $gradients);
   }
 
   @else if $vendor == false {
-    $vendor-gradients: "#{$gradient-type}-gradient(#{$gradients})";
+    $vendor-gradients: "#{$gradient-type}-gradient(#{$pos-spec} #{$gradients})";
     $vendor-gradients: unquote($vendor-gradients);
   }
   @return $vendor-gradients;

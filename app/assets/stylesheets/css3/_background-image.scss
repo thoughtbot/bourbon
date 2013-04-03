@@ -5,15 +5,13 @@
 
 @mixin background-image($images...) {
   background-image: add-prefix($images, webkit);
-  background-image: add-prefix($images, moz);
-  background-image: add-prefix($images, ms);
-  background-image: add-prefix($images, o);
   background-image: add-prefix($images);
 }
 
-
 @function add-prefix($images, $vendor: false) {
+  @debug $images;
   $images-prefixed: ();
+  $gradient-positions: false;
 
   @for $i from 1 through length($images) {
     $type: type-of(nth($images, $i)); // Get type of variable - List or String
@@ -21,9 +19,23 @@
     // If variable is a list - Gradient
     @if $type == list {
       $gradient-type: nth(nth($images, $i), 1); // Get type of gradient (linear || radial)
-      $gradient-args: nth(nth($images, $i), 2); // Get actual gradient (red, blue)
+      $gradient-pos: null;
+      $gradient-args: null;
 
-      $gradient: render-gradients($gradient-args, $gradient-type, $vendor);
+      @if $gradient-type == linear {
+        $gradient-pos:  nth(nth($images, $i), 2); // Get gradient position
+        $gradient-args: nth(nth($images, $i), 3); // Get actual gradient (red, blue)
+      }
+      @else {
+        $gradient-args: nth(nth($images, $i), 2); // Get actual gradient (red, blue)
+      }
+
+      @if ($gradient-pos) and ($gradient-type == linear) and (type-of($gradient-pos) != color) and (type-of($gradient-pos) != number) {
+        @debug "happing";
+        $gradient-positions: calc-gradient-positions($gradient-pos);
+      }
+
+      $gradient: render-gradients($gradient-positions, $gradient-args, $gradient-type, $vendor);
       $images-prefixed: append($images-prefixed, $gradient, comma);
     }
 
@@ -34,7 +46,6 @@
   }
   @return $images-prefixed;
 }
-
 
 //Examples:
   //@include background-image(linear-gradient(top, orange, red));

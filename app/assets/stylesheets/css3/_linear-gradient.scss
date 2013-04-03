@@ -19,57 +19,9 @@
   }
 
   @if $pos {
-    $pos-side: null;
-    $pos-corner: null;
-    $pos-length: length($pos);
-
-    // Parse Side and corner positions
-    @if ($pos-length > 1) {
-      @if nth($pos, 1) == "to" {
-        $pos-side: nth($pos, 2);
-
-        @if $pos-length == 2 {
-          // Swap for backwards compatability
-          $pos-degree: _flip-position(nth($pos, 2));
-        }
-
-        @else if $pos-length == 3 {
-          $pos-corner: nth($pos, 3);
-        }
-        @if ("#{$pos-side} #{$pos-corner}" == "left top") or ("#{$pos-side} #{$pos-corner}" == "top left") {
-          $pos-degree: 135deg;
-        }
-        @else if ("#{$pos-side} #{$pos-corner}" == "right top") or ("#{$pos-side} #{$pos-corner}" == "top right") {
-          $pos-degree: 45deg;
-        }
-        @else if ("#{$pos-side} #{$pos-corner}" == "right bottom") or ("#{$pos-side} #{$pos-corner}" == "bottom right") {
-          $pos-degree: -45deg;
-        }
-        @else if ("#{$pos-side} #{$pos-corner}" == "left bottom") or ("#{$pos-side} #{$pos-corner}" == "bottom left") {
-          $pos-degree: -135deg;
-        }
-      }
-      @else {
-        @warn "Incorrect gradient syntax";
-      }
-
-      $pos-spec: to $pos-side $pos-corner;
-    }
-
-    @else if $pos-length == 1 {
-      // Swap for backwards compatability
-      @if $pos-type == string {
-        $pos-degree: $pos;
-        $pos-spec: to _flip-position($pos);
-      }
-      @else {
-        $pos-degree: (-45*6) - $pos; //rotate the gradient opposite from spec
-        $pos-spec: $pos;
-      }
-    }
-
-    $pos-degree: unquote($pos-degree + ",");
-    $pos-spec:   unquote($pos-spec + ",");
+    $positions: calc-gradient-positions($pos);
+    $pos-degree: nth($positions, 1);
+    $pos-spec:   nth($positions, 2);
   }
 
   $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
