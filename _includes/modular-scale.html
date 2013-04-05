@@ -1,0 +1,20 @@
+<article id="modular-scale" data-type="function">
+  <h2>Modular-scale <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">View Source</a></h2>
+  <p>Returns the modular scale of a given number. Must provide a number value for the first argument. The second argument is a required integer for an increment value: ...-3, -2, -1, 0, 1, 2, 3... The third value is the ratio number.</p>
+  <p>Note: The function can be wrapped in sass's <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down, or round up respectively.</p>
+
+{% highlight scss %}
+div {
+ // Increment Up GR with positive value
+ font-size:        modular-scale(14px,   1, 1.618); // returns: 22.652px
+
+ // Increment Down GR with negative value
+ font-size:        modular-scale(14px,  -1, 1.618); // returns: 8.653px
+
+ // Can be used with ceil(round up) or floor(round down)
+ font-size: floor( modular-scale(14px, 1, 1.618) ); // returns: 22px
+ font-size:  ceil( modular-scale(14px, 1, 1.618) ); // returns: 23px
+}
+{% endhighlight %}
+  <p>Resources: <a href="http://modularscale.com/">modularscale.com</a> & <a href="http://goldenratiocalculator.com/">goldenrationcalculator.com</a></p>
+</article>

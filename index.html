@@ -1,0 +1,269 @@
+---
+layout: default
+title: Bourbon - A Sass Mixin Library
+meta_keywords: Bourbon, sass, scss, library, framework, syntactically awesome stylesheets, css, web design, web development, thoughtbot, open source
+meta_description: Bourbon - A simple and lightweight mixin library for Sass / CSS.
+---
+<div class="container">
+  <header>
+    <h1 class="brand">bourbon</h1>
+    <section class="buttons">
+      <a href="http://www.github.com/thoughtbot/bourbon" class="button installation">Github</a>
+      <a href="/docs/" class="button docs">Docs</a>
+  </section>
+  </header>
+</div>
+
+<div class="content-wrapper">
+  <section class="demo">
+    <div class="container">
+      <h2>A simple and lightweight mixin library for Sass.</h2>
+
+      <div class="browser-wrapper">
+      </div>
+      <div id="browser-container">
+        <div class="browser-code">
+          <pre>
+            <code>
+  ol {
+    > li {
+      background-color: #F4F5F7;
+      <span class="row" data-role="one"><span class="a">@include</span> <span class="b">background-image(</span> <span class="c">linear-gradient(#FFF, #F4F5F7)</span> <span class="b">)</span>;</span>
+      float: left;
+      <span class="row" data-role="two"><span class="b">font-family:</span> <span class="c">$lucida-grande</span><span class="b"></span>;</span>
+      position: relative;
+      <span class="row" data-role="three"><span class="a">@include</span> <span class="b">transition(</span> <span class="c">all 0.8s</span> <span class="b">)</span>;</span>
+
+      &::after {
+        content: " ";
+        height: 23px;
+        <span class="row" data-role="four"><span class="a">@include</span> <span class="b">position(</span> <span class="c">absolute, 10px -13px 0 0</span> <span class="b">)</span>;</span>
+        <span class="row" data-role="five"><span class="a">@include</span> <span class="b">transform(</span> <span class="c">rotate(45deg) skew(20deg, 30deg)</span> <span class="b">)</span>;</span>
+        width: 23px;
+      }
+    }
+  }</code>
+          </pre>
+        </div>
+
+          <div class="tooltip one">
+            <p>CSS Output</p>
+<pre><code>background-image: -webkit-linear-gradient(top, #FFF, #F4F5F7);
+background-image:    -moz-linear-gradient(top, #FFF, #F4F5F7);
+background-image:     -ms-linear-gradient(top, #FFF, #F4F5F7);
+background-image:      -o-linear-gradient(top, #FFF, #F4F5F7);
+background-image:         linear-gradient(top, #FFF, #F4F5F7);</code></pre>
+          </div>
+
+          <div class="tooltip two">
+            <p>CSS Output</p>
+  <pre><code>font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;</code></pre>
+          </div>
+
+          <div class="tooltip three">
+            <p>CSS Output</p>
+<pre><code>-webkit-transition: all 0.8s;
+   -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+     -o-transition: all 0.8s;
+        transition: all 0.8s;
+</code></pre>
+          </div>
+
+          <div class="tooltip four">
+            <p>CSS Output</p>
+<pre><code>position: absolute;
+right: -13px;
+top: 10px;
+</code></pre>
+          </div>
+
+          <div class="tooltip five">
+            <p>CSS Output</p>
+<pre><code>-webkit-transform: rotate(45deg) skew(20deg, 30deg);
+   -moz-transform: rotate(45deg) skew(20deg, 30deg);
+    -ms-transform: rotate(45deg) skew(20deg, 30deg);
+     -o-transform: rotate(45deg) skew(20deg, 30deg);
+        transform: rotate(45deg) skew(20deg, 30deg);
+</code></pre>
+          </div>
+
+      </div>
+  </section>
+
+  <section class="examples">
+    <div class="container">
+      <h4>Forget about vendor prefixes.</h4>
+      <p>The mixins contain up-to-date vendor prefixes for support in modern browsers.</p>
+
+      <div class="sass-wrapper">
+{% highlight scss %}
+// Bourbon mixin with Sass
+
+section {
+  @include linear-gradient(red, green);
+}
+{% endhighlight %}
+      </div>
+
+      <div class="css-wrapper">
+{% highlight css %}
+/* Compiled CSS  */
+
+section {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(100%, green));
+  background-image: -webkit-linear-gradient(top, red, green);
+  background-image: -moz-linear-gradient(top, red, green);
+  background-image: -ms-linear-gradient(top, red, green);
+  background-image: -o-linear-gradient(top, red, green);
+  background-image: linear-gradient(top, red, green);
+}
+{% endhighlight %}
+    </div>
+
+      <h4>Write CSS faster and easier.</h4>
+      <p>The library contains mixins, functions, and other addons to build kick ass web stuff.</p>
+      <div class="sass-wrapper">
+{% highlight scss %}
+// Bourbon mixin with Sass
+
+h1 {
+  font-family: $helvetica;
+  font-size: golden-ratio(14px,  1);
+}
+{% endhighlight %}
+      </div>
+
+      <div class="css-wrapper">
+{% highlight css %}
+/* Compiled CSS  */
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 23px;
+}
+{% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+  <section class="usage">
+    <div class="container">
+      <img class="ruby" src="../images/marketing/ruby.png" alt="Ruby Gem" />
+      <h3>Usage &amp; Installation</h3>
+
+      <section class="install-instructions">
+        <h4>Install for Rails 3.1&#43;</h4>
+        <p>In your Gemfile:</p>
+{% highlight powershell %}
+gem 'bourbon'
+{% endhighlight %}
+
+        <p>Then run:</p>
+{% highlight powershell %}
+$ bundle install
+{% endhighlight %}
+
+        <p>Restart your server. Then rename <code>application.css</code> to <code>application.css.scss</code>:</p>
+{% highlight powershell %}
+mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
+{% endhighlight %}
+
+        <p>Delete the sprocket directive in application.css.scss:</p>
+{% highlight powershell %}
+*= require_tree .
+{% endhighlight %}
+
+        <p>Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:</p>
+{% highlight scss %}
+@import "bourbon";
+@import "home";
+@import "users";
+{% endhighlight %}
+      </section>
+
+      <section class="install-instructions">
+        <h4>Install for a Non-Rails App</h4>
+        <h5>Installation</h5>
+        <p>Install the gem</p>
+{% highlight powershell %}
+$ gem install bourbon
+{% endhighlight %}
+
+        <p>Install Bourbon into your project's <code>stylesheets</code> directory by generating the <code>bourbon</code> folder:</p>
+{% highlight powershell %}
+$ bourbon install
+{% endhighlight %}
+        <p>The generated folder will contain all the mixins and other necessary Bourbon files. It is recommended not to add or modify the Bourbon files so that you can update Bourbon easily.</p>
+        <br>
+
+        <h5>Sass Watch</h5>
+        <p>Run a standard <code>sass --watch</code> from the command line:</p>
+{% highlight powershell %}
+$ sass --watch stylesheets/sass:stylesheets
+{% endhighlight %}
+
+        <p>Lastly, import the mixins at the beginning of your stylesheet(s):</p>
+{% highlight scss %}
+@import 'bourbon/bourbon';
+{% endhighlight %}
+
+        <h5>Other Commands</h5>
+        <p>See the complete list of <a href="https://github.com/thoughtbot/bourbon/wiki/Command-Line-Tools">Command Line Tools</a>.</p>
+{% highlight powershell %}
+$ bourbon help
+$ bourbon update
+{% endhighlight %}
+
+      </section>
+      <section class="install-instructions">
+        <span><a href="https://github.com/thoughtbot/bourbon/wiki/Rails-3.0.x-Install">Using Rails 3.0.x?</a></span>
+      </section>
+    </div>
+  </section>
+
+  <section class="apps">
+    <div class="container">
+      <h3>Or use it in your favorite companion app</h3>
+      <ul class="app-list">
+        <li>
+          <a class="codekit" href="http://www.incident57.com/codekit/">Codekit</a>
+          <p><a href="http://www.incident57.com/codekit/">Codekit</a> can handle Bourbon mixins right out the box, no configuration needed.</p>
+        </li>
+        <li>
+          <a class="hammer" href="http://www.hammerformac.com">Hammer for Mac</a>
+          <p><a href="http://www.hammerformac.com">Hammer</a> is also preconfigured for Bourbon. Badass.</p>
+        </li>
+        <li>
+          <a class="livereload" href="http://www.livereload.com">LiveReload 2</a>
+          <p><a href="http://www.livereload.com">LiveReload</a> suports Bourbon too. Follow the non-rails installation above.</p>
+        </li>
+      </ul>
+      <img src="/images/marketing/apps.png" alt="Apps configured for Bourbon" />
+    </div>
+  </section>
+
+  <section class="websites">
+    <div class="container">
+      <h3>Who's using it?</h3>
+      <p><a href="https://github.com/thoughtbot/bourbon/wiki/Projects-and-Companies-using-Bourbon">View More &raquo;</a></p>
+      <a class="website yourgrind" href="http://www.yourgrind.com"><img src="../images/marketing/yourgrind.png" alt="" /></a>
+      <a class="website fdn" href="http://www.gofdn.com"><img src="../images/marketing/fdn.png" alt="" /></a>
+      <a class="website edge" href="http://usetakana.com/"><img src="../images/marketing/edge.png" alt="" /></a>
+      <a class="website checkthis" href="http://www.checkthis.com"><img src="../images/marketing/checkthis.png" alt="" /></a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <section class="footer-text">
+      <p>Bourbon is maintained and funded by <a href="http://www.thoughtbot.com">thoughtbot</a>. Questions? Tweet <a href="http://www.twitter.com/phillapier">@phillapier</a>.</p>
+      <p>Bourbon is Copyright &copy; 2013 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.</p>
+    </section>
+    <section class="buttons">
+      <a href="https://github.com/thoughtbot/bourbon" class="button installation">Github</a>
+      <a href="/docs/" class="button docs">Docs</a>
+    </section>
+  </div>
+</footer>

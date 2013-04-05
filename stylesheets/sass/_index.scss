@@ -1,0 +1,142 @@
+//************************************************************************//
+// Global styles
+//************************************************************************//
+div.main-content {
+  @extend .clearfix;
+  padding: 0px $gw-gutter; 
+}
+
+div.main-inner {
+  border-bottom: 0;
+  border-top: 0;
+  @include box-sizing(border-box);
+  clear: right;
+  float: right;
+  padding: 35px 0px;
+  width: grid-width(7) + $gw-gutter;
+  position: relative;
+  z-index: 1;
+
+  h2.tagline {
+    margin: 0;
+  }
+
+  // Top Level Section
+  //************************************************************************//
+  h1 {
+    background-color: hsl(43, 23%, 94%);
+    @include box-shadow(1px 0 0 $background-color, -1px 0 0 $background-color);
+    color: $base-font-color-alt;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 100%;
+    margin: 00px 0 0;
+    padding: 25px 0px 15px;
+    text-align: center;
+    text-shadow: 0 1px 0 white;
+
+    &.logo {
+      background-color: transparent;
+      background-image: url(../images/shared/bourbon-logo.png);
+      background-repeat: no-repeat;
+      border: 0;
+      @include box-shadow(none);
+      display: inline-block;
+      height: 58px;
+      margin: 0 0 20px 0;
+      padding: 0;
+      text-indent: -9999px;
+      width: 330px;
+      background-size: contain;
+
+      @include hidpi {
+        background-image: url(../images/shared/bourbon-logo@2x.png);
+      }
+    }
+  }
+}
+
+div.docset-content {
+  @extend div.main-inner;
+  float: left;
+  width: 100%;
+
+  h1 {
+    text-align: left;
+  }
+
+  section.intro-wrapper {
+    article {
+      text-align: left;
+    }
+  }
+}
+
+section > article {
+  background: white;
+  border: 1px solid darken($base-border-color, 10%);
+  border-bottom: 1px solid $base-border-color;
+  border-top: 0;
+  padding: 60px 28px;
+  @include transition;
+  $radii: 6px;
+
+  &:first-child {
+    border-radius: $radii $radii 0 0;
+    border-top: 1px solid darken($base-border-color, 10%);
+  }
+
+  &:last-child {
+    border-radius: 0 0 $radii $radii;
+    border-bottom: 1px solid darken($base-border-color, 10%);
+  }
+
+  &:only-child {
+    border-radius: $radii;
+  }
+
+  // View Source Link
+  //************************************************************************//
+  a.view-source {
+    color: hsl(43, 13%, 75%);
+    float: right;
+    font-size: $base-font-size;
+    margin-top: 5px;
+    padding: 2px 20px;
+    text-shadow: 0 1px 0 white;
+    text-transform: capitalize;
+    @include transition;
+
+    &:hover {
+      background-color: $background-color;
+      border-radius: 20px;
+      color: hsl(43, 13%, 60%);
+    }
+  }
+
+}
+
+
+// Intro Text
+//************************************************************************//
+section.intro-wrapper {
+  article {
+    background: none;
+    border: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+// Target Styles
+//************************************************************************//
+article {
+  &:target {
+    @include box-shadow(inset 4px 0 0px 0 $orange);
+    @include transition(all 0.3s);
+
+    h2 {
+      font-weight: 500;
+    }
+  }
+}

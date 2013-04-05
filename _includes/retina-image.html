@@ -1,0 +1,31 @@
+<article id="retina-image" data-type="mixin">
+  <h2>Retina-image <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_retina-image.scss">View source</a></h2>
+  <p>The mixin is a helper to generate a retina background-image and non-retina background-image. The retina background-image will output to a hidpi media-query.</p>
+  <p>The mixin uses a <code>@2x.png</code> retina filename by default.<br>
+  For rails, you can use the asset-pipeline by passing <code>true</code> to the argument.</p>
+  <p><code>@ retina-image($filename, $background-size, $extension*, $retina-filename*, $asset-pipeline*)<br>* = optional</code></p>
+  <p>Argument Defaults</p>
+  <ul>
+    <li><code>$extension: png</code></li>
+    <li><code>$retina-filename: null</code></li>
+    <li><code>$asset-pipeline: false</code></li>
+  </ul>
+
+{% highlight scss %}
+span {
+  @include retina-image(home-icon, 32px 20px)
+}
+{% endhighlight %}
+  <h3>CSS Output</h3>
+{% highlight scss %}
+span {
+  background-image: url(home-icon.png); 
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  span {
+    background-image: url(home-icon@2x.png);
+    background-size: 32px 20px; }
+}
+{% endhighlight %}
+</article>
+
