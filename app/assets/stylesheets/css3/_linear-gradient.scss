@@ -19,7 +19,7 @@
   }
 
   @if $pos {
-    $positions: calc-gradient-positions($pos);
+    $positions: _linear-positions-parser($pos);
     $pos-degree: nth($positions, 1);
     $pos-spec:   nth($positions, 2);
   }

@@ -1,5 +1,8 @@
 // Custom Helpers
-@import "helpers/calc-gradient-positions";
+@import "helpers/linear-positions-parser";
+@import "helpers/radial-arg-parser";
+@import "helpers/radial-positions-parser";
+@import "helpers/shape-size-stripper";
 
 // Custom Functions
 @import "functions/compact";

@@ -9,10 +9,10 @@
 }
 
 @function add-prefix($images, $vendor: false) {
-  @debug $images;
   $images-prefixed: ();
   $gradient-positions: false;
 
+  // REMOVE FOR LOOP??
   @for $i from 1 through length($images) {
     $type: type-of(nth($images, $i)); // Get type of variable - List or String
 
@@ -22,7 +22,7 @@
       $gradient-pos: null;
       $gradient-args: null;
 
-      @if $gradient-type == linear {
+      @if ($gradient-type == linear) or ($gradient-type == radial) {
         $gradient-pos:  nth(nth($images, $i), 2); // Get gradient position
         $gradient-args: nth(nth($images, $i), 3); // Get actual gradient (red, blue)
       }
@@ -31,8 +31,10 @@
       }
 
       @if ($gradient-pos) and ($gradient-type == linear) and (type-of($gradient-pos) != color) and (type-of($gradient-pos) != number) {
-        @debug "happing";
-        $gradient-positions: calc-gradient-positions($gradient-pos);
+        $gradient-positions: _linear-positions-parser($gradient-pos);
+      }
+      @else if ($gradient-pos) and ($gradient-type == radial) and (type-of($gradient-pos) != color) and (type-of($gradient-pos) != number) {
+        $gradient-positions: _radial-positions-parser($gradient-pos);
       }
 
       $gradient: render-gradients($gradient-positions, $gradient-args, $gradient-type, $vendor);
@@ -46,6 +48,7 @@
   }
   @return $images-prefixed;
 }
+
 
 //Examples:
   //@include background-image(linear-gradient(top, orange, red));
