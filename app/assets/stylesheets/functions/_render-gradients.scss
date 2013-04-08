@@ -4,14 +4,12 @@
   $pre-spec: null;
   $spec: null;
   $vendor-gradients: null;
-
   @if $gradient-type == linear {
     @if $gradient-positions {
       $pre-spec: nth($gradient-positions, 1);
-      $spec:   nth($gradient-positions, 2);
+      $spec:     nth($gradient-positions, 2);
     }
   }
-
   @else if $gradient-type == radial {
     $pre-spec: nth($gradient-positions, 1);
     $spec:     nth($gradient-positions, 2);
@@ -20,7 +18,6 @@
   @if $vendor {
     $vendor-gradients: -#{$vendor}-#{$gradient-type}-gradient(#{$pre-spec} $gradients);
   }
-
   @else if $vendor == false {
     $vendor-gradients: "#{$gradient-type}-gradient(#{$spec} #{$gradients})";
     $vendor-gradients: unquote($vendor-gradients);

@@ -5,7 +5,6 @@
   $side: null;
   $corner: null;
   $length: length($pos);
-
   // Parse Side and corner positions
   @if ($length > 1) {
     @if nth($pos, 1) == "to" {
@@ -36,7 +35,6 @@
     }
     $spec: to $side $corner;
   }
-
   @else if $length == 1 {
     // Swap for backwards compatability
     @if $type == string {

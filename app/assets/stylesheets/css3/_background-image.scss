@@ -30,13 +30,7 @@
         $gradient-args: nth(nth($images, $i), 2); // Get actual gradient (red, blue)
       }
 
-      @if ($gradient-pos) and ($gradient-type == linear) and (type-of($gradient-pos) != color) and (type-of($gradient-pos) != number) {
-        $gradient-positions: _linear-positions-parser($gradient-pos);
-      }
-      @else if ($gradient-pos) and ($gradient-type == radial) and (type-of($gradient-pos) != color) and (type-of($gradient-pos) != number) {
-        $gradient-positions: _radial-positions-parser($gradient-pos);
-      }
-
+      $gradient-positions: _gradient-positions-parser($gradient-type, $gradient-pos);
       $gradient: render-gradients($gradient-positions, $gradient-args, $gradient-type, $vendor);
       $images-prefixed: append($images-prefixed, $gradient, comma);
     }
