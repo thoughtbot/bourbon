@@ -35,15 +35,7 @@
   }
 
   background-color: $fallback-color;
-  background-image: deprecated-webkit-gradient(linear, $deprecated-pos1, $deprecated-pos2, $full); // Safari <= 5.0
-  background-image:  -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
+  background-image: _deprecated-webkit-gradient(linear, $deprecated-pos1, $deprecated-pos2, $full); // Safari <= 5.0
+  background-image: -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
   background-image: unquote("linear-gradient(#{$pos-spec}#{$full})");
-}
-
-// Helper Function
-@function _flip-position($pos) {
- @return if($pos == left, right, null)
-         if($pos == right, left, null)
-         if($pos == top, bottom, null)
-         if($pos == bottom, top, null);
 }

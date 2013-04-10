@@ -12,7 +12,7 @@
 
       @if $length == 2 {
         // Swap for backwards compatability
-        $degree: _flip-position(nth($pos, 2));
+        $degree: _position-flipper(nth($pos, 2));
       }
       @else if $length == 3 {
         $corner: nth($pos, 3);
@@ -39,7 +39,7 @@
     // Swap for backwards compatability
     @if $type == string {
       $degree: $pos;
-      $spec: to _flip-position($pos);
+      $spec: to _position-flipper($pos);
     }
     @else {
       $degree: -270 - $pos; //rotate the gradient opposite from spec
@@ -49,4 +49,12 @@
   $degree: unquote($degree + ",");
   $spec:   unquote($spec + ",");
   @return $degree $spec;
+}
+
+// Helper Function
+@function _position-flipper($pos) {
+ @return if($pos == left, right, null)
+         if($pos == right, left, null)
+         if($pos == top, bottom, null)
+         if($pos == bottom, top, null);
 }

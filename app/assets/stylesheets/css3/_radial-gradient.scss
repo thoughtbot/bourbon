@@ -38,7 +38,7 @@
   $shape-size-spec: if(($shape-size-spec != ' ') and ($pos == null), '#{$shape-size-spec}, ', '#{$shape-size-spec} ');
 
   background-color:  $fallback-color;
-  background-image: deprecated-webkit-gradient(radial, $deprecated-pos1, $deprecated-pos2, $full, $deprecated-radius1, $deprecated-radius2); // Safari <= 5.0 && IOS 4
-  background-image:  -webkit-radial-gradient(unquote(#{$pos}#{$shape-size}#{$full}));
+  background-image: _deprecated-webkit-gradient(radial, $deprecated-pos1, $deprecated-pos2, $full, $deprecated-radius1, $deprecated-radius2); // Safari <= 5.0 && IOS 4
+  background-image: -webkit-radial-gradient(unquote(#{$pos}#{$shape-size}#{$full}));
   background-image: unquote("radial-gradient(#{$shape-size-spec}#{$pos-spec}#{$full})");
 }

@@ -4,21 +4,19 @@
 //************************************************************************//
 
 @mixin background-image($images...) {
-  background-image: add-prefix($images, webkit);
-  background-image: add-prefix($images);
+  background-image: _add-prefix($images, webkit);
+  background-image: _add-prefix($images);
 }
 
-@function add-prefix($images, $vendor: false) {
+@function _add-prefix($images, $vendor: false) {
   $images-prefixed: ();
   $gradient-positions: false;
-
-  // REMOVE FOR LOOP??
   @for $i from 1 through length($images) {
     $type: type-of(nth($images, $i)); // Get type of variable - List or String
 
     // If variable is a list - Gradient
     @if $type == list {
-      $gradient-type: nth(nth($images, $i), 1); // Get type of gradient (linear || radial)
+      $gradient-type: nth(nth($images, $i), 1); // linear or radial
       $gradient-pos: null;
       $gradient-args: null;
 
@@ -31,10 +29,9 @@
       }
 
       $gradient-positions: _gradient-positions-parser($gradient-type, $gradient-pos);
-      $gradient: render-gradients($gradient-positions, $gradient-args, $gradient-type, $vendor);
+      $gradient: _render-gradients($gradient-positions, $gradient-args, $gradient-type, $vendor);
       $images-prefixed: append($images-prefixed, $gradient, comma);
     }
-
     // If variable is a string - Image
     @else if $type == string {
       $images-prefixed: join($images-prefixed, nth($images, $i), comma);
@@ -42,7 +39,6 @@
   }
   @return $images-prefixed;
 }
-
 
 //Examples:
   //@include background-image(linear-gradient(top, orange, red));

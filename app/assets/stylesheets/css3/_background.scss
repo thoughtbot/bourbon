@@ -22,17 +22,17 @@
     $fallback-color: $fallback;
   }
   @else {
-    $fallback-color: extract-background-color($backgrounds);
+    $fallback-color: _extract-background-color($backgrounds);
   }
 
   @if $fallback-color {
     background-color: $fallback-color;
   }
-  background: background-add-prefix($backgrounds, webkit);
-  background: background-add-prefix($backgrounds);
+  background: _background-add-prefix($backgrounds, webkit);
+  background: _background-add-prefix($backgrounds);
 }
 
-@function extract-background-color($backgrounds) {
+@function _extract-background-color($backgrounds) {
   $final-bg-layer: nth($backgrounds, length($backgrounds));
   @if type-of($final-bg-layer) == list {
     @for $i from 1 through length($final-bg-layer) {
@@ -45,7 +45,7 @@
   @return false;
 }
 
-@function background-add-prefix($backgrounds, $vendor: false) {
+@function _background-add-prefix($backgrounds, $vendor: false) {
   $backgrounds-prefixed: ();
 
   @for $i from 1 through length($backgrounds) {
@@ -73,7 +73,7 @@
         }
 
         $gradient-positions: _gradient-positions-parser($gradient-type, $gradient-positions);
-        $gradient: render-gradients($gradient-positions, $gradient-args, $gradient-type, $vendor);
+        $gradient: _render-gradients($gradient-positions, $gradient-args, $gradient-type, $vendor);
 
         // Append any additional shorthand args to gradient
         @if $shorthand-start {
