@@ -9,21 +9,30 @@ $prefix-for-spec:      true !default; // required for keyframe mixin
 
 @mixin prefixer ($property, $value, $prefixes) {
   @each $prefix in $prefixes {
-
-    @if $prefix == webkit and $prefix-for-webkit == true {
-      -webkit-#{$property}: $value;
+    @if $prefix == webkit {
+      @if $prefix-for-webkit {
+        -webkit-#{$property}: $value;
+      }
     }
-    @else if $prefix == moz and $prefix-for-mozilla == true {
-      -moz-#{$property}: $value;
+    @else if $prefix == moz {
+      @if $prefix-for-mozilla {
+        -moz-#{$property}: $value;
+      }
     }
-    @else if $prefix == ms and $prefix-for-microsoft == true {
-      -ms-#{$property}: $value;
+    @else if $prefix == ms {
+      @if $prefix-for-microsoft {
+        -ms-#{$property}: $value;
+      }
     }
-    @else if $prefix == o and $prefix-for-opera == true {
-      -o-#{$property}: $value;
+    @else if $prefix == o {
+      @if $prefix-for-opera {
+        -o-#{$property}: $value;
+      }
     }
-    @else if $prefix == spec and $prefix-for-spec == true {
-      #{$property}: $value;
+    @else if $prefix == spec {
+      @if $prefix-for-spec {
+        #{$property}: $value;
+      }
     }
     @else  {
       @warn "Unrecognized prefix: #{$prefix}";
