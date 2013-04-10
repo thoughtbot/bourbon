@@ -1,0 +1,60 @@
+@function _linear-positions-parser($pos) {
+  $type: type-of(nth($pos, 1));
+  $spec: null;
+  $degree: null;
+  $side: null;
+  $corner: null;
+  $length: length($pos);
+  // Parse Side and corner positions
+  @if ($length > 1) {
+    @if nth($pos, 1) == "to" {
+      $side: nth($pos, 2);
+
+      @if $length == 2 {
+        // Swap for backwards compatability
+        $degree: _position-flipper(nth($pos, 2));
+      }
+      @else if $length == 3 {
+        $corner: nth($pos, 3);
+      }
+      @if ("#{$side} #{$corner}" == "left top") or ("#{$side} #{$corner}" == "top left") {
+        $degree: 135deg;
+      }
+      @else if ("#{$side} #{$corner}" == "right top") or ("#{$side} #{$corner}" == "top right") {
+        $degree: 45deg;
+      }
+      @else if ("#{$side} #{$corner}" == "right bottom") or ("#{$side} #{$corner}" == "bottom right") {
+        $degree: -45deg;
+      }
+      @else if ("#{$side} #{$corner}" == "left bottom") or ("#{$side} #{$corner}" == "bottom left") {
+        $degree: -135deg;
+      }
+    }
+    @else {
+      @warn "Incorrect gradient syntax";
+    }
+    $spec: to $side $corner;
+  }
+  @else if $length == 1 {
+    // Swap for backwards compatability
+    @if $type == string {
+      $degree: $pos;
+      $spec: to _position-flipper($pos);
+    }
+    @else {
+      $degree: -270 - $pos; //rotate the gradient opposite from spec
+      $spec: $pos;
+    }
+  }
+  $degree: unquote($degree + ",");
+  $spec:   unquote($spec + ",");
+  @return $degree $spec;
+}
+
+// Helper Function
+@function _position-flipper($pos) {
+ @return if($pos == left, right, null)
+         if($pos == right, left, null)
+         if($pos == top, bottom, null)
+         if($pos == bottom, top, null);
+}
