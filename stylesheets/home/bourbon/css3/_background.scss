@@ -22,20 +22,17 @@
     $fallback-color: $fallback;
   }
   @else {
-    $fallback-color: extract-background-color($backgrounds);
+    $fallback-color: _extract-background-color($backgrounds);
   }
 
   @if $fallback-color {
     background-color: $fallback-color;
   }
-  background: background-add-prefix($backgrounds, webkit);
-  background: background-add-prefix($backgrounds, moz);
-  background: background-add-prefix($backgrounds, ms);
-  background: background-add-prefix($backgrounds, o);
-  background: background-add-prefix($backgrounds);
+  background: _background-add-prefix($backgrounds, webkit);
+  background: _background-add-prefix($backgrounds);
 }
 
-@function extract-background-color($backgrounds) {
+@function _extract-background-color($backgrounds) {
   $final-bg-layer: nth($backgrounds, length($backgrounds));
   @if type-of($final-bg-layer) == list {
     @for $i from 1 through length($final-bg-layer) {
@@ -48,51 +45,50 @@
   @return false;
 }
 
-
-@function background-add-prefix($backgrounds, $vendor: false) {
+@function _background-add-prefix($backgrounds, $vendor: false) {
   $backgrounds-prefixed: ();
 
   @for $i from 1 through length($backgrounds) {
     $shorthand: nth($backgrounds, $i); // Get member for current index
-    $type: type-of($shorthand); // Get type of variable - List or String
+    $type: type-of($shorthand); // Get type of variable - List (gradient) or String (image)
 
-    // If shorthand is a list
+    // If shorthand is a list (gradient)
     @if $type == list {
       $first-member: nth($shorthand, 1); // Get first member of shorthand
 
       // Linear Gradient
       @if index(linear radial, nth($first-member, 1)) {
         $gradient-type: nth($first-member, 1); // linear || radial
-
-        // Get actual gradient (red, blue)
-        $gradient-args: false;
-        $shorthand-start: false;
-        // Linear gradient and positioning, repeat, etc. values
-        @if type-of($first-member) == list {
-          $gradient-args: nth($first-member, 2);
+        $gradient-args:      false;
+        $gradient-positions: false;
+        $shorthand-start:    false;
+        @if type-of($first-member) == list { // Linear gradient plus additional shorthand values — lg(red,orange)repeat,...
+          $gradient-positions: nth($first-member, 2);
+          $gradient-args:      nth($first-member, 3);
           $shorthand-start: 2;
         }
-        // Linear gradient only
-        @else {
-          $gradient-args: nth($shorthand, 2); // Get actual gradient (red, blue)
-          $shorthand-start: 3;
+        @else { // Linear gradient only — lg(red,orange),...
+          $gradient-positions: nth($shorthand, 2);
+          $gradient-args:      nth($shorthand, 3); // Get gradient (red, blue)
         }
 
-        $gradient: render-gradients($gradient-args, $gradient-type, $vendor);
-        @for $j from $shorthand-start through length($shorthand) {
-          $gradient: join($gradient, nth($shorthand, $j), space);
+        $gradient-positions: _gradient-positions-parser($gradient-type, $gradient-positions);
+        $gradient: _render-gradients($gradient-positions, $gradient-args, $gradient-type, $vendor);
+
+        // Append any additional shorthand args to gradient
+        @if $shorthand-start {
+          @for $j from $shorthand-start through length($shorthand) {
+            $gradient: join($gradient, nth($shorthand, $j), space);
+          }
         }
         $backgrounds-prefixed: append($backgrounds-prefixed, $gradient, comma);
       }
-
       // Image with additional properties
       @else {
         $backgrounds-prefixed: append($backgrounds-prefixed, $shorthand, comma);
       }
-
     }
-
-    // If shorthand is a simple string, color or image
+    // If shorthand is a simple string (color or image)
     @else if $type == string {
       $backgrounds-prefixed: join($backgrounds-prefixed, $shorthand, comma);
     }
@@ -102,6 +98,6 @@
 
 //Examples:
   //@include background(linear-gradient(top, orange, red));
-  //@include background(radial-gradient(50% 50%, cover circle, orange, red));
+  //@include background(radial-gradient(circle at 40% 40%, orange, red));
   //@include background(url("/images/a.png") no-repeat, linear-gradient(orange, red));
   //@include background(url("image.png") center center, linear-gradient(orange, red), url("image.png"));

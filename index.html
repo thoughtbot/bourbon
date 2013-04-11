@@ -28,7 +28,7 @@ meta_description: Bourbon - A simple and lightweight mixin library for Sass / CS
   ol {
     > li {
       background-color: #F4F5F7;
-      <span class="row" data-role="one"><span class="a">@include</span> <span class="b">background-image(</span> <span class="c">linear-gradient(#FFF, #F4F5F7)</span> <span class="b">)</span>;</span>
+      <span class="row" data-role="one"><span class="a">@include</span> <span class="b">background-image(</span> <span class="c">linear-gradient(to left, #FFF, #F4F5F7)</span> <span class="b">)</span>;</span>
       float: left;
       <span class="row" data-role="two"><span class="b">font-family:</span> <span class="c">$lucida-grande</span><span class="b"></span>;</span>
       position: relative;
@@ -48,11 +48,8 @@ meta_description: Bourbon - A simple and lightweight mixin library for Sass / CS
 
           <div class="tooltip one">
             <p>CSS Output</p>
-<pre><code>background-image: -webkit-linear-gradient(top, #FFF, #F4F5F7);
-background-image:    -moz-linear-gradient(top, #FFF, #F4F5F7);
-background-image:     -ms-linear-gradient(top, #FFF, #F4F5F7);
-background-image:      -o-linear-gradient(top, #FFF, #F4F5F7);
-background-image:         linear-gradient(top, #FFF, #F4F5F7);</code></pre>
+<pre><code>background-image: -webkit-linear-gradient(   left, #FFF, #F4F5F7);
+background-image:         linear-gradient(to left, #FFF, #F4F5F7);</code></pre>
           </div>
 
           <div class="tooltip two">
@@ -64,8 +61,6 @@ background-image:         linear-gradient(top, #FFF, #F4F5F7);</code></pre>
             <p>CSS Output</p>
 <pre><code>-webkit-transition: all 0.8s;
    -moz-transition: all 0.8s;
-    -ms-transition: all 0.8s;
-     -o-transition: all 0.8s;
         transition: all 0.8s;
 </code></pre>
           </div>

@@ -208,8 +208,6 @@ p {
 a, a:link, a:active, a:visited {
   -webkit-transition: all 0.15s ease-out 0;
   -moz-transition: all 0.15s ease-out 0;
-  -ms-transition: all 0.15s ease-out 0;
-  -o-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
   color: #de5c00;
   text-decoration: none; }
@@ -248,7 +246,6 @@ code {
 button {
   border: 1px solid #076fe4;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 0 0 #8ebcf1;
   box-shadow: inset 0 1px 0 0 #8ebcf1;
   color: white;
   display: inline-block;
@@ -256,29 +253,21 @@ button {
   font-weight: bold;
   background-color: #4294f0;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4294f0), color-stop(100%, #0776f3));
-  background-image: -webkit-linear-gradient(top, #4294f0, #0776f3);
-  background-image: -moz-linear-gradient(top, #4294f0, #0776f3);
-  background-image: -ms-linear-gradient(top, #4294f0, #0776f3);
-  background-image: -o-linear-gradient(top, #4294f0, #0776f3);
-  background-image: linear-gradient(top, #4294f0, #0776f3);
+  background-image: -webkit-linear-gradient(#4294f0, #0776f3);
+  background-image: linear-gradient(#4294f0, #0776f3);
   padding: 7px 18px;
   text-decoration: none;
   text-shadow: 0 1px 0 #0065d6;
-  -webkit-background-clip: padding-box; }
+  background-clip: padding-box; }
   button:hover:not(:disabled) {
-    -webkit-box-shadow: inset 0 1px 0 0 #60a2ec;
     box-shadow: inset 0 1px 0 0 #60a2ec;
     cursor: pointer;
     background-color: #2f87ea;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2f87ea), color-stop(100%, #086fe3));
-    background-image: -webkit-linear-gradient(top, #2f87ea, #086fe3);
-    background-image: -moz-linear-gradient(top, #2f87ea, #086fe3);
-    background-image: -ms-linear-gradient(top, #2f87ea, #086fe3);
-    background-image: -o-linear-gradient(top, #2f87ea, #086fe3);
-    background-image: linear-gradient(top, #2f87ea, #086fe3); }
+    background-image: -webkit-linear-gradient(#2f87ea, #086fe3);
+    background-image: linear-gradient(#2f87ea, #086fe3); }
   button:active:not(:disabled) {
     border: 1px solid #076fe4;
-    -webkit-box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee;
     box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee; }
   button:disabled {
     opacity: 0.5;
@@ -296,7 +285,6 @@ button {
 
 a.button {
   border-radius: 5px;
-  -webkit-box-shadow: inset 0px 1px rgba(255, 255, 255, 0.4);
   box-shadow: inset 0px 1px rgba(255, 255, 255, 0.4);
   display: block;
   float: left;
@@ -309,40 +297,28 @@ a.button {
   a.button:hover {
     text-decoration: none; }
   a.button:active {
-    -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     -webkit-transition: 0.25s;
     -moz-transition: 0.25s;
-    -ms-transition: 0.25s;
-    -o-transition: 0.25s;
     transition: 0.25s; }
   a.button.installation {
     background-color: #afe4ec;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #afe4ec), color-stop(100%, #68cad8));
-    background-image: -webkit-linear-gradient(top, #afe4ec, #68cad8);
-    background-image: -moz-linear-gradient(top, #afe4ec, #68cad8);
-    background-image: -ms-linear-gradient(top, #afe4ec, #68cad8);
-    background-image: -o-linear-gradient(top, #afe4ec, #68cad8);
-    background-image: linear-gradient(top, #afe4ec, #68cad8);
+    background-image: -webkit-linear-gradient(#afe4ec, #68cad8);
+    background-image: linear-gradient(#afe4ec, #68cad8);
     border: 1px solid #40a9b8;
     color: #156571;
     text-shadow: 0px 1px #b2e4eb; }
     a.button.installation:hover {
       background-color: #c4ebf1;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c4ebf1), color-stop(100%, #7cd1dd));
-      background-image: -webkit-linear-gradient(top, #c4ebf1, #7cd1dd);
-      background-image: -moz-linear-gradient(top, #c4ebf1, #7cd1dd);
-      background-image: -ms-linear-gradient(top, #c4ebf1, #7cd1dd);
-      background-image: -o-linear-gradient(top, #c4ebf1, #7cd1dd);
-      background-image: linear-gradient(top, #c4ebf1, #7cd1dd); }
+      background-image: -webkit-linear-gradient(#c4ebf1, #7cd1dd);
+      background-image: linear-gradient(#c4ebf1, #7cd1dd); }
   a.button.docs {
     background-color: #afece4;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #afece4), color-stop(100%, #68d8ca));
-    background-image: -webkit-linear-gradient(top, #afece4, #68d8ca);
-    background-image: -moz-linear-gradient(top, #afece4, #68d8ca);
-    background-image: -ms-linear-gradient(top, #afece4, #68d8ca);
-    background-image: -o-linear-gradient(top, #afece4, #68d8ca);
-    background-image: linear-gradient(top, #afece4, #68d8ca);
+    background-image: -webkit-linear-gradient(#afece4, #68d8ca);
+    background-image: linear-gradient(#afece4, #68d8ca);
     border: 1px solid #22baa8;
     color: #216e64;
     margin-left: 20px;
@@ -350,11 +326,8 @@ a.button {
     a.button.docs:hover {
       background-color: #c4f1eb;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c4f1eb), color-stop(100%, #7cddd1));
-      background-image: -webkit-linear-gradient(top, #c4f1eb, #7cddd1);
-      background-image: -moz-linear-gradient(top, #c4f1eb, #7cddd1);
-      background-image: -ms-linear-gradient(top, #c4f1eb, #7cddd1);
-      background-image: -o-linear-gradient(top, #c4f1eb, #7cddd1);
-      background-image: linear-gradient(top, #c4f1eb, #7cddd1); }
+      background-image: -webkit-linear-gradient(#c4f1eb, #7cddd1);
+      background-image: linear-gradient(#c4f1eb, #7cddd1); }
 
 @-webkit-keyframes fadein {
   from {
@@ -536,8 +509,6 @@ header {
           header .buttons .button:last-child {
             margin-right: 0; } }
   header h1.brand {
-    background-color: transparent;
-    border: 0;
     color: transparent;
     font: 0/0 a;
     text-shadow: none;
@@ -567,15 +538,11 @@ header {
   overflow: hidden; }
 
 section.demo {
-  -webkit-box-shadow: inset 0 -1px #eb412b, 0px 1px #e3e2dd;
   box-shadow: inset 0 -1px #eb412b, 0px 1px #e3e2dd;
   background-color: #f47a33;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f47a33), color-stop(100%, #f26234));
-  background-image: -webkit-linear-gradient(top, #f47a33, #f26234);
-  background-image: -moz-linear-gradient(top, #f47a33, #f26234);
-  background-image: -ms-linear-gradient(top, #f47a33, #f26234);
-  background-image: -o-linear-gradient(top, #f47a33, #f26234);
-  background-image: linear-gradient(top, #f47a33, #f26234);
+  background-image: -webkit-linear-gradient(#f47a33, #f26234);
+  background-image: linear-gradient(#f47a33, #f26234);
   border-top: 1px solid #eb412b;
   margin-bottom: -100px; }
   section.demo h2 {
@@ -608,7 +575,6 @@ section.demo {
         border-width: 23px 10px 0px 62px; } }
   section.demo #browser-container {
     background: #494f57;
-    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     margin: 0 auto;
     max-width: 960px;
@@ -636,8 +602,6 @@ section.demo {
     z-index: 0;
     -webkit-transition: background 0.3s;
     -moz-transition: background 0.3s;
-    -ms-transition: background 0.3s;
-    -o-transition: background 0.3s;
     transition: background 0.3s; }
   .browser-code .row.active ::before, .browser-code .row:hover ::before {
     background: rgba(255, 255, 255, 0.025); }
@@ -709,7 +673,6 @@ section.demo {
     .tooltip code {
       white-space: pre-wrap; } }
 section.examples {
-  -webkit-box-shadow: 0 -5px 0 5px white, 0 -6px 0 6px #eb412b;
   box-shadow: 0 -5px 0 5px white, 0 -6px 0 6px #eb412b;
   background-color: #f5f4f1;
   border-top: 1px solid #e3e2dd;
@@ -747,7 +710,6 @@ section.examples {
           margin-right: 0; } }
 
 section.usage {
-  -webkit-box-shadow: 0px -1px #bfccd4, 0px -1px 0 1px #d8e1e5, 0px -2px 0 2px #bfccd4;
   box-shadow: 0px -1px #bfccd4, 0px -1px 0 1px #d8e1e5, 0px -2px 0 2px #bfccd4;
   background-color: #f1f4f6;
   margin: 3rem 0 0;
@@ -858,8 +820,6 @@ section.apps ul.app-list {
     section.apps ul.app-list li:after {
       clear: both; }
   section.apps ul.app-list li > a {
-    background-color: transparent;
-    border: 0;
     color: transparent;
     font: 0/0 a;
     text-shadow: none;
@@ -913,8 +873,6 @@ section.websites {
 
 section.websites a.website {
   *zoom: 1;
-  background-color: transparent;
-  border: 0;
   color: transparent;
   font: 0/0 a;
   text-shadow: none;
@@ -922,7 +880,6 @@ section.websites a.website {
   float: left;
   margin-right: 2.35765%;
   width: 23.23176%;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border: 3px solid white;
   display: block;
