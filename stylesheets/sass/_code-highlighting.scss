@@ -9,7 +9,7 @@ div.highlight {
 pre {
   background-color: $highlight-color;
   border-radius: 3px;
-  @include box-shadow(0 0 0 1px darken($highlight-color, 8%));
+  box-shadow: 0 0 0 1px darken($highlight-color, 8%);
   margin: 1em 0;
   overflow: auto;
   padding: 7px;
@@ -27,7 +27,7 @@ pre {
   &::-webkit-scrollbar-thumb {
       background-color: desaturate(darken($highlight-color, 10%), 5%);
       border-radius: 4px;
-      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
   }
   &::-webkit-scrollbar-corner {
   }

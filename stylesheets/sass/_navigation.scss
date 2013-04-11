@@ -42,7 +42,11 @@ nav.fixed-nav {
 
       &.title.complete-list h3 {
         border-bottom: 0;
-        @include box-shadow(none);
+        box-shadow: none;
+      }
+
+      &.deprecated {
+        text-decoration: line-through;
       }
 
       a {
@@ -71,7 +75,7 @@ nav.fixed-nav {
 
         h3 {
           border-bottom: 1px solid darken($base-border-color, 10%);
-          @include box-shadow(0 1px 0 white);
+          box-shadow: 0 1px 0 white;
           color: hsl(0, 0%, 30%);
           font-size: 12px;
           font-weight: bold;

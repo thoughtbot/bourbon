@@ -1,4 +1,4 @@
-//************************************************************************//
+
 // Index
 //************************************************************************//
 
@@ -47,11 +47,10 @@ header {
 }
 
 section.demo {
-  @include box-shadow(inset 0 -1px #eb412b, 0px 1px #e3e2dd);
+  box-shadow: inset 0 -1px #eb412b, 0px 1px #e3e2dd;
   @include linear-gradient(#f47a33, #f26234);
   border-top: 1px solid #eb412b;
   margin-bottom: -100px;
-  // overflow: hidden;
 
   h2 {
     color: white;
@@ -88,7 +87,7 @@ section.demo {
 
   #browser-container {
     background: $base-background-color-blue;
-    @include box-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     margin: 0 auto;
     max-width: 960px;
     position: relative;
@@ -226,7 +225,7 @@ section.demo {
 // 
 //************************************************************************//
 section.examples {
-  @include box-shadow(0 -5px 0 5px white, 0 -6px 0 6px #eb412b);
+  box-shadow: 0 -5px 0 5px white, 0 -6px 0 6px #eb412b;
   background-color:#f5f4f1;
   border-top: 1px solid #e3e2dd;
   padding-top: 100px;
@@ -250,7 +249,7 @@ section.examples {
 }
 
 section.usage {
-  @include box-shadow(0px -1px #bfccd4, 0px -1px 0 1px #d8e1e5, 0px -2px 0 2px #bfccd4);
+  box-shadow: 0px -1px #bfccd4, 0px -1px 0 1px #d8e1e5, 0px -2px 0 2px #bfccd4;
   background-color: #f1f4f6;
   margin: 3rem 0 0;
   padding: 3rem 0 8rem;
@@ -416,7 +415,7 @@ section.websites a.website {
   @include clearfix;
   @include hide-text;
   @include span-columns(3);
-  @include box-shadow(0 1px 2px rgba(0,0,0,.2));
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
   border: 3px solid white;
   display: block;
   margin-top: 2rem;

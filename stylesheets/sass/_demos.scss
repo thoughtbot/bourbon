@@ -7,7 +7,7 @@ $demo-color-alt: $demo-base;
 div.box {
   border-radius: 40px;
   border: 1px solid darken($demo-color-alt, 10%);
-  @include box-shadow(inset 0 1px 0 hsla(0, 0%, 100%, 0.45));
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.45);
   height: 40px;
   @include linear-gradient($demo-color, $demo-color-alt);
   width: 40px;
@@ -65,11 +65,7 @@ article#box-shadow {
       width: 100px;
 
       &.single {
-        @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
-      }
-
-      &.double {
-        @include box-shadow(1px 1px 5px 1px green, -1px -1px 5px 1px blue);
+        box-shadow: 0 0 5px 3px hsla(0, 0%, 0%, 0.65);
       }
     }
   }

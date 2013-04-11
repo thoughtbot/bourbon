@@ -115,7 +115,7 @@ $button-width: 154px;
 
 a.button {
   border-radius: 5px;
-  @include box-shadow(inset 0px 1px rgba(255,255,255,.4));
+  box-shadow: inset 0px 1px rgba(255,255,255,.4);
   display: block;
   float: left;
   padding: 20px 0;
@@ -130,7 +130,7 @@ a.button {
   }
 
   &:active {
-    @include box-shadow(inset 0 0 10px rgba(0,0,0,.2));
+    box-shadow: inset 0 0 10px rgba(0,0,0,.2);
     @include transition(.25s);
   }
 

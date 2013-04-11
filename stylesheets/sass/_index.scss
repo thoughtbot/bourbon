@@ -25,7 +25,7 @@ div.main-inner {
   //************************************************************************//
   h1 {
     background-color: hsl(43, 23%, 94%);
-    @include box-shadow(1px 0 0 $background-color, -1px 0 0 $background-color);
+    box-shadow: 1px 0 0 $background-color, -1px 0 0 $background-color;
     color: $base-font-color-alt;
     font-size: 30px;
     font-weight: 600;
@@ -40,7 +40,7 @@ div.main-inner {
       background-image: url(../images/shared/bourbon-logo.png);
       background-repeat: no-repeat;
       border: 0;
-      @include box-shadow(none);
+      box-shadow: none;
       display: inline-block;
       height: 58px;
       margin: 0 0 20px 0;
@@ -132,7 +132,7 @@ section.intro-wrapper {
 //************************************************************************//
 article {
   &:target {
-    @include box-shadow(inset 4px 0 0px 0 $orange);
+    box-shadow: inset 4px 0 0px 0 $orange;
     @include transition(all 0.3s);
 
     h2 {

@@ -15,27 +15,19 @@ animation
   @ animation-play-state(*args)
   @ animation-timing-function(*args)
 
-@ appearance(*args)
-
 background
   @ background(*args)
   @ background-image(*args)
-  @ background-size(*args)
-
-@ border-image(*args)
 
 border-radius
-  @ border-radius(*args)
   @ border-top-radius(*args)
-  @ border-top-left-radius(*args)
-  @ border-top-right-radius(*args)
   @ border-bottom-radius(*args)
-  @ border-bottom-left-radius(*args)
-  @ border-bottom-right-radius(*args)
   @ border-left-radius(*args)
   @ border-right-radius(*args)
 
-@ box-shadow(*args)
+@ appearance(*args)
+@ backface-visibility(*args)
+@ border-image(*args)
 @ box-sizing(*args)
 
 columns
@@ -65,10 +57,13 @@ flex-box
 @ font-face
 @ inline-block
 @ hidpi
+@ image-rendering
 @ keyframes
 @ placeholder
+@ perspective
 @ linear-gradient(*args)
 @ radial-gradient(*args)
+@ user-select
 
 transform
   @ transform(*args)
@@ -81,7 +76,6 @@ transition
   @ transition-property(*args)
   @ transition-timing-function(*args)
 
-@ user-select
 {% endhighlight %}
 
 <h3 id="complete-list-functions">Functions</h3>
@@ -107,6 +101,7 @@ tint(*args)
 @ prefixer(*args)
 @ retina-image(*args)
 @ size(*args)
+@ triangle
 
 HTML5 Inputs
   #{$all-text-inputs}
@@ -123,7 +118,6 @@ timing-functions
   $ease-out-*
   $ease-in-out-*
   * = quad, cubic, quart, quint, sine, expo, circ, back
-@ triangle
 {% endhighlight %}
 
 </article>
