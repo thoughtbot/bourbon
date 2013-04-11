@@ -1,11 +1,11 @@
 @mixin border-image($images) {
-  -webkit-border-image: border-add-prefix($images, webkit);
-     -moz-border-image: border-add-prefix($images, moz);
-       -o-border-image: border-add-prefix($images, o);
-          border-image: border-add-prefix($images);
+  -webkit-border-image: _border-add-prefix($images, webkit);
+     -moz-border-image: _border-add-prefix($images, moz);
+       -o-border-image: _border-add-prefix($images, o);
+          border-image: _border-add-prefix($images);
 }
 
-@function border-add-prefix($images, $vendor: false) {
+@function _border-add-prefix($images, $vendor: false) {
   $border-image: ();
   $images-type:  type-of(nth($images, 1));
   $first-var:    nth(nth($images, 1), 1);          // Get type of Gradient (Linear || radial)
@@ -16,16 +16,14 @@
       @for $i from 2 through length($images) {
         $gradient-type: nth($images, 1);           // Get type of gradient (linear || radial)
         $gradient-args: nth($images, $i);          // Get actual gradient (red, blue)
-        $border-image:  render-gradients($gradient-args, $gradient-type, $vendor);
+        $border-image:  _render-gradients($gradient-args, $gradient-type, $vendor);
       }
     }
-
     // If input is a URL
     @else {
       $border-image: $images;
     }
   }
-
   // If input is gradient or url + additional args
   @else if $images-type == list {
     @for $i from 1 through length($images) {
@@ -35,9 +33,8 @@
       @if $type == list {
         $gradient-type: nth(nth($images, $i), 1); // Get type of gradient (linear || radial)
         $gradient-args: nth(nth($images, $i), 2); // Get actual gradient (red, blue)
-        $border-image:  render-gradients($gradient-args, $gradient-type, $vendor);
+        $border-image:  _render-gradients($gradient-args, $gradient-type, $vendor);
       }
-
       // If variable is a string - Image or number
       @else if ($type == string) or ($type == number) {
         $border-image: append($border-image, nth($images, $i));

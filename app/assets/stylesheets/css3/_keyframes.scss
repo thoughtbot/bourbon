@@ -2,7 +2,6 @@
 @mixin keyframes($name) {
   $original-prefix-for-webkit:    $prefix-for-webkit;
   $original-prefix-for-mozilla:   $prefix-for-mozilla;
-  $original-prefix-for-microsoft: $prefix-for-microsoft;
   $original-prefix-for-opera:     $prefix-for-opera;
   $original-prefix-for-spec:      $prefix-for-spec;
 
@@ -20,13 +19,6 @@
       @content;
     }
   }
-  @if $original-prefix-for-microsoft {
-    @include disable-prefix-for-all();
-    $prefix-for-microsoft: true;
-    @-ms-keyframes #{$name} {
-      @content;
-    }
-  }
   @if $original-prefix-for-opera {
     @include disable-prefix-for-all();
     $prefix-for-opera: true;
@@ -35,7 +27,6 @@
     }
   }
   @if $original-prefix-for-spec {
-    $prefix-for-spec:     true !default;
     @include disable-prefix-for-all();
     $prefix-for-spec: true;
     @keyframes #{$name} {
@@ -45,7 +36,6 @@
 
   $prefix-for-webkit:    $original-prefix-for-webkit;
   $prefix-for-mozilla:   $original-prefix-for-mozilla;
-  $prefix-for-microsoft: $original-prefix-for-microsoft;
   $prefix-for-opera:     $original-prefix-for-opera;
   $prefix-for-spec:      $original-prefix-for-spec;
 }
