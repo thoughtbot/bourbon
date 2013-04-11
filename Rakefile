@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'rubygems'
 require 'bundler'
-require 'bourbon/docset'
+require './lib/bourbon/docset.rb'
 require 'cucumber/rake/task'
 
 Bundler::GemHelper.install_tasks
