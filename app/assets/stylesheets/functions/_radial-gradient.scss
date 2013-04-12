@@ -6,7 +6,7 @@
                           $G9: null,  $G10: null,
                           $pos: null,
                           $shape-size: null) {
- 
+
   $data: _radial-arg-parser($G1, $G2, $pos, $shape-size);
   $G1:  nth($data, 1);
   $G2:  nth($data, 2);

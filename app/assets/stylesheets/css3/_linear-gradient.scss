@@ -3,8 +3,6 @@
                        $G5: null, $G6: null,
                        $G7: null, $G8: null,
                        $G9: null, $G10: null,
-                       $deprecated-pos1: left top,
-                       $deprecated-pos2: left bottom,
                        $fallback: null) {
   // Detect what type of value exists in $pos
   $pos-type: type-of(nth($pos, 1));
@@ -35,7 +33,6 @@
   }
 
   background-color: $fallback-color;
-  background-image: _deprecated-webkit-gradient(linear, $deprecated-pos1, $deprecated-pos2, $full); // Safari <= 5.0
   background-image: -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
   background-image: unquote("linear-gradient(#{$pos-spec}#{$full})");
 }
