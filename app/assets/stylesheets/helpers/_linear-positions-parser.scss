@@ -7,28 +7,33 @@
   $length: length($pos);
   // Parse Side and corner positions
   @if ($length > 1) {
-    @if nth($pos, 1) == "to" {
+    @if nth($pos, 1) == "to" { // Newer syntax
       $side: nth($pos, 2);
 
-      @if $length == 2 {
+      @if $length == 2 { // eg. to top
         // Swap for backwards compatability
         $degree: _position-flipper(nth($pos, 2));
       }
-      @else if $length == 3 {
+      @else if $length == 3 { // eg. to top left
         $corner: nth($pos, 3);
       }
-      @if ("#{$side} #{$corner}" == "left top") or ("#{$side} #{$corner}" == "top left") {
-        $degree: 135deg;
-      }
-      @else if ("#{$side} #{$corner}" == "right top") or ("#{$side} #{$corner}" == "top right") {
-        $degree: 45deg;
-      }
-      @else if ("#{$side} #{$corner}" == "right bottom") or ("#{$side} #{$corner}" == "bottom right") {
-        $degree: -45deg;
-      }
-      @else if ("#{$side} #{$corner}" == "left bottom") or ("#{$side} #{$corner}" == "bottom left") {
-        $degree: -135deg;
-      }
+    }
+    @else if $length == 2 { // Older syntax ("top left")
+      $side: _position-flipper(nth($pos, 1));
+      $corner: _position-flipper(nth($pos, 2));
+    }
+
+    @if ("#{$side} #{$corner}" == "left top") or ("#{$side} #{$corner}" == "top left") {
+      $degree: _position-flipper(#{$side}) _position-flipper(#{$corner});
+    }
+    @else if ("#{$side} #{$corner}" == "right top") or ("#{$side} #{$corner}" == "top right") {
+      $degree: _position-flipper(#{$side}) _position-flipper(#{$corner});
+    }
+    @else if ("#{$side} #{$corner}" == "right bottom") or ("#{$side} #{$corner}" == "bottom right") {
+      $degree: _position-flipper(#{$side}) _position-flipper(#{$corner});
+    }
+    @else if ("#{$side} #{$corner}" == "left bottom") or ("#{$side} #{$corner}" == "bottom left") {
+      $degree: _position-flipper(#{$side}) _position-flipper(#{$corner});
     }
     @else {
       @warn "Incorrect gradient syntax";
@@ -51,7 +56,6 @@
   @return $degree $spec;
 }
 
-// Helper Function
 @function _position-flipper($pos) {
  @return if($pos == left, right, null)
          if($pos == right, left, null)
