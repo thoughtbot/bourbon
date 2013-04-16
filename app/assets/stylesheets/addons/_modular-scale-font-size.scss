@@ -1,0 +1,110 @@
+/* Usage
+ * This makes using rem easier by setting a pixel fallback for lesser browser.
+ *
+ *This mixin expects the $value to be an *intended* em value, an increment value {Where on the scale it is} and a ratio that is either a value of your own devising or one of the named values below.
+ * e.g. @include  modular-scale-font-size(1,6, minor-third) or modular-scale-font-size(1.05,3, 1.0004)
+ *
+ * The mixin will also take into account a root-font-size if it is set with the variable $root-font-size. If not it defaults to 100%.
+ *
+ * More info: http://snook.ca/archives/html_and_css/font-size-with-rem, http://24ways.org/2011/composing-the-new-canon 
+*/
+$root-font-size: 100% !default;
+
+$root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
+
+@mixin modular-scale-font-size($value, $increment, $ratio){
+  @if $ratio == unison {
+    $ratio: 1;  
+  }
+
+  @else if $ratio == minor-second {
+    $ratio: 1.067;
+  }
+ 
+  @else if $ratio == major-second {
+    $ratio: 1.125;
+  }
+
+  @else if $ratio == minor-third {
+    $ratio: 1.2;
+  }
+
+  @else if $ratio == major-third {
+    $ratio: 1.25;
+  }
+
+  @else if $ratio == perfect-fourth {
+    $ratio: 1.333;
+  }
+
+  @else if $ratio == augmented-fourth {
+    $ratio: 1.414;
+  }
+
+  @else if $ratio == diminished-fifth {
+    $ratio: 1.414;
+  }
+
+  @else if $ratio == perfect-fifth {
+    $ratio: 1.5;
+  }
+
+  @else if $ratio == minor-sixth {
+    $ratio: 1.6;
+  }
+
+  @else if $ratio == major-sixth {
+    $ratio: 1.667;
+  }
+  
+  @else if $ratio == minor-seventh {
+    $ratio: 1.778;
+  }
+
+  @else if $ratio == major-seventh {
+          $ratio: 1.875;
+  }
+
+  @else if $ratio == octave {
+          $ratio: 2;
+  }
+
+  @else if $ratio == major-tenth {
+          $ratio: 2.5;
+  }
+ 
+  @else if $ratio == major-eleventh {
+          $ratio: 2.667;
+  }
+
+  @else if $ratio == major-twelfth {
+          $ratio: 3;
+  }
+ 
+  @else if $ratio == double-octave {
+          $ratio: 4;
+  }
+
+  @else if $ratio == golden-ratio {
+          $ratio: 1.618;
+  }
+  
+  @else {
+    $ratio: $ratio;
+  }
+  
+  @if $increment > 0 {
+      @for $i from 1 through $increment {
+        $value: ($value * $ratio);
+      }
+  }
+  @if $increment < 0 { 
+      $increment: abs($increment);
+        @for $i from 1 through $increment {
+          $value: ($value / $ratio);
+        }
+  }   
+
+  font-size: $value * $root-font-multiplier * 16px;
+  font-size: $value * 1rem;
+}
