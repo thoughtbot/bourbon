@@ -1,0 +1,12 @@
+// -webkit-font-smoothing
+// Values: none, antialiased (default), subpixel-antialiased
+
+// References
+//
+// 1. http://maxvoltar.com/sandbox/fontsmoothing/
+// 2. http://daneden.me/2010/12/css-font-smoothing/
+
+@mixin font-smoothing($value: antialiased) {
+  -webkit-font-smoothing: $value;
+  font-smoothing: $value;
+}
