@@ -35,9 +35,6 @@
     @else if ("#{$side} #{$corner}" == "left bottom") or ("#{$side} #{$corner}" == "bottom left") {
       $degree: _position-flipper(#{$side}) _position-flipper(#{$corner});
     }
-    @else {
-      @warn "Incorrect gradient syntax";
-    }
     $spec: to $side $corner;
   }
   @else if $length == 1 {
