@@ -56,9 +56,9 @@ Install Bourbon into the current directory by generating the `bourbon` folder:
 
 The generated folder will contain all the mixins and other necessary Bourbon files. It is recommended not to add or modify the Bourbon files so that you can update Bourbon easily.
 
-You can specify a target directory using the `path` option:
+You can specify a target directory using the `path` flag:
 
-    bourbon install --path=my/custom/path/
+    bourbon install --path my/custom/path/
 
 #### Import
 
