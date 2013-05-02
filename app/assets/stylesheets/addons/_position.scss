@@ -1,42 +1,64 @@
-@mixin position ($position: relative, $coordinates: 0 0 0 0) {
+@mixin position ($position: relative, $coordinates: auto auto auto auto, $t: auto, $r: auto, $b: auto, $l: auto) {
+  // named variables for coordinates will take priority over the list
 
   @if type-of($position) == list {
     $coordinates: $position;
     $position: relative;
   }
 
-  $top: nth($coordinates, 1);
-  $right: nth($coordinates, 2);
-  $bottom: nth($coordinates, 3);
-  $left: nth($coordinates, 4);
-
   position: $position;
 
-  @if $top == auto {
-    top: $top;
+  // TOP
+  // First, set $top to the coordinate value.
+  $coordinate-top: nth($coordinates, 1);
+  $top: $coordinate-top;
+  // Override it with the named variable, if there is a named variable defined.
+  @if $t != auto {
+    $top: $t;
   }
-  @else if not(unitless($top)) {
-    top: $top;
+  // Ignore "auto" and "a" (handy abbreviation for coordinates), since "auto" is the default.
+  @if $top != a and $top != auto {
+    // Translate unitless zeros and numbers with units into a rule.
+    @if $top == 0 or not(unitless($top)) {
+      top: $top;
+    }
+  }
+  // Do the same for the other coordinates ...
+
+  // RIGHT
+  $coordinate-right: nth($coordinates, 2);
+  $right: $coordinate-right;
+  @if $r != auto {
+    $right: $r;
+  }
+  @if $right != a and $right != auto {
+    @if $right == 0 or not(unitless($right)) {
+      right: $right;
+    }
   }
 
-  @if $right == auto {
-    right: $right;
+  // BOTTOM
+  $coordinate-bottom: nth($coordinates, 3);
+  $bottom: $coordinate-bottom;
+  @if $b != auto {
+    $bottom: $b;
   }
-  @else if not(unitless($right)) {
-    right: $right;
-  }
-
-  @if $bottom == auto {
-    bottom: $bottom;
-  }
-  @else if not(unitless($bottom)) {
-    bottom: $bottom;
+  @if $bottom != a and $bottom != auto {
+    @if $bottom == 0 or not(unitless($bottom)) {
+      bottom: $bottom;
+    }
   }
 
-  @if $left == auto {
-    left: $left;
+  // left
+  $coordinate-left: nth($coordinates, 4);
+  $left: $coordinate-left;
+  @if $l != auto {
+    $left: $l;
   }
-  @else if not(unitless($left)) {
-    left: $left;
+  @if $left != a and $left != auto {
+    @if $left == 0 or not(unitless($left)) {
+      left: $left;
+    }
   }
+
 }
