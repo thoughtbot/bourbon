@@ -1,4 +1,4 @@
-@mixin position ($position: relative, $coordinates: auto auto auto auto, $t: auto, $r: auto, $b: auto, $l: auto) {
+@mixin position ($position: relative, $coordinates: n n n n) {
   // named variables for coordinates will take priority over the list
 
   @if type-of($position) == list {
@@ -8,54 +8,42 @@
 
   position: $position;
 
-  // TOP
-  // First, set $top to the coordinate value.
-  $coordinate-top: nth($coordinates, 1);
-  $top: $coordinate-top;
-  // Override it with the named variable, if there is a named variable defined.
-  @if $t != auto {
-    $top: $t;
-  }
-  // Ignore "auto" and "a" (handy abbreviation for coordinates), since "auto" is the default.
-  @if $top != a and $top != auto {
-    // Translate unitless zeros and numbers with units into a rule.
+  $top: nth($coordinates, 1);
+  $right: nth($coordinates, 2);
+  $bottom: nth($coordinates, 3);
+  $left: nth($coordinates, 4);
+
+  @if $top != n {
+    @if $top == a or $top == auto {
+      top: auto;
+    }
     @if $top == 0 or not(unitless($top)) {
       top: $top;
     }
   }
-  // Do the same for the other coordinates ...
 
-  // RIGHT
-  $coordinate-right: nth($coordinates, 2);
-  $right: $coordinate-right;
-  @if $r != auto {
-    $right: $r;
-  }
-  @if $right != a and $right != auto {
+  @if $right != n {
+    @if $right == a or $right == auto {
+      right: auto;
+    }
     @if $right == 0 or not(unitless($right)) {
       right: $right;
     }
   }
 
-  // BOTTOM
-  $coordinate-bottom: nth($coordinates, 3);
-  $bottom: $coordinate-bottom;
-  @if $b != auto {
-    $bottom: $b;
-  }
-  @if $bottom != a and $bottom != auto {
+  @if $bottom != n {
+    @if $bottom == a or $bottom == auto {
+      bottom: auto;
+    }
     @if $bottom == 0 or not(unitless($bottom)) {
       bottom: $bottom;
     }
   }
 
-  // left
-  $coordinate-left: nth($coordinates, 4);
-  $left: $coordinate-left;
-  @if $l != auto {
-    $left: $l;
-  }
-  @if $left != a and $left != auto {
+  @if $left != n {
+    @if $left == a or $left == auto {
+      left: auto;
+    }
     @if $left == 0 or not(unitless($left)) {
       left: $left;
     }
