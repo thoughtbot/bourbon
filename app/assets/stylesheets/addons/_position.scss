@@ -1,5 +1,4 @@
 @mixin position ($position: relative, $coordinates: n n n n) {
-  // named variables for coordinates will take priority over the list
 
   @if type-of($position) == list {
     $coordinates: $position;
