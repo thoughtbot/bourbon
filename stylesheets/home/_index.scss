@@ -508,9 +508,12 @@ section.neat {
     .neat-demo,
     .neat-logo {
       @include media(max-width 480px) {
-        @include span-columns(12);
         float: none;
         margin: 0 auto 30px;
+
+        &:last-child {
+          margin-right: auto;
+        }
 
         a.more-info {
           text-align: center;

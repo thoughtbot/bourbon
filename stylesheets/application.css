@@ -999,15 +999,11 @@ section.neat {
     @media screen and (max-width: 480px) {
       section.neat div.neat-images .neat-demo,
       section.neat div.neat-images .neat-logo {
-        display: block;
-        float: left;
-        margin-right: 2.35765%;
-        width: 100%;
         float: none;
         margin: 0 auto 30px; }
         section.neat div.neat-images .neat-demo:last-child,
         section.neat div.neat-images .neat-logo:last-child {
-          margin-right: 0; }
+          margin-right: auto; }
         section.neat div.neat-images .neat-demo a.more-info,
         section.neat div.neat-images .neat-logo a.more-info {
           text-align: center; } }
