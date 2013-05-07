@@ -18,6 +18,15 @@
   @return false;
 }
 
+// Contains display value
+@function contains-display-value($query) {
+  @if belongs-to(table, $query) or belongs-to(block, $query) or belongs-to(inline-block, $query) or belongs-to(inline, $query) {
+    @return true;
+  }
+
+  @return false;
+}
+
 // Parses the first argument of span-columns()
 @function container-span($span: $span) {
   @if length($span) == 3 {

@@ -1,0 +1,68 @@
+// Remove last element gutter
+@mixin omega($query: block, $direction: right) {
+  $table: if(belongs-to(table, $query), true, false);
+  $auto: if(belongs-to(auto, $query), true, false);
+
+  @if length($query) == 1 {
+    @if $auto {
+      &:last-child {
+        margin-#{$direction}: 0;
+      }
+    }
+
+    @else if contains-display-value($query) {
+      @if $table {
+        padding-#{$direction}: 0;
+      }
+
+      @else {
+        margin-#{$direction}: 0;
+      }
+    }
+
+    @else {
+      &:nth-child(#{$query}) {
+        margin-#{$direction}: 0;
+      }
+    }
+  }
+
+  @else if length($query) == 2 {
+    @if $table {
+      @if $auto {
+        &:last-child {
+          padding-#{$direction}: 0;
+        }
+      }
+
+      @else {
+        &:nth-child(#{nth($query, 1)}) {
+          padding-#{$direction}: 0;
+        }
+      }
+    }
+
+    @else {
+      @if $auto {
+        &:last-child {
+          margin-#{$direction}: 0;
+        }
+      }
+
+      @else {
+        &:nth-child(#{nth($query, 1)}) {
+          margin-#{$direction}: 0;
+        }
+      }
+    }
+  }
+
+  @else {
+    @warn "Too many arguments passed to the omega() mixin."
+  }
+}
+
+@mixin nth-omega($nth, $display: block, $direction: right) {
+  @warn "The nth-omega() mixin is deprecated. Please use omega() instead.";
+  @include omega($nth $display, $direction);
+}
