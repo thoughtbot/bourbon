@@ -62,12 +62,12 @@
         $gradient-args:      false;
         $gradient-positions: false;
         $shorthand-start:    false;
-        @if type-of($first-member) == list { // Linear gradient plus additional shorthand values — lg(red,orange)repeat,...
+        @if type-of($first-member) == list { // Linear gradient plus additional shorthand values - lg(red,orange)repeat,...
           $gradient-positions: nth($first-member, 2);
           $gradient-args:      nth($first-member, 3);
           $shorthand-start: 2;
         }
-        @else { // Linear gradient only — lg(red,orange),...
+        @else { // Linear gradient only - lg(red,orange),...
           $gradient-positions: nth($shorthand, 2);
           $gradient-args:      nth($shorthand, 3); // Get gradient (red, blue)
         }

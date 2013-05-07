@@ -1,0 +1,15 @@
+%usage-styles {
+  box-shadow: 0px -1px #bfccd4, 0px -1px 0 1px #d8e1e5, 0px -2px 0 2px #bfccd4;
+  background-color: #f1f4f6;
+  margin: 3rem 0 0;
+  padding: 3rem 0 8rem;
+}
+
+%h3-center {
+  margin-bottom: 3rem;
+  text-align: center;
+
+  @include media(max-width 480px) {
+    margin-bottom: 1.5rem;
+  }
+}

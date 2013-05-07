@@ -10,7 +10,7 @@ header {
     float: left;
     width: $button-width * 2 + 20;
 
-    @include breakpoint(max-width 700px) {
+    @include media(max-width 700px) {
       @include span-columns(12);
       margin-bottom: 20px;
 
@@ -30,7 +30,7 @@ header {
     float: left;
     margin-bottom: 2rem;
 
-    @include breakpoint(max-width 700px) {
+    @include media(max-width 700px) {
       @include span-columns(12);
     }
 
@@ -60,7 +60,7 @@ section.demo {
     text-align: center;
     text-shadow: 0px 2px 2px darken(#d6692e, 10%);
 
-    @include breakpoint(max-width 768px) {
+    @include media(max-width 768px) {
       font-size: 2rem;
       line-height: 1.4em;
     }
@@ -209,7 +209,7 @@ section.demo {
   width: auto !important;
 }
 
-@include breakpoint(max-width 640px) {
+@include media(max-width 640px) {
   .browser-code {
     padding-left: 0px;
   }
@@ -218,7 +218,7 @@ section.demo {
   }
 }
 
-@include breakpoint(max-width 480px) {
+@include media(max-width 480px) {
 }
 
 //************************************************************************//
@@ -233,7 +233,7 @@ section.examples {
   .sass-wrapper {
     @include span-columns(5);
 
-    @include breakpoint(max-width 768px) {
+    @include media(max-width 768px) {
       @include span-columns(12);
     }
   }
@@ -242,19 +242,16 @@ section.examples {
     @include span-columns(7);
     @include omega;
 
-    @include breakpoint(max-width 768px) {
+    @include media(max-width 768px) {
       @include span-columns(12);
     }
   }
 }
 
 section.usage {
-  box-shadow: 0px -1px #bfccd4, 0px -1px 0 1px #d8e1e5, 0px -2px 0 2px #bfccd4;
-  background-color: #f1f4f6;
-  margin: 3rem 0 0;
-  padding: 3rem 0 8rem;
+  @extend %usage-styles;
 
-  @include breakpoint(max-width 480px) {
+  @include media(max-width 480px) {
     margin: 1.5rem 0;
     padding: 1.5rem 0 4rem;
   }
@@ -265,7 +262,7 @@ section.usage {
     text-align: center;
     text-transform: uppercase;
 
-    @include breakpoint(max-width 480px) {
+    @include media(max-width 480px) {
       margin-bottom: 2rem;
     }
   }
@@ -283,7 +280,7 @@ section.usage {
     clear: both;
     text-align: center;
 
-    @include breakpoint(max-width 768px) {
+    @include media(max-width 768px) {
       @include span-columns(12);
       margin: 0;
     }
@@ -294,7 +291,7 @@ section.usage {
     @include shift(2);
     clear: both;
 
-    @include breakpoint(max-width 768px) {
+    @include media(max-width 768px) {
       @include span-columns(12);
       margin: 0;
     }
@@ -316,17 +313,12 @@ section.apps {
   padding: 6rem 0;
   text-shadow: 0 1px white;
 
-  @include breakpoint(max-width 480px) {
+  @include media(max-width 480px) {
     padding: 3rem 0;
   }
 
   h3 {
-    margin-bottom: 3rem;
-    text-align: center;
-
-    @include breakpoint(max-width 480px) {
-      margin-bottom: 1.5rem;
-    }
+    @extend %h3-center;
   }
 }
 
@@ -334,11 +326,11 @@ section.apps ul.app-list {
   @include span-columns(5);
   margin-top: 3rem;
 
-  @include breakpoint(max-width 768px) {
+  @include media(max-width 768px) {
     @include span-columns(12);
   }
 
-  @include breakpoint(max-width 480px) {
+  @include media(max-width 480px) {
     margin-top: 1.5rem;
   }
 
@@ -398,7 +390,7 @@ section.apps img {
   @include span-columns(7);
   @include omega;
 
-  @include breakpoint(max-width 768px) {
+  @include media(max-width 768px) {
     @include span-columns(12);
   }
 }
@@ -406,7 +398,7 @@ section.apps img {
 section.websites {
   padding: 6rem 0;
 
-  @include breakpoint(max-width 480px) {
+  @include media(max-width 480px) {
     padding: 3rem 0;
   }
 }
@@ -420,12 +412,12 @@ section.websites a.website {
   display: block;
   margin-top: 2rem;
 
-  @include breakpoint(max-width 768px) {
+  @include media(max-width 768px) {
     @include span-columns(6);
-    @include nth-omega(2n);
+    @include omega(2n);
   }
 
-  @include breakpoint(max-width 350px) {
+  @include media(max-width 350px) {
     @include span-columns(12);
   }
 
@@ -434,17 +426,135 @@ section.websites a.website {
 
     &:hover {
       -webkit-filter: brightness(5%);
+      -webkit-filter: brightness(105%);
+      filter: brightness(105%);
+    }
+  }
+}
+
+section.neat {
+  @extend %usage-styles;
+  padding-bottom: 0;
+
+  h3 {
+    @extend %h3-center;
+  }
+
+  img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    -ms-interpolation-mode: bicubic;
+
+    @include media(max-width 480px) {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+
+  div.neat-images {
+    @include span-columns(6.5);
+    @include shift(3);
+    clear: both;
+
+    @include media(max-width 768px) {
+      @include span-columns(9);
+      @include shift(1.5);
+    }
+
+    @include media(max-width 480px) {
+      @include span-columns(12);
+      @include shift(0);
+    }
+
+    .neat-demo {
+      @include transition;
+      @include span-columns(3.75 of 6.5);
+      margin-right: 3%;
+      max-width: 300px;
+
+      &:hover {
+        @include transform(translateY(-10px));
+      }
+
+      a {
+        display: block;
+        padding-right: 10%;
+
+        @include media(max-width 480px) {
+          padding: 0;
+        }
+      }
+
+      img {
+        box-shadow: 0 1px 2px rgba(0,0,0,.2);
+      }
+    }
+
+    .neat-logo {
+      margin-top: 24px;
+      @include span-columns(2.75 of 6.5);
+      float: right;
+
+      a.more-info {
+        margin-top: 10px;
+        padding-left: 2%;
+        display: block;
+      }
+    }
+
+    .neat-demo,
+    .neat-logo {
+      @include media(max-width 480px) {
+        @include span-columns(12);
+        float: none;
+        margin: 0 auto 30px;
+
+        a.more-info {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .neat-tagline {
+    @include linear-gradient(#53aee0, #3da4dc);
+    margin-top: -48px;
+    padding: 100px 0;
+
+    @include media(max-width 480px) {
+      margin-top: -88px;
+    }
+
+    .container {
+      @include outer-container;
+    }
+
+    h3 {
+      @include pad(0 10px 0);
+      @include span-columns(9, table);
+      color: white;
+      display: block;
+      font-family: $helvetica;
+      font-weight: 100;
+      margin: 0 auto;
+      text-align: center;
+      text-shadow: 0px 2px 2px #1b6c98;
+
+      strong {
+        font-weight: 500;
+      }
     }
   }
 }
 
 footer {
   background-color: $base-background-color-blue;
-  margin-top: 3rem;
   padding: 3rem 0;
 
   section.footer-text {
-
     p {
       color: #bbb;
     }
@@ -458,7 +568,7 @@ footer {
     .button.docs {
       border-color: black;
 
-      @include breakpoint(max-width 480px) {
+      @include media(max-width 480px) {
         @include span-columns(12);
         margin: 10px 0 0;
       }
@@ -467,7 +577,7 @@ footer {
     .button.installation {
       border-color: black;
 
-      @include breakpoint(max-width 480px) {
+      @include media(max-width 480px) {
         @include span-columns(12);
       }
     }

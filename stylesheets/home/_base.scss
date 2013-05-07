@@ -28,7 +28,7 @@ h3 {
   font-size: 3rem;
   font-weight: 800;
 
-  @include breakpoint(max-width 480px) {
+  @include media(max-width 480px) {
     font-size: 2rem;
   }
 }
@@ -38,7 +38,7 @@ h4 {
   font-weight: 600;
   margin-top: 1.75em;
 
-  @include breakpoint(max-width 480px) {
+  @include media(max-width 480px) {
     font-size: 1.25rem;
   }
 }
@@ -48,7 +48,7 @@ h5 {
   font-weight: 600;
   margin-top: 1em;
 
-  @include breakpoint(max-width 480px) {
+  @include media(max-width 480px) {
     font-size: 1.125em;
   }
 }
@@ -91,7 +91,7 @@ $selection: #fefa83;
 .container {
   @include outer-container;
 
-  @include breakpoint(max-width $max-width) {
+  @include media(max-width $max-width) {
     padding: 0 20px;
   }
 }
@@ -156,11 +156,4 @@ a.button {
       @include linear-gradient(lighten(#afece4, 5%), lighten(#68d8ca, 5%));
     }
   }
-}
-
-@mixin calc($property, $expression) { 
-  #{$property}: -moz-calc(#{$expression}); 
-  #{$property}: -o-calc(#{$expression}); 
-  #{$property}: -webkit-calc(#{$expression}); 
-  #{$property}: calc(#{$expression}); 
 }

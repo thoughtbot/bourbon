@@ -159,6 +159,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+section.usage, section.neat {
+  box-shadow: 0px -1px #bfccd4, 0px -1px 0 1px #d8e1e5, 0px -2px 0 2px #bfccd4;
+  background-color: #f1f4f6;
+  margin: 3rem 0 0;
+  padding: 3rem 0 8rem; }
+
+section.apps h3, section.neat h3 {
+  margin-bottom: 3rem;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    section.apps h3, section.neat h3 {
+      margin-bottom: 1.5rem; } }
+
 body, html {
   background: #f5f4f1;
   font-size: 16px; }
@@ -709,70 +722,65 @@ section.examples {
         section.examples .css-wrapper:last-child {
           margin-right: 0; } }
 
-section.usage {
-  box-shadow: 0px -1px #bfccd4, 0px -1px 0 1px #d8e1e5, 0px -2px 0 2px #bfccd4;
-  background-color: #f1f4f6;
-  margin: 3rem 0 0;
-  padding: 3rem 0 8rem; }
+@media screen and (max-width: 480px) {
+  section.usage {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0 4rem; } }
+section.usage h3 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  text-transform: uppercase; }
   @media screen and (max-width: 480px) {
-    section.usage {
-      margin: 1.5rem 0;
-      padding: 1.5rem 0 4rem; } }
-  section.usage h3 {
-    font-size: 2rem;
-    margin-bottom: 4rem;
-    text-align: center;
-    text-transform: uppercase; }
-    @media screen and (max-width: 480px) {
-      section.usage h3 {
-        margin-bottom: 2rem; } }
-  section.usage img.ruby {
-    display: block;
-    float: none;
-    margin: 1rem auto;
-    width: 125px; }
-  section.usage .install-info {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    margin-left: 34.11922%;
-    clear: both;
-    text-align: center; }
-    section.usage .install-info:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 768px) {
-      section.usage .install-info {
-        display: block;
-        float: left;
-        margin-right: 2.35765%;
-        width: 100%;
-        margin: 0; }
-        section.usage .install-info:last-child {
-          margin-right: 0; } }
-  section.usage .install-instructions {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-    margin-left: 17.05961%;
-    clear: both; }
-    section.usage .install-instructions:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 768px) {
-      section.usage .install-instructions {
-        display: block;
-        float: left;
-        margin-right: 2.35765%;
-        width: 100%;
-        margin: 0; }
-        section.usage .install-instructions:last-child {
-          margin-right: 0; } }
-  section.usage span a {
-    width: 100%;
-    margin-top: 3rem;
-    text-align: center;
-    display: block; }
+    section.usage h3 {
+      margin-bottom: 2rem; } }
+section.usage img.ruby {
+  display: block;
+  float: none;
+  margin: 1rem auto;
+  width: 125px; }
+section.usage .install-info {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-left: 34.11922%;
+  clear: both;
+  text-align: center; }
+  section.usage .install-info:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    section.usage .install-info {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin: 0; }
+      section.usage .install-info:last-child {
+        margin-right: 0; } }
+section.usage .install-instructions {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  clear: both; }
+  section.usage .install-instructions:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    section.usage .install-instructions {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin: 0; }
+      section.usage .install-instructions:last-child {
+        margin-right: 0; } }
+section.usage span a {
+  width: 100%;
+  margin-top: 3rem;
+  text-align: center;
+  display: block; }
 
 section.apps {
   background-color: #d8e1e5;
@@ -784,12 +792,6 @@ section.apps {
   @media screen and (max-width: 480px) {
     section.apps {
       padding: 3rem 0; } }
-  section.apps h3 {
-    margin-bottom: 3rem;
-    text-align: center; }
-    @media screen and (max-width: 480px) {
-      section.apps h3 {
-        margin-bottom: 1.5rem; } }
 
 section.apps ul.app-list {
   display: block;
@@ -912,11 +914,143 @@ section.websites a.website {
   section.websites a.website img {
     max-width: 100%; }
     section.websites a.website img:hover {
-      -webkit-filter: brightness(5%); }
+      -webkit-filter: brightness(5%);
+      -webkit-filter: brightness(105%);
+      filter: brightness(105%); }
+
+section.neat {
+  padding-bottom: 0; }
+  section.neat img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    -ms-interpolation-mode: bicubic; }
+    @media screen and (max-width: 480px) {
+      section.neat img {
+        margin: 0 auto;
+        margin-bottom: 20px; } }
+  section.neat div.neat-images {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 53.08608%;
+    margin-left: 25.58941%;
+    clear: both; }
+    section.neat div.neat-images:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 768px) {
+      section.neat div.neat-images {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 74.41059%;
+        margin-left: 12.79471%; }
+        section.neat div.neat-images:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 480px) {
+      section.neat div.neat-images {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%;
+        margin-left: 0%; }
+        section.neat div.neat-images:last-child {
+          margin-right: 0; } }
+    section.neat div.neat-images .neat-demo {
+      -webkit-transition: all 0.15s ease-out 0;
+      -moz-transition: all 0.15s ease-out 0;
+      transition: all 0.15s ease-out 0;
+      display: block;
+      float: left;
+      margin-right: 4.44119%;
+      width: 55.81334%;
+      margin-right: 3%;
+      max-width: 300px; }
+      section.neat div.neat-images .neat-demo:last-child {
+        margin-right: 0; }
+      section.neat div.neat-images .neat-demo:hover {
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+        transform: translateY(-10px); }
+      section.neat div.neat-images .neat-demo a {
+        display: block;
+        padding-right: 10%; }
+        @media screen and (max-width: 480px) {
+          section.neat div.neat-images .neat-demo a {
+            padding: 0; } }
+      section.neat div.neat-images .neat-demo img {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+    section.neat div.neat-images .neat-logo {
+      margin-top: 24px;
+      display: block;
+      float: left;
+      margin-right: 4.44119%;
+      width: 39.74547%;
+      float: right; }
+      section.neat div.neat-images .neat-logo:last-child {
+        margin-right: 0; }
+      section.neat div.neat-images .neat-logo a.more-info {
+        margin-top: 10px;
+        padding-left: 2%;
+        display: block; }
+    @media screen and (max-width: 480px) {
+      section.neat div.neat-images .neat-demo,
+      section.neat div.neat-images .neat-logo {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%;
+        float: none;
+        margin: 0 auto 30px; }
+        section.neat div.neat-images .neat-demo:last-child,
+        section.neat div.neat-images .neat-logo:last-child {
+          margin-right: 0; }
+        section.neat div.neat-images .neat-demo a.more-info,
+        section.neat div.neat-images .neat-logo a.more-info {
+          text-align: center; } }
+  section.neat .neat-tagline {
+    background-color: #53aee0;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #53aee0), color-stop(100%, #3da4dc));
+    background-image: -webkit-linear-gradient(#53aee0, #3da4dc);
+    background-image: linear-gradient(#53aee0, #3da4dc);
+    margin-top: -48px;
+    padding: 100px 0; }
+    @media screen and (max-width: 480px) {
+      section.neat .neat-tagline {
+        margin-top: -88px; } }
+    section.neat .neat-tagline .container {
+      *zoom: 1;
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto; }
+      section.neat .neat-tagline .container:before, section.neat .neat-tagline .container:after {
+        content: " ";
+        display: table; }
+      section.neat .neat-tagline .container:after {
+        clear: both; }
+    section.neat .neat-tagline h3 {
+      padding: 0 10px 0;
+      display: table-cell;
+      padding-right: 2.35765%;
+      width: 76.76824%;
+      color: white;
+      display: block;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 100;
+      margin: 0 auto;
+      text-align: center;
+      text-shadow: 0px 2px 2px #1b6c98; }
+      section.neat .neat-tagline h3:last-child {
+        width: 74.41059%;
+        padding-right: 0; }
+      section.neat .neat-tagline h3 strong {
+        font-weight: 500; }
 
 footer {
   background-color: #494f57;
-  margin-top: 3rem;
   padding: 3rem 0; }
   footer section.footer-text p {
     color: #bbb; }

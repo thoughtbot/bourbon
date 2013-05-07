@@ -970,7 +970,7 @@ article#radial-gradient section.demo, article#radial-gradient-function section.d
   background-color: #8fdce5;
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #8fdce5), color-stop(100%, #3dc3d1));
   background-image: -webkit-radial-gradient(50% 50%, circle cover, #8fdce5, #3dc3d1);
-  background-image: radial-gradient( circle at 50% 50%, #8fdce5, #3dc3d1);
+  background-image: radial-gradient( circle  at 50% 50%, #8fdce5, #3dc3d1);
   height: 40px; }
 
 article#buttons section.demo button.example-1 {

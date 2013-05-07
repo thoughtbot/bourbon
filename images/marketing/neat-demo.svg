@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="266px" height="282px" viewBox="0 0 266 282" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Group</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page 1 Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M-607,-213 L-607,466 L1314,466 L1314,-213 L-607,-213 Z M-607,-213" id="Rectangle 2" fill="#F1F4F6"></path>
+        <path d="M-606,239 L-606,549 L1314,549 L1314,239 L-606,239 Z M-606,239" id="Rectangle 3" fill="#3EA9DF"></path>
+        <g id="Group">
+            <path d="M0,0 L0,282 L266,282 L266,0 L0,0 Z M0,0" id="Rectangle 35" fill="#FFFFFF"></path>
+            <g transform="translate(22.000000, 14.000000)" id="Rectangle 5" fill="#F5FBFF">
+                <path d="M150,0 L150,268 L163,268 L163,0 L150,0 Z M150,0"></path>
+                <path d="M168,0 L168,268 L181,268 L181,0 L168,0 Z M168,0"></path>
+                <path d="M187,0 L187,268 L200,268 L200,0 L187,0 Z M187,0"></path>
+                <path d="M206,0 L206,268 L219,268 L219,0 L206,0 Z M206,0"></path>
+                <path d="M0,0 L0,268 L13,268 L13,0 L0,0 Z M0,0"></path>
+                <path d="M19,0 L19,268 L32,268 L32,0 L19,0 Z M19,0"></path>
+                <path d="M57,0 L57,268 L70,268 L70,0 L57,0 Z M57,0"></path>
+                <path d="M76,0 L76,268 L89,268 L89,0 L76,0 Z M76,0"></path>
+                <path d="M94,0 L94,268 L107,268 L107,0 L94,0 Z M94,0"></path>
+                <path d="M113,0 L113,268 L126,268 L126,0 L113,0 Z M113,0"></path>
+                <path d="M131,0 L131,268 L144,268 L144,0 L131,0 Z M131,0"></path>
+                <path d="M38,0 L38,268 L51,268 L51,0 L38,0 Z M38,0"></path>
+            </g>
+            <path d="M0,0 L0,15 L266,15 L266,0 L0,0 Z M0,0" id="Rectangle 4" fill="#298EC3"></path>
+            <g transform="translate(22.000000, 27.000000)">
+                <path d="M0,0 L0,68 L219,68 L219,0 L0,0 Z M0,0" id="Rectangle 14" fill="#D5EEFB"></path>
+                <path d="M0,7 L0,61 L107,61 L107,7 L0,7 Z M0,7" id="Rectangle 15" fill="#AADAF5"></path>
+                <path d="M113,7 L113,61 L219,61 L219,7 L113,7 Z M113,7" id="Rectangle 15" fill="#AADAF5"></path>
+            </g>
+            <path d="M22,115 L22,262 L241,262 L241,115 L22,115 Z M22,115" id="Rectangle 17" fill="#D5EEFB"></path>
+            <g transform="translate(22.000000, 122.000000)" fill="#AADAF5">
+                <path d="M0,0 L0,18 L13,18 L13,0 L0,0 Z M0,0" id="Rectangle 18"></path>
+                <path d="M0,23 L0,41 L32,41 L32,23 L0,23 Z M0,23" id="Rectangle 18 copy"></path>
+                <path d="M0,23 L0,41 L32,41 L32,23 L0,23 Z M0,23" id="Rectangle 18 copy 2"></path>
+                <path d="M0,46 L0,64 L51,64 L51,46 L0,46 Z M0,46" id="Rectangle 18 copy 3"></path>
+                <path d="M0,46 L0,64 L51,64 L51,46 L0,46 Z M0,46" id="Rectangle 18 copy 4"></path>
+                <path d="M0,69 L0,87 L70,87 L70,69 L0,69 Z M0,69" id="Rectangle 18 copy 5"></path>
+                <path d="M0,92 L0,110 L89,110 L89,92 L0,92 Z M0,92" id="Rectangle 18 copy 6"></path>
+                <path d="M0,92 L0,110 L89,110 L89,92 L0,92 Z M0,92" id="Rectangle 18 copy 7"></path>
+                <path d="M0,92 L0,110 L89,110 L89,92 L0,92 Z M0,92" id="Rectangle 18 copy 8"></path>
+                <path d="M0,115 L0,133 L107,133 L107,115 L0,115 Z M0,115" id="Rectangle 18 copy 9"></path>
+                <path d="M38,23 L38,41 L219,41 L219,23 L38,23 Z M38,23" id="Rectangle 18 copy 2"></path>
+                <path d="M57,46 L57,64 L219,64 L219,46 L57,46 Z M57,46" id="Rectangle 18 copy 3"></path>
+                <path d="M76,69 L76,87 L219,87 L219,69 L76,69 Z M76,69" id="Rectangle 18 copy 4"></path>
+                <path d="M94,92 L94,110 L219,110 L219,92 L94,92 Z M94,92" id="Rectangle 18 copy 5"></path>
+                <path d="M94,92 L94,110 L219,110 L219,92 L94,92 Z M94,92" id="Rectangle 18 copy 6"></path>
+                <path d="M113,115 L113,133 L219,133 L219,115 L113,115 Z M113,115" id="Rectangle 18 copy 7"></path>
+                <path d="M19,0 L19,18 L219,18 L219,0 L19,0 Z M19,0" id="Rectangle 18"></path>
+            </g>
+        </g>
+    </g>
+</svg>
