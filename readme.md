@@ -1,4 +1,4 @@
-[![Bourbon Sass Mixin Library](http://bourbon.io/images/bourbon-logo.png)](http://bourbon.io)
+[![Bourbon Sass Mixin Library](http://bourbon.io/images/shared/bourbon-logo.png)](http://bourbon.io)
 
 # A simple and lightweight mixin library for Sass
 Bourbon is a comprehensive library of sass mixins that are designed to be simple
@@ -55,6 +55,10 @@ Install Bourbon into the current directory by generating the `bourbon` folder:
     bourbon install
 
 The generated folder will contain all the mixins and other necessary Bourbon files. It is recommended not to add or modify the Bourbon files so that you can update Bourbon easily.
+
+You can specify a target directory using the `path` flag:
+
+    bourbon install --path my/custom/path/
 
 #### Import
 
