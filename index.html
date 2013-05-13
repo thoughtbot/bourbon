@@ -96,7 +96,7 @@ top: 10px;
 // Bourbon mixin with Sass
 
 section {
-  @include linear-gradient(red, green);
+  @include linear-gradient(to top, red, orange);
 }
 {% endhighlight %}
       </div>
@@ -106,12 +106,9 @@ section {
 /* Compiled CSS  */
 
 section {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(100%, green));
-  background-image: -webkit-linear-gradient(top, red, green);
-  background-image: -moz-linear-gradient(top, red, green);
-  background-image: -ms-linear-gradient(top, red, green);
-  background-image: -o-linear-gradient(top, red, green);
-  background-image: linear-gradient(top, red, green);
+  background-color: red;
+  background-image: -webkit-linear-gradient(bottom, red, orange);
+  background-image:         linear-gradient(to top, red, orange);
 }
 {% endhighlight %}
     </div>
