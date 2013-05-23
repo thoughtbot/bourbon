@@ -1,4 +1,5 @@
-// Micro clearfix provides an easy way to contain floats without adding additional markup
+// Modern micro clearfix provides an easy way to contain floats without adding additional markup. 
+// Doesn't support IE7 and under.
 //
 // Example usage:
 //
@@ -12,18 +13,11 @@
 //    }
 
 @mixin clearfix {
-  *zoom: 1;
-
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
+  content:"";
+  display:table;
+  clear:both;
 }
 
 // Acknowledgements
+// Beat *that* clearfix: [Thierry Koblentz](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php)
 // Micro clearfix: [Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/)
