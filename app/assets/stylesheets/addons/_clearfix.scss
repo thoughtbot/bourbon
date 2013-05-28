@@ -12,9 +12,11 @@
 //    }
 
 @mixin clearfix {
-  content:"";
-  display:table;
-  clear:both;
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
 }
 
 // Acknowledgements
