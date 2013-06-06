@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bourbon (3.1.2.1)
+    bourbon (3.1.6)
       sass (>= 3.2.0)
       thor
 
@@ -36,9 +36,9 @@ GEM
     rspec-expectations (2.8.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.8.0)
-    sass (3.2.6)
+    sass (3.2.9)
     term-ansicolor (1.0.7)
-    thor (0.17.0)
+    thor (0.18.1)
 
 PLATFORMS
   ruby
