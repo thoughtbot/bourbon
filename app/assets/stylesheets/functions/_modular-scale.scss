@@ -1,14 +1,39 @@
 @function modular-scale($value, $increment, $ratio) {
+  $v1: nth($value, 1);
+  $v2: nth($value, length($value));
+  $value: $v1;
+
+  // scale $v2 to just above $v1
+  @while $v2 > $v1 { $v2: ($v2 / $ratio); } // will be off-by-1
+  @while $v2 < $v1 { $v2: ($v2 * $ratio); } // will fix off-by-1
+
+  // check AFTER scaling $v2 to prevent double-counting corner-case
+  $double-stranded: $v2 > $v1;
+
   @if $increment > 0 {
     @for $i from 1 through $increment {
-      $value: ($value * $ratio);
+      @if $double-stranded and ($v1 * $ratio) > $v2 {
+        $value: $v2;
+        $v2: ($v2 * $ratio);
+      } @else {
+        $v1: ($v1 * $ratio);
+        $value: $v1;
+      }
     }
   }
 
   @if $increment < 0 {
-    $increment: abs($increment);
-    @for $i from 1 through $increment {
-      $value: ($value / $ratio);
+    // adjust $v2 to just below $v1
+    @if $double-stranded { $v2: ($v2 / $ratio); }
+
+    @for $i from $increment through -1 {
+      @if $double-stranded and ($v1 / $ratio) < $v2 {
+        $value: $v2;
+        $v2: ($v2 / $ratio);
+      } @else {
+        $v1: ($v1 / $ratio);
+        $value: $v1;
+      }
     }
   }
 
