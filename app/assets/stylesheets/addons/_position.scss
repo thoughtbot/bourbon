@@ -1,42 +1,51 @@
-@mixin position ($position: relative, $coordinates: 0 0 0 0) {
+@mixin position ($position: relative, $coordinates: n n n n) {
 
   @if type-of($position) == list {
     $coordinates: $position;
     $position: relative;
   }
 
+  position: $position;
+
   $top: nth($coordinates, 1);
   $right: nth($coordinates, 2);
   $bottom: nth($coordinates, 3);
   $left: nth($coordinates, 4);
 
-  position: $position;
-
-  @if $top == auto {
-    top: $top;
-  }
-  @else if not(unitless($top)) {
-    top: $top;
-  }
-
-  @if $right == auto {
-    right: $right;
-  }
-  @else if not(unitless($right)) {
-    right: $right;
+  @if $top != n {
+    @if $top == a or $top == auto {
+      top: auto;
+    }
+    @if $top == 0 or not(unitless($top)) {
+      top: $top;
+    }
   }
 
-  @if $bottom == auto {
-    bottom: $bottom;
-  }
-  @else if not(unitless($bottom)) {
-    bottom: $bottom;
+  @if $right != n {
+    @if $right == a or $right == auto {
+      right: auto;
+    }
+    @if $right == 0 or not(unitless($right)) {
+      right: $right;
+    }
   }
 
-  @if $left == auto {
-    left: $left;
+  @if $bottom != n {
+    @if $bottom == a or $bottom == auto {
+      bottom: auto;
+    }
+    @if $bottom == 0 or not(unitless($bottom)) {
+      bottom: $bottom;
+    }
   }
-  @else if not(unitless($left)) {
-    left: $left;
+
+  @if $left != n {
+    @if $left == a or $left == auto {
+      left: auto;
+    }
+    @if $left == 0 or not(unitless($left)) {
+      left: $left;
+    }
   }
+
 }
