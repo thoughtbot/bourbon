@@ -3,6 +3,11 @@
 // if the parent is another value say 24px write em(12, 24)
 
 @function em($pxval, $base: 16) {
+  @if not unitless($pxval) {
+      $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+      $base: strip-units($base);
+  }
   @return ($pxval / $base) * 1em;
 }
-
