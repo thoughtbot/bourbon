@@ -1,4 +1,4 @@
-@mixin retina-image($filename, $background-size, $extension: png, $retina-filename: null, $retina-extension: _2x, $asset-pipeline: false) {
+@mixin retina-image($filename, $background-size, $extension: png, $retina-filename: null, $retina-suffix: _2x, $asset-pipeline: false) {
   @if $asset-pipeline {
     background-image: image-url("#{$filename}.#{$extension}");
   }
@@ -12,7 +12,7 @@
         background-image: image-url("#{$retina-filename}.#{$extension}");
       }
       @else {
-        background-image: image-url("#{$filename}#{$retina-extension}.#{$extension}");
+        background-image: image-url("#{$filename}#{$retina-suffix}.#{$extension}");
       }
     }
 
@@ -21,7 +21,7 @@
         background-image: url("#{$retina-filename}.#{$extension}");
       }
       @else {
-        background-image: url("#{$filename}#{$retina-extension}.#{$extension}");
+        background-image: url("#{$filename}#{$retina-suffix}.#{$extension}");
       }
     }
 
