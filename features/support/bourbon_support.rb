@@ -3,7 +3,7 @@ module BourbonSupport
     if path
       run_simple("bundle exec bourbon install --path '#{path}'")
     else
-      run_simple("bundle exec bourbon install")
+      run_simple('bundle exec bourbon install')
     end
   end
 

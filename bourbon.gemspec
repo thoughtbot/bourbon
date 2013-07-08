@@ -1,9 +1,9 @@
-# -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "bourbon/version"
+# encoding: utf-8
+$LOAD_PATH << File.expand_path('../lib', __FILE__)
+require 'bourbon/version'
 
 Gem::Specification.new do |s|
-  s.name        = "bourbon"
+  s.name        = 'bourbon'
   s.version     = Bourbon::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Phil LaPier", "Chad Mazzola", "Matt Jankowski", "Nick Quaranto", "Jeremy Raines", "Mike Burns", "Andres Mejia", "Travis Haynes", "Chris Lloyd", "Gabe Berke-Williams", "J. Edward Dewyea", "Reda Lemeden"]
@@ -20,12 +20,12 @@ browsers. The prefixes also ensure graceful degradation for older browsers
 that support only CSS3 prefixed properties.
   DESC
 
-  s.rubyforge_project = "bourbon"
+  s.rubyforge_project = 'bourbon'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  s.require_paths = ['lib']
 
   s.add_dependency('sass', '>= 3.3.0.rc.2')
   s.add_dependency('thor')
