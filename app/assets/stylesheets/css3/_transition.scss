@@ -9,7 +9,7 @@
   }
 
   @else {
-    $properties: all 0.15s ease-out 0;
+    $properties: all 0.15s ease-out 0s;
     @include prefixer(transition, $properties, webkit moz spec);
   }
 }
