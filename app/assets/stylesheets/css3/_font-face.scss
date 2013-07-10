@@ -7,11 +7,11 @@
     font-style: $style;
 
     @if $asset-pipeline == true {
-      src: font-url('#{$file-path}.eot');
-      src: font-url('#{$file-path}.eot?#iefix')          format('embedded-opentype'),
-           font-url('#{$file-path}.woff')                format('woff'),
-           font-url('#{$file-path}.ttf')                 format('truetype'),
-           font-url('#{$file-path}.svg##{$font-family}') format('svg');
+      src: url(font-path('#{$file-path}.eot'));
+      src: url(font-path('#{$file-path}.eot?#iefix'))          format('embedded-opentype'),
+           url(font-path('#{$file-path}.woff'))                format('woff'),
+           url(font-path('#{$file-path}.ttf'))                 format('truetype'),
+           url(font-path('#{$file-path}.svg##{$font-family}')) format('svg');
     } @else {
       src: url('#{$file-path}.eot');
       src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
