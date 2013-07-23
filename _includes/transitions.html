@@ -6,8 +6,13 @@
 {% highlight scss %}
 @include transition (all 2.0s ease-in-out);
 @include transition (opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
+{% endhighlight %}
 
-// Transition a vendor-prefixed property (transform)
-@include transition (transition-property-names((transform, color, background), moz) 1.0s ease-in 0s);
+<p>To transition specific vendor-prefixed properties (`-webkit-transform, -moz-transform, ...`), do not use the shorthand mixin. Use the individual transition mixins.</p>
+{% highlight scss %}
+    @include transition-property (transform);
+    @include transition-duration(1.0s);
+    @include transition-timing-function(ease-in);
+    @include transition-delay(0.5s);
 {% endhighlight %}
 </article>
