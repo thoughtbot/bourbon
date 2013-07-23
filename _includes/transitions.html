@@ -1,7 +1,6 @@
 <article id="transitions" data-type="mixin">
   <h2>Transition <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_transition.scss">View source</a></h2>
   <p>The shorthand mixin supports multiple transition.</p>
-  <p>Transition a vendor-prefixed property: <a href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_transition-property-name.scss">View source</a></p>
 
 {% highlight scss %}
 @include transition (all 2.0s ease-in-out);
@@ -10,9 +9,9 @@
 
 <p>To transition specific vendor-prefixed properties (`-webkit-transform, -moz-transform, ...`), do not use the shorthand mixin. Use the individual transition mixins.</p>
 {% highlight scss %}
-    @include transition-property (transform);
-    @include transition-duration(1.0s);
-    @include transition-timing-function(ease-in);
-    @include transition-delay(0.5s);
+@include transition-property (transform);
+@include transition-duration(1.0s);
+@include transition-timing-function(ease-in);
+@include transition-delay(0.5s);
 {% endhighlight %}
 </article>
