@@ -67,7 +67,7 @@
   @elseif $value == "inline-flex" {
     display: -webkit-inline-flex;
     display: -moz-inline-flex;
-    display: flex;
+    display: inline-flex;
   }
 
   @else {
