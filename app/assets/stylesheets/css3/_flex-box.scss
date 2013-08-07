@@ -11,6 +11,7 @@
 @mixin display-box {
   display: -webkit-box;
   display: -moz-box;
+  display: -ms-flexbox; // IE 10
   display: box;
 }
 
@@ -22,16 +23,19 @@
 @mixin box-pack($pack: start) {
 // start|end|center|justify
   @include prefixer(box-pack, $pack, webkit moz spec);
+  -ms-flex-pack: $pack; // IE 10
 }
 
 @mixin box-align($align: stretch) {
 // start|end|center|baseline|stretch
   @include prefixer(box-align, $align, webkit moz spec);
+  -ms-flex-align: $align; // IE 10
 }
 
 @mixin box-direction($direction: normal) {
 // normal|reverse|inherit
   @include prefixer(box-direction, $direction, webkit moz spec);
+  -ms-flex-direction: $direction; // IE 10
 }
 
 @mixin box-lines($lines: single) {
@@ -41,10 +45,12 @@
 
 @mixin box-ordinal-group($int: 1) {
   @include prefixer(box-ordinal-group, $int, webkit moz spec);
+  -ms-flex-order: $int; // IE 10
 }
 
 @mixin box-flex($value: 0.0) {
   @include prefixer(box-flex, $value, webkit moz spec);
+  -ms-flex: $value; // IE 10
 }
 
 @mixin box-flex-group($int: 1) {
