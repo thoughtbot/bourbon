@@ -21,7 +21,7 @@ $inputs-list: 'input[type="email"]',
               'input[type="week"]',
               
               // includes inputs with no type attribute (i.e., <input>)
-              input:not( [type] );
+              'input:not( [type] )';
 
 $unquoted-inputs-list: ();
 @each $input-type in $inputs-list {
