@@ -37,6 +37,20 @@
     }
   }
 
+  // Check if vals are the same
+  $vals-not-different: true;
+  $first-val: nth($vals, 1);
+  @each $val in $vals {
+    @if $val != $first-val {
+      $vals-not-different: false;
+    }
+  }
+
+  // Shorten vals into 1 if they are all the same
+  @if $vals-not-different {
+    $vals: nth($vals, 1);
+  }
+
   @if $has-falsy-val {
     @if nth($vals, 1) { #{$top}: nth($vals, 1); }
 
