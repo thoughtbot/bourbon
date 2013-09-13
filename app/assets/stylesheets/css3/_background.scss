@@ -29,6 +29,9 @@
     background-color: $fallback-color;
   }
   background: _background-add-prefix($backgrounds, webkit);
+  background: _background-add-prefix($backgrounds, moz);
+  background: _background-add-prefix($backgrounds, o);
+  background: _background-add-prefix($backgrounds, ms);
   background: _background-add-prefix($backgrounds);
 }
 
