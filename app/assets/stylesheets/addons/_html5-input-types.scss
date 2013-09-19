@@ -18,7 +18,10 @@ $inputs-list: 'input[type="email"]',
               'input[type="datetime-local"]',
               'input[type="month"]',
               'input[type="time"]',
-              'input[type="week"]';
+              'input[type="week"]',
+              
+              // includes inputs with no type attribute (i.e., <input>)
+              'input:not( [type] )';
 
 $unquoted-inputs-list: ();
 @each $input-type in $inputs-list {
