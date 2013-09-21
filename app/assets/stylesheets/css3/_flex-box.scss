@@ -1,10 +1,9 @@
 // CSS3 Flexible Box Model and property defaults
-// Unified attributes for 2008, 2009, 2011, and 2012 flavours.
+// Unified attributes for 2009, 2011, and 2012 flavours.
 
 // 2009 - display (box | inline-box)
 // 2011 - display (flexbox | inline-flexbox)
 // 2012 - display (flex | inline-flex)
-
 @mixin display($value) {
 //  flex | inline-flex
     @if $value == "flex" {
@@ -36,20 +35,18 @@
     }
 }
 
-@function boxflex-value($value) {
-    $split: split_string($value, ' ');  
-    $number: to-number(nth($split, 1));
-    @debug $number;
- 
-    @return $number;
-}
-
 // 2009 - box-flex (integer)
 // 2011 - flex (decimal | width decimal)
 // 2012 - flex (integer integer width)
 @mixin flex($value) {
 
-    $alt-value: $value; // boxflex-value($value);
+    $alt-value: $value;
+    @if length($value) > 1 {
+        $alt-value: nth($value, 2); // flex-shrink value
+    }
+    @else {
+        $alt-value: nth($value, 1);
+    }
 
     // 2009
     @include prefixer(box-flex, $alt-value, webkit moz spec);
@@ -234,3 +231,4 @@
 @mixin align-content($value: stretch) {
     @include prefixer(align-content, $value, webkit moz spec)
 }
+
