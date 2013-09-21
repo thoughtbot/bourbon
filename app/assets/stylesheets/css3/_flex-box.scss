@@ -245,7 +245,7 @@
     }
 
     // 2012
-    @include prefixer(align-self, $value, webkit moz spec)
+    @include prefixer(align-self, $value, webkit moz spec);
 
     // 2011 (IE 10)
     -ms-flex-item-align: $value-2011;
