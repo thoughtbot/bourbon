@@ -1,130 +1,236 @@
 // CSS3 Flexible Box Model and property defaults
+// Unified attributes for 2008, 2009, 2011, and 2012 flavours.
 
-// Custom shorthand notation for flexbox
-@mixin box($orient: inline-axis, $pack: start, $align: stretch) {
-  @include display-box;
-  @include box-orient($orient);
-  @include box-pack($pack);
-  @include box-align($align);
-}
+// 2009 - display (box | inline-box)
+// 2011 - display (flexbox | inline-flexbox)
+// 2012 - display (flex | inline-flex)
 
-@mixin display-box {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-}
-
-@mixin box-orient($orient: inline-axis) {
-// horizontal|vertical|inline-axis|block-axis|inherit
-  @include prefixer(box-orient, $orient, webkit moz spec);
-}
-
-@mixin box-pack($pack: start) {
-// start|end|center|justify
-  @include prefixer(box-pack, $pack, webkit moz spec);
-}
-
-@mixin box-align($align: stretch) {
-// start|end|center|baseline|stretch
-  @include prefixer(box-align, $align, webkit moz spec);
-}
-
-@mixin box-direction($direction: normal) {
-// normal|reverse|inherit
-  @include prefixer(box-direction, $direction, webkit moz spec);
-}
-
-@mixin box-lines($lines: single) {
-// single|multiple
-  @include prefixer(box-lines, $lines, webkit moz spec);
-}
-
-@mixin box-ordinal-group($int: 1) {
-  @include prefixer(box-ordinal-group, $int, webkit moz spec);
-}
-
-@mixin box-flex($value: 0.0) {
-  @include prefixer(box-flex, $value, webkit moz spec);
-}
-
-@mixin box-flex-group($int: 1) {
-  @include prefixer(box-flex-group, $int, webkit moz spec);
-}
-
-
-//************************************************************************//
-// New Flexbox 2012 Spec
-// http://dev.w3.org/csswg/css3-flexbox/
-//************************************************************************//
 @mixin display($value) {
 //  flex | inline-flex
-  @if $value == "flex" {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: flex;
-  }
+    @if $value == "flex" {
+        // 2009
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
 
-  @elseif $value == "inline-flex" {
-    display: -webkit-inline-flex;
-    display: -moz-inline-flex;
-    display: inline-flex;
-  }
+        // 2012
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox; // 2011 (IE 10)
+        display: flex;
+    }
 
-  @else {
-    display: $value;
-  }
+    @elseif $value == "inline-flex" {
+        display: -webkit-inline-box;
+        display: -moz-inline-box;
+        display: inline-box;
+
+        display: -webkit-inline-flex;
+        display: -moz-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+    }
+
+    @else {
+        display: $value;
+    }
 }
 
+@function boxflex-value($value) {
+    $split: split_string($value, ' ');  
+    $number: to-number(nth($split, 1));
+    @debug $number;
+ 
+    @return $number;
+}
+
+// 2009 - box-flex (integer)
+// 2011 - flex (decimal | width decimal)
+// 2012 - flex (integer integer width)
 @mixin flex($value) {
-  @include prefixer(flex, $value, webkit moz spec);
+
+    $alt-value: $value; // boxflex-value($value);
+
+    // 2009
+    @include prefixer(box-flex, $alt-value, webkit moz spec);
+
+    // 2012
+    @include prefixer(flex, $value, webkit moz ms spec);
 }
 
+// 2009 - box-direction (normal | reverse)
+//      - box-orient ( horizontal | vertical | inline-axis | block-axis)
+// 2011 - flex-direction (lr | rl | tb | bt | inline | inline-reverse | block | block-reverse)
+// 2012 - flex-direction (row | row-reverse | column | column-reverse)
 @mixin flex-direction($value: row) {
-//  row | row-reverse | column | column-reverse
-  @include prefixer(flex-direction, $value, webkit moz spec);
+
+    // Alt values.
+    $value-2009: $value;
+    $value-2011: $value;
+    $direction: "normal";
+
+    @if $value == row {
+        $value-2009: inline-axis;
+        $value-2011: inline;
+    }
+
+    @elseif $value == "row-reverse" {
+        $value-2009: inline-axis;
+        $value-2011: inline-reverse;
+        $direction: reverse;
+    }
+
+    @elseif $value == column {
+        $value-2009: block-axis;
+        $value-2011: block;
+    }
+
+    @elseif $value == "column-reverse" {
+        $value-2009: block-axis;
+        $value-2011: block-reverse;
+        $direction: reverse;
+    }
+
+    // 2009
+    @include prefixer(box-orient, $value-2009, webkit moz spec);
+    @if $direction == "reverse" {
+        @include prefixer(box-direction, $direction, webkit moz spec);
+    }
+
+    // 2012
+    @include prefixer(flex-direction, $value, webkit moz spec);
+
+    // 2011 (IE 10)
+    -ms-flex-direction: $value-2011;
 }
+
+// 2009 - box-lines (single | multiple)
+// 2011 - ?
+// 2012 - flex-wrap (nowrap | wrap | wrap-reverse)
 
 @mixin flex-wrap($value: nowrap) {
-// nowrap | wrap | wrap-reverse
-  @include prefixer(flex-wrap, $value, webkit moz spec);
+
+    // Alt values.
+    $alt-value: $value;
+    @if $value == nowrap {
+        $alt-value: single;
+    }
+
+    @elseif $value == wrap {
+        $alt-value: multiple;
+    }
+
+    @elseif $value == "wrap-reverse" {
+        $alt-value: multiple;
+    }
+
+    @include prefixer(box-lines, $alt-value, webkit moz spec);
+    @include prefixer(flex-wrap, $value, webkit moz spec);
 }
+
+// 2012 - flex-wrap (flex-direction | flex-wrap)
 @mixin flex-flow($value) {
-// flex-direction || flex-wrap
-  @include prefixer(flex-flow, $value, webkit moz spec);
+    @include prefixer(flex-flow, $value, webkit moz spec);
 }
 
+// 2009 - box-ordinal-group (integer)
+// 2011 - flex-order (integer)
+// 2012 - order (integer)
 @mixin order($int: 0) {
-  @include prefixer(order, $int, webkit moz spec);
+    // 2009
+    @include prefixer(box-ordinal-group, $int, webkit moz spec);
+
+    // 2012
+    @include prefixer(order, $int, webkit moz spec);
+
+    // 2011 (IE 10)
+    -ms-flex-order: $int;
 }
 
+// 2012 - flex-grow (number)
 @mixin flex-grow($number: 0) {
-  @include prefixer(flex-grow, $number, webkit moz spec);
+    @include prefixer(flex-grow, $number, webkit moz spec);
 }
 
+// 2012 - flex-shrink (number)
 @mixin flex-shrink($number: 1) {
-  @include prefixer(flex-shrink, $number, webkit moz spec);
+    @include prefixer(flex-shrink, $number, webkit moz spec);
 }
 
+// 2012 - flex-basis (number)
 @mixin flex-basis($width: auto) {
-  @include prefixer(flex-basis, $width, webkit moz spec);
+    @include prefixer(flex-basis, $width, webkit moz spec);
 }
 
+// 2009 - box-pack (start|end|center|justify)
+// 2011 - flex-pack (start|end|center|justify)
+// 2012 - justify-content (flex-start | flex-end | center | space-between | space-around)
 @mixin justify-content ($value: flex-start) {
-// flex-start | flex-end | center | space-between | space-around
-  @include prefixer(justify-content, $value, webkit moz spec)
+
+    // Alt values.
+    $alt-value: $value;
+    @if $value == "flex-start" {
+        $alt-value: start;
+    }
+
+    @elseif $value == "flex-end" {
+        $alt-value: end;
+    }
+
+    @elseif $value == "space-between" {
+        $alt-value: justify;
+    }
+
+    @elseif $value == "space-around" {
+        $alt-value: center;
+    }
+
+    // 2009
+    @include prefixer(box-pack, $alt-value, webkit moz spec);
+
+    // 2012
+    @include prefixer(justify-content, $value, webkit moz ms o spec);
+
+    // 2011 (IE 10)
+    -ms-flex-pack: $alt-value;
 }
 
+// 2009 - box-align (start | end | center | baseline | stretch)
+// 2011 - flex-align (auto | baseline)
+// 2012 - align-items (flex-start | flex-end | center | baseline | stretch)
 @mixin align-items($value: stretch) {
-// flex-start | flex-end | center | baseline | stretch
-  @include prefixer(align-items, $value, webkit moz spec)
+
+    $value-2009: $value;
+    $value-2011: auto;
+
+    @if $value == "flex-start" {
+        $value-2009: start;
+    }    
+
+    @elseif $value == "flex-end" {
+        $value-2009: end;
+    }
+
+    @elseif $value == "baseline" {
+        $value-2011: baseline;
+    }
+
+    // 2009
+    @include prefixer(box-align, $value-2009, webkit moz spec);
+
+    // 2012
+    @include prefixer(align-items, $value, webkit moz ms o spec);
+    
+    // 2011 (IE 10)
+    -ms-flex-align: $value-2011;    
 }
 
+// 2012 - align-self (auto | flex-start | flex-end | center | baseline | stretch)
 @mixin align-self($value: auto) {
-// auto | flex-start | flex-end | center | baseline | stretch
-  @include prefixer(align-self, $value, webkit moz spec)
+    @include prefixer(align-self, $value, webkit moz spec)
 }
 
+// 2012 - align-content (flex-start | flex-end | center | space-between | space-around | stretch)
 @mixin align-content($value: stretch) {
-// flex-start | flex-end | center | space-between | space-around | stretch
-  @include prefixer(align-content, $value, webkit moz spec)
+    @include prefixer(align-content, $value, webkit moz spec)
 }
