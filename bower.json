@@ -1,0 +1,16 @@
+{
+  "name": "bourbon",
+  "homepage": "http://bourbon.io/",
+  "main": "dist/_bourbon.scss",
+  "ignore": [
+    "app",
+    "bin",
+    "features",
+    "lib",
+    ".gitignore",
+    "Gemfile",
+    "Gemfile.lock",
+    "Rakefile",
+    "bourbon.gemspec"
+  ]
+}
