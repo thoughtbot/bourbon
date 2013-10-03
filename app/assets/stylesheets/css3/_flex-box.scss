@@ -42,7 +42,7 @@
 
     $value-pos: $value;
     $value-neg: 0;
-    $value-width: 0;
+    $value-width: auto;
 
     @if length($value) == 3 {
         $value-width: nth($value, 3); // width value
@@ -156,16 +156,19 @@
 // 2012 - flex-grow (number)
 @mixin flex-grow($number: 0) {
     @include prefixer(flex-grow, $number, webkit moz spec);
+    -ms-flex-negative: $number;
 }
 
 // 2012 - flex-shrink (number)
 @mixin flex-shrink($number: 1) {
     @include prefixer(flex-shrink, $number, webkit moz spec);
+    -ms-flex-positive: $number;
 }
 
 // 2012 - flex-basis (number)
 @mixin flex-basis($width: auto) {
     @include prefixer(flex-basis, $width, webkit moz spec);
+    -ms-flex-preferred-size: $width;
 }
 
 // 2009 - box-pack (start | end | center | justify)
