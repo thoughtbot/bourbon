@@ -18,6 +18,37 @@
 //
 // Note: You can also use false instead of null
 
+@function collapse-directionals($vals) {
+  $output: null;
+
+  $A: nth( $vals, 1 );
+  $B: if( length($vals) < 2, $A, nth($vals, 2));
+  $C: if( length($vals) < 3, $A, nth($vals, 3));
+  $D: if( length($vals) < 2, $A, nth($vals, if( length($vals) < 4, 2, 4) ));
+
+  @if $A == 0 { $A: 0 }
+  @if $B == 0 { $B: 0 }
+  @if $C == 0 { $C: 0 }
+  @if $D == 0 { $D: 0 }
+
+  @if $A == $B and $A == $C and $A == $D { $output: $A          }
+  @else if $A == $C and $B == $D         { $output: $A $B       }
+  @else if $B == $D                      { $output: $A $B $C    }
+  @else                                  { $output: $A $B $C $D }
+
+  @return $output;
+}
+
+@function contains-falsy($list) {
+  @each $item in $list {
+    @if not $item {
+      @return true;
+    }
+  }
+
+  @return false;
+}
+
 @mixin directional-property($pre, $suf, $vals) {
   // Property Names
   $top:    $pre + "-top"    + if($suf, "-#{$suf}", "");
@@ -29,29 +60,9 @@
   // Get list inside $vals (is there a better way?)
   @each $val in $vals { $vals: $val; }
 
-  // Look for null
-  $has-falsy-val: false;
-  @each $val in $vals {
-    @if not $val {
-      $has-falsy-val: true;
-    }
-  }
+  $vals: collapse-directionals($vals);
 
-  // Check if vals are the same
-  $vals-not-different: true;
-  $first-val: nth($vals, 1);
-  @each $val in $vals {
-    @if $val != $first-val {
-      $vals-not-different: false;
-    }
-  }
-
-  // Shorten vals into 1 if they are all the same
-  @if $vals-not-different {
-    $vals: nth($vals, 1);
-  }
-
-  @if $has-falsy-val {
+  @if contains-falsy($vals) {
     @if nth($vals, 1) { #{$top}: nth($vals, 1); }
 
     @if length($vals) == 1 {
