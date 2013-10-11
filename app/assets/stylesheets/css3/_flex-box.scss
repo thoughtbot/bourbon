@@ -40,9 +40,10 @@
 // 2012 - flex (integer integer width)
 @mixin flex($value) {
 
-    $value-pos: $value;
-    $value-neg: $value;
-    $value-width: auto;
+    // Initial values.
+    $value-pos: $value; // 1
+    $value-neg: $value; // 0
+    $value-width: auto; // auto
 
     @if length($value) == 3 {
         $value-width: nth($value, 3); // width value
@@ -54,10 +55,10 @@
     }
 
     // 2009
-    @include prefixer(box-flex, unquote("#{$value-pos}.0"), webkit moz spec);
+    @include prefixer(box-flex, $value-pos, webkit moz spec);
 
     // 2012
-    @include prefixer(flex, $value, webkit moz spec);
+    @include prefixer(flex, $value-neg $value-pos $value-width, webkit moz spec);
 
     // 2011 (IE 10)
     -ms-flex: $value-pos $value-neg $value-width;
