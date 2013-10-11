@@ -41,7 +41,7 @@
 @mixin flex($value) {
 
     $value-pos: $value;
-    $value-neg: 0;
+    $value-neg: $value;
     $value-width: auto;
 
     @if length($value) == 3 {
@@ -61,11 +61,17 @@
 
     // 2011 (IE 10)
     -ms-flex: $value-pos $value-neg $value-width;
+    
+    /*
+    -ms-flex-positive: 1;
+    -ms-flex-negative: 0;
+    -ms-flex-preferred-size: auto;
+    */
 }
 
-// 2009 - box-direction (normal | reverse)
-//      - box-orient ( horizontal | vertical | inline-axis | block-axis)
-// 2011 - flex-direction (lr | rl | tb | bt | inline | inline-reverse | block | block-reverse)
+// 2009 - box-orient ( horizontal | vertical | inline-axis | block-axis)
+//      - box-direction (normal | reverse)      
+// 2011 - flex-direction (row | row-reverse | column | column-reverse)
 // 2012 - flex-direction (row | row-reverse | column | column-reverse)
 @mixin flex-direction($value: row) {
 
@@ -75,24 +81,20 @@
     $direction: "normal";
 
     @if $value == row {
-        $value-2009: inline-axis;
-        $value-2011: inline;
+        $value-2009: horizontal;
     }
 
     @elseif $value == "row-reverse" {
-        $value-2009: inline-axis;
-        $value-2011: inline-reverse;
+        $value-2009: horizontal;
         $direction: reverse;
     }
 
     @elseif $value == column {
-        $value-2009: block-axis;
-        $value-2011: block;
+        $value-2009: vertical;
     }
 
     @elseif $value == "column-reverse" {
-        $value-2009: block-axis;
-        $value-2011: block-reverse;
+        $value-2009: vertical;
         $direction: reverse;
     }
 
@@ -106,7 +108,7 @@
     @include prefixer(flex-direction, $value, webkit moz spec);
 
     // 2011 (IE 10)
-    -ms-flex-direction: $value-2011;
+    -ms-flex-direction: $value;
 }
 
 // 2009 - box-lines (single | multiple)
@@ -134,7 +136,7 @@
 
 // 2009 - TODO: parse values into flex-direction/flex-wrap
 // 2011 - TODO: parse values into flex-direction/flex-wrap
-// 2012 - flex-wrap (flex-direction || flex-wrap)
+// 2012 - flex-flow (flex-direction || flex-wrap)
 @mixin flex-flow($value) {
     @include prefixer(flex-flow, $value, webkit moz spec);
 }
@@ -205,33 +207,28 @@
 }
 
 // 2009 - box-align (start | end | center | baseline | stretch)
-// 2011 - flex-align (auto | baseline)
+// 2011 - flex-align (start | end | center | baseline | stretch)
 // 2012 - align-items (flex-start | flex-end | center | baseline | stretch)
 @mixin align-items($value: stretch) {
 
-    $value-2009: $value;
-    $value-2011: auto;
+    $alt-value: $value;
 
     @if $value == "flex-start" {
-        $value-2009: start;
+        $alt-value: start;
     }    
 
     @elseif $value == "flex-end" {
-        $value-2009: end;
-    }
-
-    @elseif $value == "baseline" {
-        $value-2011: baseline;
+        $alt-value: end;
     }
 
     // 2009
-    @include prefixer(box-align, $value-2009, webkit moz spec);
+    @include prefixer(box-align, $alt-value, webkit moz spec);
 
     // 2012
     @include prefixer(align-items, $value, webkit moz ms o spec);
     
     // 2011 (IE 10)
-    -ms-flex-align: $value-2011;    
+    -ms-flex-align: $alt-value;    
 }
 
 // 2011 - flex-item-align (auto | start | end | center | baseline | stretch)
