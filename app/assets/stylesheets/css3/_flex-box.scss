@@ -41,11 +41,13 @@
 @mixin flex($value) {
 
     // Initial values.
-    $value-pos: $value; // 1
-    $value-neg: $value; // 0
+    $value-neg: 0;
+    $value-pos: 1;
     $value-width: auto; // auto
 
     @if length($value) == 3 {
+        $value-neg: nth($value, 1); // width value
+        $value-pos: nth($value, 2); // width value
         $value-width: nth($value, 3); // width value
     }
 
@@ -55,7 +57,7 @@
     }
 
     // 2009
-    @include prefixer(box-flex, $value-pos, webkit moz spec);
+    @include prefixer(box-flex, $value-neg, webkit moz spec);
 
     // 2012
     @include prefixer(flex, $value-neg $value-pos $value-width, webkit moz spec);
@@ -279,4 +281,3 @@
     // 2011 (IE 10)
     -ms-flex-line-pack: $value-2011;
 }
-
