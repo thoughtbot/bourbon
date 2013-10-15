@@ -51,9 +51,14 @@
         $value-width: nth($value, 3); // width value
     }
 
+    // Output values.
     @if length($value) > 1 {
-        $value-pos: nth($value, 2); // positive/shrink value
         $value-neg: nth($value, 1); // negative/grow value
+        $value-pos: nth($value, 2); // positive/shrink value
+    }
+
+    @else {
+        $value-neg: $value;
     }
 
     // 2009
@@ -281,3 +286,4 @@
     // 2011 (IE 10)
     -ms-flex-line-pack: $value-2011;
 }
+
