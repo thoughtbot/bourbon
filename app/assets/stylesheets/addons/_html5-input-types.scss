@@ -22,7 +22,7 @@ $inputs-list: 'input[type="email"]',
 
 $unquoted-inputs-list: ();
 @each $input-type in $inputs-list {
-  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma);
+  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma) !global;
 }
 
 $all-text-inputs: $unquoted-inputs-list;
@@ -33,7 +33,7 @@ $all-text-inputs: $unquoted-inputs-list;
 $all-text-inputs-hover: ();
 @each $input-type in $unquoted-inputs-list {
       $input-type-hover: $input-type + ":hover";
-      $all-text-inputs-hover: append($all-text-inputs-hover, $input-type-hover, comma);
+      $all-text-inputs-hover: append($all-text-inputs-hover, $input-type-hover, comma) !global;
 }
 
 // Focus Pseudo-class
@@ -41,7 +41,7 @@ $all-text-inputs-hover: ();
 $all-text-inputs-focus: ();
 @each $input-type in $unquoted-inputs-list {
       $input-type-focus: $input-type + ":focus";
-      $all-text-inputs-focus: append($all-text-inputs-focus, $input-type-focus, comma);
+      $all-text-inputs-focus: append($all-text-inputs-focus, $input-type-focus, comma) !global;
 }
 
 // You must use interpolation on the variable:
