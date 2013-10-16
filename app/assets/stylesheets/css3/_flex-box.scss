@@ -64,11 +64,8 @@
     // 2009
     @include prefixer(box-flex, $value-neg, webkit moz spec);
 
-    // 2012
-    @include prefixer(flex, $value-neg $value-pos $value-width, webkit moz spec);
-
-    // 2011 (IE 10)
-    -ms-flex: $value-pos $value-neg $value-width;
+    // 2011 (IE 10), 2012
+    @include prefixer(flex, $value-neg $value-pos $value-width, webkit moz ms spec);
     
     /*
     -ms-flex-positive: 1;
