@@ -20,29 +20,31 @@ $inputs-list: 'input[type="email"]',
               'input[type="time"]',
               'input[type="week"]';
 
-$unquoted-inputs-list: ();
-@each $input-type in $inputs-list {
-  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma);
+@function fnAssignInputs($inputs, $pseudo: null) {
+  $_list : ();
+
+  @each $_input in $inputs {
+    $_input : unquote($_input);
+    $_input : if($pseudo, $_input + ":" + $pseudo, $_input);
+    $_list  : append($_list, $_input, comma);
+  }
+
+  @return $_list;
 }
 
-$all-text-inputs: $unquoted-inputs-list;
-
+// Bare inputs
+//************************************************************************//
+$all-text-inputs: fnAssignInputs($inputs-list);
 
 // Hover Pseudo-class
 //************************************************************************//
-$all-text-inputs-hover: ();
-@each $input-type in $unquoted-inputs-list {
-      $input-type-hover: $input-type + ":hover";
-      $all-text-inputs-hover: append($all-text-inputs-hover, $input-type-hover, comma);
-}
+$all-text-inputs-hover: fnAssignInputs($inputs-list, hover);
 
 // Focus Pseudo-class
 //************************************************************************//
-$all-text-inputs-focus: ();
-@each $input-type in $unquoted-inputs-list {
-      $input-type-focus: $input-type + ":focus";
-      $all-text-inputs-focus: append($all-text-inputs-focus, $input-type-focus, comma);
-}
+$all-text-inputs-focus: fnAssignInputs($inputs-list, focus);
+
+
 
 // You must use interpolation on the variable:
 // #{$all-text-inputs}
