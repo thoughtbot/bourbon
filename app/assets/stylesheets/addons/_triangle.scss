@@ -1,45 +1,57 @@
-@mixin triangle ($size, $color, $direction) {
+@mixin triangle ($width, $height, $color, $direction: '') {
+  @if $direction == '' {
+    $direction: $color;
+    $color: $height;
+    $height: $width;
+  }
+  $width: $width / 2;
+
   height: 0;
   width: 0;
 
   @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
-    border-color: transparent;
-    border-style: solid;
-    border-width: $size / 2;
 
     @if $direction == up {
-      border-bottom-color: $color;
+      border-left: $width solid transparent;
+      border-right: $width solid transparent;
+      border-bottom: $height solid $color;
 
     } @else if $direction == right {
-      border-left-color:   $color;
+      border-top: $width solid transparent;
+      border-bottom: $width solid transparent;
+      border-left: $height solid $color;
 
     } @else if $direction == down {
-      border-top-color:    $color;
+      border-left: $width solid transparent;
+      border-right: $width solid transparent;
+      border-top: $height solid $color;
 
     } @else if $direction == left {
-      border-right-color:  $color;
+      border-top: $width solid transparent;
+      border-bottom: $width solid transparent;
+      border-right: $height solid $color;
     }
   }
 
   @else if ($direction == up-right) or ($direction == up-left) {
-    border-top: $size solid $color;
+    border-top: $width solid $color;
 
     @if $direction == up-right {
-      border-left:  $size solid transparent;
+      border-left:  $width solid transparent;
 
     } @else if $direction == up-left {
-      border-right: $size solid transparent;
+      border-right: $width solid transparent;
     }
   }
 
   @else if ($direction == down-right) or ($direction == down-left) {
-    border-bottom: $size solid $color;
+    border-bottom: $width solid $color;
 
     @if $direction == down-right {
-      border-left:  $size solid transparent;
+      border-left:  $width solid transparent;
 
     } @else if $direction == down-left {
-      border-right: $size solid transparent;
+      border-right: $width solid transparent;
     }
   }
 }
