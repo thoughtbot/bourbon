@@ -12,12 +12,12 @@
 
 // Custom Functions
 @import "functions/flex-grid";
+@import "functions/generate-linear";
+@import "functions/generate-radial";
 @import "functions/grid-width";
 @import "functions/golden-ratio";
-@import "functions/linear-gradient";
 @import "functions/modular-scale";
 @import "functions/px-to-em";
-@import "functions/radial-gradient";
 @import "functions/strip-units";
 @import "functions/tint-shade";
 @import "functions/transition-property-name";

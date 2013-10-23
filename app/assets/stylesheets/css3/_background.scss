@@ -97,7 +97,7 @@
 }
 
 //Examples:
-  //@include background(linear-gradient(top, orange, red));
-  //@include background(radial-gradient(circle at 40% 40%, orange, red));
-  //@include background(url("/images/a.png") no-repeat, linear-gradient(orange, red));
-  //@include background(url("image.png") center center, linear-gradient(orange, red), url("image.png"));
+  //@include background(generate-linear(top, orange, red));
+  //@include background(generate-radial(circle at 40% 40%, orange, red));
+  //@include background(url("/images/a.png") no-repeat, generate-linear(orange, red));
+  //@include background(url("image.png") center center, generate-linear(orange, red), url("image.png"));
