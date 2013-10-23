@@ -54,3 +54,57 @@ $all-text-inputs-focus: ();
 //   #{$all-text-inputs}, textarea {
 //     border: 1px solid red;
 //   }
+
+
+
+//************************************************************************//
+// Generate a variable ($all-button-inputs) with a list of all html5
+// input types that have a button-based input, excluding button.
+//************************************************************************//
+$inputs-button-list: 'input[type="button"]',
+                     'input[type="reset"]',
+                     'input[type="submit"]';
+
+$unquoted-inputs-button-list: ();
+@each $input-type in $inputs-button-list {
+  $unquoted-inputs-button-list: append($unquoted-inputs-button-list, unquote($input-type), comma);
+}
+
+$all-button-inputs: $unquoted-inputs-button-list;
+
+
+// Hover Pseudo-class
+//************************************************************************//
+$all-button-inputs-hover: ();
+@each $input-type in $unquoted-inputs-button-list {
+      $input-type-hover: $input-type + ":hover";
+      $all-button-inputs-hover: append($all-button-inputs-hover, $input-type-hover, comma);
+}
+
+// Focus Pseudo-class
+//************************************************************************//
+$all-button-inputs-focus: ();
+@each $input-type in $unquoted-inputs-button-list {
+      $input-type-focus: $input-type + ":focus";
+      $all-button-inputs-focus: append($all-button-inputs-focus, $input-type-focus, comma);
+}
+
+// Active Pseudo-class
+//************************************************************************//
+$all-button-inputs-active: ();
+@each $input-type in $unquoted-inputs-button-list {
+      $input-type-active: $input-type + ":active";
+      $all-button-inputs-active: append($all-button-inputs-active, $input-type-active, comma);
+}
+
+// You must use interpolation on the variable:
+// #{$all-button-inputs}
+// #{$all-button-inputs-hover}
+// #{$all-button-inputs-focus}
+// #{$all-button-inputs-active}
+
+// Example
+//************************************************************************//
+//   #{$all-button-inputs}, button {
+//     border: 1px solid red;
+//   }
