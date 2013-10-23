@@ -48,8 +48,8 @@
 //Examples:
 // @include border-image(url("image.png"));
 // @include border-image(url("image.png") 20 stretch);
-// @include border-image(linear-gradient(45deg, orange, yellow));
-// @include border-image(linear-gradient(45deg, orange, yellow) stretch);
-// @include border-image(linear-gradient(45deg, orange, yellow) 20 30 40 50 stretch round);
-// @include border-image(radial-gradient(top, cover, orange, yellow, orange));
+// @include border-image(generate-linear(45deg, orange, yellow));
+// @include border-image(generate-linear(45deg, orange, yellow) stretch);
+// @include border-image(generate-linear(45deg, orange, yellow) 20 30 40 50 stretch round);
+// @include border-image(generate-radial(top, cover, orange, yellow, orange));
 
