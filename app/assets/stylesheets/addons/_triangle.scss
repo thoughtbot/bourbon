@@ -4,12 +4,13 @@
     $color: $height;
     $height: $width;
   }
-  $width: $width / 2;
 
   height: 0;
   width: 0;
 
   @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+
+    $width: $width / 2;
 
     @if $direction == up {
       border-left: $width solid transparent;
@@ -34,7 +35,7 @@
   }
 
   @else if ($direction == up-right) or ($direction == up-left) {
-    border-top: $width solid $color;
+    border-top: $height solid $color;
 
     @if $direction == up-right {
       border-left:  $width solid transparent;
@@ -45,7 +46,7 @@
   }
 
   @else if ($direction == down-right) or ($direction == down-left) {
-    border-bottom: $width solid $color;
+    border-bottom: $height solid $color;
 
     @if $direction == down-right {
       border-left:  $width solid transparent;
