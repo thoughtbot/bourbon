@@ -40,34 +40,14 @@
 // 2012 - flex (integer integer width)
 @mixin flex($value) {
 
-    // Initial values.
-    $value-pos: $value; // 1
-    $value-neg: $value; // 0
-    $value-width: auto; // auto
-
-    @if length($value) == 3 {
-        $value-width: nth($value, 3); // width value
-    }
-
-    @if length($value) > 1 {
-        $value-pos: nth($value, 2); // positive/shrink value
-        $value-neg: nth($value, 1); // negative/grow value
-    }
+    // Grab flex-grow for older browsers.
+    $flex-grow: nth($value, 1);
 
     // 2009
-    @include prefixer(box-flex, $value-pos, webkit moz spec);
+    @include prefixer(box-flex, $flex-grow, webkit moz spec);
 
-    // 2012
-    @include prefixer(flex, $value-neg $value-pos $value-width, webkit moz spec);
-
-    // 2011 (IE 10)
-    -ms-flex: $value-pos $value-neg $value-width;
-    
-    /*
-    -ms-flex-positive: 1;
-    -ms-flex-negative: 0;
-    -ms-flex-preferred-size: auto;
-    */
+    // 2011 (IE 10), 2012
+    @include prefixer(flex, $value, webkit moz ms spec);
 }
 
 // 2009 - box-orient ( horizontal | vertical | inline-axis | block-axis)
