@@ -139,13 +139,13 @@
 // 2012 - flex-grow (number)
 @mixin flex-grow($number: 0) {
     @include prefixer(flex-grow, $number, webkit moz spec);
-    -ms-flex-negative: $number;
+    -ms-flex-positive: $number;
 }
 
 // 2012 - flex-shrink (number)
 @mixin flex-shrink($number: 1) {
     @include prefixer(flex-shrink, $number, webkit moz spec);
-    -ms-flex-positive: $number;
+    -ms-flex-negative: $number;
 }
 
 // 2012 - flex-basis (number)
