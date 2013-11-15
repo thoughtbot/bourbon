@@ -1,7 +1,7 @@
 // Shorthand mixin. Supports multiple parentheses-deliminated values for each variable.
-// Example: @include transition (all, 2.0s, ease-in-out);
-//          @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
-//          @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));
+// Example: @include transition (all 2s ease-in-out);
+//          @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+//          @include transition-property (transform, opacity);
 
 @mixin transition ($properties...) {
   @if length($properties) >= 1 {
@@ -9,7 +9,7 @@
   }
 
   @else {
-    $properties: all 0.15s ease-out 0;
+    $properties: all 0.15s ease-out 0s;
     @include prefixer(transition, $properties, webkit moz spec);
   }
 }

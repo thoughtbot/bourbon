@@ -3,6 +3,7 @@
      -moz-border-image: _border-add-prefix($images, moz);
        -o-border-image: _border-add-prefix($images, o);
           border-image: _border-add-prefix($images);
+          border-style: solid;
 }
 
 @function _border-add-prefix($images, $vendor: false) {

@@ -1,5 +1,8 @@
+// Settings
+@import "settings/prefixer";
+@import "settings/px-to-em";
+
 // Custom Helpers
-@import "helpers/deprecated-webkit-gradient";
 @import "helpers/gradient-positions-parser";
 @import "helpers/linear-positions-parser";
 @import "helpers/radial-arg-parser";
@@ -8,15 +11,17 @@
 @import "helpers/shape-size-stripper";
 
 // Custom Functions
-@import "functions/compact";
 @import "functions/flex-grid";
 @import "functions/grid-width";
+@import "functions/golden-ratio";
 @import "functions/linear-gradient";
 @import "functions/modular-scale";
 @import "functions/px-to-em";
 @import "functions/radial-gradient";
+@import "functions/strip-units";
 @import "functions/tint-shade";
 @import "functions/transition-property-name";
+@import "functions/unpack";
 
 // CSS3 Mixins
 @import "css3/animation";
@@ -27,9 +32,11 @@
 @import "css3/border-image";
 @import "css3/border-radius";
 @import "css3/box-sizing";
+@import "css3/calc";
 @import "css3/columns";
 @import "css3/flex-box";
 @import "css3/font-face";
+@import "css3/hyphens";
 @import "css3/hidpi-media-query";
 @import "css3/image-rendering";
 @import "css3/inline-block";
@@ -45,11 +52,14 @@
 // Addons & other mixins
 @import "addons/button";
 @import "addons/clearfix";
+@import "addons/directional-values";
+@import "addons/ellipsis";
 @import "addons/font-family";
 @import "addons/hide-text";
 @import "addons/html5-input-types";
 @import "addons/position";
 @import "addons/prefixer";
+@import "addons/rem";
 @import "addons/retina-image";
 @import "addons/size";
 @import "addons/timing-functions";
