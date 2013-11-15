@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/thoughtbot/bourbon"
   s.summary     = "Bourbon Sass Mixins using SCSS syntax."
   s.description = <<-DESC
-The purpose of Bourbon Vanilla Sass Mixins is to provide a comprehensive framework of
+Bourbon provides a comprehensive framework of
 sass mixins that are designed to be as vanilla as possible. Meaning they
 should not deter from the original CSS syntax. The mixins contain vendor
 specific prefixes for all CSS3 properties for support amongst modern
@@ -26,7 +26,7 @@ that support only CSS3 prefixed properties.
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency('sass', '>= 3.2.0')
+  s.add_dependency('sass', '>= 3.3.0.rc.1')
   s.add_dependency('thor')
 
   s.add_development_dependency('aruba', '~> 0.4')
