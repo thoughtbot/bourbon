@@ -1,5 +1,5 @@
 // This function is required and used by the background-image mixin.
-@function radial-gradient($G1,        $G2,
+@function generate-radial($G1,        $G2,
                           $G3: null,  $G4: null,
                           $G5: null,  $G6: null,
                           $G7: null,  $G8: null,

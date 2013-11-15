@@ -1,4 +1,4 @@
-@function linear-gradient($pos, $gradients...) {
+@function generate-linear($pos, $gradients...) {
   $type: linear;
   $pos-type: type-of(nth($pos, 1));
 
