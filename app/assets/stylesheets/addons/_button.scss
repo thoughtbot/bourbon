@@ -18,6 +18,10 @@
     @else if $style == pill {
       @include pill($base-color, $grayscale: true);
     }
+
+    @else if $style == minimal {
+      @include minimal($base-color, $grayscale: true);
+    }
   }
 
   // Colored button
@@ -32,6 +36,10 @@
 
     @else if $style == pill {
       @include pill($base-color);
+    }
+
+    @else if $style == minimal {
+      @include minimal($base-color);
     }
   }
 
