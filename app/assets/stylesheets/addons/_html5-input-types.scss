@@ -67,37 +67,35 @@ $inputs-button-list: 'input[type="button"]',
                      'input[type="reset"]',
                      'input[type="submit"]';
 
-$unquoted-inputs-button-list: ();
-@each $input-type in $inputs-button-list {
-  $unquoted-inputs-button-list: append($unquoted-inputs-button-list, unquote($input-type), comma);
+@function assign-button-inputs($buttons, $pseudo: null) {
+  $list : ();
+
+  @each $button in $buttons {
+    $button: unquote($button);
+    $button: if($pseudo, $button + ":" + $pseudo, $button);
+    $list: append($list, $button, comma);
+  }
+
+  @return $list;
 }
 
-$all-button-inputs: $unquoted-inputs-button-list;
-
+// Bare inputs
+//************************************************************************//
+$all-button-inputs: assign-button-inputs($inputs-button-list);
 
 // Hover Pseudo-class
 //************************************************************************//
-$all-button-inputs-hover: ();
-@each $input-type in $unquoted-inputs-button-list {
-      $input-type-hover: $input-type + ":hover";
-      $all-button-inputs-hover: append($all-button-inputs-hover, $input-type-hover, comma);
-}
+$all-button-inputs-hover: assign-button-inputs($inputs-button-list, hover);
 
 // Focus Pseudo-class
 //************************************************************************//
-$all-button-inputs-focus: ();
-@each $input-type in $unquoted-inputs-button-list {
-      $input-type-focus: $input-type + ":focus";
-      $all-button-inputs-focus: append($all-button-inputs-focus, $input-type-focus, comma);
-}
+$all-button-inputs-focus: assign-button-inputs($inputs-button-list, focus);
 
 // Active Pseudo-class
 //************************************************************************//
-$all-button-inputs-active: ();
-@each $input-type in $unquoted-inputs-button-list {
-      $input-type-active: $input-type + ":active";
-      $all-button-inputs-active: append($all-button-inputs-active, $input-type-active, comma);
-}
+$all-button-inputs-active: assign-button-inputs($inputs-button-list, active);
+
+
 
 // You must use interpolation on the variable:
 // #{$all-button-inputs}
