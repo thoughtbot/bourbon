@@ -1,0 +1,13 @@
+<article id="font-feature-settings" data-type="mixin">
+  <h2>Font-feature-settings <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-feature-settings.scss">View source</a></h2>
+  <p>The font-feature-settings mixin is helpful for using the advanced typographic features included in some OpenType fonts.</p>
+
+{% highlight scss %}
+// Use ligatures if the typeface and font file include them
+@include font-feature-settings("liga");
+
+// Use proportional numbers, but not automatic kerning
+@include font-feature-settings("pnum", "kern" false);
+{% endhighlight %}
+</article>
+
