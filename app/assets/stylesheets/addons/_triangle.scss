@@ -1,58 +1,62 @@
-@mixin triangle ($width, $height, $color, $direction: '') {
-  @if $direction == '' {
-    $direction: $color;
-    $color: $height;
-    $height: $width;
-  }
-
+@mixin triangle ($size, $color, $direction) {
   height: 0;
   width: 0;
+
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+
+  $foreground-color: nth($color, 1);
+  @if (length($color) == 1) {
+    $background-color: transparent;
+  } @else {
+    $background-color: nth($color, 2);
+  }
 
   @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
 
     $width: $width / 2;
 
     @if $direction == up {
-      border-left: $width solid transparent;
-      border-right: $width solid transparent;
-      border-bottom: $height solid $color;
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-bottom: $height solid $foreground-color;
 
     } @else if $direction == right {
-      border-top: $width solid transparent;
-      border-bottom: $width solid transparent;
-      border-left: $height solid $color;
+      border-top: $width solid $background-color;
+      border-bottom: $width solid $background-color;
+      border-left: $height solid $foreground-color;
 
     } @else if $direction == down {
-      border-left: $width solid transparent;
-      border-right: $width solid transparent;
-      border-top: $height solid $color;
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-top: $height solid $foreground-color;
 
     } @else if $direction == left {
-      border-top: $width solid transparent;
-      border-bottom: $width solid transparent;
-      border-right: $height solid $color;
+      border-top: $width solid $background-color;
+      border-bottom: $width solid $background-color;
+      border-right: $height solid $foreground-color;
     }
   }
 
   @else if ($direction == up-right) or ($direction == up-left) {
-    border-top: $height solid $color;
+    border-top: $height solid $foreground-color;
 
     @if $direction == up-right {
-      border-left:  $width solid transparent;
+      border-left:  $width solid $background-color;
 
     } @else if $direction == up-left {
-      border-right: $width solid transparent;
+      border-right: $width solid $background-color;
     }
   }
 
   @else if ($direction == down-right) or ($direction == down-left) {
-    border-bottom: $height solid $color;
+    border-bottom: $height solid $foreground-color;
 
     @if $direction == down-right {
-      border-left:  $width solid transparent;
+      border-left:  $width solid $background-color;
 
     } @else if $direction == down-left {
-      border-right: $width solid transparent;
+      border-right: $width solid $background-color;
     }
   }
 }
