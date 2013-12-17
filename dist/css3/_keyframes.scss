@@ -20,17 +20,17 @@
       @content;
     }
   }
-  @if $original-prefix-for-spec {
-    @include disable-prefix-for-all();
-    $prefix-for-spec: true;
-    @keyframes #{$name} {
-      @content;
-    }
-  }
 
   $prefix-for-webkit:    $original-prefix-for-webkit;
   $prefix-for-mozilla:   $original-prefix-for-mozilla;
   $prefix-for-microsoft: $original-prefix-for-microsoft;
   $prefix-for-opera:     $original-prefix-for-opera;
   $prefix-for-spec:      $original-prefix-for-spec;
+
+  @if $original-prefix-for-spec {
+    @keyframes #{$name} {
+      @content;
+    }
+  }
+
 }
