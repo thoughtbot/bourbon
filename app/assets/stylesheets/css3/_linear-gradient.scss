@@ -34,5 +34,7 @@
 
   background-color: $fallback-color;
   background-image: -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
+  background-image: -moz-linear-gradient($pos-degree $full); // Firefox 3.6-15.0
+  background-image: -o-linear-gradient($pos-degree $full); // Opera 11.1-12.0
   background-image: unquote("linear-gradient(#{$pos-spec}#{$full})");
 }
