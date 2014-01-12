@@ -6,9 +6,8 @@
   $height: nth($size, length($size));
 
   $foreground-color: nth($color, 1);
-  @if (length($color) == 1) {
-    $background-color: transparent;
-  } @else {
+  $background-color: transparent !default;
+  @if (length($color) == 2) {
     $background-color: nth($color, 2);
   }
 
@@ -58,5 +57,29 @@
     } @else if $direction == down-left {
       border-right: $width solid $background-color;
     }
+  }
+
+  @else if ($direction == inset-up) {
+    border-width: $height $width;
+    border-style: solid;
+    border-color: $background-color $background-color $foreground-color;
+  }
+
+  @else if ($direction == inset-down) {
+    border-width: $height $width;
+    border-style: solid;
+    border-color: $foreground-color $background-color $background-color;
+  }
+
+  @else if ($direction == inset-right) {
+    border-width: $width $height;
+    border-style: solid;
+    border-color: $background-color $background-color $background-color $foreground-color;
+  }
+
+  @else if ($direction == inset-left) {
+    border-width: $width $height;
+    border-style: solid;
+    border-color: $background-color $foreground-color $background-color $background-color;
   }
 }
