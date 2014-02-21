@@ -1,0 +1,13 @@
+// Programatically determines whetner a color is light or dark
+// Returns a boolean
+// Uses the W3C lightness method http://www.w3.org/TR/AERT#color-contrast
+
+@function is-light($hex-color) {
+  $red: red(rgba($hex-color, 1.0));
+  $green: green(rgba($hex-color, 1.0));
+  $blue: blue(rgba($hex-color, 1.0));
+
+  $lightness: (($red * 299 + $green * 587 + $blue * 117) / 1000) / 255;
+
+  @return $lightness > .6;
+}
