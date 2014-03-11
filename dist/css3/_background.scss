@@ -89,7 +89,7 @@
       }
     }
     // If shorthand is a simple string (color or image)
-    @else if $type == string {
+    @else if ($type == string or $type == color) {
       $backgrounds-prefixed: join($backgrounds-prefixed, $shorthand, comma);
     }
   }
