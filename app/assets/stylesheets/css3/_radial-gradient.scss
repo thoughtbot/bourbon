@@ -34,6 +34,8 @@
   $shape-size-spec: if(($shape-size-spec != ' ') and ($pos == null), '#{$shape-size-spec}, ', '#{$shape-size-spec} ');
 
   background-color:  $fallback-color;
-  background-image: -webkit-radial-gradient(unquote(#{$pos}#{$shape-size}#{$full}));
+  background-image: -webkit-radial-gradient(unquote(#{$pos}#{$shape-size}#{$full})); // Safari 5.1+, Chrome
+  background-image: -moz-radial-gradient(unquote(#{$pos}#{$shape-size}#{$full})); // Firefox 3.6-15.0
+  background-image: -o-radial-gradient(unquote(#{$pos}#{$shape-size}#{$full})); // Opera 11.1-12.0
   background-image: unquote("radial-gradient(#{$shape-size-spec}#{$pos-spec}#{$full})");
 }
