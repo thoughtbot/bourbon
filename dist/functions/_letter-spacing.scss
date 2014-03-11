@@ -1,0 +1,4 @@
+@function letter-spacing($spacing) {
+	letter-spacing: $spacing;
+	padding-left: $spacing;
+}
