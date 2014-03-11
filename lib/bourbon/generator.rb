@@ -1,16 +1,16 @@
 require 'bourbon/version'
-require "fileutils"
+require 'fileutils'
 require 'thor'
 
 module Bourbon
   class Generator < Thor
-    map ['-v', '--version'] => :version
+    map %w(-v --version) => :version
 
     desc 'install', 'Install Bourbon into your project'
     method_options :path => :string, :force => :boolean
     def install
       if bourbon_files_already_exist? && !options[:force]
-        puts "Bourbon files already installed, doing nothing."
+        puts 'Bourbon files already installed, doing nothing.'
       else
         install_files
         puts "Bourbon files installed to #{install_path}/"
@@ -23,9 +23,9 @@ module Bourbon
       if bourbon_files_already_exist?
         remove_bourbon_directory
         install_files
-        puts "Bourbon files updated."
+        puts 'Bourbon files updated.'
       else
-        puts "No existing bourbon installation. Doing nothing."
+        puts 'No existing bourbon installation. Doing nothing.'
       end
     end
 
@@ -42,10 +42,10 @@ module Bourbon
 
     def install_path
       @install_path ||= if options[:path]
-          Pathname.new(File.join(options[:path], 'bourbon'))
-        else
-          Pathname.new('bourbon')
-        end
+                          Pathname.new(File.join(options[:path], 'bourbon'))
+                        else
+                          Pathname.new('bourbon')
+                        end
     end
 
     def install_files
@@ -54,7 +54,7 @@ module Bourbon
     end
 
     def remove_bourbon_directory
-      FileUtils.rm_rf("bourbon")
+      FileUtils.rm_rf('bourbon')
     end
 
     def make_install_directory
@@ -70,7 +70,7 @@ module Bourbon
     end
 
     def stylesheets_directory
-      File.join(top_level_directory, "app", "assets", "stylesheets")
+      File.join(top_level_directory, 'app', 'assets', 'stylesheets')
     end
 
     def top_level_directory
