@@ -308,7 +308,6 @@
       $base-color-hover: grayscale($base-color-hover);
     }
 
-    @include transition(all .5s);
     background-color: $base-color-hover;
     cursor: pointer;
   }
@@ -320,7 +319,6 @@
       $base-color-active: grayscale($base-color-active);
     }
 
-    @include transition(all .5s);
     background-color: $base-color-active;
     cursor: pointer;
   }
