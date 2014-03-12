@@ -20,17 +20,16 @@
       @content;
     }
   }
-  @if $original-prefix-for-spec {
-    @include disable-prefix-for-all();
-    $prefix-for-spec: true !global;
-    @keyframes #{$name} {
-      @content;
-    }
-  }
 
   $prefix-for-webkit:    $original-prefix-for-webkit    !global;
   $prefix-for-mozilla:   $original-prefix-for-mozilla   !global;
   $prefix-for-microsoft: $original-prefix-for-microsoft !global;
   $prefix-for-opera:     $original-prefix-for-opera     !global;
   $prefix-for-spec:      $original-prefix-for-spec      !global;
+
+  @if $original-prefix-for-spec {
+    @keyframes #{$name} {
+      @content;
+    }
+  }
 }

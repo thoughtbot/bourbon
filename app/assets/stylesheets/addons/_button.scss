@@ -315,3 +315,49 @@
     text-shadow: 0 -1px 1px $text-shadow-active;
   }
 }
+
+
+
+// Flat Button
+//************************************************************************//
+@mixin flat($base-color, $grayscale: false) {
+  $color:         hsl(0, 0, 100%);
+
+  @if lightness($base-color) > 70% {
+    $color:       hsl(0, 0, 20%);
+  }
+
+  background-color: $base-color;
+  border-radius: 3px;
+  color: $color;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+
+  &:hover:not(:disabled){
+    $base-color-hover:    adjust-color($base-color, $saturation: 4%, $lightness: 5%);
+
+    @if $grayscale == true {
+      $base-color-hover: grayscale($base-color-hover);
+    }
+
+    @include transition(all .5s);
+    background-color: $base-color-hover;
+    cursor: pointer;
+  }
+
+  &:active:not(:disabled){
+    $base-color-active: adjust-color($base-color, $saturation: -4%, $lightness: -5%);
+
+    @if $grayscale == true {
+      $base-color-active: grayscale($base-color-active);
+    }
+
+    @include transition(all .5s);
+    background-color: $base-color-active;
+    cursor: pointer;
+  }
+}
