@@ -19,7 +19,7 @@
 
   $pixel_values: ();
   $rem_values: ();
-  @each $value in $pxval {
+  @each $value in $size {
     $pixel_value: $value * 1px;
     $pixel_values: append($pixel_values, $pixel_value);
 
