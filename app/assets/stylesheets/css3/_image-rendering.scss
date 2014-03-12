@@ -1,6 +1,7 @@
 @mixin image-rendering ($mode:auto) {
 
   @if ($mode == crisp-edges) {
+      -ms-interpolation-mode: nearest-neighbor; // IE8+
       image-rendering: -moz-crisp-edges;
       image-rendering: -o-crisp-edges;
       image-rendering: -webkit-optimize-contrast;
