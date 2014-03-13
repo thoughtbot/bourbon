@@ -1,0 +1,15 @@
+// Method to prefix values in inline property values, like transition.
+
+@function prefix-values($values, $prefix:spec) {
+	@if( $prefix == spec )
+	{ @return $values; }
+
+	$prefixed: ();
+
+	@each $value in $values {
+		$prop: if(nth($value, 1) == transform, unquote('-'+ $prefix +'-'+ $value), $value);
+		$prefixed: append($prefixed, $prop, comma);
+	}
+
+	@return $prefixed;
+}
