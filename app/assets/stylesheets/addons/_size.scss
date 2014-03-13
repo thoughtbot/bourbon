@@ -1,10 +1,8 @@
 @mixin size($size) {
-  $height: nth($size, 1);
-  $width: $height;
+  $size: unpack($size, 2);
 
-  @if length($size) > 1 {
-    $height: nth($size, 2);
-  }
+  $width: nth($size, 1);
+  $height: nth($size, 2);
 
   @if $height == auto or (type-of($height) == number and not unitless($height)) {
     height: $height;
