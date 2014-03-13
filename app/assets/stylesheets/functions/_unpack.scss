@@ -1,7 +1,7 @@
 // Convert shorthand to the 4-value syntax
 
-@function unpack($shorthand) {
-  @for $i from 1 through 4 {
+@function unpack($shorthand, $length: 4) {
+  @for $i from 1 through $length {
     @if (length($shorthand) < $i) {
       $shorthand: append($shorthand, nth($shorthand, floor($i / 2)));
     }
