@@ -11,3 +11,8 @@
   @include prefixer(background-size, $lengths, spec);
   @warn "background-size is deprecated and will be removed in the next major version release";
 }
+
+@mixin inline-block {
+  display: inline-block;
+  @warn "inline-block mixin is deprecated and will be removed in the next major version release";
+}
