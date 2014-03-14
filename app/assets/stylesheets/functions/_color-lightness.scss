@@ -1,6 +1,6 @@
 // Programatically determines whether a color is light or dark
 // Returns a boolean
-// Uses the W3C lightness method http://www.w3.org/TR/AERT#color-contrast
+// More details here http://robots.thoughtbot.com/closer-look-color-lightness
 
 @function is-light($hex-color) {
   $red: red(rgba($hex-color, 1.0));
