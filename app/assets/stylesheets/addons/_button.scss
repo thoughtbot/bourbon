@@ -71,6 +71,10 @@
     @include pill($b-color, true, $t-size, $pad);
   }
 
+  @if $type == flat and $b-color == grayscale($b-color) {
+    @include flat($b-color, true, $t-size, $pad);
+  }
+
   // Colored button
   @if $type == simple {
     @include simple($b-color, false, $t-size, $pad);
@@ -82,6 +86,10 @@
 
   @else if $type == pill {
     @include pill($b-color, false, $t-size, $pad);
+  }
+
+  @else if $type == flat {
+    @include flat($b-color, false, $t-size, $pad);
   }
 }
 
@@ -320,7 +328,7 @@
 
 // Flat Button
 //************************************************************************//
-@mixin flat($base-color, $grayscale: false) {
+@mixin flat($base-color, $grayscale: false, $textsize: inherit, $padding: 7px 18px) {
   $color:         hsl(0, 0, 100%);
 
   @if lightness($base-color) > 70% {
