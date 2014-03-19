@@ -3,13 +3,17 @@
 @import "settings/px-to-em";
 
 // Custom Helpers
+@import "helpers/convert-units";
 @import "helpers/gradient-positions-parser";
+@import "helpers/is-num";
 @import "helpers/linear-gradient-parser";
 @import "helpers/linear-positions-parser";
 @import "helpers/radial-arg-parser";
 @import "helpers/radial-positions-parser";
+@import "helpers/radial-gradient-parser";
 @import "helpers/render-gradients";
 @import "helpers/shape-size-stripper";
+@import "helpers/str-to-num";
 
 // Custom Functions
 @import "functions/assign";

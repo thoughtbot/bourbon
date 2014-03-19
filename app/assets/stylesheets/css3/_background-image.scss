@@ -12,94 +12,31 @@
     $spec-image: ();
 
     @if (type-of($image) == string) {
-      $slice: str_slice($image, 0, 6);
+      $url-str:       str-slice($image, 0, 3);
+      $gradient-type: str-slice($image, 0, 6);
 
-      @if ($slice == "linear") or ($slice == "radial") {
+      @if $url-str == "url" {
+        $webkit-image: $image;
+          $spec-image: $image;
       }
 
-///////////////////////////////////////////////////////////////////////////
-      @if $slice == "linear" {
-        $gradients: linear-gradient-parser($image);
+      @else if $gradient-type == "linear" {
+        $gradients: _linear-gradient-parser($image);
+        $webkit-image:  map-get($gradients, webkit-image);
+        $spec-image:    map-get($gradients, spec-image);
+      }
+
+      @else if $gradient-type == "radial" {
+        $gradients: _radial-gradient-parser($image);
         $webkit-image: map-get($gradients, webkit-image);
-        $spec-image: map-get($gradients, spec-image);
+        $spec-image:   map-get($gradients, spec-image);
       }
-
-///////////////////////////////////////////////////////////////////////////
-      @else if $slice == "radial" {
-        $start: str-index($image, "(");
-        $end: str-index($image, ",");
-        $first-val: str_slice($image, $start + 1, $end - 1);
-
-        $prefix: str_slice($image, 0, $start);
-        $suffix: str_slice($image, $end, str_length($image));
-
-        @debug $first-val;
-
-        $has-at: str_index($first-val, "at");
-        @debug $has-at;
-        @if $has_at and $has_at > 1 {
-           $keyword: str_slice($first-val, 1, $has-at - 2);
-           $pos: str_slice($first-val, $has-at + 3, str-length($first-val));
-           $pos: append($pos, $keyword, comma);
-
-           $webkit-image: -webkit- + $prefix + $pos + $suffix;
-           $spec-image: $image;
-        }
-
-        @else if $has_at == 1 {
-           $pos: str_slice($first-val, $has-at + 3, str-length($first-val));
-           $webkit-image: -webkit- + $prefix + $pos + $suffix;
-           $spec-image: $image;
-        }
-
-        @else if str_index($image, "cover") or str_index($image, "contain") {
-          @warn "Radial-gradient needs to be updated to conform to latest spec.";
-          $spec-image: $image;
-        }
-
-        @else {
-          $webkit-image: -webkit- + $image;
-          $spec-image: $image;
-        }
-      }
-
-///////////////////////////////////////////////////////////////////////////
     }
 
     $webkit-images: append($webkit-images, $webkit-image, comma);
     $spec-images:   append($spec-images,   $spec-image,   comma);
   }
 
-  @debug $webkit-images;
-  @debug $spec-images;
   background-image: $webkit-images;
   background-image: $spec-images;
-}
-
-
-
-@function string_to_list($string) {
-  $space-list: 0;
-  $list: ();
-  @for $i from 1 through str_length($string) {
-    $char: str-slice($string, $i, $i);
-
-    @if ($char == " ") or ($i == str-length($string)) {
-      $space-list: append($space-list, $i, comma);
-    }
-  }
-
-  @for $i from 1 through length($space-list) {
-    @if $i != length($space-list) {
-      @if $i == length($space-list) - 1 {
-        $var: str-slice($string, nth($space-list, $i) + 1, nth($space-list, $i + 1));
-        $list: append($list, $var, comma);
-      }
-      @else {
-        $var: str-slice($string, nth($space-list, $i) + 1, nth($space-list, $i + 1) - 1);
-        $list: append($list, $var, comma);
-      }
-    }
-  }
-  @return $list;
 }
