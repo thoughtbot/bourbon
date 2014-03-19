@@ -4,45 +4,102 @@
 //************************************************************************//
 
 @mixin background-image($images...) {
-  background-image: _add-prefix($images, webkit);
-  background-image: _add-prefix($images);
+  $webkit-images: ();
+  $spec-images: ();
+
+  @each $image in $images {
+    $webkit-image: ();
+    $spec-image: ();
+
+    @if (type-of($image) == string) {
+      $slice: str_slice($image, 0, 6);
+
+      @if ($slice == "linear") or ($slice == "radial") {
+      }
+
+///////////////////////////////////////////////////////////////////////////
+      @if $slice == "linear" {
+        $gradients: linear-gradient-parser($image);
+        $webkit-image: map-get($gradients, webkit-image);
+        $spec-image: map-get($gradients, spec-image);
+      }
+
+///////////////////////////////////////////////////////////////////////////
+      @else if $slice == "radial" {
+        $start: str-index($image, "(");
+        $end: str-index($image, ",");
+        $first-val: str_slice($image, $start + 1, $end - 1);
+
+        $prefix: str_slice($image, 0, $start);
+        $suffix: str_slice($image, $end, str_length($image));
+
+        @debug $first-val;
+
+        $has-at: str_index($first-val, "at");
+        @debug $has-at;
+        @if $has_at and $has_at > 1 {
+           $keyword: str_slice($first-val, 1, $has-at - 2);
+           $pos: str_slice($first-val, $has-at + 3, str-length($first-val));
+           $pos: append($pos, $keyword, comma);
+
+           $webkit-image: -webkit- + $prefix + $pos + $suffix;
+           $spec-image: $image;
+        }
+
+        @else if $has_at == 1 {
+           $pos: str_slice($first-val, $has-at + 3, str-length($first-val));
+           $webkit-image: -webkit- + $prefix + $pos + $suffix;
+           $spec-image: $image;
+        }
+
+        @else if str_index($image, "cover") or str_index($image, "contain") {
+          @warn "Radial-gradient needs to be updated to conform to latest spec.";
+          $spec-image: $image;
+        }
+
+        @else {
+          $webkit-image: -webkit- + $image;
+          $spec-image: $image;
+        }
+      }
+
+///////////////////////////////////////////////////////////////////////////
+    }
+
+    $webkit-images: append($webkit-images, $webkit-image, comma);
+    $spec-images:   append($spec-images,   $spec-image,   comma);
+  }
+
+  @debug $webkit-images;
+  @debug $spec-images;
+  background-image: $webkit-images;
+  background-image: $spec-images;
 }
 
-@function _add-prefix($images, $vendor: false) {
-  $images-prefixed: ();
-  $gradient-positions: false;
-  @for $i from 1 through length($images) {
-    $type: type-of(nth($images, $i)); // Get type of variable - List or String
 
-    // If variable is a list - Gradient
-    @if $type == list {
-      $gradient-type: nth(nth($images, $i), 1); // linear or radial
-      $gradient-pos: null;
-      $gradient-args: null;
 
-      @if ($gradient-type == linear) or ($gradient-type == radial) {
-        $gradient-pos:  nth(nth($images, $i), 2); // Get gradient position
-        $gradient-args: nth(nth($images, $i), 3); // Get actual gradient (red, blue)
-      }
-      @else {
-        $gradient-args: nth(nth($images, $i), 2); // Get actual gradient (red, blue)
-      }
+@function string_to_list($string) {
+  $space-list: 0;
+  $list: ();
+  @for $i from 1 through str_length($string) {
+    $char: str-slice($string, $i, $i);
 
-      $gradient-positions: _gradient-positions-parser($gradient-type, $gradient-pos);
-      $gradient: _render-gradients($gradient-positions, $gradient-args, $gradient-type, $vendor);
-      $images-prefixed: append($images-prefixed, $gradient, comma);
-    }
-    // If variable is a string - Image
-    @else if $type == string {
-      $images-prefixed: join($images-prefixed, nth($images, $i), comma);
+    @if ($char == " ") or ($i == str-length($string)) {
+      $space-list: append($space-list, $i, comma);
     }
   }
-  @return $images-prefixed;
-}
 
-//Examples:
-  //@include background-image(linear-gradient(top, orange, red));
-  //@include background-image(radial-gradient(50% 50%, cover circle, orange, red));
-  //@include background-image(url("/images/a.png"), linear-gradient(orange, red));
-  //@include background-image(url("image.png"), linear-gradient(orange, red), url("image.png"));
-  //@include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(orange, red));
+  @for $i from 1 through length($space-list) {
+    @if $i != length($space-list) {
+      @if $i == length($space-list) - 1 {
+        $var: str-slice($string, nth($space-list, $i) + 1, nth($space-list, $i + 1));
+        $list: append($list, $var, comma);
+      }
+      @else {
+        $var: str-slice($string, nth($space-list, $i) + 1, nth($space-list, $i + 1) - 1);
+        $list: append($list, $var, comma);
+      }
+    }
+  }
+  @return $list;
+}

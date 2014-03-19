@@ -1,0 +1,61 @@
+@function linear-gradient-parser($image) {
+  $start: str-index($image, "(");
+  $end: str-index($image, ",");
+  $first-val: str_slice($image, $start + 1, $end - 1);
+
+  $prefix: str_slice($image, 0, $start);
+  $suffix: str_slice($image, $end, str_length($image));
+  @debug $first-val;
+
+  $has-multiple-vals: str-index($first-val, " ");
+  $has-single-position: unquote(_position-flipper($first-val) + "");
+
+  @if $has-multiple-vals {
+    $val-1: str_slice($first-val, 0, $space - 1 );
+    $val-2: str_slice($first-val, $space + 1, str_length($first-val));
+    $val-3: null;
+    $has-val-3: str_index($val-2, " ");
+
+    @if $has-val-3 {
+      $val-3: str_slice($val-2, $has-val-3 + 1, str_length($val-2));
+      $val-2: str_slice($val-2, 0, $has-val-3 - 1);
+    }
+
+    $pos: _position-flipper($val-1) _position-flipper($val-2) _position-flipper($val-3);
+    $pos: unquote($pos + "");
+
+    @if $val-1 == "to" {
+      $gradients: (
+        webkit-image: -webkit- + $prefix + $pos + $suffix,
+        spec-image: $image
+      );
+      @return $gradients;
+    }
+    @else {
+      $gradients: (
+        webkit-image: -webkit- + $image,
+        spec-image: $prefix + "to " + $pos + $suffix
+      );
+      @return $gradients;
+    }
+  }
+
+  @else if $has-single-position != "" {
+    $pos: $has-single-position;
+    $pos: unquote($pos + "");
+
+    $gradients: (
+      webkit-image: -webkit- + $image,
+      spec-image: $prefix + "to " + $pos + $suffix
+    );
+    @return $gradients;
+  }
+
+  @else {
+    $gradients: (
+      webkit-image: -webkit- + $image,
+      spec-image: $image
+    );
+    @return $gradients;
+  }
+}
