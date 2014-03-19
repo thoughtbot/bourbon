@@ -144,7 +144,8 @@
     @include linear-gradient ($base-color-hover, $stop-gradient-hover);
   }
 
-  &:active:not(:disabled) {
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
     $border-active:       adjust-color($base-color, $saturation: 9%, $lightness: -14%);
     $inset-shadow-active: adjust-color($base-color, $saturation: 7%, $lightness: -17%);
 
@@ -220,7 +221,8 @@
                                   $fourth-stop-hover 100%);
   }
 
-  &:active:not(:disabled) {
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
     $inset-shadow-active: adjust-color($base-color, $red: -111, $green: -116, $blue: -122);
 
     @if $grayscale == true {
@@ -301,7 +303,8 @@
     background-clip: padding-box;
   }
 
-  &:active:not(:disabled) {
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
     $active-color:         adjust-color($base-color, $hue: 4,  $saturation: -12%,  $lightness: -10%);
     $border-active:        adjust-color($base-color, $hue: 6,  $saturation: -2.5%, $lightness: -30%);
     $border-bottom-active: adjust-color($base-color, $hue: 11, $saturation:  6%,   $lightness: -31%);
@@ -357,7 +360,8 @@
     cursor: pointer;
   }
 
-  &:active:not(:disabled){
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
     $base-color-active: adjust-color($base-color, $saturation: -4%, $lightness: -5%);
 
     @if $grayscale == true {
