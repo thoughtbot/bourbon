@@ -8,11 +8,11 @@
   $prefix: str-slice($image, 0, $start);
   $suffix: str-slice($image, $end, str-length($image));
 
-  $has-at: str-index($first-val, "at");
+  $is-spec-syntax: str-index($first-val, "at");
 
-  @if $has_at and $has_at > 1 {
-    $keyword: str-slice($first-val, 1, $has-at - 2);
-    $pos: str-slice($first-val, $has-at + 3, str-length($first-val));
+  @if $is-spec-syntax and $is-spec-syntax > 1 {
+    $keyword: str-slice($first-val, 1, $is-spec-syntax - 2);
+    $pos: str-slice($first-val, $is-spec-syntax + 3, str-length($first-val));
     $pos: append($pos, $keyword, comma);
 
     $gradients: (
@@ -22,7 +22,7 @@
   }
 
   @else if $has_at == 1 {
-    $pos: str-slice($first-val, $has-at + 3, str-length($first-val));
+    $pos: str-slice($first-val, $is-spec-syntax + 3, str-length($first-val));
 
     $gradients: (
       webkit-image: -webkit- + $prefix + $pos + $suffix,
