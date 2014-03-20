@@ -21,7 +21,7 @@
     )
   }
 
-  @else if $has_at == 1 {
+  @else if $is-spec-syntax == 1 {
     $pos: str-slice($first-val, $is-spec-syntax + 3, str-length($first-val));
 
     $gradients: (
