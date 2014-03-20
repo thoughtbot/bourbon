@@ -17,7 +17,7 @@
   @if $offset {
     $num: _str-to-num($first-val);
 
-    $gradients: (
+    @return (
       webkit-image: -webkit- + $prefix + ($offset - $num) + $suffix,
       spec-image: $image
     );
