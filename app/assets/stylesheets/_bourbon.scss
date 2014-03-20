@@ -6,8 +6,10 @@
 @import "helpers/convert-units";
 @import "helpers/gradient-positions-parser";
 @import "helpers/is-num";
+@import "helpers/linear-angle-parser";
 @import "helpers/linear-gradient-parser";
 @import "helpers/linear-positions-parser";
+@import "helpers/linear-side-corner-parser";
 @import "helpers/radial-arg-parser";
 @import "helpers/radial-positions-parser";
 @import "helpers/radial-gradient-parser";
