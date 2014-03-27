@@ -3,11 +3,11 @@
 // More details here http://robots.thoughtbot.com/closer-look-color-lightness
 
 @function is-light($hex-color) {
-  $red: red(rgba($hex-color, 1.0));
-  $green: green(rgba($hex-color, 1.0));
-  $blue: blue(rgba($hex-color, 1.0));
+  $-local-red: red(rgba($hex-color, 1.0));
+  $-local-green: green(rgba($hex-color, 1.0));
+  $-local-blue: blue(rgba($hex-color, 1.0));
 
-  $lightness: ($red * 0.2126 + $green * 0.7152 + $blue * 0.0722) / 255;
+  $-local-lightness: ($-local-red * 0.2126 + $-local-green * 0.7152 + $-local-blue * 0.0722) / 255;
 
-  @return $lightness > .6;
+  @return $-local-lightness > .6;
 }
