@@ -23,9 +23,25 @@ To pull in the latest changes on gh-pages branch:
 To pull in the latest Bourbon changes, you must fetch and merge master into gh-pages:
     `$ git fetch origin master && git merge master`
 
-To update the bourbon files with the latest version; 
+To update the bourbon files with the latest version:
 From the root directory:
     `$ bourbon update`
+
+------------------------------------------------------------------------------------------
+
+To add a new mixin (function or addon) to the docs:
+
+Create a new file in the `_includes/mixin/` directory:
+    `$ touch _includes/mixin/box-shadow.html`
+
+Add the link to navigation.html
+    `edit _includes/navigation.html`
+
+Add the partial to mixins.html
+    `edit _includes/mixins.html`
+
+Add the mixin to the complete-list.html
+    `edit _includes/complete-list.html`
 
 ------------------------------------------------------------------------------------------
 
