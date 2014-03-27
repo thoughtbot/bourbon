@@ -256,11 +256,20 @@ article#timing-functions {
 //************************************************************************//
 article#triangle {
   section.demo {
-    $positions: up, right, down, left, up-right, down-right, down-left, up-left;
+    $positions: up, right, down, left;
     @each $pos in $positions {
       div.#{$pos} {
-        @include triangle(12px, gray, $pos);
+        @include triangle(20px, gray, $pos);
         display: inline-block;
+        margin-right: 5px;
+      }
+    }
+    $positions: up-right, down-right, down-left, up-left;
+    @each $pos in $positions {
+      div.#{$pos} {
+        @include triangle(20px, gray lavender, $pos);
+        display: inline-block;
+        margin-right: 5px;
       }
     }
   }

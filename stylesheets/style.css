@@ -1181,52 +1181,60 @@ article#timing-functions section.demo div.ease-in-out-back {
 article#triangle section.demo div.up {
   height: 0;
   width: 0;
-  border-left: 6px solid #f3f1ec;
-  border-right: 6px solid #f3f1ec;
-  border-bottom: 12px solid gray;
-  display: inline-block; }
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid gray;
+  display: inline-block;
+  margin-right: 5px; }
 article#triangle section.demo div.right {
   height: 0;
   width: 0;
-  border-top: 6px solid #f3f1ec;
-  border-bottom: 6px solid #f3f1ec;
-  border-left: 12px solid gray;
-  display: inline-block; }
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid gray;
+  display: inline-block;
+  margin-right: 5px; }
 article#triangle section.demo div.down {
   height: 0;
   width: 0;
-  border-left: 6px solid #f3f1ec;
-  border-right: 6px solid #f3f1ec;
-  border-top: 12px solid gray;
-  display: inline-block; }
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid gray;
+  display: inline-block;
+  margin-right: 5px; }
 article#triangle section.demo div.left {
   height: 0;
   width: 0;
-  border-top: 6px solid #f3f1ec;
-  border-bottom: 6px solid #f3f1ec;
-  border-right: 12px solid gray;
-  display: inline-block; }
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid gray;
+  display: inline-block;
+  margin-right: 5px; }
 article#triangle section.demo div.up-right {
   height: 0;
   width: 0;
-  border-top: 12px solid gray;
-  border-left: 12px solid #f3f1ec;
-  display: inline-block; }
+  border-top: 20px solid gray;
+  border-left: 20px solid lavender;
+  display: inline-block;
+  margin-right: 5px; }
 article#triangle section.demo div.down-right {
   height: 0;
   width: 0;
-  border-bottom: 12px solid gray;
-  border-left: 12px solid #f3f1ec;
-  display: inline-block; }
+  border-bottom: 20px solid gray;
+  border-left: 20px solid lavender;
+  display: inline-block;
+  margin-right: 5px; }
 article#triangle section.demo div.down-left {
   height: 0;
   width: 0;
-  border-bottom: 12px solid gray;
-  border-right: 12px solid #f3f1ec;
-  display: inline-block; }
+  border-bottom: 20px solid gray;
+  border-right: 20px solid lavender;
+  display: inline-block;
+  margin-right: 5px; }
 article#triangle section.demo div.up-left {
   height: 0;
   width: 0;
-  border-top: 12px solid gray;
-  border-right: 12px solid #f3f1ec;
-  display: inline-block; }
+  border-top: 20px solid gray;
+  border-right: 20px solid lavender;
+  display: inline-block;
+  margin-right: 5px; }

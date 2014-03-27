@@ -1,9 +1,13 @@
 <article id="triangle" data-type="mixin">
   <h2>Triangle <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_triangle.scss">View source</a></h2>
   <p>Creates a visual triangle. Mixin takes <code>($size, $color, $direction)</code></p>
+  <p>The <code>$size</code> argument can take one or two values&mdash;<code>width height</code>.</p>
+  <p>The <code>$color</code> argument can take one or two values&mdash;<code>foreground-color background-color</code>.</p>
+  <p><code>$direction: up, down, left, right, up-right, up-left, down-right, down-left</code></p>
 
 {% highlight scss %}
 @include triangle(12px, gray, down);
+@include triangle(12px 6px, gray lavender, up-left);
 {% endhighlight %}
   <h3>Demo</h3>
   <section class="demo">
@@ -15,7 +19,6 @@
     <div class="up-left"></div>
     <div class="down-right"></div>
     <div class="down-left"></div>
-  <p><code>up, down, left, right, up-right, up-left, down-right, down-left</code></p>
   </section>
 </article>
 
