@@ -1,0 +1,24 @@
+{
+  "name": "bourbon",
+  "version": "3.2.0-beta.2",
+  "description": "A simple and lightweight mixin library for Sass.",
+  "main": "dist/_bourbon.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thoughtbot/bourbon"
+  },
+  "keywords": [
+    "scss",
+    "css",
+    "mixins"
+  ],
+  "author": "Thoughtbot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thoughtbot/bourbon/issues"
+  },
+  "homepage": "https://github.com/thoughtbot/bourbon"
+}

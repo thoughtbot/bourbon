@@ -8,10 +8,11 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Phil LaPier", "Chad Mazzola", "Matt Jankowski", "Nick Quaranto", "Jeremy Raines", "Mike Burns", "Andres Mejia", "Travis Haynes", "Chris Lloyd", "Gabe Berke-Williams", "J. Edward Dewyea", "Reda Lemeden"]
   s.email       = ["support@thoughtbot.com"]
+  s.license     = 'MIT'
   s.homepage    = "https://github.com/thoughtbot/bourbon"
   s.summary     = "Bourbon Sass Mixins using SCSS syntax."
   s.description = <<-DESC
-The purpose of Bourbon Vanilla Sass Mixins is to provide a comprehensive framework of
+Bourbon provides a comprehensive framework of
 sass mixins that are designed to be as vanilla as possible. Meaning they
 should not deter from the original CSS syntax. The mixins contain vendor
 specific prefixes for all CSS3 properties for support amongst modern
@@ -26,7 +27,7 @@ that support only CSS3 prefixed properties.
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency('sass', '>= 3.2.0')
+  s.add_dependency('sass', '~> 3.3')
   s.add_dependency('thor')
 
   s.add_development_dependency('aruba', '~> 0.4')
