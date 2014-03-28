@@ -2,10 +2,12 @@
 // eg. for a relational value of 12px write rem(12)
 // Assumes $em-base is the font-size of <html>
 
-@function rem($pxval, $base: $em-base) {
+@function rem($pxval) {
   @if not unitless($pxval) {
       $pxval: strip-units($pxval);
   }
+
+  $base: $em-base;
   @if not unitless($base) {
       $base: strip-units($base);
   }
