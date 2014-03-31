@@ -1,5 +1,7 @@
 [![Gitter chat](https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon) [![Code Climate](https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon)
-
+<br>
+<br>
+<br>
 [![Bourbon Sass Mixin Library](http://bourbon.io/images/shared/bourbon-logo.png)](http://bourbon.io)
 
 # A lightweight mixin library for Sass
