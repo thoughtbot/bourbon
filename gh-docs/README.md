@@ -13,7 +13,8 @@ Install Bourbon in the root directory:
     bourbon install
 
 Watch the sass folder from root directory:
-    `$ sass --watch stylesheets/sass:stylesheets`
+    `$ sass --watch stylesheets/home:stylesheets`
+    `$ sass --watch stylesheets/docs:stylesheets`
 
 ------------------------------------------------------------------------------------------
 

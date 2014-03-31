@@ -13,7 +13,7 @@ end
 
 def copy_docset_markup
   FileUtils.cp_r("#{site_path}/docset/index.html", docset_path)
-  FileUtils.cp_r("#{site_path}/stylesheets/style.css", docset_path)
+  FileUtils.cp_r("#{site_path}/stylesheets/docs.css", docset_path)
   FileUtils.cp_r("#{site_path}/images/shared/", images_path)
   FileUtils.cp_r("#{site_path}/images/documentation/", images_path)
   FileUtils.cp_r("#{site_path}/js/docs.js", docset_path)

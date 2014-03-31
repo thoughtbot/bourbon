@@ -4,7 +4,7 @@
 
 # A simple and lightweight mixin library for Sass
 Bourbon is a comprehensive library of sass mixins that are designed to be simple
-and easy to use. No configuration required.  
+and easy to use. No configuration required.
 The mixins aim to be as vanilla as possible, meaning they should be as close to the original CSS syntax as possible.
 
 The mixins contain vendor specific prefixes for all CSS3 properties for support
@@ -45,7 +45,7 @@ Import Bourbon at the beginning of application.css.scss. All additional styleshe
 ##### [Rails 3.0.x Install Instructions](https://github.com/thoughtbot/bourbon/wiki/Rails-3.0.x-Install) | [Rails 2.3 Install Instructions](https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install)
 
 ### Non-Rails projects
-Bourbon includes an easy way to generate a directory with all the necessary files.  
+Bourbon includes an easy way to generate a directory with all the necessary files.
 For command line help: `$ bourbon help` or visit the [Command line tools wiki](https://github.com/thoughtbot/bourbon/wiki/Command-Line-Tools)
 
 ##### Install (Bourbon v3.0+)
@@ -75,7 +75,7 @@ Visit the [Command line tools wiki](https://github.com/thoughtbot/bourbon/wiki/C
 
     bourbon help
     bourbon update
-    
+
 ##### [Bourbon v2.x install instructions](https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install)
 
 
