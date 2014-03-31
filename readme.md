@@ -1,8 +1,8 @@
-[![Code Climate](https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon)
+[![Gitter chat](https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon) [![Code Climate](https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon)
 
 [![Bourbon Sass Mixin Library](http://bourbon.io/images/shared/bourbon-logo.png)](http://bourbon.io)
 
-# A simple and lightweight mixin library for Sass
+# A lightweight mixin library for Sass
 Bourbon is a comprehensive library of sass mixins that are designed to be simple
 and easy to use. No configuration required.  
 The mixins aim to be as vanilla as possible, meaning they should be as close to the original CSS syntax as possible.
@@ -82,6 +82,8 @@ Visit the [Command line tools wiki](https://github.com/thoughtbot/bourbon/wiki/C
 - [Changelog](https://github.com/thoughtbot/bourbon/wiki)
 - [Browser support](https://github.com/thoughtbot/bourbon/wiki/Browser-Support)
 
+### Chat with us
+[![Gitter chat](https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon)
 
 ### Credits
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
