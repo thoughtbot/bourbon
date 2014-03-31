@@ -4,11 +4,12 @@
 
 html, body {
   background-color: $background-color;
+  color: $base-font-color;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: $base-font-size;
   height: 100%;
   width: 100%;
-  width: grid-width(9) + ($gw-gutter * 2);
+  min-width: $medium-screen;
   margin: 0 auto;
 
   &.docset {
@@ -26,13 +27,14 @@ h1 {
 }
 
 h1, h2 {
+  color: $header-font-color;
   font-size: golden-ratio(14px, 1) + 4px;
   font-family: "proxima-nova-soft", $helvetica;
 }
 
 h2 {
-  font-weight: 300;
-  margin-bottom: 0.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
   margin-top: 0;
 }
 
@@ -58,13 +60,13 @@ p {
   line-height: 1.5em;
 }
 
-a, a:link, a:active, a:visited {
-  color: hsl(212, 89%, 55%);
+a, a:active, a:visited {
+  color: $link-color;
   text-decoration: none;
 }
 
 a:hover {
-  color: hsl(212, 94%, 36%);
+  color: darken($link-color, 15%);
 }
 
 // Wrapper for any occasion
@@ -73,6 +75,7 @@ div.wrapper {
 }
 
 .alert {
-  color: $orange;
+  color: $base-font-color-alt;
+  font-size: $small-font-size;
   font-style: italic;
 }
