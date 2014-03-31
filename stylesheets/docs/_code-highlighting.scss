@@ -7,12 +7,13 @@ div.highlight {
 }
 
 pre {
-  background-color: $highlight-color;
+  background-color: #FFF;
   border-radius: 3px;
-  box-shadow: 0 0 0 1px darken($highlight-color, 8%);
-  margin: 1em 0;
+  box-shadow: 0 0 0 1px darken($background-color, 8%);
+  font-size: $small-font-size;
+  margin: 2.5em 0 1em 0;
   overflow: auto;
-  padding: 7px;
+  padding: 1.5em 1em;
   @include transition;
   white-space: pre;
   word-wrap: normal;
@@ -25,7 +26,7 @@ pre {
   }
 
   &::-webkit-scrollbar-thumb {
-      background-color: desaturate(darken($highlight-color, 10%), 5%);
+      background-color: darken($background-color, 10%);
       border-radius: 4px;
       box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
   }
