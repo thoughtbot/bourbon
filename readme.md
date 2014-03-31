@@ -1,12 +1,12 @@
-[![Gitter chat](https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon) [![Code Climate](https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon)
-<br>
-<br>
-<br>
 [![Bourbon Sass Mixin Library](http://bourbon.io/images/shared/bourbon-logo.png)](http://bourbon.io)
+<br>
+<br>
+[![Gem Version](https://badge.fury.io/rb/bourbon.png)](http://badge.fury.io/rb/bourbon) [![Code Climate](https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon)  [![Gitter chat](https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon)
 
-# A lightweight mixin library for Sass
-Bourbon is a comprehensive library of sass mixins that are designed to be simple
-and easy to use. No configuration required.  
+## A lightweight mixin library for Sass
+Bourbon is a library of pure sass mixins that are designed to be simple
+and easy to use. No configuration required.
+
 The mixins aim to be as vanilla as possible, meaning they should be as close to the original CSS syntax as possible.
 
 The mixins contain vendor specific prefixes for all CSS3 properties for support
