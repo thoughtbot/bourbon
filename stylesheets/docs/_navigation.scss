@@ -1,67 +1,93 @@
 //************************************************************************//
 // Navigation
 //************************************************************************//
-nav.fixed-nav {
-  @extend .clearfix;
-  clear: left;
-  float: left;
-  min-height: 300px;
-  width: grid-width(2);
-  position: relative;
-  z-index: 1;
+.logo {
+  @include hide-text;
+  @include size(185px 58px);
+  background: url(../images/shared/bourbon-logo.png) no-repeat transparent;
+  background-size: contain;
+  border: 0;
+  box-shadow: none;
+  display: block;
+  margin: 1.5em auto .5em 1em;
+  padding: 0;
 
-  ul {
-    background-color: $background-color;
-    border-bottom: 0;
-    border-left: 0;
-    border-top: 0;
-    height: 100%;
+  @include hidpi {
+    background-image: url(../images/shared/bourbon-logo@2x.png);
+  }
+}
+
+nav.fixed-nav {
+  @include position(fixed, 0px null null 0px);
+  background: #fff;
+  box-shadow: 0 0 .5em 1px darken($background-color, 10%);
+  height: 100%;
+  overflow: auto;
+  width: $docs-nav-width;
+
+  .list {
     margin: 0;
-    overflow-y: scroll;
     padding: 0;
-    position: fixed;
-    width: inherit;
 
 
     li {
       line-height: 170%;
       list-style-type: none;
+      padding: .3em 0;
 
-      &:first-child {
-        margin-top: 35px;
+      &:last-child {
+        margin-bottom: 2em;
       }
 
       &.title:not(:first-child) {
         margin-bottom: 5px;
-        margin-top: 15px;
+        padding-top: 2em;
       }
 
       &.title:last-child {
         margin-bottom: 30px;
       }
 
-      &.title.complete-list h3 {
-        border-bottom: 0;
-        box-shadow: none;
+      &.complete-list {
+        margin-top: 1em;
+        padding-top: 1em;
       }
+
 
       &.deprecated {
         text-decoration: line-through;
       }
 
+      &.new {
+        a:after {
+          border: 1px $blue solid;
+          border-radius: $border-radius;
+          color: $blue;
+          content: "New";
+          display: inline-block;
+          font-size: 10px;
+          font-weight: bold;
+          letter-spacing: .1em;
+          line-height: 1em;
+          margin-left: 1em;
+          padding: .5em 1em;
+          text-transform: uppercase;
+        }
+      }
+
       a {
-        display: block;
-        padding: 0 20px;
-        position: relative;
         @include transition;
+        display: block;
+        font-size: $small-font-size;
+        padding: 0 0 0 6em;
+        position: relative;
 
         &.active, &.inview {
           &:before {
-            border-radius: 100px;
+            @include position(absolute, 12px null null 42px);
             border-top: .25em solid #ccc;
             content: '';
             display: block;
-            @include position(absolute, 8px 0 0 0px);
             width: .8em;
 
           }
@@ -73,11 +99,21 @@ nav.fixed-nav {
           }
         }
 
+        &.dash-app {
+          h3 {
+            display: inline-block;
+          }
+
+          &:after {
+            content: "\2192";
+            display: inline-block;
+            margin-left: .5em;
+          }
+        }
+
         h3 {
-          border-bottom: 1px solid darken($base-border-color, 10%);
-          box-shadow: 0 1px 0 white;
           color: hsl(0, 0%, 30%);
-          font-size: 12px;
+          font-size: $small-font-size;
           font-weight: bold;
           margin: 0;
           text-shadow: 0 1px 0 white;
@@ -88,6 +124,35 @@ nav.fixed-nav {
           }
         }
       }
+    }
+  }
+}
+
+.social {
+  @include clearfix;
+  @include linear-gradient(#f47a33, #f26234);
+  padding: .25em 4em;
+
+  li {
+    @include calc(width, '100% / 3');
+    display: inline-block;
+    float: left;
+  }
+
+  a {
+    @include hide-text;
+    @include size(25px);
+    background: url('../images/documentation/social-icons.svg') no-repeat center center;
+    background-size: 300%;
+    display: block;
+    margin: 0 auto;
+
+    &.twitter {
+      background-position: left center;
+    }
+
+    &.gitter {
+      background-position: right center;
     }
   }
 }

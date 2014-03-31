@@ -5,11 +5,25 @@ $gw-column: 106px;          // Column Width
 $gw-gutter: 16px;           // Gutter Width
 
 $base-border-color: hsl(43, 23%, 90%);
-$base-font-size: 13px;
+$base-font-size: 1em;
+$small-font-size: 13px;
 
-$background-color: hsl(43, 23%, 94%);
+$background-color: #FAF8F2;
 $highlight-color: hsl(44, 87%, 96%);
-
 $orange: hsl(14, 97%, 55%);
+$light-orange: #FFC86E;
+$blue: #53CAD6;
+$teal: #70DACD;
 
+$base-font-color: #424242;
 $base-font-color-alt: #8B8880;
+$header-font-color: #222;
+$link-color: $orange;
+
+$docs-nav-width: 280px;
+$highlight-padding: 3rem;
+
+$border-radius: 3px;
+
+$medium-screen: 960px;
+$large-screen: 1250px;

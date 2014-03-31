@@ -2,20 +2,14 @@
 // Global styles
 //************************************************************************//
 div.main-content {
-  @extend .clearfix;
-  padding: 0px $gw-gutter; 
+  @include calc(width, '100% - #{$docs-nav-width}');
+  height: 100%;
+  margin-left: $docs-nav-width;
 }
 
 div.main-inner {
-  border-bottom: 0;
-  border-top: 0;
-  @include box-sizing(border-box);
-  clear: right;
-  float: right;
-  padding: 35px 0px;
-  width: grid-width(7) + $gw-gutter;
-  position: relative;
-  z-index: 1;
+  margin: 0 auto;
+  width: 100%;
 
   h2.tagline {
     margin: 0;
@@ -24,35 +18,15 @@ div.main-inner {
   // Top Level Section
   //************************************************************************//
   h1 {
-    background-color: hsl(43, 23%, 94%);
-    box-shadow: 1px 0 0 $background-color, -1px 0 0 $background-color;
     color: $base-font-color-alt;
     font-size: 30px;
     font-weight: 600;
-    line-height: 100%;
-    margin: 00px 0 0;
-    padding: 25px 0px 15px;
+    line-height: 1em;
+    margin: 0;
+    padding: 2em 0;
     text-align: center;
     text-shadow: 0 1px 0 white;
-
-    &.logo {
-      background-color: transparent;
-      background-image: url(../images/shared/bourbon-logo.png);
-      background-repeat: no-repeat;
-      border: 0;
-      box-shadow: none;
-      display: inline-block;
-      height: 58px;
-      margin: 0 0 20px 0;
-      padding: 0;
-      text-indent: -9999px;
-      width: 330px;
-      background-size: contain;
-
-      @include hidpi {
-        background-image: url(../images/shared/bourbon-logo@2x.png);
-      }
-    }
+    text-transform: uppercase;
   }
 }
 
@@ -73,47 +47,31 @@ div.docset-content {
 }
 
 section > article {
-  background: white;
-  border: 1px solid darken($base-border-color, 10%);
-  border-bottom: 1px solid $base-border-color;
-  border-top: 0;
-  padding: 60px 28px;
   @include transition;
-  $radii: 6px;
+  border-top: 1px darken($background-color, 7%) solid;
+  padding: 4em 15%;
 
-  &:first-child {
-    border-radius: $radii $radii 0 0;
-    border-top: 1px solid darken($base-border-color, 10%);
-  }
-
-  &:last-child {
-    border-radius: 0 0 $radii $radii;
-    border-bottom: 1px solid darken($base-border-color, 10%);
-  }
-
-  &:only-child {
-    border-radius: $radii;
+  @media only screen and (min-width: $large-screen) {
+    padding: 4em 23%;
   }
 
   // View Source Link
   //************************************************************************//
   a.view-source {
+    @include transition;
     color: hsl(43, 13%, 75%);
     float: right;
-    font-size: $base-font-size;
+    font-size: $small-font-size;
+    line-height: 2.65em;
     margin-top: 5px;
-    padding: 2px 20px;
     text-shadow: 0 1px 0 white;
     text-transform: capitalize;
-    @include transition;
 
     &:hover {
-      background-color: $background-color;
       border-radius: 20px;
       color: hsl(43, 13%, 60%);
     }
   }
-
 }
 
 
@@ -134,9 +92,5 @@ article {
   &:target {
     box-shadow: inset 4px 0 0px 0 $orange;
     @include transition(all 0.3s);
-
-    h2 {
-      font-weight: 500;
-    }
   }
 }
