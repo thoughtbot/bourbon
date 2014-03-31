@@ -10,7 +10,7 @@ Cucumber::Rake::Task.new
 task :default => :cucumber
 
 task :docset do
-  `jekyll --no-server --no-auto`
+  `jekyll build`
   puts "Generating docset directories..."
   generate_docset_dirs
   puts "Copying docset assets..."
