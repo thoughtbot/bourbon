@@ -2,15 +2,14 @@
 Bourbon README for getting the gh-pages server up and running
 ------------------------------------------------------------------------------------------
 
-Run the server locally:
-    `$ jekyll --server`
-
 To install bourbon:
-    `$ gem install bourbon`
+    `$ bundle install`
+
+Install Bourbon stylesheets in the root directory:
     `$ bourbon install`
 
-Install Bourbon in the root directory:
-    bourbon install
+Run the server locally:
+    `$ jekyll serve`
 
 Watch the sass folder from root directory:
     `$ sass --watch stylesheets/home:stylesheets`
