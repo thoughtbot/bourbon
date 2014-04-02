@@ -1,0 +1,15 @@
+<article id="calc" data-type="mixin">
+  <h2>Calc <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_calc.scss">View source</a></h2>
+  <p>A mixin for vendor-prefixing the CSS3 calc function. It accepts a property and a value.</p>
+
+{% highlight scss %}
+@include calc(width, '100% - 80px');
+{% endhighlight %}
+
+Note: You must use interpolation to pass in a variable—#{ }.
+{% highlight scss%}
+$width: 100%;
+
+@include calc(width, '#{$width} - 80px');
+{% endhighlight %}
+</article>
