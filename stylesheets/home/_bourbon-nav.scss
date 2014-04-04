@@ -1,0 +1,87 @@
+$bourbon-nav-background-color: #5B5E63;
+
+nav.bourbon {
+  @include clearfix;
+  -webkit-font-smoothing: antialiased;
+  background-color: $bourbon-nav-background-color;
+  padding: 0 2em 0 1em;
+
+  @include media(max-width em(510)){
+    padding: 0;
+  };
+
+  ul {
+    text-align: center;
+
+    @include media(em(901)) {
+      float: left;
+      text-align: left;
+    };
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    padding: 1em 1em 1em 3em;
+
+    @include media(max-width em(515)) {
+      padding: .75em .5em;
+      text-align: center;
+    };
+
+    @include media(max-width em(900)){
+      display: block;
+    };
+
+    &:hover {
+      background-color: darken($bourbon-nav-background-color, 10);
+      text-decoration: none;
+    }
+
+    &.current {
+      background-color: darken($bourbon-nav-background-color, 5);
+    }
+
+    $sites: bourbon, neat, bitters, refills;
+
+    @each $site in $sites {
+      &.#{$site} {
+        background-image: url('/images/bourbon-nav/#{$site}.png');
+
+        @include hidpi {
+          background-image: url('/images/bourbon-nav/#{$site}@2x.png');
+        }
+
+        @include media(max-width em(515)) {
+          background-image: none;
+        };
+      }
+    }
+  }
+
+  h1 {
+    color: rgba(#fff, .6);
+    float: right;
+    font-size: 1em;
+    line-height: 1;
+
+    @include media(max-width em(900)){
+      display: none;
+    };
+
+    a {
+      padding: 1em 0;
+
+      &:hover {
+        background-color: none;
+      }
+    }
+  }
+}
