@@ -57,9 +57,6 @@
   $right:  $pre + "-right"  + if($suf, "-#{$suf}", "");
   $all:    $pre +             if($suf, "-#{$suf}", "");
 
-  // Get list inside $vals (is there a better way?)
-  @each $val in $vals { $vals: $val; }
-
   $vals: collapse-directionals($vals);
 
   @if contains-falsy($vals) {
