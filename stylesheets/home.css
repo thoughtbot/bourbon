@@ -1080,3 +1080,88 @@ footer {
           width: 100%; }
           footer section.buttons .button.installation:last-child {
             margin-right: 0; } }
+
+nav.bourbon {
+  *zoom: 1;
+  -webkit-font-smoothing: antialiased;
+  background-color: #5b5e63;
+  padding: 0 2em 0 1em; }
+  nav.bourbon:before, nav.bourbon:after {
+    content: " ";
+    display: table; }
+  nav.bourbon:after {
+    clear: both; }
+  @media screen and (max-width: 31.875em) {
+    nav.bourbon {
+      padding: 0; } }
+  nav.bourbon ul {
+    text-align: center; }
+    @media screen and (min-width: 56.3125em) {
+      nav.bourbon ul {
+        float: left;
+        text-align: left; } }
+  nav.bourbon li {
+    display: inline-block; }
+  nav.bourbon a {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    padding: 1em 1em 1em 3em; }
+    @media screen and (max-width: 32.1875em) {
+      nav.bourbon a {
+        padding: .75em .5em;
+        text-align: center; } }
+    @media screen and (max-width: 56.25em) {
+      nav.bourbon a {
+        display: block; } }
+    nav.bourbon a:hover {
+      background-color: #434548;
+      text-decoration: none; }
+    nav.bourbon a.current {
+      background-color: #4f5156; }
+    nav.bourbon a.bourbon {
+      background-image: url("/images/bourbon-nav/bourbon.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+        nav.bourbon a.bourbon {
+          background-image: url("/images/bourbon-nav/bourbon@2x.png"); } }
+      @media screen and (max-width: 32.1875em) {
+        nav.bourbon a.bourbon {
+          background-image: none; } }
+    nav.bourbon a.neat {
+      background-image: url("/images/bourbon-nav/neat.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+        nav.bourbon a.neat {
+          background-image: url("/images/bourbon-nav/neat@2x.png"); } }
+      @media screen and (max-width: 32.1875em) {
+        nav.bourbon a.neat {
+          background-image: none; } }
+    nav.bourbon a.bitters {
+      background-image: url("/images/bourbon-nav/bitters.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+        nav.bourbon a.bitters {
+          background-image: url("/images/bourbon-nav/bitters@2x.png"); } }
+      @media screen and (max-width: 32.1875em) {
+        nav.bourbon a.bitters {
+          background-image: none; } }
+    nav.bourbon a.refills {
+      background-image: url("/images/bourbon-nav/refills.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+        nav.bourbon a.refills {
+          background-image: url("/images/bourbon-nav/refills@2x.png"); } }
+      @media screen and (max-width: 32.1875em) {
+        nav.bourbon a.refills {
+          background-image: none; } }
+  nav.bourbon h1 {
+    color: rgba(255, 255, 255, 0.6);
+    float: right;
+    font-size: 1em;
+    line-height: 1; }
+    @media screen and (max-width: 56.25em) {
+      nav.bourbon h1 {
+        display: none; } }
+    nav.bourbon h1 a {
+      padding: 1em 0; }
+      nav.bourbon h1 a:hover {
+        background-color: none; }
