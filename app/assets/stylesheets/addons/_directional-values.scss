@@ -57,9 +57,6 @@
   $right:  $pre + "-right"  + if($suf, "-#{$suf}", "");
   $all:    $pre +             if($suf, "-#{$suf}", "");
 
-  // Get list inside $vals (is there a better way?)
-  @each $val in $vals { $vals: $val; }
-
   $vals: collapse-directionals($vals);
 
   @if contains-falsy($vals) {
@@ -94,21 +91,21 @@
 }
 
 @mixin margin($vals...) {
-  @include directional-property(margin, false, $vals);
+  @include directional-property(margin, false, $vals...);
 }
 
 @mixin padding($vals...) {
-  @include directional-property(padding, false, $vals);
+  @include directional-property(padding, false, $vals...);
 }
 
 @mixin border-style($vals...) {
-  @include directional-property(border, style, $vals);
+  @include directional-property(border, style, $vals...);
 }
 
 @mixin border-color($vals...) {
-  @include directional-property(border, color, $vals);
+  @include directional-property(border, color, $vals...);
 }
 
 @mixin border-width($vals...) {
-  @include directional-property(border, width, $vals);
+  @include directional-property(border, width, $vals...);
 }
