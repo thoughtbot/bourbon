@@ -57,7 +57,7 @@ section > article {
 
   // Title bar with multiple link support
   //************************************************************************//
-  div.title-bar {
+  header.title-bar {
     @include clearfix;
     margin-bottom: 1em;
   }

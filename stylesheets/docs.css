@@ -476,9 +476,9 @@ section > article {
   @media only screen and (min-width: 1250px) {
     section > article {
       padding: 4em 23%; } }
-  section > article div.title-bar {
+  section > article header.title-bar {
     margin-bottom: 1em; }
-    section > article div.title-bar:after {
+    section > article header.title-bar:after {
       content: "";
       display: table;
       clear: both; }
