@@ -55,13 +55,27 @@ section > article {
     padding: 4em 23%;
   }
 
-  // View Source Link
+  // Title bar with multiple link support
   //************************************************************************//
-  a.view-source {
+  header.title-bar {
+    @include clearfix;
+    margin-bottom: 1em;
+  }
+
+  h2.title {
+    float: left;
+    margin-bottom: 0;
+  }
+
+  // View Source and Spec Links
+  //************************************************************************//
+  a.view-source, a.view-spec {
     @include transition;
     color: hsl(43, 13%, 75%);
     float: right;
+    font-family: "proxima-nova-soft", $helvetica;
     font-size: $small-font-size;
+    font-weight: bold;
     line-height: 2.65em;
     margin-top: 5px;
     text-shadow: 0 1px 0 white;
@@ -71,6 +85,10 @@ section > article {
       border-radius: 20px;
       color: hsl(43, 13%, 60%);
     }
+  }
+
+  a.view-spec {
+    margin-right: 20px;
   }
 }
 

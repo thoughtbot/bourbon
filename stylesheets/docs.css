@@ -476,20 +476,33 @@ section > article {
   @media only screen and (min-width: 1250px) {
     section > article {
       padding: 4em 23%; } }
-  section > article a.view-source {
+  section > article header.title-bar {
+    margin-bottom: 1em; }
+    section > article header.title-bar:after {
+      content: "";
+      display: table;
+      clear: both; }
+  section > article h2.title {
+    float: left;
+    margin-bottom: 0; }
+  section > article a.view-source, section > article a.view-spec {
     -webkit-transition: all 0.15s ease-out 0s;
     -moz-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s;
     color: #c8c3b7;
     float: right;
+    font-family: "proxima-nova-soft", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 13px;
+    font-weight: bold;
     line-height: 2.65em;
     margin-top: 5px;
     text-shadow: 0 1px 0 white;
     text-transform: capitalize; }
-    section > article a.view-source:hover {
+    section > article a.view-source:hover, section > article a.view-spec:hover {
       border-radius: 20px;
       color: #a69f8c; }
+  section > article a.view-spec {
+    margin-right: 20px; }
 
 section.intro-wrapper article {
   background: none;
