@@ -5,7 +5,7 @@
   </header>
   <p>Shorthand notation for setting the position of elements in your page.</p>
   <p>The first parameter is optional, with a default value of relative. The second parameter is a space delimited list of values that follow the standard CSS shorthand notation.</p>
-  <p>Note: unit-less values will be ignored. In the example above, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.</p>
+  <p>Note: null values will be ignored. In the example below, this means that selectors will not be generated for the right and bottom positions, while the top position is set to 0px.</p>
 
   <p>Instead of writing:</p>
 {% highlight scss %}
@@ -16,6 +16,6 @@ left: 100px;
 
   <p>Your can write:</p>
 {% highlight scss %}
-@include position(relative, 0px 0 0 100px);
+@include position(relative, 0px null null 100px);
 {% endhighlight %}
 </article>
