@@ -1,16 +1,44 @@
 @mixin size($size) {
-  $height: nth($size, 1);
-  $width: $height;
+  @if length($size) == 1 {
+    @if $size == auto {
+      width:  $size;
+      height: $size;
+    }
 
-  @if length($size) > 1 {
+    @else if unitless($size) {
+      width:  $size + px;
+      height: $size + px;
+    }
+
+    @else if not(unitless($size)) {
+      width:  $size;
+      height: $size;
+    }
+  }
+
+  // Width x Height
+  @if length($size) == 2 {
+    $width:  nth($size, 1);
     $height: nth($size, 2);
-  }
 
-  @if $height == auto or (type-of($height) == number and not unitless($height)) {
-    height: $height;
-  }
+    @if $width == auto {
+      width: $width;
+    }
+    @else if not(unitless($width)) {
+      width: $width;
+    }
+    @else if unitless($width) {
+      width: $width + px;
+    }
 
-  @if $width == auto or (type-of($height) == number and not unitless($width)) {
-    width: $width;
+    @if $height == auto {
+      height: $height;
+    }
+    @else if not(unitless($height)) {
+      height: $height;
+    }
+    @else if unitless($height) {
+      height: $height + px;
+    }
   }
 }
