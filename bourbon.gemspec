@@ -27,7 +27,7 @@ that support only CSS3 prefixed properties.
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency('sass', '~> 3.3')
+  s.add_dependency('sass', '~> 3.2')
   s.add_dependency('thor')
 
   s.add_development_dependency('aruba', '~> 0.4')
