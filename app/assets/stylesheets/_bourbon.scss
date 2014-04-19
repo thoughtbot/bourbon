@@ -3,19 +3,12 @@
 @import "settings/px-to-em";
 
 // Custom Helpers
-@import "helpers/convert-units";
 @import "helpers/gradient-positions-parser";
-@import "helpers/is-num";
-@import "helpers/linear-angle-parser";
-@import "helpers/linear-gradient-parser";
 @import "helpers/linear-positions-parser";
-@import "helpers/linear-side-corner-parser";
 @import "helpers/radial-arg-parser";
 @import "helpers/radial-positions-parser";
-@import "helpers/radial-gradient-parser";
 @import "helpers/render-gradients";
 @import "helpers/shape-size-stripper";
-@import "helpers/str-to-num";
 
 // Custom Functions
 @import "functions/assign";
@@ -23,9 +16,11 @@
 @import "functions/flex-grid";
 @import "functions/golden-ratio";
 @import "functions/grid-width";
+@import "functions/linear-gradient";
 @import "functions/modular-scale";
 @import "functions/px-to-em";
 @import "functions/px-to-rem";
+@import "functions/radial-gradient";
 @import "functions/strip-units";
 @import "functions/tint-shade";
 @import "functions/transition-property-name";
