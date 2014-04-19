@@ -3,6 +3,9 @@
 <br>
 [![Gem Version](https://badge.fury.io/rb/bourbon.png)](http://badge.fury.io/rb/bourbon) [![Code Climate](https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon)  [![Gitter chat](https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon)
 
+-
+:warning: Bourbon **4.0.0** requires Sass **3.3.x**. If you are using **libsass** or **sass-rails** use **3.2.0**.
+
 ## A lightweight mixin library for Sass
 Bourbon is a library of pure sass mixins that are designed to be simple
 and easy to use. No configuration required.
@@ -12,6 +15,8 @@ The mixins aim to be as vanilla as possible, meaning they should be as close to 
 The mixins contain vendor specific prefixes for all CSS3 properties for support
 amongst modern browsers. The prefixes also ensure graceful degradation for older
 browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.
+
+
 
 ### [Documentation & Demo](http://bourbon.io)
 
