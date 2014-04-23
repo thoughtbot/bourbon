@@ -1,6 +1,7 @@
 @mixin triangle ($size, $color, $direction) {
   height: 0;
   width: 0;
+  -moz-transform: scale(1.001);
 
   $width: nth($size, 1);
   $height: nth($size, length($size));
