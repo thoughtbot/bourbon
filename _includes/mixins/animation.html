@@ -1,20 +1,21 @@
-<article id="animations" data-type="mixin">
+<article id="animation" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">Animation</h2>
     <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_animation.scss">View source</a>
     <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">View spec</a>
   </header>
-  <p>The animation mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.</p>
+  <p>The animation mixin supports comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.</p>
 
 {% highlight scss %}
 box:hover {
+  // Animation shorthand works the same as the CSS3 animation shorthand
+  @include animation(scale 1.0s ease-in, slide 2.0s ease);
+
+  // The above outputs the same CSS as using independent, granular mixins.
   @include animation-name(scale, slide);
   @include animation-duration(2s);
   @include animation-timing-function(ease);
   @include animation-iteration-count(infinite);
-
-  // Animation shorthand works the same as the CSS3 animation shorthand
-  @include animation(scale 1.0s ease-in, slide 2.0s ease);
 }
 {% endhighlight %}
   <h3>Demo</h3>
