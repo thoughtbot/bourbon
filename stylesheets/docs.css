@@ -1226,33 +1226,33 @@ article#timing-functions section.demo div.ease-in-out-back {
 article#triangle section.demo div.up {
   height: 0;
   width: 0;
-  border-left: 10px solid #faf8f2;
-  border-right: 10px solid #faf8f2;
-  border-bottom: 20px solid gray;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid gray;
   display: inline-block;
   margin-right: 5px; }
 article#triangle section.demo div.right {
   height: 0;
   width: 0;
-  border-top: 10px solid #faf8f2;
-  border-bottom: 10px solid #faf8f2;
-  border-left: 20px solid gray;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid gray;
   display: inline-block;
   margin-right: 5px; }
 article#triangle section.demo div.down {
   height: 0;
   width: 0;
-  border-left: 10px solid #faf8f2;
-  border-right: 10px solid #faf8f2;
-  border-top: 20px solid gray;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid gray;
   display: inline-block;
   margin-right: 5px; }
 article#triangle section.demo div.left {
   height: 0;
   width: 0;
-  border-top: 10px solid #faf8f2;
-  border-bottom: 10px solid #faf8f2;
-  border-right: 20px solid gray;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid gray;
   display: inline-block;
   margin-right: 5px; }
 article#triangle section.demo div.up-right {
