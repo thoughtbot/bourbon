@@ -1,27 +1,21 @@
-<article id="flex-box" data-type="mixin">
+<article id="flexbox" data-type="mixin">
   <header class="title-bar">
-    <h2 class="title">Box</h2>
+    <h2 class="title">Flexbox</h2>
     <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_flex-box.scss">View source</a>
-    <!--  <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">View spec</a>  -->
+    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">View spec</a> 
   </header>
-  <p>The flex-box mixin is based on the 2009 w3c spec. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">More info</a></p>
-  <p>Looking for mixins for the latest 2012 spec? <a href="https://github.com/thoughtbot/bourbon/issues/115">Click here</a>
+  <p>The flexbox mixins are up to date with the <a href="http://www.w3.org/TR/2014/WD-css-flexbox-1-20140325/">2014 W3C spec</a>. The mixins also include fallbacks for the <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">2009 spec</a>.</p>
+  <p><a href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_flex-box.scss">View all flex-box mixins</a></p>
 {% highlight scss %}
 div.parent {
-  @include display-box;
-  @include box-align(start);
-  @include box-orient(horizontal);
-  @include box-pack(start);
+  @include display(flex);
+  @include align-items(stretch);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
 }
 
 div.parent > div.child {
-  @include box-flex(2);
-}
-
-// Alternative custom shorthand mixin.
-div.parent {
-  @include box($orient: horizontal, $pack: center, $align: stretch); // defaults
-  @include box(vertical, start, stretch);
+  @include flex(1);
 }
 {% endhighlight %}
 </article>
