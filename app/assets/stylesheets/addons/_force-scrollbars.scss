@@ -1,0 +1,26 @@
+@mixin force-scrollbars($bg: #fff, $size: 11px) {
+	$radius: $size * .75;
+
+	&::-webkit-scrollbar {
+	    -webkit-appearance: none;
+
+	    &:vertical {
+		    width: $size;
+		}
+
+		&:horizontal {
+	    	height: $size;
+		}
+
+		&-thumb {
+		    border-radius: $size;
+		    border: 2px solid $bg;
+		    background-color: rgba(#000, .5);
+		}
+
+		&-track { 
+		    background-color: $bg; 
+		    border-radius: $radius;
+		}
+	}
+}
