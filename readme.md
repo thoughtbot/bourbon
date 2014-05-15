@@ -71,13 +71,13 @@ You can specify a target directory using the `path` flag:
 
 ###### Install for older versions of Sass
 
-If you are using a version of Sass older than 3.3.x (This includes alternative implementations like libsass or sass-rails and frameworks like ZURB Foundation or Compass), Bourbon 4 will not work.
+If you are using a version of Sass older than 3.3.x (This includes alternative implementations like libsass or sass-rails and frameworks like ZURB Foundation or Compass), Bourbon 4.x will not work.
 
 Use the `-v` flag to install a specific version of the bourbon gem.
 
     gem install bourbon -v 3.2.1
 
-If you have install Bourbon 4.x in error, you may want to remove it.
+If you have installed Bourbon 4.x in error, you may want to remove it.
 
     gem uninstall bourbon -v 4.0.1
 
