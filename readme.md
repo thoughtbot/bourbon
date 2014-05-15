@@ -4,7 +4,7 @@
 [![Gem Version](https://badge.fury.io/rb/bourbon.png)](http://badge.fury.io/rb/bourbon) [![Code Climate](https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon)  [![Gitter chat](https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon)
 
 -
-:warning: Bourbon **4.0.0** requires Sass **3.3.x**. If you are using **libsass** or **sass-rails** use Bourbon **3.2.x**.
+:warning: Bourbon **4.0.0** requires Sass **3.3.x**. If you are using **libsass** or **sass-rails** use Bourbon **3.2.x**. ([3.2.x install instructions](#install-for-older-sass-versions)) 
 
 ## A lightweight mixin library for Sass
 Bourbon is a library of pure sass mixins that are designed to be simple
@@ -68,6 +68,18 @@ The generated folder will contain all the mixins and other necessary Bourbon fil
 You can specify a target directory using the `path` flag:
 
     bourbon install --path my/custom/path/
+
+###### Install for older versions of Sass
+
+If you are using a version of Sass older than 3.3.x (This includes alternative implementations like libsass or sass-rails and frameworks like ZURB Foundation or Compass), Bourbon 4 will not work.
+
+Use the `-v` to install a specific version of the bourbon gem.
+
+    gem install bourbon -v 3.2.1
+
+If you have install Bourbon 4.x in error, you may want to remove it.
+
+    gem uninstall bourbon -v 4.0.1
 
 ##### Import
 
