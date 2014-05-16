@@ -126,6 +126,7 @@
   padding: $padding;
   text-decoration: none;
   text-shadow: 0 1px 0 $text-shadow;
+  vertical-align: baseline;
   background-clip: padding-box;
 
   &:hover:not(:disabled) {
@@ -347,6 +348,7 @@
   font-weight: bold;
   padding: 7px 18px;
   text-decoration: none;
+  vertical-align: baseline;
   background-clip: padding-box;
 
   &:hover:not(:disabled){
