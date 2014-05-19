@@ -6,5 +6,5 @@
 
 @mixin font-feature-settings($settings...) {
   @if length($settings) == 0 { $settings: none; }
-  @include prefixer(font-feature-settings, $settings, webkit moz ms spec);
+  @include prefixer(font-feature-settings, $settings, webkit moz ms);
 }
