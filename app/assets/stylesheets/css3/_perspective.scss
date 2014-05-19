@@ -1,8 +1,8 @@
 @mixin perspective($depth: none) {
-  // none | <length>
-  @include prefixer(perspective, $depth, webkit moz spec);
+// none | <length>
+  @include prefixer(perspective, $depth, webkit moz);
 }
 
 @mixin perspective-origin($value: 50% 50%) {
-  @include prefixer(perspective-origin, $value, webkit moz spec);
+  @include prefixer(perspective-origin, $value, webkit moz);
 }

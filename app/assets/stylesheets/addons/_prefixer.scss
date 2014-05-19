@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-/// Mixin helping prefixing non-standardised properties.
-/// Variables located in /settings/_prefixer.scss
+/// A mixin for generating vendor prefixes on non-standardized properties.
 ///
 /// @param {String} $property
 ///   Property to prefix
@@ -13,60 +12,29 @@
 ///   Prefixes to define
 ///
 /// @example scss - Usage
-///   .wrapper {
+///   .element {
 ///     @include prefixer(border-radius, 10px, webkit ms spec);
 ///   }
 ///
 /// @example css - CSS Output
-///   .wrapper {
+///   .element {
 ///     -webkit-border-radius: 10px;
 ///     -moz-border-radius: 10px;
 ///     border-radius: 10px;
 ///   }
 ///
-/// @require {variable} $prefix-for-webkit
-/// @require {variable} $prefix-for-mozilla
-/// @require {variable} $prefix-for-microsoft
-/// @require {variable} $prefix-for-opera
-/// @require {variable} $prefix-for-spec
+/// @require {variable} $global-prefixes
 
-@mixin prefixer ($property, $value, $prefixes) {
+@mixin prefixer($property, $value, $prefixes: ()) {
   @each $prefix in $prefixes {
-    @if $prefix == webkit {
-      @if $prefix-for-webkit {
-        -webkit-#{$property}: $value;
-      }
+    @if not map-has-key($global-prefixes, $prefix) {
+      @warn "Unrecognized prefix: `#{$prefix}`.";
     }
-    @else if $prefix == moz {
-      @if $prefix-for-mozilla {
-        -moz-#{$property}: $value;
-      }
-    }
-    @else if $prefix == ms {
-      @if $prefix-for-microsoft {
-        -ms-#{$property}: $value;
-      }
-    }
-    @else if $prefix == o {
-      @if $prefix-for-opera {
-        -o-#{$property}: $value;
-      }
-    }
-    @else if $prefix == spec {
-      @if $prefix-for-spec {
-        #{$property}: $value;
-      }
-    }
-    @else  {
-      @warn "Unrecognized prefix: #{$prefix}";
+
+    @if map-get($global-prefixes, $prefix) {
+      #{"-" + $prefix + "-" + $property}: $value;
     }
   }
-}
 
-@mixin disable-prefix-for-all() {
-  $prefix-for-webkit:    false !global;
-  $prefix-for-mozilla:   false !global;
-  $prefix-for-microsoft: false !global;
-  $prefix-for-opera:     false !global;
-  $prefix-for-spec:      false !global;
+  #{$property}: $value;
 }

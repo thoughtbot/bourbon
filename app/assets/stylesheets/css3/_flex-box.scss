@@ -17,44 +17,44 @@
 
 @mixin box-orient($orient: inline-axis) {
 // horizontal|vertical|inline-axis|block-axis|inherit
-  @include prefixer(box-orient, $orient, webkit moz spec);
+  @include prefixer(box-orient, $orient, webkit moz);
 }
 
 @mixin box-pack($pack: start) {
 // start|end|center|justify
-  @include prefixer(box-pack, $pack, webkit moz spec);
+  @include prefixer(box-pack, $pack, webkit moz);
   -ms-flex-pack: $pack; // IE 10
 }
 
 @mixin box-align($align: stretch) {
 // start|end|center|baseline|stretch
-  @include prefixer(box-align, $align, webkit moz spec);
+  @include prefixer(box-align, $align, webkit moz);
   -ms-flex-align: $align; // IE 10
 }
 
 @mixin box-direction($direction: normal) {
 // normal|reverse|inherit
-  @include prefixer(box-direction, $direction, webkit moz spec);
+  @include prefixer(box-direction, $direction, webkit moz);
   -ms-flex-direction: $direction; // IE 10
 }
 
 @mixin box-lines($lines: single) {
 // single|multiple
-  @include prefixer(box-lines, $lines, webkit moz spec);
+  @include prefixer(box-lines, $lines, webkit moz);
 }
 
 @mixin box-ordinal-group($int: 1) {
-  @include prefixer(box-ordinal-group, $int, webkit moz spec);
+  @include prefixer(box-ordinal-group, $int, webkit moz);
   -ms-flex-order: $int; // IE 10
 }
 
 @mixin box-flex($value: 0) {
-  @include prefixer(box-flex, $value, webkit moz spec);
+  @include prefixer(box-flex, $value, webkit moz);
   -ms-flex: $value; // IE 10
 }
 
 @mixin box-flex-group($int: 1) {
-  @include prefixer(box-flex-group, $int, webkit moz spec);
+  @include prefixer(box-flex-group, $int, webkit moz);
 }
 
 // CSS3 Flexible Box Model and property defaults
@@ -103,10 +103,10 @@
   $flex-grow: nth($value, 1);
 
   // 2009
-  @include prefixer(box-flex, $flex-grow, webkit moz spec);
+  @include prefixer(box-flex, $flex-grow, webkit moz);
 
   // 2011 (IE 10), 2012
-  @include prefixer(flex, $value, webkit moz ms spec);
+  @include prefixer(flex, $value, webkit moz ms);
 }
 
 // 2009 - box-orient ( horizontal | vertical | inline-axis | block-axis)
@@ -139,13 +139,13 @@
   }
 
   // 2009
-  @include prefixer(box-orient, $value-2009, webkit moz spec);
+  @include prefixer(box-orient, $value-2009, webkit moz);
   @if $direction == "reverse" {
-    @include prefixer(box-direction, $direction, webkit moz spec);
+    @include prefixer(box-direction, $direction, webkit moz);
   }
 
   // 2012
-  @include prefixer(flex-direction, $value, webkit moz spec);
+  @include prefixer(flex-direction, $value, webkit moz);
 
   // 2011 (IE 10)
   -ms-flex-direction: $value;
@@ -170,15 +170,15 @@
     $alt-value: multiple;
   }
 
-  @include prefixer(box-lines, $alt-value, webkit moz spec);
-  @include prefixer(flex-wrap, $value, webkit moz ms spec);
+  @include prefixer(box-lines, $alt-value, webkit moz);
+  @include prefixer(flex-wrap, $value, webkit moz ms);
 }
 
 // 2009 - TODO: parse values into flex-direction/flex-wrap
 // 2011 - TODO: parse values into flex-direction/flex-wrap
 // 2012 - flex-flow (flex-direction || flex-wrap)
 @mixin flex-flow($value) {
-  @include prefixer(flex-flow, $value, webkit moz spec);
+  @include prefixer(flex-flow, $value, webkit moz);
 }
 
 // 2009 - box-ordinal-group (integer)
@@ -186,10 +186,10 @@
 // 2012 - order (integer)
 @mixin order($int: 0) {
   // 2009
-  @include prefixer(box-ordinal-group, $int, webkit moz spec);
+  @include prefixer(box-ordinal-group, $int, webkit moz);
 
   // 2012
-  @include prefixer(order, $int, webkit moz spec);
+  @include prefixer(order, $int, webkit moz);
 
   // 2011 (IE 10)
   -ms-flex-order: $int;
@@ -197,19 +197,19 @@
 
 // 2012 - flex-grow (number)
 @mixin flex-grow($number: 0) {
-  @include prefixer(flex-grow, $number, webkit moz spec);
+  @include prefixer(flex-grow, $number, webkit moz);
   -ms-flex-positive: $number;
 }
 
 // 2012 - flex-shrink (number)
 @mixin flex-shrink($number: 1) {
-  @include prefixer(flex-shrink, $number, webkit moz spec);
+  @include prefixer(flex-shrink, $number, webkit moz);
   -ms-flex-negative: $number;
 }
 
 // 2012 - flex-basis (number)
 @mixin flex-basis($width: auto) {
-  @include prefixer(flex-basis, $width, webkit moz spec);
+  @include prefixer(flex-basis, $width, webkit moz);
   -ms-flex-preferred-size: $width;
 }
 
@@ -237,10 +237,10 @@
   }
 
   // 2009
-  @include prefixer(box-pack, $alt-value, webkit moz spec);
+  @include prefixer(box-pack, $alt-value, webkit moz);
 
   // 2012
-  @include prefixer(justify-content, $value, webkit moz ms o spec);
+  @include prefixer(justify-content, $value, webkit moz ms o);
 
   // 2011 (IE 10)
   -ms-flex-pack: $alt-value;
@@ -262,10 +262,10 @@
   }
 
   // 2009
-  @include prefixer(box-align, $alt-value, webkit moz spec);
+  @include prefixer(box-align, $alt-value, webkit moz);
 
   // 2012
-  @include prefixer(align-items, $value, webkit moz ms o spec);
+  @include prefixer(align-items, $value, webkit moz ms o);
 
   // 2011 (IE 10)
   -ms-flex-align: $alt-value;
@@ -285,7 +285,7 @@
   }
 
   // 2012
-  @include prefixer(align-self, $value, webkit moz spec);
+  @include prefixer(align-self, $value, webkit moz);
 
   // 2011 (IE 10)
   -ms-flex-item-align: $value-2011;
@@ -313,7 +313,7 @@
   }
 
   // 2012
-  @include prefixer(align-content, $value, webkit moz spec);
+  @include prefixer(align-content, $value, webkit moz);
 
   // 2011 (IE 10)
   -ms-flex-line-pack: $value-2011;

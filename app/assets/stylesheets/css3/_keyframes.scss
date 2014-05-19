@@ -1,35 +1,23 @@
-// Adds keyframes blocks for supported prefixes, removing redundant prefixes in the block's content
+// Adds keyframes blocks for supported prefixes, removing redundant prefixes in the block’s content
 @mixin keyframes($name) {
-  $original-prefix-for-webkit:    $prefix-for-webkit;
-  $original-prefix-for-mozilla:   $prefix-for-mozilla;
-  $original-prefix-for-microsoft: $prefix-for-microsoft;
-  $original-prefix-for-opera:     $prefix-for-opera;
-  $original-prefix-for-spec:      $prefix-for-spec;
+  $original-prefix-for-webkit:    map-get($prefixes, webkit);
+  $original-prefix-for-mozilla:   map-get($prefixes, moz);
+  $original-prefix-for-microsoft: map-get($prefixes, ms);
+  $original-prefix-for-opera:     map-get($prefixes, o);
 
-  @if $original-prefix-for-webkit {
-    @include disable-prefix-for-all();
-    $prefix-for-webkit: true !global;
+  @if map-get($prefixes, webkit) == true {
     @-webkit-keyframes #{$name} {
       @content;
     }
   }
-  @if $original-prefix-for-mozilla {
-    @include disable-prefix-for-all();
-    $prefix-for-mozilla: true !global;
+
+  @if map-get($prefixes, moz) == true {
     @-moz-keyframes #{$name} {
       @content;
     }
   }
 
-  $prefix-for-webkit:    $original-prefix-for-webkit    !global;
-  $prefix-for-mozilla:   $original-prefix-for-mozilla   !global;
-  $prefix-for-microsoft: $original-prefix-for-microsoft !global;
-  $prefix-for-opera:     $original-prefix-for-opera     !global;
-  $prefix-for-spec:      $original-prefix-for-spec      !global;
-
-  @if $original-prefix-for-spec {
-    @keyframes #{$name} {
-      @content;
-    }
+  @keyframes #{$name} {
+    @content;
   }
 }
