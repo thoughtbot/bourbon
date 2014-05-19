@@ -5,6 +5,10 @@
 
 @mixin prefixer($property, $value, $prefixes: ()) {
   @each $prefix in $prefixes {
+    @if not map-has-key($prefixes, $prefix) {
+      @warn "Unrecognized prefix: `#{$prefix}`.";
+    }
+
     @if map-get($prefixes, $prefix) == true {
       #{"-" + $prefix + "-" + $property}: $value;
     }
