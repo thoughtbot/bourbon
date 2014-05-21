@@ -22,7 +22,6 @@ module Bourbon
       end
     end
   else
-    bourbon_path = File.expand_path("../../app/assets/stylesheets", __FILE__)
-    ENV["SASS_PATH"] = [ENV["SASS_PATH"], bourbon_path].compact.join(File::PATH_SEPARATOR)
+    Sass.load_paths << File.expand_path("../../app/assets/stylesheets", __FILE__)
   end
 end
