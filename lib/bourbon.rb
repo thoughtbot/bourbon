@@ -23,10 +23,6 @@ module Bourbon
     end
   else
     bourbon_path = File.expand_path("../../app/assets/stylesheets", __FILE__)
-    if ENV.has_key?("SASS_PATH")
-      ENV["SASS_PATH"] = ENV["SASS_PATH"] + File::PATH_SEPARATOR + bourbon_path
-    else
-      ENV["SASS_PATH"] = bourbon_path
-    end
+    ENV["SASS_PATH"] = [ENV["SASS_PATH"], bourbon_path].compact.join(File::PATH_SEPARATOR)
   end
 end
