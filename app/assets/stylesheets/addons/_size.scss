@@ -10,7 +10,7 @@
     height: $height;
   }
 
-  @if $width == auto or (type-of($height) == number and not unitless($width)) {
+  @if $width == auto or (type-of($width) == number and not unitless($width)) {
     width: $width;
   }
 }
