@@ -1,7 +1,7 @@
 {
   "name": "bourbon",
   "homepage": "http://bourbon.io/",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "main": "dist/_bourbon.scss",
   "ignore": [
     "app",
