@@ -6,11 +6,12 @@
   <p>The mixin is a helper to generate a retina background-image and non-retina background-image. The retina background-image will output to a hidpi media-query.</p>
   <p>The mixin uses a <code>_2x.png</code> retina filename by default.<br>
   For rails, you can use the asset-pipeline by passing <code>true</code> to the argument.</p>
-  <p><code>@ retina-image($filename, $background-size, $extension*, $retina-filename*, $asset-pipeline*)<br>* = optional</code></p>
+  <p><code>@ retina-image($filename, $background-size, $extension*, $retina-filename*, $retina-suffix*, $asset-pipeline*)<br>* = optional</code></p>
   <p>Argument Defaults</p>
   <ul>
     <li><code>$extension: png</code></li>
     <li><code>$retina-filename: null</code></li>
+    <li><code>$retina-suffix: _2x</code></li>
     <li><code>$asset-pipeline: false</code></li>
   </ul>
 
