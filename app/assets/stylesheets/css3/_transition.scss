@@ -47,12 +47,12 @@
   }
   @else {
     @if length($properties) >= 1 {
-      @include prefixer(transition, $properties, webkit moz spec);
+      @include prefixer(transition, $properties, webkit moz);
     }
 
     @else {
       $properties: all 0.15s ease-out 0s;
-      @include prefixer(transition, $properties, webkit moz spec);
+      @include prefixer(transition, $properties, webkit moz);
     }
   }
 }
@@ -64,14 +64,14 @@
 }
 
 @mixin transition-duration ($times...) {
-  @include prefixer(transition-duration, $times, webkit moz spec);
+  @include prefixer(transition-duration, $times, webkit moz);
 }
 
 @mixin transition-timing-function ($motions...) {
 // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
-  @include prefixer(transition-timing-function, $motions, webkit moz spec);
+  @include prefixer(transition-timing-function, $motions, webkit moz);
 }
 
 @mixin transition-delay ($times...) {
-  @include prefixer(transition-delay, $times, webkit moz spec);
+  @include prefixer(transition-delay, $times, webkit moz);
 }
