@@ -174,7 +174,7 @@ article#buttons {
     }
 
     button.example-3 {
-      @include button(shiny, #ff0000);
+      @include button(shiny, #ff0000, 18px, .5em 1em);
     }
   }
 }
