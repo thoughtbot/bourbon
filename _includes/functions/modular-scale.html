@@ -1,42 +1,48 @@
 <article id="modular-scale" data-type="function">
   <header class="title-bar">
-    <h2 class="title">Modular-scale</h2>
+    <h2 class="title">Modular Scale</h2>
     <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">View Source</a>
   </header>
-  <p>Returns the modular scale of a given number. Must provide a number value for the first argument. The second argument is a required integer for an increment value: ...-3, -2, -1, 0, 1, 2, 3... The third value is the ratio number. There are several scaling variables to use for the ratio number.</p>
-  <p>Note: The function can be wrapped in sass's <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down, or round up respectively.</p>
+
+  <p>This function increments up or down a defined scale, then returns an adjusted value. This helps establish consistent measurements and spacial relationships throughout your project. We provide a list of commonly used scales as <a href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">pre-defined variables</a>.</p>
 
 {% highlight scss %}
-// Scaling Variables
-$golden:           1.618;
-$minor-second:     1.067;
-$major-second:     1.125;
-$minor-third:      1.2;
-$major-third:      1.25;
-$perfect-fourth:   1.333;
-$augmented-fourth: 1.414;
-$perfect-fifth:    1.5;
-$minor-sixth:      1.6;
-$major-sixth:      1.667;
-$minor-seventh:    1.778;
-$major-seventh:    1.875;
-$octave:           2;
-$major-tenth:      2.5;
-$major-eleventh:   2.667;
-$major-twelfth:    3;
-$double-octave:    4;
-
 div {
- // Increment Up GR with positive value
- font-size:        modular-scale(14px,   1, 1.618); // returns: 22.652px
+  // Increment two steps up the default scale
+  font-size: modular-scale(2); // returns: 1.77689em
 
- // Increment Down GR with negative value
- font-size:        modular-scale(14px,  -1, 1.618); // returns: 8.653px
+  // Increment one step down the default scale
+  font-size: modular-scale(-1); // returns: 0.75019em
 
- // Can be used with ceil(round up) or floor(round down)
- font-size: floor( modular-scale(14px, 1, 1.618) ); // returns: 22px
- font-size:  ceil( modular-scale(14px, 1, 1.618) ); // returns: 23px
+  // Increment three steps up the default scale, with a base value of 2em
+  font-size: modular-scale(3, 2em); // returns: 4.73719em
 }
 {% endhighlight %}
-  <p>Resources: <a href="http://modularscale.com/">modularscale.com</a> & <a href="http://goldenratiocalculator.com/">goldenrationcalculator.com</a></p>
+
+  <p>The default scale is the perfect fourth (<code>1.333</code>), which you can globally override:</p>
+
+{% highlight scss %}
+$modular-scale-ratio: $golden;
+$modular-scale-base: 1.2em;
+
+div {
+  font-size: modular-scale(2); // returns: 3.14151em
+}
+
+div {
+  font-size: modular-scale(3, 2em, 1.234); // returns: 3.75816em
+}
+{% endhighlight %}
+
+  <p>The function also supports double-stranded scales by passing it two base values.</p>
+
+{% highlight scss %}
+div {
+  font-size: modular-scale(3, 1em 1.6em, $major-seventh); // returns: 3em
+}
+{% endhighlight %}
+
+  <p>Note: <em>The function can be wrapped in Sass’s <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down or round up, respectively.</em></p>
+
+  <p>Resources: <a href="http://modularscale.com">modularscale.com</a> &amp; <a href="http://goldenratiocalculator.com">goldenratiocalculator.com</a></p>
 </article>
