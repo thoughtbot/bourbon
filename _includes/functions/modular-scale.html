@@ -3,10 +3,29 @@
     <h2 class="title">Modular-scale</h2>
     <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">View Source</a>
   </header>
-  <p>Returns the modular scale of a given number. Must provide a number value for the first argument. The second argument is a required integer for an increment value: ...-3, -2, -1, 0, 1, 2, 3... The third value is the ratio number.</p>
+  <p>Returns the modular scale of a given number. Must provide a number value for the first argument. The second argument is a required integer for an increment value: ...-3, -2, -1, 0, 1, 2, 3... The third value is the ratio number. There are several scaling variables to use for the ratio number.</p>
   <p>Note: The function can be wrapped in sass's <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down, or round up respectively.</p>
 
 {% highlight scss %}
+// Scaling Variables
+$golden:           1.618;
+$minor-second:     1.067;
+$major-second:     1.125;
+$minor-third:      1.2;
+$major-third:      1.25;
+$perfect-fourth:   1.333;
+$augmented-fourth: 1.414;
+$perfect-fifth:    1.5;
+$minor-sixth:      1.6;
+$major-sixth:      1.667;
+$minor-seventh:    1.778;
+$major-seventh:    1.875;
+$octave:           2;
+$major-tenth:      2.5;
+$major-eleventh:   2.667;
+$major-twelfth:    3;
+$double-octave:    4;
+
 div {
  // Increment Up GR with positive value
  font-size:        modular-scale(14px,   1, 1.618); // returns: 22.652px
