@@ -57,6 +57,7 @@ nav.bourbon {
 
         @include hidpi {
           background-image: url('/images/bourbon-nav/#{$site}@2x.png');
+          background-size: 20%;
         }
 
         @include media(max-width em(515)) {
