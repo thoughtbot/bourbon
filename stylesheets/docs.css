@@ -655,46 +655,22 @@ p code, ul code, ol code {
 
 @-webkit-keyframes scale {
   0% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); }
+    -webkit-transform: scale(1); }
 
   50% {
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -ms-transform: scale(2);
-    -o-transform: scale(2);
-    transform: scale(2); }
+    -webkit-transform: scale(2); }
 
   100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); } }
+    -webkit-transform: scale(1); } }
 @-moz-keyframes scale {
   0% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); }
+    -moz-transform: scale(1); }
 
   50% {
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -ms-transform: scale(2);
-    -o-transform: scale(2);
-    transform: scale(2); }
+    -moz-transform: scale(2); }
 
   100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); } }
+    -moz-transform: scale(1); } }
 @keyframes scale {
   0% {
     -webkit-transform: scale(1);
@@ -864,7 +840,7 @@ div.box {
   background-image: linear-gradient(#8fdce5, #3dc3d1);
   width: 40px; }
 
-article#animations div.box:hover {
+article#animation section.demo:hover .box {
   -webkit-animation-name: scale, slide;
   -moz-animation-name: scale, slide;
   animation-name: scale, slide;
