@@ -348,21 +348,18 @@ a.button {
 
   to {
     opacity: 1; } }
-
 @-moz-keyframes fadein {
   from {
     opacity: 0; }
 
   to {
     opacity: 1; } }
-
 @keyframes fadein {
   from {
     opacity: 0; }
 
   to {
     opacity: 1; } }
-
 .show {
   -webkit-animation-name: poopin;
   -moz-animation-name: poopin;
@@ -393,7 +390,6 @@ a.button {
     -ms-transform: scale(1) translateZ(0);
     -o-transform: scale(1) translateZ(0);
     transform: scale(1) translateZ(0); } }
-
 @-moz-keyframes poopin {
   50% {
     opacity: 0;
@@ -410,7 +406,6 @@ a.button {
     -ms-transform: scale(1) translateZ(0);
     -o-transform: scale(1) translateZ(0);
     transform: scale(1) translateZ(0); } }
-
 @keyframes poopin {
   50% {
     opacity: 0;
@@ -427,7 +422,6 @@ a.button {
     -ms-transform: scale(1) translateZ(0);
     -o-transform: scale(1) translateZ(0);
     transform: scale(1) translateZ(0); } }
-
 .hide {
   -webkit-animation-duration: 0.5s;
   -moz-animation-duration: 0.5s;
@@ -458,7 +452,6 @@ a.button {
     -ms-transform: scale(0) translateZ(0);
     -o-transform: scale(0) translateZ(0);
     transform: scale(0) translateZ(0); } }
-
 @-moz-keyframes poopout {
   from {
     -webkit-transform: scale(1) translateZ(0);
@@ -475,7 +468,6 @@ a.button {
     -ms-transform: scale(0) translateZ(0);
     -o-transform: scale(0) translateZ(0);
     transform: scale(0) translateZ(0); } }
-
 @keyframes poopout {
   from {
     -webkit-transform: scale(1) translateZ(0);
@@ -492,7 +484,6 @@ a.button {
     -ms-transform: scale(0) translateZ(0);
     -o-transform: scale(0) translateZ(0);
     transform: scale(0) translateZ(0); } }
-
 header {
   padding: 2rem 0; }
   header .buttons {
@@ -1125,7 +1116,8 @@ nav.bourbon {
       background-image: url("/images/bourbon-nav/bourbon.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
         nav.bourbon a.bourbon {
-          background-image: url("/images/bourbon-nav/bourbon@2x.png"); } }
+          background-image: url("/images/bourbon-nav/bourbon@2x.png");
+          background-size: 20%; } }
       @media screen and (max-width: 32.1875em) {
         nav.bourbon a.bourbon {
           background-image: none; } }
@@ -1133,7 +1125,8 @@ nav.bourbon {
       background-image: url("/images/bourbon-nav/neat.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
         nav.bourbon a.neat {
-          background-image: url("/images/bourbon-nav/neat@2x.png"); } }
+          background-image: url("/images/bourbon-nav/neat@2x.png");
+          background-size: 20%; } }
       @media screen and (max-width: 32.1875em) {
         nav.bourbon a.neat {
           background-image: none; } }
@@ -1141,7 +1134,8 @@ nav.bourbon {
       background-image: url("/images/bourbon-nav/bitters.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
         nav.bourbon a.bitters {
-          background-image: url("/images/bourbon-nav/bitters@2x.png"); } }
+          background-image: url("/images/bourbon-nav/bitters@2x.png");
+          background-size: 20%; } }
       @media screen and (max-width: 32.1875em) {
         nav.bourbon a.bitters {
           background-image: none; } }
@@ -1149,7 +1143,8 @@ nav.bourbon {
       background-image: url("/images/bourbon-nav/refills.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
         nav.bourbon a.refills {
-          background-image: url("/images/bourbon-nav/refills@2x.png"); } }
+          background-image: url("/images/bourbon-nav/refills@2x.png");
+          background-size: 20%; } }
       @media screen and (max-width: 32.1875em) {
         nav.bourbon a.refills {
           background-image: none; } }
