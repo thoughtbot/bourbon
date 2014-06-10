@@ -1,7 +1,7 @@
 [![Bourbon Sass Mixin Library](http://bourbon.io/images/shared/bourbon-logo.png)](http://bourbon.io)
 <br>
 <br>
-[![Gem Version](https://badge.fury.io/rb/bourbon.png)](http://badge.fury.io/rb/bourbon) [![Code Climate](https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon)  [![Gitter chat](https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon)
+[![Gem Version](https://badge.fury.io/rb/bourbon.svg)](http://badge.fury.io/rb/bourbon) [![Code Climate](https://img.shields.io/codeclimate/github/thoughtbot/bourbon.svg)](https://codeclimate.com/github/thoughtbot/bourbon)  [![Gitter chat](https://img.shields.io/badge/gitter-thoughtbot/bourbon-brightgreen.svg)](https://gitter.im/thoughtbot/bourbon)
 
 -
 :warning: Bourbon **4.0.0** requires Sass **3.3.x**. If you are using **libsass** or **sass-rails** use Bourbon **3.2.x**.
@@ -90,7 +90,7 @@ Visit the [Command line tools wiki](https://github.com/thoughtbot/bourbon/wiki/C
 - [Browser support](https://github.com/thoughtbot/bourbon/wiki/Browser-Support)
 
 ### Chat with us
-[![Gitter chat](https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon)
+[![Gitter chat](https://img.shields.io/badge/gitter-thoughtbot/bourbon-brightgreen.svg)](https://gitter.im/thoughtbot/bourbon)
 
 ### Credits
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
