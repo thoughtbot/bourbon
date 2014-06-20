@@ -8,9 +8,13 @@
 
   @if $height == auto or (type-of($height) == number and not unitless($height)) {
     height: $height;
+  } @else {
+      height: ($height) + px;
   }
 
   @if $width == auto or (type-of($width) == number and not unitless($width)) {
     width: $width;
+  } @else {
+      width: ($width) + px;
   }
 }
