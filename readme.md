@@ -1,7 +1,7 @@
 [![Bourbon Sass Mixin Library](http://bourbon.io/images/shared/bourbon-logo.png)](http://bourbon.io)
 <br>
 <br>
-[![Gem Version](https://badge.fury.io/rb/bourbon.svg)](http://badge.fury.io/rb/bourbon) [![Code Climate](https://img.shields.io/codeclimate/github/thoughtbot/bourbon.svg)](https://codeclimate.com/github/thoughtbot/bourbon)  [![Gitter chat](https://img.shields.io/badge/gitter-thoughtbot/bourbon-brightgreen.svg)](https://gitter.im/thoughtbot/bourbon)
+[![Gem Version](http://img.shields.io/gem/v/bourbon.svg?style=flat)](https://rubygems.org/gems/bourbon) [![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/bourbon.svg?style=flat)](https://codeclimate.com/github/thoughtbot/bourbon)  [![Gitter chat](https://img.shields.io/badge/gitter-thoughtbot/bourbon-ae3dd2.svg?style=flat)](https://gitter.im/thoughtbot/bourbon) [![Stack Overflow](http://img.shields.io/badge/stack%20overflow-bourbon-ae3dd2.svg?style=flat)](http://stackoverflow.com/questions/tagged/bourbon)
 
 -
 :warning: Bourbon **4.0.0** requires Sass **3.3.x**. If you are using **libsass** or **sass-rails** use Bourbon **3.2.x**.
