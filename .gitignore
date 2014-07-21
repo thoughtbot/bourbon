@@ -1,3 +1,4 @@
+.DS_store
 *swp
 *gem
 .sass-cache/
@@ -5,3 +6,4 @@
 demo/
 tmp/
 tags
+_site/
