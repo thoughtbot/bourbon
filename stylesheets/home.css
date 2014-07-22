@@ -179,14 +179,14 @@ body, html {
 body {
   min-width: 320px;
   font-size: 16px;
-  font-family: "proxima-nova-soft", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova-soft", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   color: #5a5a5a; }
 
 div.inner-wrapper {
   padding: 20px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "proxima-nova-soft", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova-soft", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 100;
   line-height: 1.5; }
 
@@ -219,9 +219,9 @@ p {
   line-height: 1.5em; }
 
 a, a:link, a:active, a:visited {
-  -webkit-transition: all 0.15s ease-out 0;
-  -moz-transition: all 0.15s ease-out 0;
-  transition: all 0.15s ease-out 0;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
   color: #de5c00;
   text-decoration: none; }
 
@@ -243,14 +243,12 @@ code {
   background: #fefa83; }
 
 .container {
-  *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  .container:before, .container:after {
-    content: " ";
-    display: table; }
   .container:after {
+    content: "";
+    display: table;
     clear: both; }
   @media screen and (max-width: 68em) {
     .container {
@@ -262,10 +260,9 @@ button {
   box-shadow: inset 0 1px 0 0 #8ebcf1;
   color: white;
   display: inline-block;
-  font-size: 11px;
+  font-size: inherit;
   font-weight: bold;
   background-color: #4294f0;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4294f0), color-stop(100%, #0776f3));
   background-image: -webkit-linear-gradient(#4294f0, #0776f3);
   background-image: linear-gradient(#4294f0, #0776f3);
   padding: 7px 18px;
@@ -276,12 +273,11 @@ button {
     box-shadow: inset 0 1px 0 0 #60a2ec;
     cursor: pointer;
     background-color: #2f87ea;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2f87ea), color-stop(100%, #086fe3));
     background-image: -webkit-linear-gradient(#2f87ea, #086fe3);
     background-image: linear-gradient(#2f87ea, #086fe3); }
-  button:active:not(:disabled) {
+  button:active:not(:disabled), button:focus:not(:disabled) {
     border: 1px solid #076fe4;
-    box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee; }
+    box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3; }
   button:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -316,7 +312,6 @@ a.button {
     transition: 0.25s; }
   a.button.installation {
     background-color: #afe4ec;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #afe4ec), color-stop(100%, #68cad8));
     background-image: -webkit-linear-gradient(#afe4ec, #68cad8);
     background-image: linear-gradient(#afe4ec, #68cad8);
     border: 1px solid #40a9b8;
@@ -324,12 +319,10 @@ a.button {
     text-shadow: 0px 1px #b2e4eb; }
     a.button.installation:hover {
       background-color: #c4ebf1;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c4ebf1), color-stop(100%, #7cd1dd));
       background-image: -webkit-linear-gradient(#c4ebf1, #7cd1dd);
       background-image: linear-gradient(#c4ebf1, #7cd1dd); }
   a.button.docs {
     background-color: #afece4;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #afece4), color-stop(100%, #68d8ca));
     background-image: -webkit-linear-gradient(#afece4, #68d8ca);
     background-image: linear-gradient(#afece4, #68d8ca);
     border: 1px solid #22baa8;
@@ -338,7 +331,6 @@ a.button {
     text-shadow: 0px 1px #b0ebe4; }
     a.button.docs:hover {
       background-color: #c4f1eb;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c4f1eb), color-stop(100%, #7cddd1));
       background-image: -webkit-linear-gradient(#c4f1eb, #7cddd1);
       background-image: linear-gradient(#c4f1eb, #7cddd1); }
 
@@ -487,13 +479,11 @@ a.button {
 header {
   padding: 2rem 0; }
   header .buttons {
-    *zoom: 1;
     float: left;
     width: 328px; }
-    header .buttons:before, header .buttons:after {
-      content: " ";
-      display: table; }
     header .buttons:after {
+      content: "";
+      display: table;
       clear: both; }
     @media screen and (max-width: 700px) {
       header .buttons {
@@ -513,9 +503,7 @@ header {
           header .buttons .button:last-child {
             margin-right: 0; } }
   header h1.brand {
-    color: transparent;
-    font: 0/0 a;
-    text-shadow: none;
+    overflow: hidden;
     width: -moz-calc(100% - (154px * 2 + 20px));
     width: -o-calc(100% - (154px * 2 + 20px));
     width: -webkit-calc(100% - (154px * 2 + 20px));
@@ -525,6 +513,11 @@ header {
     height: 4.125rem;
     float: left;
     margin-bottom: 2rem; }
+    header h1.brand:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%; }
     @media screen and (max-width: 700px) {
       header h1.brand {
         display: block;
@@ -544,7 +537,6 @@ header {
 section.demo {
   box-shadow: inset 0 -1px #eb412b, 0px 1px #e3e2dd;
   background-color: #f47a33;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f47a33), color-stop(100%, #f26234));
   background-image: -webkit-linear-gradient(#f47a33, #f26234);
   background-image: linear-gradient(#f47a33, #f26234);
   border-top: 1px solid #eb412b;
@@ -565,6 +557,7 @@ section.demo {
     -moz-border-image: url(../images/marketing/browser-frame.png) 23 10 0 62 repeat;
     -o-border-image: url(../images/marketing/browser-frame.png) 23 10 0 62 repeat;
     border-image: url(../images/marketing/browser-frame.png) 23 10 0 62 repeat;
+    border-style: solid;
     border-radius: 6px 6px 0px 0px;
     border-style: solid;
     border-width: 23px 10px 0px 62px;
@@ -576,6 +569,7 @@ section.demo {
         -moz-border-image: url(../images/marketing/browser-frame@2x.png) 46 20 0 124 repeat;
         -o-border-image: url(../images/marketing/browser-frame@2x.png) 46 20 0 124 repeat;
         border-image: url(../images/marketing/browser-frame@2x.png) 46 20 0 124 repeat;
+        border-style: solid;
         border-width: 23px 10px 0px 62px; } }
   section.demo #browser-container {
     background: #494f57;
@@ -804,22 +798,23 @@ section.apps ul.app-list {
     section.apps ul.app-list {
       margin-top: 1.5rem; } }
   section.apps ul.app-list li {
-    *zoom: 1;
     margin-bottom: 2rem;
     padding-right: 20px; }
-    section.apps ul.app-list li:before, section.apps ul.app-list li:after {
-      content: " ";
-      display: table; }
     section.apps ul.app-list li:after {
+      content: "";
+      display: table;
       clear: both; }
   section.apps ul.app-list li > a {
-    color: transparent;
-    font: 0/0 a;
-    text-shadow: none;
+    overflow: hidden;
     display: block;
     height: 71px;
     width: 71px;
     float: left; }
+    section.apps ul.app-list li > a:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%; }
     section.apps ul.app-list li > a.codekit {
       background: url("../images/marketing/codekit.png") no-repeat; }
     section.apps ul.app-list li > a.hammer {
@@ -865,10 +860,7 @@ section.websites {
       padding: 3rem 0; } }
 
 section.websites a.website {
-  *zoom: 1;
-  color: transparent;
-  font: 0/0 a;
-  text-shadow: none;
+  overflow: hidden;
   display: block;
   float: left;
   margin-right: 2.35765%;
@@ -877,11 +869,15 @@ section.websites a.website {
   border: 3px solid white;
   display: block;
   margin-top: 2rem; }
-  section.websites a.website:before, section.websites a.website:after {
-    content: " ";
-    display: table; }
   section.websites a.website:after {
+    content: "";
+    display: table;
     clear: both; }
+  section.websites a.website:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%; }
   section.websites a.website:last-child {
     margin-right: 0; }
   @media screen and (max-width: 768px) {
@@ -949,9 +945,9 @@ section.neat {
         section.neat div.neat-images:last-child {
           margin-right: 0; } }
     section.neat div.neat-images .neat-demo {
-      -webkit-transition: all 0.15s ease-out 0;
-      -moz-transition: all 0.15s ease-out 0;
-      transition: all 0.15s ease-out 0;
+      -webkit-transition: all 0.15s ease-out 0s;
+      -moz-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s;
       display: block;
       float: left;
       margin-right: 4.44119%;
@@ -1000,7 +996,6 @@ section.neat {
           text-align: center; } }
   section.neat .neat-tagline {
     background-color: #53aee0;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #53aee0), color-stop(100%, #3da4dc));
     background-image: -webkit-linear-gradient(#53aee0, #3da4dc);
     background-image: linear-gradient(#53aee0, #3da4dc);
     margin-top: -48px;
@@ -1009,14 +1004,12 @@ section.neat {
       section.neat .neat-tagline {
         margin-top: -88px; } }
     section.neat .neat-tagline .container {
-      *zoom: 1;
       max-width: 68em;
       margin-left: auto;
       margin-right: auto; }
-      section.neat .neat-tagline .container:before, section.neat .neat-tagline .container:after {
-        content: " ";
-        display: table; }
       section.neat .neat-tagline .container:after {
+        content: "";
+        display: table;
         clear: both; }
     section.neat .neat-tagline h3 {
       padding: 0 10px 0;
@@ -1025,7 +1018,7 @@ section.neat {
       width: 76.76824%;
       color: white;
       display: block;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-weight: 100;
       margin: 0 auto;
       text-align: center;
@@ -1073,14 +1066,12 @@ footer {
             margin-right: 0; } }
 
 nav.bourbon {
-  *zoom: 1;
   -webkit-font-smoothing: antialiased;
   background-color: #5b5e63;
   padding: 0 2em 0 1em; }
-  nav.bourbon:before, nav.bourbon:after {
-    content: " ";
-    display: table; }
   nav.bourbon:after {
+    content: "";
+    display: table;
     clear: both; }
   @media screen and (max-width: 31.875em) {
     nav.bourbon {

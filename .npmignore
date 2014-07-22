@@ -1,9 +1,0 @@
-app/ 
-bin/ 
-features/ 
-lib/ 
-bower.json 
-bourbon.gemspec 
-Rakefile 
-Gemfile.lock 
-Gemfile

@@ -5,7 +5,7 @@ base-url:    /
 source:      .
 destination: ./_site
 plugins:     ./_plugins
-exclude:     [./app, ./bourbon, ./demo, ./lib, sass, ./bourbon.gemspec, ./Gemfile, ./Gemfile.lock, ./generate-bourbon.sh, ./LICENSE, ./Rakefile, ./readme.md, ./features, ./gh-docs]
+exclude:     [docset/, docset.html, features/, gh-docs/, LICENSE.md, Rakefile, README.md]
 
 future:      true
 lsi:         false

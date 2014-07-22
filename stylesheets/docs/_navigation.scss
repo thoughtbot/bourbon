@@ -131,6 +131,7 @@ nav.fixed-nav {
 .social {
   @include clearfix;
   @include linear-gradient(#f47a33, #f26234);
+  margin-top: 0;
   padding: .25em 4em;
 
   li {

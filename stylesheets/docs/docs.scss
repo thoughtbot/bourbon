@@ -1,4 +1,4 @@
-@import "bourbon/bourbon";
+@import "../bourbon/bourbon";
 @import "normalize";
 @import "variables";
 @import "base";
@@ -8,6 +8,5 @@
 
 @import "animation-keyframes";
 @import "pygments-theme-light";
-// @import "pygments-theme-dark";
 
-@import 'demos';
+@import "demos";

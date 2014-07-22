@@ -1,14 +1,14 @@
-@import 'vendor/pygments/default';
-@import 'bourbon/bourbon';
-@import 'neat/neat';
-@import 'reset';
+@import "vendor/pygments/default";
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+@import "reset";
 
-@import 'mixins';
-@import 'extends';
+@import "mixins";
+@import "extends";
 
-@import 'base-variables';
-@import 'base';
-@import 'animations';
+@import "base-variables";
+@import "base";
+@import "animations";
 
-@import 'index';
-@import 'bourbon-nav';
+@import "index";
+@import "bourbon-nav";

@@ -1,0 +1,110 @@
+//************************************************************************//
+// Generate a variable ($all-text-inputs) with a list of all html5
+// input types that have a text-based input, excluding textarea.
+// http://diveintohtml5.org/forms.html
+//************************************************************************//
+$inputs-list: 'input[type="email"]',
+              'input[type="number"]',
+              'input[type="password"]',
+              'input[type="search"]',
+              'input[type="tel"]',
+              'input[type="text"]',
+              'input[type="url"]',
+
+              // Webkit & Gecko may change the display of these in the future
+              'input[type="color"]',
+              'input[type="date"]',
+              'input[type="datetime"]',
+              'input[type="datetime-local"]',
+              'input[type="month"]',
+              'input[type="time"]',
+              'input[type="week"]';
+
+$unquoted-inputs-list: ();
+@each $input-type in $inputs-list {
+  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma);
+}
+
+$all-text-inputs: $unquoted-inputs-list;
+
+
+// Hover Pseudo-class
+//************************************************************************//
+$all-text-inputs-hover: ();
+@each $input-type in $unquoted-inputs-list {
+      $input-type-hover: $input-type + ":hover";
+      $all-text-inputs-hover: append($all-text-inputs-hover, $input-type-hover, comma);
+}
+
+// Focus Pseudo-class
+//************************************************************************//
+$all-text-inputs-focus: ();
+@each $input-type in $unquoted-inputs-list {
+      $input-type-focus: $input-type + ":focus";
+      $all-text-inputs-focus: append($all-text-inputs-focus, $input-type-focus, comma);
+}
+
+// You must use interpolation on the variable:
+// #{$all-text-inputs}
+// #{$all-text-inputs-hover}
+// #{$all-text-inputs-focus}
+
+// Example
+//************************************************************************//
+//   #{$all-text-inputs}, textarea {
+//     border: 1px solid red;
+//   }
+
+
+
+//************************************************************************//
+// Generate a variable ($all-button-inputs) with a list of all html5
+// input types that have a button-based input, excluding button.
+//************************************************************************//
+$inputs-button-list: 'input[type="button"]',
+                     'input[type="reset"]',
+                     'input[type="submit"]';
+
+$unquoted-inputs-button-list: ();
+@each $input-type in $inputs-button-list {
+  $unquoted-inputs-button-list: append($unquoted-inputs-button-list, unquote($input-type), comma);
+}
+
+$all-button-inputs: $unquoted-inputs-button-list;
+
+
+// Hover Pseudo-class
+//************************************************************************//
+$all-button-inputs-hover: ();
+@each $input-type in $unquoted-inputs-button-list {
+      $input-type-hover: $input-type + ":hover";
+      $all-button-inputs-hover: append($all-button-inputs-hover, $input-type-hover, comma);
+}
+
+// Focus Pseudo-class
+//************************************************************************//
+$all-button-inputs-focus: ();
+@each $input-type in $unquoted-inputs-button-list {
+      $input-type-focus: $input-type + ":focus";
+      $all-button-inputs-focus: append($all-button-inputs-focus, $input-type-focus, comma);
+}
+
+// Active Pseudo-class
+//************************************************************************//
+$all-button-inputs-active: ();
+@each $input-type in $unquoted-inputs-button-list {
+      $input-type-active: $input-type + ":active";
+      $all-button-inputs-active: append($all-button-inputs-active, $input-type-active, comma);
+}
+
+// You must use interpolation on the variable:
+// #{$all-button-inputs}
+// #{$all-button-inputs-hover}
+// #{$all-button-inputs-focus}
+// #{$all-button-inputs-active}
+
+// Example
+//************************************************************************//
+//   #{$all-button-inputs}, button {
+//     border: 1px solid red;
+//   }
