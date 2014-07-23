@@ -1,9 +1,4 @@
-*swp
-*gem
-.sass-cache/
-/bourbon/
-demo/
-tmp/
-tags
-_cache/
-_site/
+.DS_store
+.sass-cache
+_site
+pkg
