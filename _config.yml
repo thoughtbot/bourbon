@@ -1,38 +1,11 @@
-safe:        false
-port:        4000
-base-url:    /
+# Site settings
+title: Bourbon
+description: "A Simple and Lightweight Mixin Library for Sass."
 
-source:      .
-destination: ./_site
-plugins:     ./_plugins
-exclude:     [./app, ./bourbon, ./demo, ./lib, sass, ./bourbon.gemspec, ./Gemfile, ./Gemfile.lock, ./generate-bourbon.sh, ./LICENSE, ./Rakefile, ./readme.md, ./features, ./gh-docs]
-
-future:      true
-lsi:         false
-pygments:    true
-markdown:    kramdown
-
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
-
-rdiscount:
-  extensions: []
-
-kramdown:
-  auto_ids: true,
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style
+# Build settings
+exclude: [docset/, docset.html, features/, gh-docs/, LICENSE.md, Rakefile, README.md]
+markdown: kramdown
+safe: false
+sass:
+  sass_dir: stylesheets
+  style: :compressed
