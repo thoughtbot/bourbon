@@ -119,4 +119,4 @@ Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tw
 
 ## License
 
-Bourbon is Copyright © 2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.
+Bourbon is Copyright © 2011–2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.
