@@ -1,0 +1,14 @@
+// Font smoothing mixin and property default.
+// Examples: @include font-smoothing("on");
+//           @include font-smoothing("off");
+
+@mixin font-smoothing($settings: on) {
+  @if $settings == on {
+    @include prefixer(font-smoothing, antialiased, webkit);
+    @include prefixer(osx-font-smoothing, grayscale, moz);
+  }
+  @else {
+    @include prefixer(font-smoothing, subpixel-antialiased, webkit);
+    @include prefixer(osx-font-smoothing, auto, moz);
+  }
+}
