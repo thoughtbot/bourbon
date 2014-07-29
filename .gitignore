@@ -1,10 +1,7 @@
+_site
 .DS_store
-*swp
+.sass-cache
 *gem
-.sass-cache/
-/bourbon/
-demo/
-tmp/
-tags
-_site/
+*swp
 Gemfile.lock
+tmp
