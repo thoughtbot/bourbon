@@ -2,12 +2,8 @@
 require 'rubygems'
 require 'bundler'
 require './lib/bourbon/docset.rb'
-require 'cucumber/rake/task'
 
-Bundler::GemHelper.install_tasks
-Cucumber::Rake::Task.new
-
-task :default => :cucumber
+task :default => :docset
 
 task :docset do
   `jekyll build`
@@ -25,4 +21,3 @@ task :docset do
   puts "Cleaning up..."
   delete_package_file
 end
-
