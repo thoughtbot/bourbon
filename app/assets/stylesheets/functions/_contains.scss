@@ -1,0 +1,5 @@
+// Test a Sass list to see if it contains a defined value
+
+@function contains($list, $value) {
+  @return not not index($list, $value);
+}
