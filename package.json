@@ -17,7 +17,7 @@
     "name": "thoughtbot",
     "url": "http://thoughtbot.com"
   },
-  "main": "dist/_bourbon.scss",
+  "main": "app/assets/stylesheets/_bourbon.scss",
   "repository": {
     "type": "git",
     "url": "https://github.com/thoughtbot/bourbon.git"
