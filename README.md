@@ -19,7 +19,7 @@ The mixins contain vendor specific prefixes for all CSS3 properties for support 
 
 ## Requirements
 
-- Sass 3.3+
+- [Sass](https://github.com/sass/sass) 3.3+
 - :warning: If you are using Bourbon with **LibSass**, **sass-rails**, **Compass**, **Foundation** or need **Sass 3.2 support**, you should [use Bourbon 3.2.x](#installing-older-versions-of-bourbon).
 
 ## Installation
@@ -52,9 +52,9 @@ For command line help, use `bourbon help` or visit the [Command Line Interface W
   @import "bourbon/bourbon";
   ```
 
-  It’s not recommended to add or modify the Bourbon files so that you can update Bourbon easily.
+  It’s not recommended to add or modify the Bourbon files so that you can update them easily.
 
-## Installation for Rails 3.1+
+## Installation for Ruby on Rails 3.1+
 
 1. Add Bourbon to your Gemfile:
 
