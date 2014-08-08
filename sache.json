@@ -1,0 +1,5 @@
+{
+  "name": "Bourbon",
+  "description": "A simple and lightweight mixin library for Sass.",
+  "tags": ["mixins", "variables", "functions", "add ons"]
+}
