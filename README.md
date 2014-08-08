@@ -119,11 +119,11 @@ More information can be found in the [wiki](https://github.com/thoughtbot/bourbo
 
 ## Browser support
 
-- Firefox 3.6+
-- Safari 5.1+
 - Chrome 10.0+
-- Opera 12+
+- Firefox 3.6+
 - Internet Explorer 9+
+- Opera 12+
+- Safari 5.1+
 
 ## The Bourbon family
 
@@ -136,7 +136,7 @@ More information can be found in the [wiki](https://github.com/thoughtbot/bourbo
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 
-Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tweet your questions or suggestions to [@phillapier](http://twitter.com/phillapier) or [@thoughtbot](https://twitter.com/thoughtbot).
+Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tweet your questions or suggestions to [@bourbonsass](https://twitter.com/bourbonsass) and while you’re at it follow us too.
 
 ## License
 
