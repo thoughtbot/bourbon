@@ -1,0 +1,8 @@
+@mixin vertical-align {
+  display: table;
+
+  > * {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
