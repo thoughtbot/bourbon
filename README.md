@@ -86,3 +86,6 @@ To generate or update the docset (for [Dash](http://kapeli.com/dash)), run:
 ```bash
 rake docset
 ```
+
+Since the update will go live to all users as soon as you push, make sure the generated docset displays correctly by un-archiving
+`docset/bourbon.tgz` and opening it in Dash.
