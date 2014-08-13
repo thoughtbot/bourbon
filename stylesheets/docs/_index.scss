@@ -5,6 +5,19 @@ div.main-content {
   @include calc(width, '100% - #{$docs-nav-width}');
   height: 100%;
   margin-left: $docs-nav-width;
+
+  body.docset & {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .docset-title {
+    text-align: center;
+
+    img {
+      max-width: 300px;
+    }
+  }
 }
 
 div.main-inner {

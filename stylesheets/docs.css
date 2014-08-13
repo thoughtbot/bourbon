@@ -419,6 +419,13 @@ div.main-content {
   width: calc(100% - 280px);
   height: 100%;
   margin-left: 280px; }
+  body.docset div.main-content {
+    width: 100%;
+    margin-left: 0; }
+  div.main-content .docset-title {
+    text-align: center; }
+    div.main-content .docset-title img {
+      max-width: 300px; }
 
 div.main-inner, div.docset-content {
   margin: 0 auto;
