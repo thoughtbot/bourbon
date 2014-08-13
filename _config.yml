@@ -3,7 +3,7 @@ title: Bourbon
 description: "A Simple and Lightweight Mixin Library for Sass."
 
 # Build settings
-exclude: [docset/, docset.html, features/, gh-docs/, LICENSE.md, Rakefile, README.md]
+exclude: [docset.html, features/, gh-docs/, LICENSE.md, Rakefile, README.md]
 markdown: kramdown
 safe: false
 sass:
