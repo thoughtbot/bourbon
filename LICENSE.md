@@ -2,7 +2,7 @@ LICENSE
 
 The MIT License
 
-Copyright © 2014 thoughtbot, inc.
+Copyright © 2011–2014 [thoughtbot, inc.](http://thoughtbot.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal

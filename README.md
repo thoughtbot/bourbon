@@ -13,20 +13,20 @@ Bourbon is a library of pure Sass mixins that are designed to be simple and easy
 
 The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.
 
-#### [Documentation & Demo](http://bourbon.io)
-
-#### [Changelog](https://github.com/thoughtbot/bourbon/releases)
+- **[Documentation](http://bourbon.io/docs)**
+- **[Changelog](https://github.com/thoughtbot/bourbon/releases)**
+- **[Issues & Bugs](https://github.com/thoughtbot/bourbon/issues)**
 
 ## Requirements
 
 - [Sass](https://github.com/sass/sass) 3.3+
-- :warning: If you are using Bourbon with **LibSass**, **sass-rails**, **Compass**, **Foundation** or need **Sass 3.2 support**, you should [use Bourbon 3.2.x](#installing-older-versions-of-bourbon).
+- :warning: If you are using Bourbon with **LibSass**, **sass-rails**, **Compass** (pre 1.0.0), **Foundation** or need **Sass 3.2 support**, you should [use Bourbon 3.2.x](#installing-older-versions-of-bourbon).
 
 ## Installation
 
-Bourbon uses the [RubyGems](https://rubygems.org) package manager to easily generate a `bourbon` directory with all of the necessary files.
+Bourbon is distributed using the [RubyGems](https://rubygems.org) package manager, which allows you to easily generate a `bourbon` directory with all of the necessary files right into your project. Alternatively, you can install Bourbon with [Bower](http://bower.io).
 
-For command line help, use `bourbon help` or visit the [Command Line Interface Wiki](https://github.com/thoughtbot/bourbon/wiki/Command-Line-Interface).
+For command line help, visit our wiki page on Bourbon’s [command line interface](https://github.com/thoughtbot/bourbon/wiki/Command-Line-Interface).
 
 1. Install the Bourbon gem:
 
@@ -40,7 +40,7 @@ For command line help, use `bourbon help` or visit the [Command Line Interface W
   bourbon install
   ```
 
-  **Pro Tip:** You can specify a target directory using the `path` flag:
+  **Pro Tip:** You can target installation into a specific directory using the `path` flag:
 
   ```bash
   bourbon install --path my/custom/path/
@@ -106,17 +106,6 @@ For command line help, use `bourbon help` or visit the [Command Line Interface W
 
 3. Follow the [instructions above](#installation) to install Bourbon into your project.
 
-## Command line interface
-
-```bash
-bourbon help
-bourbon install
-bourbon update
-bourbon version
-```
-
-More information can be found in the [wiki](https://github.com/thoughtbot/bourbon/wiki/Command-Line-Interface).
-
 ## Browser support
 
 - Chrome 10.0+
@@ -127,14 +116,14 @@ More information can be found in the [wiki](https://github.com/thoughtbot/bourbo
 
 ## The Bourbon family
 
-- [Bourbon](http://bourbon.io): A simple and lightweight mixin library for Sass
-- [Neat](http://neat.bourbon.io): A lightweight semantic grid framework for Sass and Bourbon
-- [Bitters](http://bitters.bourbon.io): Scaffold styles, variables and structure for Bourbon projects
-- [Refills](http://refills.bourbon.io): Prepackaged patterns and components, built on top of Bourbon, Bitters & Neat
+- [Bourbon](https://github.com/thoughtbot/bourbon): A simple and lightweight mixin library for Sass
+- [Neat](https://github.com/thoughtbot/neat): A lightweight semantic grid framework for Sass and Bourbon
+- [Bitters](https://github.com/thoughtbot/bitters): Scaffold styles, variables and structure for Bourbon projects
+- [Refills](https://github.com/thoughtbot/refills): Prepackaged patterns and components built with Bourbon, Neat and Bitters
 
 ## Credits
 
-![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
+[![thoughtbot](http://images.thoughtbot.com/bourbon/thoughtbot-logo.svg)](http://thoughtbot.com)
 
 Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tweet your questions or suggestions to [@bourbonsass](https://twitter.com/bourbonsass) and while you’re at it follow us too.
 
