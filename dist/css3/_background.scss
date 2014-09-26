@@ -12,7 +12,7 @@
     $spec-background: ();
     $background-type: type-of($background);
 
-    @if $background-type == string or list {
+    @if $background-type == string or $background-type == list {
       $background-str: if($background-type == list, nth($background, 1), $background);
 
       $url-str:       str-slice($background-str, 0, 3);
