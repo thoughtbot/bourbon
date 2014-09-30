@@ -233,7 +233,7 @@
     }
 
     @elseif $value == "space-around" {
-        $alt-value: center;
+        $alt-value: distribute;
     }
 
     // 2009
