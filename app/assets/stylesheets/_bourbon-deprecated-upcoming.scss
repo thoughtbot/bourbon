@@ -403,3 +403,9 @@
   @return $n * $gw-column + ($n - 1) * $gw-gutter;
   @warn "grid-width function is deprecated and will be removed in the next major version release";
 }
+
+// Golden ratio
+@function golden-ratio($increment) {
+  @return modular-scale($increment, $ratio: $golden)
+  @warn "The golden-ratio function is deprecated and will be removed in the next major version release. Please use the modular-scale function, instead.";
+}
