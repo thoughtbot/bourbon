@@ -1,4 +1,4 @@
-[![Bourbon Sass Mixin Library](http://bourbon.io/images/shared/bourbon-logo.png)](http://bourbon.io)
+[![Bourbon Sass Mixin Library](http://images.thoughtbot.com/bourbon/bourbon-logo.svg)](http://bourbon.io)
 
 [![Gem Version](http://img.shields.io/gem/v/bourbon.svg?style=flat)](https://rubygems.org/gems/bourbon)
 [![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/bourbon.svg?style=flat)](https://codeclimate.com/github/thoughtbot/bourbon)
