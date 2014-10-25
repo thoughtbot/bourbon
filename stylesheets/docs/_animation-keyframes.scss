@@ -1,6 +1,7 @@
 
 // scale animation
-@mixin scale {
+
+@include keyframes(scale) {
   0% {
     @include transform(scale(1.0));
   }
@@ -11,11 +12,10 @@
     @include transform(scale(1.0));
   }
 }
-@-webkit-keyframes scale { @include scale; }
-   @-moz-keyframes scale { @include scale; }
-        @keyframes scale { @include scale; }
 
-@mixin slide {
+// slide animation
+
+@include keyframes(slide) {
   0% {
     left: 0;
   }
@@ -26,6 +26,3 @@
     left: 0;
   }
 }
-@-webkit-keyframes slide { @include slide; }
-   @-moz-keyframes slide { @include slide; }
-        @keyframes slide { @include slide; }

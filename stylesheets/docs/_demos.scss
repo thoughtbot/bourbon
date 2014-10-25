@@ -17,15 +17,16 @@ div.box {
 // Animations Demo Section
 //************************************************************************//
 
-article#animations {
-  div.box {
+article#animation {
+  section.demo {
     &:hover {
-      @include animation-name(scale, slide);
-      @include animation-duration(2s);
-      @include animation-timing-function(ease);
-      @include animation-iteration-count(infinite);
-      position: relative;
-      // @include animation(scale slide, 2.0s, ease);
+      .box{
+        @include animation-name(scale, slide);
+        @include animation-duration(2s);
+        @include animation-timing-function(ease);
+        @include animation-iteration-count(infinite);
+        position: relative;
+      }
     }
   }
 }
