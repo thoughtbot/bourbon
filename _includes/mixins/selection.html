@@ -4,8 +4,7 @@
         <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_selection.scss">View source</a>
         <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::selection">View spec</a>
     </header>
-    <p>Outputs vendor-prefixed selection selectors for styling.</p>
-    <p>The mixin takes an optional <code>$for-parent: false</code> argument. If true, the <code>::selection</code>'s will add the parent element before the two colons. This argument can be omitted or set to false if the mixin is included at the base level.</p>
+    <p>Outputs vendor-prefixed selection selectors for styling. Can be included at base level.</p>
 
     {% highlight scss %}
     @include selection {
@@ -13,7 +12,7 @@
     }
 
     p {
-      @include selection(true) {
+      @include selection {
         background-color: black;
         color: white;
       }
