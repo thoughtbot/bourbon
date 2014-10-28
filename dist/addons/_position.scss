@@ -1,32 +1,58 @@
-@mixin position ($position: relative, $coordinates: null null null null) {
-
-  @if type-of($position) == list {
-    $coordinates: $position;
-    $position: relative;
+@mixin pos ($offsets, $shorthand: "a") {
+  @if $shorthand == "r" or $shorthand == "rel" or $shorthand == "relative" {
+    position: relative;
+  } @else if $shorthand == "a" or $shorthand == "ab" or $shorthand == "abs" or $shorthand == "absolute" {
+    position: absolute;
+  } @else if $shorthand == "f" or $shorthand == "fix" or $shorthand == "fixed" {
+    position: fixed;
+  } @else { //didn't match, don't output anything
+    @debug "position accepts 'r, rel, relative, a, ab, abs, absolute, f, fix, fixed' as shorthands"
   }
 
-  $coordinates: unpack($coordinates);
+  @if length($offsets) == 1 {
+    $positionProperty: top, right, bottom, left;
 
-  $top: nth($coordinates, 1);
-  $right: nth($coordinates, 2);
-  $bottom: nth($coordinates, 3);
-  $left: nth($coordinates, 4);
-
-  position: $position;
-
-  @if ($top and $top == auto) or (type-of($top) == number) {
-    top: $top;
-  }
-
-  @if ($right and $right == auto) or (type-of($right) == number) {
-    right: $right;
-  }
-
-  @if ($bottom and $bottom == auto) or (type-of($bottom) == number) {
-    bottom: $bottom;
-  }
-
-  @if ($left and $left == auto) or (type-of($left) == number) {
-    left: $left;
+    @if $offsets != none {
+      @each $property in $positionProperty {
+        #{$property}: $offsets; 
+      }
+    }
+  } @else if length($offsets) == 2 {
+    @if nth($offsets, 1) != none {
+      top: nth($offsets, 1);
+      @if nth($offsets, 2) != none {
+        right: nth($offsets, 2);
+      }
+      bottom: nth($offsets, 1);
+      @if nth($offsets, 2) != none {
+        left: nth($offsets, 2);
+      }
+    }
+  } @else if length($offsets) == 3 {
+    @if nth($offsets, 1) != none {
+      top: nth($offsets, 1);
+    }
+    @if nth($offsets, 2) != none {
+      right: nth($offsets, 2);
+    }
+    @if nth($offsets, 3) != none {
+      bottom: nth($offsets, 3);
+    }
+    @if nth($offsets, 2) != none {
+      left: nth($offsets, 2);
+    }
+  } @else if length($offsets) == 4 {
+    @if nth($offsets, 1) != none {
+      top: nth($offsets, 1);
+    }
+    @if nth($offsets, 2) != none {
+      right: nth($offsets, 2);
+    }
+    @if nth($offsets, 3) != none {
+      bottom: nth($offsets, 3);
+    }
+    @if nth($offsets, 4) != none {
+      left: nth($offsets, 4);
+    }
   }
 }
