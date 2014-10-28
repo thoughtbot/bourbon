@@ -6,34 +6,34 @@
     </header>
     <p>Outputs vendor-prefixed selection selectors for styling. Can be included at base level.</p>
 
-    {% highlight scss %}
-    @include selection {
-      background-color: white;
-    }
+{% highlight scss %}
+@include selection {
+  background-color: white;
+}
 
-    p {
-      @include selection {
-        background-color: black;
-        color: white;
-      }
-    }
-    {% endhighlight %}
-    <h3>CSS Output</h3>
-    {% highlight scss %}
-    ::selection {
-      background-color: white;
-    }
-    ::-moz-selection {
-      background-color: white;
-    }
+p {
+  @include selection {
+    background-color: black;
+    color: white;
+  }
+}
+{% endhighlight %}
+<h3>CSS Output</h3>
+{% highlight scss %}
+::selection {
+  background-color: white;
+}
+::-moz-selection {
+  background-color: white;
+}
 
-    p::selection {
-      background-color: black;
-      color: white;
-    }
-    p::-moz-selection {
-      background-color: black;
-      color: white;
-    }
-    {% endhighlight %}
+p::selection {
+  background-color: black;
+  color: white;
+}
+p::-moz-selection {
+  background-color: black;
+  color: white;
+}
+{% endhighlight %}
 </article>
