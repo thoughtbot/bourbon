@@ -1,0 +1,44 @@
+@mixin min-size($size) {
+  @if length($size) == 1 {
+    @if $size == auto {
+      min-width:  $size;
+      min-height: $size;
+    }
+
+    @else if unitless($size) {
+      min-width:  $size + px;
+      min-height: $size + px;
+    }
+
+    @else if not(unitless($size)) {
+      min-width:  $size;
+      min-height: $size;
+    }
+  }
+
+  // Width x Height
+  @if length($size) == 2 {
+    $width:  nth($size, 1);
+    $height: nth($size, 2);
+
+    @if $width == auto {
+      min-width: $width;
+    }
+    @else if not(unitless($width)) {
+      min-width: $width;
+    }
+    @else if unitless($width) {
+      min-width: $width + px;
+    }
+
+    @if $height == auto {
+      min-height: $height;
+    }
+    @else if not(unitless($height)) {
+      min-height: $height;
+    }
+    @else if unitless($height) {
+      min-height: $height + px;
+    }
+  }
+}
