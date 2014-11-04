@@ -1,4 +1,4 @@
-// Check whether `$value` is a valid length.
+// Check for a valid length
 
 @function is-length($value) {
   @return contains(0 "auto" "initial" "inherit", $value)

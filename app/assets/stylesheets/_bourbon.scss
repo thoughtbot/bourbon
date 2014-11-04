@@ -27,14 +27,14 @@
 @import "functions/assign";
 @import "functions/color-lightness";
 @import "functions/contains";
+@import "functions/is-length";
+@import "functions/is-size";
 @import "functions/px-to-em";
 @import "functions/px-to-rem";
 @import "functions/strip-units";
 @import "functions/tint-shade";
 @import "functions/transition-property-name";
 @import "functions/unpack";
-@import "functions/validate-length";
-@import "functions/validate-size";
 @import "functions/modular-scale";
 
 // CSS3 Mixins

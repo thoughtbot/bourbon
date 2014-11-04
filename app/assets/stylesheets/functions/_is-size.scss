@@ -1,4 +1,4 @@
-// Check whether `$value` is a valid size.
+// Check for a valid size
 
 @function is-size($value) {
   @return is-length($value)
