@@ -1,0 +1,6 @@
+// Check whether `$value` is a valid size.
+
+@function is-size($value) {
+  @return is-length($value)
+          or contains("fill" "fit-content" "min-content" "max-content", $value);
+}
