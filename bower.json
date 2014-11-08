@@ -6,7 +6,6 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "app",
     "bin",
     "bourbon.gemspec",
     "CONTRIBUTING.md",
