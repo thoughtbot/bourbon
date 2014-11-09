@@ -4,16 +4,17 @@
     <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_transition.scss">View source</a>
     <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">View spec</a>
   </header>
-  <p>The shorthand mixin supports multiple transition.</p>
+  <p>This mixin provides a shorthand syntax and supports multiple transitions.</p>
 
 {% highlight scss %}
-@include transition (all 2.0s ease-in-out);
-@include transition (opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
+@include transition(all 2.0s ease-in-out);
+@include transition(opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
 {% endhighlight %}
 
-<p>To transition specific vendor-prefixed properties (`-webkit-transform, -moz-transform, ...`), do not use the shorthand mixin. Use the individual transition mixins.</p>
+  <p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, do not use the shorthand mixin. Instead, use the individual transition mixins:</p>
+
 {% highlight scss %}
-@include transition-property (transform);
+@include transition-property(transform);
 @include transition-duration(1.0s);
 @include transition-timing-function(ease-in);
 @include transition-delay(0.5s);
