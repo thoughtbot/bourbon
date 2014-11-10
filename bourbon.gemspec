@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "bourbon"
   s.version     = Bourbon::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Phil LaPier", "Chad Mazzola", "Matt Jankowski", "Nick Quaranto", "Jeremy Raines", "Mike Burns", "Andres Mejia", "Travis Haynes", "Chris Lloyd", "Gabe Berke-Williams", "J. Edward Dewyea", "Reda Lemeden", "Kyle Fiedler"]
-  s.email       = ["support@thoughtbot.com"]
+  s.authors     = ["Andres Mejia", "Chad Mazzola", "Chris Lloyd", "Gabe Berke-Williams", "J. Edward Dewyea", "Jeremy Raines", "Kyle Fiedler", "Matt Jankowski", "Mike Burns", "Nick Quaranto", "Phil LaPier", "Reda Lemeden", "Travis Haynes", "Tyson Gach"]
+  s.email       = ["design+bourbon@thoughtbot.com"]
   s.license     = 'MIT'
-  s.homepage    = "https://github.com/thoughtbot/bourbon"
-  s.summary     = "Bourbon Sass Mixins using SCSS syntax."
+  s.homepage    = "http://bourbon.io"
+  s.summary     = "A simple and lightweight mixin library for Sass"
   s.description = <<-DESC
 Bourbon provides a comprehensive framework of
 sass mixins that are designed to be as vanilla as possible. Meaning they
