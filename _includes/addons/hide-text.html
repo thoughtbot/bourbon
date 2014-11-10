@@ -3,15 +3,35 @@
     <h2 class="title">Hide Text</h2>
     <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_hide-text.scss">View Source</a>
   </header>
-  <p>The <code>hide-text</code> is an image replacement mixin. It is based off the <a href="//github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7">HTML5-Boilerplate image-replacement</a>.</p>
-  <p>This image replacement technique is an alternative to the text-indent technique, which has <a href="//nicolasgallagher.com/another-css-image-replacement-technique/">performance and other benefits</a>.</p>
-  <p>A height declaration is required for this to function.</p>
+  <p><code>hide-text</code> is an image replacement mixin. It’s based off the <a href="//github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7">HTML5 Boilerplate image replacement</a>.</p>
+  <p>This image replacement technique is an alternative to the text-indent technique and has <a href="//nicolasgallagher.com/another-css-image-replacement-technique/">performance and other benefits</a>.</p>
+  <p>A height declaration is required for this to function, which can be passed as an argument (default is <code>1em</code>).</p>
 
 {% highlight scss %}
-div {
+.element {
   @include hide-text;
   background-image: url(logo.png);
-  height: 40px;
+}
+
+.element {
+  @include hide-text(2em); // passing an optional height argument
+}
+{% endhighlight %}
+
+  <h3>CSS Output</h3>
+{% highlight css %}
+.element {
+  height: 1em;
+  line-height: 1.5;
+  overflow: hidden;
+  background-image: url(logo.png);
+}
+
+.element::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
 }
 {% endhighlight %}
 </article>
