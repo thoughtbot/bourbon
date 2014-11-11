@@ -3,12 +3,12 @@
     <h2 class="title">Size</h2>
     <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_size.scss">View source</a>
   </header>
-  <p>Width &times; Height. Accepts all units.</p>
+  <p>Set <code>width</code> and <code>height</code> in a single statement. Accepts all units, including <code>auto</code> and <code>inherit</code>, unitless numbers, and <a href="//dev.w3.org/csswg/css-sizing/#width-height-keywords">intrinsic keywords</a> like <code>fill</code>, <code>max-content</code>, <code>min-content</code> &amp; <code>fit-content</code>. You can also use this mixin with the <code>calc()</code> CSS function.</p>
 
 {% highlight scss %}
-@include size(30px 70px); // width: 30px; height: 70px;
-@include size(auto 80px); // width: auto; height: 80px;
+@include size(2em); // width: 2em; height: 2em;
+@include size(10em auto); // width: 10em; height: auto;
+@include size(min-content 9rem); // width: min-content; height: 9rem;
+@include size(20px calc(100% - 80px)); // width: 20px; height: calc(100% - 80px);
 {% endhighlight %}
 </article>
-
-
