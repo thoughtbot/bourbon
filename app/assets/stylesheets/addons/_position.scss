@@ -1,4 +1,6 @@
-@mixin position ($position: relative, $coordinates: null null null null) {
+// Set element positioning in a single statement
+
+@mixin position($position: relative, $coordinates: null null null null) {
 
   @if type-of($position) == list {
     $coordinates: $position;
@@ -7,26 +9,18 @@
 
   $coordinates: unpack($coordinates);
 
-  $top: nth($coordinates, 1);
-  $right: nth($coordinates, 2);
-  $bottom: nth($coordinates, 3);
-  $left: nth($coordinates, 4);
+  $offsets: (
+    top:    nth($coordinates, 1),
+    right:  nth($coordinates, 2),
+    bottom: nth($coordinates, 3),
+    left:   nth($coordinates, 4)
+  );
 
   position: $position;
 
-  @if ($top and $top == auto) or (type-of($top) == number) {
-    top: $top;
-  }
-
-  @if ($right and $right == auto) or (type-of($right) == number) {
-    right: $right;
-  }
-
-  @if ($bottom and $bottom == auto) or (type-of($bottom) == number) {
-    bottom: $bottom;
-  }
-
-  @if ($left and $left == auto) or (type-of($left) == number) {
-    left: $left;
+  @each $offset, $value in $offsets {
+    @if is-length($value) {
+      #{$offset}: $value;
+    }
   }
 }
