@@ -1,0 +1,12 @@
+/* *  
+* examples
+* @include font(null, 300, red);
+* @include font(15px, null, #ccc);
+* @include font(12px, lighter, black, 'Source Sans');
+*/
+@mixin font($size, $weight: null, $color: null, $family: null) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-family: $family;
+}
