@@ -1,3 +1,30 @@
+/// Sets the `width` and `height` of the element.
+///
+/// @param {List} $size
+///   A list of at most 2 size values.
+///
+///   If there is only a single value in `$size` it is used for both width and height. All units are supported.
+///
+/// @example scss - Usage
+///   .first-element {
+///     @include size(30px 70px);
+///   }
+///
+///   .second-element {
+///     @include size(auto 80px);
+///   }
+///
+/// @example css - CSS Output
+///   .first-element {
+///     width: 30px;
+///     height: 70px;
+///   }
+///
+///   .second-element {
+///     width: auto;
+///     height: 80px;
+///   }
+
 @mixin size($size) {
   $height: nth($size, 1);
   $width: $height;
