@@ -1,3 +1,34 @@
+/// An image replacement mixin. It is based off the
+/// [HTML5-Boilerplate image-replacement](https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7).
+///
+/// This image replacement technique is an alternative to the text-indent technique, which has
+/// [performance and other benefits](http://nicolasgallagher.com/another-css-image-replacement-technique/).
+///
+/// @param {Value} $height (1em)
+///   A height declaration is required for this to function.
+///
+/// @example scss - Usage
+///   div {
+///     @include hide-text;
+///     background-image: url(logo.png);
+///     height: 40px;
+///   }
+///
+/// @example css - CSS Output
+///   div {
+///     background-image: url(logo.png);
+///     height: 40px;
+///     line-height: 1.5;
+///     overflow: hidden;
+///   }
+///
+///   div::before {
+///     content: "";
+///     display: block;
+///     height: 100%;
+///     width: 0;
+///   }
+
 @mixin hide-text($height: 1em) {
   height: $height;
   line-height: 1.5;
@@ -6,7 +37,7 @@
   &::before {
     content: "";
     display: block;
-    width: 0;
     height: 100%;
+    width: 0;
   }
 }
