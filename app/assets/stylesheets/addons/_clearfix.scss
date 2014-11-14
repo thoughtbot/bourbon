@@ -1,9 +1,18 @@
-// The clearfix mixin provides an easy way to contain floats
-//
-// Example usage:
-// .wrapper {
-//   @include clearfix;
-// }
+/// Provides an easy way to include a clearfix for containing floats.
+/// We use this modern clearfix from [cssmojo](http://cssmojo.com/latest_new_clearfix_so_far).
+///
+/// @example scss - Usage
+///   .wrapper {
+///     @include clearfix;
+///   }
+///
+/// @example css - CSS Output
+///   .wrapper::after {
+///     clear: both;
+///     content: "";
+///     display: table;
+///   }
+
 
 @mixin clearfix {
   &::after {
@@ -12,7 +21,3 @@
     display: table;
   }
 }
-
-// Acknowledgements:
-// Thierry Koblentz, cssmojo
-// http://goo.gl/AQWvyH
