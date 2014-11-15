@@ -16,11 +16,11 @@
   }
 
   @if $vendor {
-    $vendor-gradients: -#{$vendor}-#{$gradient-type}-gradient(#{$pre-spec} $gradients);
+    $vendor-gradients: "-#{$vendor}-#{$gradient-type}-gradient(#{$pre-spec} #{$gradients})";
   }
   @else if $vendor == false {
     $vendor-gradients: "#{$gradient-type}-gradient(#{$spec} #{$gradients})";
-    $vendor-gradients: unquote($vendor-gradients);
   }
+  $vendor-gradients: unquote($vendor-gradients);
   @return $vendor-gradients;
 }

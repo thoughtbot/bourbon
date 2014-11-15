@@ -78,7 +78,7 @@
         display: flex;
     }
 
-    @elseif $value == "inline-flex" {
+    @else if $value == "inline-flex" {
         display: -webkit-inline-box;
         display: -moz-inline-box;
         display: inline-box;
@@ -124,16 +124,16 @@
         $value-2009: horizontal;
     }
 
-    @elseif $value == "row-reverse" {
+    @else if $value == "row-reverse" {
         $value-2009: horizontal;
         $direction: reverse;
     }
 
-    @elseif $value == column {
+    @else if $value == column {
         $value-2009: vertical;
     }
 
-    @elseif $value == "column-reverse" {
+    @else if $value == "column-reverse" {
         $value-2009: vertical;
         $direction: reverse;
     }
@@ -162,11 +162,11 @@
         $alt-value: single;
     }
 
-    @elseif $value == wrap {
+    @else if $value == wrap {
         $alt-value: multiple;
     }
 
-    @elseif $value == "wrap-reverse" {
+    @else if $value == "wrap-reverse" {
         $alt-value: multiple;
     }
 
@@ -224,15 +224,15 @@
         $alt-value: start;
     }
 
-    @elseif $value == "flex-end" {
+    @else if $value == "flex-end" {
         $alt-value: end;
     }
 
-    @elseif $value == "space-between" {
+    @else if $value == "space-between" {
         $alt-value: justify;
     }
 
-    @elseif $value == "space-around" {
+    @else if $value == "space-around" {
         $alt-value: center;
     }
 
@@ -257,7 +257,7 @@
         $alt-value: start;
     }    
 
-    @elseif $value == "flex-end" {
+    @else if $value == "flex-end" {
         $alt-value: end;
     }
 
@@ -280,7 +280,7 @@
         $value-2011: start;
     }    
 
-    @elseif $value == "flex-end" {
+    @else if $value == "flex-end" {
         $value-2011: end;
     }
 
@@ -300,15 +300,15 @@
         $value-2011: start;
     }    
 
-    @elseif $value == "flex-end" {
+    @else if $value == "flex-end" {
         $value-2011: end;
     }
 
-    @elseif $value == "space-between" {
+    @else if $value == "space-between" {
         $value-2011: justify;
     }
 
-    @elseif $value == "space-around" {
+    @else if $value == "space-around" {
         $value-2011: distribute;
     }
 
