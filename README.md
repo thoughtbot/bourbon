@@ -129,4 +129,4 @@ Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tw
 
 ## License
 
-Copyright © 2011–2014 [thoughtbot, inc](http://thoughtbot.com). Bourbon is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
+Copyright © 2011–2015 [thoughtbot, inc](http://thoughtbot.com). Bourbon is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
