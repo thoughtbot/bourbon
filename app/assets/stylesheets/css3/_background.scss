@@ -20,7 +20,7 @@
 
       @if $url-str == "url" {
         $webkit-background: $background;
-          $spec-background: $background;
+        $spec-background:   $background;
       }
 
       @else if $gradient-type == "linear" {
@@ -37,13 +37,13 @@
 
       @else {
         $webkit-background: $background;
-          $spec-background: $background;
+        $spec-background:   $background;
       }
     }
 
     @else {
       $webkit-background: $background;
-        $spec-background: $background;
+      $spec-background:   $background;
     }
 
     $webkit-backgrounds: append($webkit-backgrounds, $webkit-background, comma);

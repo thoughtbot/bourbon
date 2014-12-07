@@ -48,7 +48,7 @@
   -ms-flex-order: $int; // IE 10
 }
 
-@mixin box-flex($value: 0.0) {
+@mixin box-flex($value: 0) {
   @include prefixer(box-flex, $value, webkit moz spec);
   -ms-flex: $value; // IE 10
 }
