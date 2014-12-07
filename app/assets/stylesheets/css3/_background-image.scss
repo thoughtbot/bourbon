@@ -17,7 +17,7 @@
 
       @if $url-str == "url" {
         $webkit-image: $image;
-          $spec-image: $image;
+        $spec-image:   $image;
       }
 
       @else if $gradient-type == "linear" {

@@ -28,15 +28,15 @@
       }
 
       $webkit: append($webkit, $list1);
-         $moz: append($moz,    $list2);
-        $spec: append($spec,   $list3);
+      $moz:    append($moz,    $list2);
+      $spec:   append($spec,   $list3);
     }
 
     // Create lists for non-prefixed transition properties
     @else {
-      $webkit:  append($webkit, $list, comma);
-      $moz:     append($moz,    $list, comma);
-      $spec:    append($spec,   $list, comma);
+      $webkit: append($webkit, $list, comma);
+      $moz:    append($moz,    $list, comma);
+      $spec:   append($spec,   $list, comma);
     }
   }
 
@@ -58,9 +58,9 @@
 }
 
 @mixin transition-property ($properties...) {
-   -webkit-transition-property: transition-property-names($properties, 'webkit');
-      -moz-transition-property: transition-property-names($properties, 'moz');
-           transition-property: transition-property-names($properties, false);
+  -webkit-transition-property: transition-property-names($properties, "webkit");
+     -moz-transition-property: transition-property-names($properties, "moz");
+          transition-property: transition-property-names($properties, false);
 }
 
 @mixin transition-duration ($times...) {

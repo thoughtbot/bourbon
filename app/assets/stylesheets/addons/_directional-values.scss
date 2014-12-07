@@ -21,20 +21,20 @@
 @function collapse-directionals($vals) {
   $output: null;
 
-  $A: nth( $vals, 1 );
-  $B: if( length($vals) < 2, $A, nth($vals, 2));
-  $C: if( length($vals) < 3, $A, nth($vals, 3));
-  $D: if( length($vals) < 2, $A, nth($vals, if( length($vals) < 4, 2, 4) ));
+  $a: nth( $vals, 1 );
+  $b: if( length($vals) < 2, $a, nth($vals, 2));
+  $c: if( length($vals) < 3, $a, nth($vals, 3));
+  $d: if( length($vals) < 2, $a, nth($vals, if( length($vals) < 4, 2, 4) ));
 
-  @if $A == 0 { $A: 0 }
-  @if $B == 0 { $B: 0 }
-  @if $C == 0 { $C: 0 }
-  @if $D == 0 { $D: 0 }
+  @if $a == 0 { $a: 0; }
+  @if $b == 0 { $b: 0; }
+  @if $c == 0 { $c: 0; }
+  @if $d == 0 { $d: 0; }
 
-  @if $A == $B and $A == $C and $A == $D { $output: $A          }
-  @else if $A == $C and $B == $D         { $output: $A $B       }
-  @else if $B == $D                      { $output: $A $B $C    }
-  @else                                  { $output: $A $B $C $D }
+  @if $a == $b and $a == $c and $a == $d { $output: $a;          }
+  @else if $a == $c and $b == $d         { $output: $a $b;       }
+  @else if $b == $d                      { $output: $a $b $c;    }
+  @else                                  { $output: $a $b $c $d; }
 
   @return $output;
 }
@@ -64,7 +64,8 @@
 
     @if length($vals) == 1 {
       @if nth($vals, 1) { #{$right}: nth($vals, 1); }
-    } @else {
+    }
+    @else {
       @if nth($vals, 2) { #{$right}: nth($vals, 2); }
     }
 
@@ -72,20 +73,20 @@
     @if length($vals) == 2 {
       @if nth($vals, 1) { #{$bottom}: nth($vals, 1); }
       @if nth($vals, 2) { #{$left}:   nth($vals, 2); }
-
+    }
     // prop: top right/left bottom
-    } @else if length($vals) == 3 {
+    @else if length($vals) == 3 {
       @if nth($vals, 3) { #{$bottom}: nth($vals, 3); }
       @if nth($vals, 2) { #{$left}:   nth($vals, 2); }
-
+    }
     // prop: top right bottom left
-    } @else if length($vals) == 4 {
+    @else if length($vals) == 4 {
       @if nth($vals, 3) { #{$bottom}: nth($vals, 3); }
       @if nth($vals, 4) { #{$left}:   nth($vals, 4); }
     }
-
+  }
   // prop: top/right/bottom/left
-  } @else {
+  @else {
     #{$all}: $vals;
   }
 }

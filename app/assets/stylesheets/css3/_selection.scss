@@ -2,12 +2,13 @@
   $before-colons: "";
 
   @if & {
-    $before-colons: "&"
+    $before-colons: "&";
   }
 
   #{$before-colons}::selection {
     @content;
   }
+
   #{$before-colons}::-moz-selection {
     @content;
   }

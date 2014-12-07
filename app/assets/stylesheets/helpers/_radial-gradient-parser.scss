@@ -18,7 +18,7 @@
     $gradients: (
       webkit-image: -webkit- + $prefix + $pos + $suffix,
       spec-image: $image
-    )
+    );
   }
 
   @else if $is-spec-syntax == 1 {
@@ -27,7 +27,7 @@
     $gradients: (
       webkit-image: -webkit- + $prefix + $pos + $suffix,
       spec-image: $image
-    )
+    );
   }
 
   @else if str-index($image, "cover") or str-index($image, "contain") {
@@ -36,14 +36,14 @@
     $gradients: (
       webkit-image: null,
       spec-image: $image
-    )
+    );
   }
 
   @else {
     $gradients: (
       webkit-image: -webkit- + $image,
       spec-image: $image
-    )
+    );
   }
 
   @return $gradients;

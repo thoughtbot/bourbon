@@ -15,7 +15,7 @@
 
       @if $url-str == "url" {
         $webkit-border: $border;
-          $spec-border: $border;
+        $spec-border:   $border;
       }
 
       @else if $gradient-type == "linear" {
@@ -32,13 +32,13 @@
 
       @else {
         $webkit-border: $border;
-          $spec-border: $border;
+        $spec-border:   $border;
       }
     }
 
     @else {
       $webkit-border: $border;
-        $spec-border: $border;
+      $spec-border:   $border;
     }
 
     $webkit-borders: append($webkit-borders, $webkit-border, comma);
