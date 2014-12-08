@@ -32,12 +32,16 @@ $all-text-inputs-hover: assign-inputs($inputs-list, hover);
 //************************************************************************//
 $all-text-inputs-focus: assign-inputs($inputs-list, focus);
 
+// Active Pseudo-class
+//************************************************************************//
+$all-text-inputs-active: assign-inputs($inputs-list, active);
 
 
 // You must use interpolation on the variable:
 // #{$all-text-inputs}
 // #{$all-text-inputs-hover}
 // #{$all-text-inputs-focus}
+// #{$all-text-inputs-active}
 
 // Example
 //************************************************************************//
