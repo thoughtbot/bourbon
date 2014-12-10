@@ -1,4 +1,4 @@
-[![Bourbon Sass Mixin Library](http://images.thoughtbot.com/bourbon/bourbon-logo.svg)](http://bourbon.io)
+[![Bourbon](http://images.thoughtbot.com/bourbon/bourbon-logo.svg)](http://bourbon.io)
 
 [![Gem Version](http://img.shields.io/gem/v/bourbon.svg?style=flat)](https://rubygems.org/gems/bourbon)
 [![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/bourbon.svg?style=flat)](https://codeclimate.com/github/thoughtbot/bourbon)
@@ -22,15 +22,15 @@ The mixins contain vendor specific prefixes for all CSS3 properties for support 
 
 ## Installation
 
-Bourbon is distributed using the [RubyGems](https://rubygems.org) package manager, which allows you to easily generate a `bourbon` directory with all of the necessary files right into your project. Alternatively, you can install Bourbon with [Bower](http://bower.io).
-
 For command line help, visit our wiki page on Bourbon’s [command line interface](https://github.com/thoughtbot/bourbon/wiki/Command-Line-Interface).
 
-1. Install the Bourbon gem:
+1. Install the Bourbon gem using the [RubyGems](https://rubygems.org) package manager:
 
   ```bash
   gem install bourbon
   ```
+
+  Alternatively, you can install Bourbon with [Bower](http://bower.io).
 
 2. Install the Bourbon library into the current directory:
 
