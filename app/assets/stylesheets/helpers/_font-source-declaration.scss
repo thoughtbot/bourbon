@@ -1,4 +1,5 @@
 // Used for creating the source string for fonts using @font-face
+// Reference: http://goo.gl/Ru1bKP
 
 @function font-url-prefixer($asset-pipeline) {
   @if $asset-pipeline == true {
@@ -18,11 +19,11 @@
   $src: null;
 
   $formats-map: (
-    eot:  "#{$font-url}('#{$file-path}.eot?#iefix') format('embedded-opentype')",
-    woff2: "#{$font-url}('#{$file-path}.woff2') format('woff2')",
-    woff: "#{$font-url}('#{$file-path}.woff') format('woff')",
-    ttf:  "#{$font-url}('#{$file-path}.ttf') format('ttf')",
-    svg:  "#{$font-url}('#{$file-path}.svg##{$font-family}') format('svg')"
+    eot:   $font-url + "(\"#{$file-path}.eot?#iefix\")" format("embedded-opentype"),
+    woff2: $font-url + "(\"#{$file-path}.woff2\")" format("woff2"),
+    woff:  $font-url + "(\"#{$file-path}.woff\")" format("woff"),
+    ttf:   $font-url + "(\"#{$file-path}.ttf\")" format("truetype"),
+    svg:   $font-url + "(\"#{$file-path}.svg##{$font-family}\")" format("svg")
   );
 
   @each $format, $file-path in $formats-map {

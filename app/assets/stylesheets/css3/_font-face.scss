@@ -1,23 +1,17 @@
-// Order of the includes matters, and it is: normal, bold, italic, bold+italic.
-
 @mixin font-face(
   $font-family,
   $file-path,
   $weight: normal,
   $style: normal,
   $asset-pipeline: $asset-pipeline,
-  $file-formats: eot woff ttf svg) {
+  $file-formats: eot woff2 woff ttf svg) {
 
   $font-url-prefix: font-url-prefixer($asset-pipeline);
 
   @font-face {
     font-family: $font-family;
-    font-weight: $weight;
     font-style: $style;
-
-    @if contains($file-formats, eot) {
-      src: "#{$font-url-prefix}('#{$file-path}.eot') format('embedded-opentype')";
-    }
+    font-weight: $weight;
 
     src: font-source-declaration(
       $font-family,
