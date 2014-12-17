@@ -14,19 +14,19 @@
 
   position: $position;
 
-  @if ($top and $top == auto) or (type-of($top) == number and not unitless($top)) {
+  @if ($top and $top == auto) or (type-of($top) == number and not(unitless($top))) {
     top: $top;
   }
 
-  @if ($right and $right == auto) or (type-of($right) == number and not unitless($right)) {
+  @if ($right and $right == auto) or (type-of($right) == number and not(unitless($right))) {
     right: $right;
   }
 
-  @if ($bottom and $bottom == auto) or (type-of($bottom) == number and not unitless($bottom)) {
+  @if ($bottom and $bottom == auto) or (type-of($bottom) == number and not(unitless($bottom))) {
     bottom: $bottom;
   }
 
-  @if ($left and $left == auto) or (type-of($left) == number and not unitless($left)) {
+  @if ($left and $left == auto) or (type-of($left) == number and not(unitless($left))) {
     left: $left;
   }
 }
