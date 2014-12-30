@@ -1,13 +1,8 @@
 [![Bourbon](http://images.thoughtbot.com/bourbon/bourbon-logo.svg)](http://bourbon.io)
 
-[![Gem Version](http://img.shields.io/gem/v/bourbon.svg?style=flat)](https://rubygems.org/gems/bourbon)
-[![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/bourbon.svg?style=flat)](https://codeclimate.com/github/thoughtbot/bourbon)
-[![Gitter chat](https://img.shields.io/badge/gitter-thoughtbot/bourbon-ae3dd2.svg?style=flat)](https://gitter.im/thoughtbot/bourbon)
-[![Stack Overflow](http://img.shields.io/badge/stack%20overflow-bourbon-ae3dd2.svg?style=flat)](http://stackoverflow.com/questions/tagged/bourbon)
-
 ## A simple and lightweight mixin library for Sass.
 
-### This is the v3.2.4 branch
+### _This is the v3.2.4 branch_
 
 Bourbon is a library of pure Sass mixins that are designed to be simple and easy to use. No configuration required. The mixins aim to be as vanilla as possible, meaning they should be as close to the original CSS syntax as possible.
 
@@ -100,7 +95,7 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
 2. Reinstall the Bourbon gem, using the `-v` flag to specify the version you need:
 
   ```bash
-  gem install bourbon -v 3.2.3
+  gem install bourbon -v 3.2.4
   ```
 
 3. Follow the [instructions above](#installation) to install Bourbon into your project.
