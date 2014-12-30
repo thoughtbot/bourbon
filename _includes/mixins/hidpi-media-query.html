@@ -1,14 +1,14 @@
 <article id="hidpi-media-query" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">HiDPI Media Query</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_hidpi-media-query.scss">View source</a>
-    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#resolution">View spec</a>
+    <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_hidpi-media-query.scss">View source</a>
+    <a class="view-spec" href="//developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#resolution">View spec</a>
   </header>
-  <p>The <code>hidpi</code> Meda Query will allow you to generate a media query that targets HiDPI devices. It accepts an optional ratio argument, default ratio is <code>1.3</code>. <a href="http://bjango.com/articles/min-device-pixel-ratio/">Find my device pixel ratio.</a></p>
+  <p>The <code>hidpi</code> mixin allows you to generate a media query that targets HiDPI devices. It accepts an optional ratio argument, with the default ratio being <code>1.3</code>. <a href="//bjango.com/articles/min-device-pixel-ratio">Find my device pixel ratio.</a></p>
 
 {% highlight scss %}
 @include hidpi(1.5) {
-  width: 260px;
+  width: 20em;
 }
 {% endhighlight %}
 
@@ -19,7 +19,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 1.5/1),
 only screen and (min-resolution: 144dpi),
 only screen and (min-resolution: 1.5dppx) {
-  width: 260px;
+  width: 20em;
 }
 {% endhighlight %}
 
