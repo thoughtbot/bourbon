@@ -1,6 +1,6 @@
 {
   "name": "bourbon",
-  "version": "4.1.0.pre",
+  "version": "4.1.0",
   "description": "A simple and lightweight mixin library for Sass.",
   "keywords": [
     "css",
