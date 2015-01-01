@@ -66,19 +66,19 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
   bundle install
   ```
 
-3. Restart your server and rename `application.css` to `application.css.scss`:
+3. Restart your server and rename `application.css` to `application.scss`:
 
   ```bash
-  mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
+  mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
   ```
 
-4. Delete the sprocket directive in `application.css.scss` ([why?](https://github.com/thoughtbot/bourbon/wiki/Rails-Sprockets)):
+4. Delete the Sprockets directive in `application.scss` ([why?](https://github.com/thoughtbot/bourbon/wiki/Rails-Sprockets)):
 
   ```scss
   *= require_tree .
   ```
 
-5. Import Bourbon at the beginning of `application.css.scss`. All additional stylesheets should be imported below Bourbon:
+5. Import Bourbon at the beginning of `application.scss`. All additional stylesheets should be imported below Bourbon:
 
   ```scss
   @import "bourbon";
