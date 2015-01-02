@@ -18,7 +18,7 @@ The mixins contain vendor specific prefixes for all CSS3 properties for support 
 ## Requirements
 
 - [Sass](https://github.com/sass/sass) 3.3+
-- :warning: If you are using Bourbon with **LibSass**, **sass-rails**, **Compass** (pre 1.0.0), **Foundation** or need **Sass 3.2 support**, you should [use Bourbon 3.2.x](#installing-older-versions-of-bourbon).
+- :warning: If you are using **LibSass**, you need to [use Bourbon 3.2.3](#installing-older-versions-of-bourbon).
 
 ## Installation
 
@@ -72,7 +72,7 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
   mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
   ```
 
-4. Delete the Sprockets directive in `application.scss` ([why?](https://github.com/thoughtbot/bourbon/wiki/Rails-Sprockets)):
+4. Delete the Sprockets directive in `application.scss`:
 
   ```scss
   *= require_tree .
