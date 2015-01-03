@@ -1,22 +1,29 @@
-// directional-property mixins are shorthands
-// for writing properties like the following
-//
-// @include margin(null 0 10px);
-// ------
-// margin-right: 0;
-// margin-bottom: 10px;
-// margin-left: 0;
-//
-// - or -
-//
-// @include border-style(dotted null);
-// ------
-// border-top-style: dotted;
-// border-bottom-style: dotted;
-//
-// ------
-//
-// Note: You can also use false instead of null
+/// directional-property mixins are shorthands
+/// for writing properties like the following
+///
+/// @ignore You can also use `false` instead of `null`.
+///
+/// @param {List} $vals
+///   List of directional values
+///
+/// @example scss - Usage
+///   .wrapper {
+///     @include margin(null 0 10px);
+///     @include border-style(dotted null);
+///   }
+///
+/// @example css - CSS Output
+///   .wrapper {
+///     margin-right: 0;
+///     margin-bottom: 10px;
+///     margin-left: 0;
+///     border-top-style: dotted;
+///     border-bottom-style: dotted;
+///   }
+///
+/// @require {function} contains-falsy
+///
+/// @return {List}
 
 @function collapse-directionals($vals) {
   $output: null;
@@ -39,6 +46,18 @@
   @return $output;
 }
 
+
+
+
+
+/// Checks a list of values to see if it contains a falsy one.
+/// If it does, it returns `false`, else `true`.
+///
+/// @param {List} $list
+///   List of values to check to see if it contains a falsy one
+///
+/// @return {Bool}
+
 @function contains-falsy($list) {
   @each $item in $list {
     @if not $item {
@@ -48,6 +67,24 @@
 
   @return false;
 }
+
+
+
+
+
+/// Output directional properties, for instance `margin`.
+///
+/// @access private
+///
+/// @param {String} $pre
+///   Prefix to use
+/// @param {String} $suf
+///   Suffix to use
+/// @param {List} $vals
+///   List of values
+///
+/// @require {function} collapse-directionals
+/// @require {function} contains-falsy
 
 @mixin directional-property($pre, $suf, $vals) {
   // Property Names
@@ -90,22 +127,72 @@
   }
 }
 
+/// Margin helper
+///
+/// @access public
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @require {mixin} directional-property
+///
+/// @output `margin`
 @mixin margin($vals...) {
   @include directional-property(margin, false, $vals...);
 }
 
+/// Padding helper
+///
+/// @access public
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @require {mixin} directional-property
+///
+/// @output `padding`
 @mixin padding($vals...) {
   @include directional-property(padding, false, $vals...);
 }
 
+/// Border-style helper
+///
+/// @access public
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @require {mixin} directional-property
+///
+/// @output `border-style`
 @mixin border-style($vals...) {
   @include directional-property(border, style, $vals...);
 }
 
+/// Border-color helper
+///
+/// @access public
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @require {mixin} directional-property
+///
+/// @output `border-color`
 @mixin border-color($vals...) {
   @include directional-property(border, color, $vals...);
 }
 
+/// Border-width helper
+///
+/// @access public
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @require {mixin} directional-property
+///
+/// @output `border-width`
 @mixin border-width($vals...) {
   @include directional-property(border, width, $vals...);
 }

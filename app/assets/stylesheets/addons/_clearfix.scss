@@ -13,7 +13,6 @@
 ///     display: table;
 ///   }
 
-
 @mixin clearfix {
   &::after {
     clear: both;

@@ -1,3 +1,24 @@
+/// Provides an easy way to truncate a string of test that is too long.
+///
+/// @param {Number} $width (100%)
+///   Max-width for the string to respect before being truncated
+///
+/// @example scss - Usage
+///   .wrapper {
+///     @include ellipsis;
+///   }
+///
+/// @example css - CSS Output
+///   .wrapper {
+///     display: inline-block;
+///     max-width: 100%;
+///     overflow: hidden;
+///     text-overflow: ellipsis;
+///     white-space: nowrap;
+///     word-wrap: normal;
+///   }
+
+
 @mixin ellipsis($width: 100%) {
   display: inline-block;
   max-width: $width;
