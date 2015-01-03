@@ -1,6 +1,6 @@
 // Set element positioning in a single statement
 
-@mixin position($position: relative, $coordinates: null null null null) {
+@mixin position($position: relative, $coordinates: null null null null, $shorthand-exception-rule: null) {
 
   @if type-of($position) == list {
     $coordinates: $position;
@@ -15,7 +15,12 @@
     bottom: nth($coordinates, 3),
     left:   nth($coordinates, 4)
   );
-
+  
+  @if type-of($shorthand-exception-rule) == map {
+    $ignore-rule-property: nth(map-keys($exception-rule), 1);
+    $offsets: map-merge($offsets, $ignore-rule);
+  }
+  
   position: $position;
 
   @each $offset, $value in $offsets {
