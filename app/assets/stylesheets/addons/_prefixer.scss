@@ -1,7 +1,32 @@
-//************************************************************************//
-// Example: @include prefixer(border-radius, $radii, webkit ms spec);
-//************************************************************************//
-// Variables located in /settings/_prefixer.scss
+/// Mixin helping prefixing non-standardised properties.
+/// Variables located in /settings/_prefixer.scss
+///
+/// @param {String} $property
+///   Property to prefix
+///
+/// @param {*} $value
+///   Value to use
+///
+/// @param {List} $prefixes
+///   Prefixes to define
+///
+/// @example scss - Usage
+///   .wrapper {
+///     @include prefixer(border-radius, 10px, webkit ms spec);
+///   }
+///
+/// @example css - CSS Output
+///   .wrapper {
+///     -webkit-border-radius: 10px;
+///     -moz-border-radius: 10px;
+///     border-radius: 10px;
+///   }
+///
+/// @require {variable} $prefix-for-webkit
+/// @require {variable} $prefix-for-mozilla
+/// @require {variable} $prefix-for-microsoft
+/// @require {variable} $prefix-for-opera
+/// @require {variable} $prefix-for-spec
 
 @mixin prefixer ($property, $value, $prefixes) {
   @each $prefix in $prefixes {
