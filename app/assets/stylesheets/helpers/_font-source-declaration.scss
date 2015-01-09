@@ -19,16 +19,23 @@
   $src: null;
 
   $formats-map: (
-    eot:   $font-url + "(\"#{$file-path}.eot?#iefix\")" format("embedded-opentype"),
-    woff2: $font-url + "(\"#{$file-path}.woff2\")" format("woff2"),
-    woff:  $font-url + "(\"#{$file-path}.woff\")" format("woff"),
-    ttf:   $font-url + "(\"#{$file-path}.ttf\")" format("truetype"),
-    svg:   $font-url + "(\"#{$file-path}.svg##{$font-family}\")" format("svg")
+    eot:   "#{$file-path}.eot?#iefix" format("embedded-opentype"),
+    woff2: "#{$file-path}.woff2" format("woff2"),
+    woff:  "#{$file-path}.woff" format("woff"),
+    ttf:   "#{$file-path}.ttf" format("truetype"),
+    svg:   "#{$file-path}.svg##{$font-family}" format("svg")
   );
 
-  @each $format, $file-path in $formats-map {
-    @if contains($file-formats, $format) {
-      $src: append($src, $file-path, comma);
+  @each $key, $values in $formats-map {
+    @if contains($file-formats, $key) {
+      $file-path: nth($values, 1);
+      $font-format: nth($values, 2);
+
+      @if $asset-pipeline == true {
+        $src: append($src, font-url($file-path) $font-format, comma);
+      } @else {
+        $src: append($src, url($file-path) $font-format, comma);
+      }
     }
   }
 
