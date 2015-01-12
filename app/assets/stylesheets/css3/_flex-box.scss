@@ -11,13 +11,14 @@
 @mixin display-box {
   display: -webkit-box;
   display: -moz-box;
-  display: -ms-flexbox; // IE 10
-  display: box;
+  display: -ms-flexbox; // IE 10, 2011 syntax
+  // no one implemented the 2009 spec unprefixed
 }
 
 @mixin box-orient($orient: inline-axis) {
-// horizontal|vertical|inline-axis|block-axis|inherit
-  @include prefixer(box-orient, $orient, webkit moz spec);
+  // horizontal|vertical|inline-axis|block-axis|inherit
+  // 2009 syntax, so spec property never existed
+  @include prefixer(box-orient, $orient, webkit moz);
 }
 
 @mixin box-pack($pack: start) {
@@ -49,7 +50,7 @@
 }
 
 @mixin box-flex($value: 0.0) {
-  @include prefixer(box-flex, $value, webkit moz spec);
+  @include prefixer(box-flex, $value, webkit moz);
   -ms-flex: $value; // IE 10
 }
 
@@ -69,7 +70,7 @@
     // 2009
     display: -webkit-box;
     display: -moz-box;
-    display: box;
+    // no one implemented the 2009 spec unprefixed
 
     // 2012
     display: -webkit-flex;
@@ -103,7 +104,7 @@
   $flex-grow: nth($value, 1);
 
   // 2009
-  @include prefixer(box-flex, $flex-grow, webkit moz spec);
+  @include prefixer(box-flex, $flex-grow, webkit moz);
 
   // 2011 (IE 10), 2012
   @include prefixer(flex, $value, webkit moz ms spec);
@@ -139,7 +140,7 @@
   }
 
   // 2009
-  @include prefixer(box-orient, $value-2009, webkit moz spec);
+  @include box-orient($value-2009);
   @if $direction == "reverse" {
     @include prefixer(box-direction, $direction, webkit moz spec);
   }
