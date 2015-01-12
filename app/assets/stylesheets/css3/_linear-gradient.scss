@@ -3,7 +3,8 @@
                        $G5: null, $G6: null,
                        $G7: null, $G8: null,
                        $G9: null, $G10: null,
-                       $fallback: null) {
+                       $fallback: null,
+                       $transparency: false) {
   // Detect what type of value exists in $pos
   $pos-type: type-of(nth($pos, 1));
   $pos-spec: null;
@@ -30,6 +31,11 @@
   // If $fallback is a color use that color as the fallback color
   @if (type-of($fallback) == color) or ($fallback == "transparent") {
     $fallback-color: $fallback;
+  }
+
+  // If $transparency is true use white transparency as the fallback color
+  @if ($transparency) {
+    $fallback-color: rgba(255, 255, 255, 0);
   }
 
   background-color: $fallback-color;
