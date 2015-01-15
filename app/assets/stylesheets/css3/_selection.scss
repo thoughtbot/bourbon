@@ -1,7 +1,7 @@
-@mixin selection {
+@mixin selection($for-parent: false) {
   $before-colons: "";
 
-  @if & {
+  @if $for-parent {
     $before-colons: "&"
   }
 
