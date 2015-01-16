@@ -18,7 +18,7 @@ The mixins contain vendor specific prefixes for all CSS3 properties for support 
 ## Requirements
 
 - [Sass](https://github.com/sass/sass) 3.3+
-- :warning: If you are using **LibSass**, you need to [use Bourbon 3.2.3](#installing-older-versions-of-bourbon).
+- :warning: If you are using **LibSass**, you need to [use Bourbon 3.2.4](#installing-older-versions-of-bourbon).
 
 ## Installation
 
@@ -99,7 +99,7 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
 2. Reinstall the Bourbon gem, using the `-v` flag to specify the version you need:
 
   ```bash
-  gem install bourbon -v 3.2.3
+  gem install bourbon -v 3.2.4
   ```
 
 3. Follow the [instructions above](#installation) to install Bourbon into your project.
