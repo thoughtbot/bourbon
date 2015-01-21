@@ -4,15 +4,23 @@
     <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss">View source</a>
     <a class="view-spec" href="//developer.mozilla.org/en-US/docs/Web/CSS/@font-face">View spec</a>
   </header>
-  <p>A simple <code>@font-face</code> mixin allowing easier custom fonts integration, like so:</p>
-  <p>The mixin also takes an optional <code>$asset-pipeline: true</code> argument for use with the Rails asset pipeline.</p>
+  <p>Generates an <code>@font-face</code> declaration. Accepts arugments for weight, style, usage with the Rails Asset Pipeline and file formats.</p>
 
 {% highlight scss %}
-@include font-face(SourceSansPro, "/fonts/Source_Sans_Pro/SourceSansPro-Regular");
-@include font-face(SourceSansPro, "/fonts/Source_Sans_Pro/SourceSansPro-Bold", bold);
-@include font-face(SourceSansPro, "/fonts/Source_Sans_Pro/SourceSansPro-Italic", normal, italic);
+@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-regular");
+@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-bold", bold);
+@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-italic", normal, italic);
+{% endhighlight %}
 
-// Rails asset-pipeline - place fonts in app/assets/fonts/
-@include font-face(SourceSansPro, "Source_Sans_Pro/SourceSansPro-Regular", normal, $asset-pipeline: true);
+<p>The <code>$file-formats</code> argument allows you specify your font’s file formats (the default is <code>eot woff2 woff ttf svg</code>:</p>
+
+{% highlight scss %}
+@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-regular", $file-formats: eot woff2 woff);
+{% endhighlight %}
+
+<p>You can also use the Rails Asset Pipeline (place the fonts in <code>app/assets/fonts/</code>:</p>
+
+{% highlight scss %}
+@include font-face("Source Sans Pro", "source-sans-pro/source-sans-pro-regular", normal, $asset-pipeline: true, $file-formats: eot woff ttf));
 {% endhighlight %}
 </article>
