@@ -58,9 +58,7 @@
 }
 
 @mixin transition-property ($properties...) {
-   -webkit-transition-property: transition-property-names($properties, 'webkit');
-      -moz-transition-property: transition-property-names($properties, 'moz');
-           transition-property: transition-property-names($properties, false);
+  @include prefixer(transition-property, $properties, webkit moz spec);
 }
 
 @mixin transition-duration ($times...) {
