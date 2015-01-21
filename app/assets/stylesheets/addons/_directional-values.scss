@@ -1,5 +1,6 @@
-/// directional-property mixins are shorthands
-/// for writing properties like the following
+@charset "UTF-8";
+
+/// Directional-property mixins are shorthands for writing properties like the following
 ///
 /// @ignore You can also use `false` instead of `null`.
 ///
@@ -8,17 +9,17 @@
 ///
 /// @example scss - Usage
 ///   .wrapper {
-///     @include margin(null 0 10px);
 ///     @include border-style(dotted null);
+///     @include margin(null 0 10px);
 ///   }
 ///
 /// @example css - CSS Output
 ///   .wrapper {
-///     margin-right: 0;
+///     border-bottom-style: dotted;
+///     border-top-style: dotted;
 ///     margin-bottom: 10px;
 ///     margin-left: 0;
-///     border-top-style: dotted;
-///     border-bottom-style: dotted;
+///     margin-right: 0;
 ///   }
 ///
 /// @require {function} contains-falsy
@@ -46,10 +47,6 @@
   @return $output;
 }
 
-
-
-
-
 /// Checks a list of values to see if it contains a falsy one.
 /// If it does, it returns `false`, else `true`.
 ///
@@ -67,10 +64,6 @@
 
   @return false;
 }
-
-
-
-
 
 /// Output directional properties, for instance `margin`.
 ///
