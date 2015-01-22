@@ -8,13 +8,13 @@
 ///   List of directional values
 ///
 /// @example scss - Usage
-///   .wrapper {
+///   .element {
 ///     @include border-style(dotted null);
 ///     @include margin(null 0 10px);
 ///   }
 ///
 /// @example css - CSS Output
-///   .wrapper {
+///   .element {
 ///     border-bottom-style: dotted;
 ///     border-top-style: dotted;
 ///     margin-bottom: 10px;
@@ -29,10 +29,10 @@
 @function collapse-directionals($vals) {
   $output: null;
 
-  $a: nth( $vals, 1 );
-  $b: if( length($vals) < 2, $a, nth($vals, 2));
-  $c: if( length($vals) < 3, $a, nth($vals, 3));
-  $d: if( length($vals) < 2, $a, nth($vals, if( length($vals) < 4, 2, 4) ));
+  $a: nth($vals, 1);
+  $b: if(length($vals) < 2, $a, nth($vals, 2));
+  $c: if(length($vals) < 3, $a, nth($vals, 3));
+  $d: if(length($vals) < 2, $a, nth($vals, if(length($vals) < 4, 2, 4)));
 
   @if $a == 0 { $a: 0; }
   @if $b == 0 { $b: 0; }
@@ -94,99 +94,21 @@
 
     @if length($vals) == 1 {
       @if nth($vals, 1) { #{$right}: nth($vals, 1); }
-    }
-    @else {
+    } @else {
       @if nth($vals, 2) { #{$right}: nth($vals, 2); }
     }
 
-    // prop: top/bottom right/left
     @if length($vals) == 2 {
       @if nth($vals, 1) { #{$bottom}: nth($vals, 1); }
       @if nth($vals, 2) { #{$left}:   nth($vals, 2); }
-    }
-    // prop: top right/left bottom
-    @else if length($vals) == 3 {
+    } @else if length($vals) == 3 {
       @if nth($vals, 3) { #{$bottom}: nth($vals, 3); }
       @if nth($vals, 2) { #{$left}:   nth($vals, 2); }
-    }
-    // prop: top right bottom left
-    @else if length($vals) == 4 {
+    } @else if length($vals) == 4 {
       @if nth($vals, 3) { #{$bottom}: nth($vals, 3); }
       @if nth($vals, 4) { #{$left}:   nth($vals, 4); }
     }
-  }
-  // prop: top/right/bottom/left
-  @else {
+  } @else {
     #{$all}: $vals;
   }
-}
-
-/// Margin helper
-///
-/// @access public
-///
-/// @param {Arglist} $vals
-///   List of arguments
-///
-/// @require {mixin} directional-property
-///
-/// @output `margin`
-@mixin margin($vals...) {
-  @include directional-property(margin, false, $vals...);
-}
-
-/// Padding helper
-///
-/// @access public
-///
-/// @param {Arglist} $vals
-///   List of arguments
-///
-/// @require {mixin} directional-property
-///
-/// @output `padding`
-@mixin padding($vals...) {
-  @include directional-property(padding, false, $vals...);
-}
-
-/// Border-style helper
-///
-/// @access public
-///
-/// @param {Arglist} $vals
-///   List of arguments
-///
-/// @require {mixin} directional-property
-///
-/// @output `border-style`
-@mixin border-style($vals...) {
-  @include directional-property(border, style, $vals...);
-}
-
-/// Border-color helper
-///
-/// @access public
-///
-/// @param {Arglist} $vals
-///   List of arguments
-///
-/// @require {mixin} directional-property
-///
-/// @output `border-color`
-@mixin border-color($vals...) {
-  @include directional-property(border, color, $vals...);
-}
-
-/// Border-width helper
-///
-/// @access public
-///
-/// @param {Arglist} $vals
-///   List of arguments
-///
-/// @require {mixin} directional-property
-///
-/// @output `border-width`
-@mixin border-width($vals...) {
-  @include directional-property(border, width, $vals...);
 }

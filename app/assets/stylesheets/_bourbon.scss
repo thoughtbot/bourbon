@@ -8,6 +8,7 @@
 @import "settings/asset-pipeline";
 
 @import "helpers/convert-units";
+@import "helpers/directional-values";
 @import "helpers/font-source-declaration";
 @import "helpers/gradient-positions-parser";
 @import "helpers/is-num";
@@ -42,7 +43,6 @@
 @import "css3/background";
 @import "css3/background-image";
 @import "css3/border-image";
-@import "css3/border-radius";
 @import "css3/calc";
 @import "css3/columns";
 @import "css3/filter";
@@ -63,12 +63,17 @@
 @import "css3/transition";
 @import "css3/user-select";
 
+@import "addons/border-color";
+@import "addons/border-radius";
+@import "addons/border-style";
+@import "addons/border-width";
 @import "addons/buttons";
 @import "addons/clearfix";
-@import "addons/directional-values";
 @import "addons/ellipsis";
 @import "addons/font-stacks";
 @import "addons/hide-text";
+@import "addons/margin";
+@import "addons/padding";
 @import "addons/position";
 @import "addons/prefixer";
 @import "addons/retina-image";
