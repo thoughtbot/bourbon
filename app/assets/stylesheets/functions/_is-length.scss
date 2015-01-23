@@ -1,4 +1,8 @@
-// Check for a valid length
+@charset "UTF-8";
+
+/// Checks for a valid CSS length.
+///
+/// @param {String} $value
 
 @function is-length($value) {
   @return type-of($value) != "null" and (str-slice($value + "", 1, 4) == 'calc'
