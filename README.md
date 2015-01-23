@@ -17,8 +17,7 @@ The mixins contain vendor specific prefixes for all CSS3 properties for support 
 
 ## Requirements
 
-- [Sass](https://github.com/sass/sass) 3.3+
-- :warning: If you are using **LibSass**, you need to [use Bourbon 3.2.4](#installing-older-versions-of-bourbon).
+- [Sass](https://github.com/sass/sass) 3.4+ or [LibSass](https://github.com/sass/libsass) 3.1+
 
 ## Installation
 
