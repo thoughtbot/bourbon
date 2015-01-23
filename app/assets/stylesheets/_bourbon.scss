@@ -11,6 +11,7 @@
 @import "functions/color-lightness";
 @import "functions/contains";
 @import "functions/is-length";
+@import "functions/is-number";
 @import "functions/is-size";
 @import "functions/px-to-em";
 @import "functions/px-to-rem";
@@ -25,7 +26,6 @@
 @import "helpers/directional-values";
 @import "helpers/font-source-declaration";
 @import "helpers/gradient-positions-parser";
-@import "helpers/is-num";
 @import "helpers/linear-angle-parser";
 @import "helpers/linear-gradient-parser";
 @import "helpers/linear-positions-parser";
