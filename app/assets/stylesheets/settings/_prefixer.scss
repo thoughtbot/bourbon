@@ -1,3 +1,9 @@
+@charset "UTF-8";
+
+/// A global setting to enable or disable vendor prefixes
+///
+/// @type Map
+
 $global-prefixes: (
   "webkit": true,
   "moz": true,
