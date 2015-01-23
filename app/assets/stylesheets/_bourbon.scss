@@ -7,6 +7,20 @@
 @import "settings/px-to-em";
 @import "settings/asset-pipeline";
 
+@import "functions/assign";
+@import "functions/color-lightness";
+@import "functions/contains";
+@import "functions/is-length";
+@import "functions/is-size";
+@import "functions/px-to-em";
+@import "functions/px-to-rem";
+@import "functions/shade";
+@import "functions/strip-units";
+@import "functions/tint";
+@import "functions/transition-property-name";
+@import "functions/unpack";
+@import "functions/modular-scale";
+
 @import "helpers/convert-units";
 @import "helpers/directional-values";
 @import "helpers/font-source-declaration";
@@ -22,20 +36,6 @@
 @import "helpers/render-gradients";
 @import "helpers/shape-size-stripper";
 @import "helpers/str-to-num";
-
-@import "functions/assign";
-@import "functions/color-lightness";
-@import "functions/contains";
-@import "functions/is-length";
-@import "functions/is-size";
-@import "functions/px-to-em";
-@import "functions/px-to-rem";
-@import "functions/shade";
-@import "functions/strip-units";
-@import "functions/tint";
-@import "functions/transition-property-name";
-@import "functions/unpack";
-@import "functions/modular-scale";
 
 @import "css3/animation";
 @import "css3/appearance";
