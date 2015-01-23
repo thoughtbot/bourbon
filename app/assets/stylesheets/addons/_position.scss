@@ -1,7 +1,29 @@
-// Set element positioning in a single statement
+@charset "UTF-8";
+
+/// Provides a quick method for setting an element’s position. Use a `null` value to “skip” a side.
+///
+/// @param {Position} $position [relative]
+///   A CSS position value
+///
+/// @param {Arglist} $coordinates [null null null null]
+///   List of values that correspond to the 4-value syntax for the edges of a box
+///
+/// @example scss - Usage
+///   .element {
+///     @include position(absolute, 0 null null 10em);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     left: 10em;
+///     position: absolute;
+///     top: 0;
+///   }
+///
+/// @require {function} is-length
+/// @require {function} unpack
 
 @mixin position($position: relative, $coordinates: null null null null) {
-
   @if type-of($position) == list {
     $coordinates: $position;
     $position: relative;
