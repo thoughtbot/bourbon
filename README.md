@@ -2,28 +2,23 @@
 
 This website is powered by [Jekyll](http://jekyllrb.com). Here’s how to get it working locally:
 
-1. Make sure you have Jekyll and [Pygmentize](https://github.com/djanowski/pygmentize) (for code highlighting) installed:
+1. Run the setup script:
 
   ```bash
-  gem install jekyll
-  ```
-  ```bash
-  gem install pygmentize
+  bin/setup
   ```
 
-2. Run the server and watch for changes:
+2. After setting up, you can run the application using [foreman]:
 
   ```bash
-  jekyll serve -w
+  foreman start
   ```
 
-3. Watch and compile Sass:
+If you don't have `foreman`, see [Foreman's install instructions][foreman]. It
+is [purposefully excluded from the project's `Gemfile`][exclude].
 
-  ```bash
-  sass --watch stylesheets/home:stylesheets stylesheets/docs:stylesheets
-  ```
-
-  _Jekyll now has a [built-in](http://jekyllrb.com/docs/assets) Sass convertor, but it sucks._
+[foreman]: https://github.com/ddollar/foreman
+[exclude]: https://github.com/ddollar/foreman/pull/437#issuecomment-41110407
 
 ***
 
