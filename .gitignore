@@ -1,7 +1,7 @@
-_site
-.DS_store
-.sass-cache
 *gem
 *swp
+.DS_store
+.sass-cache
+_site
 Gemfile.lock
 tmp
