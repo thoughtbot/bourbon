@@ -30,10 +30,7 @@
       $webkit: append($webkit, $list1);
       $moz:    append($moz,    $list2);
       $spec:   append($spec,   $list3);
-    }
-
-    // Create lists for non-prefixed transition properties
-    @else {
+    } @else {
       $webkit: append($webkit, $list, comma);
       $moz:    append($moz,    $list, comma);
       $spec:   append($spec,   $list, comma);
@@ -44,15 +41,12 @@
     -webkit-transition: $webkit;
        -moz-transition: $moz;
             transition: $spec;
-  }
-  @else {
+  } @else {
     @if length($properties) >= 1 {
-      @include prefixer(transition, $properties, webkit moz);
-    }
-
-    @else {
+      @include prefixer(transition, $properties, webkit moz spec);
+    } @else {
       $properties: all 0.15s ease-out 0s;
-      @include prefixer(transition, $properties, webkit moz);
+      @include prefixer(transition, $properties, webkit moz spec);
     }
   }
 }
@@ -64,14 +58,14 @@
 }
 
 @mixin transition-duration($times...) {
-  @include prefixer(transition-duration, $times, webkit moz);
+  @include prefixer(transition-duration, $times, webkit moz spec);
 }
 
 @mixin transition-timing-function($motions...) {
-// ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
-  @include prefixer(transition-timing-function, $motions, webkit moz);
+  // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+  @include prefixer(transition-timing-function, $motions, webkit moz spec);
 }
 
 @mixin transition-delay($times...) {
-  @include prefixer(transition-delay, $times, webkit moz);
+  @include prefixer(transition-delay, $times, webkit moz spec);
 }

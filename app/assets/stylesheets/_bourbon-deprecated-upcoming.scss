@@ -405,8 +405,7 @@
 }
 
 @mixin box-sizing($box) {
-  // content-box | border-box | inherit
-  @include prefixer(box-sizing, $box, webkit moz);
+  @include prefixer(box-sizing, $box, webkit moz spec);
 
   @warn "The box-sizing mixin is deprecated and will be removed in the next major version release. This property can now be used un-prefixed.";
 }
