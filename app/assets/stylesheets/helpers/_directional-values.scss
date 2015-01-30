@@ -47,24 +47,6 @@
   @return $output;
 }
 
-/// Checks a list of values to see if it contains a falsy one.
-/// If it does, it returns `false`, else `true`.
-///
-/// @param {List} $list
-///   List of values to check to see if it contains a falsy one
-///
-/// @return {Bool}
-
-@function contains-falsy($list) {
-  @each $item in $list {
-    @if not $item {
-      @return true;
-    }
-  }
-
-  @return false;
-}
-
 /// Output directional properties, for instance `margin`.
 ///
 /// @access private
