@@ -1,0 +1,35 @@
+@import "setup";
+
+@mixin color-length($value) {
+  @if is-length($value) {
+    color: #fff;
+  }
+}
+
+.integer {
+  @include color-length(1);
+}
+
+.pixels {
+  @include color-length(10px);
+}
+
+.ems {
+  @include color-length(10em);
+}
+
+.percent {
+  @include color-length(10%);
+}
+
+.calc {
+  @include color-length(calc(2em - 5px));
+}
+
+.string {
+  @include color-length("stringy");
+}
+
+.null {
+  @include color-length(null);
+}
