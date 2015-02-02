@@ -8,7 +8,9 @@ RSpec::Matchers.define :have_rule do |expected|
     if @rules.empty?
       %{no CSS for selector #{selector} were found}
     else
-      %{expected selector #{selector} to have CSS rule "#{expected}"}
+      rules = @rules.join("; ")
+      %{Expected selector #{selector} to have CSS rule "#{expected}".
+        Had "#{rules}".}
     end
   end
 
