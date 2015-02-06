@@ -4,8 +4,7 @@
 @function font-url-prefixer($asset-pipeline) {
   @if $asset-pipeline == true {
     @return font-url;
-  }
-  @else {
+  } @else {
     @return url;
   }
 }

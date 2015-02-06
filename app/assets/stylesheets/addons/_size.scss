@@ -39,17 +39,13 @@
 
   @if is-size($height) {
     height: $height;
-  }
-
-  @else {
+  } @else {
     @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
   }
 
   @if is-size($width) {
     width: $width;
-  }
-
-  @else {
+  } @else {
     @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
   }
 }
