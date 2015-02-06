@@ -6,19 +6,18 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "_site",
-    "app/",
-    "bin/",
-    "bourbon.gemspec",
     "CONTRIBUTING.md",
-    "features/",
     "Gemfile",
     "Gemfile.lock",
-    "lib/",
-    "package.json",
     "Rakefile",
+    "_site",
+    "bin",
+    "bourbon.gemspec",
+    "features",
+    "lib",
+    "package.json",
     "sache.json",
-    "spec/"
+    "spec"
   ],
   "keywords": [
     "css",
