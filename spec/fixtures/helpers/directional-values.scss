@@ -1,0 +1,29 @@
+@import "setup";
+
+.four {
+  padding: collapse-directionals(10px 20px 30px 40px);
+}
+
+.three {
+  padding: collapse-directionals(5px 10px 5px 20px);
+}
+
+.two {
+  padding: collapse-directionals(50px 100px 50px 100px);
+}
+
+.one {
+  padding: collapse-directionals(10px 10px 10px 10px);
+}
+
+.border-all {
+  @include directional-property(border, width, 2px 5px 8px 12px);
+}
+
+.border-top {
+  @include directional-property(border, top, 10px);
+}
+
+.border-color {
+  @include directional-property(border, color, #ffffff #000000);
+}
