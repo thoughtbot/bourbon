@@ -1,0 +1,52 @@
+<article id="buttons-variable" data-type="variable">
+  <header class="title-bar">
+    <h2 class="title">Buttons (Variable)</h2>
+    <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_buttons.scss">View source</a>
+  </header>
+  <p>Generates variables for all HTML button elements. Please note that you must use interpolation on the variable: <code>#{$all-buttons}</code>.</p>
+
+{% highlight scss %}
+#{$all-buttons} {
+  background-color: #f00;
+}
+
+#{$all-buttons-focus},
+#{$all-buttons-hover} {
+  background-color: #0f0;
+}
+
+#{$all-buttons-active} {
+  background-color: #00f;
+}
+{% endhighlight %}
+
+<h3>CSS Output</h3>
+
+{% highlight css %}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #f00;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: #0f0;
+}
+
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: #00f;
+}
+{% endhighlight %}
+
+</article>
