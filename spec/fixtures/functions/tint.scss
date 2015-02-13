@@ -1,0 +1,17 @@
+@import "setup";
+
+.tint-white {
+  color: tint(#ffffff, 75%);
+}
+
+.tint-black {
+  color: tint(#000, 50%);
+}
+
+.tint-red {
+  color: tint(#ff0000, 25%);
+}
+
+.tint-gray {
+  color: tint(#aaaaaa, 33%);
+}
