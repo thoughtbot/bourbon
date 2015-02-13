@@ -1,0 +1,15 @@
+@import "setup";
+
+.unitless {
+  font-size: rem(12);
+}
+
+.px {
+  font-size: rem(16px);
+}
+
+$em-base: 20px;
+
+.px-with-modified-base {
+  font-size: rem(20);
+}
