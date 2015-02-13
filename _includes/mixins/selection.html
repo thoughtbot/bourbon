@@ -4,38 +4,37 @@
       <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_selection.scss">View source</a>
       <a class="view-spec" href="//developer.mozilla.org/en-US/docs/Web/CSS/::selection">View spec</a>
   </header>
-  <p>Outputs vendor-prefixed selection selectors for styling. Can be included at base level.</p>
+  <p>Outputs the spec and prefixed versions of the <code>::selection</code> pseudo-element. Pass an argument of <code>true</code> to take the current element into consideration.</p>
 
 {% highlight scss %}
 @include selection {
-  background-color: #fff;
+  background-color: #ffbb52;
 }
 
-p {
-  @include selection {
-    background-color: #000;
-    color: #fff;
+.element {
+  @include selection(true) {
+    background-color: #ffbb52;
   }
 }
 {% endhighlight %}
 
 <h3>CSS Output</h3>
 
-{% highlight scss %}
-::selection {
-  background-color: #fff;
-}
+{% highlight css %}
 ::-moz-selection {
-  background-color: #fff;
+  background-color: #ffbb52;
 }
 
-p::selection {
-  background-color: #000;
-  color: #fff;
+::selection {
+  background-color: #ffbb52;
 }
-p::-moz-selection {
-  background-color: #000;
-  color: #fff;
+
+.element::-moz-selection {
+  background-color: #ffbb52;
+}
+
+.element::selection {
+  background-color: #ffbb52;
 }
 {% endhighlight %}
 </article>
