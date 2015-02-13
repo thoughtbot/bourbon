@@ -1,0 +1,17 @@
+@import "setup";
+
+.single {
+  padding: unpack(10px);
+}
+
+.double {
+  padding: unpack(1em 2em);
+}
+
+.triple {
+  padding: unpack(10px 20px 0);
+}
+
+.quadruple {
+  padding: unpack(0 calc(1em + 10px) 20px 50px);
+}
