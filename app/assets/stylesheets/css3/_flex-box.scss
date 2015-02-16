@@ -114,7 +114,7 @@
   // Alt values.
   $value-2009: $value;
   $value-2011: $value;
-  $direction: "normal";
+  $direction: normal;
 
   @if $value == row {
     $value-2009: horizontal;
@@ -130,9 +130,7 @@
 
   // 2009
   @include prefixer(box-orient, $value-2009, webkit moz spec);
-  @if $direction == "reverse" {
-    @include prefixer(box-direction, $direction, webkit moz spec);
-  }
+  @include prefixer(box-direction, $direction, webkit moz spec);
 
   // 2012
   @include prefixer(flex-direction, $value, webkit moz spec);
