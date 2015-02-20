@@ -1,0 +1,13 @@
+@import "setup";
+
+.string-to-integer {
+  height: _str-to-num("10");
+}
+
+.string-to-px {
+  height: _str-to-num("15px");
+}
+
+.string-to-negative-px {
+  height: _str-to-num("-25px");
+}
