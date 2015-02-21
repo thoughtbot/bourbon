@@ -1,7 +1,6 @@
 .gitignore
 .hound.yml
 _site
-app/
 bin/
 bourbon.gemspec
 bower.json
