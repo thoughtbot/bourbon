@@ -2,7 +2,7 @@
 
 /// Provides a quick method for targeting `padding` on specific sides of a box. Use a `null` value to “skip” a side.
 ///
-/// @param {Arglist} $vals
+/// @param {Arglist} $values
 ///   List of arguments
 ///
 /// @example scss - Usage
@@ -21,6 +21,6 @@
 ///
 /// @output `padding`
 
-@mixin padding($vals...) {
-  @include directional-property(padding, false, $vals...);
+@mixin padding($values...) {
+  @include directional-property(padding, false, $values...);
 }

@@ -2,7 +2,7 @@
 
 /// Provides a quick method for targeting `border-width` on specific sides of a box. Use a `null` value to “skip” a side.
 ///
-/// @param {Arglist} $vals
+/// @param {Arglist} $values
 ///   List of arguments
 ///
 /// @example scss - Usage
@@ -20,6 +20,6 @@
 ///
 /// @output `border-width`
 
-@mixin border-width($vals...) {
-  @include directional-property(border, width, $vals...);
+@mixin border-width($values...) {
+  @include directional-property(border, width, $values...);
 }
