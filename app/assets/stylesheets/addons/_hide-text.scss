@@ -1,4 +1,6 @@
-/// Hides the text in an element, commonly used to show an image. Some elements will need block-level styles applied.
+@charset "UTF-8";
+
+/// Hides the text in an element, commonly used to show an image instead. Some elements will need block-level styles applied.
 ///
 /// @link http://zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
 ///
@@ -13,15 +15,9 @@
 ///     text-indent: 101%;
 ///     white-space: nowrap;
 ///   }
-///
-/// @todo Remove height argument in v5.0.0
 
-@mixin hide-text($height: null) {
+@mixin hide-text {
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
-
-  @if $height {
-    @warn "The `hide-text` mixin has changed and no longer requires a height. The height argument will no longer be accepted in v5.0.0";
-  }
 }
