@@ -2,7 +2,7 @@
 
 /// Provides a quick method for targeting `border-style` on specific sides of a box. Use a `null` value to “skip” a side.
 ///
-/// @param {Arglist} $vals
+/// @param {Arglist} $values
 ///   List of arguments
 ///
 /// @example scss - Usage
@@ -20,6 +20,6 @@
 ///
 /// @output `border-style`
 
-@mixin border-style($vals...) {
-  @include directional-property(border, style, $vals...);
+@mixin border-style($values...) {
+  @include directional-property(border, style, $values...);
 }

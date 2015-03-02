@@ -2,7 +2,7 @@
 
 /// Provides a quick method for targeting `margin` on specific sides of a box. Use a `null` value to “skip” a side.
 ///
-/// @param {Arglist} $vals
+/// @param {Arglist} $values
 ///   List of arguments
 ///
 /// @example scss - Usage
@@ -21,6 +21,6 @@
 ///
 /// @output `margin`
 
-@mixin margin($vals...) {
-  @include directional-property(margin, false, $vals...);
+@mixin margin($values...) {
+  @include directional-property(margin, false, $values...);
 }
