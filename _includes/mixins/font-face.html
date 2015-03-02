@@ -7,20 +7,20 @@
   <p>Generates an <code>@font-face</code> declaration. Accepts arugments for weight, style, usage with the Rails Asset Pipeline and file formats.</p>
 
 {% highlight scss %}
-@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-regular");
-@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-bold", bold);
-@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-italic", normal, italic);
+@include font-face("source-sans-pro", "/fonts/source-sans-pro/source-sans-pro-regular");
+@include font-face("source-sans-pro", "/fonts/source-sans-pro/source-sans-pro-bold", bold);
+@include font-face("source-sans-pro", "/fonts/source-sans-pro/source-sans-pro-italic", normal, italic);
 {% endhighlight %}
 
 <p>The <code>$file-formats</code> argument allows you specify your font’s file formats (the default is <code>eot woff2 woff ttf svg</code>:</p>
 
 {% highlight scss %}
-@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-regular", $file-formats: eot woff2 woff);
+@include font-face("source-sans-pro", "/fonts/source-sans-pro/source-sans-pro-regular", $file-formats: eot woff2 woff);
 {% endhighlight %}
 
 <p>You can also use the Rails Asset Pipeline (place the fonts in <code>app/assets/fonts/</code>:</p>
 
 {% highlight scss %}
-@include font-face("Source Sans Pro", "source-sans-pro/source-sans-pro-regular", normal, $asset-pipeline: true, $file-formats: eot woff ttf));
+@include font-face("source-sans-pro", "source-sans-pro/source-sans-pro-regular", normal, $asset-pipeline: true, $file-formats: eot woff ttf));
 {% endhighlight %}
 </article>
