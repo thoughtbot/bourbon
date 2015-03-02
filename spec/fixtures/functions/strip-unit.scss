@@ -1,0 +1,17 @@
+@import "setup";
+
+.px {
+  width: strip-unit(10px);
+}
+
+.em {
+  width: strip-unit(2em);
+}
+
+.rem {
+  width: strip-unit(1.5rem);
+}
+
+.percent {
+  width: strip-unit(20%);
+}
