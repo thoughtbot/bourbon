@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe "strip-units" do
+describe "strip-unit" do
   before(:all) do
-    ParserSupport.parse_file("functions/strip-units")
+    ParserSupport.parse_file("functions/strip-unit")
   end
 
   context "called with px" do
