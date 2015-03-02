@@ -28,7 +28,7 @@
 @mixin prefixer($property, $value, $prefixes: ()) {
   @each $prefix in $prefixes {
     @if not map-has-key($global-prefixes, $prefix) {
-      @warn "Unrecognized prefix: `#{$prefix}`.";
+      @error "Unrecognized prefix: `#{$prefix}`.";
     }
 
     @if map-get($global-prefixes, $prefix) {
