@@ -5,9 +5,9 @@
 }
 
 .size-both {
-  @include size(1em 2em);
+  @include size(1em, 2em);
 }
 
 .size-auto {
-  @include size(100px auto);
+  @include size(100px, auto);
 }
