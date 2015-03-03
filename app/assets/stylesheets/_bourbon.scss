@@ -4,9 +4,9 @@
 // MIT License
 
 @import "settings/asset-pipeline";
+@import "settings/em-base";
 @import "settings/global-prefixes";
 @import "settings/modular-scale";
-@import "settings/px-to-em";
 
 @import "functions/assign-inputs";
 @import "functions/contains";
