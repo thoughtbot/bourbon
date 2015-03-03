@@ -5,21 +5,21 @@ describe "text-inputs" do
     ParserSupport.parse_file("addons/text-inputs")
 
     @inputs_list = [
-      "input[type=\"color\"]",
-      "input[type=\"date\"]",
-      "input[type=\"datetime\"]",
-      "input[type=\"datetime-local\"]",
-      "input[type=\"email\"]",
-      "input[type=\"month\"]",
-      "input[type=\"number\"]",
-      "input[type=\"password\"]",
-      "input[type=\"search\"]",
-      "input[type=\"tel\"]",
-      "input[type=\"text\"]",
-      "input[type=\"time\"]",
-      "input[type=\"url\"]",
-      "input[type=\"week\"]",
-      "textarea"
+      '[type="color"]',
+      '[type="date"]',
+      '[type="datetime"]',
+      '[type="datetime-local"]',
+      '[type="email"]',
+      '[type="month"]',
+      '[type="number"]',
+      '[type="password"]',
+      '[type="search"]',
+      '[type="tel"]',
+      '[type="text"]',
+      '[type="time"]',
+      '[type="url"]',
+      '[type="week"]',
+      'textarea'
     ]
   end
 
