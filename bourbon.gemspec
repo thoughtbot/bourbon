@@ -1,4 +1,3 @@
-# coding: utf-8
 $:.push File.expand_path('../lib', __FILE__)
 require 'bourbon/version'
 
@@ -17,18 +16,16 @@ to use. No configuration required. The mixins aim to be as vanilla as possible,
 meaning they should be as close to the original CSS syntax as possible.
   DESC
 
-  s.rubyforge_project = 'bourbon'
-
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_dependency('sass', '~> 3.4')
-  s.add_dependency('thor')
+  s.add_runtime_dependency('sass', '~> 3.4')
+  s.add_runtime_dependency('thor')
 
   s.add_development_dependency('aruba')
+  s.add_development_dependency('css_parser')
   s.add_development_dependency('rake')
   s.add_development_dependency('rspec')
-  s.add_development_dependency('css_parser')
 end
