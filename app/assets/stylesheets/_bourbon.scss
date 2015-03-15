@@ -4,7 +4,6 @@
 // MIT License
 
 @import "settings/asset-pipeline";
-@import "settings/em-base";
 @import "settings/global-prefixes";
 @import "settings/modular-scale";
 
@@ -15,7 +14,6 @@
 @import "functions/is-light";
 @import "functions/is-number";
 @import "functions/is-size";
-@import "functions/px-to-em";
 @import "functions/px-to-rem";
 @import "functions/shade";
 @import "functions/strip-unit";
