@@ -28,7 +28,8 @@ meaning they should be as close to the original CSS syntax as possible.
   s.add_dependency('thor')
 
   s.add_development_dependency('aruba')
+  s.add_development_dependency('css_parser')
   s.add_development_dependency('rake')
   s.add_development_dependency('rspec')
-  s.add_development_dependency('css_parser')
+  s.add_development_dependency('scss-lint', '~> 0.35')
 end
