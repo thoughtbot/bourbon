@@ -6,6 +6,8 @@
 ///
 /// @type cubic-bezier
 
+// scss-lint:disable SpaceAfterComma, UnnecessaryMantissa
+
 $ease-in-quad:      cubic-bezier(0.550,  0.085, 0.680, 0.530);
 $ease-in-cubic:     cubic-bezier(0.550,  0.055, 0.675, 0.190);
 $ease-in-quart:     cubic-bezier(0.895,  0.030, 0.685, 0.220);
