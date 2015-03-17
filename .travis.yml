@@ -1,0 +1,7 @@
+branches:
+  except:
+    - gh-pages
+language: ruby
+notifications:
+  email: false
+rvm: 2.2.1
