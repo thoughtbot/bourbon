@@ -5,10 +5,10 @@ describe "buttons" do
     ParserSupport.parse_file("addons/buttons")
 
     @buttons_list = [
-      "button",
-      "input[type=\"button\"]",
-      "input[type=\"reset\"]",
-      "input[type=\"submit\"]"
+      'button',
+      '[type="button"]',
+      '[type="reset"]',
+      '[type="submit"]'
     ]
   end
 
