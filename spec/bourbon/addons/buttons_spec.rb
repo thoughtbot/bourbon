@@ -6,9 +6,9 @@ describe "buttons" do
 
     @buttons_list = %w(
       button
-      input[type="button"]
-      input[type="reset"]
-      input[type="submit"]
+      [type="button"]
+      [type="reset"]
+      [type="submit"]
     )
   end
 

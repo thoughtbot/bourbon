@@ -18,27 +18,27 @@
 ///
 /// @example css - CSS Output
 ///   button,
-///   input[type="button"],
-///   input[type="reset"],
-///   input[type="submit"] {
+///   [type="button"],
+///   [type="reset"],
+///   [type="submit"] {
 ///     background-color: #f00;
 ///   }
 ///
 ///   button:focus,
-///   input[type="button"]:focus,
-///   input[type="reset"]:focus,
-///   input[type="submit"]:focus,
+///   [type="button"]:focus,
+///   [type="reset"]:focus,
+///   [type="submit"]:focus,
 ///   button:hover,
-///   input[type="button"]:hover,
-///   input[type="reset"]:hover,
-///   input[type="submit"]:hover {
+///   [type="button"]:hover,
+///   [type="reset"]:hover,
+///   [type="submit"]:hover {
 ///     background-color: #0f0;
 ///   }
 ///
 ///   button:active,
-///   input[type="button"]:active,
-///   input[type="reset"]:active,
-///   input[type="submit"]:active {
+///   [type="button"]:active,
+///   [type="reset"]:active,
+///   [type="submit"]:active {
 ///     background-color: #00f;
 ///   }
 ///
@@ -49,9 +49,9 @@
 // scss-lint:disable StringQuotes
 
 $buttons-list: 'button',
-               'input[type="button"]',
-               'input[type="reset"]',
-               'input[type="submit"]';
+               '[type="button"]',
+               '[type="reset"]',
+               '[type="submit"]';
 
 $all-buttons:        assign-inputs($buttons-list);
 $all-buttons-active: assign-inputs($buttons-list, active);
