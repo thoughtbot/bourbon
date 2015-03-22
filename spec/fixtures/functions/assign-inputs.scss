@@ -13,7 +13,7 @@ select {
   color: #0000ff;
 }
 
-input[type="file"],
+[type="file"],
 #{assign-inputs($text-inputs-list)} {
   color: #ff00ff;
 }
