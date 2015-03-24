@@ -26,5 +26,5 @@
 
 // Fallback, deprecate at some point?
 @mixin clearfix {
-  @extend %clearfix
+  @extend %clearfix;
 }
