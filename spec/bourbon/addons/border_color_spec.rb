@@ -28,4 +28,11 @@ describe "border-color" do
       expect(".border-color-explicit").to have_rule("border-color: #0000ff #00ff00 #ff0000 #ffff00")
     end
   end
+
+  context "called with null values" do
+    it "writes rules for other three" do
+      expect(".border-color-false-third").to have_ruleset("border-top-color: #00ff00; border-right-color: #ffff00; border-left-color: #0000ff;")
+      expect(".border-color-false-third").to_not have_rule("border-bottom-color: null;")
+    end
+  end
 end

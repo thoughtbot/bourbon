@@ -20,3 +20,7 @@ $purple: #ffff00;
 .border-color-explicit {
   @include border-color($green $blue $red $purple);
 }
+
+.border-color-false-third {
+  @include border-color($blue $purple null $green);
+}
