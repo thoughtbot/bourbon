@@ -1,0 +1,21 @@
+@import "setup";
+
+.border-style-all {
+  @include border-style(solid);
+}
+
+.border-style-alternate {
+  @include border-style(dotted dashed);
+}
+
+.border-style-implied-left {
+  @include border-style(dashed double solid);
+}
+
+.border-style-explicit {
+  @include border-style(dotted groove ridge none);
+}
+
+.border-style-false-third {
+  @include border-style(inset none null double);
+}
