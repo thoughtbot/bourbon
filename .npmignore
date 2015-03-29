@@ -12,3 +12,4 @@ lib/
 Rakefile
 sache.json
 spec/
+.sass-cache
