@@ -1,5 +1,6 @@
 .gitignore
 .hound.yml
+.sass-cache
 _site
 bin/
 bourbon.gemspec
