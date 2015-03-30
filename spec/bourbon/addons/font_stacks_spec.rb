@@ -15,11 +15,11 @@ describe "font-stacks" do
       monospace = '"Bitstream Vera Sans Mono", "Consolas", "Courier", monospace'
       verdana = '"Verdana", "Geneva", sans-serif'
 
-      expect(".georgia").to have_rule("font-family: #{georgia}")
-      expect(".helvetica").to have_rule("font-family: #{helvetica}")
-      expect(".lucida-grande").to have_rule("font-family: #{lucida_grande}")
-      expect(".monospace").to have_rule("font-family: #{monospace}")
-      expect(".verdana").to have_rule("font-family: #{verdana}")
+      expect("$georgia").to have_value(georgia)
+      expect("$helvetica").to have_value(helvetica)
+      expect("$lucida-grande").to have_value(lucida_grande)
+      expect("$monospace").to have_value(monospace)
+      expect("$verdana").to have_value(verdana)
     end
   end
 end
