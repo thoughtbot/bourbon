@@ -1,0 +1,17 @@
+@import "setup";
+
+#{$all-button-inputs} {
+  color: #ff0000;
+}
+
+#{$all-button-inputs-active} {
+  color: #00ff00;
+}
+
+#{$all-button-inputs-focus} {
+  color: #0000ff;
+}
+
+#{$all-button-inputs-hover} {
+  color: #ff00ff;
+}
