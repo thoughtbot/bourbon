@@ -1,0 +1,8 @@
+@import "setup";
+
+.triangle-down {
+  @include triangle(12px, gray, down);
+}
+.triangle-corner {
+  @include triangle(12px 6px, gray lavender, up-left);
+}
