@@ -1,0 +1,5 @@
+@import "setup";
+
+.clearfix {
+  @include clearfix;
+}
