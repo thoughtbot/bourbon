@@ -1,0 +1,25 @@
+@import "setup";
+
+.position-only-type {
+  @include position(relative);
+}
+
+.position-all {
+  @include position(fixed, 1em);
+}
+
+.position-alternate {
+  @include position(absolute, 2px 3px);
+}
+
+.position-implied-left {
+  @include position(relative, 4px 5px 6px);
+}
+
+.position-explicit {
+  @include position(fixed, 7px 8px 9px 10px);
+}
+
+.position-false-third {
+  @include position(static, 11px null null 13px);
+}
