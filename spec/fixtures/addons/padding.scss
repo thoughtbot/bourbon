@@ -1,0 +1,21 @@
+@import "setup";
+
+.padding-all {
+  @include padding(1px);
+}
+
+.padding-alternate {
+  @include padding(2px 3px);
+}
+
+.padding-implied-left {
+  @include padding(4px 5px 6px);
+}
+
+.padding-explicit {
+  @include padding(7px 8px 9px 10px);
+}
+
+.padding-false-third {
+  @include padding(11px 12px null 13px);
+}
