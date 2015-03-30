@@ -12,7 +12,7 @@ describe "triangle" do
                 "width: 0; " +
                 "border-left: 6px solid transparent; " +
                 "border-right: 6px solid transparent; " +
-                "border-top: 6px solid gray;"
+                "border-top: 6px solid #ffffff;"
 
       expect(input).to have_ruleset(ruleset)
     end
@@ -21,9 +21,10 @@ describe "triangle" do
   context "called on element with corner arguments" do
     it "adds triangle on corner" do
       input = ".triangle-corner"
-      ruleset = "border-top-color: #00ff00; " +
-                "border-right-color: #ffff00; " +
-                "border-left-color: #0000ff"
+      ruleset = "height: 0; " +
+                "width: 0; " +
+                "border-top: 6px solid #000000; " +
+                "border-right: 12px solid #aaaaaa;"
 
       expect(input).to have_ruleset(ruleset)
     end

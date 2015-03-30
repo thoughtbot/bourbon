@@ -11,7 +11,7 @@ describe "font-stacks" do
       helvetica = '"Helvetica Neue", "Helvetica", "Roboto", ' +
                   '"Arial", sans-serif'
       lucida_grande = '"Lucida Grande", "Tahoma", "Verdana", ' +
-                  '"Arial", sans-serif'
+                      '"Arial", sans-serif'
       monospace = '"Bitstream Vera Sans Mono", "Consolas", "Courier", monospace'
       verdana = '"Verdana", "Geneva", sans-serif'
 

@@ -8,10 +8,10 @@ describe "position" do
   context "called with one size" do
     it "applies same width to all sides" do
       ruleset = "position: fixed; " +
-          "top: 1em; " +
-          "right: 1em; " +
-          "bottom: 1em; " +
-          "left: 1em;"
+                "top: 1em; " +
+                "right: 1em; " +
+                "bottom: 1em; " +
+                "left: 1em;"
 
       expect(".position-all").to have_ruleset(ruleset)
     end
