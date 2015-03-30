@@ -23,7 +23,9 @@
 ///     appearance: none;
 ///   }
 ///
-/// @require {map} $global-prefixes
+/// @require {variable} $global-prefixes
+///
+/// @author Hugo Giraudel
 
 @mixin prefixer($property, $value, $prefixes: ()) {
   @each $prefix in $prefixes {
