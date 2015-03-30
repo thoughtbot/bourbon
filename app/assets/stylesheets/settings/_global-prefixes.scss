@@ -1,6 +1,20 @@
 @charset "UTF-8";
 
-/// Global variables to enable or disable vendor prefixes
+/// Global setting to disable a specific vendor’s prefix for the `prefixer` mixin. All prefixes are enabled by default.
+///
+/// @see {mixin} prefixer
+///
+/// @example scss - Usage
+///   $global-prefixes: (
+///     "webkit": true,
+///     "moz": true,
+///     "ms": false,
+///     "o": false
+///   );
+///
+/// @type map
+///
+/// @author Hugo Giraudel
 
 $global-prefixes: (
   "webkit": true,
