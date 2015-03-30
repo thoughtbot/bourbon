@@ -20,5 +20,5 @@ Then /^bourbon should not have been generated$/ do
 end
 
 Then /^the output should contain the current version of Bourbon$/ do
-  step %(the output should contain exactly "Bourbon #{Bourbon::VERSION}\n")
+  assert_exact_output("Bourbon #{Bourbon::VERSION}\n", all_output)
 end
