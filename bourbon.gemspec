@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name        = "bourbon"
   s.version     = Bourbon::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Andres Mejia", "Chad Mazzola", "Chris Lloyd", "Gabe Berke-Williams", "J. Edward Dewyea", "Jeremy Raines", "Kyle Fiedler", "Matt Jankowski", "Mike Burns", "Nick Quaranto", "Phil LaPier", "Reda Lemeden", "Travis Haynes", "Tyson Gach", "Will McMahan"]
+  s.authors     = ["Andres Mejia", "Chad Mazzola", "Chris Lloyd", "Christian Reuter", "Gabe Berke-Williams", "Hugo Giraudel", "J. Edward Dewyea", "Jeremy Raines", "Joshua Ogle", "Kyle Fiedler", "Matt Jankowski", "Mike Burns", "Nick Quaranto", "Phil LaPier", "Reda Lemeden", "Travis Haynes", "Tyson Gach", "Will McMahan"]
   s.email       = "design+bourbon@thoughtbot.com"
   s.license     = "MIT"
   s.homepage    = "http://bourbon.io"
