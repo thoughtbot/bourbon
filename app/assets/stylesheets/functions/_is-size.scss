@@ -2,9 +2,12 @@
 
 /// Checks for a valid CSS size.
 ///
-/// @param {String} $value
+/// @access private
+///
+/// @param {string} $value
 ///
 /// @require {function} contains
+///
 /// @require {function} is-length
 
 @function is-size($value) {

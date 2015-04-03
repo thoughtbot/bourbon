@@ -2,20 +2,20 @@
 
 /// Provides a quick method for targeting `padding` on specific sides of a box. Use a `null` value to “skip” a side.
 ///
-/// @param {Arglist} $values
-///   List of arguments
+/// @param {arglist} $values
+/// List of padding values, defined as CSS shorthand
 ///
-/// @example scss - Usage
-///   .element {
-///     @include padding(12vh null 10px 5%);
-///   }
+/// @example scss
+/// .element {
+///   @include padding(12vh null 10px 5%);
+/// }
 ///
-/// @example css - CSS Output
-///   .element {
-///     padding-bottom: 10px;
-///     padding-left: 5%;
-///     padding-top: 12vh;
-///   }
+/// @example css
+/// .element {
+///   padding-bottom: 10px;
+///   padding-left: 5%;
+///   padding-top: 12vh;
+/// }
 ///
 /// @require {mixin} directional-property
 ///
