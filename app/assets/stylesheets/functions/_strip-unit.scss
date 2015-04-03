@@ -2,15 +2,15 @@
 
 /// Strips the unit from a number.
 ///
-/// @param {Number (With Unit)} $value
+/// @param {number} $value
 ///
-/// @example scss - Usage
-///   $dimension: strip-unit(10em);
+/// @example scss
+/// $dimension: strip-unit(10em);
 ///
-/// @example css - CSS Output
-///   $dimension: 10;
+/// @example css
+/// $dimension: 10;
 ///
-/// @return {Number (Unitless)}
+/// @return {number}
 
 @function strip-unit($value) {
   @return ($value / ($value * 0 + 1));

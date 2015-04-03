@@ -4,17 +4,17 @@
 ///
 /// @link http://goo.gl/0VEum5
 ///
-/// @example scss - Usage
-///   .element {
-///     @include clearfix;
-///   }
+/// @example scss
+/// .element {
+///   @include clearfix;
+/// }
 ///
-/// @example css - CSS Output
-///   .element::after {
-///     clear: both;
-///     content: "";
-///     display: table;
-///   }
+/// @example css
+/// .element::after {
+///   clear: both;
+///   content: "";
+///   display: table;
+/// }
 
 @mixin clearfix {
   &::after {

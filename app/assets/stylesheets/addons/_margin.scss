@@ -2,20 +2,20 @@
 
 /// Provides a quick method for targeting `margin` on specific sides of a box. Use a `null` value to “skip” a side.
 ///
-/// @param {Arglist} $values
-///   List of arguments
+/// @param {arglist} $values
+/// List of margin values, defined as CSS shorthand
 ///
-/// @example scss - Usage
-///   .element {
-///     @include margin(null 10px 3em 20vh);
-///   }
+/// @example scss
+/// .element {
+///   @include margin(null 10px 3em 20vh);
+/// }
 ///
-/// @example css - CSS Output
-///   .element {
-///     margin-bottom: 3em;
-///     margin-left: 20vh;
-///     margin-right: 10px;
-///   }
+/// @example css
+/// .element {
+///   margin-bottom: 3em;
+///   margin-left: 20vh;
+///   margin-right: 10px;
+/// }
 ///
 /// @require {mixin} directional-property
 ///

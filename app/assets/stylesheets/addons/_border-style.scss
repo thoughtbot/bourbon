@@ -2,23 +2,23 @@
 
 /// Provides a quick method for targeting `border-style` on specific sides of a box. Use a `null` value to “skip” a side.
 ///
-/// @param {Arglist} $values
-///   List of arguments
+/// @param {arglist} $values
+/// List of border styles, defined as CSS shorthand
 ///
-/// @example scss - Usage
-///   .element {
-///     @include border-style(dashed null solid);
-///   }
+/// @example scss
+/// .element {
+///   @include border-style(dashed null solid);
+/// }
 ///
-/// @example css - CSS Output
-///   .element {
-///     border-bottom-style: solid;
-///     border-top-style: dashed;
-///   }
+/// @example css
+/// .element {
+///   border-bottom-style: solid;
+///   border-top-style: dashed;
+/// }
 ///
 /// @require {mixin} directional-property
 ///
-/// @output `border-style`
+/// @output `border-*-style`
 
 @mixin border-style($values...) {
   @include directional-property(border, style, $values...);

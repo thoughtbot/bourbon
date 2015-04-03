@@ -2,49 +2,51 @@
 
 /// Generates variables for all buttons. Please note that you must use interpolation on the variable: `#{$all-buttons}`.
 ///
-/// @example scss - Usage
-///   #{$all-buttons} {
-///     background-color: #f00;
-///   }
+/// @example scss
+/// #{$all-buttons} {
+///   background-color: #f00;
+/// }
 ///
-///   #{$all-buttons-focus},
-///   #{$all-buttons-hover} {
-///     background-color: #0f0;
-///   }
+/// #{$all-buttons-focus},
+/// #{$all-buttons-hover} {
+///   background-color: #0f0;
+/// }
 ///
-///   #{$all-buttons-active} {
-///     background-color: #00f;
-///   }
+/// #{$all-buttons-active} {
+///   background-color: #00f;
+/// }
 ///
-/// @example css - CSS Output
-///   button,
-///   [type="button"],
-///   [type="reset"],
-///   [type="submit"] {
-///     background-color: #f00;
-///   }
+/// @example css
+/// button,
+/// [type="button"],
+/// [type="reset"],
+/// [type="submit"] {
+///   background-color: #f00;
+/// }
 ///
-///   button:focus,
-///   [type="button"]:focus,
-///   [type="reset"]:focus,
-///   [type="submit"]:focus,
-///   button:hover,
-///   [type="button"]:hover,
-///   [type="reset"]:hover,
-///   [type="submit"]:hover {
-///     background-color: #0f0;
-///   }
+/// button:focus,
+/// [type="button"]:focus,
+/// [type="reset"]:focus,
+/// [type="submit"]:focus,
+/// button:hover,
+/// [type="button"]:hover,
+/// [type="reset"]:hover,
+/// [type="submit"]:hover {
+///   background-color: #0f0;
+/// }
 ///
-///   button:active,
-///   [type="button"]:active,
-///   [type="reset"]:active,
-///   [type="submit"]:active {
-///     background-color: #00f;
-///   }
+/// button:active,
+/// [type="button"]:active,
+/// [type="reset"]:active,
+/// [type="submit"]:active {
+///   background-color: #00f;
+/// }
 ///
-/// @require assign-inputs
+/// @require {function} assign-inputs
 ///
-/// @type List
+/// @type list
+
+// scss-lint:disable StringQuotes
 
 // scss-lint:disable StringQuotes
 
