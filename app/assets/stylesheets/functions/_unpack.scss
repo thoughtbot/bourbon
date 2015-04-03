@@ -2,17 +2,19 @@
 
 /// Converts shorthand to the 4-value syntax.
 ///
-/// @param {List} $shorthand
+/// @access private
 ///
-/// @example scss - Usage
-///   .element {
-///     margin: unpack(1em 2em);
-///   }
+/// @param {list} $shorthand
 ///
-/// @example css - CSS Output
-///   .element {
-///     margin: 1em 2em 1em 2em;
-///   }
+/// @example scss
+/// .element {
+///   margin: unpack(1em 2em);
+/// }
+///
+/// @example css
+/// .element {
+///   margin: 1em 2em 1em 2em;
+/// }
 
 @function unpack($shorthand) {
   @if length($shorthand) == 1 {

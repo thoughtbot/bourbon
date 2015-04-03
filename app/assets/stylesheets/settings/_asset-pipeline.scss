@@ -2,6 +2,6 @@
 
 /// A global setting to enable or disable the `$asset-pipeline` variable for all functions that accept it.
 ///
-/// @type Bool
+/// @type boolean
 
 $asset-pipeline: false !default;

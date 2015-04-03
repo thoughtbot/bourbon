@@ -2,7 +2,9 @@
 
 /// Checks for a valid CSS length.
 ///
-/// @param {String} $value
+/// @access private
+///
+/// @param {string} $value
 
 @function is-length($value) {
   @return type-of($value) != "null" and (str-slice($value + "", 1, 4) == "calc"

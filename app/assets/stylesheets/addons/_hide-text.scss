@@ -4,17 +4,17 @@
 ///
 /// @link http://goo.gl/EvLRIu
 ///
-/// @example scss - Usage
-///   .element {
-///     @include hide-text;
-///   }
+/// @example scss
+/// .element {
+///   @include hide-text;
+/// }
 ///
-/// @example css - CSS Output
-///   .element {
-///     overflow: hidden;
-///     text-indent: 101%;
-///     white-space: nowrap;
-///   }
+/// @example css
+/// .element {
+///   overflow: hidden;
+///   text-indent: 101%;
+///   white-space: nowrap;
+/// }
 
 @mixin hide-text {
   overflow: hidden;

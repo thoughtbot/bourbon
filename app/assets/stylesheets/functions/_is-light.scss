@@ -4,12 +4,12 @@
 ///
 /// @link http://goo.gl/Dil4Y9
 ///
-/// @param {Color (Hex)} $color
+/// @param {color (hex)} $hex-color
 ///
-/// @example scss - Usage
-///   is-light($color)
+/// @example scss
+/// is-light($color)
 ///
-/// @return {Bool}
+/// @return {boolean}
 
 @function is-light($hex-color) {
   $-local-red: red(rgba($hex-color, 1));
