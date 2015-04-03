@@ -2,20 +2,20 @@
 
 /// Provides an easy way to change the `word-wrap` property.
 ///
-/// @param {String} $wrap [break-word]
-///   Value for the `word-break` property.
+/// @param {string} $wrap [break-word]
+/// Value for the `word-break` property.
 ///
-/// @example scss - Usage
-///   .wrapper {
-///     @include word-wrap(break-word);
-///   }
+/// @example scss
+/// .wrapper {
+///   @include word-wrap(break-word);
+/// }
 ///
-/// @example css - CSS Output
-///   .wrapper {
-///     overflow-wrap: break-word;
-///     word-break: break-all;
-///     word-wrap: break-word;
-///   }
+/// @example css
+/// .wrapper {
+///   overflow-wrap: break-word;
+///   word-break: break-all;
+///   word-wrap: break-word;
+/// }
 
 @mixin word-wrap($wrap: break-word) {
   overflow-wrap: $wrap;
