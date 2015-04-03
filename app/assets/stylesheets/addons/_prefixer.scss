@@ -1,27 +1,27 @@
 @charset "UTF-8";
 
-/// A mixin for generating vendor prefixes on non-standardized properties.
+/// Generates vendor prefixes.
 ///
-/// @param {String} $property
-///   Property to prefix
+/// @param {string} $property
+/// Property to prefix
 ///
 /// @param {*} $value
-///   Value to use
+/// Value to use
 ///
-/// @param {List} $prefixes
-///   Prefixes to define
+/// @param {list} $prefixes
+/// Vendor prefixes to output
 ///
-/// @example scss - Usage
-///   .element {
-///     @include prefixer(appearance, $value, webkit moz);
-///   }
+/// @example scss
+/// .element {
+///   @include prefixer(appearance, $value, webkit moz);
+/// }
 ///
-/// @example css - CSS Output
-///   .element {
-///     -webkit-appearance: none;
-///     -moz-appearance: none;
-///     appearance: none;
-///   }
+/// @example css
+/// .element {
+///   -webkit-appearance: none;
+///   -moz-appearance: none;
+///   appearance: none;
+/// }
 ///
 /// @require {variable} $global-prefixes
 ///

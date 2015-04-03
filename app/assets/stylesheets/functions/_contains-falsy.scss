@@ -4,10 +4,10 @@
 ///
 /// @access private
 ///
-/// @param {List} $list
-///   The list to check against.
+/// @param {list} $list
+/// The list to check against.
 ///
-/// @return {Bool}
+/// @return {boolean}
 
 @function contains-falsy($list) {
   @each $item in $list {

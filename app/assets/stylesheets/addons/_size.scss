@@ -1,31 +1,32 @@
 @charset "UTF-8";
 
-/// Sets the `width` and `height` of the element.
+/// Sets the `width` and `height` of the element in one statement.
 ///
-
-/// @param {Number} $width
+/// @param {number} $width
 ///
-/// @param {Number} $height [$width]
+/// @param {number} $height [$width]
 ///
-/// @example scss - Usage
-///   .first-element {
-///     @include size(2em);
-///   }
+/// @example scss
+/// .first-element {
+///   @include size(2em);
+/// }
 ///
-///   .second-element {
-///     @include size(auto, 10em);
-///   }
+/// .second-element {
+///   @include size(auto, 10em);
+/// }
 ///
-/// @example css - CSS Output
-///   .first-element {
-///     width: 2em;
-///     height: 2em;
-///   }
+/// @example css
+/// .first-element {
+///   width: 2em;
+///   height: 2em;
+/// }
 ///
-///   .second-element {
-///     width: auto;
-///     height: 10em;
-///   }
+/// .second-element {
+///   width: auto;
+///   height: 10em;
+/// }
+///
+/// @require {function} is-size
 
 @mixin size($width, $height: $width) {
   @if is-size($height) {
