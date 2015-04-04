@@ -9,30 +9,16 @@ describe "font-face" do
     it "outputs defaults" do
       ruleset = "font-family: \"Helvetica\"; " +
                 "font-style: normal; " +
-                "font-weight: normal; " +
-                "src: url(\"/fonts.eot?#iefix\") " +
-                "format(\"embedded-opentype\"), " +
-                "url(\"/fonts.woff2\") format(\"woff2\"), " +
-                "url(\"/fonts.woff\") format(\"woff\"), " +
-                "url(\"/fonts.ttf\") format(\"truetype\"), " +
-                "url(\"/fonts.svg#Helvetica\") format(\"svg\");; " +
+                "font-weight: normal;; " +
                 "font-family: \"Verdana\"; " +
                 "font-style: \"italic\"; " +
                 "font-weight: \"bold\"; " +
                 "src: url(\"/assets/fonts.eot?#iefix\") " +
-                "format(\"embedded-opentype\"), url(\"/assets/fonts.woff2\") " +
-                "format(\"woff2\"), url(\"/assets/fonts.woff\") " +
-                "format(\"woff\"), url(\"/assets/fonts.ttf\") " +
-                "format(\"truetype\"), url(\"/assets/fonts.svg#Verdana\") " +
-                "format(\"svg\");; " +
+                "format(\"embedded-opentype\");; " +
                 "font-family: \"Georgia\"; " +
                 "font-style: \"normal\"; " +
                 "font-weight: \"normal\"; " +
-                "src: url(\"/assets.eot?#iefix\") " +
-                "format(\"embedded-opentype\"), url(\"/assets.woff2\") " +
-                "format(\"woff2\"), url(\"/assets.woff\") format(\"woff\"), " +
-                "url(\"/assets.ttf\") format(\"truetype\"), " +
-                "url(\"/assets.svg#Georgia\") format(\"svg\");; " +
+                "src: url(\"/assets.woff\") format(\"woff\");; " +
                 "font-family: \"Arial\"; " +
                 "font-style: \"normal\"; " +
                 "font-weight: \"normal\"; " +

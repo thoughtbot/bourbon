@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/// A global setting for font file formats for the `font-face` mixin.
+///
+/// @see {mixin} font-face
+///
+/// @example scss
+/// $global-font-file-formats: eot woff2 woff;
+///
+/// @type list | string
+
+$global-font-file-formats: null !default;
