@@ -1,6 +1,0 @@
-@import "setup";
-
-@include font-face("Helvetica", "/fonts");
-@include font-face("Verdana", "/assets/fonts", "bold", "italic");
-@include font-face("Georgia", "/assets", "normal", "normal", false);
-@include font-face("Arial", "/", "normal", "normal", false, woff2 svg);
