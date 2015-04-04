@@ -1,9 +1,5 @@
 @import "setup";
 
-.georgia {
-  content: $georgia;
-}
-
 .helvetica {
   content: $helvetica;
 }
@@ -12,10 +8,30 @@
   content: $lucida-grande;
 }
 
-.monospace {
-  content: $monospace;
-}
-
 .verdana {
   content: $verdana;
+}
+
+.garamond {
+  content: $garamond;
+}
+
+.georgia {
+  content: $georgia;
+}
+
+.hoefler-text {
+  content: $hoefler-text;
+}
+
+.consolas {
+  content: $consolas;
+}
+
+.courier-new {
+  content: $courier-new;
+}
+
+.monaco {
+  content: $monaco;
 }
