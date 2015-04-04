@@ -1,9 +1,5 @@
 @import "setup";
 
-.georgia {
-  font-family: $georgia;
-}
-
 .helvetica {
   font-family: $helvetica;
 }
@@ -12,10 +8,30 @@
   font-family: $lucida-grande;
 }
 
-.monospace {
-  font-family: $monospace;
-}
-
 .verdana {
   font-family: $verdana;
+}
+
+.garamond {
+  font-family: $garamond;
+}
+
+.georgia {
+  font-family: $georgia;
+}
+
+.hoefler-text {
+  font-family: $hoefler-text;
+}
+
+.consolas {
+  font-family: $consolas;
+}
+
+.courier-new {
+  font-family: $courier-new;
+}
+
+.monaco {
+  font-family: $monaco;
 }
