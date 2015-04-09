@@ -1,3 +1,23 @@
+@charset "UTF-8";
+
+/// Output vendor-prefixed properties for controlling platform-native styling.
+///
+/// @param {string} $value
+///
+/// @example scss
+/// input {
+///   @include appearance(none);
+/// }
+///
+/// @example css
+/// input {
+///   -webkit-appearance: none;
+///   -moz-appearance: none;
+///   appearance: none;
+/// }
+///
+/// @require {mixin} prefixer
+
 @mixin appearance($value) {
   @include prefixer(appearance, $value, webkit moz);
 }
