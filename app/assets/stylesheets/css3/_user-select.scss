@@ -1,3 +1,4 @@
-@mixin user-select($value: none) {
-  @include prefixer(user-select, $value, webkit moz ms spec);
+@mixin user-select($value: none, $webkit-value: $value) {
+  -webkit-user-select: $webkit-value;
+  @include prefixer(user-select, $value, moz ms spec);
 }
