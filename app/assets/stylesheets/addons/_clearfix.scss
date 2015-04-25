@@ -6,7 +6,7 @@
 ///
 /// @example scss - Usage
 ///   .element {
-///     @include clearfix;
+///     @extend %clearfix;
 ///   }
 ///
 /// @example css - CSS Output
@@ -16,10 +16,15 @@
 ///     display: table;
 ///   }
 
-@mixin clearfix {
+%clearfix {
   &::after {
     clear: both;
     content: "";
     display: table;
   }
+}
+
+// Fallback, deprecate at some point?
+@mixin clearfix {
+  @extend %clearfix;
 }
