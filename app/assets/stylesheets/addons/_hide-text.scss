@@ -10,7 +10,7 @@
 /// @example css - CSS Output
 ///   .element {
 ///     overflow: hidden;
-///     text-indent: 101%;
+///     text-indent: -99999px;
 ///     white-space: nowrap;
 ///   }
 ///
@@ -18,7 +18,7 @@
 
 @mixin hide-text($height: null) {
   overflow: hidden;
-  text-indent: 101%;
+  text-indent: -99999px;
   white-space: nowrap;
 
   @if $height {
