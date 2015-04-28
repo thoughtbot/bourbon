@@ -8,7 +8,7 @@ describe "hide-text" do
   context "called on element" do
     it "adds hide-text" do
       ruleset = "overflow: hidden; " +
-                "text-indent: 101%; " +
+                "text-indent: -99999px; " +
                 "white-space: nowrap;"
 
       expect(".hide-text").to have_ruleset(ruleset)
