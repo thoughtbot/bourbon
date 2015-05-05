@@ -16,7 +16,7 @@
   $file-formats,
   $font-url) {
 
-  $src: null;
+  $src: ();
 
   $formats-map: (
     eot:   "#{$file-path}.eot?#iefix" format("embedded-opentype"),
