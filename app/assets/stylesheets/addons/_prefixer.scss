@@ -13,7 +13,7 @@
 ///
 /// @example scss
 /// .element {
-///   @include prefixer(appearance, $value, webkit moz);
+///   @include prefixer(appearance, none, webkit moz);
 /// }
 ///
 /// @example css
@@ -23,20 +23,11 @@
 ///   appearance: none;
 /// }
 ///
-/// @require {variable} $global-prefixes
-///
 /// @author Hugo Giraudel
 
 @mixin prefixer($property, $value, $prefixes: ()) {
   @each $prefix in $prefixes {
-    @if not map-has-key($global-prefixes, $prefix) {
-      @error "Unrecognized prefix: `#{$prefix}`.";
-    }
-
-    @if map-get($global-prefixes, $prefix) {
-      #{"-" + $prefix + "-" + $property}: $value;
-    }
+    #{"-" + $prefix + "-" + $property}: $value;
   }
-
   #{$property}: $value;
 }
