@@ -24,6 +24,14 @@
 
   $full: $g1, $g2, $g3, $g4, $g5, $g6, $g7, $g8, $g9, $g10;
 
+  // Purge null values from list
+  $full-purged: ();
+  @each $item in $full {
+    @if ($item != null) {
+      $full-purged: append($full-purged, $item);
+    }
+  }
+
   // Set $g1 as the default fallback color
   $fallback-color: nth($g1, 1);
 
@@ -34,5 +42,5 @@
 
   background-color: $fallback-color;
   background-image: -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
-  background-image: unquote("linear-gradient(#{$pos-spec}#{$full})");
+  background-image: unquote("linear-gradient(#{$pos-spec}#{$full-purged})");
 }
