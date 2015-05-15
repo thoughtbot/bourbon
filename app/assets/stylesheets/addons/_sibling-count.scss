@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/// Makes it easy to apply styles to all siblings in a group based on total number of siblings.
+///
+/// @param {Number} $n
+///   Apply nested styles if there are this many siblings
+///
+/// @example scss - Usage
+///   ul.navbar li {
+///     color: white;
+///     @include sibling-count(1) {
+///       color: blue;
+///     }
+///     @include sibling-count(2) {
+///       color: green;
+///     }
+///     @include sibling-count(3) {
+///       color: red;
+///     }
+///   }
+///
+/// @example css - CSS Output
+///   ul.navbar li { color: white; }
+///   ul.navbar li:nth-child(1):nth-last-child(1) { color: blue; }
+///   ul.navbar li:nth-child(1):nth-last-child(2) { color: green; }
+///   ul.navbar li:nth-child(2):nth-last-child(1) { color: green; }
+///   ul.navbar li:nth-child(1):nth-last-child(3) { color: red; }
+///   ul.navbar li:nth-child(2):nth-last-child(2) { color: red; }
+///   ul.navbar li:nth-child(3):nth-last-child(1) { color: red; }
+
+
+@mixin sibling-count($n) {
+  @for $i from 0 to $n {
+    &:nth-child(#{$i + 1}):nth-last-child(#{$n - $i}) {
+      @content;
+    }
+  }
+}
