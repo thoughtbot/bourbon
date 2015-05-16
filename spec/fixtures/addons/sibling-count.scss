@@ -1,0 +1,18 @@
+@import "setup";
+
+.color-varies-by-sibling-count {
+  /* applies when there is exactly one child */
+  @include sibling-count(1) {
+    color: white;
+  }
+
+  /* applies when there are 2, 4, 6, 8,... children */
+  @include sibling-count(2, true) {
+    color: gray;
+  }
+
+  /* applies when there are 1, 4, 7, 10,... children */
+  @include sibling-count(3, true, 1) {
+    color: black;
+  }
+}
