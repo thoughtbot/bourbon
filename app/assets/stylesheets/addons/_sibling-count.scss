@@ -13,13 +13,13 @@
 ///
 /// @example scss - Usage
 ///   ul.navbar li {
-///     @include sibling-count(1) { /* applies if total siblings == 1 */
+///     @include sibling-count(1) {
 ///       color: blue;
 ///     }
-///     @include sibling-count(2, $repeat: true) { /* applies if total siblings == 2n for any n */
+///     @include sibling-count(2, $repeat: true) {
 ///       color: green;
 ///     }
-///     @include sibling-count(3, $repeat: true, $offset: 1) { /* applies if total siblings == 3n+1 for any n */
+///     @include sibling-count(3, $repeat: true, $offset: 1) {
 ///       color: red;
 ///     }
 ///   }
@@ -39,7 +39,7 @@
 ///     color: red; }
 
 @mixin sibling-count($count, $repeat: false, $offset: 0) {
-  $prefix: '';
+  $prefix: "";
   $mod: $count+1;
 
   @if $repeat {
