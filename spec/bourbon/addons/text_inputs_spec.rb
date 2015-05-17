@@ -19,6 +19,7 @@ describe "text-inputs" do
       input[type="time"]
       input[type="url"]
       input[type="week"]
+      input:not([type])
       textarea
     )
   end
