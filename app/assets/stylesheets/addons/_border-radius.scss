@@ -9,16 +9,18 @@
 ///   @include border-top-radius(5px);
 /// }
 ///
-/// .element-two {
-///   @include border-left-radius(3px);
-/// }
-///
 /// @example css
 /// .element-one {
 ///   border-top-left-radius: 5px;
 ///   border-top-right-radius: 5px;
 /// }
 ///
+/// @example scss
+/// .element-two {
+///   @include border-left-radius(3px);
+/// }
+///
+/// @example css
 /// .element-two {
 ///   border-bottom-left-radius: 3px;
 ///   border-top-left-radius: 3px;
