@@ -1,6 +1,6 @@
 # Site settings
 title: Bourbon
-description: "A Simple and Lightweight Mixin Library for Sass."
+description: "Bourbon is a lightweight Sass tool set that helps you write more effective stylesheets."
 
 # Build settings
 exclude: [features/, gh-docs/, lib/, LICENSE.md, Rakefile, README.md]
