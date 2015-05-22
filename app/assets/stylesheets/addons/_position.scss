@@ -5,7 +5,7 @@
 /// @param {position} $position [relative]
 /// A CSS position value
 ///
-/// @param {arglist} $coordinates [null null null null]
+/// @param {arglist} $coordinates [null]
 /// List of lengths, defined as CSS shorthand
 ///
 /// @example scss
@@ -24,7 +24,7 @@
 ///
 /// @require {function} unpack
 
-@mixin position($position: relative, $coordinates: null null null null) {
+@mixin position($position: relative, $coordinates: null) {
   @if type-of($position) == list {
     $coordinates: $position;
     $position: relative;
