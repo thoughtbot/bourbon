@@ -7,15 +7,6 @@
 ///   border: 1px solid #f00;
 /// }
 ///
-/// #{$all-text-inputs-focus},
-/// #{$all-text-inputs-hover} {
-///   border: 1px solid #0f0;
-/// }
-///
-/// #{$all-text-inputs-active} {
-///   border: 1px solid #00f;
-/// }
-///
 /// @example css
 /// [type="color"],
 /// [type="date"],
@@ -36,6 +27,13 @@
 ///   border: 1px solid #f00;
 /// }
 ///
+/// @example scss
+/// #{$all-text-inputs-focus},
+/// #{$all-text-inputs-hover} {
+///   border: 1px solid #0f0;
+/// }
+///
+/// @example css
 /// [type="color"]:focus,
 /// [type="date"]:focus,
 /// [type="datetime"]:focus,
@@ -71,6 +69,12 @@
 ///   border: 1px solid #0f0;
 /// }
 ///
+/// @example scss
+/// #{$all-text-inputs-active} {
+///   border: 1px solid #00f;
+/// }
+///
+/// @example css
 /// [type="color"]:active,
 /// [type="date"]:active,
 /// [type="datetime"]:active,
