@@ -5,11 +5,11 @@ _site
 bin/
 bourbon.gemspec
 bower.json
-CONTRIBUTING.md
 features/
 Gemfile
 Gemfile.lock
 lib/
+pkg/
 Rakefile
 sache.json
 spec/
