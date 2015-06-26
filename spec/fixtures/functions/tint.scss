@@ -1,7 +1,7 @@
 @import "setup";
 
 .tint-white {
-  color: tint(#ffffff, 75%);
+  color: tint(#fff, 75%);
 }
 
 .tint-black {
@@ -13,5 +13,5 @@
 }
 
 .tint-gray {
-  color: tint(#aaaaaa, 33%);
+  color: tint(#aaa, 33%);
 }

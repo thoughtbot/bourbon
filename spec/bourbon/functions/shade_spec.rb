@@ -7,7 +7,7 @@ describe "shade" do
 
   context "called on white" do
     it "shades white" do
-      expect(".shade-white").to have_rule("color: #3f3f3f")
+      expect(".shade-white").to have_rule("color: #404040")
     end
   end
 
@@ -25,7 +25,7 @@ describe "shade" do
 
   context "called on gray" do
     it "shades gray" do
-      expect(".shade-gray").to have_rule("color: #161616")
+      expect(".shade-gray").to have_rule("color: #171717")
     end
   end
 end

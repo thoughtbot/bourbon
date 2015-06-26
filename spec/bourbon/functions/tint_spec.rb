@@ -13,13 +13,13 @@ describe "tint" do
 
   context "called on black" do
     it "tints black" do
-      expect(".tint-black").to have_rule("color: #7f7f7f")
+      expect(".tint-black").to have_rule("color: gray")
     end
   end
 
   context "called on red" do
     it "tints red" do
-      expect(".tint-red").to have_rule("color: #ff3f3f")
+      expect(".tint-red").to have_rule("color: #ff4040")
     end
   end
 
