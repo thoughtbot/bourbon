@@ -4,7 +4,8 @@
   $weight: normal,
   $style: normal,
   $asset-pipeline: $asset-pipeline,
-  $file-formats: eot woff2 woff ttf svg) {
+  $file-formats: eot woff2 woff ttf svg,
+  $local-references: ()) {
 
   $font-url-prefix: font-url-prefixer($asset-pipeline);
 
@@ -18,7 +19,8 @@
       $file-path,
       $asset-pipeline,
       $file-formats,
-      $font-url-prefix
+      $font-url-prefix,
+      $local-references
     );
   }
 }
