@@ -15,8 +15,8 @@
     @if $background-type == string or $background-type == list {
       $background-str: if($background-type == list, nth($background, 1), $background);
 
-      $url-str:       str-slice($background-str, 0, 3);
-      $gradient-type: str-slice($background-str, 0, 6);
+      $url-str:       str-slice($background-str, 1, 3);
+      $gradient-type: str-slice($background-str, 1, 6);
 
       @if $url-str == "url" {
         $webkit-background: $background;
