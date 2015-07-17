@@ -5,7 +5,7 @@
   $end: str-index($image, ",");
   $first-val: str-slice($image, $start + 1, $end - 1);
 
-  $prefix: str-slice($image, 0, $start);
+  $prefix: str-slice($image, 1, $start);
   $suffix: str-slice($image, $end, str-length($image));
 
   $is-spec-syntax: str-index($first-val, "at");
