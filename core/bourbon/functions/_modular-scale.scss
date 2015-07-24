@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/// Increments up or down a defined scale and returns an adjusted value. This helps establish consistent measurements and spacial relationships throughout your project. We provide a list of commonly used scales as [pre-defined variables](//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/settings/_scales.scss).
+/// Increments up or down a defined scale and returns an adjusted value. This helps establish consistent measurements and spacial relationships throughout your project. We provide a list of commonly used scales as [pre-defined variables](//github.com/thoughtbot/bourbon/blob/master/core/settings/_scales.scss).
 ///
 /// @param {number} $increment
 /// How many steps to increment up or down the scale
