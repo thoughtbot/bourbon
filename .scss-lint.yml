@@ -1,4 +1,4 @@
-scss_files: "app/assets/stylesheets/**/*.scss"
+scss_files: "core/**/*.scss"
 linters:
   BangFormat:
     enabled: true
