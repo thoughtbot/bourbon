@@ -22,11 +22,11 @@ meaning they should be as close to the original CSS syntax as possible.
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency("sass", "~> 3.4")
-  s.add_runtime_dependency("thor")
+  s.add_runtime_dependency("thor", "~> 0.19")
 
   s.add_development_dependency("aruba", "~> 0.6.2")
-  s.add_development_dependency("css_parser")
-  s.add_development_dependency("rake")
-  s.add_development_dependency("rspec")
-  s.add_development_dependency("scss_lint", "~> 0.40.1")
+  s.add_development_dependency("css_parser", "~> 1.3")
+  s.add_development_dependency("rake", "~> 10.4")
+  s.add_development_dependency("rspec", "~> 3.3")
+  s.add_development_dependency("scss_lint", "~> 0.40")
 end
