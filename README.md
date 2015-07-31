@@ -74,7 +74,7 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
   mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
   ```
 
-4. Delete _all_ Sprockets directives in `application.scss` (`require`, `require_tree` and `require_self`) and use Sass’s native `@import` instead.
+4. Delete _all_ Sprockets directives in `application.scss` (`require`, `require_tree` and `require_self`) and use Sass’s native `@import` instead. ([why?](http://pivotallabs.com/structure-your-sass-files-with-import))
 
 5. Import Bourbon at the beginning of `application.scss`. All additional stylesheets should be imported below Bourbon:
 
