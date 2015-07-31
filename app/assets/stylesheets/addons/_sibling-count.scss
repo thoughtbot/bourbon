@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/// Makes it easy to apply styles to all siblings in a group based on total number of siblings.
+///
+/// @param {Number} $count
+///   Apply nested styles if there are this many siblings.
+///
+/// @param {Boolean} $repeat
+///   Apply nested styles if number of siblings is a multiple of `$count`.
+///
+/// @param {Number} $offset
+///   Apply nested styles if number of siblings is a multiple of `$count` plus this.
+///
+/// @example scss - Usage
+///   ul.navbar li {
+///     @include sibling-count(1) {
+///       color: blue;
+///     }
+///     @include sibling-count(2, $repeat: true) {
+///       color: green;
+///     }
+///     @include sibling-count(3, $repeat: true, $offset: 1) {
+///       color: red;
+///     }
+///   }
+///
+/// @example css - CSS Output
+///   ul.navbar li:nth-child(1):nth-last-child(1) {
+///     color: blue; }
+///   ul.navbar li:nth-child(2n+1):nth-last-child(2n+0) {
+///     color: green; }
+///   ul.navbar li:nth-child(2n+2):nth-last-child(2n+1) {
+///     color: green; }
+///   ul.navbar li:nth-child(3n+1):nth-last-child(3n+1) {
+///     color: red; }
+///   ul.navbar li:nth-child(3n+2):nth-last-child(3n+0) {
+///     color: red; }
+///   ul.navbar li:nth-child(3n+3):nth-last-child(3n+2) {
+///     color: red; }
+
+@mixin sibling-count($count, $repeat: false, $offset: 0) {
+  $prefix: "";
+  $mod: $count+1;
+
+  @if $repeat {
+    $prefix: "#{$count}n+";
+    $mod: $count;
+  }
+
+  @for $i from 0 to $count {
+    &:nth-child(#{$prefix}#{$i + 1}):nth-last-child(#{$prefix}#{($count - $i + $offset) % $mod}) {
+      @content;
+    }
+  }
+}
