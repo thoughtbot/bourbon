@@ -5,12 +5,12 @@
   $end: str-index($image, ",");
   $first-val: str-slice($image, $start + 1, $end - 1);
 
-  $prefix: str-slice($image, 0, $start);
+  $prefix: str-slice($image, 1, $start);
   $suffix: str-slice($image, $end, str-length($image));
 
   $has-multiple-vals: str-index($first-val, " ");
   $has-single-position: unquote(_position-flipper($first-val) + "");
-  $has-angle: is-number(str-slice($first-val, 0, 0));
+  $has-angle: is-number(str-slice($first-val, 1, 1));
 
   @if $has-multiple-vals {
     $gradients: _linear-side-corner-parser($image, $first-val, $prefix, $suffix, $has-multiple-vals);
