@@ -54,7 +54,7 @@ module Bourbon
     end
 
     def remove_bourbon_directory
-      FileUtils.rm_rf("bourbon")
+      FileUtils.rm_rf(install_path)
     end
 
     def make_install_directory
