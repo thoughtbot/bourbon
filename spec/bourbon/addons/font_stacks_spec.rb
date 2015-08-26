@@ -9,7 +9,7 @@ describe "font-stacks" do
     it "output stacks" do
       helvetica = '"Helvetica Neue", "Helvetica", "Arial", sans-serif'
       lucida_grande = '"Lucida Grande", "Lucida Sans Unicode", ' +
-                      '"Lucida Sans", "Geneva", "Verdana", sans-serif'
+                      '"Geneva", "Verdana", sans-serif'
       verdana = '"Verdana", "Geneva", sans-serif'
       garamond = '"Garamond", "Baskerville", "Baskerville Old Face", ' +
                  '"Hoefler Text", "Times New Roman", serif'
