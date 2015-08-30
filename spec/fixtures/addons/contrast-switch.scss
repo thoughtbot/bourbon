@@ -1,0 +1,9 @@
+@import "setup";
+
+.contrast-switch-light-base {
+  color: contrast-switch(#bae6e6);
+}
+
+.contrast-switch-dark-base {
+  color: contrast-switch(#2d72d9, #222, #eee);
+}

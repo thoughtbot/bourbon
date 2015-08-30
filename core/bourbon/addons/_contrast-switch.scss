@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/// Switches between two colors based on the lightness of a another color. Great
+/// for building button styles.
+///
+/// @param {color} $base-color
+/// The `color` to evaluate lightness against
+///
+/// @param {color} $light-color [#000]
+/// The `color` to be output when `base-color` is light
+///
+/// @param {color} $dark-color [#fff]
+/// The `color` to be output when `base-color` is dark
+///
+/// @example scss
+/// .first-element {
+///   color: contrast-switch(#bae6e6);
+/// }
+///
+/// .second-element {
+///   $button-color: #2d72d9;
+///   background-color: $button-color;
+///   color: contrast-switch($button-color, #222, #eee);
+/// }
+///
+/// @example css
+/// .first-element {
+///   color: #000;
+/// }
+///
+/// .second-element {
+///   background-color: #2d72d9;
+///   color: #eee;
+/// }
+///
+/// @require {function} is-light
+///
+/// @since 5.0.0
+
+@function contrast-switch($base-color, $light-color: #000, $dark-color: #fff) {
+  @return if(is-light($base-color), $light-color, $dark-color);
+}
