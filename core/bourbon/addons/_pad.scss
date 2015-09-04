@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/// Provides a quick method for targeting `padding` on specific sides of a box. Use a `null` value to “skip” a side.
+///
+/// @param {arglist} $values
+/// List of padding values, defined as CSS shorthand
+///
+/// @example scss
+/// .element {
+///   @include pad(50vh null 1rem);
+/// }
+///
+/// @example css
+/// .element {
+///   padding-bottom: 1rem;
+///   padding-top: 50vh;
+/// }
+///
+/// @require {mixin} padding
+///
+/// @output `padding`
+///
+/// @alias {mixin} padding
+
+@mixin pad($values...) {
+  @include padding($values...);
+}
