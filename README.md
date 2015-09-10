@@ -86,6 +86,16 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
 
   [Help! I’m getting an undefined mixin error.](https://github.com/thoughtbot/bourbon/wiki/Rails-Help-%5C-Undefined-mixin)
 
+## Installing with NPM and Using a node-based asset pipeline.
+
+1. Add bourbon as a dependency to your project: `npm install --save bourbon`
+2. If you're using [Eyeglass](http://eyeglass.rocks/), skip to
+   step 3. Otherwise, you'll need to add bourbon to your node-sass
+   `includePaths` option. `require("bourbon").includePaths` is an array of
+   directories that you should pass to node-sass. How you do this
+   depends on how node-sass is integrated into your project.
+3. Import bourbon to your Sass files: `@import "bourbon"`
+
 ## Installing older versions of Bourbon
 
 1. Uninstall any Bourbon gem versions you already have:

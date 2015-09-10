@@ -6,11 +6,16 @@
     "css",
     "mixins",
     "sass",
-    "scss"
+    "scss",
+    "eyeglass-module"
   ],
   "homepage": "http://bourbon.io",
   "bugs": {
     "url": "https://github.com/thoughtbot/bourbon/issues"
+  },
+  "eyeglass": {
+    "needs": "*",
+    "exports": "eyeglass-exports.js"
   },
   "license": "MIT",
   "author": {
