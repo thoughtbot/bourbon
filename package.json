@@ -4,6 +4,7 @@
   "description": "A simple and lightweight mixin library for Sass.",
   "keywords": [
     "css",
+    "eyeglass-module",
     "mixins",
     "sass",
     "scss"
@@ -11,6 +12,10 @@
   "homepage": "http://bourbon.io",
   "bugs": {
     "url": "https://github.com/thoughtbot/bourbon/issues"
+  },
+  "eyeglass": {
+    "needs": "*",
+    "exports": "eyeglass-exports.js"
   },
   "license": "MIT",
   "author": {
