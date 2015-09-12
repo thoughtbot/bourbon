@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/// Checks if a list contains a value(s).
+///
+/// @access private
+///
+/// @param {list} $list
+/// The list to check against.
+///
+/// @param {list} $values
+/// A single value or list of values to check for.
+///
+/// @return {boolean}
+
+@function contains($list, $values...) {
+  @each $value in $values {
+    @if type-of(index($list, $value)) != "number" {
+      @return false;
+    }
+  }
+
+  @return true;
+}

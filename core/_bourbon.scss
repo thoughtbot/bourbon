@@ -1,0 +1,47 @@
+// Bourbon 5.0.0.alpha.0
+// http://bourbon.io
+// Copyright 2011-2015 thoughtbot, inc.
+// MIT License
+
+@import "bourbon/settings/asset-pipeline";
+@import "bourbon/settings/global-font-file-formats";
+@import "bourbon/settings/scales";
+@import "bourbon/settings/modular-scale";
+
+@import "bourbon/functions/assign-inputs";
+@import "bourbon/functions/contains";
+@import "bourbon/functions/contains-falsy";
+@import "bourbon/functions/is-length";
+@import "bourbon/functions/is-light";
+@import "bourbon/functions/is-number";
+@import "bourbon/functions/is-size";
+@import "bourbon/functions/shade";
+@import "bourbon/functions/strip-unit";
+@import "bourbon/functions/tint";
+@import "bourbon/functions/unpack";
+@import "bourbon/functions/modular-scale";
+
+@import "bourbon/helpers/directional-values";
+@import "bourbon/helpers/font-source-declaration";
+
+@import "bourbon/css3/font-face";
+
+@import "bourbon/addons/border-color";
+@import "bourbon/addons/border-radius";
+@import "bourbon/addons/border-style";
+@import "bourbon/addons/border-width";
+@import "bourbon/addons/buttons";
+@import "bourbon/addons/clearfix";
+@import "bourbon/addons/ellipsis";
+@import "bourbon/addons/font-stacks";
+@import "bourbon/addons/hide-text";
+@import "bourbon/addons/margin";
+@import "bourbon/addons/padding";
+@import "bourbon/addons/position";
+@import "bourbon/addons/prefixer";
+@import "bourbon/addons/size";
+@import "bourbon/addons/text-inputs";
+@import "bourbon/addons/timing-functions";
+@import "bourbon/addons/word-wrap";
+
+@import "bourbon/bourbon-deprecated";

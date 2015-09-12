@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/// Global setting for the modular scale ratio
+///
+/// @see {function} modular-scale
+///
+/// @type number
+
+$modular-scale-ratio: $perfect-fourth !default;
+
+/// Global setting for the modular scale base value
+///
+/// @see {function} modular-scale
+///
+/// @type number
+
+$modular-scale-base: 1em !default;

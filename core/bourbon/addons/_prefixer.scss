@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/// Generates vendor prefixes.
+///
+/// @param {string} $property
+/// Property to prefix
+///
+/// @param {*} $value
+/// Value to use
+///
+/// @param {list} $prefixes
+/// Vendor prefixes to output
+///
+/// @example scss
+/// .element {
+///   @include prefixer(appearance, none, webkit moz);
+/// }
+///
+/// @example css
+/// .element {
+///   -webkit-appearance: none;
+///   -moz-appearance: none;
+///   appearance: none;
+/// }
+///
+/// @author Hugo Giraudel
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value;
+  }
+  #{$property}: $value;
+}

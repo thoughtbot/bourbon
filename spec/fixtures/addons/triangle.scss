@@ -1,9 +1,0 @@
-@import "setup";
-
-.triangle-down {
-  @include triangle(12px, #ffffff, down);
-}
-
-.triangle-corner {
-  @include triangle(12px 6px, #000000 #aaaaaa, up-left);
-}

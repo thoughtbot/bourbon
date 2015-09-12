@@ -4,8 +4,8 @@ describe "assign-inputs" do
   before(:all) do
     ParserSupport.parse_file("functions/assign-inputs")
     @text_inputs_list = [
-      "input[type=\"password\"]",
-      "input[type=\"text\"]",
+      "[type=\"password\"]",
+      "[type=\"text\"]",
       "textarea"
     ]
   end
@@ -41,7 +41,7 @@ describe "assign-inputs" do
   context "expands text inputs when middle of list" do
     it "finds selectors" do
       list = @text_inputs_list.dup
-      list.unshift "input[type=\"file\"]"
+      list.unshift "[type=\"file\"]"
       list.each do |input|
         expect(input).to have_rule("color: #ff00ff")
       end

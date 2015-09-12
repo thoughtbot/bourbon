@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/// Increments up or down a defined scale and returns an adjusted value. This helps establish consistent measurements and spacial relationships throughout your project. We provide a list of commonly used scales as [pre-defined variables](//github.com/thoughtbot/bourbon/blob/master/core/settings/_scales.scss).
+///
+/// @param {number} $increment
+/// How many steps to increment up or down the scale
+///
+/// @param {number} $value [$modular-scale-base (1em)]
+/// The base value the scale starts at
+///
+/// @param {number} $ratio [$modular-scale-ratio (1.333)]
+/// The ratio the scale is built on
+///
+/// @example scss
+/// .first-element {
+///   font-size: modular-scale(2);
+/// }
+///
+/// .second-element {
+///   margin-right: modular-scale(3, 2em);
+/// }
+///
+/// .third-element {
+///   font-size: modular-scale(3, 1em 1.6em, $major-seventh);
+/// }
+///
+/// $modular-scale-ratio: 1.2; // change the base ratio
+/// .fourth-element {
+///   font-size: modular-scale(3);
+/// }
+///
+/// @example css
+/// .first-element {
+///   font-size: 1.77689em;
+/// }
+///
+/// .second-element {
+///   margin-right: 4.73719em;
+/// }
+///
+/// .third-element {
+///   font-size: 3em;
+/// }
+///
+/// .fourth-element {
+///   font-size: 1.728em;
+/// }
+///
+/// @return {number}
+///
+/// @require {variable} $modular-scale-ratio
+///
+/// @require {variable} $modular-scale-base
+
+@function modular-scale($increment, $value: $modular-scale-base, $ratio: $modular-scale-ratio) {
+  $v1: nth($value, 1);
+  $v2: nth($value, length($value));
+  $value: $v1;
+
+  // scale $v2 to just above $v1
+  @while $v2 > $v1 {
+    $v2: ($v2 / $ratio); // will be off-by-1
+  }
+  @while $v2 < $v1 {
+    $v2: ($v2 * $ratio); // will fix off-by-1
+  }
+
+  // check AFTER scaling $v2 to prevent double-counting corner-case
+  $double-stranded: $v2 > $v1;
+
+  @if $increment > 0 {
+    @for $i from 1 through $increment {
+      @if $double-stranded and ($v1 * $ratio) > $v2 {
+        $value: $v2;
+        $v2: ($v2 * $ratio);
+      } @else {
+        $v1: ($v1 * $ratio);
+        $value: $v1;
+      }
+    }
+  }
+
+  @if $increment < 0 {
+    // adjust $v2 to just below $v1
+    @if $double-stranded {
+      $v2: ($v2 / $ratio);
+    }
+
+    @for $i from $increment through -1 {
+      @if $double-stranded and ($v1 / $ratio) < $v2 {
+        $value: $v2;
+        $v2: ($v2 / $ratio);
+      } @else {
+        $v1: ($v1 / $ratio);
+        $value: $v1;
+      }
+    }
+  }
+
+  @return $value;
+}

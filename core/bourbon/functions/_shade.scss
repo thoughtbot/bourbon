@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/// Mixes a color with black.
+///
+/// @param {color} $color
+///
+/// @param {number (percentage)} $percent
+/// The amount of black to be mixed in.
+///
+/// @example scss
+/// .element {
+///   background-color: shade(#ffbb52, 60%);
+/// }
+///
+/// @example css
+/// .element {
+///   background-color: #664a20;
+/// }
+///
+/// @return {color}
+
+@function shade($color, $percent) {
+  @return mix(#000, $color, $percent);
+}

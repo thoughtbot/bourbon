@@ -1,0 +1,15 @@
+@mixin matrix-grid($unit: 2em, $devisions: 4, $color:#000) {
+  $subdivision-unit: $unit / $devisions;
+  background-clip: border-box;
+  background:
+    linear-gradient( rgba($color, 0.1) 0.5px, rgba($color, 0) 0.5px),
+    linear-gradient( to right, rgba($color, 0.1) 0.5px, rgba($color, 0) 0.5px),
+    linear-gradient( rgba($color, 0.1) 0.5px, rgba($color, 0) 0.5px),
+    linear-gradient( to right, rgba($color, 0.4) 0.5px, rgba($color, 0) 0.5px);
+  background-position: left top;
+  background-size:
+    100% $subdivision-unit,
+    $subdivision-unit 100%,
+    100% $unit,
+    $unit 100%;
+}
