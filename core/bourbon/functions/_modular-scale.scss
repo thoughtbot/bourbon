@@ -8,7 +8,7 @@
 /// @param {number} $value [$modular-scale-base (1em)]
 /// The base value the scale starts at
 ///
-/// @param {number} $ratio [$modular-scale-ratio (1.333)]
+/// @param {number} $ratio [$modular-scale-ratio (1.25)]
 /// The ratio the scale is built on
 ///
 /// @example scss
@@ -31,11 +31,11 @@
 ///
 /// @example css
 /// .first-element {
-///   font-size: 1.77689em;
+///   font-size: 1.5625em;
 /// }
 ///
 /// .second-element {
-///   margin-right: 4.73719em;
+///   margin-right: 3.90625em;
 /// }
 ///
 /// .third-element {
