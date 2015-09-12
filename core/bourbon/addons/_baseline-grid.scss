@@ -1,0 +1,13 @@
+@mixin baseline-grid($line-height:1.5, $offset: 0, $color: powderblue) {
+  position: relative;
+
+  &::before {
+    @include position(absolute, 0 0 0 0);
+    background: linear-gradient( rgba($color, 0.75) 1px, rgba($color, 0) 1px);
+    background-position: center top $offset;
+    background-size: 100% ($line-height * 1rem);
+    content: "";
+    pointer-events: none;
+    z-index: 1;
+  }
+}
