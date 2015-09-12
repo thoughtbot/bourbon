@@ -1,6 +1,7 @@
 [![Bourbon](http://images.thoughtbot.com/bourbon/bourbon-logo.svg)](http://bourbon.io)
 
 [![GitHub release](https://img.shields.io/github/release/thoughtbot/bourbon.svg)](https://github.com/thoughtbot/bourbon/releases)
+[![CircleCI branch](https://img.shields.io/circleci/project/thoughtbot/bourbon/master.svg)](https://circleci.com/gh/thoughtbot/bourbon/tree/master)
 
 ## A simple and lightweight mixin library for Sass.
 
