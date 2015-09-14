@@ -2,7 +2,6 @@
 .hound.yml
 .sass-cache
 .scss-lint.yml
-.travis.yml
 _site
 bin/
 bourbon.gemspec
