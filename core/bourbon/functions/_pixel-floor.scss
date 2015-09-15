@@ -6,5 +6,5 @@
   $pixel-value: strip-unit($rem) * $factor;
   $new-pixel-value: floor($pixel-value);
   $new-rem-value: ($new-pixel-value / $factor) * 1rem;
-  return $new-rem-value;
+  @return $new-rem-value;
 }
