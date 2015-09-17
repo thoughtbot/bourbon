@@ -7,7 +7,8 @@
     "eyeglass-module",
     "mixins",
     "sass",
-    "scss"
+    "scss",
+    "eyeglass-module"
   ],
   "homepage": "http://bourbon.io",
   "bugs": {
