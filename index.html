@@ -165,17 +165,17 @@ gem 'bourbon'
 $ bundle install
 {% endhighlight %}
 
-        <p>Restart your server. Then rename <code>application.css</code> to <code>application.css.scss</code>:</p>
+        <p>Restart your server. Then rename <code>application.css</code> to <code>application.scss</code>:</p>
 {% highlight powershell %}
-mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
+mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
 {% endhighlight %}
 
-        <p>Delete the sprocket directive in application.css.scss:</p>
+        <p>Delete the sprocket directive in application.scss:</p>
 {% highlight powershell %}
 *= require_tree .
 {% endhighlight %}
 
-        <p>Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:</p>
+        <p>Import Bourbon at the beginning of <code>application.scss</code>. All additional stylesheets must be imported below Bourbon:</p>
 {% highlight scss %}
 @import "bourbon";
 @import "home";
