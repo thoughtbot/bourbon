@@ -100,6 +100,20 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
   @import "bourbon";
   ```
 
+## Installing the SASS files locally with npm
+
+1. Install the Bourbon executable
+
+```bash
+npm install -g bourbon
+```
+
+2. Install it to your local project
+
+```bash
+bourbon install src/styles
+```
+
 ## Installing older versions of Bourbon
 
 1. Uninstall any Bourbon gem versions you already have:

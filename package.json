@@ -2,6 +2,9 @@
   "name": "bourbon",
   "version": "5.0.0-alpha.0",
   "description": "A simple and lightweight mixin library for Sass.",
+  "bin": {
+    "bourbon": "bin/bourbon.js"
+  },
   "keywords": [
     "css",
     "eyeglass-module",
@@ -29,5 +32,8 @@
   },
   "scripts": {
     "test": "echo \"No test specified\""
+  },
+  "dependencies": {
+    "ncp": "^2.0.0"
   }
 }
