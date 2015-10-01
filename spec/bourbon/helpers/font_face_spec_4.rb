@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "font-face" do
   before(:all) do
-    ParserSupport.parse_file("css3/font-face-4")
+    ParserSupport.parse_file("helpers/font-face-4")
   end
 
   context "called with defaults" do
