@@ -14,7 +14,8 @@
   $file-path,
   $asset-pipeline,
   $file-formats,
-  $font-url) {
+  $font-url,
+  $local-references) {
 
   $src: ();
 
@@ -25,6 +26,10 @@
     ttf:   "#{$file-path}.ttf" format("truetype"),
     svg:   "#{$file-path}.svg##{$font-family}" format("svg")
   );
+
+  @each $local-reference in $local-references {
+    $src: append($src, local($local-reference), comma);
+  }
 
   @each $key, $values in $formats-map {
     @if contains($file-formats, $key) {
