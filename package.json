@@ -22,7 +22,7 @@
     "name": "thoughtbot",
     "url": "http://thoughtbot.com"
   },
-  "main": "index.js",
+  "main": "app/assets/stylesheets/_bourbon.scss",
   "repository": {
     "type": "git",
     "url": "https://github.com/thoughtbot/bourbon.git"
