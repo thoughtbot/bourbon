@@ -3,6 +3,7 @@
   $file-path,
   $weight: normal,
   $style: normal,
+  $unicode-range: U+0-10FFFF,
   $asset-pipeline: $asset-pipeline,
   $file-formats: eot woff2 woff ttf svg) {
 
@@ -12,6 +13,7 @@
     font-family: $font-family;
     font-style: $style;
     font-weight: $weight;
+    unicode-range: $unicode-range;
 
     src: font-source-declaration(
       $font-family,
