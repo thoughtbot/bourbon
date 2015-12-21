@@ -4,7 +4,8 @@
   $weight: normal,
   $style: normal,
   $asset-pipeline: $asset-pipeline,
-  $file-formats: eot woff2 woff ttf svg) {
+  $file-formats: eot woff2 woff ttf svg,
+  $unicode-range: U+0-10FFFF) {
 
   $font-url-prefix: font-url-prefixer($asset-pipeline);
 
@@ -20,5 +21,7 @@
       $file-formats,
       $font-url-prefix
     );
+
+    unicode-range: $unicode-range;
   }
 }

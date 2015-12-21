@@ -15,7 +15,8 @@ describe "font-face" do
                 "url(\"/fonts.woff2\") format(\"woff2\"), " +
                 "url(\"/fonts.woff\") format(\"woff\"), " +
                 "url(\"/fonts.ttf\") format(\"truetype\"), " +
-                "url(\"/fonts.svg#Helvetica\") format(\"svg\");; " +
+                "url(\"/fonts.svg#Helvetica\") format(\"svg\"); " +
+                "unicode-range: U+0-10FFFF;; " +
                 "font-family: \"Verdana\"; " +
                 "font-style: \"italic\"; " +
                 "font-weight: \"bold\"; " +
@@ -24,7 +25,8 @@ describe "font-face" do
                 "format(\"woff2\"), url(\"/assets/fonts.woff\") " +
                 "format(\"woff\"), url(\"/assets/fonts.ttf\") " +
                 "format(\"truetype\"), url(\"/assets/fonts.svg#Verdana\") " +
-                "format(\"svg\");; " +
+                "format(\"svg\"); " +
+                "unicode-range: U+0-10FFFF;; " +
                 "font-family: \"Georgia\"; " +
                 "font-style: \"normal\"; " +
                 "font-weight: \"normal\"; " +
@@ -32,12 +34,14 @@ describe "font-face" do
                 "format(\"embedded-opentype\"), url(\"/assets.woff2\") " +
                 "format(\"woff2\"), url(\"/assets.woff\") format(\"woff\"), " +
                 "url(\"/assets.ttf\") format(\"truetype\"), " +
-                "url(\"/assets.svg#Georgia\") format(\"svg\");; " +
+                "url(\"/assets.svg#Georgia\") format(\"svg\"); " +
+                "unicode-range: U+0-10FFFF;; " +
                 "font-family: \"Arial\"; " +
                 "font-style: \"normal\"; " +
                 "font-weight: \"normal\"; " +
                 "src: url(\"/.woff2\") format(\"woff2\"), " +
-                "url(\"/.svg#Arial\") format(\"svg\");"
+                "url(\"/.svg#Arial\") format(\"svg\"); " +
+                "unicode-range: U+26;"
 
       expect("@font-face").to have_ruleset(ruleset)
     end
