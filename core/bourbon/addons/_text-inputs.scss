@@ -117,7 +117,8 @@ $text-inputs-list: '[type="color"]',
                    'input:not([type])',
                    'textarea';
 
-$all-text-inputs:        assign-inputs($text-inputs-list);
-$all-text-inputs-active: assign-inputs($text-inputs-list, active);
-$all-text-inputs-focus:  assign-inputs($text-inputs-list, focus);
-$all-text-inputs-hover:  assign-inputs($text-inputs-list, hover);
+$all-text-inputs:         assign-inputs($text-inputs-list);
+$all-text-inputs-active:  assign-inputs($text-inputs-list, active);
+$all-text-inputs-focus:   assign-inputs($text-inputs-list, focus);
+$all-text-inputs-hover:   assign-inputs($text-inputs-list, hover);
+$all-text-inputs-invalid: assign-inputs($text-inputs-list, invalid);

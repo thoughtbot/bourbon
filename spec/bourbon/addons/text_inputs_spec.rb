@@ -62,4 +62,14 @@ describe "text-inputs" do
       expect(".all-text-inputs-hover").to have_ruleset(ruleset)
     end
   end
+
+  context "expands invalid text inputs" do
+    it "finds selectors" do
+      list = @inputs_list.map { |input| "#{input}:invalid" }
+      list = list.join(", ")
+      ruleset = "content: #{list};"
+
+      expect(".all-text-inputs-invalid").to have_ruleset(ruleset)
+    end
+  end
 end
