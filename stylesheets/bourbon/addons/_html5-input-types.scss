@@ -36,6 +36,14 @@ $all-text-inputs-hover: ();
       $all-text-inputs-hover: append($all-text-inputs-hover, $input-type-hover, comma);
 }
 
+// Invalid Pseudo-class
+//************************************************************************//
+$all-text-inputs-invalid: ();
+@each $input-type in $unquoted-inputs-list {
+      $input-type-invalid: $input-type + ":invalid";
+      $all-text-inputs-invalid: append($all-text-inputs-invalid, $input-type-invalid, comma);
+}
+
 // Focus Pseudo-class
 //************************************************************************//
 $all-text-inputs-focus: ();
