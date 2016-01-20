@@ -28,5 +28,5 @@ meaning they should be as close to the original CSS syntax as possible.
   s.add_development_dependency("css_parser", "~> 1.3")
   s.add_development_dependency("rake", "~> 10.4")
   s.add_development_dependency("rspec", "~> 3.3")
-  s.add_development_dependency("scss_lint", "0.41")
+  s.add_development_dependency("scss_lint", "0.43")
 end
