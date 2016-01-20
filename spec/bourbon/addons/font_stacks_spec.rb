@@ -21,6 +21,10 @@ describe "font-stacks" do
                     '"Lucida Typewriter", monospace'
       monaco = '"monaco", "Consolas", "Lucida Console", monospace'
 
+      system = '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", ' +
+               '"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", ' +
+               '"Helvetica Neue", sans-serif'
+
       expect(".helvetica").to have_value(helvetica)
       expect(".lucida-grande").to have_value(lucida_grande)
       expect(".verdana").to have_value(verdana)
@@ -30,6 +34,7 @@ describe "font-stacks" do
       expect(".consolas").to have_value(consolas)
       expect(".courier-new").to have_value(courier_new)
       expect(".monaco").to have_value(monaco)
+      expect(".system").to have_value(system)
     end
   end
 end
