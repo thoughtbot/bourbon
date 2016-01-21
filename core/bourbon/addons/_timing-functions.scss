@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+// scss-lint:disable SpaceAfterComma, UnnecessaryMantissa, TrailingZero
+
 ////
 /// CSS cubic-bezier timing functions.
 ///
@@ -7,8 +9,6 @@
 ///
 /// @type string
 ////
-
-// scss-lint:disable SpaceAfterComma, UnnecessaryMantissa
 
 $ease-in-quad:      cubic-bezier(0.550,  0.085, 0.680, 0.530);
 $ease-in-cubic:     cubic-bezier(0.550,  0.055, 0.675, 0.190);
