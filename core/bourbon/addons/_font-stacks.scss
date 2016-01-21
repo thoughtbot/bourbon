@@ -6,14 +6,18 @@
 /// @link goo.gl/Cxb26i
 ////
 
-$helvetica: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$lucida-grande: "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", sans-serif;
-$verdana: "Verdana", "Geneva", sans-serif;
+$font-stack-helvetica: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$font-stack-lucida-grande: "Lucida Grande", "Lucida Sans Unicode", "Geneva",
+  "Verdana", sans-serif;
+$font-stack-verdana: "Verdana", "Geneva", sans-serif;
 
-$garamond: "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-$georgia: "Georgia", "Times", "Times New Roman", serif;
-$hoefler-text: "Hoefler Text", "Baskerville Old Face", "Garamond", "Times New Roman", serif;
+$font-stack-garamond: "Garamond", "Baskerville", "Baskerville Old Face",
+  "Hoefler Text", "Times New Roman", serif;
+$font-stack-georgia: "Georgia", "Times", "Times New Roman", serif;
+$font-stack-hoefler-text: "Hoefler Text", "Baskerville Old Face", "Garamond",
+  "Times New Roman", serif;
 
-$consolas: "Consolas", "monaco", monospace;
-$courier-new: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-$monaco: "monaco", "Consolas", "Lucida Console", monospace;
+$font-stack-consolas: "Consolas", "monaco", monospace;
+$font-stack-courier-new: "Courier New", "Courier", "Lucida Sans Typewriter",
+  "Lucida Typewriter", monospace;
+$font-stack-monaco: "monaco", "Consolas", "Lucida Console", monospace;

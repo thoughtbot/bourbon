@@ -1,37 +1,37 @@
 @import "setup";
 
 .helvetica {
-  content: $helvetica;
+  content: $font-stack-helvetica;
 }
 
 .lucida-grande {
-  content: $lucida-grande;
+  content: $font-stack-lucida-grande;
 }
 
 .verdana {
-  content: $verdana;
+  content: $font-stack-verdana;
 }
 
 .garamond {
-  content: $garamond;
+  content: $font-stack-garamond;
 }
 
 .georgia {
-  content: $georgia;
+  content: $font-stack-georgia;
 }
 
 .hoefler-text {
-  content: $hoefler-text;
+  content: $font-stack-hoefler-text;
 }
 
 .consolas {
-  content: $consolas;
+  content: $font-stack-consolas;
 }
 
 .courier-new {
-  content: $courier-new;
+  content: $font-stack-courier-new;
 }
 
 .monaco {
-  content: $monaco;
+  content: $font-stack-monaco;
 }
