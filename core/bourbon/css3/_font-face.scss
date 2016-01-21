@@ -2,12 +2,12 @@
 
 /// Generates an @font-face declaration. Accepts arugments for weight, style, usage with the Rails Asset Pipeline and file formats.
 ///
-/// @param {string} $font-family
-/// @param {string} $file-path
-/// @param {string} $weight [normal]
-/// @param {string} $asset-pipeline [$asset-pipeline]
+/// @argument {string} $font-family
+/// @argument {string} $file-path
+/// @argument {string} $weight [normal]
+/// @argument {string} $asset-pipeline [$asset-pipeline]
 /// `$asset-pipeline` is set to `false` by default. You can pass in `true` to use the Rails Asset Pipeline (place the fonts in `app/assets/fonts/').
-/// @param {list} $file-formats [$global-font-file-formats]
+/// @argument {list} $file-formats [$global-font-file-formats]
 /// `$global-font-file-formats` is set to `ttf woff2 woff` by default. Pass a list of file formats to support. E.g. `eot woff2 woff ttf svg`.
 ///
 /// @example scss

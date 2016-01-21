@@ -4,10 +4,10 @@
 ///
 /// @access private
 ///
-/// @param {list | string} $inputs
+/// @argument {list | string} $inputs
 /// A selector, or list of selectors, to apply the pseudo-class to
 ///
-/// @param {pseudo-class} $pseudo [null]
+/// @argument {pseudo-class} $pseudo [null]
 /// The pseudo-class to be appended
 ///
 /// @return {list}

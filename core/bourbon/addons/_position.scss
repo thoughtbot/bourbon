@@ -2,10 +2,10 @@
 
 /// Provides a quick method for setting an element’s position. Use a `null` value to “skip” a side.
 ///
-/// @param {string} $position [relative]
+/// @argument {string} $position [relative]
 /// A CSS position value
 ///
-/// @param {arglist} $coordinates [null]
+/// @argument {arglist} $coordinates [null]
 /// List of lengths, defined as CSS shorthand
 ///
 /// @example scss

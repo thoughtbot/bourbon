@@ -6,7 +6,7 @@
 ///
 /// @access private
 ///
-/// @param {List} $values
+/// @argument {List} $values
 ///   List of directional values
 ///
 /// @example scss - Usage
@@ -53,11 +53,11 @@
 ///
 /// @access private
 ///
-/// @param {String} $pre
+/// @argument {String} $pre
 ///   Prefix to use
-/// @param {String} $suf
+/// @argument {String} $suf
 ///   Suffix to use
-/// @param {List} $values
+/// @argument {List} $values
 ///   List of values
 ///
 /// @require {function} collapse-directionals

@@ -2,13 +2,13 @@
 
 /// Increments up or down a defined scale and returns an adjusted value. This helps establish consistent measurements and spacial relationships throughout your project. We provide a list of commonly used scales as [pre-defined variables](//github.com/thoughtbot/bourbon/blob/master/core/settings/_scales.scss).
 ///
-/// @param {number} $increment
+/// @argument {number} $increment
 /// How many steps to increment up or down the scale
 ///
-/// @param {number} $value [$modular-scale-base (1em)]
+/// @argument {number} $value [$modular-scale-base (1em)]
 /// The base value the scale starts at
 ///
-/// @param {number} $ratio [$modular-scale-ratio (1.25)]
+/// @argument {number} $ratio [$modular-scale-ratio (1.25)]
 /// The ratio the scale is built on
 ///
 /// @example scss

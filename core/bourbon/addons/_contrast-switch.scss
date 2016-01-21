@@ -3,13 +3,13 @@
 /// Switches between two colors based on the lightness of a another color. Great
 /// for building button styles.
 ///
-/// @param {color} $base-color
+/// @argument {color} $base-color
 /// The `color` to evaluate lightness against
 ///
-/// @param {color} $light-color [#000]
+/// @argument {color} $light-color [#000]
 /// The `color` to be output when `base-color` is light
 ///
-/// @param {color} $dark-color [#fff]
+/// @argument {color} $dark-color [#fff]
 /// The `color` to be output when `base-color` is dark
 ///
 /// @example scss
