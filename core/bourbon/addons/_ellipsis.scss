@@ -5,6 +5,9 @@
 /// @param {number} $width [100%]
 /// The `max-width` for the string to respect before being truncated
 ///
+/// @param {string} $display [inline-block]
+/// Sets the display-value of the element
+///
 /// @example scss
 /// .element {
 ///   @include ellipsis;
