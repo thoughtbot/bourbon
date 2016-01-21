@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+// scss-lint:disable StringQuotes
+
 /// Generates variables for all buttons. Please note that you must use interpolation on the variable: `#{$all-buttons}`.
 ///
 /// @example scss
@@ -45,10 +47,6 @@
 /// @require {function} assign-inputs
 ///
 /// @type list
-
-// scss-lint:disable StringQuotes
-
-// scss-lint:disable StringQuotes
 
 $buttons-list: 'button',
                '[type="button"]',

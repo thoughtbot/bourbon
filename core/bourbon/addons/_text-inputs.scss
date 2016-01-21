@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+// scss-lint:disable StringQuotes
+
 /// Generates variables for all text-based inputs. Please note that you must use interpolation on the variable: `#{$all-text-inputs}`.
 ///
 /// @example scss
@@ -97,8 +99,6 @@
 /// @require {function} assign-inputs
 ///
 /// @type list
-
-// scss-lint:disable StringQuotes
 
 $text-inputs-list: '[type="color"]',
                    '[type="date"]',
