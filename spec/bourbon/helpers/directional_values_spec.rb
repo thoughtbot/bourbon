@@ -33,7 +33,7 @@ describe "directional-values" do
     end
 
     it "returns property and value with vertical and horizontal values" do
-      expect(".border-color").to have_rule("border-color: #ffffff #000000")
+      expect(".border-color").to have_rule("border-color: #fff #000")
     end
   end
 end

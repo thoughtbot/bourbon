@@ -9,11 +9,11 @@
 }
 
 .pink {
-  @include reverse-color(#ffcccc);
+  @include reverse-color(#fcc);
 }
 
 .sky {
-  @include reverse-color(#aaeeff);
+  @include reverse-color(#aef);
 }
 
 .medium-gray {

@@ -13,7 +13,7 @@ describe "assign-inputs" do
   context "expands plain text inputs" do
     it "finds selectors" do
       @text_inputs_list.each do |input|
-        expect(input).to have_rule("color: #ff0000")
+        expect(input).to have_rule("color: #f00")
       end
     end
   end
@@ -23,7 +23,7 @@ describe "assign-inputs" do
       list = @text_inputs_list.dup
       list.map! { |input| input + ":active" }
       list.each do |input|
-        expect(input).to have_rule("color: #00ff00")
+        expect(input).to have_rule("color: #0f0")
       end
     end
   end
@@ -33,7 +33,7 @@ describe "assign-inputs" do
       list = @text_inputs_list.dup
       list.push "select"
       list.each do |input|
-        expect(input).to have_rule("color: #0000ff")
+        expect(input).to have_rule("color: #00f")
       end
     end
   end
@@ -43,7 +43,7 @@ describe "assign-inputs" do
       list = @text_inputs_list.dup
       list.unshift "[type=\"file\"]"
       list.each do |input|
-        expect(input).to have_rule("color: #ff00ff")
+        expect(input).to have_rule("color: #f0f")
       end
     end
   end

@@ -25,5 +25,5 @@
 }
 
 .border-color {
-  @include directional-property(border, color, #ffffff #000000);
+  @include directional-property(border, color, #fff #000);
 }

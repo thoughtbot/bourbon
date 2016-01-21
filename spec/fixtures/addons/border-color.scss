@@ -1,9 +1,9 @@
 @import "setup";
 
-$red: #ff0000;
-$blue: #00ff00;
-$green: #0000ff;
-$purple: #ffff00;
+$red: #f00;
+$blue: #0f0;
+$green: #00f;
+$purple: #ff0;
 
 .border-color-all {
   @include border-color($red);

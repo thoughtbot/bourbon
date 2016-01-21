@@ -65,7 +65,7 @@
 /// @require {function} contains-falsy
 
 @mixin directional-property($pre, $suf, $values) {
-  // Property Names
+  // scss-lint:disable SpaceAroundOperator
   $top:    $pre + "-top"    + if($suf, "-#{$suf}", "");
   $bottom: $pre + "-bottom" + if($suf, "-#{$suf}", "");
   $left:   $pre + "-left"   + if($suf, "-#{$suf}", "");
