@@ -5,17 +5,17 @@
 /// @argument {color} $color
 ///
 /// @argument {number (percentage)} $percent
-/// The amount of black to be mixed in.
+///   The amount of black to be mixed in.
 ///
 /// @example scss
-/// .element {
-///   background-color: shade(#ffbb52, 60%);
-/// }
+///   .element {
+///     background-color: shade(#ffbb52, 60%);
+///   }
 ///
 /// @example css
-/// .element {
-///   background-color: #664a20;
-/// }
+///   .element {
+///     background-color: #664a20;
+///   }
 ///
 /// @return {color}
 

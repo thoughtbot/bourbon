@@ -1,30 +1,31 @@
 @charset "UTF-8";
 
-/// Provides a quick method for targeting `border-radius` on both corners on the side of a box.
+/// Provides a quick method for targeting `border-radius` on both corners on the
+/// side of a box.
 ///
 /// @argument {number} $radii
 ///
 /// @example scss
-/// .element-one {
-///   @include border-top-radius(5px);
-/// }
+///   .element-one {
+///     @include border-top-radius(5px);
+///   }
 ///
 /// @example css
-/// .element-one {
-///   border-top-left-radius: 5px;
-///   border-top-right-radius: 5px;
-/// }
+///   .element-one {
+///     border-top-left-radius: 5px;
+///     border-top-right-radius: 5px;
+///   }
 ///
 /// @example scss
-/// .element-two {
-///   @include border-left-radius(3px);
-/// }
+///   .element-two {
+///     @include border-left-radius(3px);
+///   }
 ///
 /// @example css
-/// .element-two {
-///   border-bottom-left-radius: 3px;
-///   border-top-left-radius: 3px;
-/// }
+///   .element-two {
+///     border-bottom-left-radius: 3px;
+///     border-top-left-radius: 3px;
+///   }
 ///
 /// @output `border-radius`
 

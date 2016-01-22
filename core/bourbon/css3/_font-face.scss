@@ -1,27 +1,35 @@
 @charset "UTF-8";
 
-/// Generates an @font-face declaration. Accepts arugments for weight, style, usage with the Rails Asset Pipeline and file formats.
+/// Generates an @font-face declaration. Accepts arugments for weight, style,
+/// usage with the Rails Asset Pipeline and file formats.
 ///
 /// @argument {string} $font-family
+///
 /// @argument {string} $file-path
+///
 /// @argument {string} $weight [normal]
+///
 /// @argument {string} $asset-pipeline [$asset-pipeline]
-/// `$asset-pipeline` is set to `false` by default. You can pass in `true` to use the Rails Asset Pipeline (place the fonts in `app/assets/fonts/').
+///   `$asset-pipeline` is set to `false` by default. You can pass in `true` to
+///   use the Rails Asset Pipeline (place the fonts in `app/assets/fonts/').
+///
 /// @argument {list} $file-formats [$global-font-file-formats]
-/// `$global-font-file-formats` is set to `ttf woff2 woff` by default. Pass a list of file formats to support. E.g. `eot woff2 woff ttf svg`.
+///   `$global-font-file-formats` is set to `ttf woff2 woff` by default. Pass a
+///   list of file formats to support. E.g. `eot woff2 woff ttf svg`.
 ///
 /// @example scss
-/// @include font-face("source-sans-pro", "source-sans-pro/source-sans-pro-regular", normal, $asset-pipeline: true, $file-formats: eot woff ttf);
+///   @include font-face("source-sans-pro", "source-sans-pro/source-sans-pro-regular", normal, $asset-pipeline: true, $file-formats: eot woff ttf);
 ///
 /// @example css
-/// @font-face {
-///   font-family: "source-sans-pro";
-///   font-style: normal;
-///   font-weight: normal;
-///   src: font-url("source-sans-pro/source-sans-pro-regular.eot?#iefix") format("embedded-opentype"), font-url("source-sans-pro/source-sans-pro-regular.woff") format("woff"), font-url("source-sans-pro/source-sans-pro-regular.ttf") format("truetype");
-/// }
+///   @font-face {
+///     font-family: "source-sans-pro";
+///     font-style: normal;
+///     font-weight: normal;
+///     src: font-url("source-sans-pro/source-sans-pro-regular.eot?#iefix") format("embedded-opentype"), font-url("source-sans-pro/source-sans-pro-regular.woff") format("woff"), font-url("source-sans-pro/source-sans-pro-regular.ttf") format("truetype");
+///   }
 ///
 /// @require {function} font-url-prefixer
+///
 /// @require {function} font-source-declaration
 
 @mixin font-face(

@@ -5,17 +5,17 @@
 /// @argument {color} $color
 ///
 /// @argument {number (percentage)} $percent
-/// The amount of white to be mixed in.
+///   The amount of white to be mixed in.
 ///
 /// @example scss
-/// .element {
-///   background-color: tint(#6ecaa6, 40%);
-/// }
+///   .element {
+///     background-color: tint(#6ecaa6, 40%);
+///   }
 ///
 /// @example css
-/// .element {
-///   background-color: #a8dfc9;
-/// }
+///   .element {
+///     background-color: #a8dfc9;
+///   }
 ///
 /// @return {color}
 

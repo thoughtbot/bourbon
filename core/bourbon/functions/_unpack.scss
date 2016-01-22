@@ -7,14 +7,14 @@
 /// @argument {list} $shorthand
 ///
 /// @example scss
-/// .element {
-///   margin: unpack(1em 2em);
-/// }
+///   .element {
+///     margin: unpack(1em 2em);
+///   }
 ///
 /// @example css
-/// .element {
-///   margin: 1em 2em 1em 2em;
-/// }
+///   .element {
+///     margin: 1em 2em 1em 2em;
+///   }
 
 @function unpack($shorthand) {
   @if length($shorthand) == 1 {
