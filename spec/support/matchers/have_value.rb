@@ -9,7 +9,7 @@ RSpec::Matchers.define :have_value do |expected|
     end
   end
 
-  failure_message_for_should do |variable_name|
+  failure_message do |variable_name|
     value_attribute = @value_attribute.to_s
     %{Expected variable #{variable_name} to have value "#{expected}".
       Had "#{value_attribute}".}
