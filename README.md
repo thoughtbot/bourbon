@@ -142,20 +142,18 @@ See the [contributing] document. Thank you, [contributors]!
 
 ## License
 
-Copyright © 2011 [thoughtbot, inc](http://thoughtbot.com).
-Bourbon is free software,
-and may be redistributed under the terms specified in the [license](LICENSE.md).
+Bourbon is copyright © 2011 [thoughtbot, inc.][thoughtbot] It is free software, and may be redistributed under the terms specified in the [license].
 
-## About thoughtbot
+  [license]: LICENSE.md
 
-[<img src="http://thoughtbot.github.io/images/signature.svg" width="250" alt="thoughtbot logo">][hire]
+## About
 
-Bourbon is maintained and funded by thoughtbot, inc.
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+Bourbon is maintained by Tyson Gach and the thoughtbot design team. It is funded by [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
-We love open source software!
-See [our other projects][community] or
-[hire us][hire] to design, develop, and grow your product.
+[<img src="http://thoughtbot.github.io/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
 
-[community]: https://thoughtbot.com/community?utm_source=github
-[hire]: https://thoughtbot.com/hire-us?utm_source=github
+We love open-source software! See [our other projects][community] or [hire us][hire] to design, develop, and grow your product.
+
+  [thoughtbot]: https://thoughtbot.com?utm_source=github
+  [community]: https://thoughtbot.com/community?utm_source=github
+  [hire]: https://thoughtbot.com/hire-us?utm_source=github
