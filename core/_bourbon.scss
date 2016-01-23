@@ -22,7 +22,6 @@
 @import "bourbon/functions/strip-unit";
 @import "bourbon/functions/tint";
 @import "bourbon/functions/unpack";
-@import "bourbon/functions/modular-scale";
 
 @import "bourbon/helpers/directional-values";
 
@@ -38,6 +37,7 @@
 @import "bourbon/addons/font-stacks";
 @import "bourbon/addons/hide-text";
 @import "bourbon/addons/margin";
+@import "bourbon/addons/modular-scale";
 @import "bourbon/addons/padding";
 @import "bourbon/addons/position";
 @import "bourbon/addons/prefixer";
