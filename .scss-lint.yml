@@ -1,5 +1,7 @@
 scss_files: "**/*.scss"
 
+severity: warning
+
 linters:
   BangFormat:
     enabled: true
