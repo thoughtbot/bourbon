@@ -32,7 +32,7 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
 
   Alternatively, you can install Bourbon with [Bower](http://bower.io).
 
-2. Install the Bourbon library into the current directory:
+1. Install the Bourbon library into the current directory:
 
   ```bash
   bourbon install
@@ -44,7 +44,7 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
   bourbon install --path my/custom/path/
   ```
 
-3. Import Bourbon at the beginning of your stylesheet:
+1. Import Bourbon at the beginning of your stylesheet:
 
   ```scss
   @import "bourbon/bourbon";
@@ -60,21 +60,21 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
   gem 'bourbon'
   ```
 
-2. Then run:
+1. Then run:
 
   ```bash
   bundle install
   ```
 
-3. Restart your server and rename `application.css` to `application.scss`:
+1. Restart your server and rename `application.css` to `application.scss`:
 
   ```bash
   mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
   ```
 
-4. Delete _all_ Sprockets directives in `application.scss` (`require`, `require_tree` and `require_self`) and use Sass’s native `@import` instead. ([why?](http://pivotallabs.com/structure-your-sass-files-with-import))
+1. Delete _all_ Sprockets directives in `application.scss` (`require`, `require_tree` and `require_self`) and use Sass’s native `@import` instead. ([why?](http://pivotallabs.com/structure-your-sass-files-with-import))
 
-5. Import Bourbon at the beginning of `application.scss`. All additional stylesheets should be imported below Bourbon:
+1. Import Bourbon at the beginning of `application.scss`. All additional stylesheets should be imported below Bourbon:
 
   ```scss
   @import "bourbon";
@@ -92,9 +92,9 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
   npm install --save bourbon
   ```
 
-2. If you’re using [Eyeglass](http://eyeglass.rocks), skip to Step 3. Otherwise, you’ll need to add Bourbon to your node-sass `includePaths` option. `require("bourbon").includePaths` is an array of directories that you should pass to node-sass. How you do this depends on how node-sass is integrated into your project.
+1. If you’re using [Eyeglass](http://eyeglass.rocks), skip to Step 3. Otherwise, you’ll need to add Bourbon to your node-sass `includePaths` option. `require("bourbon").includePaths` is an array of directories that you should pass to node-sass. How you do this depends on how node-sass is integrated into your project.
 
-3. Import Bourbon into your Sass files:
+1. Import Bourbon into your Sass files:
 
   ```scss
   @import "bourbon";
@@ -108,13 +108,13 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
   gem uninstall bourbon
   ```
 
-2. Reinstall the Bourbon gem, using the `-v` flag to specify the version you need:
+1. Reinstall the Bourbon gem, using the `-v` flag to specify the version you need:
 
   ```bash
   gem install bourbon -v 3.2.4
   ```
 
-3. Follow the [instructions above](#installation) to install Bourbon into your project.
+1. Follow the [instructions above](#installation) to install Bourbon into your project.
 
 ## Browser support
 
