@@ -1,14 +1,3 @@
-// Used for creating the source string for fonts using @font-face
-// Reference: http://goo.gl/Ru1bKP
-
-@function font-url-prefixer($asset-pipeline) {
-  @if $asset-pipeline == true {
-    @return font-url;
-  } @else {
-    @return url;
-  }
-}
-
 @function font-source-declaration(
   $font-family,
   $file-path,

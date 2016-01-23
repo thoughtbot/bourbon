@@ -11,6 +11,8 @@
 @import "bourbon/functions/assign-inputs";
 @import "bourbon/functions/contains";
 @import "bourbon/functions/contains-falsy";
+@import "bourbon/functions/font-source-declaration";
+@import "bourbon/functions/font-url-prefixer";
 @import "bourbon/functions/is-length";
 @import "bourbon/functions/is-light";
 @import "bourbon/functions/is-number";
@@ -22,9 +24,6 @@
 @import "bourbon/functions/modular-scale";
 
 @import "bourbon/helpers/directional-values";
-@import "bourbon/helpers/font-source-declaration";
-
-@import "bourbon/css3/font-face";
 
 @import "bourbon/addons/border-color";
 @import "bourbon/addons/border-radius";
@@ -34,6 +33,7 @@
 @import "bourbon/addons/clearfix";
 @import "bourbon/addons/contrast-switch";
 @import "bourbon/addons/ellipsis";
+@import "bourbon/addons/font-face";
 @import "bourbon/addons/font-stacks";
 @import "bourbon/addons/hide-text";
 @import "bourbon/addons/margin";
