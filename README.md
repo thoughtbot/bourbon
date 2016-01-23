@@ -133,6 +133,13 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
 
 Also check out [Proteus](https://github.com/thoughtbot/proteus), a collection of useful starter kits to help you prototype faster. Each kit comes with Bourbon, Neat and Bitters out-of-the-box.
 
+## Contributing
+
+See the [contributing] document. Thank you, [contributors]!
+
+  [contributing]: CONTRIBUTING.md
+  [contributors]: https://github.com/thoughtbot/bourbon/graphs/contributors
+
 ## License
 
 Copyright © 2011 [thoughtbot, inc](http://thoughtbot.com).
