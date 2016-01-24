@@ -18,6 +18,7 @@
     "lib",
     "package.json",
     "Rakefile",
+    "RELEASING.md",
     "sache.json",
     "spec"
   ],
