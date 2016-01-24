@@ -9,7 +9,17 @@ Gem::Specification.new do |s|
   s.add_development_dependency("scss_lint", "0.44")
   s.add_runtime_dependency("sass", "~> 3.4")
   s.add_runtime_dependency("thor", "~> 0.19")
-  s.authors = ["Andres Mejia", "Chad Mazzola", "Chris Lloyd", "Christian Reuter", "Gabe Berke-Williams", "Hugo Giraudel", "J. Edward Dewyea", "Jeremy Raines", "Joshua Ogle", "Kyle Fiedler", "Matt Jankowski", "Mike Burns", "Nick Quaranto", "Phil LaPier", "Reda Lemeden", "Travis Haynes", "Tyson Gach", "Will McMahan"]
+  s.authors = [
+    "Christian Reuter",
+    "Hugo Giraudel",
+    "Joshua Ogle",
+    "Kyle Fiedler",
+    "Gabe Berke-Williams",
+    "Phil LaPier",
+    "Reda Lemeden",
+    "Tyson Gach",
+    "Will McMahan"
+  ]
   s.description = <<-DESC
     Bourbon is a library of pure Sass mixins that are designed to be simple
     and easy to use. No configuration required. The mixins aim to be as
