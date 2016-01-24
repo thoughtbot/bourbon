@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "font-source-declaration" do
   before(:all) do
-    ParserSupport.parse_file("helpers/font-source-declaration")
+    ParserSupport.parse_file("functions/font-source-declaration")
   end
 
   context "called with pipeline" do
