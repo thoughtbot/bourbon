@@ -31,14 +31,19 @@
 /// @require {function} font-url-prefixer
 ///
 /// @require {function} font-source-declaration
+///
+/// @require {function} bourbon-setting
+///
+/// @require {variable} bourbon-settings
 
 @mixin font-face(
-  $font-family,
-  $file-path,
-  $weight: normal,
-  $style: normal,
-  $asset-pipeline: $asset-pipeline,
-  $file-formats: $global-font-file-formats) {
+    $font-family,
+    $file-path,
+    $weight: normal,
+    $style: normal,
+    $asset-pipeline: _bourbon-setting("rails-asset-pipeline"),
+    $file-formats: _bourbon-setting("global-font-file-formats")
+  ) {
 
   $font-url-prefix: font-url-prefixer($asset-pipeline);
 
