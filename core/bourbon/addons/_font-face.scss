@@ -14,7 +14,7 @@
 ///   use the Rails Asset Pipeline (place the fonts in `app/assets/fonts/').
 ///
 /// @argument {list} $file-formats [$global-font-file-formats]
-///   `$global-font-file-formats` is set to `ttf woff2 woff` by default. Pass a
+///   `$global-font-file-formats` is set to `("ttf", "woff2", "woff")` by default. Pass a
 ///   list of file formats to support. E.g. `eot woff2 woff ttf svg`.
 ///
 /// @example scss
@@ -31,14 +31,17 @@
 /// @require {function} font-url-prefixer
 ///
 /// @require {function} font-source-declaration
+///
+/// @require {function} _bourbon-get-setting
 
 @mixin font-face(
-  $font-family,
-  $file-path,
-  $weight: normal,
-  $style: normal,
-  $asset-pipeline: $asset-pipeline,
-  $file-formats: $global-font-file-formats) {
+    $font-family,
+    $file-path,
+    $weight: normal,
+    $style: normal,
+    $asset-pipeline: _bourbon-get-setting("rails-asset-pipeline"),
+    $file-formats: _bourbon-get-setting("global-font-file-formats")
+  ) {
 
   $font-url-prefix: font-url-prefixer($asset-pipeline);
 

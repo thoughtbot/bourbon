@@ -51,11 +51,14 @@
 ///
 /// @return {number}
 ///
-/// @require {variable} $modular-scale-ratio
-///
-/// @require {variable} $modular-scale-base
+/// @require {function} _bourbon-get-setting
 
-@function modular-scale($increment, $value: $modular-scale-base, $ratio: $modular-scale-ratio) {
+@function modular-scale(
+    $increment,
+    $value: _bourbon-get-setting("modular-scale-base"),
+    $ratio: _bourbon-get-setting("modular-scale-ratio")
+  ) {
+
   $v1: nth($value, 1);
   $v2: nth($value, length($value));
   $value: $v1;

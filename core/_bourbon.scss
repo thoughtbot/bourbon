@@ -3,10 +3,9 @@
 // Copyright 2011 thoughtbot, inc.
 // MIT License
 
-@import "bourbon/settings/asset-pipeline";
-@import "bourbon/settings/global-font-file-formats";
 @import "bourbon/settings/scales";
-@import "bourbon/settings/modular-scale";
+@import "bourbon/settings/settings";
+@import "bourbon/settings/bourbon-get-setting";
 
 @import "bourbon/functions/assign-inputs";
 @import "bourbon/functions/collapse-directionals";

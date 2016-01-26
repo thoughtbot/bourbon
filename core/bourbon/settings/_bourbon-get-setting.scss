@@ -1,0 +1,12 @@
+/// Return a Bourbon setting.
+///
+/// @argument {string} $setting
+///
+/// @example scss
+///   _bourbon-get-setting(rails-asset-pipeline)
+///
+/// @access private
+
+@function _bourbon-get-setting($setting) {
+  @return map-get(map-merge($_bourbon-defaults, $bourbon), $setting);
+}
