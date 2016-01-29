@@ -6,7 +6,12 @@ Given /^I install bourbon to "([^"]*)"$/ do |path|
 end
 
 Then /^the sass directories(?: with "([^"]+)" prefix)? should have been generated$/ do |prefix|
-  sass_directories = ["bourbon/addons", "bourbon/css3", "bourbon/functions"]
+  sass_directories = [
+    "bourbon/addons",
+    "bourbon/helpers",
+    "bourbon/functions",
+    "bourbon/settings",
+  ]
   sass_directories.map!{ |directory| bourbon_path(prefix, directory) }
   check_directory_presence(sass_directories, true)
 end
