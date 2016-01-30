@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-// scss-lint:disable StringQuotes
-
 /// Generates variables for all buttons. Please note that you must use
 /// interpolation on the variable: `#{$all-buttons}`.
 ///
@@ -21,27 +19,27 @@
 ///
 /// @example css
 ///   button,
-///   [type="button"],
-///   [type="reset"],
-///   [type="submit"] {
+///   [type='button'],
+///   [type='reset'],
+///   [type='submit'] {
 ///     background-color: #f00;
 ///   }
 ///
 ///   button:focus,
-///   [type="button"]:focus,
-///   [type="reset"]:focus,
-///   [type="submit"]:focus,
+///   [type='button']:focus,
+///   [type='reset']:focus,
+///   [type='submit']:focus,
 ///   button:hover,
-///   [type="button"]:hover,
-///   [type="reset"]:hover,
-///   [type="submit"]:hover {
+///   [type='button']:hover,
+///   [type='reset']:hover,
+///   [type='submit']:hover {
 ///     background-color: #0f0;
 ///   }
 ///
 ///   button:active,
-///   [type="button"]:active,
-///   [type="reset"]:active,
-///   [type="submit"]:active {
+///   [type='button']:active,
+///   [type='reset']:active,
+///   [type='submit']:active {
 ///     background-color: #00f;
 ///   }
 ///
@@ -50,10 +48,10 @@
 /// @type list
 
 $buttons-list: (
-  'button',
-  '[type="button"]',
-  '[type="reset"]',
-  '[type="submit"]'
+  "button",
+  "[type='button']",
+  "[type='reset']",
+  "[type='submit']"
 );
 
 $all-buttons:        assign-inputs($buttons-list);

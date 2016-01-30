@@ -6,9 +6,9 @@ describe "buttons" do
 
     @buttons_list = %w(
       button
-      [type="button"]
-      [type="reset"]
-      [type="submit"]
+      [type='button']
+      [type='reset']
+      [type='submit']
     )
   end
 

@@ -4,8 +4,8 @@ describe "assign-inputs" do
   before(:all) do
     ParserSupport.parse_file("functions/assign-inputs")
     @text_inputs_list = [
-      "[type=\"password\"]",
-      "[type=\"text\"]",
+      "[type='password']",
+      "[type='text']",
       "textarea"
     ]
   end

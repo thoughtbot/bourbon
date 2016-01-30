@@ -5,20 +5,20 @@ describe "text-inputs" do
     ParserSupport.parse_file("addons/text-inputs")
 
     @inputs_list = %w(
-      [type="color"]
-      [type="date"]
-      [type="datetime"]
-      [type="datetime-local"]
-      [type="email"]
-      [type="month"]
-      [type="number"]
-      [type="password"]
-      [type="search"]
-      [type="tel"]
-      [type="text"]
-      [type="time"]
-      [type="url"]
-      [type="week"]
+      [type='color']
+      [type='date']
+      [type='datetime']
+      [type='datetime-local']
+      [type='email']
+      [type='month']
+      [type='number']
+      [type='password']
+      [type='search']
+      [type='tel']
+      [type='text']
+      [type='time']
+      [type='url']
+      [type='week']
       input:not([type])
       textarea
     )
