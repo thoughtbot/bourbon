@@ -49,10 +49,12 @@
 ///
 /// @type list
 
-$buttons-list: 'button',
-               '[type="button"]',
-               '[type="reset"]',
-               '[type="submit"]';
+$buttons-list: (
+  'button',
+  '[type="button"]',
+  '[type="reset"]',
+  '[type="submit"]'
+);
 
 $all-buttons:        assign-inputs($buttons-list);
 $all-buttons-active: assign-inputs($buttons-list, active);
