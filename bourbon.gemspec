@@ -11,10 +11,11 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "thor", "~> 0.19"
   s.authors = [
     "Christian Reuter",
+    "Damian Galarza",
+    "Gabe Berke-Williams",
     "Hugo Giraudel",
     "Joshua Ogle",
     "Kyle Fiedler",
-    "Gabe Berke-Williams",
     "Phil LaPier",
     "Reda Lemeden",
     "Tyson Gach",
