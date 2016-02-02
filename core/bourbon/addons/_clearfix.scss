@@ -2,7 +2,7 @@
 
 /// Provides an easy way to include a clearfix for containing floats.
 ///
-/// @link http://goo.gl/0VEum5
+/// @link http://goo.gl/yP5hiZ
 ///
 /// @example scss
 ///   .element {
@@ -13,13 +13,13 @@
 ///   .element::after {
 ///     clear: both;
 ///     content: "";
-///     display: table;
+///     display: block;
 ///   }
 
 @mixin clearfix {
   &::after {
     clear: both;
     content: "";
-    display: table;
+    display: block;
   }
 }

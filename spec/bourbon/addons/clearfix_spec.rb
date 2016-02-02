@@ -9,8 +9,8 @@ describe "clearfix" do
     it "adds clearfix" do
       input = ".clearfix::after"
       ruleset = "clear: both; " +
-                "content: \"\"; " +
-                "display: table;"
+                'content: ""; ' +
+                "display: block;"
 
       expect(input).to have_ruleset(ruleset)
     end
