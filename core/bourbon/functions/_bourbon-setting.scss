@@ -1,19 +1,25 @@
 /// Return a Bourbon setting.
+/// Update the bourbon-settings by passing in a key value pair.
 ///
 /// @argument {string}
 ///
 /// @example scss
 ///   bourbon-setting(rails-asset-pipeline)
+///   $bourbon-settings: bourbon-setting(rails-asset-pipeline, true)
 ///
 /// @require {variable} bourbon-settings
 ///
 /// @access private
 
-@function _bourbon-setting($setting) {
+@function _bourbon-setting($setting, $value: false) {
   @if not map-has-key($bourbon-settings, $setting) {
     @warn "Sorry, the Bourbon setting `#{$setting}` does not currently exist. "
         + "Please make sure it is defined in `$_bourbon-defaults` map."
   }
 
-  @return map-get($bourbon-settings, $setting);
+  @if $value {
+    @return map-merge($bourbon-settings, ($setting: $value));
+  } @else {
+    @return map-get($bourbon-settings, $setting);
+  }
 }
