@@ -4,10 +4,6 @@ $LOAD_PATH.unshift dir unless $LOAD_PATH.include?(dir)
 
 require "bourbon/generator"
 
-unless defined?(Sass)
-  require 'sass'
-end
-
 module Bourbon
   if defined?(Rails) && defined?(Rails::Engine)
     class Engine < ::Rails::Engine
