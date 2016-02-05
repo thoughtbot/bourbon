@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
-/// Generates an @font-face declaration. Accepts arguments for weight, style,
-/// usage with the Rails Asset Pipeline and file formats. Also possible to
-/// pass additional `@content` to the mixin, for instance `unicode-range`.
+/// Generates an `@font-face` declaration. You can choose the specific file
+/// formats you need to output; the mixin supports `eot`, `ttf`, `svg`, `woff2`
+/// and `woff`. The mixin also supports usage with the Rails Asset Pipeline,
+/// which you can enable per use, or globally in the `$bourbon()` settings.
+/// Finally, any additional CSS properties that are included in the `@include`
+/// directive will be output within the `@font-face` declaration, e.g. you can
+/// pass in `font-weight`, `font-style` and/or `unicode-range`.
 ///
 /// @argument {string} $font-family
 ///
 /// @argument {string} $file-path
-///
-/// @argument {string} $weight [normal]
-///
-/// @argument {string} $style [normal]
 ///
 /// @argument {string} $asset-pipeline [false]
 ///   Set to `true` if you’re using the Rails Asset Pipeline (place the fonts
@@ -30,8 +30,6 @@
 /// @example css
 ///   @font-face {
 ///     font-family: "source-sans-pro";
-///     font-style: normal;
-///     font-weight: normal;
 ///     src: url("fonts/source-sans-pro-regular.eot?#iefix")
 ///          format("embedded-opentype"),
 ///          url("fonts/source-sans-pro-regular.ttf")
@@ -47,8 +45,6 @@
 @mixin font-face(
     $font-family,
     $file-path,
-    $weight: normal,
-    $style: normal,
     $asset-pipeline: _bourbon-get-setting("rails-asset-pipeline"),
     $file-formats: _bourbon-get-setting("global-font-file-formats")
   ) {
@@ -57,8 +53,6 @@
 
   @font-face {
     font-family: $font-family;
-    font-style: $style;
-    font-weight: $weight;
     src: _font-source-declaration(
       $font-family,
       $file-path,

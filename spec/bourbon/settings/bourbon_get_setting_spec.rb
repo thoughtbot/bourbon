@@ -20,8 +20,6 @@ describe "_bourbon-get-setting" do
   context "called from the font-face mixin" do
     it "outputs user-overridden font file formats" do
       ruleset = 'font-family: "source-sans-pro"; ' +
-                "font-style: normal; " +
-                "font-weight: normal; " +
                 'src: font-url("source-sans-pro-regular.woff2") ' +
                      'format("woff2"), ' +
                      'font-url("source-sans-pro-regular.woff") ' +

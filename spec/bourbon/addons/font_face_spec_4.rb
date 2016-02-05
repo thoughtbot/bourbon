@@ -8,8 +8,6 @@ describe "font-face" do
   context "called with defaults" do
     it "outputs defaults" do
       ruleset = 'font-family: "circular"; ' +
-                'font-style: normal; ' +
-                'font-weight: normal; ' +
                 'src: url("/circular.woff2") format("woff2"), ' +
                 'url("/circular.svg#circular") format("svg");'
 

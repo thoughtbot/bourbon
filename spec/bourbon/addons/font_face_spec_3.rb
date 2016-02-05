@@ -7,10 +7,8 @@ describe "font-face" do
 
   context "called with defaults" do
     it "outputs defaults" do
-      ruleset = 'font-family: "pitch"; ' +
-                'font-style: normal; ' +
-                'font-weight: normal; ' +
-                'src: url("/fonts/pitch.woff") format("woff");'
+      ruleset = 'font-family: "pitch";' +
+                'src: font-url("/fonts/pitch.woff2") format("woff2");'
 
       expect("@font-face").to have_ruleset(ruleset)
     end

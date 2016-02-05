@@ -1,9 +1,10 @@
 @import "setup";
 
 @include font-face(
-  "roboto",
-  "/assets/fonts/Roboto-BoldItalic",
-  bold,
-  italic,
-  $file-formats: "ttf"
-);
+    "calibre",
+    "fonts/calibre"
+  ) {
+  font-style: normal;
+  font-weight: 600;
+  unicode-range: U+26;
+}
