@@ -9,23 +9,32 @@
 ///
 /// @argument {string} $weight [normal]
 ///
-/// @argument {string} $asset-pipeline [$asset-pipeline]
-///   `$asset-pipeline` is set to `false` by default. You can pass in `true` to
-///   use the Rails Asset Pipeline (place the fonts in `app/assets/fonts/').
+/// @argument {string} $style [normal]
 ///
-/// @argument {list} $file-formats [$global-font-file-formats]
-///   `$global-font-file-formats` is set to `("ttf", "woff2", "woff")` by default. Pass a
-///   list of file formats to support. E.g. `eot woff2 woff ttf svg`.
+/// @argument {string} $asset-pipeline [false]
+///   Set to `true` if you’re using the Rails Asset Pipeline (place the fonts
+///   in `app/assets/fonts/`).
+///
+/// @argument {list} $file-formats [("ttf", "woff2", "woff")]
+///   Pass a list of file formats to support,
+///   for example ("eot", "ttf", "svg", "woff2", woff").
 ///
 /// @example scss
-///   @include font-face("source-sans-pro", "source-sans-pro/source-sans-pro-regular", normal, $asset-pipeline: true, $file-formats: eot woff ttf);
+///   @include font-face(
+///     "source-sans-pro",
+///     "fonts/source-sans-pro-regular",
+///     $file-formats: ("eot", "ttf")
+///   );
 ///
 /// @example css
 ///   @font-face {
 ///     font-family: "source-sans-pro";
 ///     font-style: normal;
 ///     font-weight: normal;
-///     src: font-url("source-sans-pro/source-sans-pro-regular.eot?#iefix") format("embedded-opentype"), font-url("source-sans-pro/source-sans-pro-regular.woff") format("woff"), font-url("source-sans-pro/source-sans-pro-regular.ttf") format("truetype");
+///     src: url("fonts/source-sans-pro-regular.eot?#iefix")
+///          format("embedded-opentype"),
+///          url("fonts/source-sans-pro-regular.ttf")
+///          format("truetype");
 ///   }
 ///
 /// @require {function} font-url-prefixer
