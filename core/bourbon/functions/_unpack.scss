@@ -2,21 +2,21 @@
 
 /// Converts shorthand to the 4-value syntax.
 ///
-/// @access private
-///
 /// @argument {list} $shorthand
 ///
 /// @example scss
 ///   .element {
-///     margin: unpack(1em 2em);
+///     margin: _unpack(1em 2em);
 ///   }
 ///
 /// @example css
 ///   .element {
 ///     margin: 1em 2em 1em 2em;
 ///   }
+///
+/// @access private
 
-@function unpack($shorthand) {
+@function _unpack($shorthand) {
   @if length($shorthand) == 1 {
     @return nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1);
   } @else if length($shorthand) == 2 {

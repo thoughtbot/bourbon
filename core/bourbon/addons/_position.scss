@@ -21,9 +21,9 @@
 ///     top: 0;
 ///   }
 ///
-/// @require {function} is-length
+/// @require {function} _is-length
 ///
-/// @require {function} unpack
+/// @require {function} _unpack
 
 @mixin position($position: relative, $coordinates: null) {
   @if type-of($position) == list {
@@ -31,7 +31,7 @@
     $position: relative;
   }
 
-  $coordinates: unpack($coordinates);
+  $coordinates: _unpack($coordinates);
 
   $offsets: (
     top:    nth($coordinates, 1),
@@ -43,7 +43,7 @@
   position: $position;
 
   @each $offset, $value in $offsets {
-    @if is-length($value) {
+    @if _is-length($value) {
       #{$offset}: $value;
     }
   }

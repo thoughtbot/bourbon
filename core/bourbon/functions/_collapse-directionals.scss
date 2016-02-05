@@ -7,8 +7,6 @@
 ///
 /// @ignore You can also use `false` instead of `null`.
 ///
-/// @access private
-///
 /// @argument {List} $values
 ///   List of directional values
 ///
@@ -28,8 +26,10 @@
 ///   }
 ///
 /// @return {List}
+///
+/// @access private
 
-@function collapse-directionals($values) {
+@function _collapse-directionals($values) {
   $output: null;
 
   $a: nth($values, 1);

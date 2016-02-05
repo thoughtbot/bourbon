@@ -1,13 +1,13 @@
 @import "setup";
 
 .border-all {
-  @include directional-property(border, width, 2px 5px 8px 12px);
+  @include _directional-property(border, width, 2px 5px 8px 12px);
 }
 
 .border-top {
-  @include directional-property(border, top, 10px);
+  @include _directional-property(border, top, 10px);
 }
 
 .border-color {
-  @include directional-property(border, color, #fff #000);
+  @include _directional-property(border, color, #fff #000);
 }

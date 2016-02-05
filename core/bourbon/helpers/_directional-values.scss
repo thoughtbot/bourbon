@@ -4,8 +4,6 @@
 
 /// Output directional properties, for instance `margin`.
 ///
-/// @access private
-///
 /// @argument {String} $pre
 ///   Prefix to use
 /// @argument {String} $suf
@@ -13,19 +11,22 @@
 /// @argument {List} $values
 ///   List of values
 ///
-/// @require {function} collapse-directionals
-/// @require {function} contains-falsy
+/// @require {function} _collapse-directionals
+///
+/// @require {function} _contains-falsy
+///
+/// @access private
 
-@mixin directional-property($pre, $suf, $values) {
+@mixin _directional-property($pre, $suf, $values) {
   $top:    $pre + "-top"    + if($suf, "-#{$suf}", "");
   $bottom: $pre + "-bottom" + if($suf, "-#{$suf}", "");
   $left:   $pre + "-left"   + if($suf, "-#{$suf}", "");
   $right:  $pre + "-right"  + if($suf, "-#{$suf}", "");
   $all:    $pre +             if($suf, "-#{$suf}", "");
 
-  $values: collapse-directionals($values);
+  $values: _collapse-directionals($values);
 
-  @if contains-falsy($values) {
+  @if _contains-falsy($values) {
     @if nth($values, 1) { #{$top}: nth($values, 1); }
 
     @if length($values) == 1 {

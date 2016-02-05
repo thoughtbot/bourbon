@@ -2,14 +2,14 @@
 
 /// Checks if a list does not contains a value.
 ///
-/// @access private
-///
 /// @argument {list} $list
 ///   The list to check against.
 ///
 /// @return {boolean}
+///
+/// @access private
 
-@function contains-falsy($list) {
+@function _contains-falsy($list) {
   @each $item in $list {
     @if not $item {
       @return true;

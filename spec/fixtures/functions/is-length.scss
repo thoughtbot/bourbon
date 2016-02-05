@@ -1,7 +1,7 @@
 @import "setup";
 
 @mixin color-length($value) {
-  @if is-length($value) {
+  @if _is-length($value) {
     color: #fff;
   }
 }

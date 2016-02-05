@@ -37,9 +37,9 @@
 ///          format("truetype");
 ///   }
 ///
-/// @require {function} font-url-prefixer
+/// @require {function} _font-url-prefixer
 ///
-/// @require {function} font-source-declaration
+/// @require {function} _font-source-declaration
 ///
 /// @require {function} _bourbon-get-setting
 
@@ -52,14 +52,14 @@
     $file-formats: _bourbon-get-setting("global-font-file-formats")
   ) {
 
-  $font-url-prefix: font-url-prefixer($asset-pipeline);
+  $font-url-prefix: _font-url-prefixer($asset-pipeline);
 
   @font-face {
     font-family: $font-family;
     font-style: $style;
     font-weight: $weight;
 
-    src: font-source-declaration(
+    src: _font-source-declaration(
       $font-family,
       $file-path,
       $asset-pipeline,

@@ -1,4 +1,4 @@
-@function font-source-declaration(
+@function _font-source-declaration(
   $font-family,
   $file-path,
   $asset-pipeline,
@@ -16,7 +16,7 @@
   );
 
   @each $key, $values in $formats-map {
-    @if contains($file-formats, $key) {
+    @if _contains($file-formats, $key) {
       $file-path: nth($values, 1);
       $font-format: nth($values, 2);
 

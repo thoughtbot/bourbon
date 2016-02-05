@@ -2,15 +2,15 @@
 
 /// Checks for a valid CSS size.
 ///
-/// @access private
-///
 /// @argument {string} $value
 ///
-/// @require {function} contains
+/// @require {function} _contains
 ///
-/// @require {function} is-length
+/// @require {function} _is-length
+///
+/// @access private
 
-@function is-size($value) {
-  @return is-length($value)
-          or contains("fill" "fit-content" "min-content" "max-content", $value);
+@function _is-size($value) {
+  @return _is-length($value)
+          or _contains("fill" "fit-content" "min-content" "max-content", $value);
 }

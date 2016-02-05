@@ -43,7 +43,7 @@
 ///     background-color: #00f;
 ///   }
 ///
-/// @require {function} assign-inputs
+/// @require {function} _assign-inputs
 ///
 /// @type list
 
@@ -54,7 +54,7 @@ $buttons-list: (
   "[type='submit']"
 );
 
-$all-buttons:        assign-inputs($buttons-list);
-$all-buttons-active: assign-inputs($buttons-list, active);
-$all-buttons-focus:  assign-inputs($buttons-list, focus);
-$all-buttons-hover:  assign-inputs($buttons-list, hover);
+$all-buttons:        _assign-inputs($buttons-list);
+$all-buttons-active: _assign-inputs($buttons-list, active);
+$all-buttons-focus:  _assign-inputs($buttons-list, focus);
+$all-buttons-hover:  _assign-inputs($buttons-list, hover);

@@ -17,10 +17,10 @@
 ///     border-top-width: 1em;
 ///   }
 ///
-/// @require {mixin} directional-property
+/// @require {mixin} _directional-property
 ///
 /// @output `border-*-width`
 
 @mixin border-width($values...) {
-  @include directional-property(border, width, $values...);
+  @include _directional-property(border, width, $values...);
 }

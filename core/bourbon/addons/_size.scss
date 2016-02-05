@@ -26,16 +26,16 @@
 ///     height: 10em;
 ///   }
 ///
-/// @require {function} is-size
+/// @require {function} _is-size
 
 @mixin size($width, $height: $width) {
-  @if is-size($height) {
+  @if _is-size($height) {
     height: $height;
   } @else {
     @error "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
   }
 
-  @if is-size($width) {
+  @if _is-size($width) {
     width: $width;
   } @else {
     @error "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";

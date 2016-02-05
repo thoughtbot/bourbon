@@ -18,10 +18,10 @@
 ///     border-top-color: #a60b55;
 ///   }
 ///
-/// @require {mixin} directional-property
+/// @require {mixin} _directional-property
 ///
 /// @output `border-*-color`
 
 @mixin border-color($values...) {
-  @include directional-property(border, color, $values...);
+  @include _directional-property(border, color, $values...);
 }

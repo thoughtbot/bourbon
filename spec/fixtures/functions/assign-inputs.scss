@@ -1,19 +1,19 @@
 @import "setup";
 
-#{assign-inputs($text-inputs-list)} {
+#{_assign-inputs($text-inputs-list)} {
   color: #f00;
 }
 
-#{assign-inputs($text-inputs-list, active)} {
+#{_assign-inputs($text-inputs-list, active)} {
   color: #0f0;
 }
 
-#{assign-inputs($text-inputs-list)},
+#{_assign-inputs($text-inputs-list)},
 select {
   color: #00f;
 }
 
 [type="file"],
-#{assign-inputs($text-inputs-list)} {
+#{_assign-inputs($text-inputs-list)} {
   color: #f0f;
 }

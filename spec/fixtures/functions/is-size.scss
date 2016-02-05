@@ -1,7 +1,7 @@
 @import "setup";
 
 @mixin size-margin($size) {
-  @if is-size($size) {
+  @if _is-size($size) {
     margin-top: $size;
   }
 }

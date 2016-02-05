@@ -2,8 +2,6 @@
 
 /// Append pseudo-classes to a selector(s).
 ///
-/// @access private
-///
 /// @argument {list | string} $inputs
 ///   A selector, or list of selectors, to apply the pseudo-class to
 ///
@@ -11,8 +9,10 @@
 ///   The pseudo-class to be appended
 ///
 /// @return {list}
+///
+/// @access private
 
-@function assign-inputs($inputs, $pseudo: null) {
+@function _assign-inputs($inputs, $pseudo: null) {
   $list: ();
 
   @each $input in $inputs {

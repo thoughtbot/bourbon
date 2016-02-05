@@ -95,7 +95,7 @@
 ///     border: 1px solid #00f;
 ///   }
 ///
-/// @require {function} assign-inputs
+/// @require {function} _assign-inputs
 ///
 /// @type list
 
@@ -118,8 +118,8 @@ $text-inputs-list: (
   "textarea"
 );
 
-$all-text-inputs:         assign-inputs($text-inputs-list);
-$all-text-inputs-active:  assign-inputs($text-inputs-list, active);
-$all-text-inputs-focus:   assign-inputs($text-inputs-list, focus);
-$all-text-inputs-hover:   assign-inputs($text-inputs-list, hover);
-$all-text-inputs-invalid: assign-inputs($text-inputs-list, invalid);
+$all-text-inputs:         _assign-inputs($text-inputs-list);
+$all-text-inputs-active:  _assign-inputs($text-inputs-list, active);
+$all-text-inputs-focus:   _assign-inputs($text-inputs-list, focus);
+$all-text-inputs-hover:   _assign-inputs($text-inputs-list, hover);
+$all-text-inputs-invalid: _assign-inputs($text-inputs-list, invalid);

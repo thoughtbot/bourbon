@@ -1,7 +1,7 @@
 @import "setup";
 
 @mixin line-height($number) {
-  @if is-number($number) {
+  @if _is-number($number) {
     line-height: $number;
   }
 }

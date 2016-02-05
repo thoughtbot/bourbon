@@ -18,10 +18,10 @@
 ///     margin-right: 10px;
 ///   }
 ///
-/// @require {mixin} directional-property
+/// @require {mixin} _directional-property
 ///
 /// @output `margin`
 
 @mixin margin($values...) {
-  @include directional-property(margin, false, $values...);
+  @include _directional-property(margin, false, $values...);
 }

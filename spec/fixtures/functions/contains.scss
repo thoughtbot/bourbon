@@ -4,7 +4,7 @@ $single: "apple";
 $multiple: "pineapple", "banana", "cumquat";
 
 @mixin color-contains($list, $values) {
-  @if contains($list, $values) {
+  @if _contains($list, $values) {
     color: #fff;
   } @else {
     color: #000;

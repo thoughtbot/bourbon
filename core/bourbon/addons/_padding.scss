@@ -18,10 +18,10 @@
 ///     padding-top: 12vh;
 ///   }
 ///
-/// @require {mixin} directional-property
+/// @require {mixin} _directional-property
 ///
 /// @output `padding`
 
 @mixin padding($values...) {
-  @include directional-property(padding, false, $values...);
+  @include _directional-property(padding, false, $values...);
 }

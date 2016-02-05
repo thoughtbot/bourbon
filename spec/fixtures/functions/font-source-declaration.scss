@@ -2,9 +2,9 @@
 $file-formats: eot woff2 woff ttf svg;
 
 .has-pipeline {
-  src: font-source-declaration("a", "b", true, $file-formats, "/c");
+  src: _font-source-declaration("a", "b", true, $file-formats, "/c");
 }
 
 .no-pipeline {
-  src: font-source-declaration("a", "b", false, $file-formats, "/c");
+  src: _font-source-declaration("a", "b", false, $file-formats, "/c");
 }
