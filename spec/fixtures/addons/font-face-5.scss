@@ -1,0 +1,8 @@
+@import "setup";
+
+@include font-face(
+    "calibre",
+    "fonts/calibre"
+  ) {
+  unicode-range: U+26;
+}
