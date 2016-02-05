@@ -1,3 +1,10 @@
 @import "setup";
 
-@include font-face("pitch", "/fonts/pitch", "normal", "normal", false, woff);
+@include font-face(
+  "pitch",
+  "/fonts/pitch",
+  normal,
+  normal,
+  false,
+  "woff"
+);

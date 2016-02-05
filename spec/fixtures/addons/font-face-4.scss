@@ -1,3 +1,7 @@
 @import "setup";
 
-@include font-face("circular", "/circular", $file-formats: woff2 svg);
+@include font-face(
+  "circular",
+  "/circular",
+  $file-formats: ("woff2", "svg")
+);

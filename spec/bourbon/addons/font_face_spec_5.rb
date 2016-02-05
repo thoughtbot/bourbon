@@ -8,8 +8,8 @@ describe "font-face" do
   context "called with additional CSS rules" do
     it "outputs defaults with additional content" do
       ruleset = 'font-family: "calibre"; ' +
-                'font-style: "normal"; ' +
-                'font-weight: "normal"; ' +
+                'font-style: normal; ' +
+                'font-weight: normal; ' +
                 'src: url("fonts/calibre.woff2") format("woff2"), ' +
                 'url("fonts/calibre.woff") format("woff"), ' +
                 'url("fonts/calibre.ttf") format("truetype"); ' +

@@ -8,8 +8,8 @@ describe "font-face" do
   context "called with defaults" do
     it "outputs defaults" do
       ruleset = 'font-family: "roboto"; ' +
-                'font-style: "italic"; ' +
-                'font-weight: "bold"; ' +
+                'font-style: italic; ' +
+                'font-weight: bold; ' +
                 'src: url("/assets/fonts/Roboto-BoldItalic.ttf") ' +
                 'format("truetype");'
 
