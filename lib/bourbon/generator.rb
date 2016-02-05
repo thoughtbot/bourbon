@@ -1,12 +1,12 @@
-require 'bourbon/version'
+require "bourbon/version"
 require "fileutils"
-require 'thor'
+require "thor"
 
 module Bourbon
   class Generator < Thor
-    map ['-v', '--version'] => :version
+    map ["-v", "--version"] => :version
 
-    desc 'install', 'Install Bourbon into your project'
+    desc "install", "Install Bourbon into your project"
     method_options :path => :string, :force => :boolean
     def install
       if bourbon_files_already_exist? && !options[:force]
@@ -17,7 +17,7 @@ module Bourbon
       end
     end
 
-    desc 'update', 'Update Bourbon'
+    desc "update", "Update Bourbon"
     method_options :path => :string
     def update
       if bourbon_files_already_exist?
@@ -29,7 +29,7 @@ module Bourbon
       end
     end
 
-    desc 'version', 'Show Bourbon version'
+    desc "version", "Show Bourbon version"
     def version
       say "Bourbon #{Bourbon::VERSION}"
     end
@@ -42,9 +42,9 @@ module Bourbon
 
     def install_path
       @install_path ||= if options[:path]
-          Pathname.new(File.join(options[:path], 'bourbon'))
+          Pathname.new(File.join(options[:path], "bourbon"))
         else
-          Pathname.new('bourbon')
+          Pathname.new("bourbon")
         end
     end
 
