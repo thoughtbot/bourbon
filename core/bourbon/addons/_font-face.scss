@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 /// Generates an @font-face declaration. Accepts arugments for weight, style,
-/// usage with the Rails Asset Pipeline and file formats.
+/// usage with the Rails Asset Pipeline and file formats. Also possible to 
+/// pass additional `@content` to the mixin, for instance `unicode-range`.
 ///
 /// @argument {string} $font-family
 ///
@@ -58,7 +59,6 @@
     font-family: $font-family;
     font-style: $style;
     font-weight: $weight;
-
     src: font-source-declaration(
       $font-family,
       $file-path,
@@ -66,5 +66,6 @@
       $file-formats,
       $font-url-prefix
     );
+    @content;
   }
 }
