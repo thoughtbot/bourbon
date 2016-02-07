@@ -4,13 +4,13 @@
 /// for building button styles.
 ///
 /// @argument {color} $base-color
-///   The `color` to evaluate lightness against
+///   The `color` to evaluate lightness against.
 ///
 /// @argument {color} $light-color [#000]
-///   The `color` to be output when `base-color` is light
+///   The `color` to be output when `base-color` is light.
 ///
 /// @argument {color} $dark-color [#fff]
-///   The `color` to be output when `base-color` is dark
+///   The `color` to be output when `base-color` is dark.
 ///
 /// @example scss
 ///   .first-element {

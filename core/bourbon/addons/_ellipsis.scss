@@ -3,10 +3,10 @@
 /// Truncates text and adds an ellipsis to represent overflow.
 ///
 /// @argument {number} $width [100%]
-///   The `max-width` for the string to respect before being truncated
+///   The `max-width` for the string to respect before being truncated.
 ///
 /// @argument {string} $display [inline-block]
-///   Sets the display-value of the element
+///   Sets the display-value of the element.
 ///
 /// @example scss
 ///   .element {

@@ -3,12 +3,12 @@
 // scss-lint:disable ElsePlacement
 
 /// Directional-property mixins are shorthands for writing properties like
-/// the following
+/// the following.
 ///
 /// @ignore You can also use `false` instead of `null`.
 ///
 /// @argument {List} $values
-///   List of directional values
+///   List of directional values.
 ///
 /// @example scss - Usage
 ///   .element {

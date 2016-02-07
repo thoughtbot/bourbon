@@ -6,13 +6,13 @@
 /// [pre-defined variables](//github.com/thoughtbot/bourbon/blob/master/core/settings/_scales.scss).
 ///
 /// @argument {number} $increment
-///   How many steps to increment up or down the scale
+///   How many steps to increment up or down the scale.
 ///
 /// @argument {number} $value [$modular-scale-base (1em)]
-///   The base value the scale starts at
+///   The base value the scale starts at.
 ///
 /// @argument {number} $ratio [$modular-scale-ratio (1.25)]
-///   The ratio the scale is built on
+///   The ratio the scale is built on.
 ///
 /// @example scss
 ///   .first-element {
