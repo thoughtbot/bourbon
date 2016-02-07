@@ -3,15 +3,17 @@
 /// Increments up or down a defined scale and returns an adjusted value. This
 /// helps establish consistent measurements and spacial relationships throughout
 /// your project. We provide a list of commonly used scales as
-/// [pre-defined variables](//github.com/thoughtbot/bourbon/blob/master/core/settings/_scales.scss).
+/// [pre-defined variables][scales].
+///
+/// [scales]: https://github.com/thoughtbot/bourbon/blob/master/core/bourbon/settings/_scales.scss
 ///
 /// @argument {number (unitless)} $increment
 ///   How many steps to increment up or down the scale.
 ///
-/// @argument {number (with unit) | list} $value [$modular-scale-base (1em)]
+/// @argument {number (with unit) | list} $value [1em]
 ///   The base value the scale starts at.
 ///
-/// @argument {number (unitless)} $ratio [$modular-scale-ratio (1.25)]
+/// @argument {number (unitless)} $ratio [1.25]
 ///   The ratio the scale is built on.
 ///
 /// @example scss
@@ -27,7 +29,11 @@
 ///     font-size: modular-scale(3, 1em 1.6em, $major-seventh);
 ///   }
 ///
-///   $modular-scale-ratio: 1.2; // change the base ratio
+///   // Globally change the base ratio
+///   $bourbon: (
+///     "modular-scale-ratio": 1.2,
+///   );
+///
 ///   .fourth-element {
 ///     font-size: modular-scale(3);
 ///   }
