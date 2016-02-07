@@ -5,13 +5,13 @@
 /// your project. We provide a list of commonly used scales as
 /// [pre-defined variables](//github.com/thoughtbot/bourbon/blob/master/core/settings/_scales.scss).
 ///
-/// @argument {number} $increment
+/// @argument {number (unitless)} $increment
 ///   How many steps to increment up or down the scale.
 ///
-/// @argument {number} $value [$modular-scale-base (1em)]
+/// @argument {number (with unit) | list} $value [$modular-scale-base (1em)]
 ///   The base value the scale starts at.
 ///
-/// @argument {number} $ratio [$modular-scale-ratio (1.25)]
+/// @argument {number (unitless)} $ratio [$modular-scale-ratio (1.25)]
 ///   The ratio the scale is built on.
 ///
 /// @example scss
@@ -49,7 +49,7 @@
 ///     font-size: 1.728em;
 ///   }
 ///
-/// @return {number}
+/// @return {number (with unit)}
 ///
 /// @require {function} _bourbon-get-setting
 

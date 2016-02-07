@@ -4,13 +4,13 @@
 
 /// Output directional properties, for instance `margin`.
 ///
-/// @argument {String} $pre
+/// @argument {string} $pre
 ///   Prefix to use.
 ///
-/// @argument {String} $suf
+/// @argument {string} $suf
 ///   Suffix to use.
 ///
-/// @argument {List} $values
+/// @argument {list} $values
 ///   List of values.
 ///
 /// @require {function} _collapse-directionals

@@ -2,9 +2,9 @@
 
 /// Sets the `width` and `height` of the element in one statement.
 ///
-/// @argument {number} $width
+/// @argument {number (with unit) | string} $width
 ///
-/// @argument {number} $height [$width]
+/// @argument {number (with unit) | string} $height [$width]
 ///
 /// @example scss
 ///   .first-element {
