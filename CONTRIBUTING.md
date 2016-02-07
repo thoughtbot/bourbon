@@ -1,3 +1,5 @@
+# Contributing
+
 We love pull requests from everyone. By participating in this project, you
 agree to abide by the thoughtbot [code of conduct]. Here’s a quick guide:
 
@@ -35,3 +37,28 @@ Some things that will increase the chance that your pull request is accepted:
 * Declarations within a block should be ordered alphabetically.
 * Blank lines between rules.
 * No trailing whitespace. Blank lines should not have any space.
+
+## Documentation
+
+We use [SassDoc] to document Bourbon.
+
+### SassDoc Annotations
+
+The Description describes the documented item and always comes first, before any annotation. [Annotations] should be ordered:
+
+- `@link`
+- `@see`
+- `@type`
+- `@argument`
+- `@property`
+- `@return`
+- `@example`
+- `@require`
+- `@access`
+- `@since`
+- `@author`
+- `@deprecated`
+- `@todo`
+
+[SassDoc]: http://sassdoc.com
+[Annotations]: http://sassdoc.com/annotations
