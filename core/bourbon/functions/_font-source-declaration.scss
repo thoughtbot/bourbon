@@ -1,3 +1,23 @@
+@charset "UTF-8";
+
+/// Builds the `src` list for an `@font-face` declaration.
+///
+/// @link http://goo.gl/Ru1bKP
+///
+/// @argument {string} $font-family
+///
+/// @argument {string} $file-path
+///
+/// @argument {boolean} $asset-pipeline
+///
+/// @argument {list} $file-formats
+///
+/// @return {list}
+///
+/// @require {function} _contains
+///
+/// @access private
+
 @function _font-source-declaration(
   $font-family,
   $file-path,
