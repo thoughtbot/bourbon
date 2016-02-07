@@ -37,6 +37,11 @@
 ///
 /// @since 5.0.0
 
-@function contrast-switch($base-color, $light-color: #000, $dark-color: #fff) {
+@function contrast-switch(
+    $base-color,
+    $light-color: #000,
+    $dark-color: #fff
+  ) {
+
   @return if(is-light($base-color), $light-color, $dark-color);
 }

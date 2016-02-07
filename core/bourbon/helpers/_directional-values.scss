@@ -19,7 +19,12 @@
 ///
 /// @access private
 
-@mixin _directional-property($pre, $suf, $values) {
+@mixin _directional-property(
+    $pre,
+    $suf,
+    $values
+  ) {
+
   $top:    $pre + "-top"    + if($suf, "-#{$suf}", "");
   $bottom: $pre + "-bottom" + if($suf, "-#{$suf}", "");
   $left:   $pre + "-left"   + if($suf, "-#{$suf}", "");

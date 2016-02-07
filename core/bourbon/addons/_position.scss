@@ -25,7 +25,11 @@
 ///
 /// @require {function} _unpack
 
-@mixin position($position: relative, $coordinates: null) {
+@mixin position(
+    $position: relative,
+    $coordinates: null
+  ) {
+
   @if type-of($position) == list {
     $coordinates: $position;
     $position: relative;

@@ -19,6 +19,10 @@
 ///
 /// @return {color}
 
-@function tint($color, $percent) {
+@function tint(
+    $color,
+    $percent
+  ) {
+
   @return mix(#fff, $color, $percent);
 }

@@ -23,7 +23,11 @@
 ///     word-wrap: normal;
 ///   }
 
-@mixin ellipsis($width: 100%, $display: inline-block) {
+@mixin ellipsis(
+    $width: 100%,
+    $display: inline-block
+  ) {
+
   display: $display;
   max-width: $width;
   overflow: hidden;
