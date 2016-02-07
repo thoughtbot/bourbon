@@ -51,7 +51,7 @@ $buttons-list: (
   "button",
   "[type='button']",
   "[type='reset']",
-  "[type='submit']"
+  "[type='submit']",
 );
 
 $all-buttons:        _assign-inputs($buttons-list);

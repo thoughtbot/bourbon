@@ -115,7 +115,7 @@ $text-inputs-list: (
   "[type='url']",
   "[type='week']",
   "input:not([type])",
-  "textarea"
+  "textarea",
 );
 
 $all-text-inputs:         _assign-inputs($text-inputs-list);
