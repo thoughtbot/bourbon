@@ -1,3 +1,3 @@
 module Bourbon
-  VERSION = "5.0.0.alpha.0"
+  VERSION = "5.0.0.beta.1"
 end
