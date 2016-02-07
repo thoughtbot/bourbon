@@ -18,8 +18,6 @@
 ///   }
 ///
 /// @require {mixin} _directional-property
-///
-/// @output `border-*-style`
 
 @mixin border-style($values...) {
   @include _directional-property(border, style, $values...);

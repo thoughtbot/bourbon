@@ -19,8 +19,6 @@
 ///   }
 ///
 /// @require {mixin} _directional-property
-///
-/// @output `margin`
 
 @mixin margin($values...) {
   @include _directional-property(margin, false, $values...);

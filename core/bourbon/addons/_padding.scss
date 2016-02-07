@@ -19,8 +19,6 @@
 ///   }
 ///
 /// @require {mixin} _directional-property
-///
-/// @output `padding`
 
 @mixin padding($values...) {
   @include _directional-property(padding, false, $values...);
