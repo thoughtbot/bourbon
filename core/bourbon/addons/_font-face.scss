@@ -36,8 +36,6 @@
 ///          format("truetype");
 ///   }
 ///
-/// @require {function} _font-url-prefixer
-///
 /// @require {function} _font-source-declaration
 ///
 /// @require {function} _bourbon-get-setting
@@ -49,16 +47,13 @@
     $file-formats: _bourbon-get-setting("global-font-file-formats")
   ) {
 
-  $font-url-prefix: _font-url-prefixer($asset-pipeline);
-
   @font-face {
     font-family: $font-family;
     src: _font-source-declaration(
       $font-family,
       $file-path,
       $asset-pipeline,
-      $file-formats,
-      $font-url-prefix
+      $file-formats
     );
     @content;
   }
