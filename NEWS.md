@@ -3,7 +3,7 @@
 The noteworthy changes for each Bourbon version are included here. For a
 complete changelog, see the Git history for each version via the version links.
 
-## `master`
+## [5.0.0-beta.1] - February 9, 2016
 
 ### Added
 
@@ -37,6 +37,7 @@ complete changelog, see the Git history for each version via the version links.
   properties—within the mixin block and they’ll be output as part of the
   `@font-face` declaration.
 
+[5.0.0-beta.1]: https://github.com/thoughtbot/bourbon/compare/da4451e...v5.0.0.beta.1
 [2356719]: https://github.com/thoughtbot/bourbon/commit/235671948ef3a9c343c4391d250082a0373c8d83
 [4e43c2d]: https://github.com/thoughtbot/bourbon/commit/4e43c2d7507999b539771bdc1b3733b18b3c1883
 
