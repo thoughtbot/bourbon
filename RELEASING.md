@@ -6,6 +6,8 @@
   - `package.json`
   - `bower.json`
 
+1. Update `NEWS.md`
+
 1. Commit changes. Use the convention “Bourbon vX.X.X” in your commit message.
    There shouldn’t be code changes, and thus CI doesn’t need to run.
 
