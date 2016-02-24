@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "css_parser", "~> 1.3"
   s.add_development_dependency "rake", "~> 10.4"
   s.add_development_dependency "rspec", "~> 3.3"
-  s.add_development_dependency "scss_lint", "0.44"
+  s.add_development_dependency "scss_lint", "0.47"
   s.add_runtime_dependency "sass", "~> 3.4"
   s.add_runtime_dependency "thor", "~> 0.19"
   s.authors = [
