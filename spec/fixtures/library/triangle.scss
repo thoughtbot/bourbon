@@ -1,0 +1,9 @@
+@import "setup";
+
+.triangle {
+  @include triangle;
+}
+
+.triangle--with-arguments {
+  @include triangle(down, #b25c9c, 30px, 20px);
+}
