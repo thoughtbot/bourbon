@@ -68,5 +68,6 @@ complete changelog, see the Git history for each version via the version links.
 - The `$monospace` font stack variable has been removed in favor of new
   `$consolas`, `$courier-new` and `$monaco` variables.
 - The `triangle` mixin has been removed.
+- The `retina-image` mixin has been removed.
 
 [5.0.0.alpha.0]: https://github.com/thoughtbot/bourbon/compare/v4.2.6...v5.0.0.alpha.0
