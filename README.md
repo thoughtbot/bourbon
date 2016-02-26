@@ -18,7 +18,7 @@ for updates.
 
 ## Requirements
 
-- [Sass](https://github.com/sass/sass) 3.4+ or [LibSass](https://github.com/sass/libsass) 3.1+
+- [Sass](https://github.com/sass/sass) 3.4+ or [LibSass](https://github.com/sass/libsass) 3.3+
 
 ## Installation
 
