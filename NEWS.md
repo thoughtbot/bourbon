@@ -3,6 +3,10 @@
 The noteworthy changes for each Bourbon version are included here. For a
 complete changelog, see the Git history for each version via the version links.
 
+## `master`
+
+- Rails on Rails support is now 4.2+
+
 ## [5.0.0-beta.1] - February 9, 2016
 
 ### Added
