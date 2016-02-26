@@ -30,10 +30,10 @@ complete changelog, see the Git history for each version via the version links.
   See [4e43c2d].
 - The `clearfix` mixin now uses `block` display, instead of `table`.
 
-### Deprecated
+### Removed
 
 - The `$weight` and `$style` arguments in the `font-face` mixin have been
-  deprecated. Instead, you can now include these—along with other CSS
+  removed. Instead, you can now include these—along with other CSS
   properties—within the mixin block and they’ll be output as part of the
   `@font-face` declaration.
 
@@ -57,16 +57,16 @@ complete changelog, see the Git history for each version via the version links.
 - The `size` mixin now requires a comma-separated argument list,
   e.g. `@include size(1em, 2em);`.
 
-### Deprecated
+### Removed
 
-- All vendor prefixing mixins have been deprecated. We recommend using a more
+- All vendor prefixing mixins have been removed. We recommend using a more
   robust and maintainable solution
   like [Autoprefixer](https://github.com/postcss/autoprefixer).
-- The `$global-prefixes` setting has been deprecated and the `prefixer` mixin
+- The `$global-prefixes` setting has been removed and the `prefixer` mixin
   has been refactored and no longer uses it.
-- The `em` and `rem` mixins have been deprecated.
-- The `$monospace` font stack variable has been deprecated in favor of new
+- The `em` and `rem` mixins have been removed.
+- The `$monospace` font stack variable has been removed in favor of new
   `$consolas`, `$courier-new` and `$monaco` variables.
-- The `triangle` mixin has been deprecated.
+- The `triangle` mixin has been removed.
 
 [5.0.0.alpha.0]: https://github.com/thoughtbot/bourbon/compare/v4.2.6...v5.0.0.alpha.0
