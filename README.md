@@ -52,7 +52,7 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
 
   It’s not recommended to add or modify the Bourbon files so that you can update them easily.
 
-## Installation for Ruby on Rails 3.1+
+## Installation for Ruby on Rails 4.2+
 
 1. Add Bourbon to your Gemfile:
 
