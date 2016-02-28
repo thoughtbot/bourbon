@@ -4,6 +4,12 @@
 ///
 /// @type map
 ///
+/// @property {color} contrast-switch-dark-color [#000]
+///   Global dark color for the `contrast-switch` function.
+///
+/// @property {color} contrast-switch-light-color [#fff]
+///   Global light color for the `contrast-switch` function.
+///
 /// @property {list} global-font-file-formats [("ttf", "woff2", "woff")]
 ///   Global font file formats for the `font-face` mixin.
 ///
@@ -20,6 +26,8 @@
 /// @access private
 
 $_bourbon-defaults: (
+  "contrast-switch-dark-color": #000,
+  "contrast-switch-light-color": #fff,
   "global-font-file-formats": ("ttf", "woff2", "woff"),
   "modular-scale-base": 1em,
   "modular-scale-ratio": $major-third,

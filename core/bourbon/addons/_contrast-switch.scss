@@ -39,8 +39,8 @@
 
 @function contrast-switch(
     $base-color,
-    $dark-color: #000,
-    $light-color: #fff
+    $dark-color: _bourbon-get-setting("contrast-switch-dark-color"),
+    $light-color: _bourbon-get-setting("contrast-switch-light-color")
   ) {
 
   @return if(is-light($base-color), $dark-color, $light-color);
