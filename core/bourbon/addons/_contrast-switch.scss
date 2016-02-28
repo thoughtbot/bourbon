@@ -4,13 +4,13 @@
 /// for building button styles.
 ///
 /// @argument {color} $base-color
-///   The `color` to evaluate lightness against.
+///   The color to evaluate lightness against.
 ///
-/// @argument {color} $light-color [#000]
-///   The `color` to be output when `base-color` is light.
+/// @argument {color} $dark-color [#000]
+///   The color to be output when `$base-color` is light.
 ///
-/// @argument {color} $dark-color [#fff]
-///   The `color` to be output when `base-color` is dark.
+/// @argument {color} $light-color [#fff]
+///   The color to be output when `$base-color` is dark.
 ///
 /// @example scss
 ///   .first-element {
@@ -39,9 +39,9 @@
 
 @function contrast-switch(
     $base-color,
-    $light-color: #000,
-    $dark-color: #fff
+    $dark-color: #000,
+    $light-color: #fff
   ) {
 
-  @return if(is-light($base-color), $light-color, $dark-color);
+  @return if(is-light($base-color), $dark-color, $light-color);
 }
