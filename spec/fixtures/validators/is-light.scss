@@ -1,7 +1,7 @@
 @import "setup";
 
 @mixin reverse-color($color) {
-  @if is-light($color) {
+  @if _is-light($color) {
     color: #000;
   } @else {
     color: #fff;

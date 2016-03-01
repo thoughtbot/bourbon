@@ -10,8 +10,10 @@
 ///   is-light($color)
 ///
 /// @return {boolean}
+///
+/// @access private
 
-@function is-light($hex-color) {
+@function _is-light($hex-color) {
   $-local-red: red(rgba($hex-color, 1));
   $-local-green: green(rgba($hex-color, 1));
   $-local-blue: blue(rgba($hex-color, 1));

@@ -33,7 +33,7 @@
 ///     color: #eee;
 ///   }
 ///
-/// @require {function} is-light
+/// @require {function} _is-light
 ///
 /// @since 5.0.0
 
@@ -43,5 +43,5 @@
     $light-color: _bourbon-get-setting("contrast-switch-light-color")
   ) {
 
-  @return if(is-light($base-color), $dark-color, $light-color);
+  @return if(_is-light($base-color), $dark-color, $light-color);
 }
