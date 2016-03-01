@@ -7,10 +7,11 @@ end
 
 Then /^the sass directories(?: with "([^"]+)" prefix)? should have been generated$/ do |prefix|
   sass_directories = [
-    "bourbon/addons",
     "bourbon/helpers",
-    "bourbon/functions",
+    "bourbon/library",
     "bourbon/settings",
+    "bourbon/utilities",
+    "bourbon/validators",
   ]
   sass_directories.map!{ |directory| bourbon_path(prefix, directory) }
   check_directory_presence(sass_directories, true)

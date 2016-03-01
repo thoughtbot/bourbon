@@ -3,44 +3,45 @@
 // Copyright 2011 thoughtbot, inc.
 // MIT License
 
-@import "bourbon/settings/scales";
+@import "bourbon/helpers/scales";
+@import "bourbon/helpers/timing-functions";
+
 @import "bourbon/settings/settings";
-@import "bourbon/settings/bourbon-get-setting";
 
-@import "bourbon/functions/assign-inputs";
-@import "bourbon/functions/collapse-directionals";
-@import "bourbon/functions/contains";
-@import "bourbon/functions/contains-falsy";
-@import "bourbon/functions/font-source-declaration";
-@import "bourbon/functions/is-length";
-@import "bourbon/functions/is-light";
-@import "bourbon/functions/is-number";
-@import "bourbon/functions/is-size";
-@import "bourbon/functions/shade";
-@import "bourbon/functions/strip-unit";
-@import "bourbon/functions/tint";
-@import "bourbon/functions/unpack";
+@import "bourbon/validators/contains";
+@import "bourbon/validators/contains-falsy";
+@import "bourbon/validators/is-length";
+@import "bourbon/validators/is-light";
+@import "bourbon/validators/is-number";
+@import "bourbon/validators/is-size";
 
-@import "bourbon/helpers/directional-values";
+@import "bourbon/utilities/assign-inputs";
+@import "bourbon/utilities/bourbon-get-setting";
+@import "bourbon/utilities/collapse-directionals";
+@import "bourbon/utilities/directional-values";
+@import "bourbon/utilities/font-source-declaration";
+@import "bourbon/utilities/unpack";
 
-@import "bourbon/addons/border-color";
-@import "bourbon/addons/border-radius";
-@import "bourbon/addons/border-style";
-@import "bourbon/addons/border-width";
-@import "bourbon/addons/buttons";
-@import "bourbon/addons/clearfix";
-@import "bourbon/addons/contrast-switch";
-@import "bourbon/addons/ellipsis";
-@import "bourbon/addons/font-face";
-@import "bourbon/addons/font-stacks";
-@import "bourbon/addons/hide-text";
-@import "bourbon/addons/hide-visually";
-@import "bourbon/addons/margin";
-@import "bourbon/addons/modular-scale";
-@import "bourbon/addons/padding";
-@import "bourbon/addons/position";
-@import "bourbon/addons/prefixer";
-@import "bourbon/addons/size";
-@import "bourbon/addons/text-inputs";
-@import "bourbon/addons/timing-functions";
-@import "bourbon/addons/word-wrap";
+@import "bourbon/library/border-color";
+@import "bourbon/library/border-radius";
+@import "bourbon/library/border-style";
+@import "bourbon/library/border-width";
+@import "bourbon/library/buttons";
+@import "bourbon/library/clearfix";
+@import "bourbon/library/contrast-switch";
+@import "bourbon/library/ellipsis";
+@import "bourbon/library/font-face";
+@import "bourbon/library/font-stacks";
+@import "bourbon/library/hide-text";
+@import "bourbon/library/hide-visually";
+@import "bourbon/library/margin";
+@import "bourbon/library/modular-scale";
+@import "bourbon/library/padding";
+@import "bourbon/library/position";
+@import "bourbon/library/prefixer";
+@import "bourbon/library/shade";
+@import "bourbon/library/size";
+@import "bourbon/library/strip-unit";
+@import "bourbon/library/text-inputs";
+@import "bourbon/library/tint";
+@import "bourbon/library/word-wrap";
