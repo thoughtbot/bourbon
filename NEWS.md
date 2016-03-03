@@ -3,9 +3,25 @@
 The noteworthy changes for each Bourbon version are included here. For a
 complete changelog, see the Git history for each version via the version links.
 
-## `master`
+## [5.0.0-beta.2] - March 3, 2016
 
-- Rails on Rails support is now 4.2+
+### Added
+
+- Added global settings for the `contrast-switch` mixin:
+  `contrast-switch-dark-color` & `contrast-switch-light-color`.
+
+### Changed
+
+- Swapped argument names `contrast-switch`; what was `$dark-color` is now
+  `$light-color` and what was `$light-color` is now `$dark-color`.
+
+### Removed
+
+- Dropped support for Ruby on Rails versions older than 4.2.
+- Dropped support for LibSass versions older than 3.3.
+- The `is-light` function is now private.
+
+[5.0.0-beta.2]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.1...v5.0.0.beta.2
 
 ## [5.0.0-beta.1] - February 9, 2016
 
