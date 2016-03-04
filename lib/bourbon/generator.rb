@@ -1,6 +1,7 @@
 require "bourbon/version"
 require "fileutils"
 require "thor"
+require "pathname"
 
 module Bourbon
   class Generator < Thor
