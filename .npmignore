@@ -6,6 +6,7 @@ _site
 bin/
 bourbon.gemspec
 bower.json
+circle.yml
 features/
 Gemfile
 Gemfile.lock
