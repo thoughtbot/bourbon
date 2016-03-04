@@ -9,6 +9,8 @@ complete changelog, see the Git history for each version via the version links.
 
 - Added global settings for the `contrast-switch` mixin:
   `contrast-switch-dark-color` & `contrast-switch-light-color`.
+- Added the `triangle` mixin back, but note that it’s been refactored and the
+  arguments have changed.
 
 ### Changed
 
