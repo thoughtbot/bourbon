@@ -3,6 +3,14 @@
 The noteworthy changes for each Bourbon version are included here. For a
 complete changelog, see the Git history for each version via the version links.
 
+## [5.0.0-beta.3] - March 4, 2016
+
+### Added
+
+- Added `pathname` requirement to resolve install issues.
+
+[5.0.0-beta.3]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.2...v5.0.0.beta.3
+
 ## [5.0.0-beta.2] - March 3, 2016
 
 ### Added
