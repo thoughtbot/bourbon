@@ -9,9 +9,9 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [5.0.0-beta.3] - 2016-03-04
 
-### Added
+### Fixed
 
-- Added `pathname` requirement to resolve install issues.
+- Added `pathname` requirement to fix install issues.
 
 [5.0.0-beta.3]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.2...v5.0.0.beta.3
 
@@ -26,14 +26,14 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ### Changed
 
-- Swapped argument names `contrast-switch`; what was `$dark-color` is now
-  `$light-color` and what was `$light-color` is now `$dark-color`.
+- Switched argument names in `contrast-switch`; `$dark-color` is now
+  `$light-color` and `$light-color` is now `$dark-color`.
+- The `is-light` function is now private.
 
 ### Removed
 
 - Dropped support for Ruby on Rails versions older than 4.2.
 - Dropped support for LibSass versions older than 3.3.
-- The `is-light` function is now private.
 
 [5.0.0-beta.2]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.1...v5.0.0.beta.2
 
