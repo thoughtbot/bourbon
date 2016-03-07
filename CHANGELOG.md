@@ -1,7 +1,7 @@
-# News
+# Change Log
 
-The noteworthy changes for each Bourbon version are included here. For a
-complete changelog, see the Git history for each version via the version links.
+All notable changes to this project will be documented in this file. This
+project adheres to [Semantic Versioning](http://semver.org).
 
 ## [5.0.0-beta.3] - March 4, 2016
 
