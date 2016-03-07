@@ -11,7 +11,7 @@
 1. Commit changes. Use the convention “Bourbon vX.X.X” in your commit message.
    There shouldn’t be code changes, and thus CI doesn’t need to run.
 
-1. Run `rake release`, which tags the release, pushes the tag to GitHub, and
+1. Run `bundle exec rake release`, which tags the release, pushes the tag to GitHub, and
    pushes the gem to RubyGems.org.
 
 1. Run `npm publish`, which pushes the new version to npm’s registry (if
