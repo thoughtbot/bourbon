@@ -7,7 +7,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 [Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.3...HEAD
 
-## [5.0.0-beta.3] - March 4, 2016
+## [5.0.0-beta.3] - 2016-03-04
 
 ### Added
 
@@ -15,7 +15,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 [5.0.0-beta.3]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.2...v5.0.0.beta.3
 
-## [5.0.0-beta.2] - March 3, 2016
+## [5.0.0-beta.2] - 2016-03-03
 
 ### Added
 
@@ -37,7 +37,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 [5.0.0-beta.2]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.1...v5.0.0.beta.2
 
-## [5.0.0-beta.1] - February 9, 2016
+## [5.0.0-beta.1] - 2016-02-09
 
 ### Added
 
@@ -75,7 +75,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 [2356719]: https://github.com/thoughtbot/bourbon/commit/235671948ef3a9c343c4391d250082a0373c8d83
 [4e43c2d]: https://github.com/thoughtbot/bourbon/commit/4e43c2d7507999b539771bdc1b3733b18b3c1883
 
-## [5.0.0.alpha.0] - August 21, 2015
+## [5.0.0.alpha.0] - 2015-08-21
 
 ### Added
 
