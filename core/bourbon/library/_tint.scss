@@ -7,6 +7,8 @@
 /// @argument {number (percentage)} $percent
 ///   The amount of white to be mixed in.
 ///
+/// @return {color}
+///
 /// @example scss
 ///   .element {
 ///     background-color: tint(#6ecaa6, 40%);
@@ -16,8 +18,6 @@
 ///   .element {
 ///     background-color: #a8dfc9;
 ///   }
-///
-/// @return {color}
 
 @function tint(
     $color,

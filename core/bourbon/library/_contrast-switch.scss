@@ -12,6 +12,8 @@
 /// @argument {color} $light-color [#fff]
 ///   The color to be output when `$base-color` is dark.
 ///
+/// @return {color}
+///
 /// @example scss
 ///   .first-element {
 ///     color: contrast-switch(#bae6e6);

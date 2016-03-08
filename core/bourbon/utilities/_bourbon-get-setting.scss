@@ -4,6 +4,8 @@
 ///
 /// @argument {string} $setting
 ///
+/// @return {boolean | color | list | number | string}
+///
 /// @example scss
 ///   _bourbon-get-setting(rails-asset-pipeline)
 ///

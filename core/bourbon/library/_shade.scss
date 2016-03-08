@@ -7,6 +7,8 @@
 /// @argument {number (percentage)} $percent
 ///   The amount of black to be mixed in.
 ///
+/// @return {color}
+///
 /// @example scss
 ///   .element {
 ///     background-color: shade(#ffbb52, 60%);
@@ -16,8 +18,6 @@
 ///   .element {
 ///     background-color: #664a20;
 ///   }
-///
-/// @return {color}
 
 @function shade(
     $color,

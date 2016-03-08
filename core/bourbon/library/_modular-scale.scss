@@ -16,6 +16,8 @@
 /// @argument {number (unitless)} $ratio [1.25]
 ///   The ratio the scale is built on.
 ///
+/// @return {number (with unit)}
+///
 /// @example scss
 ///   .first-element {
 ///     font-size: modular-scale(2);
@@ -54,8 +56,6 @@
 ///   .fourth-element {
 ///     font-size: 1.728em;
 ///   }
-///
-/// @return {number (with unit)}
 ///
 /// @require {function} _bourbon-get-setting
 
