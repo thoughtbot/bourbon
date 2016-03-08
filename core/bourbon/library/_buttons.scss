@@ -3,6 +3,8 @@
 /// Generates variables for all buttons. Please note that you must use
 /// interpolation on the variable: `#{$all-buttons}`.
 ///
+/// @type list
+///
 /// @example scss
 ///   #{$all-buttons} {
 ///     background-color: #f00;
@@ -44,8 +46,6 @@
 ///   }
 ///
 /// @require {function} _assign-inputs
-///
-/// @type list
 
 $buttons-list: (
   "button",

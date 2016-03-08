@@ -3,6 +3,8 @@
 /// Generates variables for all text-based inputs. Please note that you must use
 /// interpolation on the variable: `#{$all-text-inputs}`.
 ///
+/// @type list
+///
 /// @example scss
 ///   #{$all-text-inputs} {
 ///     border: 1px solid #f00;
@@ -96,8 +98,6 @@
 ///   }
 ///
 /// @require {function} _assign-inputs
-///
-/// @type list
 
 $text-inputs-list: (
   "[type='color']",
