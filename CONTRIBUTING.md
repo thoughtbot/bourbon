@@ -1,50 +1,49 @@
 # Contributing
 
-We love pull requests from everyone. By participating in this project, you
-agree to abide by the thoughtbot [code of conduct]. Here’s a quick guide:
+By participating in this project, you agree to abide by the thoughtbot
+[code of conduct](https://thoughtbot.com/open-source-code-of-conduct).
 
-[code of conduct]: https://thoughtbot.com/open-source-code-of-conduct
+## Pull Requests
 
-1. Fork the repository.
-2. Make your changes in a topic branch.
-3. Squash your commits into a single one (more on that [here](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html)).
-4. Rebase against `origin/master`, push to your fork and submit a pull request.
-5. If you are writing a new feature please add documentation for it by making another pull request to the `gh-pages` branch.
+We welcome pull requests from everyone. Here’s a quick guide:
 
-At this point you’re waiting on us. We like to at least comment on, if not
-accept, pull requests within three business days (and, typically, one business
-day). We may suggest some changes or improvements or alternatives.
+1. [Fork the repository][fork] and clone to your machine.
+1. Run `bundle install`.
+1. Make sure the tests pass: `bundle exec rake`.
+1. Make your change, following our style guide (below). Write tests. Make sure
+   the tests pass: `bundle exec rake`.
+1. Write a [good commit message][commit]. Push to your fork and
+   [submit a pull request][pr]. If [Hound] catches style violations, fix them.
+1. Wait for us. We try to at least comment on pull requests within one week. We
+   may suggest changes.
 
-Some things that will increase the chance that your pull request is accepted:
+[fork]: https://github.com/thoughtbot/bourbon/fork
+[commit]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+[pr]: https://github.com/thoughtbot/bourbon/compare/
+[hound]: https://houndci.com
 
-* Fix a bug, refactor code or expand an existing feature.
-* Use the right syntax and naming conventions.
-* Update parts of the documentation that are affected by your contribution.
+### Style Guide
 
-**Git Commit Messages**
+Bourbon uses Sass’s SCSS syntax and aligns to
+[thoughtbot’s style guides][sass guide]. High-level notes:
 
-* Capitalize your commit messages.
-* Start your message with a verb.
-* Use present tense.
-* Refer to the issue/PR number in your squashed commit message.
+- Use two-space indentation (no tabs).
+- Use double quotation marks.
+- Use hyphens when naming things: `hide-visually` rather than `hide_visually` or
+  `hideVisually`.
+- Use one space between property and value: `width: 20px` rather than
+  `width:20px`.
+- Names should be descriptive and aim for clarity over brevity:
+  `$all-text-inputs-hover` rather than `$inputshover` or `$alltxthvr`.
+- Order CSS declarations alphabetically.
+- No trailing whitespace.
 
-**SCSS Style Guide**
+[sass guide]: https://github.com/thoughtbot/guides
+[SCSS-Lint]: https://github.com/brigade/scss-lint
 
-* Two spaces, no tabs.
-* Dashes instead of underscores or camel case: `linear-gradient` **not** `linear_gradient` or `linearGradient`
-* Names should be descriptive and written in full-words: `$all-text-inputs-hover` **not** `$hover` or `$alltxthvr`
-* Space between property and value: `width: 20px` **not** `width:20px`
-* Declarations within a block should be ordered alphabetically.
-* Blank lines between rules.
-* No trailing whitespace. Blank lines should not have any space.
+### Documentation
 
-## Documentation
-
-We use [SassDoc] to document Bourbon.
-
-### SassDoc Annotations
-
-The Description describes the documented item and always comes first, before any annotation. [Annotations] should be ordered:
+We use [SassDoc] to document Bourbon. [Annotations] should be ordered:
 
 - `@link`
 - `@see`
