@@ -22,7 +22,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Added global settings for the `contrast-switch` mixin:
   `contrast-switch-dark-color` & `contrast-switch-light-color`.
 - Added the `triangle` mixin back, but note that it’s been refactored and the
-  arguments have changed.
+  arguments have changed. See [43e5a90].
 
 ### Changed
 
@@ -36,12 +36,13 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Dropped support for LibSass versions older than 3.3.
 
 [5.0.0-beta.2]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.1...v5.0.0.beta.2
+[43e5a90]: https://github.com/thoughtbot/bourbon/commit/43e5a90e7e624d2977731030ccdb36b3c2e460d9
 
 ## [5.0.0-beta.1] - 2016-02-09
 
 ### Added
 
-- Added a `contrast-switch` mixin that switches between two colors based on the
+- Added a `contrast-switch` function that switches between two colors based on the
   lightness of a another color. Great for building button styles.
 - Added an `$all-text-inputs-invalid` variable to target the `:invalid`
   pseudo-class on all text-based inputs.
@@ -81,12 +82,14 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 - Added a `$global-font-file-formats` setting to globally set the file formats
   for the `font-face` mixin. The default is `("ttf", "woff2", "woff")`.
+- Add `$consolas`, `$courier-new` and `$monaco` variables (these replace the
+  removed `$monospace` variable).
 
 ### Changed
 
 - Removed the type selectors in `$all-text-inputs` and `$all-buttons` to
   reduce specificity.
-- Font stacks have been modernized.
+- Font stacks have been modernized. See [3cf106a].
 - The `strip-units` function is now `strip-unit`.
 - The `size` mixin now requires a comma-separated argument list,
   e.g. `@include size(1em, 2em);`.
@@ -150,6 +153,9 @@ project adheres to [Semantic Versioning](http://semver.org).
   - `user-select`
   - For prefixing, we recommend using a more robust and maintainable solution
     like [Autoprefixer].
+- The `$global-prefixes` setting has been removed and the `prefixer` mixin
+  has been refactored and no longer uses it.
+- The `$monospace` variable has been removed.
 - The `box-sizing` mixin has been removed.
 - The `button` mixin has been removed.
 - The `em` and `rem` mixins have been removed.
@@ -160,10 +166,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 - The `inline-block` mixin has been removed.
 - The `retina-image` mixin has been removed.
 - The `triangle` mixin has been removed.
-- The `$global-prefixes` setting has been removed and the `prefixer` mixin
-  has been refactored and no longer uses it.
-- The `$monospace` font stack variable has been removed in favor of new
-  `$consolas`, `$courier-new` and `$monaco` variables.
 
 [5.0.0.alpha.0]: https://github.com/thoughtbot/bourbon/compare/v4.2.6...v5.0.0.alpha.0
+[3cf106a]: https://github.com/thoughtbot/bourbon/commit/3cf106a210c1bae7765e6193f62310f95fdee0b7
 [Autoprefixer]: https://github.com/postcss/autoprefixer
