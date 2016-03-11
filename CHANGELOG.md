@@ -93,15 +93,77 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ### Removed
 
-- All vendor prefixing mixins have been removed. We recommend using a more
-  robust and maintainable solution
-  like [Autoprefixer](https://github.com/postcss/autoprefixer).
+- All vendor prefixing mixins have been removed. These include:
+  - `align-items`
+  - `animation-delay`
+  - `animation-direction`
+  - `animation-duration`
+  - `animation-fill-mode`
+  - `animation-iteration-count`
+  - `animation-name`
+  - `animation-play-state`
+  - `animation-timing-function`
+  - `animation`
+  - `appearance`
+  - `backface-visibility`
+  - `background-image`
+  - `background`
+  - `border-image`
+  - `calc`
+  - `column-count`
+  - `column-fill`
+  - `column-gap`
+  - `column-rule-color`
+  - `column-rule-style`
+  - `column-rule-width`
+  - `column-rule`
+  - `column-span`
+  - `column-width`
+  - `columns`
+  - `display`
+  - `filter`
+  - `flex-direction`
+  - `flex`
+  - `font-feature-settings`
+  - `hidpi`
+  - `hyphens`
+  - `image-rendering`
+  - `justify-content`
+  - `keyframes`
+  - `linear-gradient`
+  - `perspective`
+  - `placeholder`
+  - `radial-gradient`
+  - `selection`
+  - `text-decoration-color`
+  - `text-decoration-line`
+  - `text-decoration-style`
+  - `text-decoration`
+  - `transform-origin`
+  - `transform-style`
+  - `transform`
+  - `transition-delay`
+  - `transition-duration`
+  - `transition-property`
+  - `transition-timing-function`
+  - `transition`
+  - `user-select`
+  - For prefixing, we recommend using a more robust and maintainable solution
+    like [Autoprefixer].
+- The `box-sizing` mixin has been removed.
+- The `button` mixin has been removed.
+- The `em` and `rem` mixins have been removed.
+- The `flex-grid` function has been removed.
+- The `flex-gutter` function has been removed.
+- The `golden-ratio` function has been removed.
+- The `grid-width` function has been removed.
+- The `inline-block` mixin has been removed.
+- The `retina-image` mixin has been removed.
+- The `triangle` mixin has been removed.
 - The `$global-prefixes` setting has been removed and the `prefixer` mixin
   has been refactored and no longer uses it.
-- The `em` and `rem` mixins have been removed.
 - The `$monospace` font stack variable has been removed in favor of new
   `$consolas`, `$courier-new` and `$monaco` variables.
-- The `triangle` mixin has been removed.
-- The `retina-image` mixin has been removed.
 
 [5.0.0.alpha.0]: https://github.com/thoughtbot/bourbon/compare/v4.2.6...v5.0.0.alpha.0
+[Autoprefixer]: https://github.com/postcss/autoprefixer
