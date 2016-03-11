@@ -5,7 +5,17 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.3...HEAD
+[Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.4...HEAD
+
+## [5.0.0-beta.4] - 2016-03-11
+
+### Fixed
+
+- We accidentally published `5.0.0.beta.3` as a stable release on npm, rather
+  than a prerelease. We’ve unpublished that to go back to `4.2.6` on the stable
+  channel.
+
+[5.0.0-beta.4]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.3...v5.0.0.beta.4
 
 ## [5.0.0-beta.3] - 2016-03-04
 
