@@ -24,5 +24,10 @@
     $percent
   ) {
 
-  @return mix(#fff, $color, $percent);
+  @if not _is-color($color) {
+    @error "`#{$color}` is not a valid color for the `$color` argument in " +
+           "the `tint` mixin.";
+  } @else {
+    @return mix(#fff, $color, $percent);
+  }
 }
