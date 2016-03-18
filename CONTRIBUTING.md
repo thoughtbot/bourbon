@@ -49,6 +49,7 @@ We use [SassDoc] to document Bourbon. [Annotations] should be ordered:
 - `@see`
 - `@type`
 - `@argument`
+- `@content`
 - `@property`
 - `@return`
 - `@example`

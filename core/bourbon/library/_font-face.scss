@@ -4,9 +4,6 @@
 /// formats you need to output; the mixin supports `eot`, `ttf`, `svg`, `woff2`
 /// and `woff`. The mixin also supports usage with the Rails Asset Pipeline,
 /// which you can enable per use, or globally in the `$bourbon()` settings.
-/// Finally, any additional CSS properties that are included in the `@include`
-/// directive will be output within the `@font-face` declaration, e.g. you can
-/// pass in `font-weight`, `font-style` and/or `unicode-range`.
 ///
 /// @argument {string} $font-family
 ///
@@ -19,6 +16,11 @@
 /// @argument {list} $file-formats [("ttf", "woff2", "woff")]
 ///   Pass a list of file formats to support,
 ///   for example ("eot", "ttf", "svg", "woff2", woff").
+///
+/// @content
+///   Any additional CSS properties that are included in the `@include`
+///   directive will be output within the `@font-face` declaration, e.g. you can
+///   pass in `font-weight`, `font-style` and/or `unicode-range`.
 ///
 /// @example scss
 ///   @include font-face(
