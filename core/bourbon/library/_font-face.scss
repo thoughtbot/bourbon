@@ -13,9 +13,9 @@
 ///   Set to `true` if you’re using the Rails Asset Pipeline (place the fonts
 ///   in `app/assets/fonts/`).
 ///
-/// @argument {list} $file-formats [("ttf", "woff2", "woff")]
+/// @argument {string | list} $file-formats [("ttf", "woff2", "woff")]
 ///   Pass a list of file formats to support,
-///   for example ("eot", "ttf", "svg", "woff2", woff").
+///   for example ("eot", "ttf", "svg", "woff2", "woff").
 ///
 /// @content
 ///   Any additional CSS properties that are included in the `@include`
