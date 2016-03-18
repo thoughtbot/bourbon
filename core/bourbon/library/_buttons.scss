@@ -46,15 +46,10 @@
 ///   }
 ///
 /// @require {function} _assign-inputs
+///
+/// @require {variable} $_buttons-list
 
-$buttons-list: (
-  "button",
-  "[type='button']",
-  "[type='reset']",
-  "[type='submit']",
-);
-
-$all-buttons:        _assign-inputs($buttons-list);
-$all-buttons-active: _assign-inputs($buttons-list, active);
-$all-buttons-focus:  _assign-inputs($buttons-list, focus);
-$all-buttons-hover:  _assign-inputs($buttons-list, hover);
+$all-buttons:        _assign-inputs($_buttons-list);
+$all-buttons-active: _assign-inputs($_buttons-list, active);
+$all-buttons-focus:  _assign-inputs($_buttons-list, focus);
+$all-buttons-hover:  _assign-inputs($_buttons-list, hover);
