@@ -13,7 +13,7 @@
 ///
 /// @example scss
 ///   .element {
-///     @include prefixer(appearance, none, webkit moz);
+///     @include prefixer(appearance, none, ("webkit", "moz"));
 ///   }
 ///
 /// @example css
