@@ -24,18 +24,21 @@
 ///
 /// @example scss
 ///   @include font-face(
-///     "source-sans-pro",
-///     "fonts/source-sans-pro-regular",
-///     $file-formats: ("eot", "ttf")
-///   );
+///       "source-sans-pro",
+///       "fonts/source-sans-pro-regular",
+///       ("woff2", "woff")
+///     ) {
+///     font-style: normal;
+///     font-weight: 400;
+///   }
 ///
 /// @example css
 ///   @font-face {
 ///     font-family: "source-sans-pro";
-///     src: url("fonts/source-sans-pro-regular.eot?#iefix")
-///          format("embedded-opentype"),
-///          url("fonts/source-sans-pro-regular.ttf")
-///          format("truetype");
+///     src: url("fonts/source-sans-pro-regular.woff2") format("woff2"),
+///          url("fonts/source-sans-pro-regular.woff") format("woff");
+///     font-style: normal;
+///     font-weight: 400;
 ///   }
 ///
 /// @require {function} _font-source-declaration
