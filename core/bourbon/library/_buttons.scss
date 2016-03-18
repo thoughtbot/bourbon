@@ -1,22 +1,19 @@
 @charset "UTF-8";
 
-/// Generates variables for all buttons. Please note that you must use
-/// interpolation on the variable: `#{$all-buttons}`.
-///
+////
 /// @type list
+///
+/// @require {function} _assign-inputs
+///
+/// @require {variable} $_buttons-list
+////
+
+/// A list of all HTML button elements. Please note that you must interpolate
+/// the variable (`#{}`) to use it as a selector.
 ///
 /// @example scss
 ///   #{$all-buttons} {
 ///     background-color: #f00;
-///   }
-///
-///   #{$all-buttons-focus},
-///   #{$all-buttons-hover} {
-///     background-color: #0f0;
-///   }
-///
-///   #{$all-buttons-active} {
-///     background-color: #00f;
 ///   }
 ///
 /// @example css
@@ -26,30 +23,62 @@
 ///   [type='submit'] {
 ///     background-color: #f00;
 ///   }
+
+$all-buttons: _assign-inputs($_buttons-list);
+
+/// A list of all HTML button elements with the `:active` pseudo-class applied.
+/// Please note that you must interpolate the variable (`#{}`) to use it as a
+/// selector.
 ///
-///   button:focus,
-///   [type='button']:focus,
-///   [type='reset']:focus,
-///   [type='submit']:focus,
-///   button:hover,
-///   [type='button']:hover,
-///   [type='reset']:hover,
-///   [type='submit']:hover {
-///     background-color: #0f0;
+/// @example scss
+///   #{$all-buttons-active} {
+///     background-color: #00f;
 ///   }
 ///
+/// @example css
 ///   button:active,
 ///   [type='button']:active,
 ///   [type='reset']:active,
 ///   [type='submit']:active {
 ///     background-color: #00f;
 ///   }
-///
-/// @require {function} _assign-inputs
-///
-/// @require {variable} $_buttons-list
 
-$all-buttons:        _assign-inputs($_buttons-list);
 $all-buttons-active: _assign-inputs($_buttons-list, active);
-$all-buttons-focus:  _assign-inputs($_buttons-list, focus);
-$all-buttons-hover:  _assign-inputs($_buttons-list, hover);
+
+/// A list of all HTML button elements with the `:focus` pseudo-class applied.
+/// Please note that you must interpolate the variable (`#{}`) to use it as a
+/// selector.
+///
+/// @example scss
+///   #{$all-buttons-focus} {
+///     background-color: #0f0;
+///   }
+///
+/// @example css
+///   button:focus,
+///   [type='button']:focus,
+///   [type='reset']:focus,
+///   [type='submit']:focus {
+///     background-color: #0f0;
+///   }
+
+$all-buttons-focus: _assign-inputs($_buttons-list, focus);
+
+/// A list of all HTML button elements with the `:hover` pseudo-class applied.
+/// Please note that you must interpolate the variable (`#{}`) to use it as a
+/// selector.
+///
+/// @example scss
+///   #{$all-buttons-hover} {
+///     background-color: #0f0;
+///   }
+///
+/// @example css
+///   button:hover,
+///   [type='button']:hover,
+///   [type='reset']:hover,
+///   [type='submit']:hover {
+///     background-color: #0f0;
+///   }
+
+$all-buttons-hover: _assign-inputs($_buttons-list, hover);
