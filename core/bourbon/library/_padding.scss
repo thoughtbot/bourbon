@@ -7,15 +7,24 @@
 ///   List of padding values, defined as CSS shorthand.
 ///
 /// @example scss
-///   .element {
-///     @include padding(12vh null 10px 5%);
+///   .element-one {
+///     @include padding(null 1rem);
+///   }
+///
+///   .element-two {
+///     @include padding(10vh null 10px 5%);
 ///   }
 ///
 /// @example css
-///   .element {
+///   .element-one {
+///     padding-left: 1rem;
+///     padding-right: 1rem;
+///   }
+///
+///   .element-two {
 ///     padding-bottom: 10px;
 ///     padding-left: 5%;
-///     padding-top: 12vh;
+///     padding-top: 10vh;
 ///   }
 ///
 /// @require {mixin} _directional-property
