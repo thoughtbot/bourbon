@@ -3,6 +3,6 @@
 @include font-face(
   "pitch",
   "/fonts/pitch",
-  true,
-  "woff2"
+  "woff2",
+  $asset-pipeline: true
 );

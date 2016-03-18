@@ -3,5 +3,5 @@
 @include font-face(
   "circular",
   "/circular",
-  $file-formats: ("woff2", "svg")
+  ("woff2", "svg")
 );

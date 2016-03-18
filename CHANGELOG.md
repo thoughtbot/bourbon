@@ -7,6 +7,12 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 [Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.4...HEAD
 
+### Changed
+
+- Swapped the order of the `$file-formats` and `$asset-pipeline` arguments in
+  the `font-face` mixin, so that `$asset-pipeline` is last (because it has a
+  default and is likely used the least).
+
 ## [5.0.0-beta.4] - 2016-03-11
 
 ### Fixed

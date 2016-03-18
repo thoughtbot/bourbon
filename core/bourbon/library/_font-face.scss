@@ -43,8 +43,8 @@
 @mixin font-face(
     $font-family,
     $file-path,
-    $asset-pipeline: _bourbon-get-setting("rails-asset-pipeline"),
-    $file-formats: _bourbon-get-setting("global-font-file-formats")
+    $file-formats: _bourbon-get-setting("global-font-file-formats"),
+    $asset-pipeline: _bourbon-get-setting("rails-asset-pipeline")
   ) {
 
   @font-face {
