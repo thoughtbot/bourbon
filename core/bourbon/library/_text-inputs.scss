@@ -98,28 +98,11 @@
 ///   }
 ///
 /// @require {function} _assign-inputs
+///
+/// @require {variable} $_text-inputs-list
 
-$text-inputs-list: (
-  "[type='color']",
-  "[type='date']",
-  "[type='datetime']",
-  "[type='datetime-local']",
-  "[type='email']",
-  "[type='month']",
-  "[type='number']",
-  "[type='password']",
-  "[type='search']",
-  "[type='tel']",
-  "[type='text']",
-  "[type='time']",
-  "[type='url']",
-  "[type='week']",
-  "input:not([type])",
-  "textarea",
-);
-
-$all-text-inputs:         _assign-inputs($text-inputs-list);
-$all-text-inputs-active:  _assign-inputs($text-inputs-list, active);
-$all-text-inputs-focus:   _assign-inputs($text-inputs-list, focus);
-$all-text-inputs-hover:   _assign-inputs($text-inputs-list, hover);
-$all-text-inputs-invalid: _assign-inputs($text-inputs-list, invalid);
+$all-text-inputs:         _assign-inputs($_text-inputs-list);
+$all-text-inputs-active:  _assign-inputs($_text-inputs-list, active);
+$all-text-inputs-focus:   _assign-inputs($_text-inputs-list, focus);
+$all-text-inputs-hover:   _assign-inputs($_text-inputs-list, hover);
+$all-text-inputs-invalid: _assign-inputs($_text-inputs-list, invalid);
