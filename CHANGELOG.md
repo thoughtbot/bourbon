@@ -5,7 +5,9 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.4...HEAD
+[Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.5...HEAD
+
+## [5.0.0-beta.5] - 2016-03-23
 
 ### Fixed
 
@@ -17,6 +19,8 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Swapped the order of the `$file-formats` and `$asset-pipeline` arguments in
   the `font-face` mixin, so that `$asset-pipeline` is last (because it has a
   default and is likely used the least).
+
+[5.0.0-beta.5]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.4...v5.0.0.beta.5
 
 ## [5.0.0-beta.4] - 2016-03-11
 
