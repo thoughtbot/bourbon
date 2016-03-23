@@ -7,6 +7,11 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 [Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.4...HEAD
 
+### Fixed
+
+- Fixed a Sass load path issue that would intermittently break the importing of
+  Bourbon in Rails apps.
+
 ### Changed
 
 - Swapped the order of the `$file-formats` and `$asset-pipeline` arguments in
