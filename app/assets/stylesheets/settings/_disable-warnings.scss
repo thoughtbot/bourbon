@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/// Enable or disable output of Bourbon’s deprecation-related Sass warnings.
+/// This variable must be declared _before_ importing Bourbon.
+///
+/// @type Bool
+
+$output-bourbon-deprecation-warnings: true !default;
