@@ -1,4 +1,9 @@
 @function _gradient-positions-parser($gradient-type, $gradient-positions) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_gradient-positions-parser` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
   @if $gradient-positions
   and ($gradient-type == linear)
   and (type-of($gradient-positions) != color) {

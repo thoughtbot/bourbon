@@ -7,5 +7,10 @@
 /// @require {function} contains
 
 @function is-number($value) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `is-number` is deprecated and will be " +
+    "removed in 5.0.0.";
+  }
+
   @return contains("0" "1" "2" "3" "4" "5" "6" "7" "8" "9" 0 1 2 3 4 5 6 7 8 9, $value);
 }

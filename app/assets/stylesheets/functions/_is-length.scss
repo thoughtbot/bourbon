@@ -5,6 +5,11 @@
 /// @param {String} $value
 
 @function is-length($value) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `is-length` is deprecated and will be " +
+    "removed in 5.0.0.";
+  }
+
   @return type-of($value) != "null" and (str-slice($value + "", 1, 4) == "calc"
        or index(auto inherit initial 0, $value)
        or (type-of($value) == "number" and not(unitless($value))));

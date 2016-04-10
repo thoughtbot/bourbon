@@ -4,6 +4,8 @@
 //************************************************************************//
 
 @mixin background($backgrounds...) {
+  @include _bourbon-deprecate-for-prefixing("background");
+
   $webkit-backgrounds: ();
   $spec-backgrounds: ();
 

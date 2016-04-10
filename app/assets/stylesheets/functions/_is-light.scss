@@ -12,6 +12,11 @@
 /// @return {Bool}
 
 @function is-light($hex-color) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `is-light` is deprecated and will be " +
+    "removed in 5.0.0.";
+  }
+
   $-local-red: red(rgba($hex-color, 1));
   $-local-green: green(rgba($hex-color, 1));
   $-local-blue: blue(rgba($hex-color, 1));

@@ -1,4 +1,9 @@
 @function _radial-arg-parser($g1, $g2, $pos, $shape-size) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_radial-arg-parser` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
   @each $value in $g1, $g2 {
     $first-val: nth($value, 1);
     $pos-type:  type-of($first-val);

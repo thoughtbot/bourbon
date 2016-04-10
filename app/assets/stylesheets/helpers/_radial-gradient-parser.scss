@@ -1,4 +1,9 @@
 @function _radial-gradient-parser($image) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_radial-gradient-parser` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
   $image: unquote($image);
   $gradients: ();
   $start: str-index($image, "(");

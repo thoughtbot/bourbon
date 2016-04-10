@@ -1,5 +1,10 @@
 // Private function for linear-gradient-parser
 @function _linear-angle-parser($image, $first-val, $prefix, $suffix) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_linear-angle-parser` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
   $offset: null;
   $unit-short:  str-slice($first-val, str-length($first-val) - 2, str-length($first-val));
   $unit-long:   str-slice($first-val, str-length($first-val) - 3, str-length($first-val));

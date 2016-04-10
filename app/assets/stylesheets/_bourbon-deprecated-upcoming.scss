@@ -1,12 +1,13 @@
 // The following features have been deprecated and will be removed in the next MAJOR version release
 
 @mixin inline-block {
-  display: inline-block;
+  @include _bourbon-deprecate("inline-block");
 
-  @warn "The inline-block mixin is deprecated and will be removed in the next major version release";
+  display: inline-block;
 }
 
 @mixin button ($style: simple, $base-color: #4294f0, $text-size: inherit, $padding: 7px 18px) {
+  @include _bourbon-deprecate("button");
 
   @if type-of($style) == string and type-of($base-color) == color {
     @include buttonstyle($style, $base-color, $text-size, $padding);
@@ -60,8 +61,6 @@
     cursor: not-allowed;
     opacity: 0.5;
   }
-
-  @warn "The button mixin is deprecated and will be removed in the next major version release";
 }
 
 // Selector Style Button
@@ -377,35 +376,50 @@
 
 // Flexible grid
 @function flex-grid($columns, $container-columns: $fg-max-columns) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `flex-grid` is deprecated and will be " +
+    "removed in 5.0.0. For grid functions, check out Bourbon's sister library" +
+    "Neat.";
+  }
+
   $width: $columns * $fg-column + ($columns - 1) * $fg-gutter;
   $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
   @return percentage($width / $container-width);
-
-  @warn "The flex-grid function is deprecated and will be removed in the next major version release";
 }
 
 // Flexible gutter
 @function flex-gutter($container-columns: $fg-max-columns, $gutter: $fg-gutter) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `flex-gutter` is deprecated and will be " +
+    "removed in 5.0.0. For grid functions, check out Bourbon's sister library" +
+    "Neat.";
+  }
+
   $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
   @return percentage($gutter / $container-width);
-
-  @warn "The flex-gutter function is deprecated and will be removed in the next major version release";
 }
 
 @function grid-width($n) {
-  @return $n * $gw-column + ($n - 1) * $gw-gutter;
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `grid-width` is deprecated and will be " +
+    "removed in 5.0.0. For grid functions, check out Bourbon's sister library" +
+    "Neat.";
+  }
 
-  @warn "The grid-width function is deprecated and will be removed in the next major version release";
+  @return $n * $gw-column + ($n - 1) * $gw-gutter;
 }
 
 @function golden-ratio($value, $increment) {
-  @return modular-scale($increment, $value, $ratio: $golden);
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `golden-ratio` is deprecated and will be " +
+    "removed in 5.0.0. You can use the `modular-scale` function instead.";
+  }
 
-  @warn "The golden-ratio function is deprecated and will be removed in the next major version release. Please use the modular-scale function, instead.";
+  @return modular-scale($increment, $value, $ratio: $golden);
 }
 
 @mixin box-sizing($box) {
-  @include prefixer(box-sizing, $box, webkit moz spec);
+  @include _bourbon-deprecate-for-prefixing("box-sizing");
 
-  @warn "The box-sizing mixin is deprecated and will be removed in the next major version release. This property can now be used un-prefixed.";
+  @include prefixer(box-sizing, $box, webkit moz spec);
 }

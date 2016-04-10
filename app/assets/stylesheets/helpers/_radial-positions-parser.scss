@@ -1,4 +1,9 @@
 @function _radial-positions-parser($gradient-pos) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_radial-positions-parser` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
   $shape-size: nth($gradient-pos, 1);
   $pos:        nth($gradient-pos, 2);
   $shape-size-spec: _shape-size-stripper($shape-size);

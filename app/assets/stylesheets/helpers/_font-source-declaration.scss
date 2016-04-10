@@ -2,6 +2,11 @@
 // Reference: http://goo.gl/Ru1bKP
 
 @function font-url-prefixer($asset-pipeline) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `font-url-prefixer` is deprecated and " +
+    "will be removed in 5.0.0.";
+  }
+
   @if $asset-pipeline == true {
     @return font-url;
   } @else {
@@ -15,6 +20,11 @@
   $asset-pipeline,
   $file-formats,
   $font-url) {
+
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `font-source-declaration` is deprecated " +
+    "and will be removed in 5.0.0.";
+  }
 
   $src: ();
 

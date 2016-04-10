@@ -8,12 +8,12 @@
 @mixin _bourbon-deprecate($feature, $message: null) {
   @if $output-bourbon-deprecation-warnings == true {
     @warn "[Bourbon] [Deprecation] `#{$feature}` is deprecated and will be " +
-      "removed in 5.0.0. #{$message}.";
+      "removed in 5.0.0. #{$message}";
     @content;
   }
 }
 
 @mixin _bourbon-deprecate-for-prefixing($feature) {
   @include _bourbon-deprecate($feature, "We suggest using an automated " +
-    "prefixing tool, like Autoprefixer");
+    "prefixing tool, like Autoprefixer.");
 }

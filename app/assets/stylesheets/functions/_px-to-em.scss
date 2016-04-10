@@ -3,6 +3,11 @@
 // if the parent is another value say 24px write em(12, 24)
 
 @function em($pxval, $base: $em-base) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `em` is deprecated and will be " +
+    "removed in 5.0.0.";
+  }
+
   @if not unitless($pxval) {
     $pxval: strip-units($pxval);
   }

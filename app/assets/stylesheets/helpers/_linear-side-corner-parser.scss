@@ -1,5 +1,10 @@
 // Private function for linear-gradient-parser
 @function _linear-side-corner-parser($image, $first-val, $prefix, $suffix, $has-multiple-vals) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_linear-side-corner-parser` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
   $val-1: str-slice($first-val, 1, $has-multiple-vals - 1);
   $val-2: str-slice($first-val, $has-multiple-vals + 1, str-length($first-val));
   $val-3: null;

@@ -7,6 +7,7 @@
                        $pos: null,
                        $shape-size: null,
                        $fallback: null) {
+  @include _bourbon-deprecate-for-prefixing("radial-gradient");
 
   $data: _radial-arg-parser($g1, $g2, $pos, $shape-size);
   $g1:  nth($data, 1);

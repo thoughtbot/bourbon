@@ -3,6 +3,11 @@
 // Source: http://sassmeister.com/gist/9647408
 //************************************************************************//
 @function _str-to-num($string) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_str-to-num` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
   // Matrices
   $strings: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
   $numbers:  0   1   2   3   4   5   6   7   8   9;

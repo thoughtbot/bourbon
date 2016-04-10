@@ -1,8 +1,12 @@
 @mixin perspective($depth: none) {
+  @include _bourbon-deprecate-for-prefixing("perspective");
+
   // none | <length>
   @include prefixer(perspective, $depth, webkit moz spec);
 }
 
 @mixin perspective-origin($value: 50% 50%) {
+  @include _bourbon-deprecate-for-prefixing("perspective-origin");
+
   @include prefixer(perspective-origin, $value, webkit moz spec);
 }

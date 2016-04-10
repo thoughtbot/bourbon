@@ -1,4 +1,9 @@
 @function _shape-size-stripper($shape-size) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_shape-size-stripper` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
   $shape-size-spec: null;
   @each $value in $shape-size {
     @if ($value == "cover") or ($value == "contain") {

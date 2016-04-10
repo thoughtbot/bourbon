@@ -3,6 +3,11 @@
 // Assumes $em-base is the font-size of <html>
 
 @function rem($pxval) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `rem` is deprecated and will be " +
+    "removed in 5.0.0.";
+  }
+
   @if not unitless($pxval) {
     $pxval: strip-units($pxval);
   }

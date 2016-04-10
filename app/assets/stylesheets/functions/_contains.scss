@@ -16,6 +16,11 @@
 /// @return {Bool}
 
 @function contains($list, $values...) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `contains` is deprecated and will be " +
+    "removed in 5.0.0.";
+  }
+
   @each $value in $values {
     @if type-of(index($list, $value)) != "number" {
       @return false;

@@ -1,4 +1,6 @@
 @mixin filter($function: none) {
+  @include _bourbon-deprecate-for-prefixing("filter");
+
   // <filter-function> [<filter-function]* | none
   @include prefixer(filter, $function, webkit spec);
 }

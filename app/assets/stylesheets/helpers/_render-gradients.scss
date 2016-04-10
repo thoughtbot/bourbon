@@ -1,6 +1,11 @@
 // User for linear and radial gradients within background-image or border-image properties
 
 @function _render-gradients($gradient-positions, $gradients, $gradient-type, $vendor: false) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_render-gradients` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
   $pre-spec: null;
   $spec: null;
   $vendor-gradients: null;

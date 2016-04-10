@@ -2,6 +2,8 @@
 
 // Custom shorthand notation for flexbox
 @mixin box($orient: inline-axis, $pack: start, $align: stretch) {
+  @include _bourbon-deprecate-for-prefixing("box");
+
   @include display-box;
   @include box-orient($orient);
   @include box-pack($pack);
@@ -9,6 +11,8 @@
 }
 
 @mixin display-box {
+  @include _bourbon-deprecate-for-prefixing("display-box");
+
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox; // IE 10
@@ -16,44 +20,60 @@
 }
 
 @mixin box-orient($orient: inline-axis) {
+  @include _bourbon-deprecate-for-prefixing("box-orient");
+
 // horizontal|vertical|inline-axis|block-axis|inherit
   @include prefixer(box-orient, $orient, webkit moz spec);
 }
 
 @mixin box-pack($pack: start) {
+  @include _bourbon-deprecate-for-prefixing("box-pack");
+
 // start|end|center|justify
   @include prefixer(box-pack, $pack, webkit moz spec);
   -ms-flex-pack: $pack; // IE 10
 }
 
 @mixin box-align($align: stretch) {
+  @include _bourbon-deprecate-for-prefixing("box-align");
+
 // start|end|center|baseline|stretch
   @include prefixer(box-align, $align, webkit moz spec);
   -ms-flex-align: $align; // IE 10
 }
 
 @mixin box-direction($direction: normal) {
+  @include _bourbon-deprecate-for-prefixing("box-direction");
+
 // normal|reverse|inherit
   @include prefixer(box-direction, $direction, webkit moz spec);
   -ms-flex-direction: $direction; // IE 10
 }
 
 @mixin box-lines($lines: single) {
+  @include _bourbon-deprecate-for-prefixing("box-lines");
+
 // single|multiple
   @include prefixer(box-lines, $lines, webkit moz spec);
 }
 
 @mixin box-ordinal-group($int: 1) {
+  @include _bourbon-deprecate-for-prefixing("box-ordinal-group");
+
   @include prefixer(box-ordinal-group, $int, webkit moz spec);
   -ms-flex-order: $int; // IE 10
 }
 
 @mixin box-flex($value: 0) {
+  @include _bourbon-deprecate-for-prefixing("box-flex");
+
   @include prefixer(box-flex, $value, webkit moz spec);
   -ms-flex: $value; // IE 10
 }
 
 @mixin box-flex-group($int: 1) {
+  @include _bourbon-deprecate-for-prefixing("box-flex-group");
+
   @include prefixer(box-flex-group, $int, webkit moz spec);
 }
 
@@ -64,6 +84,8 @@
 // 2011 - display (flexbox | inline-flexbox)
 // 2012 - display (flex | inline-flex)
 @mixin display($value) {
+  @include _bourbon-deprecate-for-prefixing("display");
+
 // flex | inline-flex
   @if $value == "flex" {
     // 2009
@@ -94,6 +116,7 @@
 // 2011 - flex (decimal | width decimal)
 // 2012 - flex (integer integer width)
 @mixin flex($value) {
+  @include _bourbon-deprecate-for-prefixing("flex");
 
   // Grab flex-grow for older browsers.
   $flex-grow: nth($value, 1);
@@ -110,6 +133,7 @@
 // 2011 - flex-direction (row | row-reverse | column | column-reverse)
 // 2012 - flex-direction (row | row-reverse | column | column-reverse)
 @mixin flex-direction($value: row) {
+  @include _bourbon-deprecate-for-prefixing("flex-direction");
 
   // Alt values.
   $value-2009: $value;
@@ -143,6 +167,8 @@
 // 2011 - flex-wrap (nowrap | wrap | wrap-reverse)
 // 2012 - flex-wrap (nowrap | wrap | wrap-reverse)
 @mixin flex-wrap($value: nowrap) {
+  @include _bourbon-deprecate-for-prefixing("flex-wrap");
+
   // Alt values
   $alt-value: $value;
   @if $value == nowrap {
@@ -161,6 +187,8 @@
 // 2011 - TODO: parse values into flex-direction/flex-wrap
 // 2012 - flex-flow (flex-direction || flex-wrap)
 @mixin flex-flow($value) {
+  @include _bourbon-deprecate-for-prefixing("flex-flow");
+
   @include prefixer(flex-flow, $value, webkit moz spec);
 }
 
@@ -168,6 +196,8 @@
 // 2011 - flex-order (integer)
 // 2012 - order (integer)
 @mixin order($int: 0) {
+  @include _bourbon-deprecate-for-prefixing("order");
+
   // 2009
   @include prefixer(box-ordinal-group, $int, webkit moz spec);
 
@@ -180,18 +210,24 @@
 
 // 2012 - flex-grow (number)
 @mixin flex-grow($number: 0) {
+  @include _bourbon-deprecate-for-prefixing("flex-grow");
+
   @include prefixer(flex-grow, $number, webkit moz spec);
   -ms-flex-positive: $number;
 }
 
 // 2012 - flex-shrink (number)
 @mixin flex-shrink($number: 1) {
+  @include _bourbon-deprecate-for-prefixing("flex-shrink");
+
   @include prefixer(flex-shrink, $number, webkit moz spec);
   -ms-flex-negative: $number;
 }
 
 // 2012 - flex-basis (number)
 @mixin flex-basis($width: auto) {
+  @include _bourbon-deprecate-for-prefixing("flex-basis");
+
   @include prefixer(flex-basis, $width, webkit moz spec);
   -ms-flex-preferred-size: $width;
 }
@@ -200,6 +236,7 @@
 // 2011 - flex-pack (start | end | center | justify)
 // 2012 - justify-content (flex-start | flex-end | center | space-between | space-around)
 @mixin justify-content($value: flex-start) {
+  @include _bourbon-deprecate-for-prefixing("justify-content");
 
   // Alt values.
   $alt-value: $value;
@@ -227,6 +264,7 @@
 // 2011 - flex-align (start | end | center | baseline | stretch)
 // 2012 - align-items (flex-start | flex-end | center | baseline | stretch)
 @mixin align-items($value: stretch) {
+  @include _bourbon-deprecate-for-prefixing("align-items");
 
   $alt-value: $value;
 
@@ -249,6 +287,7 @@
 // 2011 - flex-item-align (auto | start | end | center | baseline | stretch)
 // 2012 - align-self (auto | flex-start | flex-end | center | baseline | stretch)
 @mixin align-self($value: auto) {
+  @include _bourbon-deprecate-for-prefixing("align-self");
 
   $value-2011: $value;
   @if $value == "flex-start" {
@@ -267,6 +306,7 @@
 // 2011 - flex-line-pack (start | end | center | justify | distribute | stretch)
 // 2012 - align-content (flex-start | flex-end | center | space-between | space-around | stretch)
 @mixin align-content($value: stretch) {
+  @include _bourbon-deprecate-for-prefixing("align-content");
 
   $value-2011: $value;
   @if $value == "flex-start" {

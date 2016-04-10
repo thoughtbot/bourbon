@@ -2,42 +2,60 @@
 // Each of these mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
 
 @mixin animation($animations...) {
+  @include _bourbon-deprecate-for-prefixing("animation");
+
   @include prefixer(animation, $animations, webkit moz spec);
 }
 
 @mixin animation-name($names...) {
+  @include _bourbon-deprecate-for-prefixing("animation-name");
+
   @include prefixer(animation-name, $names, webkit moz spec);
 }
 
 @mixin animation-duration($times...) {
+  @include _bourbon-deprecate-for-prefixing("animation-duration");
+
   @include prefixer(animation-duration, $times, webkit moz spec);
 }
 
 @mixin animation-timing-function($motions...) {
+  @include _bourbon-deprecate-for-prefixing("animation-timing-function");
+
   // ease | linear | ease-in | ease-out | ease-in-out
   @include prefixer(animation-timing-function, $motions, webkit moz spec);
 }
 
 @mixin animation-iteration-count($values...) {
+  @include _bourbon-deprecate-for-prefixing("animation-iteration-count");
+
   // infinite | <number>
   @include prefixer(animation-iteration-count, $values, webkit moz spec);
 }
 
 @mixin animation-direction($directions...) {
+  @include _bourbon-deprecate-for-prefixing("animation-direction");
+
   // normal | alternate
   @include prefixer(animation-direction, $directions, webkit moz spec);
 }
 
 @mixin animation-play-state($states...) {
+  @include _bourbon-deprecate-for-prefixing("animation-play-state");
+
   // running | paused
   @include prefixer(animation-play-state, $states, webkit moz spec);
 }
 
 @mixin animation-delay($times...) {
+  @include _bourbon-deprecate-for-prefixing("animation-delay");
+
   @include prefixer(animation-delay, $times, webkit moz spec);
 }
 
 @mixin animation-fill-mode($modes...) {
+  @include _bourbon-deprecate-for-prefixing("animation-fill-mode");
+
   // none | forwards | backwards | both
   @include prefixer(animation-fill-mode, $modes, webkit moz spec);
 }

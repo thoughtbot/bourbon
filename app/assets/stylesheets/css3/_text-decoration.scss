@@ -1,19 +1,27 @@
 @mixin text-decoration($value) {
+  @include _bourbon-deprecate-for-prefixing("text-decoration");
+
 // <text-decoration-line> || <text-decoration-style> || <text-decoration-color>
   @include prefixer(text-decoration, $value, moz);
 }
 
 @mixin text-decoration-line($line: none) {
+  @include _bourbon-deprecate-for-prefixing("text-decoration-line");
+
 // none || underline || overline || line-through
   @include prefixer(text-decoration-line, $line, moz);
 }
 
 @mixin text-decoration-style($style: solid) {
+  @include _bourbon-deprecate-for-prefixing("text-decoration-style");
+
 // solid || double || dotted || dashed || wavy
   @include prefixer(text-decoration-style, $style, moz webkit);
 }
 
 @mixin text-decoration-color($color: currentColor) {
+  @include _bourbon-deprecate-for-prefixing("text-decoration-color");
+
 // currentColor || <color>
   @include prefixer(text-decoration-color, $color, moz);
 }

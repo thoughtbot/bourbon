@@ -1,5 +1,7 @@
 // Adds keyframes blocks for supported prefixes, removing redundant prefixes in the block's content
 @mixin keyframes($name) {
+  @include _bourbon-deprecate-for-prefixing("keyframes");
+
   $original-prefix-for-webkit:    $prefix-for-webkit;
   $original-prefix-for-mozilla:   $prefix-for-mozilla;
   $original-prefix-for-microsoft: $prefix-for-microsoft;

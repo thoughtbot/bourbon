@@ -27,6 +27,11 @@
 /// @return {List}
 
 @function collapse-directionals($vals) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `collapse-directionals` is deprecated and " +
+    "will be removed in 5.0.0.";
+  }
+
   $output: null;
 
   $a: nth($vals, 1);
@@ -62,6 +67,8 @@
 /// @require {function} contains-falsy
 
 @mixin directional-property($pre, $suf, $vals) {
+  @include _bourbon-deprecate("directional-property");
+
   // Property Names
   $top:    $pre + "-top"    + if($suf, "-#{$suf}", "");
   $bottom: $pre + "-bottom" + if($suf, "-#{$suf}", "");
