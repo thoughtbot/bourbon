@@ -1,0 +1,10 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+machine:
+  ruby:
+    version: 2.3.0
+test:
+  override:
+    - bundle exec rake
