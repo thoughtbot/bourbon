@@ -9,6 +9,7 @@
     "_site",
     "bin",
     "bourbon.gemspec",
+    "composer.json",
     "eyeglass-exports.js",
     "features",
     "Gemfile",
