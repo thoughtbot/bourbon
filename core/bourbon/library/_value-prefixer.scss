@@ -13,7 +13,7 @@
 ///
 /// @example scss
 ///   .element {
-///     @include prefixer(cursor, grab, ("webkit", "moz"));
+///     @include value-prefixer(cursor, grab, ("webkit", "moz"));
 ///   }
 ///
 /// @example css
