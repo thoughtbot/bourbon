@@ -2,7 +2,7 @@
   @include _bourbon-deprecate-for-prefixing("transform");
 
   // none | <transform-function>
-  @include prefixer(transform, $property, webkit moz ms o spec);
+  @include prefixer(transform, $property, webkit);
 }
 
 @mixin transform-origin($axes: 50%) {
@@ -11,11 +11,11 @@
   // x-axis - left | center | right  | length | %
   // y-axis - top  | center | bottom | length | %
   // z-axis -                          length
-  @include prefixer(transform-origin, $axes, webkit moz ms o spec);
+  @include prefixer(transform-origin, $axes, webkit);
 }
 
 @mixin transform-style($style: flat) {
   @include _bourbon-deprecate-for-prefixing("transform-style");
 
-  @include prefixer(transform-style, $style, webkit moz ms o spec);
+  @include prefixer(transform-style, $style, webkit);
 }
