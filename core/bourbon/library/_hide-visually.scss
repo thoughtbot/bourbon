@@ -54,7 +54,7 @@
     padding: 0;
     position: absolute;
     width: 1px;
-  } @elseif $toggle == "unhide" {
+  } @else if $toggle == "unhide" {
     clip: auto;
     clip-path: none;
     height: auto;
