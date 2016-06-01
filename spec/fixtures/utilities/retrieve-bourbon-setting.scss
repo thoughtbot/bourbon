@@ -6,11 +6,11 @@ $bourbon: (
 );
 
 .test-1 {
-  content: _bourbon-get-setting("modular-scale-base");
+  content: _retrieve-bourbon-setting("modular-scale-base");
 }
 
 .test-2 {
-  content: _bourbon-get-setting("rails-asset-pipeline");
+  content: _retrieve-bourbon-setting("rails-asset-pipeline");
 }
 
 @include font-face("source-sans-pro", "source-sans-pro-regular");

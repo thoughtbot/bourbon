@@ -57,12 +57,12 @@
 ///     font-size: 1.728em;
 ///   }
 ///
-/// @require {function} _bourbon-get-setting
+/// @require {function} _retrieve-bourbon-setting
 
 @function modular-scale(
     $increment,
-    $value: _bourbon-get-setting("modular-scale-base"),
-    $ratio: _bourbon-get-setting("modular-scale-ratio")
+    $value: _retrieve-bourbon-setting("modular-scale-base"),
+    $ratio: _retrieve-bourbon-setting("modular-scale-ratio")
   ) {
 
   $v1: nth($value, 1);

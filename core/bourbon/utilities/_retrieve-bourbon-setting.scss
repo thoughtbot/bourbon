@@ -7,10 +7,10 @@
 /// @return {boolean | color | list | number | string}
 ///
 /// @example scss
-///   _bourbon-get-setting(rails-asset-pipeline)
+///   _retrieve-bourbon-setting(rails-asset-pipeline)
 ///
 /// @access private
 
-@function _bourbon-get-setting($setting) {
+@function _retrieve-bourbon-setting($setting) {
   @return map-get(map-merge($_bourbon-defaults, $bourbon), $setting);
 }

@@ -18,10 +18,10 @@
 @import "bourbon/validators/is-size";
 
 @import "bourbon/utilities/assign-inputs";
-@import "bourbon/utilities/bourbon-get-setting";
 @import "bourbon/utilities/collapse-directionals";
 @import "bourbon/utilities/directional-values";
 @import "bourbon/utilities/font-source-declaration";
+@import "bourbon/utilities/retrieve-bourbon-setting";
 @import "bourbon/utilities/unpack";
 
 @import "bourbon/library/border-color";

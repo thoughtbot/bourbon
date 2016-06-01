@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe "_bourbon-get-setting" do
+describe "_retrieve-bourbon-setting" do
   before(:all) do
-    ParserSupport.parse_file("utilities/bourbon-get-setting")
+    ParserSupport.parse_file("utilities/retrieve-bourbon-setting")
   end
 
   context "gets the modular-scale-base setting" do
