@@ -37,6 +37,7 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"],
+input:not([type]),
 textarea {
   border: 1px solid #f00;
 }
@@ -55,6 +56,7 @@ input[type="text"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 input[type="week"]:focus,
+input:not([type]):focus,
 textarea:focus,
 input[type="color"]:hover,
 input[type="date"]:hover,
@@ -70,6 +72,7 @@ input[type="text"]:hover,
 input[type="time"]:hover,
 input[type="url"]:hover,
 input[type="week"]:hover,
+input:not([type]):hover,
 textarea:hover {
   border: 1px solid #0f0;
 }
@@ -88,6 +91,7 @@ input[type="text"]:active,
 input[type="time"]:active,
 input[type="url"]:active,
 input[type="week"]:active,
+input:not([type]):active,
 textarea:active {
   border: 1px solid #00f;
 }
