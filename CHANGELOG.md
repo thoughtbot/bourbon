@@ -5,7 +5,15 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.5...HEAD
+[Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.6...HEAD
+
+## [5.0.0-beta.6] - 2016-06-06
+
+### Added
+
+- Added a `value-prefixer` mixin for generating vendor prefixes on values.
+
+[5.0.0-beta.6]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.5...v5.0.0.beta.6
 
 ## [5.0.0-beta.5] - 2016-03-23
 
