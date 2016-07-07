@@ -1,5 +1,5 @@
-This pull request includes
+### What does this PR do?
 
-The following changes were made
+### If this is related to an existing issue, include a link to it as well.
 
-If this is related to an existing issue, include a link to it as well.
+### Screenshots (if relevant)
