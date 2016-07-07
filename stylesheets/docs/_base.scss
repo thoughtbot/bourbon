@@ -29,7 +29,7 @@ h1 {
 h1, h2 {
   color: $header-font-color;
   font-size: golden-ratio(14px, 1) + 4px;
-  font-family: "proxima-nova-soft", $helvetica;
+  font-family: "proxima-nova-soft", $font-stack-helvetica;
 }
 
 h2 {

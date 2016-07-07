@@ -86,7 +86,7 @@ section > article {
     @include transition;
     color: hsl(43, 13%, 75%);
     float: right;
-    font-family: "proxima-nova-soft", $helvetica;
+    font-family: "proxima-nova-soft", $font-stack-helvetica;
     font-size: $small-font-size;
     font-weight: bold;
     line-height: 2.65em;
