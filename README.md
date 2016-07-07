@@ -1,5 +1,8 @@
 # Bourbon Website and Documentation
 
+:warning: Please note: This is the website and documentation for Bourbon v4.x,
+not the 5.0 beta.
+
 This website is powered by [Jekyll](http://jekyllrb.com). Here’s how to get it working locally:
 
 1. Run the setup script:
