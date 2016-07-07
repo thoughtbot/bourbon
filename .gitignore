@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 .DS_store
 .sass-cache
 _site
 pkg
+=======
+*gem
+*swp
+.DS_store
+.sass-cache
+_site
+Gemfile.lock
+npm-debug.log
+tmp/
+>>>>>>> thoughtbot/master

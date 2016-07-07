@@ -1,0 +1,26 @@
+@import "setup";
+
+$red: #f00;
+$blue: #0f0;
+$green: #00f;
+$purple: #ff0;
+
+.border-color-all {
+  @include border-color($red);
+}
+
+.border-color-alternate {
+  @include border-color($blue $green);
+}
+
+.border-color-implied-left {
+  @include border-color($red $blue $green);
+}
+
+.border-color-explicit {
+  @include border-color($green $blue $red $purple);
+}
+
+.border-color-false-third {
+  @include border-color($blue $purple null $green);
+}

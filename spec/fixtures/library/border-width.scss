@@ -1,0 +1,21 @@
+@import "setup";
+
+.border-width-all {
+  @include border-width(1px);
+}
+
+.border-width-alternate {
+  @include border-width(2px 3px);
+}
+
+.border-width-implied-left {
+  @include border-width(4px 5px 6px);
+}
+
+.border-width-explicit {
+  @include border-width(7px 8px 9px 10px);
+}
+
+.border-width-false-third {
+  @include border-width(11px 12px null 13px);
+}

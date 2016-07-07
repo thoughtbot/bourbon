@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/// Default Bourbon configuration settings.
+///
+/// @type map
+///
+/// @property {color} contrast-switch-dark-color [#000]
+///   Global dark color for the `contrast-switch` function.
+///
+/// @property {color} contrast-switch-light-color [#fff]
+///   Global light color for the `contrast-switch` function.
+///
+/// @property {list} global-font-file-formats [("ttf", "woff2", "woff")]
+///   Global font file formats for the `font-face` mixin.
+///
+/// @property {number (with unit)} modular-scale-base [1em]
+///   Global base value for the `modular-scale` function.
+///
+/// @property {number (unitless)} modular-scale-ratio [$major-third (1.25)]
+///   Global base ratio for the `modular-scale` function.
+///
+/// @property {boolean} rails-asset-pipeline [false]
+///   Enable or disable the `$asset-pipeline` variable for all functions that
+///   accept it.
+///
+/// @access private
+
+$_bourbon-defaults: (
+  "contrast-switch-dark-color": #000,
+  "contrast-switch-light-color": #fff,
+  "global-font-file-formats": ("ttf", "woff2", "woff"),
+  "modular-scale-base": 1em,
+  "modular-scale-ratio": $major-third,
+  "rails-asset-pipeline": false,
+);
+
+/// User overrides of Bourbon configuration settings.
+///
+/// @type map
+///
+/// @example scss
+///   $bourbon: (
+///     "contrast-switch-dark-color": #000,
+///     "contrast-switch-light-color": #fff,
+///     "global-font-file-formats": ("ttf", "woff2", "woff"),
+///     "modular-scale-base": 1em,
+///     "modular-scale-ratio": $major-third,
+///     "rails-asset-pipeline": false,
+///   );
+
+$bourbon: () !default;

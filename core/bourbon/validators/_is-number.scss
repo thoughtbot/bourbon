@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/// Checks for a valid number.
+///
+/// @argument {number} $value
+///
+/// @require {function} _contains
+///
+/// @return {boolean}
+///
+/// @access private
+
+@function _is-number($value) {
+  @return _contains("0" "1" "2" "3" "4" "5" "6" "7" "8" "9" 0 1 2 3 4 5 6 7 8 9, $value);
+}

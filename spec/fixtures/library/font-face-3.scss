@@ -1,0 +1,8 @@
+@import "setup";
+
+@include font-face(
+  "pitch",
+  "/fonts/pitch",
+  "woff2",
+  $asset-pipeline: true
+);

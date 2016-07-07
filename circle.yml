@@ -1,0 +1,13 @@
+dependencies:
+  override:
+    - bundle install
+    - npm install -g sassdoc
+general:
+  branches:
+    ignore:
+      - gh-pages
+test:
+  override:
+    - bundle exec rake
+  post:
+    - sassdoc core/ --parse --verbose --strict

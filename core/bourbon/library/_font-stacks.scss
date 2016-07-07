@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+////
+/// @type list
+///
+/// @link goo.gl/Cxb26i
+////
+
+$font-stack-helvetica: (
+  "Helvetica Neue",
+  "Helvetica",
+  "Arial",
+  sans-serif,
+);
+
+$font-stack-lucida-grande: (
+  "Lucida Grande",
+  "Lucida Sans Unicode",
+  "Geneva",
+  "Verdana",
+  sans-serif,
+);
+
+$font-stack-verdana: (
+  "Verdana",
+  "Geneva",
+  sans-serif,
+);
+
+$font-stack-system: (
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Oxygen",
+  "Ubuntu",
+  "Cantarell",
+  "Fira Sans",
+  "Droid Sans",
+  "Helvetica Neue",
+  sans-serif,
+);
+
+$font-stack-garamond: (
+  "Garamond",
+  "Baskerville",
+  "Baskerville Old Face",
+  "Hoefler Text",
+  "Times New Roman",
+  serif,
+);
+
+$font-stack-georgia: (
+  "Georgia",
+  "Times",
+  "Times New Roman",
+  serif,
+);
+
+$font-stack-hoefler-text: (
+  "Hoefler Text",
+  "Baskerville Old Face",
+  "Garamond",
+  "Times New Roman",
+  serif,
+);
+
+$font-stack-consolas: (
+  "Consolas",
+  "monaco",
+  monospace,
+);
+
+$font-stack-courier-new: (
+  "Courier New",
+  "Courier",
+  "Lucida Sans Typewriter",
+  "Lucida Typewriter",
+  monospace,
+);
+
+$font-stack-monaco: (
+  "monaco",
+  "Consolas",
+  "Lucida Console",
+  monospace,
+);

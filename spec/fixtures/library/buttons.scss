@@ -1,0 +1,17 @@
+@import "setup";
+
+.all-buttons {
+  content: $all-buttons;
+}
+
+.all-buttons-active {
+  content: $all-buttons-active;
+}
+
+.all-buttons-focus {
+  content: $all-buttons-focus;
+}
+
+.all-buttons-hover {
+  content: $all-buttons-hover;
+}

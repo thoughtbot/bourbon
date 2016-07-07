@@ -1,0 +1,28 @@
+@import "setup";
+
+$single: "apple";
+$multiple: "pineapple", "banana", "cumquat";
+
+@mixin color-contains($list, $values) {
+  @if _contains($list, $values) {
+    color: #fff;
+  } @else {
+    color: #000;
+  }
+}
+
+.single {
+  @include color-contains($single, "apple");
+}
+
+.single-missing {
+  @include color-contains($single, "pear");
+}
+
+.multiple {
+  @include color-contains($multiple, "banana");
+}
+
+.multiple-missing {
+  @include color-contains($multiple, "strawberry");
+}

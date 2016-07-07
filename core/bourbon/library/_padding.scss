@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/// Provides a quick method for targeting `padding` on specific sides of a
+/// box. Use a `null` value to “skip” a side.
+///
+/// @argument {arglist} $values
+///   List of padding values, defined as CSS shorthand.
+///
+/// @example scss
+///   .element-one {
+///     @include padding(null 1rem);
+///   }
+///
+///   .element-two {
+///     @include padding(10vh null 10px 5%);
+///   }
+///
+/// @example css
+///   .element-one {
+///     padding-left: 1rem;
+///     padding-right: 1rem;
+///   }
+///
+///   .element-two {
+///     padding-bottom: 10px;
+///     padding-left: 5%;
+///     padding-top: 10vh;
+///   }
+///
+/// @require {mixin} _directional-property
+
+@mixin padding($values...) {
+  @include _directional-property(padding, false, $values...);
+}

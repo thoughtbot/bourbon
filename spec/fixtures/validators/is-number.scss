@@ -1,0 +1,31 @@
+@import "setup";
+
+@mixin line-height($number) {
+  @if _is-number($number) {
+    line-height: $number;
+  }
+}
+
+.integer {
+  @include line-height(1);
+}
+
+.px {
+  @include line-height(2px);
+}
+
+.em {
+  @include line-height(3em);
+}
+
+.rem {
+  @include line-height(4rem);
+}
+
+.percent {
+  @include line-height(5%);
+}
+
+.string {
+  @include line-height("stringy");
+}

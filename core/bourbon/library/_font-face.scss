@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/// Generates an `@font-face` declaration. You can choose the specific file
+/// formats you need to output; the mixin supports `eot`, `ttf`, `svg`, `woff2`
+/// and `woff`. The mixin also supports usage with the Rails Asset Pipeline,
+/// which you can enable per use, or globally in the `$bourbon()` settings.
+///
+/// @argument {string} $font-family
+///
+/// @argument {string} $file-path
+///
+/// @argument {string} $asset-pipeline [false]
+///   Set to `true` if you’re using the Rails Asset Pipeline (place the fonts
+///   in `app/assets/fonts/`).
+///
+/// @argument {string | list} $file-formats [("ttf", "woff2", "woff")]
+///   Pass a list of file formats to support,
+///   for example ("eot", "ttf", "svg", "woff2", "woff").
+///
+/// @content
+///   Any additional CSS properties that are included in the `@include`
+///   directive will be output within the `@font-face` declaration, e.g. you can
+///   pass in `font-weight`, `font-style` and/or `unicode-range`.
+///
+/// @example scss
+///   @include font-face(
+///       "source-sans-pro",
+///       "fonts/source-sans-pro-regular",
+///       ("woff2", "woff")
+///     ) {
+///     font-style: normal;
+///     font-weight: 400;
+///   }
+///
+/// @example css
+///   @font-face {
+///     font-family: "source-sans-pro";
+///     src: url("fonts/source-sans-pro-regular.woff2") format("woff2"),
+///          url("fonts/source-sans-pro-regular.woff") format("woff");
+///     font-style: normal;
+///     font-weight: 400;
+///   }
+///
+/// @require {function} _font-source-declaration
+///
+/// @require {function} _retrieve-bourbon-setting
+
+@mixin font-face(
+    $font-family,
+    $file-path,
+    $file-formats: _retrieve-bourbon-setting("global-font-file-formats"),
+    $asset-pipeline: _retrieve-bourbon-setting("rails-asset-pipeline")
+  ) {
+
+  @font-face {
+    font-family: $font-family;
+    src: _font-source-declaration(
+      $font-family,
+      $file-path,
+      $asset-pipeline,
+      $file-formats
+    );
+    @content;
+  }
+}

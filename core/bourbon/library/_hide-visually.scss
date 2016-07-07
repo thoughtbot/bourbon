@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/// Hides an element visually while still allowing the content to be accessible
+/// to assistive technology, e.g. screen readers. Passing `unhide` will reverse
+/// the affects of the hiding, which is handy for showing the element on focus,
+/// for example.
+///
+/// @link http://goo.gl/Vf1TGn
+///
+/// @argument {string} $toggle [hide]
+///   Accepts `hide` or `unhide`. `unhide` reverses the affects of `hide`.
+///
+/// @example scss
+///   .element {
+///     @include hide-visually;
+///
+///     &:active,
+///     &:focus {
+///       @include hide-visually(unhide);
+///     }
+///   }
+///
+/// @example css
+///   .element {
+///     border: 0;
+///     clip: rect(1px, 1px, 1px, 1px);
+///     clip-path: circle(1% at 1% 1%);
+///     height: 1px;
+///     overflow: hidden;
+///     padding: 0;
+///     position: absolute;
+///     width: 1px;
+///   }
+///
+///   .hide-visually:active,
+///   .hide-visually:focus {
+///     clip: auto;
+///     clip-path: none;
+///     height: auto;
+///     overflow: visible;
+///     position: static;
+///     width: auto;
+///   }
+///
+/// @since 5.0.0
+
+@mixin hide-visually($toggle: hide) {
+  @if $toggle == "hide" {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: circle(1% at 1% 1%);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  } @else if $toggle == "unhide" {
+    clip: auto;
+    clip-path: none;
+    height: auto;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/// Provides a quick method for targeting `border-color` on specific sides of a
+/// box. Use a `null` value to “skip” a side.
+///
+/// @argument {arglist} $values
+///   List of colors, defined as CSS shorthand.
+///
+/// @example scss
+///   .element {
+///     @include border-color(#a60b55 #76cd9c null #e8ae1a);
+///   }
+///
+/// @example css
+///   .element {
+///     border-left-color: #e8ae1a;
+///     border-right-color: #76cd9c;
+///     border-top-color: #a60b55;
+///   }
+///
+/// @require {mixin} _directional-property
+
+@mixin border-color($values...) {
+  @include _directional-property(border, color, $values...);
+}

@@ -1,0 +1,21 @@
+@import "setup";
+
+.all-text-inputs {
+  content: $all-text-inputs;
+}
+
+.all-text-inputs-active {
+  content: $all-text-inputs-active;
+}
+
+.all-text-inputs-focus {
+  content: $all-text-inputs-focus;
+}
+
+.all-text-inputs-hover {
+  content: $all-text-inputs-hover;
+}
+
+.all-text-inputs-invalid {
+  content: $all-text-inputs-invalid;
+}

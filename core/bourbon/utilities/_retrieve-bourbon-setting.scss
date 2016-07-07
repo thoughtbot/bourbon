@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/// Return a Bourbon setting.
+///
+/// @argument {string} $setting
+///
+/// @return {boolean | color | list | number | string}
+///
+/// @example scss
+///   _retrieve-bourbon-setting(rails-asset-pipeline)
+///
+/// @access private
+
+@function _retrieve-bourbon-setting($setting) {
+  @return map-get(map-merge($_bourbon-defaults, $bourbon), $setting);
+}

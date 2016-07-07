@@ -1,0 +1,13 @@
+@import "setup";
+
+.size-implicit {
+  @include size(10px);
+}
+
+.size-both {
+  @include size(1em, 2em);
+}
+
+.size-auto {
+  @include size(100px, auto);
+}

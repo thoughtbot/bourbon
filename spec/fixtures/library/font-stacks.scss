@@ -1,0 +1,41 @@
+@import "setup";
+
+.helvetica {
+  content: $font-stack-helvetica;
+}
+
+.lucida-grande {
+  content: $font-stack-lucida-grande;
+}
+
+.verdana {
+  content: $font-stack-verdana;
+}
+
+.garamond {
+  content: $font-stack-garamond;
+}
+
+.georgia {
+  content: $font-stack-georgia;
+}
+
+.hoefler-text {
+  content: $font-stack-hoefler-text;
+}
+
+.consolas {
+  content: $font-stack-consolas;
+}
+
+.courier-new {
+  content: $font-stack-courier-new;
+}
+
+.monaco {
+  content: $font-stack-monaco;
+}
+
+.system {
+  content: $font-stack-system;
+}

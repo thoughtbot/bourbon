@@ -1,0 +1,16 @@
+@import "setup";
+
+$bourbon: (
+  "global-font-file-formats": ("woff2", "woff"),
+  "rails-asset-pipeline": true,
+);
+
+.test-1 {
+  content: _retrieve-bourbon-setting("modular-scale-base");
+}
+
+.test-2 {
+  content: _retrieve-bourbon-setting("rails-asset-pipeline");
+}
+
+@include font-face("source-sans-pro", "source-sans-pro-regular");
