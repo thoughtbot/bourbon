@@ -19,41 +19,47 @@
 /// @return {number (with unit)}
 ///
 /// @example scss
-///   .first-element {
+///   .element {
 ///     font-size: modular-scale(2);
 ///   }
 ///
-///   .second-element {
+///   // CSS Output
+///   .element {
+///     font-size: 1.5625em;
+///   }
+///
+/// @example scss
+///   .element {
 ///     margin-right: modular-scale(3, 2em);
 ///   }
 ///
-///   .third-element {
+///   // CSS Output
+///   .element {
+///     margin-right: 3.90625em;
+///   }
+///
+/// @example scss
+///   .element {
 ///     font-size: modular-scale(3, 1em 1.6em, $major-seventh);
 ///   }
 ///
+///   // CSS Output
+///   .element {
+///     font-size: 3em;
+///   }
+///
+/// @example scss
 ///   // Globally change the base ratio
 ///   $bourbon: (
 ///     "modular-scale-ratio": 1.2,
 ///   );
 ///
-///   .fourth-element {
+///   .element {
 ///     font-size: modular-scale(3);
 ///   }
 ///
-/// @example css
-///   .first-element {
-///     font-size: 1.5625em;
-///   }
-///
-///   .second-element {
-///     margin-right: 3.90625em;
-///   }
-///
-///   .third-element {
-///     font-size: 3em;
-///   }
-///
-///   .fourth-element {
+///   // CSS Output
+///   .element {
 ///     font-size: 1.728em;
 ///   }
 ///

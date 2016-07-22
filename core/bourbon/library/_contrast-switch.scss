@@ -15,22 +15,24 @@
 /// @return {color}
 ///
 /// @example scss
-///   .first-element {
+///   .element {
 ///     color: contrast-switch(#bae6e6);
 ///   }
 ///
-///   .second-element {
+///   // CSS Output
+///   .element {
+///     color: #000;
+///   }
+///
+/// @example scss
+///   .element {
 ///     $button-color: #2d72d9;
 ///     background-color: $button-color;
 ///     color: contrast-switch($button-color, #222, #eee);
 ///   }
 ///
-/// @example css
-///   .first-element {
-///     color: #000;
-///   }
-///
-///   .second-element {
+///   // CSS Output
+///   .element {
 ///     background-color: #2d72d9;
 ///     color: #eee;
 ///   }

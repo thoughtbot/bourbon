@@ -9,7 +9,7 @@
 /// @example scss
 ///   $dimension: strip-unit(10em);
 ///
-/// @example css
+///   // Output
 ///   $dimension: 10;
 
 @function strip-unit($value) {

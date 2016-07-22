@@ -16,7 +16,7 @@
 ///     border: 1px solid #ccc;
 ///   }
 ///
-/// @example css
+///   // CSS Output
 ///   [type='color'],
 ///   [type='date'],
 ///   [type='datetime'],
@@ -47,7 +47,7 @@ $all-text-inputs: _assign-inputs($_text-inputs-list);
 ///     border: 1px solid #aaa;
 ///   }
 ///
-/// @example css
+///   // CSS Output
 ///   [type='color']:active,
 ///   [type='date']:active,
 ///   [type='datetime']:active,
@@ -78,7 +78,7 @@ $all-text-inputs-active: _assign-inputs($_text-inputs-list, active);
 ///     border: 1px solid #1565c0;
 ///   }
 ///
-/// @example css
+///   // CSS Output
 ///   [type='color']:focus,
 ///   [type='date']:focus,
 ///   [type='datetime']:focus,
@@ -109,7 +109,7 @@ $all-text-inputs-focus: _assign-inputs($_text-inputs-list, focus);
 ///     border: 1px solid #aaa;
 ///   }
 ///
-/// @example css
+///   // CSS Output
 ///   [type='color']:hover,
 ///   [type='date']:hover,
 ///   [type='datetime']:hover,
@@ -140,7 +140,7 @@ $all-text-inputs-hover: _assign-inputs($_text-inputs-list, hover);
 ///     border: 1px solid #00f;
 ///   }
 ///
-/// @example css
+///   // CSS Output
 ///   [type='color']:invalid,
 ///   [type='date']:invalid,
 ///   [type='datetime']:invalid,

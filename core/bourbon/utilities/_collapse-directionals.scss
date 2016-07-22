@@ -10,13 +10,13 @@
 /// @argument {list} $values
 ///   List of directional values.
 ///
-/// @example scss - Usage
+/// @example scss
 ///   .element {
 ///     @include border-style(dotted null);
 ///     @include margin(null 0 10px);
 ///   }
 ///
-/// @example css - CSS Output
+///   // CSS Output
 ///   .element {
 ///     border-bottom-style: dotted;
 ///     border-top-style: dotted;

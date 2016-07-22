@@ -11,16 +11,18 @@
 ///     @include padding(null 1rem);
 ///   }
 ///
-///   .element-two {
-///     @include padding(10vh null 10px 5%);
-///   }
-///
-/// @example css
+///   // CSS Output
 ///   .element-one {
 ///     padding-left: 1rem;
 ///     padding-right: 1rem;
 ///   }
 ///
+/// @example scss
+///   .element-two {
+///     @include padding(10vh null 10px 5%);
+///   }
+///
+///   // CSS Output
 ///   .element-two {
 ///     padding-bottom: 10px;
 ///     padding-left: 5%;

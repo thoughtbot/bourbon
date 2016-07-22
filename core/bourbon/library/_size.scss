@@ -11,16 +11,18 @@
 ///     @include size(2em);
 ///   }
 ///
-///   .second-element {
-///     @include size(auto, 10em);
-///   }
-///
-/// @example css
+///   // CSS Output
 ///   .first-element {
 ///     width: 2em;
 ///     height: 2em;
 ///   }
 ///
+/// @example scss
+///   .second-element {
+///     @include size(auto, 10em);
+///   }
+///
+///   // CSS Output
 ///   .second-element {
 ///     width: auto;
 ///     height: 10em;

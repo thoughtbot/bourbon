@@ -16,7 +16,7 @@
 ///     background-color: #f00;
 ///   }
 ///
-/// @example css
+///   // CSS Output
 ///   button,
 ///   [type='button'],
 ///   [type='reset'],
@@ -35,7 +35,7 @@ $all-buttons: _assign-inputs($_buttons-list);
 ///     background-color: #00f;
 ///   }
 ///
-/// @example css
+///   // CSS Output
 ///   button:active,
 ///   [type='button']:active,
 ///   [type='reset']:active,
@@ -54,7 +54,7 @@ $all-buttons-active: _assign-inputs($_buttons-list, active);
 ///     background-color: #0f0;
 ///   }
 ///
-/// @example css
+///   // CSS Output
 ///   button:focus,
 ///   [type='button']:focus,
 ///   [type='reset']:focus,
@@ -73,7 +73,7 @@ $all-buttons-focus: _assign-inputs($_buttons-list, focus);
 ///     background-color: #0f0;
 ///   }
 ///
-/// @example css
+///   // CSS Output
 ///   button:hover,
 ///   [type='button']:hover,
 ///   [type='reset']:hover,
