@@ -21,8 +21,9 @@
 ///   Global base ratio for the `modular-scale` function.
 ///
 /// @property {boolean} rails-asset-pipeline [false]
-///   Enable or disable the `$asset-pipeline` variable for all functions that
-///   accept it.
+///   Set this to `true` when using the Rails Asset Pipeline and Bourbon will
+///   write asset paths using
+///   [sass-rails’ asset helpers](https://github.com/rails/sass-rails#asset-helpers).
 ///
 /// @access private
 
@@ -57,8 +58,9 @@ $_bourbon-defaults: (
 ///   Global base ratio for the `modular-scale` function.
 ///
 /// @property {boolean} rails-asset-pipeline [false]
-///   Enable or disable the `$asset-pipeline` variable for all functions that
-///   accept it.
+///   Set this to `true` when using the Rails Asset Pipeline and Bourbon will
+///   write asset paths using
+///   [sass-rails’ asset helpers](https://github.com/rails/sass-rails#asset-helpers).
 ///
 /// @example scss
 ///   $bourbon: (
