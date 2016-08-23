@@ -18,7 +18,7 @@ describe "assign-inputs" do
     end
   end
 
-  context "expands text inputs with pseudo classes" do
+  context "pseudo class provided" do
     it "finds selectors" do
       list = @text_inputs_list.dup
       list.map! { |input| input + ":active" }
@@ -44,6 +44,28 @@ describe "assign-inputs" do
       list.unshift "[type=\"file\"]"
       list.each do |input|
         expect(input).to have_rule("color: #f0f")
+      end
+    end
+  end
+
+  context "parent selector provided" do
+    it "prepends parent selector to each input" do
+      list = @text_inputs_list.dup
+      inputs_with_parent_selector = list.map! { |input| ".class " + input }
+      inputs_with_parent_selector.each do |selector|
+        expect(selector).to have_rule("color: #ddd")
+      end
+    end
+  end
+
+  context "parent selector and psuedo class provided" do
+    it "prepends parent selector and appends pseudo class to each input" do
+      list = @text_inputs_list.dup
+      inputs_with_psuedo_class = list.map! { |input| input + ":active" }
+      inputs_with_parent_selector =
+        inputs_with_psuedo_class.map! { |input| ".class " + input }
+      inputs_with_parent_selector.each do |selector|
+        expect(selector).to have_rule("color: #eee")
       end
     end
   end

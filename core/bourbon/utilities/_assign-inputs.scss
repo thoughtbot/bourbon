@@ -14,7 +14,8 @@
 
 @function _assign-inputs(
     $inputs,
-    $pseudo: null
+    $pseudo: null,
+    $parent-selector: null
   ) {
 
   $list: ();
@@ -22,6 +23,7 @@
   @each $input in $inputs {
     $input: unquote($input);
     $input: if($pseudo, $input + ":" + $pseudo, $input);
+    $input: if($parent-selector, $parent-selector + " " + $input, $input);
     $list: append($list, $input, comma);
   }
 
