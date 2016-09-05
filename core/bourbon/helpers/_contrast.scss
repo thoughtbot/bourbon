@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/// Programatically determines the contrast between two colors.
+///
+/// Note that the alpha channel is ignored.
+///
+/// Also note that this function is not fully compatible with the definition of
+/// contrast in WCAG because it does not apply gamma correction on the colors.
+///
+/// @link https://www.w3.org/TR/WCAG20/#contrast-ratiodef
+///
+/// @argument {color (hex)} $color-1
+///
+/// @argument {color (hex)} $color-2
+///
+/// @return {number (1-21)}
+///
+/// @example scss
+///   contrast(black, white)
+///
+/// @require {function} _lightness
+///
+/// @access private
+///
+/// @todo add gamma correction (requires power function)
+
+@function _contrast($color-1, $color-2) {
+  $-local-lightness-1: _lightness($color-1) + 0.05;
+  $-local-lightness-2: _lightness($color-2) + 0.05;
+
+  @if $-local-lightness-1 > $-local-lightness-2 {
+    @return $-local-lightness-1 / $-local-lightness-2;
+  } @else {
+    @return $-local-lightness-2 / $-local-lightness-1;
+  }
+}
