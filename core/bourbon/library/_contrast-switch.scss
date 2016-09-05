@@ -37,7 +37,7 @@
 ///     color: #eee;
 ///   }
 ///
-/// @require {function} _is-light
+/// @require {function} _contrast
 ///
 /// @since 5.0.0
 
@@ -57,6 +57,10 @@
     @error "`#{$light-color}` is not a valid color for the `$light-color` " +
            "argument in the `contrast-switch` function.";
   } @else {
-    @return if(_is-light($base-color), $dark-color, $light-color);
+    $-contrast-to-dark: _contrast($base-color, $dark-color);
+    $-contrast-to-light: _contrast($base-color, $light-color);
+    $-prefer-dark: $-contrast-to-dark >= $-contrast-to-light;
+
+    @return if($-prefer-dark, $dark-color, $light-color);
   }
 }
