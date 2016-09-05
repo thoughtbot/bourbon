@@ -4,9 +4,6 @@
 ///
 /// Note that the alpha channel is ignored.
 ///
-/// Also note that this function is not fully compatible with the definition of
-/// contrast in WCAG because it does not apply gamma correction on the colors.
-///
 /// @link https://www.w3.org/TR/WCAG20/#contrast-ratiodef
 ///
 /// @argument {color (hex)} $color-1
@@ -21,8 +18,6 @@
 /// @require {function} _lightness
 ///
 /// @access private
-///
-/// @todo add gamma correction (requires power function)
 
 @function _contrast($color-1, $color-2) {
   $-local-lightness-1: _lightness($color-1) + 0.05;
