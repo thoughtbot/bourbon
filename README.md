@@ -150,7 +150,7 @@ Bourbon is copyright © 2011 [thoughtbot, inc.][thoughtbot] It is free software,
 
 Bourbon is maintained by Tyson Gach and the thoughtbot design team. It is funded by [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
-[<img src="http://thoughtbot.github.io/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
+[<img src="http://presskit.thoughtbot.com/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
 
 We love open-source software! See [our other projects][community] or [hire us][hire] to design, develop, and grow your product.
 
