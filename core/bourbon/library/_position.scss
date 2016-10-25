@@ -30,7 +30,7 @@
     $coordinates: null
   ) {
 
-  @if type-of($position) == list {
+  @if type-of($position) == list or _is-length($position) {
     $coordinates: $position;
     $position: relative;
   }
