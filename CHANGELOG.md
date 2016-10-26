@@ -5,6 +5,11 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
+### Changed
+
+- Removed the default values from the `$position` and `$coordinates` arguments
+  for the `position` mixin.
+
 [Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.6...HEAD
 
 ## [5.0.0-beta.6] - 2016-06-06

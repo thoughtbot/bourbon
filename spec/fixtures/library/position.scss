@@ -1,9 +1,5 @@
 @import "setup";
 
-.position-only-type {
-  @include position(relative);
-}
-
 .position-all {
   @include position(fixed, 1em);
 }
