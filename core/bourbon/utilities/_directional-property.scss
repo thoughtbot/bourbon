@@ -2,7 +2,9 @@
 
 // scss-lint:disable SpaceAroundOperator
 
-/// Output directional properties, for instance `margin`.
+/// Builds directional properties by parsing CSS shorthand values. For example,
+/// a value of `10px null` will output top and bottom directional properties,
+/// but the `null` skips left and right from being output.
 ///
 /// @argument {string} $pre
 ///   Prefix to use.
@@ -12,6 +14,17 @@
 ///
 /// @argument {list} $values
 ///   List of values.
+///
+/// @example scss
+///   .element {
+///     @include _directional-property(border, width, null 5px);
+///   }
+///
+///   // CSS Output
+///   .element {
+///     border-right-width: 5px;
+///     border-left-width: 5px;
+///   }
 ///
 /// @require {function} _collapse-directionals
 ///

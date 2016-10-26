@@ -11,3 +11,7 @@
 .border-color {
   @include _directional-property(border, color, #fff #000);
 }
+
+.margin-null {
+  @include _directional-property(margin, null, 20px null 10px);
+}
