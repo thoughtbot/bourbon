@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe "directional-values" do
+describe "directional-property" do
   before(:all) do
-    ParserSupport.parse_file("utilities/directional-values")
+    ParserSupport.parse_file("utilities/directional-property")
   end
 
   context "directional-property" do
