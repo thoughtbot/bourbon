@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-/// Provides a quick method for targeting `padding` on specific sides of a
+/// Provides a concise method for targeting `padding` on specific sides of a
 /// box. Use a `null` value to “skip” a side.
 ///
-/// @argument {arglist} $values
-///   List of padding values, defined as CSS shorthand.
+/// @argument {list} $values
+///   List of padding values; accepts CSS shorthand.
 ///
 /// @example scss
 ///   .element-one {
@@ -31,6 +31,6 @@
 ///
 /// @require {mixin} _directional-property
 
-@mixin padding($values...) {
-  @include _directional-property(padding, false, $values...);
+@mixin padding($values) {
+  @include _directional-property(padding, false, $values);
 }

@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
-/// Provides a quick method for targeting `border-width` on specific sides of a
-/// box. Use a `null` value to “skip” a side.
+/// Provides a concise, one-line method for setting `border-width` on specific
+/// edges of a box. Use a `null` value to “skip” edges of the box with standard
+/// CSS shorthand.
 ///
-/// @argument {arglist} $values
-///   List of border widths, defined as CSS shorthand.
+/// @argument {list} $values
+///   List of border widths; accepts CSS shorthand.
 ///
 /// @example scss
 ///   .element {
@@ -19,6 +20,6 @@
 ///
 /// @require {mixin} _directional-property
 
-@mixin border-width($values...) {
-  @include _directional-property(border, width, $values...);
+@mixin border-width($values) {
+  @include _directional-property(border, width, $values);
 }

@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
-/// Provides a quick method for targeting `margin` on specific sides of a
-/// box. Use a `null` value to “skip” a side.
+/// Provides a concise, one-line method for setting `margin` on specific edges
+/// of a box. Use a `null` value to “skip” edges of the box with standard
+/// CSS shorthand.
 ///
-/// @argument {arglist} $values
-///   List of margin values, defined as CSS shorthand.
+/// @argument {list} $values
+///   List of margin values; accepts CSS shorthand.
 ///
 /// @example scss
 ///   .element {
@@ -31,6 +32,6 @@
 ///
 /// @require {mixin} _directional-property
 
-@mixin margin($values...) {
-  @include _directional-property(margin, false, $values...);
+@mixin margin($values) {
+  @include _directional-property(margin, false, $values);
 }

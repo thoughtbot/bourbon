@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-/// Provides a shorthand syntax to add `border-radius` to both the top-left and
-/// top-right of an element.
+/// Provides a concise, one-line method for setting `border-radius` on both the
+/// top-left and top-right of a box.
 ///
 /// @argument {number (with unit)} $radii
 ///
@@ -21,8 +21,8 @@
   border-top-right-radius: $radii;
 }
 
-/// Provides a shorthand syntax to add `border-radius` to both the top-right and
-/// bottom-right of an element.
+/// Provides a concise, one-line method for setting `border-radius` on both the
+/// top-right and bottom-right of a box.
 ///
 /// @argument {number (with unit)} $radii
 ///
@@ -42,8 +42,8 @@
   border-top-right-radius: $radii;
 }
 
-/// Provides a shorthand syntax to add `border-radius` to both the bottom-left
-/// and bottom-right of an element.
+/// Provides a concise, one-line method for setting `border-radius` on both the
+/// bottom-left and bottom-right of a box.
 ///
 /// @argument {number (with unit)} $radii
 ///
@@ -63,8 +63,8 @@
   border-bottom-right-radius: $radii;
 }
 
-/// Provides a shorthand syntax to add `border-radius` to both the top-left
-/// and bottom-left of an element.
+/// Provides a concise, one-line method for setting `border-radius` on both the
+/// top-left and bottom-left of a box.
 ///
 /// @argument {number (with unit)} $radii
 ///
