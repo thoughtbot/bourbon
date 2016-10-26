@@ -33,5 +33,5 @@
 /// @require {mixin} _directional-property
 
 @mixin margin($values) {
-  @include _directional-property(margin, false, $values);
+  @include _directional-property(margin, null, $values);
 }
