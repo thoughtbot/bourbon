@@ -38,14 +38,14 @@
 ///
 /// @require {function} _is-length
 ///
-/// @require {function} _unpack
+/// @require {function} _unpack-shorthand
 
 @mixin position(
     $position,
     $coordinates
   ) {
 
-  $coordinates: _unpack($coordinates);
+  $coordinates: _unpack-shorthand($coordinates);
 
   $offsets: (
     top:    nth($coordinates, 1),
