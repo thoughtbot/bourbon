@@ -1,11 +1,11 @@
 require "spec_helper"
 
-describe "collapse-directionals" do
+describe "compact-shorthand" do
   before(:all) do
-    ParserSupport.parse_file("utilities/collapse-directionals")
+    ParserSupport.parse_file("utilities/compact-shorthand")
   end
 
-  context "collapse-directionals" do
+  context "compact-shorthand" do
     it "returns four distinct lengths unaltered" do
       expect(".four").to have_rule("padding: 10px 20px 30px 40px")
     end

@@ -2,34 +2,22 @@
 
 // scss-lint:disable ElsePlacement
 
-/// Directional-property mixins are shorthands for writing properties like
-/// the following.
-///
-/// @ignore You can also use `false` instead of `null`.
+/// Transforms shorthand to its shortest possible form.
 ///
 /// @argument {list} $values
 ///   List of directional values.
 ///
 /// @example scss
-///   .element {
-///     @include border-style(dotted null);
-///     @include margin(null 0 10px);
-///   }
+///   $values: _compact-shorthand(10px 20px 10px 20px);
 ///
-///   // CSS Output
-///   .element {
-///     border-bottom-style: dotted;
-///     border-top-style: dotted;
-///     margin-bottom: 10px;
-///     margin-left: 0;
-///     margin-right: 0;
-///   }
+///   // Output
+///   $values: 10px 20px;
 ///
 /// @return {list}
 ///
 /// @access private
 
-@function _collapse-directionals($values) {
+@function _compact-shorthand($values) {
   $output: null;
 
   $a: nth($values, 1);

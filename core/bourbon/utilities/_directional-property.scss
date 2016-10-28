@@ -26,7 +26,7 @@
 ///     border-left-width: 5px;
 ///   }
 ///
-/// @require {function} _collapse-directionals
+/// @require {function} _compact-shorthand
 ///
 /// @require {function} _contains-falsy
 ///
@@ -44,7 +44,7 @@
   $right:  $property + "-right"  + if($suffix, "-#{$suffix}", "");
   $all:    $property +             if($suffix, "-#{$suffix}", "");
 
-  $values: _collapse-directionals($values);
+  $values: _compact-shorthand($values);
 
   @if _contains-falsy($values) {
     @if nth($values, 1) { #{$top}: nth($values, 1); }
