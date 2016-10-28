@@ -14,6 +14,7 @@ describe "hide-visually" do
                 "overflow: hidden; " +
                 "padding: 0; " +
                 "position: absolute; " +
+                "white-space: nowrap; " +
                 "width: 1px;"
 
       expect(".hide-visually").to have_ruleset(ruleset)
@@ -27,6 +28,7 @@ describe "hide-visually" do
                 "height: auto; " +
                 "overflow: visible; " +
                 "position: static; " +
+                "white-space: inherit; " +
                 "width: auto;"
 
       expect(".hide-visually--unhide").to have_ruleset(ruleset)

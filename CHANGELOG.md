@@ -5,6 +5,11 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
+### Added
+
+- Added `white-space: nowrap;` to the `hide-visually` mixin so that content
+  renders on one line and is correctly pronounced by screen readers.
+
 ### Changed
 
 - Removed the default values from the `$position` and `$coordinates` arguments
