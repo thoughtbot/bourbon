@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe "directional-values" do
+describe "directional-property" do
   before(:all) do
-    ParserSupport.parse_file("utilities/directional-values")
+    ParserSupport.parse_file("utilities/directional-property")
   end
 
   context "directional-property" do
@@ -16,6 +16,13 @@ describe "directional-values" do
 
     it "returns property and value with vertical and horizontal values" do
       expect(".border-color").to have_rule("border-color: #fff #000")
+    end
+
+    it "returns properties for top and bottom margin" do
+      ruleset = "margin-top: 20px; " +
+                "margin-bottom: 10px;"
+
+      expect(".margin-null").to have_ruleset(ruleset)
     end
   end
 end

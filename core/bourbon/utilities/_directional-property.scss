@@ -2,16 +2,29 @@
 
 // scss-lint:disable SpaceAroundOperator
 
-/// Output directional properties, for instance `margin`.
+/// Builds directional properties by parsing CSS shorthand values. For example,
+/// a value of `10px null` will output top and bottom directional properties,
+/// but the `null` skips left and right from being output.
 ///
-/// @argument {string} $pre
-///   Prefix to use.
+/// @argument {string} $property
+///   Base property.
 ///
-/// @argument {string} $suf
-///   Suffix to use.
+/// @argument {string} $suffix
+///   Suffix to append. Use `null` to omit.
 ///
 /// @argument {list} $values
-///   List of values.
+///   List of values to set for the property.
+///
+/// @example scss
+///   .element {
+///     @include _directional-property(border, width, null 5px);
+///   }
+///
+///   // CSS Output
+///   .element {
+///     border-right-width: 5px;
+///     border-left-width: 5px;
+///   }
 ///
 /// @require {function} _collapse-directionals
 ///
@@ -20,16 +33,16 @@
 /// @access private
 
 @mixin _directional-property(
-    $pre,
-    $suf,
+    $property,
+    $suffix,
     $values
   ) {
 
-  $top:    $pre + "-top"    + if($suf, "-#{$suf}", "");
-  $bottom: $pre + "-bottom" + if($suf, "-#{$suf}", "");
-  $left:   $pre + "-left"   + if($suf, "-#{$suf}", "");
-  $right:  $pre + "-right"  + if($suf, "-#{$suf}", "");
-  $all:    $pre +             if($suf, "-#{$suf}", "");
+  $top:    $property + "-top"    + if($suffix, "-#{$suffix}", "");
+  $bottom: $property + "-bottom" + if($suffix, "-#{$suffix}", "");
+  $left:   $property + "-left"   + if($suffix, "-#{$suffix}", "");
+  $right:  $property + "-right"  + if($suffix, "-#{$suffix}", "");
+  $all:    $property +             if($suffix, "-#{$suffix}", "");
 
   $values: _collapse-directionals($values);
 

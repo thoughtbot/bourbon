@@ -5,6 +5,16 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
+### Added
+
+- Added `white-space: nowrap;` to the `hide-visually` mixin so that content
+  renders on one line and is correctly pronounced by screen readers.
+
+### Changed
+
+- Removed the default values from the `$position` and `$coordinates` arguments
+  for the `position` mixin.
+
 [Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.6...HEAD
 
 ## [5.0.0-beta.6] - 2016-06-06

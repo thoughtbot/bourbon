@@ -57,7 +57,7 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
 1. Add Bourbon to your Gemfile:
 
   ```ruby
-  gem 'bourbon'
+  gem "bourbon"
   ```
 
 1. Then run:
@@ -72,7 +72,7 @@ For command line help, visit our wiki page on Bourbon’s [command line interfac
   mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
   ```
 
-1. Delete _all_ Sprockets directives in `application.scss` (`require`, `require_tree` and `require_self`) and use Sass’s native `@import` instead. ([why?](http://pivotallabs.com/structure-your-sass-files-with-import))
+1. Delete _all_ Sprockets directives in `application.scss` (`require`, `require_tree` and `require_self`) and use Sass’s native `@import` instead ([why?](http://pivotallabs.com/structure-your-sass-files-with-import)).
 
 1. Import Bourbon at the beginning of `application.scss`. All additional stylesheets should be imported below Bourbon:
 
@@ -150,7 +150,7 @@ Bourbon is copyright © 2011 [thoughtbot, inc.][thoughtbot] It is free software,
 
 Bourbon is maintained by Tyson Gach and the thoughtbot design team. It is funded by [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
-[<img src="http://thoughtbot.github.io/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
+[<img src="http://presskit.thoughtbot.com/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
 
 We love open-source software! See [our other projects][community] or [hire us][hire] to design, develop, and grow your product.
 

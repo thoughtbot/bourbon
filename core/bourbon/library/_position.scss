@@ -1,41 +1,51 @@
 @charset "UTF-8";
 
-/// Provides a quick method for setting an element’s position. Use a `null`
-/// value to “skip” a side.
+/// Provides a concise, one-line method for setting an element’s positioning
+/// properties: `position`, `top`, `right`, `bottom` and `left`. Use a `null`
+/// value to “skip” an edge of the box.
 ///
-/// @argument {string} $position [relative]
+/// @argument {string} $position
 ///   A CSS position value.
 ///
-/// @argument {arglist} $coordinates [null]
-///   List of lengths, defined as CSS shorthand.
+/// @argument {list} $coordinates
+///   List of lengths; accepts CSS shorthand.
 ///
 /// @example scss
 ///   .element {
-///     @include position(absolute, 0 null null 10em);
+///     @include position(relative, 0 null null 10em);
 ///   }
 ///
 ///   // CSS Output
 ///   .element {
 ///     left: 10em;
+///     position: relative;
+///     top: 0;
+///   }
+///
+/// @example scss
+///   .element {
+///     @include position(absolute, 0);
+///   }
+///
+///   // CSS Output
+///   .element {
 ///     position: absolute;
 ///     top: 0;
+///     right: 0;
+///     bottom: 0;
+///     left: 0;
 ///   }
 ///
 /// @require {function} _is-length
 ///
-/// @require {function} _unpack
+/// @require {function} _unpack-shorthand
 
 @mixin position(
-    $position: relative,
-    $coordinates: null
+    $position,
+    $coordinates
   ) {
 
-  @if type-of($position) == list {
-    $coordinates: $position;
-    $position: relative;
-  }
-
-  $coordinates: _unpack($coordinates);
+  $coordinates: _unpack-shorthand($coordinates);
 
   $offsets: (
     top:    nth($coordinates, 1),
