@@ -1,18 +1,6 @@
 @charset "UTF-8";
 
-@function _gamma($channel) {
-  @if $channel < 0.03928 {
-    @return $channel / 12.92;
-  } @else {
-    $c: ($channel + 0.055) / 1.055;
-    // very similar to pow($c, 2.4)
-    @return ($c * $c * $c + $c * $c) / 2;
-  }
-}
-
 /// Programatically determines the lightness of a color.
-///
-/// @link http://goo.gl/Dil4Y9
 ///
 /// @argument {color (hex)} $hex-color
 ///

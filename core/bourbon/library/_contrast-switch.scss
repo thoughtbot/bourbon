@@ -57,8 +57,8 @@
     @error "`#{$light-color}` is not a valid color for the `$light-color` " +
            "argument in the `contrast-switch` function.";
   } @else {
-    $-contrast-to-dark: _contrast($base-color, $dark-color);
-    $-contrast-to-light: _contrast($base-color, $light-color);
+    $-contrast-to-dark: _contrast-ratio($base-color, $dark-color);
+    $-contrast-to-light: _contrast-ratio($base-color, $light-color);
     $-prefer-dark: $-contrast-to-dark >= $-contrast-to-light;
 
     @return if($-prefer-dark, $dark-color, $light-color);
