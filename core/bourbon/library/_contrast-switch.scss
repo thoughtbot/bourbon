@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
-/// Switches between two colors based on the lightness of a another color. Great
+/// Switches between two colors based on the contrast to another color. Great
 /// for building button styles.
+///
+/// The calculation of the contrast ratio is based on WCAG 2.0. However, this
+/// function does not guarantee a minimum contrast.
 ///
 /// @argument {color} $base-color
 ///   The color to evaluate lightness against.
