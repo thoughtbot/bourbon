@@ -6,6 +6,9 @@
 @import "bourbon/helpers/buttons-list";
 @import "bourbon/helpers/scales";
 @import "bourbon/helpers/text-inputs-list";
+@import "bourbon/helpers/gamma";
+@import "bourbon/helpers/lightness";
+@import "bourbon/helpers/contrast-ratio";
 
 @import "bourbon/settings/settings";
 
@@ -13,7 +16,6 @@
 @import "bourbon/validators/contains-falsy";
 @import "bourbon/validators/is-color";
 @import "bourbon/validators/is-length";
-@import "bourbon/validators/is-light";
 @import "bourbon/validators/is-number";
 @import "bourbon/validators/is-size";
 
