@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-/// Perform gamma correction on a single color channel.
+/// Performs gamma correction on a single color channel.
 ///
-/// Note that sass does not have a pow() function, so the
+/// Note that Sass does not have a `pow()` function, so the
 /// calculation uses an approximation.
 ///
 /// @argument {number (0-1)} $channel

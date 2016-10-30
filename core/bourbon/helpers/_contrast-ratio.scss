@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/// Programatically determines the contrast between two colors.
+/// Programatically determines the contrast ration between two colors.
 ///
 /// Note that the alpha channel is ignored.
 ///
@@ -13,7 +13,7 @@
 /// @return {number (1-21)}
 ///
 /// @example scss
-///   contrast(black, white)
+///   _contrast-ratio(black, white)
 ///
 /// @require {function} _lightness
 ///
