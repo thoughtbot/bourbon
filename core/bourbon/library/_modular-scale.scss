@@ -11,10 +11,12 @@
 ///   How many steps to increment up or down the scale.
 ///
 /// @argument {number (with unit) | list} $value [1em]
-///   The base value the scale starts at.
+///   The base value the scale starts at. Can also be set globally using the
+///   `modular-scale-base` key in the Bourbon settings.
 ///
 /// @argument {number (unitless)} $ratio [1.25]
-///   The ratio the scale is built on.
+///   The ratio the scale is built on. Can also be set globally using the
+///   `modular-scale-ratio` key in the Bourbon settings.
 ///
 /// @return {number (with unit)}
 ///
