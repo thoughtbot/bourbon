@@ -27,17 +27,27 @@ $font-stack-verdana: (
   sans-serif,
 );
 
+/// @link https://goo.gl/LHRZIf
+
 $font-stack-system: (
   -apple-system,
   BlinkMacSystemFont,
+  "Avenir Next",
+  "Avenir",
   "Segoe UI",
+  "Lucida Grande",
+  "Helvetica Neue",
+  "Helvetica",
+  "Fira Sans",
   "Roboto",
+  "Noto",
+  "Droid Sans",
+  "Cantarell",
   "Oxygen",
   "Ubuntu",
-  "Cantarell",
-  "Fira Sans",
-  "Droid Sans",
-  "Helvetica Neue",
+  "Franklin Gothic Medium",
+  "Century Gothic",
+  "Liberation Sans",
   sans-serif,
 );
 

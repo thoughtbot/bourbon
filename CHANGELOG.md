@@ -19,8 +19,12 @@ project adheres to [Semantic Versioning](http://semver.org).
   full compliance, though all of our manual testing passed.
 - Renamed the `$coordinates` argument in the `position` mixin
   to `$box-edge-values`.
+- Updated `$font-stack-system` to include Avenir Next, Avenir, Lucida
+  Grande, Helvetica, Noto, Franklin Gothic Medium, Century Gothic, and
+  Liberation Sans. This follows [system-fonts] by Adam Morse.
 
 [Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.6...HEAD
+[system-fonts]: https://github.com/mrmrs/css-system-fonts
 
 ## [5.0.0-beta.6] - 2016-06-06
 
