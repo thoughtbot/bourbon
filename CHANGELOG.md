@@ -17,6 +17,8 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Updated `contrast-switch` to calculate contrast based on the WCAG 2.0
   specification. Please note that it is an approximation and we cannot guarantee
   full compliance, though all of our manual testing passed.
+- Renamed the `$coordinates` argument in the `position` mixin
+  to `$box-edge-values`.
 
 [Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.6...HEAD
 

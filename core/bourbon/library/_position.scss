@@ -7,7 +7,7 @@
 /// @argument {string} $position
 ///   A CSS position value.
 ///
-/// @argument {list} $coordinates
+/// @argument {list} $box-edge-values
 ///   List of lengths; accepts CSS shorthand.
 ///
 /// @example scss
@@ -42,16 +42,16 @@
 
 @mixin position(
     $position,
-    $coordinates
+    $box-edge-values
   ) {
 
-  $coordinates: _unpack-shorthand($coordinates);
+  $box-edge-values: _unpack-shorthand($box-edge-values);
 
   $offsets: (
-    top:    nth($coordinates, 1),
-    right:  nth($coordinates, 2),
-    bottom: nth($coordinates, 3),
-    left:   nth($coordinates, 4),
+    top:    nth($box-edge-values, 1),
+    right:  nth($box-edge-values, 2),
+    bottom: nth($box-edge-values, 3),
+    left:   nth($box-edge-values, 4),
   );
 
   position: $position;
