@@ -13,7 +13,6 @@
 @import "bourbon/validators/contains-falsy";
 @import "bourbon/validators/is-color";
 @import "bourbon/validators/is-length";
-@import "bourbon/validators/is-light";
 @import "bourbon/validators/is-number";
 @import "bourbon/validators/is-size";
 
@@ -21,6 +20,9 @@
 @import "bourbon/utilities/collapse-directionals";
 @import "bourbon/utilities/directional-property";
 @import "bourbon/utilities/font-source-declaration";
+@import "bourbon/utilities/gamma";
+@import "bourbon/utilities/lightness";
+@import "bourbon/utilities/contrast-ratio";
 @import "bourbon/utilities/retrieve-bourbon-setting";
 @import "bourbon/utilities/unpack-shorthand";
 

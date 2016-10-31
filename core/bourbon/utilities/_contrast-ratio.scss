@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/// Programatically determines the contrast ratio between two colors.
+///
+/// Note that the alpha channel is ignored.
+///
+/// @link https://goo.gl/54htLV
+///
+/// @argument {color (hex)} $color-1
+///
+/// @argument {color (hex)} $color-2
+///
+/// @return {number (1-21)}
+///
+/// @example scss
+///   _contrast-ratio(black, white)
+///
+/// @require {function} _lightness
+///
+/// @access private
+
+@function _contrast-ratio($color-1, $color-2) {
+  $-local-lightness-1: _lightness($color-1) + 0.05;
+  $-local-lightness-2: _lightness($color-2) + 0.05;
+
+  @if $-local-lightness-1 > $-local-lightness-2 {
+    @return $-local-lightness-1 / $-local-lightness-2;
+  } @else {
+    @return $-local-lightness-2 / $-local-lightness-1;
+  }
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/// Programatically determines the lightness of a color.
+///
+/// @argument {color (hex)} $hex-color
+///
+/// @return {number (0-1)}
+///
+/// @example scss
+///   _lightness($color)
+///
+/// @access private
+
+@function _lightness($hex-color) {
+  $-local-red-raw: red(rgba($hex-color, 1));
+  $-local-green-raw: green(rgba($hex-color, 1));
+  $-local-blue-raw: blue(rgba($hex-color, 1));
+
+  $-local-red: _gamma($-local-red-raw / 255);
+  $-local-green: _gamma($-local-green-raw / 255);
+  $-local-blue: _gamma($-local-blue-raw / 255);
+
+  @return $-local-red * 0.2126 + $-local-green * 0.7152 + $-local-blue * 0.0722;
+}
