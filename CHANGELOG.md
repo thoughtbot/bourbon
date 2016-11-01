@@ -24,9 +24,12 @@ project adheres to [Semantic Versioning](http://semver.org).
   Liberation Sans. This follows [system-fonts] by Adam Morse.
 - The `word-break` property was removed from the `word-wrap` mixin and
   is no longer output.
+- Renamed the `word-wrap` mixin to `overflow-wrap` to align with the
+  name change in the [CSS spec].
 
 [Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.6...HEAD
 [system-fonts]: https://github.com/mrmrs/css-system-fonts
+[CSS spec]: https://drafts.csswg.org/css-text-3/#propdef-overflow-wrap
 
 ## [5.0.0-beta.6] - 2016-06-06
 

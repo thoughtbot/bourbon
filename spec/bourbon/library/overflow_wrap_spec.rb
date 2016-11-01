@@ -1,13 +1,13 @@
 require "spec_helper"
 
-describe "word-wrap" do
+describe "overflow-wrap" do
   before(:all) do
-    ParserSupport.parse_file("library/word-wrap")
+    ParserSupport.parse_file("library/overflow-wrap")
   end
 
   context "called on element" do
-    it "adds word-wrap" do
-      input = ".word-wrap"
+    it "adds overflow-wrap and word-wrap" do
+      input = ".overflow-wrap"
       ruleset = "word-wrap: break-word; " +
                 "overflow-wrap: break-word;"
 
@@ -15,9 +15,9 @@ describe "word-wrap" do
     end
   end
 
-  context "called on element with break" do
-    it "adds break" do
-      input = ".word-wrap-break"
+  context "called on element with normal" do
+    it "sets values as normal" do
+      input = ".overflow-wrap-normal"
       ruleset = "word-wrap: normal; " +
                 "overflow-wrap: normal;"
 
