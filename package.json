@@ -6,7 +6,7 @@
   "bugs": {
     "url": "https://github.com/thoughtbot/bourbon/issues"
   },
-  "description": "A simple and lightweight mixin library for Sass.",
+  "description": "A lightweight Sass tool set.",
   "eyeglass": {
     "needs": "*",
     "exports": "eyeglass-exports.js"

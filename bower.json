@@ -2,7 +2,7 @@
   "authors": [
     "thoughtbot (http://thoughtbot.com)"
   ],
-  "description": "A simple and lightweight mixin library for Sass.",
+  "description": "A lightweight Sass tool set.",
   "homepage": "http://bourbon.io",
   "ignore": [
     "**/.*",

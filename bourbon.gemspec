@@ -22,10 +22,8 @@ Gem::Specification.new do |s|
     "Will McMahan"
   ]
   s.description = <<-DESC
-    Bourbon is a library of pure Sass mixins that are designed to be simple
-    and easy to use. No configuration required. The mixins aim to be as
-    vanilla as possible, meaning they should be as close to the original
-    CSS syntax as possible.
+    Bourbon is a library of pure Sass mixins and functions that are designed to
+    make you a more efficient developer.
   DESC
   s.email = "design+bourbon@thoughtbot.com"
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
@@ -35,7 +33,7 @@ Gem::Specification.new do |s|
   s.name = "bourbon"
   s.platform = Gem::Platform::RUBY
   s.require_paths = ["lib"]
-  s.summary = "A simple and lightweight mixin library for Sass"
+  s.summary = "A lightweight Sass tool set."
   s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.version = Bourbon::VERSION
 end
