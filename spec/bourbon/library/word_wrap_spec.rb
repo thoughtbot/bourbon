@@ -9,8 +9,7 @@ describe "word-wrap" do
     it "adds word-wrap" do
       input = ".word-wrap"
       ruleset = "overflow-wrap: break-word; " +
-                "word-wrap: break-word; " +
-                "word-break: break-all;"
+                "word-wrap: break-word;"
 
       expect(input).to have_ruleset(ruleset)
     end
@@ -20,8 +19,7 @@ describe "word-wrap" do
     it "adds break" do
       input = ".word-wrap-break"
       ruleset = "overflow-wrap: normal; " +
-                "word-wrap: normal; " +
-                "word-break: normal;"
+                "word-wrap: normal;"
 
       expect(input).to have_ruleset(ruleset)
     end
