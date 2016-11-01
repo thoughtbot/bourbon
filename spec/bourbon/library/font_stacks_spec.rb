@@ -19,7 +19,7 @@ describe "font-stacks" do
       consolas = '"Consolas", "monaco", monospace'
       courier_new = '"Courier New", "Courier", "Lucida Sans Typewriter", ' +
                     '"Lucida Typewriter", monospace'
-      monaco = '"monaco", "Consolas", "Lucida Console", monospace'
+      monaco = '"Monaco", "Consolas", "Lucida Console", monospace'
 
       system = '-apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", ' +
                '"Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", ' +

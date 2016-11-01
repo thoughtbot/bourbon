@@ -1,10 +1,20 @@
 @charset "UTF-8";
 
-////
+/// A variable that outputs a Helvetica font stack.
+///
+/// @link https://goo.gl/uSJvZe
+///
 /// @type list
 ///
-/// @link https://goo.gl/Cxb26i
-////
+/// @example scss
+///   .element {
+///     font-family: $font-stack-helvetica;
+///   }
+///
+///   // CSS Output
+///   .element {
+///     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+///   }
 
 $font-stack-helvetica: (
   "Helvetica Neue",
@@ -12,6 +22,22 @@ $font-stack-helvetica: (
   "Arial",
   sans-serif,
 );
+
+/// A variable that outputs a Lucida Grande font stack.
+///
+/// @link https://goo.gl/R5UyYE
+///
+/// @type list
+///
+/// @example scss
+///   .element {
+///     font-family: $font-stack-lucida-grande;
+///   }
+///
+///   // CSS Output
+///   .element {
+///     font-family: "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", sans-serif;
+///   }
 
 $font-stack-lucida-grande: (
   "Lucida Grande",
@@ -21,13 +47,43 @@ $font-stack-lucida-grande: (
   sans-serif,
 );
 
+/// A variable that outputs a Verdana font stack.
+///
+/// @link https://goo.gl/yGXWSS
+///
+/// @type list
+///
+/// @example scss
+///   .element {
+///     font-family: $font-stack-verdana;
+///   }
+///
+///   // CSS Output
+///   .element {
+///     font-family: "Verdana", "Geneva", sans-serif;
+///   }
+
 $font-stack-verdana: (
   "Verdana",
   "Geneva",
   sans-serif,
 );
 
+/// A variable that outputs a system font stack.
+///
 /// @link https://goo.gl/LHRZIf
+///
+/// @type list
+///
+/// @example scss
+///   .element {
+///     font-family: $font-stack-system;
+///   }
+///
+///   // CSS Output
+///   .element {
+///     font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+///   }
 
 $font-stack-system: (
   -apple-system,
@@ -51,6 +107,22 @@ $font-stack-system: (
   sans-serif,
 );
 
+/// A variable that outputs a Garamond font stack.
+///
+/// @link https://goo.gl/QQFEkV
+///
+/// @type list
+///
+/// @example scss
+///   .element {
+///     font-family: $font-stack-garamond;
+///   }
+///
+///   // CSS Output
+///   .element {
+///     font-family: "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+///   }
+
 $font-stack-garamond: (
   "Garamond",
   "Baskerville",
@@ -60,12 +132,44 @@ $font-stack-garamond: (
   serif,
 );
 
+/// A variable that outputs a Georgia font stack.
+///
+/// @link https://goo.gl/wtzVPy
+///
+/// @type list
+///
+/// @example scss
+///   .element {
+///     font-family: $font-stack-georgia;
+///   }
+///
+///   // CSS Output
+///   .element {
+///     font-family: "Georgia", "Times", "Times New Roman", serif;
+///   }
+
 $font-stack-georgia: (
   "Georgia",
   "Times",
   "Times New Roman",
   serif,
 );
+
+/// A variable that outputs a Hoefler Text font stack.
+///
+/// @link https://goo.gl/n7U7zx
+///
+/// @type list
+///
+/// @example scss
+///   .element {
+///     font-family: $font-stack-hoefler-text;
+///   }
+///
+///   // CSS Output
+///   .element {
+///     font-family: "Hoefler Text", "Baskerville Old Face", "Garamond", "Times New Roman", serif;
+///   }
 
 $font-stack-hoefler-text: (
   "Hoefler Text",
@@ -75,11 +179,43 @@ $font-stack-hoefler-text: (
   serif,
 );
 
+/// A variable that outputs a Consolas font stack.
+///
+/// @link https://goo.gl/iKrtqv
+///
+/// @type list
+///
+/// @example scss
+///   .element {
+///     font-family: $font-stack-consolas;
+///   }
+///
+///   // CSS Output
+///   .element {
+///     font-family: "Consolas", "monaco", monospace;
+///   }
+
 $font-stack-consolas: (
   "Consolas",
   "monaco",
   monospace,
 );
+
+/// A variable that outputs a Courier New font stack.
+///
+/// @link https://goo.gl/bHfWMP
+///
+/// @type list
+///
+/// @example scss
+///   .element {
+///     font-family: $font-stack-courier-new;
+///   }
+///
+///   // CSS Output
+///   .element {
+///     font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+///   }
 
 $font-stack-courier-new: (
   "Courier New",
@@ -89,8 +225,24 @@ $font-stack-courier-new: (
   monospace,
 );
 
+/// A variable that outputs a Monaco font stack.
+///
+/// @link https://goo.gl/9PgKDO
+///
+/// @type list
+///
+/// @example scss
+///   .element {
+///     font-family: $font-stack-monaco;
+///   }
+///
+///   // CSS Output
+///   .element {
+///     font-family: "Monaco", "Consolas", "Lucida Console", monospace;
+///   }
+
 $font-stack-monaco: (
-  "monaco",
+  "Monaco",
   "Consolas",
   "Lucida Console",
   monospace,
