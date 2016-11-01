@@ -22,6 +22,8 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Updated `$font-stack-system` to include Avenir Next, Avenir, Lucida
   Grande, Helvetica, Noto, Franklin Gothic Medium, Century Gothic, and
   Liberation Sans. This follows [system-fonts] by Adam Morse.
+- The `word-break` property was removed from the `word-wrap` mixin and
+  is no longer output.
 
 [Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.6...HEAD
 [system-fonts]: https://github.com/mrmrs/css-system-fonts
