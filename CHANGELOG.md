@@ -14,7 +14,9 @@ Nothing at the moment.
 ### Added
 
 - Added `white-space: nowrap;` to the `hide-visually` mixin so that content
-  renders on one line and is correctly pronounced by screen readers.
+  renders on one line and is correctly pronounced by screen readers. You can
+  read more about this in Jesse Beach’s article “[Beware smushed off-screen
+    accessible text][smushed-text-article].”
 
 ### Changed
 
@@ -33,6 +35,7 @@ Nothing at the moment.
 - Renamed the `word-wrap` mixin to `overflow-wrap` to align with the
   name change in the [CSS spec].
 
+[smushed-text-article]: https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe#.l4hkljiza
 [system-fonts]: https://github.com/mrmrs/css-system-fonts
 [CSS spec]: https://drafts.csswg.org/css-text-3/#propdef-overflow-wrap
 
