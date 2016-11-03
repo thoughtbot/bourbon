@@ -5,6 +5,12 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
+Nothing at the moment.
+
+[Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.7...HEAD
+
+## [5.0.0-beta.7] - 2016-11-03
+
 ### Added
 
 - Added `white-space: nowrap;` to the `hide-visually` mixin so that content
@@ -27,9 +33,10 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Renamed the `word-wrap` mixin to `overflow-wrap` to align with the
   name change in the [CSS spec].
 
-[Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.6...HEAD
 [system-fonts]: https://github.com/mrmrs/css-system-fonts
 [CSS spec]: https://drafts.csswg.org/css-text-3/#propdef-overflow-wrap
+
+[5.0.0-beta.7]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.6...v5.0.0.beta.7
 
 ## [5.0.0-beta.6] - 2016-06-06
 
