@@ -2,4 +2,9 @@
   @include _bourbon-deprecate-for-prefixing("user-select");
 
   @include prefixer(user-select, $value, webkit moz ms spec);
+
+  // See http://stackoverflow.com/a/30319808/21290
+  @if $value == none {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
