@@ -44,13 +44,13 @@
 ///
 /// @require {function} _font-source-declaration
 ///
-/// @require {function} _retrieve-bourbon-setting
+/// @require {function} _fetch-bourbon-setting
 
 @mixin font-face(
     $font-family,
     $file-path,
-    $file-formats: _retrieve-bourbon-setting("global-font-file-formats"),
-    $asset-pipeline: _retrieve-bourbon-setting("rails-asset-pipeline")
+    $file-formats: _fetch-bourbon-setting("global-font-file-formats"),
+    $asset-pipeline: _fetch-bourbon-setting("rails-asset-pipeline")
   ) {
 
   @font-face {

@@ -49,7 +49,7 @@
 ///     color: #eee;
 ///   }
 ///
-/// @require {function} _retrieve-bourbon-setting
+/// @require {function} _fetch-bourbon-setting
 ///
 /// @require {function} _is-color
 ///
@@ -59,8 +59,8 @@
 
 @function contrast-switch(
     $base-color,
-    $dark-color: _retrieve-bourbon-setting("contrast-switch-dark-color"),
-    $light-color: _retrieve-bourbon-setting("contrast-switch-light-color")
+    $dark-color: _fetch-bourbon-setting("contrast-switch-dark-color"),
+    $light-color: _fetch-bourbon-setting("contrast-switch-light-color")
   ) {
 
   @if not _is-color($base-color) {

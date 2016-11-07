@@ -1,17 +1,17 @@
 require "spec_helper"
 
-describe "_retrieve-bourbon-setting" do
+describe "fetch-bourbon-setting" do
   before(:all) do
-    ParserSupport.parse_file("utilities/retrieve-bourbon-setting")
+    ParserSupport.parse_file("utilities/fetch-bourbon-setting")
   end
 
-  context "gets the modular-scale-base setting" do
+  context "fetches the modular-scale-base setting" do
     it "and returns the default value" do
       expect(".test-1").to have_rule("content: 1em")
     end
   end
 
-  context "gets the rails-asset-pipeline setting" do
+  context "fetches the rails-asset-pipeline setting" do
     it "and returns the user-overridden value" do
       expect(".test-2").to have_rule("content: true")
     end
