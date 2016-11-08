@@ -14,5 +14,4 @@ lib/
 pkg/
 Rakefile
 RELEASING.md
-sache.json
 spec/

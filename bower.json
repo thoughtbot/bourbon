@@ -6,20 +6,21 @@
   "homepage": "http://bourbon.io",
   "ignore": [
     "**/.*",
-    "_site",
-    "bin",
+    "_site/",
+    "bin/",
     "bourbon.gemspec",
+    "circle.yml",
     "eyeglass-exports.js",
-    "features",
+    "features/",
     "Gemfile",
     "Gemfile.lock",
     "index.js",
-    "lib",
+    "lib/",
     "package.json",
+    "pkg/",
     "Rakefile",
     "RELEASING.md",
-    "sache.json",
-    "spec"
+    "spec/"
   ],
   "keywords": [
     "css",
