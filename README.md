@@ -43,10 +43,6 @@ The current version is **4.2.7**. The `master` branch on GitHub is version
 
 ## Installation
 
-**Note:** In order to use the features described in the current
-[documentation](http://bourbon.io/docs) you will need to specify version **4.2.7**
-as the gem version in each of the installation options below.
-
 1. Install the Bourbon gem using the [RubyGems] package manager:
 
   ```bash
