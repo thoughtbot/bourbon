@@ -19,7 +19,7 @@ The current version is **4.2.7**. The `master` branch on GitHub is version
 
 ### Helpful Links
 
-- [Documentation](http://bourbon.io/docs/latest/)
+- [Documentation](http://bourbon.io/docs)
 - [Change log](CHANGELOG.md)
 - [Twitter](https://twitter.com/bourbonsass)
 
@@ -42,6 +42,10 @@ The current version is **4.2.7**. The `master` branch on GitHub is version
   [LibSass]: https://github.com/sass/libsass
 
 ## Installation
+
+**Note:** In order to use the features described in the current
+[documentation](http://bourbon.io/docs) you will need to specify version **4.2.7**
+as the gem version in each of the installation options below.
 
 1. Install the Bourbon gem using the [RubyGems] package manager:
 
