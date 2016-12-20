@@ -225,7 +225,7 @@ Nothing at the moment.
 - The `$monospace` variable has been removed.
 - The `box-sizing` mixin has been removed.
 - The `button` mixin has been removed.
-- The `em` and `rem` mixins have been removed.
+- The `em` and `rem` functions have been removed.
 - The `flex-grid` function has been removed.
 - The `flex-gutter` function has been removed.
 - The `golden-ratio` function has been removed.
