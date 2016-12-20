@@ -226,6 +226,7 @@ Nothing at the moment.
 - The `box-sizing` mixin has been removed.
 - The `button` mixin has been removed.
 - The `em` and `rem` functions have been removed.
+  - [See the discussion on why these were removed][em-rem-issue].
 - The `flex-grid` function has been removed.
 - The `flex-gutter` function has been removed.
 - The `golden-ratio` function has been removed.
@@ -237,3 +238,4 @@ Nothing at the moment.
 [5.0.0.alpha.0]: https://github.com/thoughtbot/bourbon/compare/v4.2.6...v5.0.0.alpha.0
 [3cf106a]: https://github.com/thoughtbot/bourbon/commit/3cf106a210c1bae7765e6193f62310f95fdee0b7
 [Autoprefixer]: https://github.com/postcss/autoprefixer
+[em-rem-issue]: https://github.com/thoughtbot/bourbon/issues/691
