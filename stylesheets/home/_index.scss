@@ -395,46 +395,10 @@ section.apps img {
   }
 }
 
-section.websites {
-  padding: 6rem 0;
-
-  @include media(max-width 480px) {
-    padding: 3rem 0;
-  }
-}
-
-section.websites a.website {
-  @include clearfix;
-  @include hide-text;
-  @include span-columns(3);
-  box-shadow: 0 1px 2px rgba(0,0,0,.2);
-  border: 3px solid white;
-  display: block;
-  margin-top: 2rem;
-
-  @include media(max-width 768px) {
-    @include span-columns(6);
-    @include omega(2n);
-  }
-
-  @include media(max-width 350px) {
-    @include span-columns(12);
-  }
-
-  img {
-    max-width: 100%;
-
-    &:hover {
-      -webkit-filter: brightness(5%);
-      -webkit-filter: brightness(105%);
-      filter: brightness(105%);
-    }
-  }
-}
-
 section.neat {
   @extend %usage-styles;
   padding-bottom: 0;
+  margin: 0;
 
   h3 {
     @extend %h3-center;
