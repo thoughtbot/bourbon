@@ -135,7 +135,7 @@ Also check out [Proteus](https://github.com/thoughtbot/proteus), a collection of
 
 ## License
 
-Copyright © 2011–2015 [thoughtbot, inc](http://thoughtbot.com).
+Copyright © 2011–2017 [thoughtbot, inc](http://thoughtbot.com).
 Bourbon is free software,
 and may be redistributed under the terms specified in the [license](LICENSE.md).
 
