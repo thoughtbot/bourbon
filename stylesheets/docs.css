@@ -533,6 +533,7 @@ nav.fixed-nav {
     margin: 0;
     padding: 0; }
     nav.fixed-nav .list li {
+      font-weight: 500;
       line-height: 170%;
       list-style-type: none;
       padding: .3em 0; }
@@ -547,7 +548,11 @@ nav.fixed-nav {
         margin-top: 1em;
         padding-top: 1em; }
       nav.fixed-nav .list li.deprecated {
-        text-decoration: line-through; }
+        text-decoration: line-through;
+        font-style: italic;
+        font-weight: 400; }
+        nav.fixed-nav .list li.deprecated a {
+          color: #fd9777; }
       nav.fixed-nav .list li.new a:after {
         border: 1px #53cad6 solid;
         border-radius: 3px;
