@@ -5,12 +5,20 @@
   </header>
 
   <p>
-    Enable or disable output of Bourbon&rsquo;s deprecation-related Sass
-    warnings. This variable must be declared <em>before</em> importing Bourbon.
-    Set to <code>true</code> by default.
+    Upgrading a Sass library to the next major version in your project can be a
+    non-trivial task.
+  </p>
+  <p>
+    If you choose not to upgrade, you can reduce pollution of your logs by
+    disabling the output of Bourbon&rsquo;s deprecation-related Sass warnings.
+  </p>
+  <p>
+    This variable must be declared <em>before</em> importing Bourbon.
   </p>
 
 {% highlight scss %}
-$output-bourbon-deprecation-warnings: true;
+$output-bourbon-deprecation-warnings: false;
+
+@import "bourbon";
 {% endhighlight %}
 </article>
