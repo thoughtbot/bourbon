@@ -3,11 +3,14 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [Unreleased (`master`)][unreleased]
 
-Nothing at the moment.
+### Changed
 
-[Unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.7...HEAD
+- The `triangle` mixin no longer has default argument values. The order of the
+  arguments also changed: `$width` and `$height` now come before `$color`.
+
+[unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.7...HEAD
 
 ## [5.0.0-beta.7] - 2016-11-03
 

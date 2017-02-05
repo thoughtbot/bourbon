@@ -10,10 +10,10 @@ describe "triangle" do
       ruleset = "border-style: solid; " +
                 "height: 0; " +
                 "width: 0; " +
-                "border-color: transparent transparent currentColor; " +
-                "border-width: 0 0.5rem 0.5rem;"
+                "border-color: transparent transparent #b25c9c; " +
+                "border-width: 0 1rem 1rem;"
 
-      expect(".triangle").to have_ruleset(ruleset)
+      expect(".triangle--up").to have_ruleset(ruleset)
     end
   end
 
@@ -22,10 +22,10 @@ describe "triangle" do
       ruleset = "border-style: solid; " +
                 "height: 0; " +
                 "width: 0; " +
-                "border-color: #b25c9c transparent transparent; " +
-                "border-width: 20px 15px 0;"
+                "border-color: transparent transparent transparent #aaa; " +
+                "border-width: 6px 0 6px 5px;"
 
-      expect(".triangle--with-arguments").to have_ruleset(ruleset)
+      expect(".triangle--right").to have_ruleset(ruleset)
     end
   end
 end
