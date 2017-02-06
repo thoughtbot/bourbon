@@ -21,5 +21,8 @@
 /// @output `border-style`
 
 @mixin border-style($vals...) {
+  $deprecation-warnings: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
   @include directional-property(border, style, $vals...);
+  $output-bourbon-deprecation-warnings: $deprecation-warnings !global;
 }

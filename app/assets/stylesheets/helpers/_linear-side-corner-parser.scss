@@ -5,6 +5,9 @@
     "deprecated and will be removed in 5.0.0.";
   }
 
+  $deprecation-warnings: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
+
   $val-1: str-slice($first-val, 1, $has-multiple-vals - 1);
   $val-2: str-slice($first-val, $has-multiple-vals + 1, str-length($first-val));
   $val-3: null;
@@ -17,6 +20,8 @@
 
   $pos: _position-flipper($val-1) _position-flipper($val-2) _position-flipper($val-3);
   $pos: unquote($pos + "");
+
+  $output-bourbon-deprecation-warnings: $deprecation-warnings !global;
 
   // Use old spec for webkit
   @if $val-1 == "to" {

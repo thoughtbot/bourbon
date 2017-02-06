@@ -4,6 +4,9 @@
     "deprecated and will be removed in 5.0.0.";
   }
 
+  $deprecation-warnings: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
+
   $type: type-of(nth($pos, 1));
   $spec: null;
   $degree: null;
@@ -55,6 +58,9 @@
   }
   $degree: unquote($degree + ",");
   $spec:   unquote($spec + ",");
+
+  $output-bourbon-deprecation-warnings: $deprecation-warnings !global;
+
   @return $degree $spec;
 }
 

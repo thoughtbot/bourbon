@@ -4,6 +4,9 @@
     "deprecated and will be removed in 5.0.0.";
   }
 
+  $deprecation-warnings: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
+
   $shape-size: nth($gradient-pos, 1);
   $pos:        nth($gradient-pos, 2);
   $shape-size-spec: _shape-size-stripper($shape-size);
@@ -18,6 +21,8 @@
   @if ($spec != "  ") {
     $spec: "#{$spec},";
   }
+
+  $output-bourbon-deprecation-warnings: $deprecation-warnings !global;
 
   @return $pre-spec $spec;
 }

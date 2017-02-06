@@ -69,6 +69,9 @@
 @mixin directional-property($pre, $suf, $vals) {
   @include _bourbon-deprecate("directional-property");
 
+  $deprecation-warnings: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
+
   // Property Names
   $top:    $pre + "-top"    + if($suf, "-#{$suf}", "");
   $bottom: $pre + "-bottom" + if($suf, "-#{$suf}", "");
@@ -100,4 +103,6 @@
   } @else {
     #{$all}: $vals;
   }
+
+  $output-bourbon-deprecation-warnings: $deprecation-warnings !global;
 }

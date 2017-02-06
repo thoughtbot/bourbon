@@ -4,6 +4,9 @@
     "deprecated and will be removed in 5.0.0.";
   }
 
+  $deprecation-warnings: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
+
   @if $gradient-positions
   and ($gradient-type == linear)
   and (type-of($gradient-positions) != color) {
@@ -14,5 +17,8 @@
   and (type-of($gradient-positions) != color) {
     $gradient-positions: _radial-positions-parser($gradient-positions);
   }
+
+  $output-bourbon-deprecation-warnings: $deprecation-warnings !global;
+
   @return $gradient-positions;
 }

@@ -8,11 +8,17 @@
     "removed in 5.0.0.";
   }
 
+  $deprecation-warnings: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
+
   @if not unitless($pxval) {
     $pxval: strip-units($pxval);
   }
   @if not unitless($base) {
     $base: strip-units($base);
   }
+
+  $output-bourbon-deprecation-warnings: $deprecation-warnings !global;
+
   @return ($pxval / $base) * 1em;
 }
