@@ -7,7 +7,7 @@
     "and will be removed in 5.0.0.";
   }
 
-  $deprecation-warnings: $output-bourbon-deprecation-warnings;
+  $user-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
   $output-bourbon-deprecation-warnings: false !global;
 
   $new-props: ();
@@ -16,7 +16,7 @@
     $new-props: append($new-props, transition-property-name($prop, $vendor), comma);
   }
 
-  $output-bourbon-deprecation-warnings: $deprecation-warnings !global;
+  $output-bourbon-deprecation-warnings: $user-deprecation-warnings-setting !global;
 
   @return $new-props;
 }

@@ -4,7 +4,7 @@
     "deprecated and will be removed in 5.0.0.";
   }
 
-  $deprecation-warnings: $output-bourbon-deprecation-warnings;
+  $user-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
   $output-bourbon-deprecation-warnings: false !global;
 
   @if $gradient-positions
@@ -18,7 +18,7 @@
     $gradient-positions: _radial-positions-parser($gradient-positions);
   }
 
-  $output-bourbon-deprecation-warnings: $deprecation-warnings !global;
+  $output-bourbon-deprecation-warnings: $user-deprecation-warnings-setting !global;
 
   @return $gradient-positions;
 }

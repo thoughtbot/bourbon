@@ -53,7 +53,7 @@ $buttons-list: 'button',
                'input[type="reset"]',
                'input[type="submit"]';
 
-$output-bourbon-deprecation-warnings-original: $output-bourbon-deprecation-warnings;
+$user-output-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
 $output-bourbon-deprecation-warnings: false;
 
 $all-buttons:        assign-inputs($buttons-list);
@@ -61,7 +61,7 @@ $all-buttons-active: assign-inputs($buttons-list, active);
 $all-buttons-focus:  assign-inputs($buttons-list, focus);
 $all-buttons-hover:  assign-inputs($buttons-list, hover);
 
-$output-bourbon-deprecation-warnings: $output-bourbon-deprecation-warnings-original;
+$output-bourbon-deprecation-warnings: $user-output-deprecation-warnings-setting;
 
 $all-button-inputs:        $all-buttons;
 $all-button-inputs-active: $all-buttons-active;

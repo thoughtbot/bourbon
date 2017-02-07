@@ -107,7 +107,7 @@ $text-inputs-list: 'input[type="color"]',
                    'input:not([type])',
                    'textarea';
 
-$output-bourbon-deprecation-warnings-original: $output-bourbon-deprecation-warnings;
+$user-output-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
 $output-bourbon-deprecation-warnings: false;
 
 $all-text-inputs:        assign-inputs($text-inputs-list);
@@ -115,4 +115,4 @@ $all-text-inputs-active: assign-inputs($text-inputs-list, active);
 $all-text-inputs-focus:  assign-inputs($text-inputs-list, focus);
 $all-text-inputs-hover:  assign-inputs($text-inputs-list, hover);
 
-$output-bourbon-deprecation-warnings: $output-bourbon-deprecation-warnings-original;
+$output-bourbon-deprecation-warnings: $user-output-deprecation-warnings-setting;
