@@ -121,11 +121,11 @@ The current version is **4.2.7**. The `master` branch on GitHub is version
   npm install --save bourbon
   ```
 
-1. If you’re using [eyeglass], skip to Step 3. Otherwise,
-you’ll need to add Bourbon to your node-sass `includePaths` option.
-`require("bourbon").includePaths` is an array of directories that you should
-pass to node-sass. How you do this depends on how node-sass is integrated into
-your project.
+1. If you’re using [eyeglass], skip to Step 3. Otherwise, you’ll need to add
+   Bourbon to your node-sass `includePaths` option.
+   `require("bourbon").includePaths` is an array of directories that you should
+   pass to node-sass. How you do this depends on how node-sass is integrated
+   into your project.
 
 1. Import Bourbon into your Sass files:
 
@@ -147,7 +147,7 @@ your project.
    you need:
 
   ```bash
-  gem install bourbon -v 3.2.4
+  gem install bourbon -v 4.2.7
   ```
 
 1. Follow the [instructions above](#installation) to install Bourbon into
@@ -206,8 +206,8 @@ See the [contributing] document. Thank you, [contributors]!
 
 ## License
 
-Bourbon is copyright © 2011-2017 [thoughtbot, inc.][thoughtbot] It is free software,
-and may be redistributed under the terms specified in the [license].
+Bourbon is copyright © 2011-2017 [thoughtbot, inc.][thoughtbot] It is free
+software, and may be redistributed under the terms specified in the [license].
 
   [license]: LICENSE.md
 
