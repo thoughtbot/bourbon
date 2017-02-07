@@ -1,9 +1,9 @@
 [![Bourbon](http://images.thoughtbot.com/bourbon/bourbon-logo.svg)](http://bourbon.io)
 
-[![GitHub release](https://img.shields.io/github/release/thoughtbot/bourbon.svg)](https://github.com/thoughtbot/bourbon/releases)
-[![CircleCI branch](https://img.shields.io/circleci/project/thoughtbot/bourbon/master.svg)](https://circleci.com/gh/thoughtbot/bourbon/tree/master)
-
 ## A simple and lightweight mixin library for Sass.
+
+**Note: This branch is an archive of Bourbon v4.3.4. The current release is
+v5.0.0 on `master`.**
 
 Bourbon is a library of pure Sass mixins that are designed to be simple and easy to use. No configuration required. The mixins aim to be as vanilla as possible, meaning they should be as close to the original CSS syntax as possible.
 
