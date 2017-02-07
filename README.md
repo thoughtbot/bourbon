@@ -22,6 +22,7 @@ The current version is **4.2.7**. The `master` branch on GitHub is version
 - [Documentation](http://bourbon.io/docs)
 - [Change log](CHANGELOG.md)
 - [Twitter](https://twitter.com/bourbonsass)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/bourbon)
 
 ## Table of Contents
 
