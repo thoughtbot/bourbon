@@ -5,6 +5,10 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## Unreleased (`master`)
 
+Nothing at the moment.
+
+## 4.3.1 - 2017-02-07
+
 ### Fixed
 
 - Internal Bourbon deprecation warnings will no longer be thrown. ([#1002])
