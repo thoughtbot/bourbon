@@ -5,7 +5,11 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## Unreleased (`master`)
 
-Nothing at the moment.
+### Fixed
+
+- Internal Bourbon deprecation warnings will no longer be thrown. ([#1002])
+
+[#1002]: https://github.com/thoughtbot/bourbon/pull/1002
 
 ## 4.3.0 - 2017-02-03
 

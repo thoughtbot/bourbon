@@ -6,6 +6,9 @@
   $asset-pipeline: $asset-pipeline,
   $file-formats: eot woff2 woff ttf svg) {
 
+  $user-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
+
   $font-url-prefix: font-url-prefixer($asset-pipeline);
 
   @font-face {
@@ -21,4 +24,6 @@
       $font-url-prefix
     );
   }
+
+  $output-bourbon-deprecation-warnings: $user-deprecation-warnings-setting !global;
 }

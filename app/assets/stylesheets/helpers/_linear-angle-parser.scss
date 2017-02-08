@@ -20,7 +20,12 @@
   }
 
   @if $offset {
+    $user-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
+    $output-bourbon-deprecation-warnings: false !global;
+
     $num: _str-to-num($first-val);
+
+    $output-bourbon-deprecation-warnings: $user-deprecation-warnings-setting !global;
 
     @return (
       webkit-image: -webkit- + $prefix + ($offset - $num) + $suffix,

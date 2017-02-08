@@ -22,5 +22,8 @@
 /// @output `padding`
 
 @mixin padding($vals...) {
+  $user-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
   @include directional-property(padding, false, $vals...);
+  $output-bourbon-deprecation-warnings: $user-deprecation-warnings-setting !global;
 }
