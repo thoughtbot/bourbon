@@ -16,7 +16,7 @@
 ///
 ///     &:active,
 ///     &:focus {
-///       @include hide-visually(unhide);
+///       @include hide-visually("unhide");
 ///     }
 ///   }
 ///
@@ -44,8 +44,11 @@
 ///
 /// @since 5.0.0
 
-@mixin hide-visually($toggle: hide) {
-  @if $toggle == "hide" {
+@mixin hide-visually($toggle: "hide") {
+  @if not index("hide" "unhide", $toggle) {
+    @error "`#{$toggle}` is not a valid value for the `$toggle` argument in " +
+           "the `hide-visually` mixin. Must be either `hide` or `unhide`.";
+  } @else if $toggle == "hide" {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: circle(1% at 1% 1%);
