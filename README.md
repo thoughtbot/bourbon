@@ -189,10 +189,6 @@ Bourbon is part of a larger, modular family of Sass utilities:
 - [Bitters]: Scaffold styles, variables and structure for Bourbon projects
 - [Refills]: Components and patterns built with Bourbon and Neat
 
-Be sure to also check out [Proteus](https://github.com/thoughtbot/proteus), a
-collection of useful starter kits to help you prototype faster. Each kit comes
-with Bourbon, Neat and Bitters out-of-the-box.
-
   [Neat]: https://github.com/thoughtbot/neat
   [Bitters]: https://github.com/thoughtbot/bitters
   [Refills]: https://github.com/thoughtbot/refills
