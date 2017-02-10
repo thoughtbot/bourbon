@@ -5,7 +5,12 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## Unreleased (`master`)
 
-Nothing at the moment.
+### Fixed
+
+- Internal Bourbon deprecation warnings for `unpack` and `is-length` will no
+  longer be thrown when using the `position` mixin. ([#1004])
+
+[#1004]: https://github.com/thoughtbot/bourbon/pull/1004
 
 ## 4.3.1 - 2017-02-07
 
