@@ -171,6 +171,10 @@ linters:
     enabled: true
     style: one_space
 
+  SpaceAfterComment:
+    enabled: false
+    allow_empty_comments: true
+
   SpaceAfterPropertyColon:
     enabled: true
     style: one_space
