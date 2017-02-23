@@ -9,7 +9,7 @@ describe "hide-visually" do
     it "adds properties to hide the element" do
       ruleset = "border: 0; " +
                 "clip: rect(1px, 1px, 1px, 1px); " +
-                "clip-path: circle(1% at 1% 1%); " +
+                "clip-path: inset(100%); " +
                 "height: 1px; " +
                 "overflow: hidden; " +
                 "padding: 0; " +

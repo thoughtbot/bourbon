@@ -5,5 +5,5 @@
 }
 
 .hide-visually--unhide {
-  @include hide-visually(unhide);
+  @include hide-visually("unhide");
 }
