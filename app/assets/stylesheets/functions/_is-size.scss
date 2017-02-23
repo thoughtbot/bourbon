@@ -13,6 +13,11 @@
     "removed in 5.0.0.";
   }
 
+  $user-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
+
   @return is-length($value)
           or contains("fill" "fit-content" "min-content" "max-content", $value);
+
+  $output-bourbon-deprecation-warnings: $user-deprecation-warnings-setting !global;
 }

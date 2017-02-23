@@ -37,6 +37,9 @@
     $height: nth($value, 2);
   }
 
+  $user-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
+
   @if is-size($height) {
     height: $height;
   } @else {
@@ -48,4 +51,6 @@
   } @else {
     @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
   }
+
+  $output-bourbon-deprecation-warnings: $user-deprecation-warnings-setting !global;
 }
