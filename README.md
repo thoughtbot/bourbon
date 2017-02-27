@@ -213,11 +213,12 @@ Bourbon is maintained by Tyson Gach and the thoughtbot design team. It is funded
 by [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are
 trademarks of thoughtbot, inc.
 
-[<img src="http://presskit.thoughtbot.com/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
+[![thoughtbot][thoughtbot-logo]][thoughtbot]
 
 We love open-source software! See [our other projects][community] or
 [hire us][hire] to design, develop, and grow your product.
 
   [thoughtbot]: https://thoughtbot.com?utm_source=github
+  [thoughtbot-logo]: http://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg
   [community]: https://thoughtbot.com/community?utm_source=github
   [hire]: https://thoughtbot.com/hire-us?utm_source=github
