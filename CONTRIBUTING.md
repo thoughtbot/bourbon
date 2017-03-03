@@ -1,7 +1,28 @@
 # Contributing
 
-By participating in this project, you agree to abide by the thoughtbot
-[code of conduct](https://thoughtbot.com/open-source-code-of-conduct).
+## Governance
+
+We, the maintainers of Bourbon, would like you to know what to expect when
+interacting with this project's repo.
+
+As a *user* of Bourbon, you can expect care to be put into official releases.
+The maintainers cannot guarantee that the `master` branch will have the same
+API forever.
+
+If you *review pull requests* or *comment on issues*, you are expected to abide
+by our [code of conduct].
+
+As a *contributor*, submitting a pull request or opening an issue, you can
+expect an initial response from a maintainer within two weeks. The maintainers
+cannot guarantee that we will accept all feature requests, and may fix bugs in
+ways other than how the contributor suggests. You are expected to abide by our
+[code of conduct].
+
+As a *maintainer*, you can merge pull requests (even your own) at any time.
+Maintainers are encouraged to request code review from others at thoughtbot or
+any relevant peers. You are expected to abide by our [code of conduct].
+
+Only members of thoughtbot may be maintainers.
 
 ## Pull Requests
 
@@ -62,3 +83,4 @@ We use [SassDoc] to document Bourbon. [Annotations] should be ordered:
 
 [SassDoc]: http://sassdoc.com
 [Annotations]: http://sassdoc.com/annotations
+[code of conduct]: https://thoughtbot.com/open-source-code-of-conduct
