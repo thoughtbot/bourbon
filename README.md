@@ -111,7 +111,7 @@ The current version is **4.2.7**. The `master` branch on GitHub is version
   @import "users";
   ```
 
-  [sass-import]: http://pivotallabs.com/structure-your-sass-files-with-import
+  [sass-import]: https://content.pivotal.io/blog/structure-your-sass-files-with-import
 
 ### Installing with npm and using a Node-based asset pipeline
 
