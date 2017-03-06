@@ -238,10 +238,29 @@ project adheres to [Semantic Versioning](http://semver.org).
 - The `retina-image` mixin has been removed.
 - The `triangle` mixin has been removed.
 
-[5.0.0.alpha.0]: https://github.com/thoughtbot/bourbon/compare/v4.3.1...v5.0.0.alpha.0
+[5.0.0.alpha.0]: https://github.com/thoughtbot/bourbon/compare/v4.3.3...v5.0.0.alpha.0
 [3cf106a]: https://github.com/thoughtbot/bourbon/commit/3cf106a210c1bae7765e6193f62310f95fdee0b7
 [Autoprefixer]: https://github.com/postcss/autoprefixer
 [em-rem-issue]: https://github.com/thoughtbot/bourbon/issues/691
+
+## [4.3.3] - 2017-02-23
+
+### Fixed
+
+- Internal Bourbon deprecation warnings for `is-size` and `is-length` will no
+  longer be thrown when using the `size` mixin.
+
+[4.3.3]: https://github.com/thoughtbot/bourbon/compare/v4.3.2...v4.3.3
+
+## [4.3.2] - 2017-02-10
+
+### Fixed
+
+- Internal Bourbon deprecation warnings for `unpack` and `is-length` will no
+  longer be thrown when using the `position` mixin. ([#1004])
+
+[4.3.2]: https://github.com/thoughtbot/bourbon/compare/v4.3.1...v4.3.2
+[#1004]: https://github.com/thoughtbot/bourbon/pull/1004
 
 ## [4.3.1] - 2017-02-07
 
