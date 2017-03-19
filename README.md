@@ -11,8 +11,8 @@ It is…
 - Human-readable: We aim for clarity over brevity.
 - Lightweight: Zero output post-install and has no visual opinion.
 
-The current version is **4.2.7**. The `master` branch on GitHub is version
-5.0.0.beta.7.
+The current stable version is **4.3.3**. The `master` branch on GitHub is
+version 5.0.0.beta.7.
 
   [Bourbon]: http://bourbon.io
   [Sass]: http://sass-lang.com
