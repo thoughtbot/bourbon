@@ -17,3 +17,11 @@ select {
 #{_assign-inputs($_text-inputs-list)} {
   color: #f0f;
 }
+
+#{_assign-inputs($_text-inputs-list, null, ".class")} {
+  color: #ddd;
+}
+
+#{_assign-inputs($_text-inputs-list, active, ".class")} {
+  color: #eee;
+}
