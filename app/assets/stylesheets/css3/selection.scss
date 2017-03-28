@@ -1,0 +1,13 @@
+@mixin selection {
+  .selection {
+    @content
+  }
+
+  ::selection {
+    @content
+  }
+
+  ::-moz-selection {
+    @content
+  }
+}
