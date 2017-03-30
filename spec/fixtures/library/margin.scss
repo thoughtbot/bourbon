@@ -1,0 +1,21 @@
+@import "setup";
+
+.margin-all {
+  @include margin(1px);
+}
+
+.margin-alternate {
+  @include margin(2px 3px);
+}
+
+.margin-implied-left {
+  @include margin(4px 5px 6px);
+}
+
+.margin-explicit {
+  @include margin(7px 8px 9px 10px);
+}
+
+.margin-false-third {
+  @include margin(11px 12px null 13px);
+}

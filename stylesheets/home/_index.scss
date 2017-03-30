@@ -222,7 +222,7 @@ section.demo {
 }
 
 //************************************************************************//
-// 
+//
 //************************************************************************//
 section.examples {
   box-shadow: 0 -5px 0 5px white, 0 -6px 0 6px #eb412b;
@@ -504,7 +504,7 @@ section.neat {
       @include span-columns(9, table);
       color: white;
       display: block;
-      font-family: $helvetica;
+      font-family: $font-stack-helvetica;
       font-weight: 100;
       margin: 0 auto;
       text-align: center;

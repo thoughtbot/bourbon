@@ -1,0 +1,9 @@
+@import "setup";
+
+.hide-visually {
+  @include hide-visually;
+}
+
+.hide-visually--unhide {
+  @include hide-visually(unhide);
+}

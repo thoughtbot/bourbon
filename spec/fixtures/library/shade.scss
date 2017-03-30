@@ -1,0 +1,17 @@
+@import "setup";
+
+.shade-white {
+  color: shade(#fff, 75%);
+}
+
+.shade-black {
+  color: shade(#000, 50%);
+}
+
+.shade-red {
+  color: shade(#f00, 25%);
+}
+
+.shade-gray {
+  color: shade(#222, 33%);
+}

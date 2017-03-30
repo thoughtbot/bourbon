@@ -1,0 +1,29 @@
+@import "setup";
+
+.one {
+  &-base-two {
+    font-size: modular-scale(1, $value: 2em);
+  }
+
+  &-base-three {
+    font-size: modular-scale(1, $value: 3em);
+  }
+
+  &-double-value {
+    font-size: modular-scale(1, $value: 1em 2em);
+  }
+
+  &-golden-ratio {
+    font-size: modular-scale(1, $ratio: $golden);
+  }
+}
+
+.two {
+  &-base-one {
+    font-size: modular-scale(2, $value: 1em);
+  }
+
+  &-double-value {
+    font-size: modular-scale(2, $value: 2em);
+  }
+}

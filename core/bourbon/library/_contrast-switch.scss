@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/// Switches between two colors based on the lightness of a another color. Great
+/// for building button styles.
+///
+/// @argument {color} $base-color
+///   The color to evaluate lightness against.
+///
+/// @argument {color} $dark-color [#000]
+///   The color to be output when `$base-color` is light.
+///
+/// @argument {color} $light-color [#fff]
+///   The color to be output when `$base-color` is dark.
+///
+/// @return {color}
+///
+/// @example scss
+///   .first-element {
+///     color: contrast-switch(#bae6e6);
+///   }
+///
+///   .second-element {
+///     $button-color: #2d72d9;
+///     background-color: $button-color;
+///     color: contrast-switch($button-color, #222, #eee);
+///   }
+///
+/// @example css
+///   .first-element {
+///     color: #000;
+///   }
+///
+///   .second-element {
+///     background-color: #2d72d9;
+///     color: #eee;
+///   }
+///
+/// @require {function} _is-light
+///
+/// @since 5.0.0
+
+@function contrast-switch(
+    $base-color,
+    $dark-color: _retrieve-bourbon-setting("contrast-switch-dark-color"),
+    $light-color: _retrieve-bourbon-setting("contrast-switch-light-color")
+  ) {
+
+  @if not _is-color($base-color) {
+    @error "`#{$base-color}` is not a valid color for the `$base-color` " +
+           "argument in the `contrast-switch` function.";
+  } @else if not _is-color($dark-color) {
+    @error "`#{$dark-color}` is not a valid color for the `$dark-color` " +
+           "argument in the `contrast-switch` function.";
+  } @else if not _is-color($light-color) {
+    @error "`#{$light-color}` is not a valid color for the `$light-color` " +
+           "argument in the `contrast-switch` function.";
+  } @else {
+    @return if(_is-light($base-color), $dark-color, $light-color);
+  }
+}

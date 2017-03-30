@@ -1,0 +1,13 @@
+@import "setup";
+
+.prefix {
+  @include prefixer(appearance, none);
+}
+
+.prefix--webkit {
+  @include prefixer(appearance, none, ("webkit"));
+}
+
+.prefix--moz-ms {
+  @include prefixer(appearance, none, ("moz", "ms"));
+}

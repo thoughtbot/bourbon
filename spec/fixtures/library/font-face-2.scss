@@ -1,0 +1,10 @@
+@import "setup";
+
+@include font-face(
+    "calibre",
+    "fonts/calibre"
+  ) {
+  font-style: normal;
+  font-weight: 600;
+  unicode-range: U+26;
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/// Programatically determines whether a color is light or dark.
+///
+/// @link http://goo.gl/Dil4Y9
+///
+/// @argument {color (hex)} $hex-color
+///
+/// @return {boolean}
+///
+/// @example scss
+///   is-light($color)
+///
+/// @access private
+
+@function _is-light($hex-color) {
+  $-local-red: red(rgba($hex-color, 1));
+  $-local-green: green(rgba($hex-color, 1));
+  $-local-blue: blue(rgba($hex-color, 1));
+  $-local-lightness: ($-local-red * 0.2126 + $-local-green * 0.7152 + $-local-blue * 0.0722) / 255;
+
+  @return $-local-lightness > 0.6;
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/// Provides a quick method for targeting `border-style` on specific sides of a
+/// box. Use a `null` value to “skip” a side.
+///
+/// @argument {arglist} $values
+///   List of border styles, defined as CSS shorthand.
+///
+/// @example scss
+///   .element {
+///     @include border-style(dashed null solid);
+///   }
+///
+/// @example css
+///   .element {
+///     border-bottom-style: solid;
+///     border-top-style: dashed;
+///   }
+///
+/// @require {mixin} _directional-property
+
+@mixin border-style($values...) {
+  @include _directional-property(border, style, $values...);
+}

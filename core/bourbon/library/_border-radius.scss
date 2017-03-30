@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/// Provides a shorthand syntax to add `border-radius` to both the top-left and
+/// top-right of an element.
+///
+/// @argument {number (with unit)} $radii
+///
+/// @example scss
+///   .element {
+///     @include border-top-radius(4px);
+///   }
+///
+/// @example css
+///   .element {
+///     border-top-left-radius: 4px;
+///     border-top-right-radius: 4px;
+///   }
+
+@mixin border-top-radius($radii) {
+  border-top-left-radius: $radii;
+  border-top-right-radius: $radii;
+}
+
+/// Provides a shorthand syntax to add `border-radius` to both the top-right and
+/// bottom-right of an element.
+///
+/// @argument {number (with unit)} $radii
+///
+/// @example scss
+///   .element {
+///     @include border-right-radius(3px);
+///   }
+///
+/// @example css
+///   .element {
+///     border-bottom-right-radius: 3px;
+///     border-top-right-radius: 3px;
+///   }
+
+@mixin border-right-radius($radii) {
+  border-bottom-right-radius: $radii;
+  border-top-right-radius: $radii;
+}
+
+/// Provides a shorthand syntax to add `border-radius` to both the bottom-left
+/// and bottom-right of an element.
+///
+/// @argument {number (with unit)} $radii
+///
+/// @example scss
+///   .element {
+///     @include border-bottom-radius(2px);
+///   }
+///
+/// @example css
+///   .element {
+///     border-bottom-left-radius: 2px;
+///     border-bottom-right-radius: 2px;
+///   }
+
+@mixin border-bottom-radius($radii) {
+  border-bottom-left-radius: $radii;
+  border-bottom-right-radius: $radii;
+}
+
+/// Provides a shorthand syntax to add `border-radius` to both the top-left
+/// and bottom-left of an element.
+///
+/// @argument {number (with unit)} $radii
+///
+/// @example scss
+///   .element {
+///     @include border-left-radius(1px);
+///   }
+///
+/// @example css
+///   .element {
+///     border-bottom-left-radius: 1px;
+///     border-top-left-radius: 1px;
+///   }
+
+@mixin border-left-radius($radii) {
+  border-bottom-left-radius: $radii;
+  border-top-left-radius: $radii;
+}

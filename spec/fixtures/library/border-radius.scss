@@ -1,0 +1,17 @@
+@import "setup";
+
+.border-top-radius {
+  @include border-top-radius(1em);
+}
+
+.border-left-radius {
+  @include border-left-radius(2em);
+}
+
+.border-right-radius {
+  @include border-right-radius(3em);
+}
+
+.border-bottom-radius {
+  @include border-bottom-radius(4em);
+}

@@ -1,0 +1,29 @@
+@import "setup";
+
+@mixin reverse-color($color) {
+  @if _is-light($color) {
+    color: #000;
+  } @else {
+    color: #fff;
+  }
+}
+
+.pink {
+  @include reverse-color(#fcc);
+}
+
+.sky {
+  @include reverse-color(#aef);
+}
+
+.medium-gray {
+  @include reverse-color(#888);
+}
+
+.charcoal {
+  @include reverse-color(#333);
+}
+
+.translucent {
+  @include reverse-color(rgba(#fff, 0.1));
+}

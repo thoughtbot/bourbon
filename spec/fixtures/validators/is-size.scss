@@ -1,0 +1,31 @@
+@import "setup";
+
+@mixin size-margin($size) {
+  @if _is-size($size) {
+    margin-top: $size;
+  }
+}
+
+.integer {
+  @include size-margin(1);
+}
+
+.px {
+  @include size-margin(2px);
+}
+
+.em {
+  @include size-margin(3em);
+}
+
+.rem {
+  @include size-margin(4rem);
+}
+
+.percent {
+  @include size-margin(5%);
+}
+
+.string {
+  @include size-margin("stringy");
+}

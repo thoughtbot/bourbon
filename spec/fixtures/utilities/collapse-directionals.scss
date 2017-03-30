@@ -1,0 +1,17 @@
+@import "setup";
+
+.four {
+  padding: _collapse-directionals(10px 20px 30px 40px);
+}
+
+.three {
+  padding: _collapse-directionals(5px 10px 5px 20px);
+}
+
+.two {
+  padding: _collapse-directionals(50px 100px 50px 100px);
+}
+
+.one {
+  padding: _collapse-directionals(10px 10px 10px 10px);
+}

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/// Provides an easy way to include a clearfix for containing floats.
+///
+/// @link http://goo.gl/yP5hiZ
+///
+/// @example scss
+///   .element {
+///     @include clearfix;
+///   }
+///
+/// @example css
+///   .element::after {
+///     clear: both;
+///     content: "";
+///     display: block;
+///   }
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}

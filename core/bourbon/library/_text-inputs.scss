@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+////
+/// @type list
+///
+/// @require {function} _assign-inputs
+///
+/// @require {variable} $_text-inputs-list
+////
+
+/// A list of all _text-based_ HTML inputs. Please note that you must
+/// interpolate the variable (`#{}`) to use it as a selector.
+///
+/// @example scss
+///   #{$all-text-inputs} {
+///     border: 1px solid #ccc;
+///   }
+///
+/// @example css
+///   [type='color'],
+///   [type='date'],
+///   [type='datetime'],
+///   [type='datetime-local'],
+///   [type='email'],
+///   [type='month'],
+///   [type='number'],
+///   [type='password'],
+///   [type='search'],
+///   [type='tel'],
+///   [type='text'],
+///   [type='time'],
+///   [type='url'],
+///   [type='week'],
+///   input:not([type]),
+///   textarea {
+///     border: 1px solid #ccc;
+///   }
+
+$all-text-inputs: _assign-inputs($_text-inputs-list);
+
+/// A list of all _text-based_ HTML inputs with the `:active` pseudo-class
+/// applied. Please note that you must interpolate the variable (`#{}`) to use
+/// it as a selector.
+///
+/// @example scss
+///   #{$all-text-inputs-active} {
+///     border: 1px solid #aaa;
+///   }
+///
+/// @example css
+///   [type='color']:active,
+///   [type='date']:active,
+///   [type='datetime']:active,
+///   [type='datetime-local']:active,
+///   [type='email']:active,
+///   [type='month']:active,
+///   [type='number']:active,
+///   [type='password']:active,
+///   [type='search']:active,
+///   [type='tel']:active,
+///   [type='text']:active,
+///   [type='time']:active,
+///   [type='url']:active,
+///   [type='week']:active,
+///   input:not([type]):active,
+///   textarea:active {
+///     border: 1px solid #aaa;
+///   }
+
+$all-text-inputs-active: _assign-inputs($_text-inputs-list, active);
+
+/// A list of all _text-based_ HTML inputs with the `:focus` pseudo-class
+/// applied. Please note that you must interpolate the variable (`#{}`) to use
+/// it as a selector.
+///
+/// @example scss
+///   #{$all-text-inputs-focus} {
+///     border: 1px solid #1565c0;
+///   }
+///
+/// @example css
+///   [type='color']:focus,
+///   [type='date']:focus,
+///   [type='datetime']:focus,
+///   [type='datetime-local']:focus,
+///   [type='email']:focus,
+///   [type='month']:focus,
+///   [type='number']:focus,
+///   [type='password']:focus,
+///   [type='search']:focus,
+///   [type='tel']:focus,
+///   [type='text']:focus,
+///   [type='time']:focus,
+///   [type='url']:focus,
+///   [type='week']:focus,
+///   input:not([type]):focus,
+///   textarea:focus {
+///     border: 1px solid #1565c0;
+///   }
+
+$all-text-inputs-focus: _assign-inputs($_text-inputs-list, focus);
+
+/// A list of all _text-based_ HTML inputs with the `:hover` pseudo-class
+/// applied. Please note that you must interpolate the variable (`#{}`) to use
+/// it as a selector.
+///
+/// @example scss
+///   #{$all-text-inputs-hover} {
+///     border: 1px solid #aaa;
+///   }
+///
+/// @example css
+///   [type='color']:hover,
+///   [type='date']:hover,
+///   [type='datetime']:hover,
+///   [type='datetime-local']:hover,
+///   [type='email']:hover,
+///   [type='month']:hover,
+///   [type='number']:hover,
+///   [type='password']:hover,
+///   [type='search']:hover,
+///   [type='tel']:hover,
+///   [type='text']:hover,
+///   [type='time']:hover,
+///   [type='url']:hover,
+///   [type='week']:hover,
+///   input:not([type]):hover,
+///   textarea:hover {
+///     border: 1px solid #aaa;
+///   }
+
+$all-text-inputs-hover: _assign-inputs($_text-inputs-list, hover);
+
+/// A list of all _text-based_ HTML inputs with the `:invalid` pseudo-class
+/// applied. Please note that you must interpolate the variable (`#{}`) to use
+/// it as a selector.
+///
+/// @example scss
+///   #{$all-text-inputs-invalid} {
+///     border: 1px solid #00f;
+///   }
+///
+/// @example css
+///   [type='color']:invalid,
+///   [type='date']:invalid,
+///   [type='datetime']:invalid,
+///   [type='datetime-local']:invalid,
+///   [type='email']:invalid,
+///   [type='month']:invalid,
+///   [type='number']:invalid,
+///   [type='password']:invalid,
+///   [type='search']:invalid,
+///   [type='tel']:invalid,
+///   [type='text']:invalid,
+///   [type='time']:invalid,
+///   [type='url']:invalid,
+///   [type='week']:invalid,
+///   input:not([type]):invalid,
+///   textarea:invalid {
+///     border: 1px solid #00f;
+///   }
+
+$all-text-inputs-invalid: _assign-inputs($_text-inputs-list, invalid);

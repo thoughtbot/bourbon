@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/// Mixes a color with white.
+///
+/// @argument {color} $color
+///
+/// @argument {number (percentage)} $percent
+///   The amount of white to be mixed in.
+///
+/// @return {color}
+///
+/// @example scss
+///   .element {
+///     background-color: tint(#6ecaa6, 40%);
+///   }
+///
+/// @example css
+///   .element {
+///     background-color: #a8dfc9;
+///   }
+
+@function tint(
+    $color,
+    $percent
+  ) {
+
+  @if not _is-color($color) {
+    @error "`#{$color}` is not a valid color for the `$color` argument in " +
+           "the `tint` mixin.";
+  } @else {
+    @return mix(#fff, $color, $percent);
+  }
+}
