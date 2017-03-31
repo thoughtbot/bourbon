@@ -13,10 +13,9 @@
 /// @access private
 
 @function _assign-inputs(
-    $inputs,
-    $pseudo: null
-  ) {
-
+  $inputs,
+  $pseudo: null
+) {
   $list: ();
 
   @each $input in $inputs {

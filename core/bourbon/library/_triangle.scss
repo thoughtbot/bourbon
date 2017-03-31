@@ -34,15 +34,15 @@
 ///   }
 
 @mixin triangle(
-    $direction,
-    $width,
-    $height,
-    $color
-  ) {
+  $direction,
+  $width,
+  $height,
+  $color
+) {
   @if not index(
-      "up" "up-right" "right" "down-right" "down" "down-left" "left" "up-left",
-      $direction
-    ) {
+    "up" "up-right" "right" "down-right" "down" "down-left" "left" "up-left",
+    $direction
+  ) {
     @error "Direction must be `up`, `up-right`, `right`, `down-right`, " +
            "`down`, `down-left`, `left` or `up-left`.";
   } @else if not _is-color($color) {

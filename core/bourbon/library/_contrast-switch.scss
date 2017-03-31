@@ -58,11 +58,10 @@
 /// @since 5.0.0
 
 @function contrast-switch(
-    $base-color,
-    $dark-color: _fetch-bourbon-setting("contrast-switch-dark-color"),
-    $light-color: _fetch-bourbon-setting("contrast-switch-light-color")
-  ) {
-
+  $base-color,
+  $dark-color: _fetch-bourbon-setting("contrast-switch-dark-color"),
+  $light-color: _fetch-bourbon-setting("contrast-switch-light-color")
+) {
   @if not _is-color($base-color) {
     @error "`#{$base-color}` is not a valid color for the `$base-color` " +
            "argument in the `contrast-switch` function.";

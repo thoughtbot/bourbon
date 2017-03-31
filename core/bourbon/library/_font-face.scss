@@ -25,10 +25,10 @@
 ///
 /// @example scss
 ///   @include font-face(
-///       "source-sans-pro",
-///       "fonts/source-sans-pro-regular",
-///       ("woff2", "woff")
-///     ) {
+///     "source-sans-pro",
+///     "fonts/source-sans-pro-regular",
+///     ("woff2", "woff")
+///   ) {
 ///     font-style: normal;
 ///     font-weight: 400;
 ///   }
@@ -47,12 +47,11 @@
 /// @require {function} _fetch-bourbon-setting
 
 @mixin font-face(
-    $font-family,
-    $file-path,
-    $file-formats: _fetch-bourbon-setting("global-font-file-formats"),
-    $asset-pipeline: _fetch-bourbon-setting("rails-asset-pipeline")
-  ) {
-
+  $font-family,
+  $file-path,
+  $file-formats: _fetch-bourbon-setting("global-font-file-formats"),
+  $asset-pipeline: _fetch-bourbon-setting("rails-asset-pipeline")
+) {
   @font-face {
     font-family: $font-family;
     src: _font-source-declaration(

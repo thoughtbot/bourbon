@@ -26,11 +26,10 @@
 /// @author Matthew Tobiasz
 
 @mixin value-prefixer(
-    $property,
-    $value,
-    $prefixes: ()
-  ) {
-
+  $property,
+  $value,
+  $prefixes: ()
+) {
   @each $prefix in $prefixes {
     #{$property}: #{"-" + $prefix + "-" + $value};
   }

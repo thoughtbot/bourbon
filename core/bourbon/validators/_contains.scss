@@ -13,10 +13,9 @@
 /// @access private
 
 @function _contains(
-    $list,
-    $values...
-  ) {
-
+  $list,
+  $values...
+) {
   @each $value in $values {
     @if type-of(index($list, $value)) != "number" {
       @return false;

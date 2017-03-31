@@ -19,12 +19,11 @@
 /// @access private
 
 @function _font-source-declaration(
-    $font-family,
-    $file-path,
-    $asset-pipeline,
-    $file-formats
-  ) {
-
+  $font-family,
+  $file-path,
+  $asset-pipeline,
+  $file-formats
+) {
   $src: ();
 
   $formats-map: (

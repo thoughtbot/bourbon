@@ -26,11 +26,10 @@
 /// @author Hugo Giraudel
 
 @mixin prefixer(
-    $property,
-    $value,
-    $prefixes: ()
-  ) {
-
+  $property,
+  $value,
+  $prefixes: ()
+) {
   @each $prefix in $prefixes {
     #{"-" + $prefix + "-" + $property}: $value;
   }

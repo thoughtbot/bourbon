@@ -20,10 +20,9 @@
 ///   }
 
 @function tint(
-    $color,
-    $percent
-  ) {
-
+  $color,
+  $percent
+) {
   @if not _is-color($color) {
     @error "`#{$color}` is not a valid color for the `$color` argument in " +
            "the `tint` mixin.";
