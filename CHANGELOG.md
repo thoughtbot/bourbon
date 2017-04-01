@@ -238,10 +238,19 @@ project adheres to [Semantic Versioning](http://semver.org).
 - The `retina-image` mixin has been removed.
 - The `triangle` mixin has been removed.
 
-[5.0.0.alpha.0]: https://github.com/thoughtbot/bourbon/compare/v4.3.3...v5.0.0.alpha.0
+[5.0.0.alpha.0]: https://github.com/thoughtbot/bourbon/compare/v4.3.4...v5.0.0.alpha.0
 [3cf106a]: https://github.com/thoughtbot/bourbon/commit/3cf106a210c1bae7765e6193f62310f95fdee0b7
 [Autoprefixer]: https://github.com/postcss/autoprefixer
 [em-rem-issue]: https://github.com/thoughtbot/bourbon/issues/691
+
+## [4.3.4] - 2017-04-01
+
+### Changed
+
+- Updated deprecation warning message for `strip-units`. ([#1016])
+
+[4.3.4]: https://github.com/thoughtbot/bourbon/compare/v4.3.3...v4.3.4
+[#1016]: https://github.com/thoughtbot/bourbon/pull/1016
 
 ## [4.3.3] - 2017-02-23
 
