@@ -1,0 +1,9 @@
+@mixin wordbreak($wordbreak: normal) {
+  // normal|break-all|keep-all|initial|inherit
+  @include prefixer(word-break, $wordbreak, ms spec);
+
+	@if $wordbreak == break-all {
+		// Non standard for webkit
+    word-break: break-word;
+	}
+}
