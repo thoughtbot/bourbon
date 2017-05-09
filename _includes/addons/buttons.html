@@ -17,6 +17,8 @@
     </li>
   </ul>
 
+  <p>The mixin also supports text-size and padding arguments.
+
   <section class="demo">
     <div class="wrapper">
       <h3>Simple Button Style</h3>
@@ -45,7 +47,7 @@ button {
 
 {% highlight scss %}
 button {
-  @include button(shiny, #ff0000);
+  @include button(shiny, #ff0000, 18px, .5em 1em);
 }
 {% endhighlight %}
       <button class="example-3">Shiny Button</button>
