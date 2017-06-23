@@ -21,6 +21,7 @@
   ],
   "license": "MIT",
   "main": "index.js",
+  "style": "core/_bourbon.scss",
   "name": "bourbon",
   "repository": {
     "type": "git",
