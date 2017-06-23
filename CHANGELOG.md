@@ -5,10 +5,20 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased (`master`)][unreleased]
 
+### Added
+
+- A `style` property has been added to our `package.json`, which makes for easy
+  importing when using npm-sass, sass-module-importer and others.
+
 ### Changed
 
 - The `triangle` mixin no longer has default argument values. The order of the
   arguments also changed: `$width` and `$height` now come before `$color`.
+
+### Fixed
+
+- The `bourbon update` CLI command now works when Bourbon is installed using a
+  custom path.
 
 [unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.7...HEAD
 
