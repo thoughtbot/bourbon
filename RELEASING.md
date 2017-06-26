@@ -1,11 +1,12 @@
 # Releasing
 
 1. Update the version number in these places:
-  - `lib/bourbon/version.rb`
-  - `core/_bourbon.scss`
-  - `package.json`
-  - `bower.json`
-  - `README.md`
+
+    - `lib/bourbon/version.rb`
+    - `core/_bourbon.scss`
+    - `package.json`
+    - `bower.json`
+    - `README.md`
 
 1. Update `CHANGELOG.md`. We follow the guidelines from [Keep a CHANGELOG].
 
@@ -22,7 +23,7 @@
    _automatically be sent_ on the [@bourbonsass] Twitter account via [Zapier].
    It will look like this:
 
-   > We’ve released {release_title}: {release_link}
+    > We’ve released Bourbon {release_title}: {release_link}
 
 1. Re-generate and publish the [documentation website], using the available
    Rake tasks.
