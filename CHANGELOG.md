@@ -19,6 +19,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 - The `bourbon update` CLI command now works when Bourbon is installed using a
   custom path.
+- Fixed an issue that would cause Bourbon to not be found within Rails apps.
 
 [unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.7...HEAD
 
