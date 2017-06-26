@@ -1,5 +1,7 @@
+.github/
 .gitignore
 .hound.yml
+.ruby-version
 .sass-cache
 .scss-lint.yml
 _site
@@ -7,6 +9,7 @@ bin/
 bourbon.gemspec
 bower.json
 circle.yml
+CONTRIBUTING.md
 features/
 Gemfile
 Gemfile.lock
