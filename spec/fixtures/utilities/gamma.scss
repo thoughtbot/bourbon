@@ -1,0 +1,9 @@
+@import "setup";
+
+.gamma {
+  content: _gamma(100 / 255);
+}
+
+.gamma-full {
+  content: _gamma(255 / 255);
+}
