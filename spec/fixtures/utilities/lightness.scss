@@ -1,0 +1,13 @@
+@import "setup";
+
+.lightness-black {
+  content: _lightness(#000);
+}
+
+.lightness-white {
+  content: _lightness(#fff);
+}
+
+.lightness-gray {
+  content: _lightness(mix(#000, #fff, 50%));
+}
