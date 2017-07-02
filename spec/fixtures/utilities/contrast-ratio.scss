@@ -1,0 +1,9 @@
+@import "setup";
+
+.contrast-ratio-black {
+  content: _contrast-ratio(#fff, #000);
+}
+
+.contrast-ratio-blue {
+  content: _contrast-ratio(#fff, #00f);
+}
