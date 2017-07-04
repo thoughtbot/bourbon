@@ -1,11 +1,22 @@
-### Expected behavior
+<!-- Feel free to remove any part of this issue template that is not relevant -->
+<!-- Providing context helps us come up with a useful solution -->
 
-### Actual behavior
+## Description
 
-### Steps to reproduce behavior
+<!-- What did you expect to happen? What happened instead? Was a specific error thrown? -->
 
-### Bourbon version
+## Steps to Reproduce
 
-### Environment info
+<!-- If you can reproduce the bug in a CodePen, link to it here -->
 
-### Screenshots (if relevant)
+1. Step 1…
+2.
+3.
+
+## Development Environment
+
+<!--- Include as many relevant details about the environment you experienced the bug in -->
+
+- Bourbon version:
+- Platform:
+- Link to the code repository:

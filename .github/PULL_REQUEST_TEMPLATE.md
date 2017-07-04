@@ -1,5 +1,10 @@
-### What does this PR do?
+<!-- Feel free to remove any part of this pull request template that is not relevant -->
 
-### If this is related to an existing issue, include a link to it as well.
+## Description
 
-### Screenshots (if relevant)
+<!-- What do your changes do or fix? -->
+
+## Additional Information
+
+<!-- Links to demos, e.g. CodePen, can be helpful, as are research and support documents -->
+<!-- If this fixes or is related to an existing issue, link to it here (and in the commit message) -->
