@@ -133,7 +133,7 @@ version 5.0.0.beta.8.
     @import "bourbon";
     ```
 
-  [eyeglass]: http://eyeglass.rocks
+  [eyeglass]: https://github.com/sass-eyeglass/eyeglass
 
 ### Installing older versions of Bourbon
 
