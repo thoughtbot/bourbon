@@ -133,6 +133,10 @@ version 5.0.0.beta.8.
     @import "bourbon";
     ```
 
+    **Pro Tip:** Check out this [example gulp project][gulp-example] that 
+    uses Bourbon and Neat.
+
+  [gulp-example]: https://github.com/thoughtbot/gulp-bourbon-neat-example
   [eyeglass]: https://github.com/sass-eyeglass/eyeglass
 
 ### Installing older versions of Bourbon
