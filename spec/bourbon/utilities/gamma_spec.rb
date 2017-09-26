@@ -7,7 +7,7 @@ describe "gamma" do
 
   context "called on a color channel" do
     it "outputs a gamma value between 0 and 1" do
-      rule = "content: 0.13185;"
+      rule = "content: 0.12168;"
 
       expect(".gamma").to have_ruleset(rule)
     end

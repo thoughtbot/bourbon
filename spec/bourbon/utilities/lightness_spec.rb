@@ -23,7 +23,7 @@ describe "lightness" do
 
   context "called on gray" do
     it "outputs a number between 0 and 1 to indicate lightness" do
-      rule = "content: 0.21795;"
+      rule = "content: 0.20503;"
 
       expect(".lightness-gray").to have_ruleset(rule)
     end

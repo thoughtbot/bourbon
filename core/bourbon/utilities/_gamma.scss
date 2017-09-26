@@ -2,8 +2,7 @@
 
 /// Performs gamma correction on a single color channel.
 ///
-/// Note that Sass does not have a `pow()` function, so the calculation
-/// is approximate.
+/// Note that the calculation is approximate if a `pow()` is not available.
 ///
 /// @argument {number (0-1)} $channel
 ///
@@ -16,6 +15,10 @@
     @return $channel / 12.92;
   } @else {
     $c: ($channel + 0.055) / 1.055;
-    @return (133 * $c * $c * $c + 155 * $c * $c) / 288;
+    @if function-exists("pow") {
+      @return pow($c, 2.4);
+    } @else {
+      @return 0.56 * $c * $c * $c + 0.44 * $c * $c;
+    }
   }
 }
