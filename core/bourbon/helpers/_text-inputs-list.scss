@@ -23,4 +23,4 @@ $_text-inputs-list: (
   "[type='week']",
   "input:not([type])",
   "textarea",
-);
+) !default;
