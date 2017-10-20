@@ -24,7 +24,7 @@
 ///     background-color: #f00;
 ///   }
 
-$all-buttons: _assign-inputs($_buttons-list);
+$all-buttons: _assign-inputs("buttons-list");
 
 /// A list of all HTML button elements with the `:active` pseudo-class applied.
 /// Please note that you must interpolate the variable (`#{}`) to use it as a
@@ -43,7 +43,7 @@ $all-buttons: _assign-inputs($_buttons-list);
 ///     background-color: #00f;
 ///   }
 
-$all-buttons-active: _assign-inputs($_buttons-list, active);
+$all-buttons-active: _assign-inputs("buttons-list", active);
 
 /// A list of all HTML button elements with the `:focus` pseudo-class applied.
 /// Please note that you must interpolate the variable (`#{}`) to use it as a
@@ -62,7 +62,7 @@ $all-buttons-active: _assign-inputs($_buttons-list, active);
 ///     background-color: #0f0;
 ///   }
 
-$all-buttons-focus: _assign-inputs($_buttons-list, focus);
+$all-buttons-focus: _assign-inputs("buttons-list", focus);
 
 /// A list of all HTML button elements with the `:hover` pseudo-class applied.
 /// Please note that you must interpolate the variable (`#{}`) to use it as a
@@ -81,4 +81,4 @@ $all-buttons-focus: _assign-inputs($_buttons-list, focus);
 ///     background-color: #0f0;
 ///   }
 
-$all-buttons-hover: _assign-inputs($_buttons-list, hover);
+$all-buttons-hover: _assign-inputs("buttons-list", hover);

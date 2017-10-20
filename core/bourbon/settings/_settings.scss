@@ -34,6 +34,30 @@ $_bourbon-defaults: (
   "modular-scale-base": 1em,
   "modular-scale-ratio": $major-third,
   "rails-asset-pipeline": false,
+  "text-inputs-list": (
+    "[type='color']",
+    "[type='date']",
+    "[type='datetime']",
+    "[type='datetime-local']",
+    "[type='email']",
+    "[type='month']",
+    "[type='number']",
+    "[type='password']",
+    "[type='search']",
+    "[type='tel']",
+    "[type='text']",
+    "[type='time']",
+    "[type='url']",
+    "[type='week']",
+    "input:not([type])",
+    "textarea",
+  ),
+  "buttons-list": (
+    "button",
+    "[type='button']",
+    "[type='reset']",
+    "[type='submit']",
+  )
 );
 
 /// Global Bourbon settings.

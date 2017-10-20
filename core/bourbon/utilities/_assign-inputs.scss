@@ -13,10 +13,12 @@
 /// @access private
 
 @function _assign-inputs(
-  $inputs,
+  $input-setting-name,
   $pseudo: null
 ) {
   $list: ();
+
+  $inputs: _fetch-bourbon-setting($input-setting-name);
 
   @each $input in $inputs {
     $input: unquote($input);
