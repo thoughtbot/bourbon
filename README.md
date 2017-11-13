@@ -52,7 +52,7 @@ version 5.0.0.beta.8.
 
     Alternatively, you can install Bourbon with [Bower].
 
-1. Install the Bourbon library into the current directory:
+2. Install the Bourbon library into the current directory:
 
     ```bash
     bourbon install
@@ -65,7 +65,7 @@ version 5.0.0.beta.8.
     bourbon install --path my/custom/path/
     ```
 
-1. Import Bourbon at the beginning of your stylesheet:
+3. Import Bourbon at the beginning of your stylesheet:
 
     ```scss
     @import "bourbon/bourbon";
@@ -86,23 +86,23 @@ version 5.0.0.beta.8.
     gem "bourbon"
     ```
 
-1. Then run:
+2. Then run:
 
     ```bash
     bundle install
     ```
 
-1. Restart your server and rename `application.css` to `application.scss`:
+3. Restart your server and rename `application.css` to `application.scss`:
 
     ```bash
     mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
     ```
 
-1. Delete _all_ Sprockets directives in `application.scss` (`require`,
+4. Delete _all_ Sprockets directives in `application.scss` (`require`,
    `require_tree` and `require_self`) and use Sass’s native `@import` instead
    ([why?][sass-import]).
 
-1. Import Bourbon at the beginning of `application.scss`. Any project styles
+5. Import Bourbon at the beginning of `application.scss`. Any project styles
    that utilize Bourbon’s features must be imported after Bourbon.
 
     ```scss
@@ -121,13 +121,13 @@ version 5.0.0.beta.8.
     npm install --save bourbon
     ```
 
-1. If you’re using [eyeglass], skip to Step 3. Otherwise, you’ll need to add
+2. If you’re using [eyeglass], skip to Step 3. Otherwise, you’ll need to add
    Bourbon to your node-sass `includePaths` option.
    `require("bourbon").includePaths` is an array of directories that you should
    pass to node-sass. How you do this depends on how node-sass is integrated
    into your project.
 
-1. Import Bourbon into your Sass files:
+3. Import Bourbon into your Sass files:
 
     ```scss
     @import "bourbon";
@@ -147,14 +147,14 @@ version 5.0.0.beta.8.
     gem uninstall bourbon
     ```
 
-1. Reinstall the Bourbon gem, using the `-v` flag to specify the version
+2. Reinstall the Bourbon gem, using the `-v` flag to specify the version
    you need:
 
     ```bash
     gem install bourbon -v 4.2.7
     ```
 
-1. Follow the [instructions above](#installation) to install Bourbon into
+3. Follow the [instructions above](#installation) to install Bourbon into
    your project.
 
 ## Command Line Interface
