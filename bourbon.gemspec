@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.email = "design+bourbon@thoughtbot.com"
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.files = `git ls-files`.split("\n")
-  s.homepage = "http://bourbon.io"
+  s.homepage = "https://www.bourbon.io/"
   s.license = "MIT"
   s.name = "bourbon"
   s.platform = Gem::Platform::RUBY

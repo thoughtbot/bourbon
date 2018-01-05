@@ -11,12 +11,12 @@ It is…
 - Human-readable: We aim for clarity over brevity.
 - Lightweight: Zero output post-install and has no visual opinion.
 
-  [Bourbon]: http://bourbon.io
+  [Bourbon]: https://www.bourbon.io/
   [Sass]: http://sass-lang.com
 
 ### Helpful Links
 
-- [Documentation](http://bourbon.io/docs)
+- [Documentation](https://www.bourbon.io/docs/latest/)
 - [Change log](CHANGELOG.md)
 - [Twitter](https://twitter.com/bourbonsass)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/bourbon)

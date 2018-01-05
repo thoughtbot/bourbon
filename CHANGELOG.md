@@ -17,7 +17,7 @@ between v5.0.0-beta.8 and v5.0.0. For information on how to upgrade from v4 to
 v5, read our [migrating guide][migrating-guide].
 
 [5.0.0]: https://github.com/thoughtbot/bourbon/compare/v5.0.0.beta.8...v5.0.0
-[migrating-guide]: http://www.bourbon.io/docs/migrating-from-v4-to-v5/
+[migrating-guide]: https://www.bourbon.io/docs/migrating-from-v4-to-v5/
 
 ## [5.0.0-beta.8] - 2017-06-26
 

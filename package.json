@@ -11,7 +11,7 @@
     "needs": "*",
     "exports": "eyeglass-exports.js"
   },
-  "homepage": "http://bourbon.io",
+  "homepage": "https://www.bourbon.io/",
   "keywords": [
     "css",
     "eyeglass-module",

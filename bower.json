@@ -3,7 +3,7 @@
     "thoughtbot (http://thoughtbot.com)"
   ],
   "description": "A lightweight Sass tool set.",
-  "homepage": "http://bourbon.io",
+  "homepage": "https://www.bourbon.io/",
   "ignore": [
     "**/.*",
     "_site/",
