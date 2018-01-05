@@ -11,9 +11,6 @@ It is…
 - Human-readable: We aim for clarity over brevity.
 - Lightweight: Zero output post-install and has no visual opinion.
 
-The current stable version is **4.3.4**. The `master` branch on GitHub is
-version 5.0.0.beta.8.
-
   [Bourbon]: http://bourbon.io
   [Sass]: http://sass-lang.com
 
@@ -133,7 +130,7 @@ version 5.0.0.beta.8.
     @import "bourbon";
     ```
 
-    **Pro Tip:** Check out this [example gulp project][gulp-example] that 
+    **Pro Tip:** Check out this [example gulp project][gulp-example] that
     uses Bourbon and Neat.
 
   [gulp-example]: https://github.com/thoughtbot/gulp-bourbon-neat-example
