@@ -188,11 +188,9 @@ Bourbon is part of a larger, modular family of Sass utilities:
 
 - [Neat]: A lightweight and flexible Sass grid
 - [Bitters]: Scaffold styles, variables and structure for Bourbon projects
-- [Refills]: Components and patterns built with Bourbon and Neat
 
   [Neat]: https://github.com/thoughtbot/neat
   [Bitters]: https://github.com/thoughtbot/bitters
-  [Refills]: https://github.com/thoughtbot/refills
 
 ## Contributing
 
