@@ -2,10 +2,6 @@ dependencies:
   override:
     - bundle install
     - npm install -g sassdoc@2.5.0
-general:
-  branches:
-    ignore:
-      - gh-pages
 machine:
   node:
     version: 9.8.0
