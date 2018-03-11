@@ -1,7 +1,7 @@
 dependencies:
   override:
     - bundle install
-    - npm install -g sassdoc@2.2.0
+    - npm install -g sassdoc@2.5.0
 general:
   branches:
     ignore:
