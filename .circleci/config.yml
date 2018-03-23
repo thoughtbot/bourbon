@@ -1,0 +1,34 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.3-node
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - bourbon-{{ arch }}-{{ checksum "bourbon.gemspec" }}
+
+      - run:
+          name: Install Ruby dependencies
+          command: bundle install --path vendor/bundle
+
+      - run:
+          name: Install SassDoc
+          command: sudo npm install -g sassdoc@2.5.0
+
+      - save_cache:
+          key: bourbon-{{ arch }}-{{ checksum "bourbon.gemspec" }}
+          paths:
+            - vendor/bundle
+
+      - run:
+          name: Run the tests
+          command: bundle exec rake
+
+      - run:
+          name: Parse SassDoc comments
+          command: sassdoc core/ --parse --verbose --strict
