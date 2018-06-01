@@ -1,4 +1,3 @@
-@disable-bundler
 Feature: Update bourbon files
 
   Scenario: Updating updates an existing bourbon install

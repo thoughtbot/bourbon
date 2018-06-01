@@ -14,17 +14,19 @@ Then /^the sass directories(?: with "([^"]+)" prefix)? should have been generate
     "bourbon/validators",
   ]
   sass_directories.map!{ |directory| bourbon_path(prefix, directory) }
-  check_directory_presence(sass_directories, true)
+  sass_directories.each do |sass_directory|
+    expect(sass_directory).to be_an_existing_directory
+  end
 end
 
 Then /^the master bourbon partial should have been generated(?: within "([^"]+)" directory)?$/ do |prefix|
-  check_file_presence([bourbon_path(prefix, '_bourbon.scss')], true)
+  expect(bourbon_path(prefix, "_bourbon.scss")).to be_an_existing_file
 end
 
 Then /^bourbon should not have been generated$/ do
-  check_directory_presence(['bourbon'], false)
+  expect("bourbon").not_to be_an_existing_directory
 end
 
 Then /^the output should contain the current version of Bourbon$/ do
-  assert_exact_output("Bourbon #{Bourbon::VERSION}\n", all_output)
+  expect(last_command_started).to have_output "Bourbon #{Bourbon::VERSION}"
 end

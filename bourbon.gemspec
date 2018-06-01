@@ -2,8 +2,9 @@ $:.push File.expand_path("../lib", __FILE__)
 require "bourbon/version"
 
 Gem::Specification.new do |s|
-  s.add_development_dependency "aruba", "~> 0.6.2"
+  s.add_development_dependency "aruba", "~> 0.14"
   s.add_development_dependency "css_parser", "~> 1.4"
+  s.add_development_dependency "cucumber", "~> 2.0"
   s.add_development_dependency "rake", "~> 11.1"
   s.add_development_dependency "rspec", "~> 3.4"
   s.add_development_dependency "scss_lint", "0.48"

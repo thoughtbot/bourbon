@@ -1,4 +1,3 @@
-@disable-bundler
 Feature: Install bourbon files
 
   Scenario: Bourbon generates a new bourbon installation
