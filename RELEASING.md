@@ -6,7 +6,6 @@
     - `core/_bourbon.scss`
     - `package.json`
     - `bower.json`
-    - `README.md`
 
 1. Update `CHANGELOG.md`. We follow the guidelines from [Keep a CHANGELOG].
 
