@@ -7,7 +7,15 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 Nothing at the moment.
 
-[unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.0...HEAD
+[unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.1...HEAD
+
+## [5.0.1] - 2018-06-08
+
+### Fixed
+
+- Fixed an issue that would cause Bourbon to not be found when using SassC.
+
+[5.0.1]: https://github.com/thoughtbot/bourbon/compare/v5.0.0...v5.0.1
 
 ## [5.0.0] - 2018-01-05
 
