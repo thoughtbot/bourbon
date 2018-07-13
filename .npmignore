@@ -1,3 +1,4 @@
+.circleci/
 .github/
 .gitignore
 .hound.yml
@@ -8,7 +9,6 @@ _site
 bin/
 bourbon.gemspec
 bower.json
-circle.yml
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 features/
