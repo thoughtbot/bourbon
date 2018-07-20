@@ -7,7 +7,19 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 Nothing at the moment.
 
-[unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.0.1...HEAD
+[unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.1.0...HEAD
+
+## [5.1.0] - 2018-07-20
+
+### Added
+
+- `$font-stack-system` now includes the `system-ui` value.
+
+### Changed
+
+- The `_gamma` function will use a `pow` function, if available.
+
+[5.1.0]: https://github.com/thoughtbot/bourbon/compare/v5.0.1...v5.1.0
 
 ## [5.0.1] - 2018-06-08
 
