@@ -21,10 +21,10 @@ describe "font-stacks" do
                     '"Lucida Typewriter", monospace'
       monaco = '"Monaco", "Consolas", "Lucida Console", monospace'
 
-      system = '-apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", ' +
-               '"Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", ' +
-               '"Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", ' +
-               '"Oxygen", "Ubuntu", "Franklin Gothic Medium", ' +
+      system = 'system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", ' +
+               '"Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", ' +
+               '"Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", ' +
+               '"Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", ' +
                '"Century Gothic", "Liberation Sans", sans-serif'
 
       expect(".helvetica").to have_value(helvetica)

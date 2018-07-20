@@ -71,8 +71,6 @@ $font-stack-verdana: (
 
 /// A variable that outputs a system font stack.
 ///
-/// @link https://goo.gl/LHRZIf
-///
 /// @type list
 ///
 /// @example scss
@@ -82,10 +80,11 @@ $font-stack-verdana: (
 ///
 ///   // CSS Output
 ///   .element {
-///     font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+///     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
 ///   }
 
 $font-stack-system: (
+  system-ui,
   -apple-system,
   BlinkMacSystemFont,
   "Avenir Next",
