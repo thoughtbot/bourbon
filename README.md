@@ -1,5 +1,7 @@
 [<img src="https://images.thoughtbot.com/bourbon/bourbon-logo.svg" width="200" alt="Bourbon logo">][Bourbon]
 
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
+
 ## A Lightweight Sass Tool Set
 
 [Bourbon] is a library of [Sass] mixins and functions that are designed to make
