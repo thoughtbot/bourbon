@@ -6,3 +6,4 @@ _site
 Gemfile.lock
 npm-debug.log
 tmp/
+.idea

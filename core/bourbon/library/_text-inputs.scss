@@ -36,7 +36,7 @@
 ///     border: 1px solid #ccc;
 ///   }
 
-$all-text-inputs: _assign-inputs($_text-inputs-list);
+$all-text-inputs: _assign-inputs("text-inputs-list");
 
 /// A list of all _text-based_ HTML inputs with the `:active` pseudo-class
 /// applied. Please note that you must interpolate the variable (`#{}`) to use
@@ -67,7 +67,7 @@ $all-text-inputs: _assign-inputs($_text-inputs-list);
 ///     border: 1px solid #aaa;
 ///   }
 
-$all-text-inputs-active: _assign-inputs($_text-inputs-list, active);
+$all-text-inputs-active: _assign-inputs("text-inputs-list", active);
 
 /// A list of all _text-based_ HTML inputs with the `:focus` pseudo-class
 /// applied. Please note that you must interpolate the variable (`#{}`) to use
@@ -98,7 +98,7 @@ $all-text-inputs-active: _assign-inputs($_text-inputs-list, active);
 ///     border: 1px solid #1565c0;
 ///   }
 
-$all-text-inputs-focus: _assign-inputs($_text-inputs-list, focus);
+$all-text-inputs-focus: _assign-inputs("text-inputs-list", focus);
 
 /// A list of all _text-based_ HTML inputs with the `:hover` pseudo-class
 /// applied. Please note that you must interpolate the variable (`#{}`) to use
@@ -129,7 +129,7 @@ $all-text-inputs-focus: _assign-inputs($_text-inputs-list, focus);
 ///     border: 1px solid #aaa;
 ///   }
 
-$all-text-inputs-hover: _assign-inputs($_text-inputs-list, hover);
+$all-text-inputs-hover: _assign-inputs("text-inputs-list", hover);
 
 /// A list of all _text-based_ HTML inputs with the `:invalid` pseudo-class
 /// applied. Please note that you must interpolate the variable (`#{}`) to use
@@ -160,4 +160,4 @@ $all-text-inputs-hover: _assign-inputs($_text-inputs-list, hover);
 ///     border: 1px solid #00f;
 ///   }
 
-$all-text-inputs-invalid: _assign-inputs($_text-inputs-list, invalid);
+$all-text-inputs-invalid: _assign-inputs("text-inputs-list", invalid);
