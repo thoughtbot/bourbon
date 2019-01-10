@@ -49,8 +49,6 @@ It is…
     gem install bourbon
     ```
 
-    Alternatively, you can install Bourbon with [Bower].
-
 1. Install the Bourbon library into the current directory:
 
     ```bash
@@ -75,7 +73,6 @@ It is…
     changes or causing merge conflicts.
 
   [RubyGems]: https://rubygems.org
-  [Bower]: http://bower.io
 
 ### Installation for Ruby on Rails 4.2+
 
