@@ -5,7 +5,6 @@
     - `lib/bourbon/version.rb`
     - `core/_bourbon.scss`
     - `package.json`
-    - `bower.json`
 
 1. Update `CHANGELOG.md`. We follow the guidelines from [Keep a CHANGELOG].
 

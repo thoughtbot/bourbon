@@ -8,7 +8,6 @@
 _site
 bin/
 bourbon.gemspec
-bower.json
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 features/
