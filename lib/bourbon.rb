@@ -1,4 +1,3 @@
-require "sass"
 require "bourbon/generator"
 
 module Bourbon
@@ -7,6 +6,9 @@ module Bourbon
       config.assets.paths << File.expand_path("../../core", __FILE__)
     end
   else
-    Sass.load_paths << File.expand_path("../../core", __FILE__)
+    begin
+      require "sass"
+      Sass.load_paths << File.expand_path("../../core", __FILE__)
+    rescue LoadError; end
   end
 end
