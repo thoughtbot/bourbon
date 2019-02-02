@@ -59,8 +59,12 @@ Bourbon uses Sass’s SCSS syntax and aligns to
 - Order CSS declarations alphabetically.
 - No trailing whitespace.
 
+We use [stylelint][stylelint] to lint our CSS and Sass. It's configuration can
+be found in `.stylelintrc.json`. You can run stylelint from the command line via
+`npm run stylelint`, or integrate it with your text editor.
+
 [sass guide]: https://github.com/thoughtbot/guides
-[SCSS-Lint]: https://github.com/brigade/scss-lint
+[stylelint]: https://stylelint.io/
 
 ### Documentation
 

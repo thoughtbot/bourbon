@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-// scss-lint:disable SpaceAroundOperator
-
 /// Builds directional properties by parsing CSS shorthand values. For example,
 /// a value of `10px null` will output top and bottom directional properties,
 /// but the `null` skips left and right from being output.
@@ -37,11 +35,11 @@
   $suffix,
   $values
 ) {
-  $top:    $property + "-top"    + if($suffix, "-#{$suffix}", "");
+  $top: $property + "-top" + if($suffix, "-#{$suffix}", "");
   $bottom: $property + "-bottom" + if($suffix, "-#{$suffix}", "");
-  $left:   $property + "-left"   + if($suffix, "-#{$suffix}", "");
-  $right:  $property + "-right"  + if($suffix, "-#{$suffix}", "");
-  $all:    $property +             if($suffix, "-#{$suffix}", "");
+  $left: $property + "-left" + if($suffix, "-#{$suffix}", "");
+  $right: $property + "-right" + if($suffix, "-#{$suffix}", "");
+  $all: $property + if($suffix, "-#{$suffix}", "");
 
   $values: _compact-shorthand($values);
 

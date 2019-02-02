@@ -18,7 +18,11 @@
 ///     overflow-wrap: break-word;
 ///   }
 
+/* stylelint-disable order/properties-alphabetical-order */
+
 @mixin overflow-wrap($wrap: break-word) {
   word-wrap: $wrap;
   overflow-wrap: $wrap;
 }
+
+/* stylelint-enable */
