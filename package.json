@@ -7,6 +7,10 @@
     "url": "https://github.com/thoughtbot/bourbon/issues"
   },
   "description": "A lightweight Sass tool set.",
+  "devDependencies": {
+    "@thoughtbot/stylelint-config": "^0.2.0",
+    "stylelint": "^9.10.1"
+  },
   "eyeglass": {
     "needs": "*",
     "exports": "eyeglass-exports.js"
@@ -28,6 +32,7 @@
     "url": "https://github.com/thoughtbot/bourbon.git"
   },
   "scripts": {
+    "stylelint": "npx stylelint 'core/**/*.scss'",
     "test": "bundle exec rake"
   },
   "version": "5.1.0"

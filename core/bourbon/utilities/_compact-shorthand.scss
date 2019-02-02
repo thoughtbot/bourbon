@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-// scss-lint:disable ElsePlacement
-
 /// Transforms shorthand to its shortest possible form.
 ///
 /// @argument {list} $values
@@ -30,10 +28,15 @@
   @if $c == 0 { $c: 0; }
   @if $d == 0 { $d: 0; }
 
-  @if $a == $b and $a == $c and $a == $d { $output: $a;          }
-  @else if $a == $c and $b == $d         { $output: $a $b;       }
-  @else if $b == $d                      { $output: $a $b $c;    }
-  @else                                  { $output: $a $b $c $d; }
+  @if $a == $b and $a == $c and $a == $d {
+    $output: $a;
+  } @else if $a == $c and $b == $d {
+    $output: $a $b;
+  } @else if $b == $d {
+    $output: $a $b $c;
+  } @else {
+    $output: $a $b $c $d;
+  }
 
   @return $output;
 }

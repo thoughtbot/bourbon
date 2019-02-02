@@ -4,7 +4,7 @@
 .hound.yml
 .ruby-version
 .sass-cache
-.scss-lint.yml
+.stylelintrc.json
 _site
 bin/
 bourbon.gemspec
