@@ -9,7 +9,7 @@
   "description": "A lightweight Sass tool set.",
   "devDependencies": {
     "@thoughtbot/stylelint-config": "^1.0.0",
-    "stylelint": "^9.10.1"
+    "stylelint": "^10.0.1"
   },
   "eyeglass": {
     "needs": "*",
