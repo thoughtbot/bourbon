@@ -9,6 +9,7 @@ module Bourbon
     begin
       require "sass"
       Sass.load_paths << File.expand_path("../core", __dir__)
-    rescue LoadError; end
+    rescue LoadError
+    end
   end
 end
