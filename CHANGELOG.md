@@ -7,7 +7,16 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 Nothing at the moment.
 
-[unreleased]: https://github.com/thoughtbot/bourbon/compare/v5.1.0...HEAD
+[unreleased]: https://github.com/thoughtbot/bourbon/compare/v6.0.0...HEAD
+
+## [6.0.0] - 2019-07-10
+
+### Removed
+
+- Installation through Bower is no longer supported.
+- The sass gem (the deprecated Ruby Sass) is no longer a runtime dependency.
+
+[6.0.0]: https://github.com/thoughtbot/bourbon/compare/v5.1.0...v6.0.0
 
 ## [5.1.0] - 2018-07-20
 
