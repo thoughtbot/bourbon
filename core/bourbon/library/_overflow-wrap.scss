@@ -18,11 +18,8 @@
 ///     overflow-wrap: break-word;
 ///   }
 
-/* stylelint-disable order/properties-alphabetical-order */
-
 @mixin overflow-wrap($wrap: break-word) {
   word-wrap: $wrap;
+  /* stylelint-disable-next-line order/properties-alphabetical-order */
   overflow-wrap: $wrap;
 }
-
-/* stylelint-enable */
