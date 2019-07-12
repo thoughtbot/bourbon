@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "cucumber", "~> 2.0"
   s.add_development_dependency "rake", "~> 11.1"
   s.add_development_dependency "rspec", "~> 3.4"
+  s.add_development_dependency "sass"
   s.add_runtime_dependency "thor", "~> 0.19"
   s.authors = [
     "Christian Reuter",
