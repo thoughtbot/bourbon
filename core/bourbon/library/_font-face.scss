@@ -13,7 +13,7 @@
 ///   List of the font file formats to include. Can also be set globally using
 ///   the `global-font-file-formats` key in the Bourbon settings.
 ///
-/// @argument {string} $asset-pipeline [false]
+/// @argument {boolean} $asset-pipeline [false]
 ///   Set to `true` if you’re using the Rails Asset Pipeline (place the fonts
 ///   in `app/assets/fonts/`). Can also be set globally using the
 ///   `rails-asset-pipeline` key in the Bourbon settings.
