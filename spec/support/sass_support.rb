@@ -1,7 +1,7 @@
 module SassSupport
   def generate_css
     FileUtils.mkdir("tmp")
-    `sass -I . --update spec/fixtures:tmp --quiet`
+    `sass -I . spec/fixtures:tmp --update --quiet --precision=5`
   end
 
   def clean_up
