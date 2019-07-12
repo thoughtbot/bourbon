@@ -34,16 +34,20 @@
     svg:   "#{$file-path}.svg##{$font-family}" format("svg"),
   );
 
-  @each $key, $values in $formats-map {
-    @if _contains($file-formats, $key) {
-      $file-path: nth($values, 1);
-      $font-format: nth($values, 2);
+  @each $format in $file-formats {
+    @if _contains(map-keys($formats-map), $format) {
+      $value: map-get($formats-map, $format);
+      $file-path: nth($value, 1);
+      $font-format: nth($value, 2);
 
       @if $asset-pipeline == true {
         $src: append($src, font-url($file-path) $font-format, comma);
       } @else {
         $src: append($src, url($file-path) $font-format, comma);
       }
+    } @else {
+      @error "`#{$file-formats}` contains an unsupported font file format. " +
+             "Must be `eot`, `ttf`, `svg`, `woff` and/or `woff2`.";
     }
   }
 
