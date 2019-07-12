@@ -1,6 +1,6 @@
 module SassSupport
   def generate_css
-    _mkdir("tmp")
+    FileUtils.mkdir("tmp")
     `sass -I . --update spec/fixtures:tmp --quiet`
   end
 
