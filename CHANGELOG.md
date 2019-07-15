@@ -5,7 +5,10 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased (`master`)][unreleased]
 
-Nothing at the moment.
+### Added
+
+- Improved error handling of unsupported font file formats in the `font-face`
+  mixin (supported formats are `eot`, `ttf`, `svg`, `woff2`, and `woff`).
 
 [unreleased]: https://github.com/thoughtbot/bourbon/compare/v6.0.0...HEAD
 
