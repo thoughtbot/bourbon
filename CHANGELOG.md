@@ -9,6 +9,8 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 - Improved error handling of unsupported font file formats in the `font-face`
   mixin (supported formats are `eot`, `ttf`, `svg`, `woff2`, and `woff`).
+- CSS `var()` and `env()` functions are now accepted as values in the
+  `position`, and `size` mixins.
 
 [unreleased]: https://github.com/thoughtbot/bourbon/compare/v6.0.0...HEAD
 

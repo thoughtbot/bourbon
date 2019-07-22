@@ -35,6 +35,18 @@ describe "is-length" do
     end
   end
 
+  context "parses custom properties" do
+    it "returns true" do
+      expect(".var").to have_rule("color: #fff")
+    end
+  end
+
+  context "parses environment variables" do
+    it "returns true" do
+      expect(".env").to have_rule("color: #fff")
+    end
+  end
+
   context "checks if strings can be represented as a length" do
     it "returns false" do
       expect(".string").not_to have_rule("color: #fff")
