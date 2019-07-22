@@ -26,6 +26,14 @@
   @include color-length(calc(2em - 5px));
 }
 
+.env {
+  @include color-length(env(safe-area-inset-top, 0));
+}
+
+.var {
+  @include color-length(var(--a-custom-property));
+}
+
 .string {
   @include color-length("stringy");
 }
