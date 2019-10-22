@@ -177,16 +177,6 @@ bourbon [options]
 Bourbon supports Internet Explorer 11+ and the latest versions of Chrome,
 Firefox, Safari, and Edge.
 
-## The Bourbon Family
-
-Bourbon is part of a larger, modular family of Sass utilities:
-
-- [Neat]: A lightweight and flexible Sass grid
-- [Bitters]: Scaffold styles, variables and structure for Bourbon projects
-
-  [Neat]: https://github.com/thoughtbot/neat
-  [Bitters]: https://github.com/thoughtbot/bitters
-
 ## Contributing
 
 See the [contributing] document. Thank you, [contributors]!
