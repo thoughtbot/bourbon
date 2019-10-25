@@ -24,7 +24,7 @@
     "scss"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "core/_bourbon.scss",
   "style": "core/_bourbon.scss",
   "name": "bourbon",
   "repository": {
