@@ -29,7 +29,6 @@ It is…
 - [Installation](#installation)
 - [Command Line Interface](#command-line-interface)
 - [Browser Support](#browser-support)
-- [The Bourbon Family](#the-bourbon-family)
 - [Contributing](#contributing)
 - [License](#license)
 - [About](#about)
