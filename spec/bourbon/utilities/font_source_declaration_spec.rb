@@ -7,22 +7,16 @@ describe "font-source-declaration" do
 
   context "called with pipeline" do
     it "returns pipeline path" do
-      rule = 'src: font-url("b.eot?#iefix") format("embedded-opentype"), ' +
-             'font-url("b.woff2") format("woff2"), ' +
-             'font-url("b.woff") format("woff"), ' +
-             'font-url("b.ttf") format("truetype"), ' +
-             'font-url("b.svg#a") format("svg")'
+      rule = 'src: font-url("b.woff2") format("woff2"), ' +
+             'font-url("b.woff") format("woff")'
       expect(".has-pipeline").to have_rule(rule)
     end
   end
 
   context "called with no pipeline" do
     it "does not return pipeline path" do
-      rule = 'src: url("b.eot?#iefix") format("embedded-opentype"), ' +
-             'url("b.woff2") format("woff2"), ' +
-             'url("b.woff") format("woff"), ' +
-             'url("b.ttf") format("truetype"), ' +
-             'url("b.svg#a") format("svg")'
+      rule = 'src: url("b.woff2") format("woff2"), ' +
+             'url("b.woff") format("woff")'
       expect(".no-pipeline").to have_rule(rule)
     end
   end

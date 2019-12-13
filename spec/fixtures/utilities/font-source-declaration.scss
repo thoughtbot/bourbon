@@ -1,6 +1,6 @@
 @import "setup";
 
-$file-formats: ("eot", "woff2", "woff", "ttf", "svg");
+$file-formats: ("woff2", "woff");
 
 .has-pipeline {
   src: _font-source-declaration("a", "b", true, $file-formats);

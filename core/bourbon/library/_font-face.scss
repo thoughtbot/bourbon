@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /// Generates an `@font-face` declaration. You can choose the specific file
-/// formats you need to output; the mixin supports `eot`, `ttf`, `svg`, `woff2`
+/// formats you need to output; the mixin supports `woff2`
 /// and `woff`. The mixin also supports usage with the Rails Asset Pipeline,
 /// which you can enable per use, or globally in the `$bourbon()` settings.
 ///
@@ -9,7 +9,7 @@
 ///
 /// @argument {string} $file-path
 ///
-/// @argument {string | list} $file-formats [("ttf", "woff2", "woff")]
+/// @argument {string | list} $file-formats [("woff2", "woff")]
 ///   List of the font file formats to include. Can also be set globally using
 ///   the `global-font-file-formats` key in the Bourbon settings.
 ///
