@@ -20,6 +20,6 @@
 
 @mixin overflow-wrap($wrap: break-word) {
   word-wrap: $wrap;
-  /* stylelint-disable-next-line order/properties-alphabetical-order */
+  // stylelint-disable-next-line order/properties-alphabetical-order
   overflow-wrap: $wrap;
 }
