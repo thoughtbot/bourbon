@@ -9,6 +9,7 @@
   "description": "A lightweight Sass tool set.",
   "devDependencies": {
     "@thoughtbot/stylelint-config": "^1.0.0",
+    "sassdoc": "^2.5.0",
     "stylelint": "^10.0.1"
   },
   "eyeglass": {
@@ -32,6 +33,7 @@
     "url": "https://github.com/thoughtbot/bourbon.git"
   },
   "scripts": {
+    "sassdoc": "npx sassdoc core/ --parse --verbose --strict",
     "stylelint": "npx stylelint 'core/**/*.scss'",
     "test": "bundle exec rake"
   },
