@@ -11,7 +11,7 @@
 /// @property {color} contrast-switch-light-color [#fff]
 ///   Global light color for the `contrast-switch` function.
 ///
-/// @property {list} global-font-file-formats [("ttf", "woff2", "woff")]
+/// @property {list} global-font-file-formats [("woff2", "woff")]
 ///   Global font file formats for the `font-face` mixin.
 ///
 /// @property {number (with unit)} modular-scale-base [1em]
@@ -30,7 +30,7 @@
 $_bourbon-defaults: (
   "contrast-switch-dark-color": #000,
   "contrast-switch-light-color": #fff,
-  "global-font-file-formats": ("ttf", "woff2", "woff"),
+  "global-font-file-formats": ("woff2", "woff"),
   "modular-scale-base": 1em,
   "modular-scale-ratio": $major-third,
   "rails-asset-pipeline": false,
@@ -48,7 +48,7 @@ $_bourbon-defaults: (
 /// @property {color} contrast-switch-light-color [#fff]
 ///   Global light color for the `contrast-switch` function.
 ///
-/// @property {list} global-font-file-formats [("ttf", "woff2", "woff")]
+/// @property {list} global-font-file-formats [("woff2", "woff")]
 ///   Global font file formats for the `font-face` mixin.
 ///
 /// @property {number (with unit)} modular-scale-base [1em]
@@ -66,7 +66,7 @@ $_bourbon-defaults: (
 ///   $bourbon: (
 ///     "contrast-switch-dark-color": #000,
 ///     "contrast-switch-light-color": #fff,
-///     "global-font-file-formats": ("ttf", "woff2", "woff"),
+///     "global-font-file-formats": ("woff2", "woff"),
 ///     "modular-scale-base": 1em,
 ///     "modular-scale-ratio": $major-third,
 ///     "rails-asset-pipeline": false,

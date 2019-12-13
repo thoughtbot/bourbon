@@ -9,8 +9,7 @@ describe "font-face" do
     it "outputs defaults with additional content" do
       ruleset = 'font-family: "calibre"; ' +
                 'src: url("fonts/calibre.woff2") format("woff2"), ' +
-                'url("fonts/calibre.woff") format("woff"), ' +
-                'url("fonts/calibre.ttf") format("truetype"); ' +
+                'url("fonts/calibre.woff") format("woff"); ' +
                 "font-style: normal;" +
                 "font-weight: 600;" +
                 "unicode-range: U+26;"
