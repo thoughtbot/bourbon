@@ -16,10 +16,6 @@ jobs:
           name: Install Ruby dependencies
           command: bundle install --path vendor/bundle
 
-      - run:
-          name: Install SassDoc
-          command: sudo npm install -g sassdoc@2.5.0
-
       - save_cache:
           key: bourbon-{{ arch }}-{{ checksum "bourbon.gemspec" }}
           paths:
@@ -31,4 +27,4 @@ jobs:
 
       - run:
           name: Parse SassDoc comments
-          command: sassdoc core/ --parse --verbose --strict
+          command: npm run sassdoc
