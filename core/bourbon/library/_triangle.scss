@@ -44,10 +44,10 @@
     $direction
   ) {
     @error "Direction must be `up`, `up-right`, `right`, `down-right`, " +
-           "`down`, `down-left`, `left` or `up-left`.";
+      "`down`, `down-left`, `left` or `up-left`.";
   } @else if not _is-color($color) {
     @error "`#{$color}` is not a valid color for the `$color` argument in " +
-           "the `triangle` mixin.";
+      "the `triangle` mixin.";
   } @else {
     border-style: solid;
     height: 0;
