@@ -29,7 +29,18 @@ describe "hide-visually" do
                 "overflow: visible; " +
                 "position: static; " +
                 "white-space: inherit; " +
-                "width: auto;"
+                "width: auto; " +
+                "@supports (display: revert) { " +
+                "border: revert; " +
+                "clip: revert; " +
+                "clip-path: revert; " +
+                "height: revert; " +
+                "overflow: revert; " +
+                "padding: revert; " +
+                "position: revert; " +
+                "white-space: revert; " +
+                "width: revert; " +
+                "}"
 
       expect(".hide-visually--unhide").to have_ruleset(ruleset)
     end

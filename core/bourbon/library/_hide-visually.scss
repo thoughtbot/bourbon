@@ -66,5 +66,17 @@
     position: static;
     white-space: inherit;
     width: auto;
+
+    @supports (display: revert) {
+      border: revert;
+      clip: revert;
+      clip-path: revert;
+      height: revert;
+      overflow: revert;
+      padding: revert;
+      position: revert;
+      white-space: revert;
+      width: revert;
+    }
   }
 }
