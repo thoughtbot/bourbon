@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec", "~> 3.4"
   s.add_development_dependency "sass"
-  s.add_runtime_dependency "thor", "~> 0.19"
+  s.add_runtime_dependency "thor", "~> 1.0"
   s.authors = [
     "Christian Reuter",
     "Damian Galarza",
