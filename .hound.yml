@@ -5,4 +5,4 @@ scss:
 stylelint:
   config_file: .stylelintrc.json
   enabled: true
-  version: 10.1.0
+  # version: 10.1.0
