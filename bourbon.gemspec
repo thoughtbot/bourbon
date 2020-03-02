@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "aruba", "~> 0.14"
   s.add_development_dependency "css_parser", "~> 1.4"
   s.add_development_dependency "cucumber", "~> 2.0"
-  s.add_development_dependency "rake", "~> 11.1"
+  s.add_development_dependency "rake"
   s.add_development_dependency "rspec", "~> 3.4"
   s.add_development_dependency "sass"
   s.add_runtime_dependency "thor", "~> 0.19"
