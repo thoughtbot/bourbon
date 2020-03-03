@@ -1,9 +1,0 @@
-@import "setup";
-
-.overflow-wrap {
-  @include overflow-wrap;
-}
-
-.overflow-wrap-normal {
-  @include overflow-wrap(normal);
-}

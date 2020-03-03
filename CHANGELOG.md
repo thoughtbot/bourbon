@@ -12,6 +12,10 @@ project adheres to [Semantic Versioning](http://semver.org).
 - CSS `var()` and `env()` functions are now accepted as values in the
   `position`, and `size` mixins.
 
+### Removed
+
+- `overflow-wrap` mixin.
+
 [unreleased]: https://github.com/thoughtbot/bourbon/compare/v6.0.0...HEAD
 
 ## [6.0.0] - 2019-07-10
