@@ -5,14 +5,29 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased (`master`)][unreleased]
 
+Nothing at the moment.
+
+[unreleased]: https://github.com/thoughtbot/bourbon/compare/v6.0.0...HEAD
+
+## [7.0.0] - 2020-03-09
+
 ### Added
 
 - Improved error handling of unsupported font file formats in the `font-face`
-  mixin (supported formats are `eot`, `ttf`, `svg`, `woff2`, and `woff`).
+  mixin (supported formats are `woff2` and `woff`).
 - CSS `var()` and `env()` functions are now accepted as values in the
-  `position`, and `size` mixins.
+  `position` and `size` mixins.
 
-[unreleased]: https://github.com/thoughtbot/bourbon/compare/v6.0.0...HEAD
+### Changed
+
+- Updated `thor` from 0.x to 1.x
+
+### Removed
+
+- The `font-face` mixin no longer supports `ttf`, `svg`, and `eot`
+  font file formats.
+
+[7.0.0]: https://github.com/thoughtbot/bourbon/compare/v6.0.0...v7.0.0
 
 ## [6.0.0] - 2019-07-10
 

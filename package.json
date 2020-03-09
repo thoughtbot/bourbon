@@ -37,5 +37,5 @@
     "stylelint": "npx stylelint 'core/**/*.scss'",
     "test": "bundle exec rake"
   },
-  "version": "6.0.0"
+  "version": "7.0.0"
 }
