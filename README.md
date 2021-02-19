@@ -192,7 +192,7 @@ software, and may be redistributed under the terms specified in the [license].
 
 ## About
 
-Bourbon is maintained by Tyson Gach and the thoughtbot design team. It is funded
+Bourbon is maintained by the thoughtbot design team. It is funded
 by [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are
 trademarks of thoughtbot, inc.
 
