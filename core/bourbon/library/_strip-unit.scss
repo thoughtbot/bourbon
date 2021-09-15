@@ -12,6 +12,8 @@
 ///   // Output
 ///   $dimension: 10;
 
+@use "sass:math";
+
 @function strip-unit($value) {
-  @return ($value / ($value * 0 + 1));
+  @return math.div($value, $value * 0 + 1);
 }
