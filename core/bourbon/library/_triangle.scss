@@ -55,25 +55,25 @@
 
     @if $direction == "up" {
       border-color: transparent transparent $color;
-      border-width: 0 ($width / 2) $height;
+      border-width: 0 ($width * 0.5) $height;
     } @else if $direction == "up-right" {
       border-color: transparent $color transparent transparent;
       border-width: 0 $width $width 0;
     } @else if $direction == "right" {
       border-color: transparent transparent transparent $color;
-      border-width: ($height / 2) 0 ($height / 2) $width;
+      border-width: ($height * 0.5) 0 ($height * 0.5) $width;
     } @else if $direction == "down-right" {
       border-color: transparent transparent $color;
       border-width: 0 0 $width $width;
     } @else if $direction == "down" {
       border-color: $color transparent transparent;
-      border-width: $height ($width / 2) 0;
+      border-width: $height ($width * 0.5) 0;
     } @else if $direction == "down-left" {
       border-color: transparent transparent transparent $color;
       border-width: $width 0 0 $width;
     } @else if $direction == "left" {
       border-color: transparent $color transparent transparent;
-      border-width: ($height / 2) $width ($height / 2) 0;
+      border-width: ($height * 0.5) $width ($height * 0.5) 0;
     } @else if $direction == "up-left" {
       border-color: $color transparent transparent;
       border-width: $width $width 0 0;
