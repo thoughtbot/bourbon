@@ -3,11 +3,13 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased (`master`)][unreleased]
+## [7.1.0] - 2022-02-22
 
-Nothing at the moment.
+### Changed
 
-[unreleased]: https://github.com/thoughtbot/bourbon/compare/v6.0.0...HEAD
+- Replace `/` with `math.div` per Dart Sass 2.0.0 updates. 
+
+[7.1.0]: https://github.com/thoughtbot/bourbon/compare/v7.0.0...v7.1.0
 
 ## [7.0.0] - 2020-03-09
 
