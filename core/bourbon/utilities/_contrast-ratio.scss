@@ -19,13 +19,15 @@
 ///
 /// @access private
 
+@use "sass:math";
+
 @function _contrast-ratio($color-1, $color-2) {
   $-local-lightness-1: _lightness($color-1) + 0.05;
   $-local-lightness-2: _lightness($color-2) + 0.05;
 
   @if $-local-lightness-1 > $-local-lightness-2 {
-    @return $-local-lightness-1 / $-local-lightness-2;
+    @return math.div($-local-lightness-1, $-local-lightness-2);
   } @else {
-    @return $-local-lightness-2 / $-local-lightness-1;
+    @return math.div($-local-lightness-2, $-local-lightness-1);
   }
 }
