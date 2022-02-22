@@ -3,11 +3,19 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning](http://semver.org).
 
+## [7.2.0] - 2022-02-22
+
+### Changed
+
+- Revert "Replace `/` with `math.div` per Dart Sass 2.0.0 updates."
+
+[7.2.0]: https://github.com/thoughtbot/bourbon/compare/v7.1.0...v7.2.0
+
 ## [7.1.0] - 2022-02-22
 
 ### Changed
 
-- Replace `/` with `math.div` per Dart Sass 2.0.0 updates. 
+- Replace `/` with `math.div` per Dart Sass 2.0.0 updates.
 
 [7.1.0]: https://github.com/thoughtbot/bourbon/compare/v7.0.0...v7.1.0
 
