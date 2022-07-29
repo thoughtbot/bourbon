@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.5-node
+      - image: cimg/ruby:2.6.10-node
     steps:
       - checkout
       - restore_cache:
