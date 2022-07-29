@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cimg/ruby:2.6.10-node
+      - image: cimg/ruby:2.7.6-node
     steps:
       - checkout
       - restore_cache:
