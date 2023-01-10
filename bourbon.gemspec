@@ -3,7 +3,7 @@ require "bourbon/version"
 
 Gem::Specification.new do |s|
   s.add_development_dependency "aruba", "~> 0.14"
-  s.add_development_dependency "bundler", "~> 2.4"
+  s.add_development_dependency "bundler", "~> 2.3.26"
   s.add_development_dependency "contracts", "~> 0.17"
   s.add_development_dependency "css_parser", "~> 1.4"
   s.add_development_dependency "cucumber", "~> 8.0"
