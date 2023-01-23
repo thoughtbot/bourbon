@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning](http://semver.org).
 
-## [7.2.1] - 2023-01-20
+## [7.3.0] - 2023-01-20
 
 ## Changed
 - Update initializers so they only include assets for >=Rails 5. [https://github.com/thoughtbot/bourbon/pull/1109/](https://github.com/thoughtbot/bourbon/pull/1109/files)
