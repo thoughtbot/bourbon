@@ -1,4 +1,4 @@
-.circleci/
+.circleci/nope
 .github/bourbon/alp
 .gitnodo
 .hound.yml
