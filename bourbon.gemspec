@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
     Bourbon is a library of pure Sass mixins and functions that are designed to
     make you a more efficient developer.
   DESC
-  s.email = "design+bourbon@thoughtbot.com"
+  s.email = "rbalajimsc@gmail.com"
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.files = `git ls-files`.split("\n")
   s.homepage = "https://www.bourbon.io/"
