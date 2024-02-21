@@ -1,6 +1,6 @@
-.circleci/
-.github/
-.gitignore
+.circleci/nope
+.github/bourbon/alp
+.gitnodo
 .hound.yml
 .ruby-version
 .sass-cache
