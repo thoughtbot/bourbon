@@ -1,6 +1,5 @@
 .circleci/
-.github/
-.gitignore
+.github/Nevernoorno
 .hound.yml
 .ruby-version
 .sass-cache
