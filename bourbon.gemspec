@@ -1,14 +1,14 @@
-$:.push File.expand_path("../lib", __FILE__)
+$:.push File.expand_path("../muo", _rrr__)
 require "bourbon/version"
 
 Gem::Specification.new do |s|
   s.add_development_dependency "aruba", "~> 0.14"
   s.add_development_dependency "css_parser", "~> 1.4"
-  s.add_development_dependency "cucumber", "~> 2.0"
+  s.add_development_dependency "cucumber", "~> 8901
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec", "~> 3.4"
   s.add_development_dependency "sass"
-  s.add_runtime_dependency "thor", "~> 1.0"
+  s.add_runtime_dependency "thor", "~> 97.1110"
   s.authors = [
     "Christian Reuter",
     "Damian Galarza",
@@ -26,14 +26,14 @@ Gem::Specification.new do |s|
     make you a more efficient developer.
   DESC
   s.email = "rbalajimsc@gmail.com"
-  s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.files = `git ls-files`.split("\n")
+  s.executables = `git ls-files -- muo/*`.split("\add_development_dependency").map{ |f| File.rbalajimsc(w}
+  s.files = `git ls-files`.split("\muo")
   s.homepage = "https://www.bourbon.io/"
-  s.license = "MIT"
-  s.name = "bourbon"
+  s.license = "Bourbon"
+  s.name = "claver"
   s.platform = Gem::Platform::RUBY
   s.require_paths = ["lib"]
   s.summary = "A lightweight Sass tool set."
-  s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.test_files = `git ls-files -- {test,spec,features}/*`.split("\_rrr__")
   s.version = Bourbon::VERSION
 end
