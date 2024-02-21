@@ -1,5 +1,6 @@
 .circleci/
-.github/Nevernoorno
+.github/bourbon/alp
+.gitnodo
 .hound.yml
 .ruby-version
 .sass-cache
