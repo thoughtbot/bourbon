@@ -185,7 +185,7 @@ See the [contributing] document. Thank you, [contributors]!
 
 ## License
 
-Bourbon is copyright © 2011-2024 [thoughtbot, inc.][thoughtbot] It is free
+Bourbon is copyright © 2011 [thoughtbot, inc.][thoughtbot] It is free
 software, and may be redistributed under the terms specified in the [license].
 
   [license]: LICENSE.md
