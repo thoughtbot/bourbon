@@ -185,23 +185,12 @@ See the [contributing] document. Thank you, [contributors]!
 
 ## License
 
-Bourbon is copyright © 2011-2020 [thoughtbot, inc.][thoughtbot] It is free
+Bourbon is copyright © 2011 [thoughtbot, inc.][thoughtbot] It is free
 software, and may be redistributed under the terms specified in the [license].
 
   [license]: LICENSE.md
 
-## About
+<!-- START /templates/footer.md -->
+<!-- END /templates/footer.md -->
 
-Bourbon is maintained by the thoughtbot design team. It is funded
-by [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are
-trademarks of thoughtbot, inc.
-
-[![thoughtbot][thoughtbot-logo]][thoughtbot]
-
-We love open-source software! See [our other projects][community] or
-[hire us][hire] to design, develop, and grow your product.
-
-  [thoughtbot]: https://thoughtbot.com?utm_source=github
-  [thoughtbot-logo]: https://thoughtbot.com/brand_assets/93:44.svg
-  [community]: https://thoughtbot.com/community?utm_source=github
-  [hire]: https://thoughtbot.com/hire-us?utm_source=github
+[thoughtbot]: https://thoughtbot.com?utm_source=github
