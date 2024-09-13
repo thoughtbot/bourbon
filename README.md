@@ -2,6 +2,8 @@
 
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
+**Note**: This project is no longer maintained. We encourage people to leverage the modern native CSS features in lieu of this library. You can refer to [our blog post](https://thoughtbot.com/blog/you-might-not-need-bourbon) on how to go about replacing or rethinking each helper.
+
 ## A Lightweight Sass Tool Set
 
 [Bourbon] is a library of [Sass] mixins and functions that are designed to make
